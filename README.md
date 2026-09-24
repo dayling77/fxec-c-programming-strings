@@ -1,5 +1,37 @@
-# FXEC C Programming – Level 3 Strings Assessment
+# FXEC C Programming – Level 3 | Strings
 
-Automated 5-day assessment platform foundation.
+Automated 5-Day Assessment Portal.
 
-This repository is being built for the FXEC C Programming – Level 3 | Strings module. The production design uses Firebase Authentication, Firestore, Firebase Storage, Cloud Functions and ZeptoMail. Production secrets must never be committed.
+## Automation
+1. The uploaded 5-day Strings learning module is represented in `content/module-source.md`.
+2. Cloud Scheduler automatically creates/maintains the five assessment windows.
+3. Gemini on Vertex AI automatically generates a 25-question daily pool.
+4. The generated pool is structurally validated and then audited by Gemini for correctness, ambiguity and source alignment.
+5. Audio questions are automatically converted to MP3 using Google Cloud Text-to-Speech and stored in Firebase Storage.
+6. Each approved student receives 15 questions selected server-side from the 25-question pool.
+7. Correct answers never go to the browser.
+8. Submission is scored server-side.
+9. 80% or above automatically earns 40 Reward Points.
+10. ZeptoMail automatically sends approval, opening/reminder and result emails.
+11. Top 20 and aggregate statistics are updated automatically.
+12. Admin can export results as CSV or PDF.
+
+## One-time setup
+- Firebase Authentication: Email/Password enabled.
+- Firestore and Storage deployed.
+- Cloud Functions deployed after one-time secret/API configuration.
+- Store ZeptoMail credentials only in Secret Manager as `ZEPTOMAIL_CONFIG`, for example:
+  {"apiKey":"YOUR_SEND_MAIL_TOKEN","fromEmail":"noreply@yourdomain.com","fromName":"FXEC Assessment Portal"}
+- Enable Vertex AI and Cloud Text-to-Speech APIs.
+- Web app Firebase configuration is kept in the frontend and is not a secret.
+
+## Assessment blueprint
+- Pool: 25 questions.
+- Per student: 15 questions.
+- Per student mix: 3 MCQ + 3 Match + 5 Audio + 1 Problem Solving + 3 Multiple Answer.
+- Difficulty target per student: 6 easy + 6 moderate + 3 tough.
+- Pass: 80%.
+- Reward: 40 points.
+
+## Important
+A statistical target such as only about 5% of students scoring 100% cannot be guaranteed before real student response data exists. The generator deliberately makes the tough portion challenging and the system stores outcomes so the pool can be tuned later.
