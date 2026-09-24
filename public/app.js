@@ -74,7 +74,29 @@ function renderPublicSchedule(schedules){
       ${video?'<a class="videoLink" href="'+esc(video)+'" target="_blank" rel="noopener">▶ Watch Day '+day.day+' Video</a>':''}
     </article>`;
   }).join('');
-  $('publicSchedule').innerHTML=`<div class="courseStats"><div><strong>5</strong><span>Learning Days</span></div><div><strong>1</strong><span>Main Assessment</span></div><div><strong>10</strong><span>Recap Questions</span></div><div><strong>40</strong><span>Reward Points</span></div></div><div class="courseDayList">${rows}</div>`;
+  $('publicSchedule').innerHTML=`<div id="rewardPointsActivity"></div><div class="courseStats"><div><strong>5</strong><span>Learning Days</span></div><div><strong>1</strong><span>Main Assessment</span></div><div><strong>10</strong><span>Recap Questions</span></div><div><strong>40</strong><span>Reward Points</span></div></div><div class="courseDayList">${rows}</div>`;
+}
+
+function renderRewardPointsRegistration(){
+  const existing=$('rewardPointsActivity');
+  if(!existing) return;
+  const formUrl='https://forms.gle/NpgpUTK9F1dqYg2D7';
+  const deadline=new Date();
+  deadline.setHours(19,0,0,0);
+  const update=()=>{
+    const left=Math.max(0,deadline.getTime()-Date.now());
+    const h=Math.floor(left/3600000);
+    const m=Math.floor((left%3600000)/60000);
+    const s=Math.floor((left%60000)/1000);
+    const el=$('rewardCountdown');
+    if(!el) return;
+    if(left<=0){el.textContent='Registration closed';el.classList.add('closed');$('rewardRegisterBtn').classList.add('disabledBtn');$('rewardRegisterBtn').setAttribute('aria-disabled','true');$('rewardRegisterBtn').removeAttribute('href');return;}
+    el.textContent='Registration closes in '+String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  };
+  existing.innerHTML='<div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1px solid #fed7aa;border-radius:18px;padding:22px;margin:18px 0;color:#7c2d12;box-shadow:0 6px 20px rgba(124,45,18,.08)"><div style="font-size:11px;font-weight:900;letter-spacing:1.4px;color:#c2410c">REWARD POINTS ACTIVITY</div><h3 style="margin:6px 0;font-size:22px">C Programming – Level 3 | Strings Assessment</h3><p style="margin:4px 0 14px;color:#78350f">Register now to participate in the assessment and earn Reward Points.</p><div id="rewardCountdown" style="font-size:26px;font-weight:900;margin:10px 0">Checking countdown…</div><p style="font-size:12px;margin:0 0 12px">Registration deadline: <strong>Today at 7:00 p.m.</strong></p><a id="rewardRegisterBtn" href="'+formUrl+'" target="_blank" rel="noopener" style="display:inline-block;background:#c2410c;color:#fff;text-decoration:none;padding:12px 18px;border-radius:9px;font-weight:800">Register for Assessment →</a></div>';
+  update();
+  clearInterval(window.rewardCountdownTimer);
+  window.rewardCountdownTimer=setInterval(update,1000);
 }
 
 function renderStudentLearning(schedules){
@@ -101,7 +123,7 @@ async function loadCourseOverview(){
   }catch(e){
     renderPublicSchedule([]);
   }
-  renderSample('sampleQuestions','sampleResult','sampleSubmit');
+  renderSample('sampleQuestions','sampleResult','sampleSubmit');\n  renderRewardPointsRegistration();
 }
 
 
