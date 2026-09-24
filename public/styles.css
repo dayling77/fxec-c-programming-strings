@@ -168,3 +168,28 @@ body{background:#f4f7fb;color:var(--ink);line-height:1.55}
 .qbEditGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.qbEditPanel label{display:block;font-size:11px;font-weight:800;color:#334155}.qbEditPanel textarea,.qbEditPanel input{width:100%;box-sizing:border-box;margin-top:6px;padding:10px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;font:inherit}.qbEditPanel textarea{resize:vertical}.qbDoneEditing{margin-top:10px!important}
 .questionBankItem.editing{border-color:#93c5fd!important;box-shadow:0 6px 20px rgba(37,99,235,.08)!important}
 @media(max-width:800px){.qbReviewHeader{grid-template-columns:42px 1fr auto}.qbReviewCheck{grid-column:2}.qbReviewHeader .qbEditBtn{grid-column:3;grid-row:2}.qbMetaRow,.qbEditGrid{grid-template-columns:1fr}}
+
+/* Student assessment — polished web-page experience */
+#assessmentPanel{max-width:980px;margin:28px auto}
+#assessmentPanel .panelHeader{margin-bottom:18px}
+.studentQuestionCard{background:#fff;border:1px solid #dbe4ef;border-radius:20px;box-shadow:0 10px 30px rgba(15,43,82,.08);overflow:hidden}
+.studentQuestionTop{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:#f7faff;border-bottom:1px solid #e5ebf3;font-size:11px;font-weight:900;letter-spacing:.5px;color:#53657a}
+.studentProgress{height:4px;background:#e9eef5}.studentProgress span{display:block;height:100%;background:#2563eb;border-radius:0 4px 4px 0}
+.studentPrompt{padding:28px 30px 22px;font-size:22px;line-height:1.5;font-weight:750;color:#102a43;min-height:70px}
+.studentAnswerArea{padding:0 30px 30px}
+.studentInstruction{font-size:13px;color:#64748b;background:#f8fafc;border:1px solid #e6ebf2;border-radius:10px;padding:11px 13px;margin-bottom:14px}
+.studentOptionList{display:grid;gap:10px}
+.studentOption{display:flex!important;align-items:center!important;gap:13px!important;width:100%!important;box-sizing:border-box!important;margin:0!important;padding:15px 17px!important;border:1px solid #dbe3ed!important;border-radius:12px!important;background:#fff!important;color:#26384d!important;font-size:15px!important;font-weight:500!important;cursor:pointer!important;transition:.15s!important}
+.studentOption:hover{border-color:#93b4e6!important;background:#f8fbff!important}
+.studentOption:has(input:checked){border-color:#2563eb!important;background:#eff6ff!important;box-shadow:0 0 0 2px rgba(37,99,235,.08)!important}
+.studentOption input{width:18px!important;height:18px!important;flex:0 0 auto!important;margin:0!important}
+.studentOptionLetter{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#f1f5f9;color:#475569;font-weight:900;font-size:12px}
+.studentOption:has(input:checked) .studentOptionLetter{background:#2563eb;color:#fff}
+.studentAudioCard{display:flex;align-items:center;gap:14px;padding:15px;margin-bottom:15px;border:1px solid #bdeee6;border-radius:12px;background:#f0fdfa;color:#0f766e;font-size:13px}
+.studentPlayBtn{margin:0!important;padding:10px 16px!important;background:#0f766e!important}
+.studentMatchList{display:grid;gap:10px}
+.studentMatchRow{display:grid;grid-template-columns:34px minmax(180px,1fr) 30px minmax(220px,1fr);align-items:center;gap:10px;padding:12px;border:1px solid #dbe3ed;border-radius:12px;background:#fff}
+.studentMatchNumber{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#eef2f7;color:#526174;font-size:11px;font-weight:900}
+.studentMatchLeft{font-size:14px;font-weight:600;color:#24364b}.studentMatchArrow{text-align:center;color:#94a3b8;font-size:18px}
+.studentMatchRow select{width:100%;margin:0;padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font:inherit;color:#24364b}
+@media(max-width:700px){.studentPrompt{padding:22px 18px;font-size:19px}.studentAnswerArea{padding:0 18px 22px}.studentQuestionTop{padding:13px 16px}.studentMatchRow{grid-template-columns:30px 1fr}.studentMatchArrow{display:none}.studentMatchRow select{grid-column:2}.studentAudioCard{align-items:flex-start;flex-direction:column}}
