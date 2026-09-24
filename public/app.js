@@ -515,20 +515,28 @@ function readVisibleQuestionBank() {
   });
 }
 function readVisibleQuestionBankDay(day) {
-  const section=document.querySelector('.questionBankDaySection[data-day="'+day+'"]');
-  if(!section)return;
+  const cards=[...document.querySelectorAll('.questionBankItem')];
+  if(!cards.length)return;
   const byId=new Map(adminQuestionBank.questions.map(q=>[q.id,q]));
-  section.querySelectorAll('.questionBankItem').forEach(card=>{
+  cards.forEach(card=>{
     const q=byId.get(card.dataset.qid); if(!q)return;
-    q.difficulty=card.querySelector('.qbDifficulty').value;
-    q.prompt=card.querySelector('.qbPrompt').value.trim();
-    q.options=card.querySelector('.qbOptions').value.split('\n').map(x=>x.trim()).filter(Boolean);
-    const raw=card.querySelector('.qbAnswer').value.trim();
-    if(q.type==='multiAnswer') q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
-    else if(q.type==='match'){ try{q.answer=JSON.parse(raw||'{}');}catch(e){throw new Error('Invalid Match JSON in '+q.id);}}
-    else q.answer=Number(raw);
-    if(q.type==='audio') q.audioText=card.querySelector('.qbAudioText').value.trim();
-    q.explanation=card.querySelector('.qbExplanation').value.trim();
+    const difficulty=card.querySelector('.qbDifficulty');
+    const prompt=card.querySelector('.qbPrompt');
+    const options=card.querySelector('.qbOptions');
+    const answer=card.querySelector('.qbAnswer');
+    const audioText=card.querySelector('.qbAudioText');
+    const explanation=card.querySelector('.qbExplanation');
+    if(difficulty) q.difficulty=difficulty.value;
+    if(prompt) q.prompt=prompt.value.trim();
+    if(options) q.options=options.value.split('\n').map(x=>x.trim()).filter(Boolean);
+    if(answer){
+      const raw=answer.value.trim();
+      if(q.type==='multiAnswer') q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
+      else if(q.type==='match'){ try{q.answer=JSON.parse(raw||'{}');}catch(e){throw new Error('Invalid Match JSON in '+q.id);}}
+      else q.answer=Number(raw);
+    }
+    if(q.type==='audio' && audioText) q.audioText=audioText.value.trim();
+    if(explanation) q.explanation=explanation.value.trim();
   });
 }
 async function loadAdminQuestionBank() {
@@ -557,10 +565,11 @@ async function approveQuestionBankDay(day,button) {
   if(!adminQuestionBank)return msg('Load the question bank first.');
   try{
     readVisibleQuestionBankDay(day);
-    const section=document.querySelector('.questionBankDaySection[data-day="'+day+'"]');
-    const selected=[...section.querySelectorAll('.qbSelect')].filter(x=>x.checked);
-    const total=section.querySelectorAll('.qbSelect').length;
-    if(selected.length!==total) return msg('Select all '+total+' questions in Day '+day+' before approving the day.');
+    const cards=[...document.querySelectorAll('.questionBankItem')];
+    const selected=cards.filter(card=>card.querySelector('.qbSelect')?.checked);
+    const total=cards.length;
+    if(!total) return msg('No questions are loaded for Day '+day+'.');
+    if(selected.length!==total) return msg('Review/select all '+total+' questions in Day '+day+' before approving.');
     if(!confirm('Approve Day '+day+' and publish its '+total+' questions?'))return;
     button.disabled=true; button.textContent='Saving…';
     await saveQuestionBankDraft();
@@ -571,7 +580,11 @@ async function approveQuestionBankDay(day,button) {
     adminQuestionBank.dayStatus[day]='pending';
     button.textContent='Processing…';
     msg('Day '+day+' approval requested. The server is preparing its secure pool and audio.',true);
-  }catch(e){button.disabled=false;button.textContent='Approve Day '+day;msg(e.message||String(e));}
+  }catch(e){
+    button.disabled=false;
+    button.textContent='Approve Day '+day;
+    msg(e.message||String(e));
+  }
 }
 if ($('loadQuestionBankBtn')) $('loadQuestionBankBtn').onclick=loadAdminQuestionBank;
 if ($('questionBankDay')) $('questionBankDay').parentElement.style.display='none';
