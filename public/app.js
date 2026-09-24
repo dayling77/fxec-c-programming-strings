@@ -427,12 +427,23 @@ function renderAdminQuestionBank() {
     const opts=Array.isArray(q.options)?q.options:[];
     const answerText=questionAnswerText(q);
     const answerIndexes=q.type==='multiAnswer'&&Array.isArray(q.answer)?q.answer:[q.answer];
-    const optionHtml=opts.length
-      ? '<div class="qbOptionList">'+opts.map((o,i)=>{
-          const correct=answerIndexes.includes(i);
-          return '<div class="qbOption '+(correct?'correct':'')+'"><span class="qbOptionLetter">'+String.fromCharCode(65+i)+'</span><span>'+esc(o)+'</span>'+(correct?'<b>✓ Correct</b>':'')+'</div>';
-        }).join('')+'</div>'
-      : '<div class="qbNoOptions">No options — review this question type.</div>';
+    let optionHtml;
+    if(q.type==='match'){
+      const mapping=q.answer||{};
+      optionHtml='<div class="qbMatchReview">'+opts.map((o,i)=>{
+        const parts=String(o).split(' -> ');
+        const left=parts[0]||o;
+        const right=parts.slice(1).join(' -> ');
+        return '<div class="qbMatchReviewRow"><span class="qbMatchLeft">'+esc(left)+'</span><span class="qbMatchArrow">→</span><span class="qbMatchRight">'+esc(right||mapping[String(i)]||'')+'</span></div>';
+      }).join('')+'</div>';
+    } else {
+      optionHtml=opts.length
+        ? '<div class="qbOptionList">'+opts.map((o,i)=>{
+            const correct=answerIndexes.includes(i);
+            return '<div class="qbOption '+(correct?'correct':'')+'"><span class="qbOptionLetter">'+String.fromCharCode(65+i)+'</span><span>'+esc(o)+'</span>'+(correct?'<b>✓ Correct</b>':'')+'</div>';
+          }).join('')+'</div>'
+        : '<div class="qbNoOptions">No options — review this question type.</div>';
+    }
 
     const audioHtml=q.type==='audio'
       ? '<div class="qbAudioPanel"><button type="button" class="audioPreviewBtn" data-audio-qid="'+esc(q.id)+'">▶ Play Audio</button><span id="audioStatus-'+esc(q.id)+'">Preview the question before approval</span></div>'
