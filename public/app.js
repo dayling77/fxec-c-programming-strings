@@ -315,20 +315,41 @@ $('bulkApproveBtn').onclick = async () => {
   } catch(e) { msg(e.message); }
 };
 $('saveSchedulesBtn').onclick = async () => {
+  const button = $('saveSchedulesBtn');
+  button.disabled = true;
+  button.textContent = 'Saving…';
   try {
-    const schedules = [...document.querySelectorAll('.scheduleRow')].map(row => ({
-      day: Number(row.querySelector('.schDay').value),
-      topic: row.querySelector('.schTopic').value.trim(),
-      date: row.querySelector('.schDate').value,
-      openAt: new Date(row.querySelector('.schOpen').value).toISOString(),
-      closeAt: new Date(row.querySelector('.schClose').value).toISOString(),
-      videoUrl: row.querySelector('.schVideo')?.value.trim() || '',
-      isPublished: row.querySelector('.schPublished').checked
-    }));
-    const r = await call('updateAssessmentSchedules')({schedules});
+    const rows = [...document.querySelectorAll('.scheduleRow')];
+    const schedules = rows.map((row, idx) => {
+      const day = Number(row.querySelector('.schDay').value);
+      const topic = row.querySelector('.schTopic').value.trim();
+      const date = row.querySelector('.schDate').value;
+      const openValue = row.querySelector('.schOpen').value;
+      const closeValue = row.querySelector('.schClose').value;
+      if (!Number.isInteger(day) || day < 1) throw new Error('Day '+(idx+1)+': enter a valid day number.');
+      if (!topic) throw new Error('Day '+day+': enter the topic.');
+      if (!date) throw new Error('Day '+day+': select the assessment date.');
+      if (!openValue || !closeValue) throw new Error('Day '+day+': select both opening and closing times.');
+      const openAt = new Date(openValue), closeAt = new Date(closeValue);
+      if (Number.isNaN(openAt.getTime()) || Number.isNaN(closeAt.getTime())) throw new Error('Day '+day+': invalid date/time.');
+      if (closeAt <= openAt) throw new Error('Day '+day+': closing time must be after opening time.');
+      return {day,topic,date,openAt:openAt.toISOString(),closeAt:closeAt.toISOString(),videoUrl:row.querySelector('.schVideo')?.value.trim()||'',isPublished:row.querySelector('.schPublished').checked};
+    });
+    const seen = new Set();
+    for (const s of schedules) {
+      if (seen.has(s.date)) throw new Error('Two assessment days cannot use the same date.');
+      seen.add(s.date);
+    }
+    const result = await call('updateAssessmentSchedules')({schedules});
     await loadAdmin();
-    msg(`${r.data.count} assessment schedule(s) saved successfully.`, true);
-  } catch(e) { msg(e.message); }
+    msg('✓ '+result.data.count+' assessment days saved successfully. The saved dates and times now control student access and automatic question generation.', true);
+  } catch(e) {
+    console.error('Schedule save failed:', e);
+    msg('Schedule was NOT saved: '+(e?.message || e));
+  } finally {
+    button.disabled = false;
+    button.textContent = 'Save Assessment Schedule';
+  }
 };
 $('csvBtn').onclick = async () => {
   try { const r=await call('exportResults')({format:'csv'}); const url=await getDownloadURL(ref(storage,r.data.path)); $('downloadInfo').innerHTML=`<a href="${url}" target="_blank">Download CSV</a>`; } catch(e){msg(e.message);}
