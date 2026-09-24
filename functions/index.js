@@ -600,11 +600,17 @@ export const getAdminDashboard = onCall(async request => {
     db.collection('assessmentSchedules').get()
   ]);
   const pending = [];
-  students.forEach(d => { const s = d.data(); if (s.status === 'pending') pending.push({ id: d.id, ...s }); });
+  const approved = [];
+  students.forEach(d => {
+    const s = d.data();
+    if (s.status === 'pending') pending.push({ id: d.id, ...s });
+    if (s.status === 'approved') approved.push({ id: d.id, ...s });
+  });
+  approved.sort((a,b) => String(a.name || '').localeCompare(String(b.name || '')));
   const resultRows = results.docs.map(d => ({ id: d.id, ...d.data() }));
   resultRows.sort((a, b) => (b.scorePercent || 0) - (a.scorePercent || 0));
   return {
-    students: students.size, pending, attempts: results.size,
+    students: students.size, pending, approved, attempts: results.size,
     passed: resultRows.filter(x => x.passed).length,
     average: resultRows.length ? Math.round(resultRows.reduce((a, x) => a + x.scorePercent, 0) / resultRows.length * 100) / 100 : 0,
     top20: resultRows.slice(0, 20),
