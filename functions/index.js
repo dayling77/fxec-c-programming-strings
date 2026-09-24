@@ -409,7 +409,7 @@ export const updateAssessmentSchedules = onCall(async request => {
     const day = Number(item.day), date = cleanText(item.date, 20), topic = cleanText(item.topic, 200);
     const openAt = new Date(cleanText(item.openAt, 50)), closeAt = new Date(cleanText(item.closeAt, 50));
     if (!Number.isInteger(day) || day < 1 || !date || !topic || Number.isNaN(openAt.getTime()) || Number.isNaN(closeAt.getTime()) || closeAt <= openAt) throw new HttpsError('invalid-argument', 'Each schedule needs a valid Day, date, opening time and closing time.');
-    batch.set(db.collection('assessmentSchedules').doc(date), { day, date, topic, openAt, closeAt, isPublished: item.isPublished !== false, status: 'scheduled', updatedAt: FieldValue.serverTimestamp() });
+    batch.set(db.collection('assessmentSchedules').doc(date), { day, date, topic, videoUrl: cleanText(item.videoUrl, 500), openAt, closeAt, isPublished: item.isPublished === true, status: item.isPublished === true ? 'scheduled' : 'draft', updatedAt: FieldValue.serverTimestamp() });
   }
   await batch.commit();
   return { success: true, count: schedules.length };
@@ -429,8 +429,8 @@ export const getAssessment = onCall(async request => {
   const target = current || upcoming;
   if (!target) return { status: 'closed', message: 'All scheduled assessments are closed.' };
   const poolSnap = await db.collection('questionPools').doc(target.date).get();
-  if (!poolSnap.exists || poolSnap.data().status !== 'ready') return { status: target.status, schedule: { date: target.date, day: target.day, topic: target.topic, openAt: target.openAt.toDate().toISOString(), closeAt: target.closeAt.toDate().toISOString() }, ready: false };
-  return { status: current ? 'open' : 'scheduled', schedule: { date: target.date, day: target.day, topic: target.topic, openAt: target.openAt.toDate().toISOString(), closeAt: target.closeAt.toDate().toISOString() }, ready: true };
+  if (!poolSnap.exists || poolSnap.data().status !== 'ready') return { status: target.status, schedule: { date: target.date, day: target.day, topic: target.topic, videoUrl: target.videoUrl || '', openAt: target.openAt.toDate().toISOString(), closeAt: target.closeAt.toDate().toISOString() }, ready: false };
+  return { status: current ? 'open' : 'scheduled', schedule: { date: target.date, day: target.day, topic: target.topic, videoUrl: target.videoUrl || '', openAt: target.openAt.toDate().toISOString(), closeAt: target.closeAt.toDate().toISOString() }, ready: true };
 });
 
 export const startAttempt = onCall(async request => {
@@ -621,7 +621,7 @@ export const getAdminDashboard = onCall(async request => {
     passed: resultRows.filter(x => x.passed).length,
     average: resultRows.length ? Math.round(resultRows.reduce((a, x) => a + x.scorePercent, 0) / resultRows.length * 100) / 100 : 0,
     top20: resultRows.slice(0, 20),
-    schedules: schedules.docs.map(d => { const x=d.data(); return { id:d.id, day:x.day, date:x.date, topic:x.topic, isPublished:x.isPublished !== false, openAt:x.openAt?.toDate?.().toISOString?.() || x.openAt, closeAt:x.closeAt?.toDate?.().toISOString?.() || x.closeAt, status:x.status }; })
+    schedules: schedules.docs.map(d => { const x=d.data(); return { id:d.id, day:x.day, date:x.date, topic:x.topic, videoUrl:x.videoUrl || '', isPublished:x.isPublished === true, openAt:x.openAt?.toDate?.().toISOString?.() || x.openAt, closeAt:x.closeAt?.toDate?.().toISOString?.() || x.closeAt, status:x.status }; })
   };
 });
 
