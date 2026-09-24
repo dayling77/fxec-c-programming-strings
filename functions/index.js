@@ -773,8 +773,9 @@ export const questionBankAdminAction = onDocumentCreated({region:'asia-south1',t
       const requestedDay = Number(action.day || dayFromId?.[1] || 0);
       if (requestedDay >= 1 && requestedDay <= 5) {
         const day = requestedDay;
-        const bank = await getQuestionBankForAdmin();
-        const allQuestions = (bank.questions || []).map(normalizeDraftQuestion);
+        const suppliedQuestions = Array.isArray(action.questions) ? action.questions : null;
+        const bank = suppliedQuestions ? null : await getQuestionBankForAdmin();
+        const allQuestions = (suppliedQuestions || bank?.questions || []).map(normalizeDraftQuestion);
         const dayQuestions = allQuestions.filter(q => Number(String(q.id).match(/^D(\d+)-/)?.[1] || 0) === day);
         if (!dayQuestions.length) {
           await event.data.ref.set({status:'failed',error:'No questions found for Day '+day,completedAt:FieldValue.serverTimestamp()},{merge:true});
