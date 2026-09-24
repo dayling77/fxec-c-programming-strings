@@ -163,20 +163,75 @@ async function loadStats() {
   } catch {}
 }
 
+function toLocalInput(iso) {
+  const d = new Date(iso);
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+function renderSchedules(schedules) {
+  const rows = (schedules || []).sort((a,b) => Number(a.day)-Number(b.day)).map((s, i) => `
+    <div class="scheduleRow">
+      <input class="schDay" type="number" min="1" value="${esc(s.day || i+1)}" placeholder="Day">
+      <input class="schTopic" value="${esc(s.topic || '')}" placeholder="Topic">
+      <input class="schDate" type="date" value="${esc(s.date || '')}">
+      <input class="schOpen" type="datetime-local" value="${s.openAt ? toLocalInput(s.openAt) : ''}">
+      <input class="schClose" type="datetime-local" value="${s.closeAt ? toLocalInput(s.closeAt) : ''}">
+      <label><input class="schPublished" type="checkbox" ${s.isPublished !== false ? 'checked' : ''}> Published</label>
+    </div>`).join('');
+  $('scheduleEditor').innerHTML = `
+    <div class="scheduleHead"><b>Day</b><b>Topic</b><b>Date</b><b>Open</b><b>Close</b><b>Publish</b></div>
+    ${rows || '<p>No schedules found.</p>'}`;
+}
 async function loadAdmin() {
   try {
     const r = await call('getAdminDashboard')({});
     const d = r.data;
     $('adminStats').innerHTML = `Students: <b>${d.students}</b> · Attempts: <b>${d.attempts}</b> · Passed: <b>${d.passed}</b> · Average: <b>${d.average}%</b>`;
-    $('pending').innerHTML = d.pending.map(s => `<div class="pending"><span><b>${esc(s.name)}</b> · ${esc(s.registerNumber)} · ${esc(s.email)}</span><button data-approve="${s.id}">Approve</button></div>`).join('') || '<p>No pending students.</p>';
+    $('pending').innerHTML = d.pending.map(s => `
+      <div class="pending">
+        <label><input type="checkbox" class="pendingCheck" value="${esc(s.id)}"> <b>${esc(s.name)}</b> · ${esc(s.registerNumber)} · ${esc(s.email)}</label>
+        <button data-approve="${esc(s.id)}">Approve</button>
+      </div>`).join('') || '<p>No pending students.</p>';
     document.querySelectorAll('[data-approve]').forEach(b => b.onclick = async () => {
-      try { await call('authorizeStudent')({studentId:b.dataset.approve}); await loadAdmin(); msg('Student approved.',true); } catch(e){msg(e.message);}
+      b.disabled = true;
+      try { await call('authorizeStudent')({studentId:b.dataset.approve}); await loadAdmin(); msg('Student approved. The student can now wait for the assessment window.',true); }
+      catch(e){ b.disabled=false; msg(e.message); }
     });
+    renderSchedules(d.schedules);
     $('adminResults').innerHTML = d.top20.map(x => `<tr><td>${esc(x.studentId)}</td><td>${x.scorePercent}%</td><td>${x.passed ? 'PASS':'FAIL'}</td><td>${x.rewardPoints}</td></tr>`).join('') || '<tr><td colspan="4">No results yet.</td></tr>';
   } catch (e) {
     $('adminStats').textContent = e.message;
   }
 }
+$('selectAllBtn').onclick = () => {
+  const boxes = [...document.querySelectorAll('.pendingCheck')];
+  const shouldCheck = boxes.some(x => !x.checked);
+  boxes.forEach(x => x.checked = shouldCheck);
+};
+$('bulkApproveBtn').onclick = async () => {
+  const studentIds = [...document.querySelectorAll('.pendingCheck:checked')].map(x => x.value);
+  if (!studentIds.length) return msg('Select at least one student to approve.');
+  try {
+    const r = await call('authorizeStudentsBulk')({studentIds});
+    await loadAdmin();
+    msg(`${r.data.approved} student(s) approved. Approval emails are sent automatically when ZeptoMail is available.`, true);
+  } catch(e) { msg(e.message); }
+};
+$('saveSchedulesBtn').onclick = async () => {
+  try {
+    const schedules = [...document.querySelectorAll('.scheduleRow')].map(row => ({
+      day: Number(row.querySelector('.schDay').value),
+      topic: row.querySelector('.schTopic').value.trim(),
+      date: row.querySelector('.schDate').value,
+      openAt: new Date(row.querySelector('.schOpen').value).toISOString(),
+      closeAt: new Date(row.querySelector('.schClose').value).toISOString(),
+      isPublished: row.querySelector('.schPublished').checked
+    }));
+    const r = await call('updateAssessmentSchedules')({schedules});
+    await loadAdmin();
+    msg(`${r.data.count} assessment schedule(s) saved successfully.`, true);
+  } catch(e) { msg(e.message); }
+};
 $('csvBtn').onclick = async () => {
   try { const r=await call('exportResults')({format:'csv'}); const url=await getDownloadURL(ref(storage,r.data.path)); $('downloadInfo').innerHTML=`<a href="${url}" target="_blank">Download CSV</a>`; } catch(e){msg(e.message);}
 };
