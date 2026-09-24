@@ -659,65 +659,75 @@ async function saveQuestionBankDraft() {
     dayStatus:adminQuestionBank.dayStatus||{},status:'draft',updatedAt:new Date(),updatedBy:currentUser.uid
   },{merge:true});
 }
-async function approveQuestionBankDay(day,button) {
+async function approveQuestionBankDay(day,button){
   if(!adminQuestionBank)return msg('Load the question bank first.');
   try{
     readVisibleQuestionBankDay(day);
-    const cards=[...document.querySelectorAll('.questionBankItem')];
-    const selected=cards.filter(card=>card.querySelector('.qbSelect')?.checked);
-    const total=cards.length;
-    if(!total) return msg('No questions are loaded for Day '+day+'.');
-    if(selected.length!==total) return msg('Review/select all '+total+' questions in Day '+day+' before approving.');
-    if(!confirm('Approve Day '+day+' and publish its '+total+' questions?'))return;
+    const qs=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+day+'-'));
+    if(qs.length!==25)return msg('Day '+day+' must contain exactly 25 questions. Found '+qs.length+'.');
+    if(!confirm('Approve Day '+day+' and publish all 25 questions?'))return;
 
-    button.disabled=true; button.textContent='Saving…';
-    await saveQuestionBankDraft();
-
-    const actionId='publishQuestionBankDay'+day+'_'+Date.now();
-    await setDoc(doc(firestore,'adminActions',actionId),{
-      requestedBy:currentUser.uid,requestedAt:new Date(),status:'requested',day
-    });
-
+    button.disabled=true;
+    button.textContent='Publishing…';
     adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
     adminQuestionBank.dayStatus[day]='pending';
-    button.textContent='Processing…';
-    msg('Day '+day+' approval submitted. The server is validating the questions and generating the audio. This may take a few minutes.',true);
+    await saveQuestionBankDraft();
 
-    // Follow the server action so the Admin sees the real result instead of
-    // remaining indefinitely on "Processing…".
-    let finished=false;
-    for(let attempt=0;attempt<200;attempt++){
-      await new Promise(resolve=>setTimeout(resolve,3000));
-      const snap=await getDoc(doc(firestore,'adminActions',actionId));
-      if(!snap.exists())continue;
-      const result=snap.data()||{};
-      if(result.status==='completed'){
-        finished=true;
-        adminQuestionBank.dayStatus[day]='approved';
-        button.disabled=false;
-        button.textContent='✓ Day '+day+' Approved';
-        await loadAdminQuestionBank();
-        msg('Day '+day+' approved successfully. The secure question pool is ready.',true);
-        break;
+    const defaultDates={1:'2026-09-24',2:'2026-09-25',3:'2026-09-26',4:'2026-09-27',5:'2026-09-28'};
+    const scheduleSnap=await getDoc(doc(firestore,'assessmentSchedules',defaultDates[day]));
+    const schedule=scheduleSnap.exists()?scheduleSnap.data():null;
+    const date=schedule?.date||defaultDates[day];
+    if(!date)throw new Error('No assessment date is configured for Day '+day+'.');
+
+    const published=qs.map(q=>{
+      const item=JSON.parse(JSON.stringify(q));
+      delete item.reviewed;
+      if(item.type==='match'){
+        const pairs=Array.isArray(item.options)?item.options:[];
+        const leftItems=pairs.map(p=>String(p).split(' -> ')[0].trim());
+        const rightItems=pairs.map(p=>String(p).split(' -> ')[1]?.trim()||String(p).trim());
+        const mapping={};
+        Object.entries(item.answer||{}).forEach(([k,v])=>{
+          const value=String(v);
+          const idx=rightItems.findIndex(x=>x===value);
+          mapping[k]=idx>=0?rightItems[idx]:value;
+        });
+        item.leftItems=leftItems;
+        item.rightItems=rightItems;
+        item.options=rightItems;
+        item.answer=mapping;
       }
-      if(result.status==='failed'){
-        finished=true;
-        adminQuestionBank.dayStatus[day]='draft';
-        button.disabled=false;
-        button.textContent='Approve Day '+day;
-        msg('Day '+day+' approval failed: '+(result.error||'Unknown server error.'));
-        break;
-      }
-    }
-    if(!finished){
-      button.disabled=false;
-      button.textContent='Approve Day '+day;
-      msg('Approval is still processing on the server. The page will remain available while the secure pool is being prepared.');
-    }
+      return item;
+    });
+
+    await setDoc(doc(firestore,'questionPools',date),{
+      date,day,
+      topic:schedule?.topic||published[0]?.topic||('Day '+day),
+      status:'ready',
+      source:'admin-question-bank-direct',
+      approvedBy:currentUser.email||currentUser.uid,
+      approvedAt:new Date(),
+      questions:published,
+      updatedAt:new Date()
+    });
+
+    adminQuestionBank.dayStatus[day]='approved';
+    await setDoc(doc(firestore,'questionBank','master'),{
+      dayStatus:adminQuestionBank.dayStatus,status:'draft',
+      updatedAt:new Date(),updatedBy:currentUser.uid
+    },{merge:true});
+
+    button.disabled=false;
+    button.textContent='✓ Day '+day+' Approved';
+    renderAdminQuestionBank();
+    msg('✓ Day '+day+' approved. The secure question pool is now ready for students.',true);
   }catch(e){
+    adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
+    adminQuestionBank.dayStatus[day]='draft';
     button.disabled=false;
     button.textContent='Approve Day '+day;
-    msg(e.message||String(e));
+    msg('Day '+day+' approval failed: '+(e.message||String(e)));
+    console.error('Day approval failed',e);
   }
 }
 if ($('loadQuestionBankBtn')) $('loadQuestionBankBtn').onclick=loadAdminQuestionBank;
