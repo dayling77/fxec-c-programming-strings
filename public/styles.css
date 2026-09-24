@@ -139,3 +139,5 @@ body{background:#f4f7fb;color:var(--ink);line-height:1.55}
 .qbSelectLabel input{width:auto!important;margin:0!important}
 .questionBankHead{grid-template-columns:auto auto 1fr 150px}
 @media(max-width:800px){.questionBankDayHeader{align-items:flex-start;flex-direction:column}.questionBankDayActions{width:100%}.questionBankDayActions button{flex:1}.questionBankHead{grid-template-columns:1fr}.qbSelectLabel{margin-bottom:4px!important}}
+
+.questionBankApprovalHint{display:inline-flex;align-items:center;padding:9px 12px;border-radius:9px;background:#f1f5f9;color:#475569;font-size:12px;font-weight:800}
