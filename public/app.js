@@ -415,6 +415,7 @@ function renderAdminQuestionBank() {
       : '';
 
     const editHtml='<div class="qbEditPanel" hidden>'+
+      '<div class="qbEditToolbar"><label>Difficulty<select class="qbDifficulty">'+['easy','moderate','tough'].map(d=>'<option value="'+d+'" '+(q.difficulty===d?'selected':'')+'>'+d.toUpperCase()+'</option>').join('')+'</select></label></div>'+
       '<div class="qbEditGrid">'+
       '<label>Question / Prompt<textarea class="qbPrompt" rows="3">'+esc(q.prompt||'')+'</textarea></label>'+
       '<label>Options <small>One option per line</small><textarea class="qbOptions" rows="5">'+esc(opts.join('\n'))+'</textarea></label>'+
