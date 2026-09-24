@@ -10,6 +10,7 @@ import { GoogleGenAI } from '@google/genai';
 import textToSpeech from '@google-cloud/text-to-speech';
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import { randomUUID } from 'node:crypto';
+import { QUESTION_BANK, QUESTION_BANK_META } from './question-bank.js';
 
 initializeApp();
 const db = getFirestore();
@@ -634,6 +635,150 @@ export const getStudentProfile = onCall(async request => {
     } : null
   };
 });
+
+
+function normalizeDraftQuestion(q) {
+  const x = JSON.parse(JSON.stringify(q || {}));
+  x.id = cleanText(x.id, 120);
+  x.type = cleanText(x.type, 40);
+  x.difficulty = cleanText(x.difficulty, 20);
+  x.topic = cleanText(x.topic, 200);
+  x.prompt = cleanText(x.prompt, 3000);
+  x.explanation = cleanText(x.explanation, 3000);
+  if (Array.isArray(x.options)) x.options = x.options.map(v => cleanText(v, 1000));
+  if (x.audioText) x.audioText = cleanText(x.audioText, 3000);
+  return x;
+}
+
+function validateQuestionBank(questions) {
+  if (!Array.isArray(questions) || questions.length !== 125) return 'Question bank must contain exactly 125 questions.';
+  const ids = new Set();
+  const expected = {mcq:5,match:5,audio:8,problemSolving:2,multiAnswer:5};
+  for (let day = 1; day <= 5; day++) {
+    const dayQs = questions.filter(q => String(q.id).startsWith('D' + day + '-'));
+    if (dayQs.length !== 25) return 'Day ' + day + ' must contain exactly 25 questions.';
+    const counts = {mcq:0,match:0,audio:0,problemSolving:0,multiAnswer:0};
+    const diffs = {easy:0,moderate:0,tough:0};
+    for (const q of dayQs) {
+      if (!q.id || ids.has(q.id)) return 'Duplicate or missing question ID: ' + (q.id || '');
+      ids.add(q.id);
+      if (!Object.prototype.hasOwnProperty.call(expected,q.type)) return 'Invalid type in ' + q.id;
+      if (!Object.prototype.hasOwnProperty.call(diffs,q.difficulty)) return 'Invalid difficulty in ' + q.id;
+      counts[q.type]++; diffs[q.difficulty]++;
+      if (!q.prompt || !Array.isArray(q.options) || q.options.length < 2 || !q.explanation) return 'Missing fields in ' + q.id;
+      if (q.type === 'multiAnswer' && (!Array.isArray(q.answer) || q.answer.length < 2 || q.answer.length > 3)) return 'Multi-answer ' + q.id + ' must have 2 or 3 correct options.';
+      if (q.type !== 'multiAnswer' && q.type !== 'match' && (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length)) return 'Invalid answer in ' + q.id;
+      if (q.type === 'audio' && !q.audioText) return 'Audio text missing in ' + q.id;
+      if (q.type === 'match' && (!q.answer || typeof q.answer !== 'object')) return 'Match mapping missing in ' + q.id;
+    }
+    if (JSON.stringify(counts) !== JSON.stringify(expected)) return 'Day ' + day + ' type distribution must be 5 MCQ, 5 Match, 8 Audio, 2 Problem Solving, 5 Multi-answer.';
+    if (JSON.stringify(diffs) !== JSON.stringify({easy:10,moderate:10,tough:5})) return 'Day ' + day + ' difficulty distribution must be 10 Easy, 10 Moderate, 5 Tough.';
+  }
+  return null;
+}
+
+function normalizeMatch(q) {
+  const x = {...q};
+  if (x.type !== 'match') return x;
+  const pairs = Array.isArray(x.options) ? x.options : [];
+  const leftItems = pairs.map(p => String(p).split(' -> ')[0].trim());
+  const rightItems = pairs.map(p => String(p).split(' -> ')[1]?.trim() || String(p).trim());
+  const answer = {};
+  Object.entries(x.answer || {}).forEach(([k,v]) => {
+    const value = String(v);
+    const idx = rightItems.findIndex(r => r === value);
+    answer[k] = idx >= 0 ? rightItems[idx] : value;
+  });
+  return {...x, leftItems, rightItems, options:rightItems, answer};
+}
+
+async function getQuestionBankForAdmin() {
+  const snap = await db.collection('questionBank').doc('master').get();
+  if (snap.exists) return snap.data();
+  const draft = {meta: QUESTION_BANK_META, questions: QUESTION_BANK, status:'draft', updatedAt: FieldValue.serverTimestamp()};
+  await db.collection('questionBank').doc('master').set(draft, {merge:true});
+  return draft;
+}
+
+export const getAdminQuestionBank = onCall(async request => {
+  requireAdmin(request);
+  const bank = await getQuestionBankForAdmin();
+  return {meta: bank.meta || QUESTION_BANK_META, status: bank.status || 'draft', questions: bank.questions || QUESTION_BANK};
+});
+
+export const saveAdminQuestionBank = onCall(async request => {
+  requireAdmin(request);
+  const questions = Array.isArray(request.data?.questions) ? request.data.questions.map(normalizeDraftQuestion) : [];
+  const error = validateQuestionBank(questions);
+  if (error) throw new HttpsError('invalid-argument', error);
+  await db.collection('questionBank').doc('master').set({
+    meta: {...QUESTION_BANK_META, totalQuestions: questions.length},
+    questions,
+    status: 'draft',
+    updatedAt: FieldValue.serverTimestamp(),
+    updatedBy: request.auth.uid
+  });
+  return {success:true, status:'draft', totalQuestions:questions.length};
+});
+
+export const publishAdminQuestionBank = onCall({timeoutSeconds:900}, async request => {
+  requireAdmin(request);
+  const bank = await getQuestionBankForAdmin();
+  const questions = (bank.questions || []).map(normalizeDraftQuestion);
+  const error = validateQuestionBank(questions);
+  if (error) throw new HttpsError('failed-precondition', error);
+
+  const byDay = new Map();
+  questions.forEach(q => {
+    const day = Number(String(q.id).match(/^D(\\d+)-/)?.[1] || 0);
+    if (!byDay.has(day)) byDay.set(day, []);
+    byDay.get(day).push(normalizeMatch(q));
+  });
+
+  for (const [day, dayQuestions] of byDay.entries()) {
+    const date = FIVE_DAY_SCHEDULE[day - 1]?.date;
+    if (!date) continue;
+    const enriched = [];
+    for (const q of dayQuestions) {
+      const item = {...q};
+      delete item.audioPath;
+      if (q.type === 'audio') {
+        const audioText = q.audioText || q.prompt;
+        const [response] = await tts.synthesizeSpeech({
+          input: {text: audioText},
+          voice: {languageCode: CONFIG.voice.languageCode, name: CONFIG.voice.name},
+          audioConfig: {audioEncoding:'MP3'}
+        });
+        const path = 'audio/question-bank/' + date + '/' + q.id + '.mp3';
+        await bucket.file(path).save(response.audioContent, {contentType:'audio/mpeg'});
+        item.audioPath = path;
+      }
+      enriched.push(item);
+    }
+    const ref = db.collection('questionPools').doc(date);
+    await ref.set({
+      date,
+      day,
+      topic: FIVE_DAY_SCHEDULE[day - 1]?.topic || qTopic(day),
+      status:'ready',
+      source:'admin-question-bank',
+      approvedBy:request.auth.uid,
+      approvedAt:FieldValue.serverTimestamp(),
+      questions:enriched,
+      updatedAt:FieldValue.serverTimestamp()
+    });
+  }
+  await db.collection('questionBank').doc('master').set({
+    status:'published',
+    publishedAt:FieldValue.serverTimestamp(),
+    publishedBy:request.auth.uid
+  }, {merge:true});
+  return {success:true, status:'published', days:byDay.size, questions:questions.length};
+});
+
+function qTopic(day) {
+  return ['String Basics','String Library Functions','Manual String Processing','Character Frequency and String Analysis','Advanced String Problem Solving'][day-1] || 'C Strings';
+}
 
 export const getCourseOverview = onCall(async () => {
   const schedules = (await db.collection('assessmentSchedules').get()).docs
