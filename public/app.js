@@ -124,7 +124,8 @@ async function loadCourseOverview(){
   }catch(e){
     renderPublicSchedule([]);
   }
-  renderSample('sampleQuestions','sampleResult','sampleSubmit');\n  renderRewardPointsRegistration();
+  renderSample('sampleQuestions','sampleResult','sampleSubmit');
+  renderRewardPointsRegistration();
 }
 
 
