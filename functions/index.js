@@ -656,6 +656,29 @@ function normalizeDraftQuestion(q) {
   return x;
 }
 
+function validateDayQuestionBank(questions, day) {
+  if (!Array.isArray(questions) || questions.length !== 25) return 'Day ' + day + ' must contain exactly 25 questions.';
+  const ids = new Set();
+  const expected = {mcq:5,match:5,audio:8,problemSolving:2,multiAnswer:5};
+  const diffs = {easy:0,moderate:0,tough:0};
+  const counts = {mcq:0,match:0,audio:0,problemSolving:0,multiAnswer:0};
+  for (const q of questions) {
+    if (!q.id || ids.has(q.id)) return 'Duplicate or missing question ID: ' + (q.id || '');
+    ids.add(q.id);
+    if (!Object.prototype.hasOwnProperty.call(expected,q.type)) return 'Invalid type in ' + q.id;
+    if (!Object.prototype.hasOwnProperty.call(diffs,q.difficulty)) return 'Invalid difficulty in ' + q.id;
+    counts[q.type]++; diffs[q.difficulty]++;
+    if (!q.prompt || !Array.isArray(q.options) || q.options.length < 2 || !q.explanation) return 'Missing fields in ' + q.id;
+    if (q.type === 'multiAnswer' && (!Array.isArray(q.answer) || q.answer.length < 2 || q.answer.length > 3)) return 'Multi-answer ' + q.id + ' must have 2 or 3 correct options.';
+    if (q.type !== 'multiAnswer' && q.type !== 'match' && (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length)) return 'Invalid answer in ' + q.id;
+    if (q.type === 'audio' && !q.audioText) return 'Audio text missing in ' + q.id;
+    if (q.type === 'match' && (!q.answer || typeof q.answer !== 'object')) return 'Match mapping missing in ' + q.id;
+  }
+  if (JSON.stringify(counts) !== JSON.stringify(expected)) return 'Day ' + day + ' type distribution must be 5 MCQ, 5 Match, 8 Audio, 2 Problem Solving, 5 Multi-answer.';
+  if (JSON.stringify(diffs) !== JSON.stringify({easy:10,moderate:10,tough:5})) return 'Day ' + day + ' difficulty distribution must be 10 Easy, 10 Moderate, 5 Tough.';
+  return null;
+}
+
 function validateQuestionBank(questions) {
   if (!Array.isArray(questions) || questions.length !== 125) return 'Question bank must contain exactly 125 questions.';
   const ids = new Set();
@@ -725,7 +748,7 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
 
   // Day-specific approval actions use IDs such as publishQuestionBankDay1_... .
   // Prefer the explicit day field and fall back to the action ID.
-  const dayFromId = id.match(/^publishQuestionBankDay(\\d+)_/);
+  const dayFromId = id.match(/^publishQuestionBankDay(\d+)_/);
   const requestedDay = Number(action.day || dayFromId?.[1] || 0);
   if (requestedDay >= 1 && requestedDay <= 5) {
     const day = requestedDay;
@@ -736,7 +759,7 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
       await event.data.ref.set({status:'failed',error:'No questions found for Day '+day,completedAt:FieldValue.serverTimestamp()},{merge:true});
       return;
     }
-    const error = validateQuestionBank(allQuestions);
+    const error = validateDayQuestionBank(dayQuestions, day);
     if (error) {
       await event.data.ref.set({status:'failed',error,completedAt:FieldValue.serverTimestamp()},{merge:true});
       return;
