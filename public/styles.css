@@ -88,3 +88,15 @@ body{background:#f4f7fb;color:var(--ink);line-height:1.55}
 #message{border:1px solid #e5e7eb}
 @media(max-width:1000px){.publicDayGrid{grid-template-columns:repeat(2,1fr)}.adminStatGrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.hero h1{font-size:31px}.publicDayGrid,.sampleGrid{grid-template-columns:1fr}.accessCard{padding:20px}.adminStatGrid{grid-template-columns:repeat(2,1fr)}}
+
+.authHint{color:#64748b;font-size:13px}
+.linkButton{background:transparent;color:#2563eb;padding:8px;border:0}
+.studentWelcome{background:linear-gradient(135deg,#102a43,#2563eb);color:#fff}.studentWelcome p{opacity:.9}
+.studentMenu{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.menuButton,.dayMenuButton{margin:0;min-height:58px}
+.studentHiddenPanel{margin-bottom:18px}
+.dayButtonGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:15px 0}
+.dayMenuButton{background:#fff;color:#1746a2;border:1px solid #cbdaf2;text-align:left}.dayMenuButton:hover{background:#eef4ff}
+.dayContentPanel{border:1px solid #dbe5f0;border-radius:15px;padding:20px;background:#fbfdff}.dayContentPanel h3{margin:8px 0 2px}.dayContentPanel li{margin:7px 0;color:#475569}
+.assessmentNav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:15px;border-top:1px solid #e5e7eb}.assessmentNav span{font-weight:800;color:#475569}
+@media(max-width:900px){.studentMenu{grid-template-columns:repeat(2,1fr)}.dayButtonGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.studentMenu,.dayButtonGrid{grid-template-columns:1fr}.assessmentNav{flex-wrap:wrap}}
