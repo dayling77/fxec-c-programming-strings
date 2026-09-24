@@ -848,7 +848,6 @@ export const questionBankAdminAction = onDocumentCreated({region:'asia-south1',t
         await db.collection('questionBank').doc('master').set({status:'published',publishedAt:FieldValue.serverTimestamp()},{merge:true});
         await event.data.ref.set({status:'completed',completedAt:FieldValue.serverTimestamp(),questions:questions.length},{merge:true});
       }
-    }
   } catch (error) {
     logger.error("Question bank admin action failed", {
       actionId,
