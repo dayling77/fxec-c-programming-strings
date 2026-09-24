@@ -85,7 +85,14 @@ $('adminBootstrap').onclick = async () => {
 
 async function loadStudent() {
   renderSample('studentSampleQuestions','studentSampleResult','studentSampleSubmit');
-  try { const overview = await call('getCourseOverview')({}); renderPublicSchedule(overview.data.schedules); } catch {}
+  try {
+    const overview = await call('getCourseOverview')({});
+    renderPublicSchedule(overview.data.schedules);
+    const videos = (overview.data.schedules || []).filter(x => x.isPublished && x.videoUrl);
+    $('studentVideos').innerHTML = videos.length
+      ? videos.map(x => '<div class="dayCard"><strong>Day '+esc(x.day)+' — '+esc(x.topic)+'</strong><br><a href="'+esc(x.videoUrl)+'" target="_blank">Watch Video Material</a></div>').join('')
+      : '<p>Video learning materials will appear here when published by the administrator.</p>';
+  } catch {}
   try {
     const r = await call('getAssessment')({});
     const d = r.data;
