@@ -1,7 +1,7 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import { onSchedule } from 'firebase-functions/v2/scheduler';
 import { defineJsonSecret } from 'firebase-functions/params';
-import { logger } from 'firebase-functions';
+import { logger, setGlobalOptions } from 'firebase-functions';
 import { initializeApp } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { getFirestore, FieldValue } from 'firebase-admin/firestore';
@@ -12,6 +12,7 @@ import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import { randomUUID } from 'node:crypto';
 import { QUESTION_BANK, QUESTION_BANK_META } from './question-bank.js';
 
+setGlobalOptions({ invoker: 'public' });
 initializeApp();
 const db = getFirestore();
 const auth = getAuth();
