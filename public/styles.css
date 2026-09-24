@@ -7,3 +7,9 @@
 .scheduleHead{font-size:12px;font-weight:700}
 .scheduleRow input{width:100%;box-sizing:border-box}
 .scheduleRow label{font-size:12px}
+
+.dayCard{padding:14px;margin:10px 0;border:1px solid #ddd;border-radius:10px}
+.sampleQ{padding:14px;margin:10px 0;border:1px solid #ddd;border-radius:10px}
+.sampleQ .option{display:block;margin-top:8px}
+#studentVideos iframe{width:100%;min-height:360px;border:0;border-radius:10px}
+.scheduleHead,.scheduleRow{grid-template-columns:60px 1.2fr 120px 175px 175px 1.5fr 100px;min-width:1100px}
