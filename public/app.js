@@ -302,10 +302,23 @@ function renderAssessment(data) {
   const audio=$('playCurrentAudio');
   if(audio) audio.onclick=async()=>{
     try{
-      const url=await getDownloadURL(ref(storage,audio.dataset.audio));
-      const player=new Audio(url); player.play();
-      audio.textContent='■ Playing Question';
-      player.onended=()=>{if(audio)audio.textContent='▶ Play Question';};
+      if(audio.dataset.audio){
+        const url=await getDownloadURL(ref(storage,audio.dataset.audio));
+        const player=new Audio(url);
+        await player.play();
+        audio.textContent='■ Playing Question';
+        player.onended=()=>{if(audio)audio.textContent='▶ Play Question';};
+      } else if(window.speechSynthesis){
+        const utterance=new SpeechSynthesisUtterance(q.audioText||q.prompt||'');
+        utterance.lang='en-IN';
+        utterance.rate=0.95;
+        audio.textContent='■ Playing Question';
+        utterance.onend=()=>{if(audio)audio.textContent='▶ Play Question';};
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
+      } else {
+        throw new Error('Audio unavailable');
+      }
     }catch(e){msg('Audio could not be loaded. Please try again.');}
   };
 
