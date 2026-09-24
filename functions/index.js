@@ -583,16 +583,24 @@ export const assessmentScheduler = onSchedule({ schedule: 'every 15 minutes', ti
   }
 });
 
-export const assessmentContentScheduler = onSchedule({ schedule: 'every 30 minutes', timeZone: CONFIG.timezone, timeoutSeconds: 540 }, async () => {
+export const assessmentContentScheduler = onSchedule({ schedule: 'every 15 minutes', timeZone: CONFIG.timezone, timeoutSeconds: 900 }, async () => {
   await ensureSchedules();
-  const now = Date.now();
+  // Generate every published assessment pool in advance and keep it ready.
+  // buildQuestionPool() is idempotent: once a pool is marked "ready", it is never regenerated.
   const docs = await db.collection('assessmentSchedules').where('isPublished', '==', true).get();
   for (const doc of docs.docs) {
     const x = doc.data();
-    const openAt = x.openAt?.toDate?.() || new Date(x.openAt);
-    const openMs = openAt.getTime();
-    if (Number.isNaN(openMs) || openMs - now > 8 * 60 * 60 * 1000 || openMs - now < -60 * 60 * 1000) continue;
-    try { await buildQuestionPool({ date: x.date || doc.id, day: x.day, topic: x.topic, openAt, closeAt: x.closeAt?.toDate?.() || new Date(x.closeAt) }); } catch (e) { logger.error('Generation failed for ' + (x.date || doc.id), e); }
+    try {
+      await buildQuestionPool({
+        date: x.date || doc.id,
+        day: x.day,
+        topic: x.topic,
+        openAt: x.openAt?.toDate?.() || new Date(x.openAt),
+        closeAt: x.closeAt?.toDate?.() || new Date(x.closeAt)
+      });
+    } catch (e) {
+      logger.error('Pre-generation failed for ' + (x.date || doc.id), e);
+    }
   }
 });
 
