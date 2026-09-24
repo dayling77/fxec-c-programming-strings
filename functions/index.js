@@ -105,17 +105,13 @@ function makeScheduleData(item) {
 }
 
 async function ensureSchedules() {
+  const existing = await db.collection('assessmentSchedules').limit(1).get();
+  if (!existing.empty) return;
   const batch = db.batch();
-  let changed = false;
   for (const item of FIVE_DAY_SCHEDULE) {
-    const ref = db.collection('assessmentSchedules').doc(item.date);
-    const snap = await ref.get();
-    if (!snap.exists) {
-      batch.set(ref, makeScheduleData(item));
-      changed = true;
-    }
+    batch.set(db.collection('assessmentSchedules').doc(item.date), makeScheduleData(item));
   }
-  if (changed) await batch.commit();
+  await batch.commit();
 }
 
 async function sendEmail({ to, name, subject, html, text }) {
@@ -411,12 +407,14 @@ export const updateAssessmentSchedules = onCall(async request => {
   requireAdmin(request);
   const schedules = Array.isArray(request.data?.schedules) ? request.data.schedules : [];
   if (!schedules.length || schedules.length > 10) throw new HttpsError('invalid-argument', 'Provide one or more assessment schedules.');
+  const existing = await db.collection('assessmentSchedules').get();
   const batch = db.batch();
+  existing.docs.forEach(d => batch.delete(d.ref));
   for (const item of schedules) {
     const day = Number(item.day), date = cleanText(item.date, 20), topic = cleanText(item.topic, 200);
     const openAt = new Date(cleanText(item.openAt, 50)), closeAt = new Date(cleanText(item.closeAt, 50));
     if (!Number.isInteger(day) || day < 1 || !date || !topic || Number.isNaN(openAt.getTime()) || Number.isNaN(closeAt.getTime()) || closeAt <= openAt) throw new HttpsError('invalid-argument', 'Each schedule needs a valid Day, date, opening time and closing time.');
-    batch.set(db.collection('assessmentSchedules').doc(date), { day, date, topic, openAt, closeAt, isPublished: item.isPublished !== false, status: 'scheduled', updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+    batch.set(db.collection('assessmentSchedules').doc(date), { day, date, topic, openAt, closeAt, isPublished: item.isPublished !== false, status: 'scheduled', updatedAt: FieldValue.serverTimestamp() });
   }
   await batch.commit();
   return { success: true, count: schedules.length };
