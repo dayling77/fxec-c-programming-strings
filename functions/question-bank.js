@@ -36,7 +36,7 @@ export const QUESTION_BANK = [
     ["D1-MA3","multiAnswer","moderate","Which can modify characters of a mutable character array?",["s[0]='X'","s[i]='A'","fgets(s,20,stdin)","strlen(s)"],[0,1,2],"Index assignment and fgets can modify the array; strlen only measures."],
     ["D1-MA4","multiAnswer","tough","Which statements about fgets are correct?",["It receives the destination array","It limits the input size","It can read spaces","It always removes the newline"],[0,1,2],"fgets limits input and can retain a newline."],
     ["D1-MA5","multiAnswer","tough","Which situations can cause a C-string bug?",["Forgetting the null terminator","Using an array that is too small","Ignoring input capacity","Accessing a valid character index"],[0,1,2],"The first three can produce invalid or unsafe strings."]
-  ].map(x=>make(x[0],x[1],x[2],"String Basics",x[3],x[4],x[5],x[6],x[7])),
+  ].map(x=>make(x[0],x[1],x[2],"String Basics",x[3],x[4],x[5],x[6],x[1]==='audio'?x[3]:null)),
 
   ...[
     ["D2-M1","mcq","easy","Which header provides strlen, strcpy, strcat and strcmp?",["stdio.h","string.h","math.h","stdlib.h"],1,"These standard string functions are declared in string.h."],
@@ -64,7 +64,7 @@ export const QUESTION_BANK = [
     ["D2-MA3","multiAnswer","moderate","Which operations can change the destination string?",["strcpy","strcat","strlen","strcmp"],[0,1],"strcpy and strcat modify the destination."],
     ["D2-MA4","multiAnswer","tough","Which statements about strcmp are correct?",["Zero indicates equality","It compares strings","It can return negative or positive results for unequal strings","It returns the string length"],[0,1,2],"strcmp compares strings and returns zero for equality."],
     ["D2-MA5","multiAnswer","tough","Which precautions matter when using strcpy or strcat?",["Destination must have enough space","Inputs must be valid strings","The terminator must be accommodated","strcmp must be called first"],[0,1,2],"Capacity and valid terminated strings matter."]
-  ].map(x=>make(x[0],x[1],x[2],"String Library Functions",x[3],x[4],x[5],x[6],x[7])),
+  ].map(x=>make(x[0],x[1],x[2],"String Library Functions",x[3],x[4],x[5],x[6],x[1]==='audio'?x[3]:null)),
 
   ...[
     ["D3-M1","mcq","easy","When manually finding string length, where should the loop stop?",["A space","\\0","EOF","The first vowel"],1,"Manual length counting stops at the null character."],
@@ -92,7 +92,7 @@ export const QUESTION_BANK = [
     ["D3-MA3","multiAnswer","moderate","Which operations can be done without string library functions?",["Manual length","Manual copy","Manual comparison","Manual vowel count"],[0,1,2,3],"The day focuses on implementing these manually."],
     ["D3-MA4","multiAnswer","tough","Which statements about removing spaces are correct?",["A space can be detected with s[i]==' '","Non-space characters can be copied forward","The result needs \\0","The source must always be reversed"],[0,1,2],"Filtering requires detecting spaces, copying other characters and terminating the result."],
     ["D3-MA5","multiAnswer","tough","Which are useful test cases for manual string algorithms?",["An empty string","A one-character string","A string with spaces","A string with repeated letters"],[0,1,2,3],"These cases expose boundary and repeated-character behavior."]
-  ].map(x=>make(x[0],x[1],x[2],"Manual String Processing",x[3],x[4],x[5],x[6],x[7])),
+  ].map(x=>make(x[0],x[1],x[2],"Manual String Processing",x[3],x[4],x[5],x[6],x[1]==='audio'?x[3]:null)),
 
   ...[
     ["D4-M1","mcq","easy","What is frequency[256] typically used for?",["Character frequency counting","Sorting integers","Reading files","Storing words only"],0,"It provides counts indexed by character value."],
@@ -120,7 +120,7 @@ export const QUESTION_BANK = [
     ["D4-MA3","multiAnswer","moderate","Which values can be derived from scanning a string?",["Vowel count","Digit count","Character frequency","Longest word"],[0,1,2,3],"All are string-analysis results."],
     ["D4-MA4","multiAnswer","tough","Which tests are useful for a string analyzer?",["Empty input","All vowels","All digits","Repeated and non-repeated characters"],[0,1,2,3],"These cases exercise different analyzer branches."],
     ["D4-MA5","multiAnswer","tough","Which statements about longest and shortest words are correct?",["They require identifying word boundaries","A running maximum can track the longest","A running minimum can track the shortest","They depend only on character frequency"],[0,1,2],"Word-length analysis needs boundaries and lengths."]
-  ].map(x=>make(x[0],x[1],x[2],"Character Frequency and String Analysis",x[3],x[4],x[5],x[6],x[7])),
+  ].map(x=>make(x[0],x[1],x[2],"Character Frequency and String Analysis",x[3],x[4],x[5],x[6],x[1]==='audio'?x[3]:null)),
 
   ...[
     ["D5-M1","mcq","easy","What is a palindrome?",["A string that reads the same forward and backward","A string containing only vowels","A sorted string","A string with no spaces"],0,"That is the defining property of a palindrome."],
@@ -148,7 +148,7 @@ export const QUESTION_BANK = [
     ["D5-MA3","multiAnswer","moderate","Which advanced string problems are covered?",["Rotation","Duplicate removal","First non-repeating character","String compression"],[0,1,2,3],"All four are included in the advanced problem set."],
     ["D5-MA4","multiAnswer","tough","Which statements describe a subsequence?",["Order is preserved","Characters need not be adjacent","Characters cannot be rearranged","Selected characters occur in the original sequence"],[0,1,2,3],"These are the defining properties of a subsequence."],
     ["D5-MA5","multiAnswer","tough","Which are sensible steps in solving a difficult string problem?",["Clarify the requirement","Choose an appropriate representation","Test edge cases","Verify the result"],[0,1,2,3],"The module recommends a systematic workflow."]
-  ].map(x=>make(x[0],x[1],x[2],"Advanced String Problem Solving",x[3],x[4],x[5],x[6],x[7]))
+  ].map(x=>make(x[0],x[1],x[2],"Advanced String Problem Solving",x[3],x[4],x[5],x[6],x[1]==='audio'?x[3]:null))
 ];
 
 export const QUESTION_BANK_META = {
