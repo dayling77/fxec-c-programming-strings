@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
-import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js';
+import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
 import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-storage.js';
 
@@ -79,13 +79,20 @@ function renderPublicSchedule(schedules){
 
 function renderStudentLearning(schedules){
   const byDay=new Map((schedules||[]).map(s=>[Number(s.day),s]));
-  $('studentCourseDashboard').innerHTML=`<div class="learningIntro"><strong>Learn → Watch → Practice → Think → Code → Test</strong><p>Work through the five days in sequence. The main assessment opens only during the date/time published by the Administrator.</p></div><div class="studentDayList">${COURSE_DAYS.map(day=>{
-    const s=byDay.get(day.day)||{}; const video=s.videoUrl||day.video;
-    return '<article class="studentDay"><div class="dayBadge">DAY '+day.day+'</div><div><h3>'+esc(day.title)+'</h3><p>'+esc(day.subtitle)+'</p><div class="topicChips">'+day.topics.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div><p><strong>Practice:</strong> '+esc(day.practice)+'</p>'+(video?'<a class="videoLink" href="'+esc(video)+'" target="_blank" rel="noopener">▶ Watch learning video</a>':'<span class="videoPending">Video material will be added by Admin.</span>')+'</div></article>';
-  }).join('')}</div>`;
-  const videos=COURSE_DAYS.map(d=>{const s=byDay.get(d.day)||{};return {d,s,video:s.videoUrl||d.video};}).filter(x=>x.video);
-  $('studentVideos').innerHTML='<h3>Day-wise Video Materials</h3>'+videos.map(x=>'<div class="videoCard"><div><span class="dayBadge">DAY '+x.d.day+'</span><h4>'+esc(x.d.title)+'</h4><p>'+esc(x.d.subtitle)+'</p></div><a class="videoLink" href="'+esc(x.video)+'" target="_blank" rel="noopener">▶ Watch</a></div>').join('');
+  $('studentCourseDashboard').innerHTML = `
+    <div class="learningIntro"><strong>Learn → Watch → Practice → Think → Code → Test</strong><p>Select a day to open its learning content.</p></div>
+    <div class="dayButtonGrid">${COURSE_DAYS.map(day => '<button class="dayMenuButton" data-day-panel="dayContent'+day.day+'">DAY '+day.day+' · '+esc(day.title)+'</button>').join('')}</div>
+    <div class="dayContentStack">${COURSE_DAYS.map(day=>{
+      const s=byDay.get(day.day)||{}; const video=s.videoUrl||day.video;
+      return '<div id="dayContent'+day.day+'" class="dayContentPanel" hidden><div class="dayContentHeader"><span class="dayBadge">DAY '+day.day+'</span><h3>'+esc(day.title)+'</h3><p>'+esc(day.subtitle)+'</p></div><h4>Learning Topics</h4><ul>'+day.topics.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><div class="practiceLine"><strong>Practice:</strong> '+esc(day.practice)+'</div>'+(video?'<a class="videoLink" href="'+esc(video)+'" target="_blank" rel="noopener">▶ Watch Day '+day.day+' Video</a>':'')+'</div>';
+    }).join('')}</div>`;
+  document.querySelectorAll('.dayMenuButton').forEach(b=>b.onclick=()=>{document.querySelectorAll('.dayContentPanel').forEach(p=>p.hidden=true); const p=$(b.dataset.dayPanel); if(p){p.hidden=false;p.scrollIntoView({behavior:'smooth',block:'nearest'});}});
 }
+document.querySelectorAll('.menuButton').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.studentHiddenPanel').forEach(p=>p.hidden=true);
+  const panel=$(b.dataset.panel);
+  if(panel){panel.hidden=false; panel.scrollIntoView({behavior:'smooth',block:'start'});}
+});
 
 async function loadCourseOverview(){
   try{
@@ -124,11 +131,10 @@ async function registerStudentForm(form, nameId, noId, emailId, e) {
       email: $(emailId).value.trim()
     });
     form.hidden = true;
-    if ($('registrationStatus')) {
-      $('registrationStatus').hidden = false;
-      $('registrationStatus').className = 'statusBanner pendingStatus';
-      $('registrationStatus').innerHTML = '<strong>Registration submitted ✓</strong><span>Your details are now with the Administrator for approval. You do not need to submit the registration again.</span>';
-    }
+    $('studentRegistrationPanel').hidden = true;
+    $('registrationStatus').hidden = false;
+    $('registrationStatus').className = 'statusBanner pendingStatus';
+    $('registrationStatus').innerHTML = '<strong>Registration submitted ✓</strong><span>Your details are with the Administrator for approval. You do not need to submit again.</span>';
     msg('Registration submitted. Please wait for Administrator approval.', true);
     await loadStudent();
   } catch (e) {
@@ -136,14 +142,22 @@ async function registerStudentForm(form, nameId, noId, emailId, e) {
     msg(e.message);
   }
 }
-$('registerForm').onsubmit = e => registerStudentForm($('registerForm'),'regName','regNo','regEmail',e);
 $('studentRegisterForm').onsubmit = e => registerStudentForm($('studentRegisterForm'),'studentRegName','studentRegNo','studentRegEmail',e);
 
 $('signupForm').onsubmit = async e => {
   e.preventDefault();
   try {
     await createUserWithEmailAndPassword(auth, $('signupEmail').value, $('signupPassword').value);
-    msg('Account created. Complete your student registration.', true);
+    msg('Account created. Please complete your one-time registration after signing in.', true);
+  } catch (e) { msg(e.message); }
+};
+
+$('forgotPasswordBtn').onclick = async () => {
+  const email = $('loginEmail').value.trim();
+  if (!email) return msg('Enter your registered college email first.');
+  try {
+    await sendPasswordResetEmail(auth, email);
+    msg('Password reset email sent. Please check your inbox.', true);
   } catch (e) { msg(e.message); }
 };
 
@@ -163,135 +177,98 @@ $('adminBootstrap').onclick = async () => {
 };
 
 async function loadStudent() {
-  show('authArea', false);
-  show('student', true);
-  show('admin', false);
-  show('assessmentPanel', false);
-  show('publicShell', false);
-
+  show('authArea', false); show('student', true); show('admin', false); show('publicShell', false);
+  $('studentRegistrationPanel').hidden = true;
   renderSample('studentSampleQuestions','studentSampleResult','studentSampleSubmit');
-  renderStudentLearning([]);
-
   try {
     const profile = (await call('getStudentProfile')({})).data;
-    $('studentRegName').value = profile.name || '';
-    $('studentRegNo').value = profile.registerNumber || '';
-    $('studentRegEmail').value = profile.email || currentUser?.email || '';
-
     if (profile.registered) {
-      $('studentRegisterForm').hidden = true;
+      $('studentRegistrationPanel').hidden = true;
       $('registrationStatus').hidden = false;
       if (profile.status === 'approved') {
-        $('registrationStatus').className = 'statusBanner approvedStatus';
-        $('registrationStatus').innerHTML = '<strong>Registration approved ✓</strong><span>You can access the full learning centre and take the main assessment during a published window.</span>';
+        $('registrationStatus').className='statusBanner approvedStatus';
+        $('registrationStatus').innerHTML='<strong>Registration approved ✓</strong><span>You can study and take the main assessment during a published window.</span>';
       } else {
-        $('registrationStatus').className = 'statusBanner pendingStatus';
-        $('registrationStatus').innerHTML = '<strong>Approval pending</strong><span>Your registration has been submitted. Please wait for the Administrator. You can continue studying while you wait.</span>';
+        $('registrationStatus').className='statusBanner pendingStatus';
+        $('registrationStatus').innerHTML='<strong>Approval pending</strong><span>Your registration has been submitted. You can continue studying while you wait.</span>';
       }
     } else {
-      $('studentRegisterForm').hidden = false;
-      $('registrationStatus').hidden = true;
+      $('studentRegistrationPanel').hidden = false;
+      $('registrationStatus').hidden = false;
+      $('registrationStatus').className='statusBanner pendingStatus';
+      $('registrationStatus').innerHTML='<strong>One-time registration required</strong><span>Complete your student registration below. It will disappear permanently after submission.</span>';
+      $('studentRegName').value=''; $('studentRegNo').value=''; $('studentRegEmail').value=currentUser?.email||'';
     }
-  } catch (e) {
-    $('studentRegisterForm').hidden = false;
-    $('registrationStatus').hidden = true;
-    $('studentRegEmail').value = currentUser?.email || '';
-  }
-
+  } catch(e) { msg(e.message); }
+  try { const overview=await call('getCourseOverview')({}); renderStudentLearning(overview.data.schedules||[]); } catch(e){ renderStudentLearning([]); }
   try {
-    const overview = await call('getCourseOverview')({});
-    renderStudentLearning(overview.data.schedules || []);
-  } catch (e) {
-    renderStudentLearning([]);
-  }
-
-  try {
-    const r = await call('getAssessment')({});
-    const d = r.data;
-    $('studentStatus').innerHTML = d.status === 'open'
-      ? '<div class="openState"><strong>Day ' + d.schedule.day + ' · ' + esc(d.schedule.topic) + '</strong><span>Assessment is open now until ' + new Date(d.schedule.closeAt).toLocaleString('en-IN') + '</span></div>'
-      : d.status === 'scheduled'
-        ? '<div class="scheduledState"><strong>Next assessment · Day ' + d.schedule.day + '</strong><span>' + esc(d.schedule.topic) + ' · Opens ' + new Date(d.schedule.openAt).toLocaleString('en-IN') + '</span></div>'
-        : '<div class="closedState">' + esc(d.message || 'No assessment is currently scheduled.') + '</div>';
-    $('startBtn').disabled = d.status !== 'open' || !d.ready;
-  } catch (e) {
-    $('studentStatus').textContent = e.message;
-  }
+    const r=await call('getAssessment')({}), d=r.data;
+    $('studentStatus').innerHTML = d.status==='open' ? '<div class="openState"><strong>Day '+d.schedule.day+' · '+esc(d.schedule.topic)+'</strong><span>Assessment is open until '+new Date(d.schedule.closeAt).toLocaleString('en-IN')+'</span></div>' : d.status==='scheduled' ? '<div class="scheduledState"><strong>Next assessment · Day '+d.schedule.day+'</strong><span>'+esc(d.schedule.topic)+' · Opens '+new Date(d.schedule.openAt).toLocaleString('en-IN')+'</span></div>' : '<div class="closedState">'+esc(d.message||'No assessment is currently scheduled.')+'</div>';
+    $('startBtn').disabled=d.status!=='open'||!d.ready;
+  } catch(e) { $('studentStatus').textContent=e.message; }
   loadStats();
+  $('myScore').innerHTML='<p>Open <strong>Check My Score</strong> to review your latest completed assessment.</p>';
 }
-
 $('startBtn').onclick = async () => {
-  try {
-    const r = await call('startAttempt')({});
-    currentAttempt = r.data;
-    renderAssessment(currentAttempt);
-  } catch (e) { msg(e.message); }
+  try { const r=await call('startAttempt')({}); currentAttempt=r.data; assessmentAnswers={}; assessmentIndex=0; renderAssessment(currentAttempt); }
+  catch(e){ msg(e.message); }
 };
+
+let assessmentIndex=0;
+let assessmentAnswers={};
 
 function renderAssessment(data) {
   show('assessmentPanel');
   $('assessmentPanel').scrollIntoView({behavior:'smooth'});
-  $('assessmentTitle').textContent = `Day Assessment – ${data.assessmentDate}`;
-  $('questions').innerHTML = data.questions.map((q, i) => {
-    let body = '';
-    if (q.type === 'match') {
-      const left = Object.keys(q.answer || q.left || {});
-      body = (q.leftItems || left).map((item, j) => `<label class="matchrow">${esc(item)} <select data-q="${esc(q.id)}" data-match="${esc(item)}"><option value="">Choose</option>${(q.rightItems || q.options || []).map((o,k)=>`<option value="${esc(o)}">${esc(o)}</option>`).join('')}</select></label>`).join('');
-    } else if (q.type === 'multiAnswer') {
-      body = q.options.map((o,k)=>`<label class="option"><input type="checkbox" data-q="${esc(q.id)}" data-multi="${k}"> ${esc(o)}</label>`).join('');
-    } else {
-      if (q.type === 'audio') body += `<button class="audioBtn" data-audio="${esc(q.audioPath || '')}" data-q="${esc(q.id)}">▶ Play Question</button>`;
-      body += q.options.map((o,k)=>`<label class="option"><input type="radio" name="q-${esc(q.id)}" value="${k}"> ${esc(o)}</label>`).join('');
-    }
-    return `<article class="question"><div class="qhead"><span>Q${i+1}</span><span>${esc(q.type)} · ${esc(q.difficulty)}</span></div><h3>${q.type === 'audio' ? 'Listen to the question and choose the correct answer.' : esc(q.prompt)}</h3>${body}</article>`;
-  }).join('');
-  document.querySelectorAll('.audioBtn').forEach(b => b.onclick = async () => {
-    const path = b.dataset.audio;
-    if (!path) return;
-    try {
-      const url = await getDownloadURL(ref(storage, path));
-      new Audio(url).play();
-    } catch (e) { msg('Audio could not be loaded. Please try again.'); }
-  });
-  const end = new Date(data.closeAt).getTime();
+  $('assessmentTitle').textContent='Day Assessment – '+data.assessmentDate;
+  const q=data.questions[assessmentIndex];
+  let body='';
+  if(q.type==='match'){
+    body=(q.leftItems||[]).map(item=>'<label class="matchrow">'+esc(item)+' <select data-match-item="'+esc(item)+'"><option value="">Choose</option>'+((q.rightItems||q.options||[]).map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join(''))+'</select></label>').join('');
+  } else if(q.type==='multiAnswer'){
+    body=(q.options||[]).map((o,k)=>'<label class="option"><input type="checkbox" data-multi="'+k+'"> '+esc(o)+'</label>').join('');
+  } else {
+    if(q.type==='audio') body='<button class="audioBtn" id="playCurrentAudio" data-audio="'+esc(q.audioPath||'')+'">▶ Play Question</button>';
+    body+=(q.options||[]).map((o,k)=>'<label class="option"><input type="radio" name="currentQ" value="'+k+'"> '+esc(o)+'</label>').join('');
+  }
+  $('questions').innerHTML='<article class="question"><div class="qhead"><span>Question '+(assessmentIndex+1)+' of '+data.questions.length+'</span><span>'+esc(q.type)+' · '+esc(q.difficulty)+'</span></div><h3>'+((q.type==='audio')?'Listen to the question and choose the correct answer.':esc(q.prompt))+'</h3>'+body+'</article>';
+  restoreCurrentAnswer(q);
+  document.querySelectorAll('#questions input[type=radio]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=Number(x.value);});
+  document.querySelectorAll('#questions input[type=checkbox]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=[...document.querySelectorAll('#questions input[type=checkbox]:checked')].map(y=>Number(y.dataset.multi));});
+  document.querySelectorAll('#questions select').forEach(x=>x.onchange=()=>{const a={...(assessmentAnswers[q.id]||{})};a[x.dataset.matchItem]=x.value;assessmentAnswers[q.id]=a;});
+  const audio=$('playCurrentAudio');
+  if(audio) audio.onclick=async()=>{try{const url=await getDownloadURL(ref(storage,audio.dataset.audio));new Audio(url).play();}catch(e){msg('Audio could not be loaded. Please try again.');}};
+  $('questionCounter').textContent=(assessmentIndex+1)+' / '+data.questions.length;
+  $('prevBtn').disabled=assessmentIndex===0;
+  $('nextBtn').hidden=assessmentIndex===data.questions.length-1;
+  $('submitBtn').hidden=assessmentIndex!==data.questions.length-1;
+  const end=new Date(data.closeAt).getTime();
   clearInterval(timer);
-  timer = setInterval(() => {
-    const left = Math.max(0, end - Date.now());
-    const mins = Math.floor(left/60000), secs = Math.floor(left/1000)%60;
-    $('timer').textContent = `Time remaining: ${mins}:${String(secs).padStart(2,'0')}`;
-    if (!left) { clearInterval(timer); submitAttempt(true); }
-  }, 1000);
+  timer=setInterval(()=>{const left=Math.max(0,end-Date.now());const mins=Math.floor(left/60000),secs=Math.floor(left/1000)%60;$('timer').textContent='Time remaining: '+mins+':'+String(secs).padStart(2,'0');if(!left){clearInterval(timer);submitAttempt(true);}},1000);
+}
+function restoreCurrentAnswer(q){
+  const a=assessmentAnswers[q.id];
+  if(a===undefined)return;
+  if(q.type==='match'){document.querySelectorAll('#questions select').forEach(s=>{s.value=a[s.dataset.matchItem]||'';});}
+  else if(q.type==='multiAnswer'){document.querySelectorAll('#questions input[data-multi]').forEach(x=>x.checked=a.includes(Number(x.dataset.multi)));}
+  else {const r=document.querySelector('#questions input[type=radio][value="'+a+'"]');if(r)r.checked=true;}
 }
 
-async function submitAttempt(auto = false) {
-  if (!currentAttempt) return;
-  const answers = currentAttempt.questions.map(q => {
-    if (q.type === 'match') {
-      const answer = {};
-      document.querySelectorAll(`[data-q="${CSS.escape(q.id)}"][data-match]`).forEach(s => { if (s.value) answer[s.dataset.match] = s.value; });
-      return {questionId:q.id, answer};
-    }
-    if (q.type === 'multiAnswer') {
-      const answer = [...document.querySelectorAll(`input[data-q="${CSS.escape(q.id)}"][data-multi]:checked`)].map(x => Number(x.dataset.multi));
-      return {questionId:q.id, answer};
-    }
-    const selected = document.querySelector(`input[name="q-${CSS.escape(q.id)}"]:checked`);
-    return {questionId:q.id, answer:selected ? Number(selected.value) : -1};
-  });
-  $('submitBtn').disabled = true;
-  try {
-    const r = await call('finalizeAttempt')({attemptId:currentAttempt.attemptId, answers});
+async function submitAttempt(auto=false){
+  if(!currentAttempt)return;
+  const answers=currentAttempt.questions.map(q=>({questionId:q.id,answer:assessmentAnswers[q.id] ?? (q.type==='match'?{}:q.type==='multiAnswer'?[]:-1)}));
+  $('submitBtn').disabled=true;
+  try{
+    const r=await call('finalizeAttempt')({attemptId:currentAttempt.attemptId,answers});
     clearInterval(timer);
-    $('result').innerHTML = `<div class="result"><strong>Score: ${r.data.scorePercent}%</strong><br>${r.data.passed ? 'Congratulations! 40 Reward Points have been credited.' : 'The passing mark is 80%. No Reward Points are credited for this attempt.'}</div>`;
-    show('result');
-    $('submitBtn').disabled = true;
-    if (!auto) window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
-  } catch (e) {
-    $('submitBtn').disabled = false;
-    msg(e.message);
-  }
+    $('result').innerHTML='<div class="result"><strong>Score: '+r.data.scorePercent+'%</strong><br>'+ (r.data.passed?'Congratulations! 40 Reward Points have been credited.':'The passing mark is 80%. No Reward Points are credited for this attempt.')+'</div>';
+    show('result'); $('submitBtn').disabled=true;
+    $('myScore').innerHTML='<div class="result"><strong>Latest Score: '+r.data.scorePercent+'%</strong><br>'+ (r.data.passed?'PASS · 40 Reward Points credited.':'FAIL · Passing mark is 80%.')+'</div>';
+  }catch(e){$('submitBtn').disabled=false;msg(e.message);}
 }
-$('submitBtn').onclick = () => submitAttempt(false);
+$('prevBtn').onclick=()=>{if(assessmentIndex>0){assessmentIndex--;renderAssessment(currentAttempt);}};
+$('nextBtn').onclick=()=>{if(assessmentIndex<currentAttempt.questions.length-1){assessmentIndex++;renderAssessment(currentAttempt);}};
+$('submitBtn').onclick=()=>submitAttempt(false);
 
 async function loadStats() {
   try {
