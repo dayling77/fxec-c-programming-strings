@@ -205,7 +205,7 @@ function renderSchedules(schedules) {
       <label><input class="schPublished" type="checkbox" ${s.isPublished !== false ? 'checked' : ''}> Published</label>
     </div>`).join('');
   $('scheduleEditor').innerHTML = `
-    <div class="scheduleHead"><b>Day</b><b>Topic</b><b>Date</b><b>Open</b><b>Close</b><b>Publish</b></div>
+    <div class="scheduleHead"><b>Day</b><b>Topic</b><b>Date</b><b>Open</b><b>Close</b><b>Video URL</b><b>Admin Publish</b></div>
     ${rows || '<p>No schedules found.</p>'}`;
 }
 async function loadAdmin() {
@@ -258,7 +258,7 @@ $('saveSchedulesBtn').onclick = async () => {
       date: row.querySelector('.schDate').value,
       openAt: new Date(row.querySelector('.schOpen').value).toISOString(),
       closeAt: new Date(row.querySelector('.schClose').value).toISOString(),
-      videoUrl: row.querySelector('.schVideo').value.trim(),
+      videoUrl: row.querySelector('.schVideo')?.value.trim() || '',
       isPublished: row.querySelector('.schPublished').checked
     }));
     const r = await call('updateAssessmentSchedules')({schedules});
