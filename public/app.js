@@ -28,8 +28,74 @@ const SAMPLE_QUESTIONS = [
 {q:'Which is a subsequence of abcde?',o:['ace','azc','aedx','cbe'],a:0}
 ];
 function renderSample(targetId,resultId,buttonId){const target=$(targetId);if(!target||!$(buttonId))return;target.innerHTML=SAMPLE_QUESTIONS.map((x,i)=>'<article class="sampleQ"><b>Q'+(i+1)+'. '+esc(x.q)+'</b>'+x.o.map((o,k)=>'<label class="option"><input type="radio" name="'+targetId+'-'+i+'" value="'+k+'"> '+esc(o)+'</label>').join('')+'</article>').join('');$(buttonId).onclick=()=>{let score=0;SAMPLE_QUESTIONS.forEach((x,i)=>{const v=document.querySelector('input[name="'+targetId+'-'+i+'"]:checked');if(v&&Number(v.value)===x.a)score++;});$(resultId).innerHTML='<strong>Recap Score: '+score+'/10 ('+(score*10)+'%)</strong><br>Practice only — no Reward Points.';};}
-function renderPublicSchedule(schedules){const rows=(schedules||[]).sort((a,b)=>Number(a.day)-Number(b.day));$('publicSchedule').innerHTML=rows.length?rows.map(s=>'<div class="dayCard"><strong>Day '+esc(s.day)+' — '+esc(s.topic)+'</strong><br>'+esc(s.date||'Date to be announced by Admin')+(s.isPublished?'':' · Not yet published')+'<div>'+(s.videoUrl?'<a href="'+esc(s.videoUrl)+'" target="_blank">Watch video materials</a>':'Video materials will appear when published by Admin.')+'</div></div>').join(''):'<p>The administrator will publish the five-day schedule.</p>';}
-async function loadCourseOverview(){try{const r=await call('getCourseOverview')({});renderPublicSchedule(r.data.schedules);}catch(e){$('publicSchedule').textContent='Programme information is temporarily unavailable.';}renderSample('sampleQuestions','sampleResult','sampleSubmit');}
+const COURSE_DAYS = [
+  {
+    day:1,title:'String Basics',subtitle:'Understand how strings work in C',
+    topics:['What is a string and character array','Null character \\0 and string size','Declaring and initializing strings','Printing with %s','Reading words with scanf() and complete lines with fgets()','Indexing and modifying characters'],
+    practice:'Print characters, find length manually, count vowels/digits, and modify a student name.',
+    video:'https://www.youtube.com/embed/l7zI3nswO1g',videoTitle:'Programiz – C Strings'
+  },
+  {
+    day:2,title:'String Library Functions',subtitle:'Use the standard functions in <string.h>',
+    topics:['string.h header file','strlen() – string length','strcpy() – copy a string','strcat() – join strings','strcmp() – compare strings','Safe destination capacity including \\0'],
+    practice:'Build a student name program using strcpy(), strcat() and strlen().',
+    video:'https://www.youtube.com/embed/XdnmsKUvGsc',videoTitle:'Programiz – C String Functions'
+  },
+  {
+    day:3,title:'Manual String Processing',subtitle:'Understand the algorithms behind string functions',
+    topics:['Manual string length','Manual string copy','Manual string comparison','Reverse using the two-pointer technique','Remove spaces','Convert lowercase characters to uppercase'],
+    practice:'Read a sentence, remove spaces, convert to uppercase and reverse it.'
+  },
+  {
+    day:4,title:'Character Frequency & String Analysis',subtitle:'Analyse the information inside a string',
+    topics:['Character frequency','Most frequent and first non-repeating character','Vowels and consonants','Uppercase/lowercase classification','Digits, spaces and special characters','Word counting and longest word'],
+    practice:'Build a String Analyzer that reports characters, words, vowels, consonants, digits, spaces, special characters and frequency.'
+  },
+  {
+    day:5,title:'Advanced String Problem Solving',subtitle:'Recognise patterns and solve unfamiliar string problems',
+    topics:['Palindrome and two-pointer checking','Case-insensitive and space-ignoring palindrome','Anagram using frequency arrays','String rotation','Duplicate removal','String compression','Subsequence','Longest substring without repeating characters'],
+    practice:'Complete the advanced String Analyzer and test normal and edge cases.'
+  }
+];
+
+function renderPublicSchedule(schedules){
+  const byDay = new Map((schedules||[]).map(s=>[Number(s.day),s]));
+  const rows = COURSE_DAYS.map(day=>{
+    const s=byDay.get(day.day)||{};
+    const published=s.isPublished===true;
+    const date=s.date||'Date & time to be announced by Admin';
+    const video=s.videoUrl||day.video;
+    return `<article class="courseDay">
+      <div class="courseDayTop"><span class="dayBadge">DAY ${day.day}</span><span class="dayStatus">${published?'Published':'Learning material available'}</span></div>
+      <h3>${esc(day.title)}</h3><p class="daySubtitle">${esc(day.subtitle)}</p>
+      <div class="topicGrid">${day.topics.map(x=>'<span>✓ '+esc(x)+'</span>').join('')}</div>
+      <div class="practiceLine"><strong>Practice:</strong> ${esc(day.practice)}</div>
+      <div class="scheduleLine"><strong>Assessment:</strong> ${esc(date)}${published?'':' · Main assessment date/time will be set by Admin'}</div>
+      ${video?'<a class="videoLink" href="'+esc(video)+'" target="_blank" rel="noopener">▶ Watch Day '+day.day+' Video</a>':''}
+    </article>`;
+  }).join('');
+  $('publicSchedule').innerHTML=`<div class="courseStats"><div><strong>5</strong><span>Learning Days</span></div><div><strong>1</strong><span>Main Assessment</span></div><div><strong>10</strong><span>Recap Questions</span></div><div><strong>40</strong><span>Reward Points</span></div></div><div class="courseDayList">${rows}</div>`;
+}
+
+function renderStudentLearning(schedules){
+  const byDay=new Map((schedules||[]).map(s=>[Number(s.day),s]));
+  $('studentCourseDashboard').innerHTML=`<div class="learningIntro"><strong>Learn → Watch → Practice → Think → Code → Test</strong><p>Work through the five days in sequence. The main assessment opens only during the date/time published by the Administrator.</p></div><div class="studentDayList">${COURSE_DAYS.map(day=>{
+    const s=byDay.get(day.day)||{}; const video=s.videoUrl||day.video;
+    return '<article class="studentDay"><div class="dayBadge">DAY '+day.day+'</div><div><h3>'+esc(day.title)+'</h3><p>'+esc(day.subtitle)+'</p><div class="topicChips">'+day.topics.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div><p><strong>Practice:</strong> '+esc(day.practice)+'</p>'+(video?'<a class="videoLink" href="'+esc(video)+'" target="_blank" rel="noopener">▶ Watch learning video</a>':'<span class="videoPending">Video material will be added by Admin.</span>')+'</div></article>';
+  }).join('')}</div>`;
+  const videos=COURSE_DAYS.map(d=>{const s=byDay.get(d.day)||{};return {d,s,video:s.videoUrl||d.video};}).filter(x=>x.video);
+  $('studentVideos').innerHTML='<h3>Day-wise Video Materials</h3>'+videos.map(x=>'<div class="videoCard"><div><span class="dayBadge">DAY '+x.d.day+'</span><h4>'+esc(x.d.title)+'</h4><p>'+esc(x.d.subtitle)+'</p></div><a class="videoLink" href="'+esc(x.video)+'" target="_blank" rel="noopener">▶ Watch</a></div>').join('');
+}
+
+async function loadCourseOverview(){
+  try{
+    const r=await call('getCourseOverview')({});
+    renderPublicSchedule(r.data.schedules||[]);
+  }catch(e){
+    renderPublicSchedule([]);
+  }
+  renderSample('sampleQuestions','sampleResult','sampleSubmit');
+}
 
 
 function esc(v) {
@@ -87,12 +153,10 @@ async function loadStudent() {
   renderSample('studentSampleQuestions','studentSampleResult','studentSampleSubmit');
   try {
     const overview = await call('getCourseOverview')({});
-    renderPublicSchedule(overview.data.schedules);
-    const videos = (overview.data.schedules || []).filter(x => x.isPublished && x.videoUrl);
-    $('studentVideos').innerHTML = videos.length
-      ? videos.map(x => '<div class="dayCard"><strong>Day '+esc(x.day)+' — '+esc(x.topic)+'</strong><br><a href="'+esc(x.videoUrl)+'" target="_blank">Watch Video Material</a></div>').join('')
-      : '<p>Video learning materials will appear here when published by the administrator.</p>';
-  } catch {}
+    renderStudentLearning(overview.data.schedules||[]);
+  } catch {
+    renderStudentLearning([]);
+  }
   try {
     const r = await call('getAssessment')({});
     const d = r.data;
