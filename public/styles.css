@@ -125,3 +125,17 @@ body{background:#f4f7fb;color:var(--ink);line-height:1.55}
 .questionBankToolbar{position:sticky;top:8px;z-index:5;background:#f8fafc;box-shadow:0 4px 14px rgba(15,43,82,.06)}
 #questionBankStatus{font-size:12px;color:#475569}
 @media(max-width:700px){.questionBankHead{grid-template-columns:1fr}.questionBankHead select{width:100%}.questionBankItem{padding:17px}.questionBankToolbar{position:static}}
+
+.questionBankDaySection{margin:18px 0 24px;border:1px solid #dbe4ef;border-radius:18px;background:#f8fafc;overflow:hidden}
+.questionBankDayHeader{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 20px;background:#fff;border-bottom:1px solid #e5eaf1;cursor:pointer}
+.questionBankDayHeader h3{display:inline-block;margin:8px 10px 2px 8px;font-size:19px;color:#102a43}
+.qbDayCount{display:block;margin-left:0;font-size:12px;color:#64748b}
+.questionBankDayActions{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.questionBankDayActions button{margin:0;font-size:12px;padding:9px 12px}
+.qbApproveDay{background:#0f766e}
+.qbApproveDay:disabled{background:#64748b;opacity:1}
+.questionBankDayQuestions{padding:4px 16px 18px}
+.qbSelectLabel{display:flex!important;align-items:center;gap:6px;width:auto!important;margin:0!important;font-weight:700!important;color:#475569!important}
+.qbSelectLabel input{width:auto!important;margin:0!important}
+.questionBankHead{grid-template-columns:auto auto 1fr 150px}
+@media(max-width:800px){.questionBankDayHeader{align-items:flex-start;flex-direction:column}.questionBankDayActions{width:100%}.questionBankDayActions button{flex:1}.questionBankHead{grid-template-columns:1fr}.qbSelectLabel{margin-bottom:4px!important}}
