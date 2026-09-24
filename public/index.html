@@ -9,6 +9,8 @@
 <body>
 <header class="hero"><div><div class="eyebrow">FRANCIS XAVIER ENGINEERING COLLEGE</div><h1>C Programming – Level 3</h1><p>Strings · 5-Day Automated Assessment</p></div></header>
 <main class="container">
+<section id="courseOverview" class="card"><h2>C Programming – Level 3 | Strings</h2><p><strong>5-Day Self-Learning + Assessment Programme</strong></p><p>View the programme, topics and assessment plan before creating an account.</p><div id="publicSchedule"></div></section>
+<section id="sampleAssessment" class="card"><h2>10-Question Recap Assessment</h2><p>Practice before the main assessment. This does not award Reward Points.</p><div id="sampleQuestions"></div><button id="sampleSubmit">Check My Score</button><div id="sampleResult"></div></section>
 <section id="authArea" class="card">
 <h2>Student Access</h2>
 <div class="tabs"><button class="tab active" data-tab="login">Login</button><button class="tab" data-tab="signup">Create Account</button></div>
@@ -22,6 +24,9 @@
 <section id="appArea" hidden>
 <div class="userbar">Signed in as <b id="userEmail"></b><button id="logoutBtn" class="secondary">Sign out</button></div>
 <section id="student" class="panel">
+<div class="card"><h2>Your Learning Dashboard</h2><div id="studentCourseDashboard"></div></div>
+<div class="card"><h2>Video Learning Materials</h2><div id="studentVideos"></div></div>
+<div class="card"><h2>10-Question Recap Assessment</h2><div id="studentSampleQuestions"></div><button id="studentSampleSubmit">Check My Score</button><div id="studentSampleResult"></div></div>
 <div class="card"><h2>Complete Student Registration</h2><form id="studentRegisterForm"><input id="studentRegName" placeholder="Full Name" required><input id="studentRegNo" placeholder="Register Number" required><input id="studentRegEmail" type="email" placeholder="Email used for login" required><button>Submit Registration</button></form></div>
 <div class="card"><h2>Today's Assessment</h2><div id="studentStatus">Checking...</div><button id="startBtn" disabled>Start Assessment</button></div>
 <div class="card"><h2>Participation</h2><div id="stats"></div><table><thead><tr><th>Rank</th><th>Name</th><th>Register No.</th><th>Score</th></tr></thead><tbody id="leaderboard"></tbody></table></div>
@@ -31,9 +36,9 @@
 <div class="card"><h2>Admin Dashboard</h2><div id="adminStats"></div><button id="adminBootstrap" hidden>Activate Admin Access</button></div>
 <div class="card"><h3>Pending Student Approvals</h3>
 <div id="pending"></div>
-<div class="adminActions"><button id="selectAllBtn" class="secondary">Select All</button><button id="bulkApproveBtn">Approve Selected</button></div>
+<div class="adminActions"><button id="showPendingBtn">Pending Students</button><button id="showApprovedBtn" class="secondary">Registered Students</button></div><div id="pendingSection"><div class="adminActions"><button id="selectAllBtn" class="secondary">Select All</button><button id="bulkApproveBtn">Approve Selected</button></div></div>
 </div>
-<div class="card"><h3>Approved Students</h3><div id="approvedStudents"></div></div>
+<div class="card" id="approvedSection" hidden><h3>Registered Students</h3><div id="approvedStudents"></div></div>
 <div class="card"><h3>Assessment Schedule</h3>
 <p>Set the Day, date, opening time and closing time. Question generation and student access will follow the saved schedule automatically.</p>
 <div id="scheduleEditor"></div>
