@@ -362,6 +362,90 @@ async function loadAdmin() {
     $('adminStats').textContent = e.message;
   }
 }
+
+let adminQuestionBank = null;
+let adminQuestionDay = 1;
+
+function questionAnswerText(q) {
+  if (q.type === 'multiAnswer') return Array.isArray(q.answer) ? q.answer.join(',') : '';
+  if (q.type === 'match') return JSON.stringify(q.answer || {}, null, 0);
+  return String(q.answer ?? '');
+}
+function renderAdminQuestionBank() {
+  const target = $('questionBankEditor');
+  if (!target || !adminQuestionBank) return;
+  const qs = adminQuestionBank.questions.filter(q => String(q.id).startsWith('D'+adminQuestionDay+'-'));
+  target.innerHTML = qs.map((q, idx) => {
+    const options = Array.isArray(q.options) ? q.options.join('\n') : '';
+    return `<article class="questionBankItem" data-qid="${esc(q.id)}">
+      <div class="questionBankHead"><strong>${esc(q.id)}</strong><span>${esc(q.type)} · ${esc(q.topic)}</span><select class="qbDifficulty">
+        ${['easy','moderate','tough'].map(d=>`<option value="${d}" ${q.difficulty===d?'selected':''}>${d}</option>`).join('')}
+      </select></div>
+      <label>Question / Prompt<textarea class="qbPrompt" rows="3">${esc(q.prompt||'')}</textarea></label>
+      <label>Options <small>One option per line</small><textarea class="qbOptions" rows="5">${esc(options)}</textarea></label>
+      <label>Correct answer <small>MCQ/Audio/Problem: index · Multi-answer: comma-separated indexes · Match: JSON mapping</small><input class="qbAnswer" value="${esc(questionAnswerText(q))}"></label>
+      ${q.type==='audio'?'<label>Audio text<textarea class="qbAudioText" rows="2">'+esc(q.audioText||q.prompt||'')+'</textarea></label>':''}
+      <label>Explanation<textarea class="qbExplanation" rows="2">${esc(q.explanation||'')}</textarea></label>
+    </article>`;
+  }).join('');
+  $('questionBankStatus').textContent = 'Day '+adminQuestionDay+' · '+qs.length+' questions loaded · '+(adminQuestionBank.status||'draft');
+}
+function readVisibleQuestionBankDay() {
+  if (!adminQuestionBank) return;
+  const cards = [...document.querySelectorAll('.questionBankItem')];
+  const byId = new Map(adminQuestionBank.questions.map(q=>[q.id,q]));
+  cards.forEach(card=>{
+    const q=byId.get(card.dataset.qid); if(!q)return;
+    q.difficulty=card.querySelector('.qbDifficulty').value;
+    q.prompt=card.querySelector('.qbPrompt').value.trim();
+    q.options=card.querySelector('.qbOptions').value.split('\n').map(x=>x.trim()).filter(Boolean);
+    const raw=card.querySelector('.qbAnswer').value.trim();
+    if(q.type==='multiAnswer') q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
+    else if(q.type==='match'){ try{q.answer=JSON.parse(raw||'{}');}catch(e){throw new Error('Invalid Match JSON in '+q.id);}}
+    else q.answer=Number(raw);
+    if(q.type==='audio') q.audioText=card.querySelector('.qbAudioText').value.trim();
+    q.explanation=card.querySelector('.qbExplanation').value.trim();
+  });
+}
+async function loadAdminQuestionBank() {
+  try {
+    const r=await call('getAdminQuestionBank')({});
+    adminQuestionBank=r.data;
+    renderAdminQuestionBank();
+    msg('Question bank loaded for review.',true);
+  } catch(e){ msg(e.message); }
+}
+$('loadQuestionBankBtn').onclick=loadAdminQuestionBank;
+$('questionBankDay').onchange=()=>{
+  try{readVisibleQuestionBankDay();}catch(e){msg(e.message);return;}
+  adminQuestionDay=Number($('questionBankDay').value);
+  renderAdminQuestionBank();
+};
+$('saveQuestionBankBtn').onclick=async()=>{
+  if(!adminQuestionBank)return msg('Load the question bank first.');
+  try{
+    readVisibleQuestionBankDay();
+    const button=$('saveQuestionBankBtn'); button.disabled=true; button.textContent='Saving…';
+    const r=await call('saveAdminQuestionBank')({questions:adminQuestionBank.questions});
+    adminQuestionBank.status=r.data.status;
+    $('questionBankStatus').textContent='Draft saved ✓ · Day '+adminQuestionDay;
+    msg('Question bank draft saved. It is not yet published to students.',true);
+  }catch(e){msg(e.message);}finally{$('saveQuestionBankBtn').disabled=false;$('saveQuestionBankBtn').textContent='Save Draft';}
+};
+$('publishQuestionBankBtn').onclick=async()=>{
+  if(!adminQuestionBank)return msg('Load the question bank first.');
+  try{
+    readVisibleQuestionBankDay();
+    if(!confirm('Approve and publish all 125 questions? This generates secure audio and replaces the current question pools for the five days.'))return;
+    const button=$('publishQuestionBankBtn'); button.disabled=true; button.textContent='Publishing…';
+    await call('saveAdminQuestionBank')({questions:adminQuestionBank.questions});
+    const r=await call('publishAdminQuestionBank')({});
+    adminQuestionBank.status='published';
+    $('questionBankStatus').textContent='PUBLISHED ✓ · '+r.data.questions+' questions across '+r.data.days+' days';
+    msg('Question bank approved and published. Secure assessment pools are ready.',true);
+  }catch(e){msg(e.message);}finally{$('publishQuestionBankBtn').disabled=false;$('publishQuestionBankBtn').textContent='Approve & Publish';}
+};
+
 $('selectAllBtn').onclick = () => {
   const boxes = [...document.querySelectorAll('.pendingCheck')];
   const shouldCheck = boxes.some(x => !x.checked);
