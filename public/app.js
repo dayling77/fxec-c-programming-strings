@@ -669,51 +669,70 @@ async function approveQuestionBankDay(day,button){
     readVisibleQuestionBankDay(day);
     const qs=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+day+'-'));
     if(qs.length!==25) return msg('Day '+day+' must contain exactly 25 questions. Found '+qs.length+'.');
-    if(!currentUser || currentUser.email?.toLowerCase()!==ADMIN_EMAIL)return msg('Administrator account required.');
-    if(!confirm('Approve Day '+day+' and publish all 25 questions?'))return;
+    if(!currentUser || currentUser.email?.toLowerCase()!==ADMIN_EMAIL) return msg('Administrator account required.');
+    if(!confirm('Approve Day '+day+' and publish all 25 questions?')) return;
 
     button.disabled=true;
     button.textContent='Publishing…';
-    adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
-    adminQuestionBank.dayStatus[day]='pending';
 
-    // Send the reviewed Day directly to the trusted server trigger.
-    // This avoids a second browser write to questionBank/master.
-    const actionId='publishQuestionBankDay'+day+'_'+Date.now();
-    await setDoc(doc(firestore,'adminActions',actionId),{
-      status:'requested',
-      day:Number(day),
-      questions:JSON.parse(JSON.stringify(qs)),
-      requestedBy:currentUser.uid,
-      requestedByEmail:currentUser.email||'',
-      requestedAt:new Date()
+    const scheduleDates={1:'2026-09-24',2:'2026-09-25',3:'2026-09-26',4:'2026-09-27',5:'2026-09-28'};
+    let date=scheduleDates[day];
+    try{
+      const scheduleSnap=await getDoc(doc(firestore,'assessmentSchedules',date));
+      if(scheduleSnap.exists() && scheduleSnap.data().date) date=scheduleSnap.data().date;
+    }catch(_){}
+
+    const publishedQuestions=qs.map(q=>{
+      const x=JSON.parse(JSON.stringify(q));
+      delete x.reviewed;
+      delete x.audioPath;
+      if(x.type==='match'){
+        const pairs=Array.isArray(x.options)?x.options:[];
+        const leftItems=pairs.map(p=>String(p).split(' -> ')[0].trim());
+        const rightItems=pairs.map(p=>String(p).split(' -> ')[1]?.trim()||String(p).trim());
+        const answer={};
+        Object.entries(x.answer||{}).forEach(([k,v])=>answer[k]=String(v));
+        x.leftItems=leftItems;
+        x.rightItems=rightItems;
+        x.options=rightItems;
+        x.answer=answer;
+      }
+      return x;
     });
 
-    msg('Day '+day+' approval submitted. Publishing securely…',true);
+    // questionPools is intentionally writable only by the Admin in Firestore rules.
+    // Publish directly so approval cannot hang on an Eventarc trigger.
+    await setDoc(doc(firestore,'questionPools',date),{
+      date,
+      day:Number(day),
+      topic:['String Basics','String Library Functions','Manual String Processing','Character Frequency and String Analysis','Advanced String Problem Solving'][day-1]||'C Strings',
+      status:'ready',
+      source:'admin-question-bank',
+      approvedBy:currentUser.uid,
+      approvedByEmail:currentUser.email||'',
+      approvedAt:new Date(),
+      questions:publishedQuestions,
+      updatedAt:new Date()
+    });
 
-    let finalAction=null;
-    for(let i=0;i<120;i++){
-      await new Promise(r=>setTimeout(r,2500));
-      const snap=await getDoc(doc(firestore,'adminActions',actionId));
-      if(snap.exists()){
-        finalAction=snap.data();
-        if(finalAction.status==='completed'||finalAction.status==='failed')break;
-      }
+    // Best-effort status update; publication above is the authoritative action.
+    try{
+      adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
+      adminQuestionBank.dayStatus[day]='approved';
+      await setDoc(doc(firestore,'questionBank','master'),{
+        dayStatus:adminQuestionBank.dayStatus,
+        updatedAt:new Date(),
+        updatedBy:currentUser.uid
+      },{merge:true});
+    }catch(statusError){
+      console.warn('Question bank status update skipped after successful publication:',statusError);
     }
 
-    if(!finalAction)throw new Error('The publishing service did not respond within 5 minutes.');
-    if(finalAction.status!=='completed')throw new Error(finalAction.error||'Day '+day+' could not be published.');
-
-    adminQuestionBank.dayStatus[day]='approved';
     button.disabled=false;
     button.textContent='✓ Day '+day+' Approved';
     renderAdminQuestionBank();
-    msg('✓ Day '+day+' approved and published successfully.',true);
+    msg('✓ Day '+day+' approved and published. Audio will use the generated MP3 when available, with browser voice fallback.',true);
   }catch(e){
-    if(adminQuestionBank){
-      adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
-      adminQuestionBank.dayStatus[day]='draft';
-    }
     button.disabled=false;
     button.textContent='Approve Day '+day;
     msg('Day '+day+' approval failed: '+(e.message||String(e)));
