@@ -539,7 +539,7 @@ function renderAdminQuestionBank() {
     };
   });
 
-  const approveBtn=$('.qbApproveDayTop');if(approveBtn)approveBtn.onclick=()=>approveQuestionBankDay(activeDay,approveBtn);
+  const approveBtn=document.querySelector('.qbApproveDayTop');if(approveBtn)approveBtn.onclick=()=>approveQuestionBankDay(activeDay,approveBtn);
 }
 function readVisibleQuestionBank() { readVisibleQuestionBankDay(adminQuestionDay); }
 function readVisibleQuestionBankDay(day) {
