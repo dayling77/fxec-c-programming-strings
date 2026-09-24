@@ -105,6 +105,7 @@ function show(id, yes = true) { $(id).hidden = !yes; }
 function msg(text, good = false) {
   $('message').textContent = text;
   $('message').className = good ? 'message good' : 'message';
+  $('message').style.display = text ? 'block' : 'none';
 }
 function setTab(name) {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.dataset.tab === name));
@@ -151,11 +152,14 @@ $('adminBootstrap').onclick = async () => {
 
 async function loadStudent() {
   renderSample('studentSampleQuestions','studentSampleResult','studentSampleSubmit');
+  // Always render the five-day learning programme first; Firebase schedule
+  // data is layered on top when available.
+  renderStudentLearning([]);
   try {
     const overview = await call('getCourseOverview')({});
     renderStudentLearning(overview.data.schedules||[]);
-  } catch {
-    renderStudentLearning([]);
+  } catch(e) {
+    console.warn('Course overview unavailable; showing learning programme without schedule data.', e);
   }
   try {
     const r = await call('getAssessment')({});
@@ -266,7 +270,7 @@ function renderSchedules(schedules) {
       <input class="schOpen" type="datetime-local" value="${s.openAt ? toLocalInput(s.openAt) : ''}">
       <input class="schClose" type="datetime-local" value="${s.closeAt ? toLocalInput(s.closeAt) : ''}">
       <input class="schVideo" value="${esc(s.videoUrl || '')}" placeholder="Video URL">
-      <label><input class="schPublished" type="checkbox" ${s.isPublished !== false ? 'checked' : ''}> Published</label>
+      <label><input class="schPublished" type="checkbox" ${s.isPublished === true ? 'checked' : ''}> Published</label>
     </div>`).join('');
   $('scheduleEditor').innerHTML = `
     <div class="scheduleHead"><b>Day</b><b>Topic</b><b>Date</b><b>Open</b><b>Close</b><b>Video URL</b><b>Admin Publish</b></div>
@@ -320,8 +324,10 @@ $('bulkApproveBtn').onclick = async () => {
 };
 $('saveSchedulesBtn').onclick = async () => {
   const button = $('saveSchedulesBtn');
+  const status = $('scheduleSaveStatus');
   button.disabled = true;
   button.textContent = 'Saving…';
+  if (status) { status.className = 'scheduleSaveStatus saving'; status.textContent = 'Saving the five-day schedule to Firebase…'; }
   try {
     const rows = [...document.querySelectorAll('.scheduleRow')];
     const schedules = rows.map((row, idx) => {
@@ -346,9 +352,11 @@ $('saveSchedulesBtn').onclick = async () => {
     }
     const result = await call('updateAssessmentSchedules')({schedules});
     await loadAdmin();
-    msg('✓ '+result.data.count+' assessment days saved successfully. The saved dates and times now control student access and automatic question generation.', true);
+    if (status) { status.className = 'scheduleSaveStatus success'; status.textContent = '✓ Saved successfully: '+result.data.count+' assessment days. Student access and question generation will follow these dates and times.'; }
+    msg('Assessment schedule saved successfully.', true);
   } catch(e) {
     console.error('Schedule save failed:', e);
+    if (status) { status.className = 'scheduleSaveStatus error'; status.textContent = '✕ Schedule was NOT saved: '+(e?.message || e); }
     msg('Schedule was NOT saved: '+(e?.message || e));
   } finally {
     button.disabled = false;
