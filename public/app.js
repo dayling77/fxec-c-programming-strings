@@ -378,11 +378,13 @@ function questionAnswerText(q) {
 function renderAdminQuestionBank() {
   const target = $('questionBankEditor'), nav = $('questionBankDayNav');
   if (!target || !adminQuestionBank) return;
+
   const dayNames={1:'String Basics',2:'String Library Functions',3:'Manual String Processing',4:'Character Frequency & String Analysis',5:'Advanced String Problem Solving'};
   const days=[1,2,3,4,5], activeDay=Number(adminQuestionDay||1);
   const qs=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+activeDay+'-'));
   const approved=adminQuestionBank.dayStatus?.[activeDay]==='approved';
   const pending=adminQuestionBank.dayStatus?.[activeDay]==='pending';
+
   if(nav){
     nav.innerHTML=days.map(day=>{
       const count=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+day+'-')).length;
@@ -393,35 +395,105 @@ function renderAdminQuestionBank() {
       try{readVisibleQuestionBankDay(activeDay);adminQuestionDay=Number(btn.dataset.qbDay);renderAdminQuestionBank();}catch(e){msg(e.message||String(e));}
     });
   }
+
   const counts={mcq:0,match:0,audio:0,problemSolving:0,multiAnswer:0}, diff={easy:0,moderate:0,tough:0};
   qs.forEach(q=>{if(counts[q.type]!==undefined)counts[q.type]++;if(diff[q.difficulty]!==undefined)diff[q.difficulty]++;});
+
   const cards=qs.map((q,index)=>{
-    const options=Array.isArray(q.options)?q.options.join('\n'):'';
-    const audio=q.type==='audio'?'<div class="qbAudioPreview"><button type="button" class="audioPreviewBtn" data-audio-qid="'+esc(q.id)+'">▶ Preview Audio</button><span class="audioPreviewStatus" id="audioStatus-'+esc(q.id)+'">Browser voice preview</span></div>':'';
-    return '<article class="questionBankItem" data-qid="'+esc(q.id)+'"><div class="questionBankHead"><div class="qbQuestionNo">Q'+String(index+1).padStart(2,'0')+'</div><div class="qbQuestionIdentity"><strong>'+esc(q.id)+'</strong><span>'+esc(q.type)+' · '+esc(q.topic)+'</span></div><select class="qbDifficulty">'+['easy','moderate','tough'].map(d=>'<option value="'+d+'" '+(q.difficulty===d?'selected':'')+'>'+d.toUpperCase()+'</option>').join('')+'</select></div><div class="qbGrid"><label>Question / Prompt<textarea class="qbPrompt" rows="3">'+esc(q.prompt||'')+'</textarea></label><label>Options <small>One option per line</small><textarea class="qbOptions" rows="5">'+esc(options)+'</textarea></label></div><label>Correct answer <small>MCQ/Audio/Problem: index · Multiple Correct: comma-separated indexes · Match: JSON mapping</small><input class="qbAnswer" value="'+esc(questionAnswerText(q))+'"></label>'+(q.type==='audio'?'<label>Audio text<textarea class="qbAudioText" rows="2">'+esc(q.audioText||q.prompt||'')+'</textarea>'+audio+'</label>':'')+'<label>Explanation<textarea class="qbExplanation" rows="2">'+esc(q.explanation||'')+'</textarea></label></article>';
+    const opts=Array.isArray(q.options)?q.options:[];
+    const answerText=questionAnswerText(q);
+    const answerIndexes=q.type==='multiAnswer'&&Array.isArray(q.answer)?q.answer:[q.answer];
+    const optionHtml=opts.length
+      ? '<div class="qbOptionList">'+opts.map((o,i)=>{
+          const correct=answerIndexes.includes(i);
+          return '<div class="qbOption '+(correct?'correct':'')+'"><span class="qbOptionLetter">'+String.fromCharCode(65+i)+'</span><span>'+esc(o)+'</span>'+(correct?'<b>✓ Correct</b>':'')+'</div>';
+        }).join('')+'</div>'
+      : '<div class="qbNoOptions">No options — review this question type.</div>';
+
+    const audioHtml=q.type==='audio'
+      ? '<div class="qbAudioPanel"><button type="button" class="audioPreviewBtn" data-audio-qid="'+esc(q.id)+'">▶ Play Audio</button><span id="audioStatus-'+esc(q.id)+'">Preview the question before approval</span></div>'
+      : '';
+
+    const editHtml='<div class="qbEditPanel" hidden>'+
+      '<div class="qbEditGrid">'+
+      '<label>Question / Prompt<textarea class="qbPrompt" rows="3">'+esc(q.prompt||'')+'</textarea></label>'+
+      '<label>Options <small>One option per line</small><textarea class="qbOptions" rows="5">'+esc(opts.join('\n'))+'</textarea></label>'+
+      '</div>'+
+      '<label>Correct answer <small>MCQ/Audio/Problem: index · Multiple Correct: comma-separated indexes · Match: JSON mapping</small><input class="qbAnswer" value="'+esc(answerText)+'"></label>'+
+      (q.type==='audio'?'<label>Audio text<textarea class="qbAudioText" rows="2">'+esc(q.audioText||q.prompt||'')+'</textarea></label>':'')+
+      '<label>Explanation<textarea class="qbExplanation" rows="2">'+esc(q.explanation||'')+'</textarea></label>'+
+      '<button type="button" class="secondary qbDoneEditing">Done Editing</button>'+
+      '</div>';
+
+    return '<article class="questionBankItem" data-qid="'+esc(q.id)+'">'+
+      '<div class="qbReviewHeader">'+
+        '<div class="qbQuestionNo">Q'+String(index+1).padStart(2,'0')+'</div>'+
+        '<div class="qbQuestionIdentity"><strong>'+esc(q.id)+'</strong><span>'+esc(q.type)+' · '+esc(q.topic)+'</span></div>'+
+        '<span class="qbDifficultyPill '+esc(q.difficulty)+'">'+esc(q.difficulty.toUpperCase())+'</span>'+
+        '<label class="qbReviewCheck"><input type="checkbox" class="qbSelect"> <span>Reviewed</span></label>'+
+        '<button type="button" class="secondary qbEditBtn">Edit</button>'+
+      '</div>'+
+      '<div class="qbReviewBody">'+
+        '<div class="qbPromptDisplay">'+esc(q.prompt||'')+'</div>'+
+        optionHtml+
+        (q.type==='audio'?audioHtml:'')+
+        '<div class="qbMetaRow"><span><b>Correct:</b> '+esc(answerText)+'</span><span><b>Explanation:</b> '+esc(q.explanation||'—')+'</span></div>'+
+      '</div>'+editHtml+
+    '</article>';
   }).join('');
-  target.innerHTML='<div class="qbDaySummary"><div><span class="sectionEyebrow">DAY '+activeDay+' REVIEW</span><h3>'+esc(dayNames[activeDay])+'</h3><p>Review every question, preview audio, edit if necessary, then approve this day.</p></div><div class="qbSummaryCounts"><b>'+qs.length+'</b><span>Questions</span></div><div class="qbSummaryCounts"><b>'+counts.mcq+'/'+counts.match+'/'+counts.audio+'/'+counts.problemSolving+'/'+counts.multiAnswer+'</b><span>MCQ · Match · Audio · Problem · Multi</span></div><div class="qbSummaryCounts"><b>'+diff.easy+'/'+diff.moderate+'/'+diff.tough+'</b><span>Easy · Moderate · Tough</span></div></div><div class="qbDayActionBar"><div><strong>Day '+activeDay+' approval</strong><span>'+esc(approved?'Approved and published':pending?'Approval is being processed':'Draft — not yet published')+'</span></div><div class="adminActions"><button type="button" class="secondary" id="qbSelectAllCurrent">Select All</button><button type="button" class="secondary" id="qbDeselectAllCurrent">Deselect All</button><button type="button" class="qbApproveDayTop" '+(approved||pending?'disabled':'')+'>'+(approved?'✓ Day '+activeDay+' Approved':pending?'Processing…':'Approve Day '+activeDay)+'</button></div></div><div class="qbQuestionList">'+cards+'</div>';
+
+  target.innerHTML=
+    '<div class="qbDaySummary">'+
+      '<div><span class="sectionEyebrow">DAY '+activeDay+' REVIEW</span><h3>'+esc(dayNames[activeDay])+'</h3><p>Review the questions as students will experience them. Edit only when required.</p></div>'+
+      '<div class="qbSummaryCounts"><b>'+qs.length+'</b><span>Questions</span></div>'+
+      '<div class="qbSummaryCounts"><b>'+counts.mcq+'/'+counts.match+'/'+counts.audio+'/'+counts.problemSolving+'/'+counts.multiAnswer+'</b><span>MCQ · Match · Audio · Problem · Multi</span></div>'+
+      '<div class="qbSummaryCounts"><b>'+diff.easy+'/'+diff.moderate+'/'+diff.tough+'</b><span>Easy · Moderate · Tough</span></div>'+
+    '</div>'+
+    '<div class="qbDayActionBar"><div><strong>Day '+activeDay+'</strong><span>'+esc(approved?'Approved and published':pending?'Approval is being processed':'Draft — review all questions before approval')+'</span></div>'+
+      '<div class="adminActions"><button type="button" class="secondary" id="qbSelectAllCurrent">Select All</button><button type="button" class="secondary" id="qbDeselectAllCurrent">Deselect All</button><button type="button" class="qbApproveDayTop" '+(approved||pending?'disabled':'')+'>'+(approved?'✓ Day '+activeDay+' Approved':pending?'Processing…':'Approve Day '+activeDay)+'</button></div></div>'+
+    '<div class="qbQuestionList">'+cards+'</div>';
+
   $('questionBankStatus').textContent='Day '+activeDay+' · '+qs.length+' questions · '+(approved?'APPROVED':pending?'PROCESSING':'DRAFT');
+
   $('qbSelectAllCurrent').onclick=()=>document.querySelectorAll('.questionBankItem .qbSelect').forEach(x=>x.checked=true);
   $('qbDeselectAllCurrent').onclick=()=>document.querySelectorAll('.questionBankItem .qbSelect').forEach(x=>x.checked=false);
-  document.querySelectorAll('.questionBankItem').forEach(card=>{
-    const head=card.querySelector('.questionBankHead'), box=document.createElement('label');
-    box.className='qbReviewCheck';box.innerHTML='<input type="checkbox" class="qbSelect" checked> Reviewed';head.insertBefore(box,head.firstChild);
+
+  document.querySelectorAll('.qbEditBtn').forEach(btn=>btn.onclick=()=>{
+    const card=btn.closest('.questionBankItem'), panel=card.querySelector('.qbEditPanel');
+    panel.hidden=false;btn.hidden=true;card.classList.add('editing');
+    panel.scrollIntoView({behavior:'smooth',block:'nearest'});
   });
+  document.querySelectorAll('.qbDoneEditing').forEach(btn=>btn.onclick=()=>{
+    const card=btn.closest('.questionBankItem'), q=adminQuestionBank.questions.find(x=>x.id===card.dataset.qid);
+    if(q){
+      const raw=card.querySelector('.qbAnswer').value.trim();
+      q.difficulty=card.querySelector('.qbDifficulty')?.value||q.difficulty;
+      q.prompt=card.querySelector('.qbPrompt').value.trim();
+      q.options=card.querySelector('.qbOptions').value.split('\n').map(x=>x.trim()).filter(Boolean);
+      if(q.type==='multiAnswer')q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
+      else if(q.type==='match'){try{q.answer=JSON.parse(raw||'{}')}catch(e){msg('Invalid Match JSON in '+q.id);return;}}
+      else q.answer=Number(raw);
+      if(q.type==='audio')q.audioText=card.querySelector('.qbAudioText').value.trim();
+      q.explanation=card.querySelector('.qbExplanation').value.trim();
+    }
+    renderAdminQuestionBank();
+  });
+
   document.querySelectorAll('.audioPreviewBtn').forEach(btn=>{
     btn.onclick=()=>{
-      const q=adminQuestionBank.questions.find(x=>x.id===btn.dataset.audioQid), status=$('audioStatus-'+btn.dataset.audioQid);
+      const q=adminQuestionBank.questions.find(x=>x.id===btn.dataset.audioQid),status=$('audioStatus-'+btn.dataset.audioQid);
       if(!q)return;
       if(!window.speechSynthesis){if(status)status.textContent='Browser audio preview is not supported.';return;}
-      if(btn.dataset.playing==='true'){window.speechSynthesis.cancel();btn.dataset.playing='false';btn.textContent='▶ Preview Audio';if(status)status.textContent='Stopped';return;}
+      if(btn.dataset.playing==='true'){window.speechSynthesis.cancel();btn.dataset.playing='false';btn.textContent='▶ Play Audio';if(status)status.textContent='Stopped';return;}
       window.speechSynthesis.cancel();
       const u=new SpeechSynthesisUtterance(q.audioText||q.prompt||'');u.lang='en-IN';u.rate=.9;
       btn.dataset.playing='true';btn.textContent='■ Stop Audio';if(status)status.textContent='Playing…';
-      u.onend=()=>{btn.dataset.playing='false';btn.textContent='▶ Preview Audio';if(status)status.textContent='Audio preview complete';};
-      u.onerror=()=>{btn.dataset.playing='false';btn.textContent='▶ Preview Audio';if(status)status.textContent='Audio preview unavailable';};
+      u.onend=()=>{btn.dataset.playing='false';btn.textContent='▶ Play Audio';if(status)status.textContent='Audio preview complete';};
+      u.onerror=()=>{btn.dataset.playing='false';btn.textContent='▶ Play Audio';if(status)status.textContent='Audio preview unavailable';};
       window.speechSynthesis.speak(u);
     };
   });
+
   const approveBtn=$('.qbApproveDayTop');if(approveBtn)approveBtn.onclick=()=>approveQuestionBankDay(activeDay,approveBtn);
 }
 function readVisibleQuestionBank() {
