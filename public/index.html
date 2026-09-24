@@ -43,12 +43,13 @@
   <div class="card"><div id="studentCourseDashboard"></div></div>
 </div>
 <div id="practicePanel" class="studentHiddenPanel" hidden>
-  <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">PRACTICE</span><h2>10-Question Sample Assessment</h2></div><span class="practiceBadge">No Reward Points</span></div><p>Practice before the main assessment.</p><div id="studentSampleQuestions" hidden></div><button id="studentSampleSubmit">Check My Score</button><div id="studentSampleResult"></div></div>
+  <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">PRACTICE</span><h2>10-Question Sample Assessment</h2></div><span class="practiceBadge">No Reward Points</span></div><p>Practice before the main assessment.</p><div id="studentSampleQuestions"></div><button id="studentSampleSubmit">Check My Score</button><div id="studentSampleResult"></div></div>
 </div>
 <div id="scorePanel" class="studentHiddenPanel" hidden>
   <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">RESULTS</span><h2>My Assessment Score</h2></div></div><div id="myScore">Your completed assessment results will appear here.</div></div>
 </div>
 <div id="assessmentPanel" class="card studentHiddenPanel" hidden>
+  <div id="studentStatus" class="assessmentStatus">Checking assessment window…</div><button id="startBtn" disabled>Start Assessment</button>
   <div class="assessmentTop"><h2 id="assessmentTitle"></h2><div id="timer"></div></div>
   <div id="questions"></div>
   <div id="assessmentNav" class="assessmentNav"><button id="prevBtn" class="secondary">Previous</button><span id="questionCounter"></span><button id="nextBtn">Next</button><button id="submitBtn" hidden>Submit Assessment</button></div>
@@ -61,7 +62,7 @@
 <div class="card"><h2>Participation</h2><div id="stats"></div><table><thead><tr><th>Rank</th><th>Name</th><th>Register No.</th><th>Score</th></tr></thead><tbody id="leaderboard"></tbody></table></div>
 </section>
 
-<section id="admin"> class="panel" hidden>
+<section id="admin" class="panel" hidden>
 <div class="adminHero">
   <div><span class="courseKicker">FXEC ASSESSMENT CONTROL CENTRE</span><h2>Administrator Dashboard</h2><p>Manage students, publish the five-day programme, control assessment windows and monitor results from one place.</p></div>
   <div class="adminHeroBadge">LIVE PORTAL</div>
