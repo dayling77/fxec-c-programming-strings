@@ -378,23 +378,65 @@ function questionAnswerText(q) {
 function renderAdminQuestionBank() {
   const target = $('questionBankEditor');
   if (!target || !adminQuestionBank) return;
-  const qs = adminQuestionBank.questions.filter(q => String(q.id).startsWith('D'+adminQuestionDay+'-'));
-  target.innerHTML = qs.map((q, idx) => {
-    const options = Array.isArray(q.options) ? q.options.join('\n') : '';
-    return `<article class="questionBankItem" data-qid="${esc(q.id)}">
-      <div class="questionBankHead"><strong>${esc(q.id)}</strong><span>${esc(q.type)} · ${esc(q.topic)}</span><select class="qbDifficulty">
-        ${['easy','moderate','tough'].map(d=>`<option value="${d}" ${q.difficulty===d?'selected':''}>${d}</option>`).join('')}
-      </select></div>
-      <label>Question / Prompt<textarea class="qbPrompt" rows="3">${esc(q.prompt||'')}</textarea></label>
-      <label>Options <small>One option per line</small><textarea class="qbOptions" rows="5">${esc(options)}</textarea></label>
-      <label>Correct answer <small>MCQ/Audio/Problem: index · Multi-answer: comma-separated indexes · Match: JSON mapping</small><input class="qbAnswer" value="${esc(questionAnswerText(q))}"></label>
-      ${q.type==='audio'?'<label>Audio text<textarea class="qbAudioText" rows="2">'+esc(q.audioText||q.prompt||'')+'</textarea></label>':''}
-      <label>Explanation<textarea class="qbExplanation" rows="2">${esc(q.explanation||'')}</textarea></label>
-    </article>`;
+  const dayNames = {
+    1:'String Basics',
+    2:'String Library Functions',
+    3:'Manual String Processing',
+    4:'Character Frequency & String Analysis',
+    5:'Advanced String Problem Solving'
+  };
+  const days = [1,2,3,4,5];
+  target.innerHTML = days.map(day => {
+    const qs = adminQuestionBank.questions.filter(q => String(q.id).startsWith('D'+day+'-'));
+    const approved = adminQuestionBank.dayStatus?.[day] === 'approved';
+    const cards = qs.map(q => {
+      const options = Array.isArray(q.options) ? q.options.join('\n') : '';
+      return `<article class="questionBankItem" data-qid="${esc(q.id)}">
+        <div class="questionBankHead">
+          <label class="qbSelectLabel"><input type="checkbox" class="qbSelect" checked> <span>Select</span></label>
+          <strong>${esc(q.id)}</strong><span>${esc(q.type)} · ${esc(q.topic)}</span>
+          <select class="qbDifficulty">${['easy','moderate','tough'].map(d=>`<option value="${d}" ${q.difficulty===d?'selected':''}>${d}</option>`).join('')}</select>
+        </div>
+        <label>Question / Prompt<textarea class="qbPrompt" rows="3">${esc(q.prompt||'')}</textarea></label>
+        <label>Options <small>One option per line</small><textarea class="qbOptions" rows="5">${esc(options)}</textarea></label>
+        <label>Correct answer <small>MCQ/Audio/Problem: index · Multi-answer: comma-separated indexes · Match: JSON mapping</small><input class="qbAnswer" value="${esc(questionAnswerText(q))}"></label>
+        ${q.type==='audio'?'<label>Audio text<textarea class="qbAudioText" rows="2">'+esc(q.audioText||q.prompt||'')+'</textarea></label>':''}
+        <label>Explanation<textarea class="qbExplanation" rows="2">${esc(q.explanation||'')}</textarea></label>
+      </article>`;
+    }).join('');
+    return `<section class="questionBankDaySection" data-day="${day}">
+      <div class="questionBankDayHeader">
+        <div><span class="dayBadge">DAY ${day}</span><h3>Day ${day} · ${esc(dayNames[day])}</h3><span class="qbDayCount">${qs.length} questions · ${approved?'APPROVED':'Draft'}</span></div>
+        <div class="questionBankDayActions">
+          <button type="button" class="secondary qbSelectAll" data-day="${day}">Select All</button>
+          <button type="button" class="secondary qbDeselectAll" data-day="${day}">Deselect All</button>
+          <button type="button" class="qbApproveDay" data-day="${day}" ${approved?'disabled':''}>${approved?'✓ Day '+day+' Approved':'Approve Day '+day}</button>
+        </div>
+      </div>
+      <div class="questionBankDayQuestions">${cards}</div>
+    </section>`;
   }).join('');
-  $('questionBankStatus').textContent = 'Day '+adminQuestionDay+' · '+qs.length+' questions loaded · '+(adminQuestionBank.status||'draft');
+  $('questionBankStatus').textContent = '125 questions loaded · Review each day separately · '+(adminQuestionBank.status||'draft');
+
+  document.querySelectorAll('.qbSelectAll').forEach(btn=>btn.onclick=()=>{
+    const section=btn.closest('.questionBankDaySection');
+    section.querySelectorAll('.qbSelect').forEach(x=>x.checked=true);
+  });
+  document.querySelectorAll('.qbDeselectAll').forEach(btn=>btn.onclick=()=>{
+    const section=btn.closest('.questionBankDaySection');
+    section.querySelectorAll('.qbSelect').forEach(x=>x.checked=false);
+  });
+  document.querySelectorAll('.questionBankDaySection').forEach((section,index)=>{
+    if(index>0) section.querySelector('.questionBankDayQuestions').hidden=true;
+    section.querySelector('.questionBankDayHeader').onclick=(e)=>{
+      if(e.target.closest('button') || e.target.closest('input')) return;
+      const body=section.querySelector('.questionBankDayQuestions');
+      body.hidden=!body.hidden;
+    };
+  });
+  document.querySelectorAll('.qbApproveDay').forEach(btn=>btn.onclick=()=>approveQuestionBankDay(Number(btn.dataset.day),btn));
 }
-function readVisibleQuestionBankDay() {
+function readVisibleQuestionBank() {
   if (!adminQuestionBank) return;
   const cards = [...document.querySelectorAll('.questionBankItem')];
   const byId = new Map(adminQuestionBank.questions.map(q=>[q.id,q]));
@@ -411,51 +453,78 @@ function readVisibleQuestionBankDay() {
     q.explanation=card.querySelector('.qbExplanation').value.trim();
   });
 }
+function readVisibleQuestionBankDay(day) {
+  const section=document.querySelector('.questionBankDaySection[data-day="'+day+'"]');
+  if(!section)return;
+  const byId=new Map(adminQuestionBank.questions.map(q=>[q.id,q]));
+  section.querySelectorAll('.questionBankItem').forEach(card=>{
+    const q=byId.get(card.dataset.qid); if(!q)return;
+    q.difficulty=card.querySelector('.qbDifficulty').value;
+    q.prompt=card.querySelector('.qbPrompt').value.trim();
+    q.options=card.querySelector('.qbOptions').value.split('\n').map(x=>x.trim()).filter(Boolean);
+    const raw=card.querySelector('.qbAnswer').value.trim();
+    if(q.type==='multiAnswer') q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
+    else if(q.type==='match'){ try{q.answer=JSON.parse(raw||'{}');}catch(e){throw new Error('Invalid Match JSON in '+q.id);}}
+    else q.answer=Number(raw);
+    if(q.type==='audio') q.audioText=card.querySelector('.qbAudioText').value.trim();
+    q.explanation=card.querySelector('.qbExplanation').value.trim();
+  });
+}
 async function loadAdminQuestionBank() {
   try {
     if (!currentUser || currentUser.email?.toLowerCase() !== ADMIN_EMAIL) throw new Error('Administrator account required.');
-    const bankRef = doc(firestore, 'questionBank', 'master');
-    const snap = await getDoc(bankRef);
+    const snap = await getDoc(doc(firestore, 'questionBank', 'master'));
     if (!snap.exists()) {
       await setDoc(doc(firestore, 'adminActions', 'seedQuestionBank'), {requestedBy: currentUser.uid, requestedAt: new Date(), status:'requested'});
       throw new Error('Question bank is being initialized. Click Load Question Bank again in a few seconds.');
     }
     const data=snap.data();
-    adminQuestionBank={meta:data.meta||{},status:data.status||'draft',questions:data.questions||[]};
+    adminQuestionBank={meta:data.meta||{},status:data.status||'draft',dayStatus:data.dayStatus||{},questions:data.questions||[]};
     if(!adminQuestionBank.questions.length) throw new Error('Question bank is empty.');
     renderAdminQuestionBank();
-    msg('Question bank loaded for review.',true);
+    msg('Question bank loaded. Review Day 1, then continue day by day.',true);
   } catch(e){ msg(e.message || String(e)); }
 }
+async function saveQuestionBankDraft() {
+  readVisibleQuestionBank();
+  await setDoc(doc(firestore,'questionBank','master'), {
+    meta:adminQuestionBank.meta||{},questions:adminQuestionBank.questions,
+    dayStatus:adminQuestionBank.dayStatus||{},status:'draft',updatedAt:new Date(),updatedBy:currentUser.uid
+  },{merge:true});
+}
+async function approveQuestionBankDay(day,button) {
+  if(!adminQuestionBank)return msg('Load the question bank first.');
+  try{
+    readVisibleQuestionBankDay(day);
+    const section=document.querySelector('.questionBankDaySection[data-day="'+day+'"]');
+    const selected=[...section.querySelectorAll('.qbSelect')].filter(x=>x.checked);
+    const total=section.querySelectorAll('.qbSelect').length;
+    if(selected.length!==total) return msg('Select all '+total+' questions in Day '+day+' before approving the day.');
+    if(!confirm('Approve Day '+day+' and publish its '+total+' questions?'))return;
+    button.disabled=true; button.textContent='Saving…';
+    await saveQuestionBankDraft();
+    await setDoc(doc(firestore,'adminActions','publishQuestionBankDay'+day+'_'+Date.now()),{
+      requestedBy:currentUser.uid,requestedAt:new Date(),status:'requested',day
+    });
+    adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
+    adminQuestionBank.dayStatus[day]='pending';
+    button.textContent='Processing…';
+    msg('Day '+day+' approval requested. The server is preparing its secure pool and audio.',true);
+  }catch(e){button.disabled=false;button.textContent='Approve Day '+day;msg(e.message||String(e));}
+}
 if ($('loadQuestionBankBtn')) $('loadQuestionBankBtn').onclick=loadAdminQuestionBank;
-if ($('questionBankDay')) $('questionBankDay').onchange=()=>{
-  try{readVisibleQuestionBankDay();}catch(e){msg(e.message);return;}
-  adminQuestionDay=Number($('questionBankDay').value);
-  renderAdminQuestionBank();
-};
+if ($('questionBankDay')) $('questionBankDay').parentElement.style.display='none';
 if ($('saveQuestionBankBtn')) $('saveQuestionBankBtn').onclick=async()=>{
   if(!adminQuestionBank)return msg('Load the question bank first.');
   try{
-    readVisibleQuestionBankDay();
     const button=$('saveQuestionBankBtn'); button.disabled=true; button.textContent='Saving…';
-    await setDoc(doc(firestore, 'questionBank', 'master'), {meta:adminQuestionBank.meta||{},questions:adminQuestionBank.questions,status:'draft',updatedAt:new Date(),updatedBy:currentUser.uid}, {merge:true});
-    adminQuestionBank.status='draft';
-    $('questionBankStatus').textContent='Draft saved ✓ · Day '+adminQuestionDay;
-    msg('Question bank draft saved. It is not yet published to students.',true);
+    await saveQuestionBankDraft();
+    msg('All question-bank edits saved as draft. Nothing is published until a day is approved.',true);
   }catch(e){msg(e.message);}finally{$('saveQuestionBankBtn').disabled=false;$('saveQuestionBankBtn').textContent='Save Draft';}
 };
-if ($('publishQuestionBankBtn')) $('publishQuestionBankBtn').onclick=async()=>{
-  if(!adminQuestionBank)return msg('Load the question bank first.');
-  try{
-    readVisibleQuestionBankDay();
-    if(!confirm('Approve and publish all 125 questions? This generates secure audio and replaces the current question pools for the five days.'))return;
-    const button=$('publishQuestionBankBtn'); button.disabled=true; button.textContent='Publishing…';
-    await setDoc(doc(firestore, 'questionBank', 'master'), {meta:adminQuestionBank.meta||{},questions:adminQuestionBank.questions,status:'draft',updatedAt:new Date(),updatedBy:currentUser.uid}, {merge:true});
-    await setDoc(doc(firestore, 'adminActions', 'publishQuestionBank'), {requestedBy:currentUser.uid,requestedAt:new Date(),status:'requested'});
-    adminQuestionBank.status='publishing';
-    $('questionBankStatus').textContent='PUBLISH REQUESTED · Server is generating secure pools/audio…';
-    msg('Question bank saved. Publishing is being processed securely by the server.',true);
-  }catch(e){msg(e.message);}finally{$('publishQuestionBankBtn').disabled=false;$('publishQuestionBankBtn').textContent='Approve & Publish';}
+if ($('publishQuestionBankBtn')) $('publishQuestionBankBtn').onclick=()=>{
+  document.querySelector('.questionBankDaySection')?.scrollIntoView({behavior:'smooth',block:'start'});
+  msg('Approve each day separately using its Approve Day button.',true);
 };
 
 $('selectAllBtn').onclick = () => {
