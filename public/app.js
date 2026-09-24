@@ -192,6 +192,7 @@ onAuthStateChanged(auth, async user => {
   $('userEmail').textContent = user.email;
   const token = await user.getIdTokenResult(true);
   const isConfiguredAdminEmail = user.email?.toLowerCase() === 'admin@fxecdigital.org';
+  if (isConfiguredAdminEmail && token.claims.admin === true) { msg('', true); $('message').style.display = 'none'; } else { $('message').style.display = ''; }
   show('admin', token.claims.admin === true || isConfiguredAdminEmail);
   show('adminBootstrap', isConfiguredAdminEmail && token.claims.admin !== true);
   if (token.claims.admin === true) { setTab('admin'); loadAdmin(); }
