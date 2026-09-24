@@ -19,6 +19,7 @@ const bucket = getStorage().bucket();
 const tts = new textToSpeech.TextToSpeechClient();
 
 const ZEPTOMAIL_CONFIG = defineJsonSecret('ZEPTOMAIL_CONFIG');
+const CALLABLE_CORS = ['https://fxec-c-strings.web.app', 'https://fxec-c-strings.firebaseapp.com'];
 
 const CONFIG = Object.freeze({
   adminEmail: 'admin@fxecdigital.org',
@@ -336,7 +337,7 @@ function publicQuestion(q) {
   return safe;
 }
 
-export const bootstrapAdmin = onCall(async request => {
+export const bootstrapAdmin = onCall({ cors: CALLABLE_CORS }, async request => {
   const a = requireAuth(request);
   if (a.token.admin === true) return { success: true, admin: true };
   if ((a.token.email || '').toLowerCase() !== CONFIG.adminEmail.toLowerCase()) {
@@ -350,7 +351,7 @@ export const bootstrapAdmin = onCall(async request => {
   return { success: true, admin: true, message: 'Admin claim set. Sign out and sign in again.' };
 });
 
-export const registerStudent = onCall(async request => {
+export const registerStudent = onCall({ cors: CALLABLE_CORS }, async request => {
   const a = requireAuth(request);
   const name = cleanText(request.data?.name, 120);
   const registerNumber = cleanText(request.data?.registerNumber, 50);
@@ -385,12 +386,12 @@ async function approveStudentById(studentId) {
   return { success: true };
 }
 
-export const authorizeStudent = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, async request => {
+export const authorizeStudent = onCall({ cors: CALLABLE_CORS, secrets: [ZEPTOMAIL_CONFIG] }, async request => {
   requireAdmin(request);
   return approveStudentById(cleanText(request.data?.studentId, 200));
 });
 
-export const authorizeStudentsBulk = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, async request => {
+export const authorizeStudentsBulk = onCall({ cors: CALLABLE_CORS, secrets: [ZEPTOMAIL_CONFIG] }, async request => {
   requireAdmin(request);
   const ids = Array.isArray(request.data?.studentIds) ? [...new Set(request.data.studentIds.map(x => cleanText(x, 200)).filter(Boolean))] : [];
   if (!ids.length) throw new HttpsError('invalid-argument', 'Select at least one student.');
@@ -399,7 +400,7 @@ export const authorizeStudentsBulk = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, asy
   return { success: results.every(x => x.success), approved: results.filter(x => x.success).length, results };
 });
 
-export const updateAssessmentSchedules = onCall(async request => {
+export const updateAssessmentSchedules = onCall({ cors: CALLABLE_CORS }, async request => {
   requireAdmin(request);
   const schedules = Array.isArray(request.data?.schedules) ? request.data.schedules : [];
   if (!schedules.length || schedules.length > 10) throw new HttpsError('invalid-argument', 'Provide one or more assessment schedules.');
@@ -430,7 +431,7 @@ export const updateAssessmentSchedules = onCall(async request => {
   return {success:true,count:normalized.length};
 });
 
-export const getAssessment = onCall(async request => {
+export const getAssessment = onCall({ cors: CALLABLE_CORS }, async request => {
   const a = requireAuth(request);
   const studentSnap = await db.collection('students').doc(a.uid).get();
   if (!studentSnap.exists || studentSnap.data().status !== 'approved') throw new HttpsError('permission-denied', 'Student is not approved.');
@@ -448,7 +449,7 @@ export const getAssessment = onCall(async request => {
   return { status: current ? 'open' : 'scheduled', schedule: { date: target.date, day: target.day, topic: target.topic, videoUrl: target.videoUrl || '', openAt: target.openAt.toDate().toISOString(), closeAt: target.closeAt.toDate().toISOString() }, ready: true };
 });
 
-export const startAttempt = onCall(async request => {
+export const startAttempt = onCall({ cors: CALLABLE_CORS }, async request => {
   const a = requireAuth(request);
   const student = await db.collection('students').doc(a.uid).get();
   if (!student.exists || student.data().status !== 'approved') throw new HttpsError('permission-denied', 'Student is not approved.');
@@ -475,7 +476,7 @@ export const startAttempt = onCall(async request => {
   return { attemptId: attemptRef.id, assessmentDate: schedule.date, closeAt: schedule.closeAt.toDate().toISOString(), questions };
 });
 
-export const finalizeAttempt = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, async request => {
+export const finalizeAttempt = onCall({ cors: CALLABLE_CORS, secrets: [ZEPTOMAIL_CONFIG] }, async request => {
   const a = requireAuth(request);
   const attemptId = cleanText(request.data?.attemptId, 200);
   const answers = Array.isArray(request.data?.answers) ? request.data.answers : [];
@@ -605,7 +606,7 @@ export const assessmentContentScheduler = onSchedule({ schedule: 'every 15 minut
   }
 });
 
-export const getStudentProfile = onCall(async request => {
+export const getStudentProfile = onCall({ cors: CALLABLE_CORS }, async request => {
   const a = requireAuth(request);
   const snap = await db.collection('students').doc(a.uid).get();
   if (!snap.exists) {
@@ -703,13 +704,13 @@ async function getQuestionBankForAdmin() {
   return draft;
 }
 
-export const getAdminQuestionBank = onCall(async request => {
+export const getAdminQuestionBank = onCall({ cors: CALLABLE_CORS }, async request => {
   requireAdmin(request);
   const bank = await getQuestionBankForAdmin();
   return {meta: bank.meta || QUESTION_BANK_META, status: bank.status || 'draft', questions: bank.questions || QUESTION_BANK};
 });
 
-export const saveAdminQuestionBank = onCall(async request => {
+export const saveAdminQuestionBank = onCall({ cors: CALLABLE_CORS }, async request => {
   requireAdmin(request);
   const questions = Array.isArray(request.data?.questions) ? request.data.questions.map(normalizeDraftQuestion) : [];
   const error = validateQuestionBank(questions);
@@ -724,7 +725,7 @@ export const saveAdminQuestionBank = onCall(async request => {
   return {success:true, status:'draft', totalQuestions:questions.length};
 });
 
-export const publishAdminQuestionBank = onCall({timeoutSeconds:900}, async request => {
+export const publishAdminQuestionBank = onCall({ cors: CALLABLE_CORS, timeoutSeconds:900 }, async request => {
   requireAdmin(request);
   const bank = await getQuestionBankForAdmin();
   const questions = (bank.questions || []).map(normalizeDraftQuestion);
@@ -795,12 +796,12 @@ export const getCourseOverview = onCall(async () => {
   };
 });
 
-export const getPublicStats = onCall(async request => {
+export const getPublicStats = onCall({ cors: CALLABLE_CORS }, async request => {
   const snap = await db.collection('publicStats').doc('global').get();
   return snap.exists ? snap.data() : { totalAttempts: 0, totalPassed: 0, totalRewardPoints: 0, leaderboard: [] };
 });
 
-export const getAdminDashboard = onCall(async request => {
+export const getAdminDashboard = onCall({ cors: CALLABLE_CORS }, async request => {
   requireAdmin(request);
   const [students, results, schedules] = await Promise.all([
     db.collection('students').get(),
@@ -826,7 +827,7 @@ export const getAdminDashboard = onCall(async request => {
   };
 });
 
-export const exportResults = onCall(async request => {
+export const exportResults = onCall({ cors: CALLABLE_CORS }, async request => {
   requireAdmin(request);
   const format = request.data?.format === 'pdf' ? 'pdf' : 'csv';
   const snap = await db.collection('results').orderBy('completedAt', 'desc').get();
