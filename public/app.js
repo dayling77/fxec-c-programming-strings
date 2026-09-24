@@ -115,14 +115,26 @@ document.querySelectorAll('.tab').forEach(x => x.onclick = () => setTab(x.datase
 
 async function registerStudentForm(form, nameId, noId, emailId, e) {
   e.preventDefault();
+  const submit = form.querySelector('button');
+  if (submit) { submit.disabled = true; submit.textContent = 'Submitting…'; }
   try {
     await call('registerStudent')({
-      name: $(nameId).value,
-      registerNumber: $(noId).value,
-      email: $(emailId).value
+      name: $(nameId).value.trim(),
+      registerNumber: $(noId).value.trim(),
+      email: $(emailId).value.trim()
     });
-    msg('Registration submitted. Your account is waiting for admin approval.', true);
-  } catch (e) { msg(e.message); }
+    form.hidden = true;
+    if ($('registrationStatus')) {
+      $('registrationStatus').hidden = false;
+      $('registrationStatus').className = 'statusBanner pendingStatus';
+      $('registrationStatus').innerHTML = '<strong>Registration submitted ✓</strong><span>Your details are now with the Administrator for approval. You do not need to submit the registration again.</span>';
+    }
+    msg('Registration submitted. Please wait for Administrator approval.', true);
+    await loadStudent();
+  } catch (e) {
+    if (submit) { submit.disabled = false; submit.textContent = 'Submit Registration'; }
+    msg(e.message);
+  }
 }
 $('registerForm').onsubmit = e => registerStudentForm($('registerForm'),'regName','regNo','regEmail',e);
 $('studentRegisterForm').onsubmit = e => registerStudentForm($('studentRegisterForm'),'studentRegName','studentRegNo','studentRegEmail',e);
@@ -151,26 +163,60 @@ $('adminBootstrap').onclick = async () => {
 };
 
 async function loadStudent() {
+  show('authArea', false);
+  show('student', true);
+  show('admin', false);
+  show('assessmentPanel', false);
+  show('publicShell', false);
+
   renderSample('studentSampleQuestions','studentSampleResult','studentSampleSubmit');
-  // Always render the five-day learning programme first; Firebase schedule
-  // data is layered on top when available.
   renderStudentLearning([]);
+
+  try {
+    const profile = (await call('getStudentProfile')({})).data;
+    $('studentRegName').value = profile.name || '';
+    $('studentRegNo').value = profile.registerNumber || '';
+    $('studentRegEmail').value = profile.email || currentUser?.email || '';
+
+    if (profile.registered) {
+      $('studentRegisterForm').hidden = true;
+      $('registrationStatus').hidden = false;
+      if (profile.status === 'approved') {
+        $('registrationStatus').className = 'statusBanner approvedStatus';
+        $('registrationStatus').innerHTML = '<strong>Registration approved ✓</strong><span>You can access the full learning centre and take the main assessment during a published window.</span>';
+      } else {
+        $('registrationStatus').className = 'statusBanner pendingStatus';
+        $('registrationStatus').innerHTML = '<strong>Approval pending</strong><span>Your registration has been submitted. Please wait for the Administrator. You can continue studying while you wait.</span>';
+      }
+    } else {
+      $('studentRegisterForm').hidden = false;
+      $('registrationStatus').hidden = true;
+    }
+  } catch (e) {
+    $('studentRegisterForm').hidden = false;
+    $('registrationStatus').hidden = true;
+    $('studentRegEmail').value = currentUser?.email || '';
+  }
+
   try {
     const overview = await call('getCourseOverview')({});
-    renderStudentLearning(overview.data.schedules||[]);
-  } catch(e) {
-    console.warn('Course overview unavailable; showing learning programme without schedule data.', e);
+    renderStudentLearning(overview.data.schedules || []);
+  } catch (e) {
+    renderStudentLearning([]);
   }
+
   try {
     const r = await call('getAssessment')({});
     const d = r.data;
     $('studentStatus').innerHTML = d.status === 'open'
-      ? `<strong>Day ${d.schedule.day} – ${esc(d.schedule.topic)}</strong><br>Assessment is OPEN.`
+      ? '<div class="openState"><strong>Day ' + d.schedule.day + ' · ' + esc(d.schedule.topic) + '</strong><span>Assessment is open now until ' + new Date(d.schedule.closeAt).toLocaleString('en-IN') + '</span></div>'
       : d.status === 'scheduled'
-        ? `<strong>Day ${d.schedule.day} – ${esc(d.schedule.topic)}</strong><br>Opens at ${new Date(d.schedule.openAt).toLocaleString('en-IN')}.`
-        : esc(d.message || 'No active assessment.');
+        ? '<div class="scheduledState"><strong>Next assessment · Day ' + d.schedule.day + '</strong><span>' + esc(d.schedule.topic) + ' · Opens ' + new Date(d.schedule.openAt).toLocaleString('en-IN') + '</span></div>'
+        : '<div class="closedState">' + esc(d.message || 'No assessment is currently scheduled.') + '</div>';
     $('startBtn').disabled = d.status !== 'open' || !d.ready;
-  } catch (e) { $('studentStatus').textContent = e.message; }
+  } catch (e) {
+    $('studentStatus').textContent = e.message;
+  }
   loadStats();
 }
 
@@ -376,6 +422,7 @@ $('showApprovedBtn').onclick=()=>{$('pendingSection').hidden=true;$('approvedSec
 
 onAuthStateChanged(auth, async user => {
   currentUser = user;
+  show('publicShell', !user);
   show('authArea', !user);
   show('appArea', !!user);
   if (!user) return;
