@@ -603,13 +603,27 @@ export const getStudentProfile = onCall(async request => {
     return { registered: false, status: 'not_registered', email: a.email || '' };
   }
   const s = snap.data();
+  const resultSnap = await db.collection('results').where('studentId', '==', a.uid).get();
+  const results = resultSnap.docs.map(d => d.data()).sort((x,y) => {
+    const ax = x.completedAt?.toMillis?.() || 0, ay = y.completedAt?.toMillis?.() || 0;
+    return ay - ax;
+  });
+  const latest = results[0] || null;
   return {
     registered: true,
     status: s.status || 'pending',
     name: s.name || '',
     registerNumber: s.registerNumber || '',
     email: s.email || a.email || '',
-    rewardPoints: s.rewardPoints || 0
+    rewardPoints: s.rewardPoints || 0,
+    latestResult: latest ? {
+      score: latest.score || 0,
+      total: latest.total || 0,
+      scorePercent: latest.scorePercent || 0,
+      passed: latest.passed === true,
+      rewardPoints: latest.rewardPoints || 0,
+      assessmentDate: latest.assessmentDate || ''
+    } : null
   };
 });
 
