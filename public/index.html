@@ -82,6 +82,16 @@
   <div class="scheduleWrap"><div id="scheduleEditor"></div></div>
   <div class="saveBar"><div><strong>Ready to publish?</strong><span>Changes take effect after saving.</span></div><button id="saveSchedulesBtn">Save Assessment Schedule</button></div><div id="scheduleSaveStatus" class="scheduleSaveStatus" aria-live="polite"></div>
 </div>
+<div class="card adminCard" id="questionBankAdminCard">
+  <div class="adminSectionTitle">
+    <div><span class="sectionEyebrow">QUESTION BANK</span><h3>125-Question Review & Publishing</h3>
+    <p>Edit the draft questions before they are published to the secure assessment pools. Students never receive the answer key.</p></div>
+    <div class="adminActions"><button id="loadQuestionBankBtn" class="secondary">Load Question Bank</button><button id="saveQuestionBankBtn">Save Draft</button><button id="publishQuestionBankBtn">Approve & Publish</button></div>
+  </div>
+  <div class="scheduleNotice"><strong>Review rule:</strong> Each day contains 25 questions: 5 MCQ, 5 Match, 8 Audio, 2 Problem Solving and 5 Multiple Correct. Difficulty is 10 Easy, 10 Moderate and 5 Tough. Publishing generates secure audio files for Audio questions.</div>
+  <div class="questionBankToolbar"><label>Day <select id="questionBankDay"><option value="1">Day 1 · String Basics</option><option value="2">Day 2 · String Library Functions</option><option value="3">Day 3 · Manual String Processing</option><option value="4">Day 4 · Character Frequency & String Analysis</option><option value="5">Day 5 · Advanced String Problem Solving</option></select></label><span id="questionBankStatus">Not loaded</span></div>
+  <div id="questionBankEditor"><p>Click <strong>Load Question Bank</strong> to review the draft.</p></div>
+</div>
 <div class="card adminCard">
   <div class="adminSectionTitle"><div><span class="sectionEyebrow">RESULTS & REPORTING</span><h3>Assessment Results</h3><p>View the current Top 20 and generate downloadable reports.</p></div><div class="adminActions"><button id="csvBtn">Generate CSV</button><button id="pdfBtn">Generate PDF</button></div></div>
   <div id="adminResults"></div><p id="downloadInfo"></p>
