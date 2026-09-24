@@ -71,7 +71,10 @@ function requireAuth(request) {
 }
 function requireAdmin(request) {
   const a = requireAuth(request);
-  if (a.token.admin !== true) throw new HttpsError('permission-denied', 'Admin authorization required.');
+  const email = String(a.token.email || '').toLowerCase();
+  if (a.token.admin !== true && email !== CONFIG.adminEmail.toLowerCase()) {
+    throw new HttpsError('permission-denied', 'Admin authorization required.');
+  }
   return a;
 }
 function cleanText(value, max = 2000) {
