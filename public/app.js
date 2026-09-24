@@ -669,19 +669,21 @@ async function approveQuestionBankDay(day,button){
     readVisibleQuestionBankDay(day);
     const qs=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+day+'-'));
     if(qs.length!==25) return msg('Day '+day+' must contain exactly 25 questions. Found '+qs.length+'.');
-    if(!currentUser || currentUser.email?.toLowerCase()!==ADMIN_EMAIL) return msg('Administrator account required.');
-    if(!confirm('Approve Day '+day+' and publish all 25 questions?')) return;
+    if(!currentUser || currentUser.email?.toLowerCase()!==ADMIN_EMAIL)return msg('Administrator account required.');
+    if(!confirm('Approve Day '+day+' and publish all 25 questions?'))return;
 
     button.disabled=true;
     button.textContent='Publishing…';
     adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
     adminQuestionBank.dayStatus[day]='pending';
-    await saveQuestionBankDraft();
 
+    // Send the reviewed Day directly to the trusted server trigger.
+    // This avoids a second browser write to questionBank/master.
     const actionId='publishQuestionBankDay'+day+'_'+Date.now();
     await setDoc(doc(firestore,'adminActions',actionId),{
       status:'requested',
       day:Number(day),
+      questions:JSON.parse(JSON.stringify(qs)),
       requestedBy:currentUser.uid,
       requestedByEmail:currentUser.email||'',
       requestedAt:new Date()
@@ -695,12 +697,12 @@ async function approveQuestionBankDay(day,button){
       const snap=await getDoc(doc(firestore,'adminActions',actionId));
       if(snap.exists()){
         finalAction=snap.data();
-        if(finalAction.status==='completed' || finalAction.status==='failed') break;
+        if(finalAction.status==='completed'||finalAction.status==='failed')break;
       }
     }
 
-    if(!finalAction) throw new Error('The publishing service did not respond within 5 minutes.');
-    if(finalAction.status!=='completed') throw new Error(finalAction.error||'Day '+day+' could not be published.');
+    if(!finalAction)throw new Error('The publishing service did not respond within 5 minutes.');
+    if(finalAction.status!=='completed')throw new Error(finalAction.error||'Day '+day+' could not be published.');
 
     adminQuestionBank.dayStatus[day]='approved';
     button.disabled=false;
