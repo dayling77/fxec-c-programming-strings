@@ -669,6 +669,7 @@ async function approveQuestionBankDay(day,button){
     readVisibleQuestionBankDay(day);
     const qs=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+day+'-'));
     if(qs.length!==25)return msg('Day '+day+' must contain exactly 25 questions. Found '+qs.length+'.');
+    if(!currentUser || currentUser.email?.toLowerCase()!==ADMIN_EMAIL)return msg('Administrator account required.');
     if(!confirm('Approve Day '+day+' and publish all 25 questions?'))return;
 
     button.disabled=true;
@@ -677,27 +678,64 @@ async function approveQuestionBankDay(day,button){
     adminQuestionBank.dayStatus[day]='pending';
     await saveQuestionBankDraft();
 
-    const actionId='publishQuestionBankDay'+day+'_'+Date.now();
-    await setDoc(doc(firestore,'adminActions',actionId),{
-      status:'requested',
-      day,
-      requestedBy:currentUser.uid,
-      requestedByEmail:currentUser.email||'',
-      requestedAt:new Date()
+    // Publish directly from the authenticated Admin session.
+    // This avoids depending on a background trigger or callable-function CORS.
+    const scheduleDates={
+      1:'2026-09-24',
+      2:'2026-09-25',
+      3:'2026-09-26',
+      4:'2026-09-27',
+      5:'2026-09-28'
+    };
+    let date=scheduleDates[day];
+    try{
+      const scheduleSnap=await getDoc(doc(firestore,'assessmentSchedules',date));
+      if(scheduleSnap.exists() && scheduleSnap.data().date) date=scheduleSnap.data().date;
+    }catch(_){}
+
+    const publishedQuestions=qs.map(q=>{
+      const x=JSON.parse(JSON.stringify(q));
+      delete x.reviewed;
+      delete x.audioPath;
+      if(x.type==='match'){
+        const pairs=Array.isArray(x.options)?x.options:[];
+        const leftItems=pairs.map(p=>String(p).split(' -> ')[0].trim());
+        const rightItems=pairs.map(p=>String(p).split(' -> ')[1]?.trim()||String(p).trim());
+        const answer={};
+        Object.entries(x.answer||{}).forEach(([k,v])=>{
+          const value=String(v);
+          answer[k]=rightItems.find(r=>r===value)||value;
+        });
+        x.leftItems=leftItems;
+        x.rightItems=rightItems;
+        x.options=rightItems;
+        x.answer=answer;
+      }
+      return x;
     });
 
-    let actionSnap=null;
-    for(let i=0;i<120;i++){
-      await new Promise(r=>setTimeout(r,2500));
-      actionSnap=await getDoc(doc(firestore,'adminActions',actionId));
-      if(actionSnap.exists() && ['completed','failed'].includes(actionSnap.data().status))break;
-    }
-    const result=actionSnap?.exists()?actionSnap.data():null;
-    if(!result || result.status!=='completed'){
-      throw new Error(result?.error || 'The server did not complete the approval within 5 minutes.');
-    }
+    await setDoc(doc(firestore,'questionPools',date),{
+      date,
+      day,
+      topic:['String Basics','String Library Functions','Manual String Processing','Character Frequency and String Analysis','Advanced String Problem Solving'][day-1]||'C Strings',
+      status:'ready',
+      source:'admin-question-bank',
+      approvedBy:currentUser.uid,
+      approvedByEmail:currentUser.email||'',
+      approvedAt:new Date(),
+      questions:publishedQuestions,
+      updatedAt:new Date()
+    });
 
     adminQuestionBank.dayStatus[day]='approved';
+    await setDoc(doc(firestore,'questionBank','master'),{
+      questions:adminQuestionBank.questions,
+      dayStatus:adminQuestionBank.dayStatus,
+      status:'draft',
+      updatedAt:new Date(),
+      updatedBy:currentUser.uid
+    },{merge:true});
+
     button.disabled=false;
     button.textContent='✓ Day '+day+' Approved';
     renderAdminQuestionBank();
