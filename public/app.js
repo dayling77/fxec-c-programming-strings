@@ -277,6 +277,10 @@ async function loadAdmin() {
     const r = await call('getAdminDashboard')({});
     const d = r.data;
     $('adminStats').innerHTML = `Students: <b>${d.students}</b> · Attempts: <b>${d.attempts}</b> · Passed: <b>${d.passed}</b> · Average: <b>${d.average}%</b>`;
+    $('adminStudentsStat').textContent = d.students;
+    $('adminAttemptsStat').textContent = d.attempts;
+    $('adminPassedStat').textContent = d.passed;
+    $('adminAverageStat').textContent = d.average + '%';
     $('pending').innerHTML = d.pending.map(s => `
       <div class="pending">
         <label><input type="checkbox" class="pendingCheck" value="${esc(s.id)}"> <b>${esc(s.name)}</b> · ${esc(s.registerNumber)} · ${esc(s.email)}</label>
