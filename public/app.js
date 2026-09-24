@@ -15,6 +15,22 @@ const call = name => httpsCallable(functions, name);
 let currentUser = null;
 let currentAttempt = null;
 let timer = null;
+const SAMPLE_QUESTIONS = [
+{q:'What marks the end of a C string?',o:['A newline','The null character \\0','A space','EOF'],a:1},
+{q:'What is the visible length of "Jack"?',o:['3','4','5','6'],a:1},
+{q:'Which function returns string length?',o:['strcpy()','strlen()','strcmp()','strcat()'],a:1},
+{q:'Which function copies one string into another?',o:['strcpy()','strlen()','strcmp()','fgets()'],a:0},
+{q:'What does strcmp() return when two strings are equal?',o:['1','-1','0','The string length'],a:2},
+{q:'Which technique is taught for reversing a string?',o:['Binary search','Two pointers','Recursion only','Sorting'],a:1},
+{q:'What does a frequency array store?',o:['Character counts','String length','Number of words','Only vowels'],a:0},
+{q:'Which pair are anagrams?',o:['listen and silent','hello and world','cat and car','level and civic'],a:0},
+{q:'Which is a palindrome?',o:['apple','madam','coding','string'],a:1},
+{q:'Which is a subsequence of abcde?',o:['ace','azc','aedx','cbe'],a:0}
+];
+function renderSample(targetId,resultId,buttonId){const target=$(targetId);if(!target||!$(buttonId))return;target.innerHTML=SAMPLE_QUESTIONS.map((x,i)=>'<article class="sampleQ"><b>Q'+(i+1)+'. '+esc(x.q)+'</b>'+x.o.map((o,k)=>'<label class="option"><input type="radio" name="'+targetId+'-'+i+'" value="'+k+'"> '+esc(o)+'</label>').join('')+'</article>').join('');$(buttonId).onclick=()=>{let score=0;SAMPLE_QUESTIONS.forEach((x,i)=>{const v=document.querySelector('input[name="'+targetId+'-'+i+'"]:checked');if(v&&Number(v.value)===x.a)score++;});$(resultId).innerHTML='<strong>Recap Score: '+score+'/10 ('+(score*10)+'%)</strong><br>Practice only — no Reward Points.';};}
+function renderPublicSchedule(schedules){const rows=(schedules||[]).sort((a,b)=>Number(a.day)-Number(b.day));$('publicSchedule').innerHTML=rows.length?rows.map(s=>'<div class="dayCard"><strong>Day '+esc(s.day)+' — '+esc(s.topic)+'</strong><br>'+esc(s.date||'Date to be announced by Admin')+(s.isPublished?'':' · Not yet published')+'<div>'+(s.videoUrl?'<a href="'+esc(s.videoUrl)+'" target="_blank">Watch video materials</a>':'Video materials will appear when published by Admin.')+'</div></div>').join(''):'<p>The administrator will publish the five-day schedule.</p>';}
+async function loadCourseOverview(){try{const r=await call('getCourseOverview')({});renderPublicSchedule(r.data.schedules);}catch(e){$('publicSchedule').textContent='Programme information is temporarily unavailable.';}renderSample('sampleQuestions','sampleResult','sampleSubmit');}
+
 
 function esc(v) {
   return String(v ?? '').replace(/[&<>"']/g, x => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
@@ -68,6 +84,8 @@ $('adminBootstrap').onclick = async () => {
 };
 
 async function loadStudent() {
+  renderSample('studentSampleQuestions','studentSampleResult','studentSampleSubmit');
+  try { const overview = await call('getCourseOverview')({}); renderPublicSchedule(overview.data.schedules); } catch {}
   try {
     const r = await call('getAssessment')({});
     const d = r.data;
@@ -176,6 +194,7 @@ function renderSchedules(schedules) {
       <input class="schDate" type="date" value="${esc(s.date || '')}">
       <input class="schOpen" type="datetime-local" value="${s.openAt ? toLocalInput(s.openAt) : ''}">
       <input class="schClose" type="datetime-local" value="${s.closeAt ? toLocalInput(s.closeAt) : ''}">
+      <input class="schVideo" value="${esc(s.videoUrl || '')}" placeholder="Video URL">
       <label><input class="schPublished" type="checkbox" ${s.isPublished !== false ? 'checked' : ''}> Published</label>
     </div>`).join('');
   $('scheduleEditor').innerHTML = `
@@ -203,6 +222,8 @@ async function loadAdmin() {
         <span>Approved</span>
       </div>`).join('') || '<p>No approved students yet.</p>';
     renderSchedules(d.schedules);
+    $('pendingSection').hidden=false;
+    $('approvedSection').hidden=true;
     $('adminResults').innerHTML = d.top20.map(x => `<tr><td>${esc(x.studentId)}</td><td>${x.scorePercent}%</td><td>${x.passed ? 'PASS':'FAIL'}</td><td>${x.rewardPoints}</td></tr>`).join('') || '<tr><td colspan="4">No results yet.</td></tr>';
   } catch (e) {
     $('adminStats').textContent = e.message;
@@ -230,6 +251,7 @@ $('saveSchedulesBtn').onclick = async () => {
       date: row.querySelector('.schDate').value,
       openAt: new Date(row.querySelector('.schOpen').value).toISOString(),
       closeAt: new Date(row.querySelector('.schClose').value).toISOString(),
+      videoUrl: row.querySelector('.schVideo').value.trim(),
       isPublished: row.querySelector('.schPublished').checked
     }));
     const r = await call('updateAssessmentSchedules')({schedules});
@@ -243,6 +265,10 @@ $('csvBtn').onclick = async () => {
 $('pdfBtn').onclick = async () => {
   try { const r=await call('exportResults')({format:'pdf'}); const url=await getDownloadURL(ref(storage,r.data.path)); $('downloadInfo').innerHTML=`<a href="${url}" target="_blank">Download PDF</a>`; } catch(e){msg(e.message);}
 };
+
+loadCourseOverview();
+$('showPendingBtn').onclick=()=>{$('pendingSection').hidden=false;$('approvedSection').hidden=true;};
+$('showApprovedBtn').onclick=()=>{$('pendingSection').hidden=true;$('approvedSection').hidden=false;};
 
 onAuthStateChanged(auth, async user => {
   currentUser = user;
