@@ -161,7 +161,7 @@ A question has one difficulty: easy, moderate, tough.
 
 FORMAT:
 - mcq: one correct option.
-- match: options are pairs represented as an object in answer, e.g. {"A":"1","B":"2"}; prompt must contain left items and right choices.
+- match: include leftItems (an array of labels), rightItems (an array of choices), and answer as a mapping object such as {"A":"1","B":"2"}. options may repeat rightItems for compatibility.
 - audio: same scoring structure as mcq, but include audioText containing the exact spoken question and options. The browser will play an MP3 generated from audioText. Do not put the correct answer in audioText.
 - problemSolving: one best answer; can use a short C code sample, output prediction, assertion/reasoning or algorithmic reasoning.
 - multiAnswer: exactly 2 or 3 correct option indexes; options length 4.
@@ -217,6 +217,7 @@ function structuralValidate(questions) {
       return { ok: false, reason: 'multiAnswer must have 2-3 correct options' };
     }
     if (q.type === 'audio' && !q.audioText) return { ok: false, reason: 'audioText missing' };
+    if (q.type === 'match' && (!Array.isArray(q.leftItems) || !Array.isArray(q.rightItems) || !q.leftItems.length || !q.rightItems.length || !q.answer || typeof q.answer !== 'object' || Array.isArray(q.answer))) return { ok: false, reason: 'match fields missing' };
   }
   for (const [type, count] of Object.entries(POOL_DISTRIBUTION)) if (counts[type] !== count) return { ok: false, reason: `bad ${type} count` };
   for (const [d, count] of Object.entries({ easy: 10, moderate: 10, tough: 5 })) if (diffs[d] !== count) return { ok: false, reason: `bad ${d} count` };
