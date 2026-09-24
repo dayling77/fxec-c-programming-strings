@@ -1,1 +1,1 @@
-export const APP_CONFIG={adminEmail:'admin@francisxavier.ac.in',passPercent:80,rewardPoints:40,poolSize:25,questionsPerStudent:15,timezone:'Asia/Kolkata'};
+export const APP_CONFIG={adminEmail:'admin@fxecdigital.org',passPercent:80,rewardPoints:40,poolSize:25,questionsPerStudent:15,timezone:'Asia/Kolkata'};
