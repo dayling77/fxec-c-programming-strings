@@ -20,7 +20,8 @@ const tts = new textToSpeech.TextToSpeechClient();
 const ZEPTOMAIL_CONFIG = defineJsonSecret('ZEPTOMAIL_CONFIG');
 
 const CONFIG = Object.freeze({
-  adminEmail: 'admin@francisxavier.ac.in',
+  adminEmail: 'admin@fxecdigital.org',
+  studentEmailDomain: '@francisxavier.ac.in',
   passPercent: 80,
   rewardPoints: 40,
   poolSize: 25,
@@ -364,6 +365,7 @@ export const registerStudent = onCall(async request => {
   const email = cleanText(request.data?.email || a.token.email, 180).toLowerCase();
   if (!name || !registerNumber || !email) throw new HttpsError('invalid-argument', 'Name, register number and email are required.');
   if (email !== String(a.token.email || '').toLowerCase()) throw new HttpsError('permission-denied', 'Use the email address of the signed-in account.');
+  if (!email.endsWith(CONFIG.studentEmailDomain)) throw new HttpsError('invalid-argument', 'Students must use their @francisxavier.ac.in college email address.');
   await db.collection('students').doc(a.uid).set({
     uid: a.uid, name, registerNumber, email, status: 'pending', role: 'student',
     createdAt: FieldValue.serverTimestamp(), updatedAt: FieldValue.serverTimestamp()
