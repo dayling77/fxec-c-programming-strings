@@ -13,3 +13,36 @@
 .sampleQ .option{display:block;margin-top:8px}
 #studentVideos iframe{width:100%;min-height:360px;border:0;border-radius:10px}
 .scheduleHead,.scheduleRow{grid-template-columns:60px 1.2fr 120px 175px 175px 1.5fr 100px;min-width:1100px}
+
+.courseHeroCard{background:linear-gradient(135deg,#0f2b52,#2563eb);color:#fff;border-radius:22px;padding:30px;margin-bottom:22px;box-shadow:0 12px 35px rgba(15,43,82,.18)}
+.courseKicker,.sectionEyebrow{font-size:11px;letter-spacing:1.5px;font-weight:800;opacity:.75}
+.courseHeroCard h2{font-size:30px;margin:8px 0}
+.courseLead{font-size:17px;max-width:720px;opacity:.92}
+.learningFlow{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.learningFlow span{background:rgba(255,255,255,.14);padding:7px 11px;border-radius:999px;font-weight:700;font-size:12px}
+.learningFlow i{opacity:.65;font-style:normal}
+.courseStats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0 14px}
+.courseStats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px;text-align:center}
+.courseStats strong{display:block;font-size:22px}.courseStats span{font-size:11px;opacity:.8}
+.courseDayList{display:grid;gap:12px}
+.courseDay{background:#fff;color:#172033;border-radius:16px;padding:18px;border:1px solid #e2e8f0;box-shadow:0 5px 18px rgba(20,40,80,.06)}
+.courseDayTop{display:flex;justify-content:space-between;align-items:center}
+.dayBadge{display:inline-block;background:#e8efff;color:#1746a2;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800}
+.dayStatus{font-size:11px;color:#64748b}
+.courseDay h3{margin:10px 0 3px}.daySubtitle{color:#64748b;margin-top:0}
+.topicGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:12px 0}
+.topicGrid span{font-size:12px;background:#f8fafc;border-radius:8px;padding:8px}
+.practiceLine,.scheduleLine{font-size:12px;margin-top:9px;color:#475569}
+.videoLink{display:inline-block;margin-top:12px;color:#1d4ed8;font-weight:800;text-decoration:none}
+.sectionHeading{display:flex;justify-content:space-between;align-items:center;gap:12px}.sectionHeading h2{margin:4px 0}
+.practiceBadge{background:#ecfdf5;color:#047857;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800}
+.studentDayList{display:grid;gap:14px}
+.studentDay{display:grid;grid-template-columns:75px 1fr;gap:15px;padding:18px;border:1px solid #e2e8f0;border-radius:15px;background:#fbfdff}
+.studentDay h3{margin:0 0 4px}.studentDay p{color:#64748b;margin:5px 0}
+.topicChips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.topicChips span{font-size:11px;background:#eef4ff;color:#334155;border-radius:999px;padding:5px 8px}
+.videoPending{display:inline-block;margin-top:12px;font-size:12px;color:#94a3b8}
+.videoCard{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px;border:1px solid #e2e8f0;border-radius:12px;margin:9px 0}
+.videoCard h4{margin:7px 0 2px}.videoCard p{margin:0;color:#64748b;font-size:12px}
+.learningIntro{background:#f0f7ff;border-left:4px solid #2563eb;padding:14px;border-radius:10px;margin-bottom:15px}
+@media(max-width:700px){.courseStats{grid-template-columns:repeat(2,1fr)}.topicGrid{grid-template-columns:1fr}.courseHeroCard h2{font-size:24px}.studentDay{grid-template-columns:1fr}.learningFlow{gap:5px}}
