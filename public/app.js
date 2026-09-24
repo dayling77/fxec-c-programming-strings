@@ -191,7 +191,7 @@ onAuthStateChanged(auth, async user => {
   if (!user) return;
   $('userEmail').textContent = user.email;
   const token = await user.getIdTokenResult(true);
-  const isConfiguredAdminEmail = user.email?.toLowerCase() === 'admin@francisxavier.ac.in';
+  const isConfiguredAdminEmail = user.email?.toLowerCase() === 'admin@fxecdigital.org';
   show('admin', token.claims.admin === true || isConfiguredAdminEmail);
   show('adminBootstrap', isConfiguredAdminEmail && token.claims.admin !== true);
   if (token.claims.admin === true) { setTab('admin'); loadAdmin(); }
