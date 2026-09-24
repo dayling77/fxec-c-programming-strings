@@ -723,9 +723,12 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
     return;
   }
 
-  const dayMatch = /^publishQuestionBankDay(\\d+)_/.exec(id);
-  if (dayMatch) {
-    const day = Number(dayMatch[1]);
+  // Day-specific approval actions use IDs such as publishQuestionBankDay1_... .
+  // Prefer the explicit day field and fall back to the action ID.
+  const dayFromId = id.match(/^publishQuestionBankDay(\\d+)_/);
+  const requestedDay = Number(action.day || dayFromId?.[1] || 0);
+  if (requestedDay >= 1 && requestedDay <= 5) {
+    const day = requestedDay;
     const bank = await getQuestionBankForAdmin();
     const allQuestions = (bank.questions || []).map(normalizeDraftQuestion);
     const dayQuestions = allQuestions.filter(q => Number(String(q.id).match(/^D(\\d+)-/)?.[1] || 0) === day);
