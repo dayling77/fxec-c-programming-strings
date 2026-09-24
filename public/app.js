@@ -289,6 +289,201 @@ function renderAssessment(data) {
       '<div class="studentProgress"><span style="width:'+progress+'%"></span></div>'+
       '<div class="studentPrompt">'+prompt+'</div>'+
       '<div class="studentAnswerArea">'+body+'</div>'+
+    '</article>';
+
+  restoreCurrentAnswer(q);
+  document.querySelectorAll('#questions input[type=radio]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=Number(x.value);});
+  document.querySelectorAll('#questions input[type=checkbox]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=[...document.querySelectorAll('#questions input[type=checkbox]:checked')].map(y=>Number(y.dataset.multi));});
+  document.querySelectorAll('#questions select').forEach(x=>x.onchange=()=>{const a={...(assessmentAnswers[q.id]||{})};a[x.dataset.matchItem]=x.value;assessmentAnswers[q.id]=a;});
+  const audio=$('playCurrentAudio');
+  if(audio) audio.onclick=async()=>{try{const url=await getDownloadURL(ref(storage,audio.dataset.audio));new Audio(url).play();audio.textContent='■ Playing Question';setTimeout(()=>{if(audio)audio.textContent='▶ Play Question';},2500);}catch(e){msg('Audio could not be loaded. Please try again.');}};
+  $('questionCounter').textContent=(assessmentIndex+1)+' / '+total;
+  $('prevBtn').disabled=assessmentIndex===0;
+  $('nextBtn').hidden=assessmentIndex===total-1;
+  $('submitBtn').hidden=assessmentIndex!==total-1;
+  const end=new Date(data.closeAt).getTime();
+  clearInterval(timer);
+  timer=setInterval(()=>{const left=Math.max(0,end-Date.now());const mins=Math.floor(left/60000),secs=Math.floor(left/1000)%60;$('timer').textContent='Time remaining: '+mins+':'+String(secs).padStart(2,'0');if(!left){clearInterval(timer);submitAttempt(true);}},1000);
+}
+function restoreCurrentAnswer(q){
+  const a=assessmentAnswers[q.id];
+  if(a===undefined)return;
+  if(q.type==='match'){document.querySelectorAll('#questions select').forEach(s=>{s.value=a[s.dataset.matchItem]||'';});}
+  else if(q.type==='multiAnswer'){document.querySelectorAll('#questions input[data-multi]').forEach(x=>x.checked=a.includes(Number(x.dataset.multi)));}
+  else {const r=document.querySelector('#questions input[type=radio][value="'+a+'"]');if(r)r.checked=true;}
+}
+
+async function submitAttempt(auto=false){
+  if(!currentAttempt)return;
+  const answers=currentAttempt.questions.map(q=>({questionId:q.id,answer:assessmentAnswers[q.id] ?? (q.type==='match'?{}:q.type==='multiAnswer'?[]:-1)}));
+  $('submitBtn').disabled=true;
+  try{
+    const r=await call('finalizeAttempt')({attemptId:currentAttempt.attemptId,answers});
+    clearInterval(timer);
+    $('result').innerHTML='<div class="result"><strong>Score: '+r.data.scorePercent+'%</strong><br>'+ (r.data.passed?'Congratulations! 40 Reward Points have been credited.':'The passing mark is 80%. No Reward Points are credited for this attempt.')+'</div>';
+    show('result'); $('submitBtn').disabled=true;
+    $('myScore').innerHTML='<div class="result"><strong>Latest Score: '+r.data.scorePercent+'%</strong><br>'+ (r.data.passed?'PASS · 40 Reward Points credited.':'FAIL · Passing mark is 80%.')+'</div>';
+  }catch(e){$('submitBtn').disabled=false;msg(e.message);}
+}
+$('prevBtn').onclick=()=>{if(assessmentIndex>0){assessmentIndex--;renderAssessment(currentAttempt);}};
+$('nextBtn').onclick=()=>{if(assessmentIndex<currentAttempt.questions.length-1){assessmentIndex++;renderAssessment(currentAttempt);}};
+$('submitBtn').onclick=()=>submitAttempt(false);
+
+async function loadStats() {
+  try {
+    const r = await call('getPublicStats')({});
+    const d = r.data || {};
+    $('stats').innerHTML = `<strong>${d.totalAttempts || 0}</strong> students have completed assessments · <strong>${d.totalPassed || 0}</strong> passed`;
+    $('leaderboard').innerHTML = (d.leaderboard || []).map(x => `<tr><td>${x.rank}</td><td>${esc(x.name)}</td><td>${esc(x.registerNumber)}</td><td>${x.scorePercent}%</td></tr>`).join('') || '<tr><td colspan="4">No results yet.</td></tr>';
+  } catch {}
+}
+
+function toLocalInput(iso) {
+  const d = new Date(iso);
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+function renderSchedules(schedules) {
+  const rows = (schedules || []).sort((a,b) => Number(a.day)-Number(b.day)).map((s, i) => `
+    <div class="scheduleRow">
+      <input class="schDay" type="number" min="1" value="${esc(s.day || i+1)}" placeholder="Day">
+      <input class="schTopic" value="${esc(s.topic || '')}" placeholder="Topic">
+      <input class="schDate" type="date" value="${esc(s.date || '')}">
+      <input class="schOpen" type="datetime-local" value="${s.openAt ? toLocalInput(s.openAt) : ''}">
+      <input class="schClose" type="datetime-local" value="${s.closeAt ? toLocalInput(s.closeAt) : ''}">
+      <input class="schVideo" value="${esc(s.videoUrl || '')}" placeholder="Video URL">
+      <label><input class="schPublished" type="checkbox" ${s.isPublished === true ? 'checked' : ''}> Published</label>
+    </div>`).join('');
+  $('scheduleEditor').innerHTML = `
+    <div class="scheduleHead"><b>Day</b><b>Topic</b><b>Date</b><b>Open</b><b>Close</b><b>Video URL</b><b>Admin Publish</b></div>
+    ${rows || '<p>No schedules found.</p>'}`;
+}
+async function loadAdmin() {
+  try {
+    const r = await call('getAdminDashboard')({});
+    const d = r.data;
+    $('adminStats').innerHTML = `Students: <b>${d.students}</b> · Attempts: <b>${d.attempts}</b> · Passed: <b>${d.passed}</b> · Average: <b>${d.average}%</b>`;
+    $('adminStudentsStat').textContent = d.students;
+    $('adminAttemptsStat').textContent = d.attempts;
+    $('adminPassedStat').textContent = d.passed;
+    $('adminAverageStat').textContent = d.average + '%';
+    $('pending').innerHTML = d.pending.map(s => `
+      <div class="pending">
+        <label><input type="checkbox" class="pendingCheck" value="${esc(s.id)}"> <b>${esc(s.name)}</b> · ${esc(s.registerNumber)} · ${esc(s.email)}</label>
+        <button data-approve="${esc(s.id)}">Approve</button>
+      </div>`).join('') || '<p>No pending students.</p>';
+    document.querySelectorAll('[data-approve]').forEach(b => b.onclick = async () => {
+      b.disabled = true;
+      try { await call('authorizeStudent')({studentId:b.dataset.approve}); await loadAdmin(); msg('Student approved. The student can now wait for the assessment window.',true); }
+      catch(e){ b.disabled=false; msg(e.message); }
+    });
+    $('approvedStudents').innerHTML = d.approved.map(s => `
+      <div class="pending">
+        <span><b>${esc(s.name)}</b> · ${esc(s.registerNumber)} · ${esc(s.email)}</span>
+        <span>Approved</span>
+      </div>`).join('') || '<p>No approved students yet.</p>';
+    renderSchedules(d.schedules);
+    $('pendingSection').hidden=false;
+    $('approvedSection').hidden=true;
+    $('adminResults').innerHTML = d.top20.map(x => `<tr><td>${esc(x.studentId)}</td><td>${x.scorePercent}%</td><td>${x.passed ? 'PASS':'FAIL'}</td><td>${x.rewardPoints}</td></tr>`).join('') || '<tr><td colspan="4">No results yet.</td></tr>';
+  } catch (e) {
+    $('adminStats').textContent = e.message;
+  }
+}
+
+let adminQuestionBank = null;
+let adminQuestionDay = 1;
+
+function questionAnswerText(q) {
+  if (q.type === 'multiAnswer') return Array.isArray(q.answer) ? q.answer.join(',') : '';
+  if (q.type === 'match') return JSON.stringify(q.answer || {}, null, 0);
+  return String(q.answer ?? '');
+}
+function renderAdminQuestionBank() {
+  const target = $('questionBankEditor'), nav = $('questionBankDayNav');
+  if (!target || !adminQuestionBank) return;
+
+  const dayNames={1:'String Basics',2:'String Library Functions',3:'Manual String Processing',4:'Character Frequency & String Analysis',5:'Advanced String Problem Solving'};
+  const days=[1,2,3,4,5], activeDay=Number(adminQuestionDay||1);
+  const qs=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+activeDay+'-'));
+  const approved=adminQuestionBank.dayStatus?.[activeDay]==='approved';
+  const pending=adminQuestionBank.dayStatus?.[activeDay]==='pending';
+
+  if(nav){
+    nav.innerHTML=days.map(day=>{
+      const count=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+day+'-')).length;
+      const state=adminQuestionBank.dayStatus?.[day]||'draft';
+      return '<button type="button" class="qbDayTab '+(day===activeDay?'active ':'')+(state==='approved'?'approvedTab':'')+'" data-qb-day="'+day+'"><span>DAY '+day+'</span><strong>'+esc(dayNames[day])+'</strong><small>'+count+' questions · '+esc(state)+'</small></button>';
+    }).join('');
+    nav.querySelectorAll('[data-qb-day]').forEach(btn=>btn.onclick=()=>{
+      try{readVisibleQuestionBankDay(activeDay);adminQuestionDay=Number(btn.dataset.qbDay);renderAdminQuestionBank();}
+      catch(e){msg(e.message||String(e));}
+    });
+  }
+
+  const counts={mcq:0,match:0,audio:0,problemSolving:0,multiAnswer:0}, diff={easy:0,moderate:0,tough:0};
+  qs.forEach(q=>{if(counts[q.type]!==undefined)counts[q.type]++;if(diff[q.difficulty]!==undefined)diff[q.difficulty]++;});
+
+  const cards=qs.map((q,index)=>{
+    const opts=Array.isArray(q.options)?q.options:[];
+    const answerText=questionAnswerText(q);
+    const answerIndexes=q.type==='multiAnswer'&&Array.isArray(q.answer)?q.answer:[q.answer];
+    let optionHtml;
+    if(q.type==='match'){
+      const mapping=q.answer||{};
+      optionHtml='<div class="qbMatchReview">'+opts.map((o,i)=>{
+        const parts=String(o).split(' -> ');
+        const left=parts[0]||o;
+        const right=parts.slice(1).join(' -> ');
+        return '<div class="qbMatchReviewRow"><span class="qbMatchLeft">'+esc(left)+'</span><span class="qbMatchArrow">→</span><span class="qbMatchRight qbOptionText" contenteditable="false">'+esc(right||mapping[String(i)]||'')+'</span></div>';
+      }).join('')+'</div>';
+    } else {
+      optionHtml=opts.length
+        ? '<div class="qbOptionList">'+opts.map((o,i)=>{
+            const correct=answerIndexes.includes(i);
+            return '<div class="qbOption '+(correct?'correct':'')+'"><span class="qbOptionLetter">'+String.fromCharCode(65+i)+'</span><span class="qbOptionText" contenteditable="false">'+esc(o)+'</span>'+(correct?'<b>✓ Correct</b>':'')+'</div>';
+          }).join('')+'</div>'
+        : '<div class="qbNoOptions">No options — review this question type.</div>';
+    }
+
+    const audioHtml=q.type==='audio'
+      ? '<div class="qbAudioPanel"><button type="button" class="audioPreviewBtn" data-audio-qid="'+esc(q.id)+'">▶ Play Audio</button><span id="audioStatus-'+esc(q.id)+'">Preview the question before approval</span><span class="qbAudioTextInline" contenteditable="false">'+esc(q.audioText||q.prompt||'')+'</span></div>'
+      : '';
+
+    return '<article class="questionBankItem" data-qid="'+esc(q.id)+'">'+
+      '<div class="qbReviewHeader">'+
+        '<div class="qbQuestionNo">Q'+String(index+1).padStart(2,'0')+'</div>'+
+        '<div class="qbQuestionIdentity"><strong>'+esc(q.id)+'</strong><span>'+esc(q.type)+' · '+esc(q.topic)+'</span></div>'+
+        '<span class="qbDifficultyPill '+esc(q.difficulty)+'" data-role="difficultyPill">'+esc(q.difficulty.toUpperCase())+'</span>'+
+        '<select class="qbInlineDifficulty" hidden>'+['easy','moderate','tough'].map(d=>'<option value="'+d+'" '+(q.difficulty===d?'selected':'')+'>'+d.toUpperCase()+'</option>').join('')+'</select>'+
+        '<label class="qbReviewCheck"><input type="checkbox" class="qbSelect" '+(q.reviewed===true?'checked':'')+'> <span>Reviewed</span></label>'+
+        '<button type="button" class="secondary qbEditBtn">Edit</button>'+
+      '</div>'+
+      '<div class="qbReviewBody">'+
+        '<div class="qbPromptDisplay" contenteditable="false">'+esc(q.prompt||'')+'</div>'+
+        optionHtml+
+        (q.type==='audio'?audioHtml:'')+
+        '<div class="qbMetaRow"><span><b>Correct:</b> <span class="qbAnswerDisplay" contenteditable="false">'+esc(answerText)+'</span></span><span><b>Explanation:</b> <span class="qbExplanationDisplay" contenteditable="false">'+esc(q.explanation||'—')+'</span></span></div>'+
+      '</div>'+
+    '</article>';
+  }).join('');
+
+  target.innerHTML=
+    '<div class="qbDaySummary">'+
+      '<div><span class="sectionEyebrow">DAY '+activeDay+' REVIEW</span><h3>'+esc(dayNames[activeDay])+'</h3><p>Review the questions as students will experience them. Edit only when required.</p></div>'+
+      '<div class="qbSummaryCounts"><b>'+qs.length+'</b><span>Questions</span></div>'+
+      '<div class="qbSummaryCounts"><b>'+counts.mcq+'/'+counts.match+'/'+counts.audio+'/'+counts.problemSolving+'/'+counts.multiAnswer+'</b><span>MCQ · Match · Audio · Problem · Multi</span></div>'+
+      '<div class="qbSummaryCounts"><b>'+diff.easy+'/'+diff.moderate+'/'+diff.tough+'</b><span>Easy · Moderate · Tough</span></div>'+
+    '</div>'+
+    '<div class="qbDayActionBar"><div><strong>Day '+activeDay+'</strong><span>'+esc(approved?'Approved and published':pending?'Approval is being processed':'Draft — review all questions before approval')+'</span></div>'+
+      '<div class="adminActions"><button type="button" class="secondary" id="qbSelectAllCurrent">Select All</button><button type="button" class="secondary" id="qbDeselectAllCurrent">Deselect All</button><button type="button" class="qbApproveDayTop" '+(approved||pending?'disabled':'')+'>'+(approved?'✓ Day '+activeDay+' Approved':pending?'Processing…':'Approve Day '+activeDay)+'</button></div></div>'+
+    '<div class="qbQuestionList">'+cards+'</div>';
+
+  $('questionBankStatus').textContent='Day '+activeDay+' · '+qs.length+' questions · '+(approved?'APPROVED':pending?'PROCESSING':'DRAFT');
+
+  $('qbSelectAllCurrent').onclick=()=>document.querySelectorAll('.questionBankItem .qbSelect').forEach(x=>x.checked=true);
+  $('qbDeselectAllCurrent').onclick=()=>document.querySelectorAll('.questionBankItem .qbSelect').forEach(x=>x.checked=false);
+
   document.querySelectorAll('.qbEditBtn').forEach(btn=>btn.onclick=()=>{
     const card=btn.closest('.questionBankItem');
     const editing=card.classList.toggle('editing');
@@ -299,18 +494,15 @@ function renderAssessment(data) {
     if(difficulty)difficulty.hidden=!editing;
     if(pill)pill.hidden=editing;
     btn.textContent=editing?'Done':'Edit';
-    if(editing){
-      const first=card.querySelector('.qbPromptDisplay');
-      if(first)first.focus();
-    }else{
+    if(editing)card.querySelector('.qbPromptDisplay')?.focus();
+    else{
       const q=adminQuestionBank.questions.find(x=>x.id===card.dataset.qid);
       if(q){
         const raw=card.querySelector('.qbAnswerDisplay')?.textContent.trim()||'';
         q.difficulty=card.querySelector('.qbInlineDifficulty')?.value||q.difficulty;
         q.prompt=card.querySelector('.qbPromptDisplay')?.textContent.trim()||'';
         if(q.type==='match'){
-          const rows=[...card.querySelectorAll('.qbMatchReviewRow')];
-          const mapping={};
+          const rows=[...card.querySelectorAll('.qbMatchReviewRow')],mapping={};
           q.options=rows.map((row,i)=>{
             const left=row.querySelector('.qbMatchLeft')?.textContent.trim()||'';
             const right=row.querySelector('.qbMatchRight')?.textContent.trim()||'';
@@ -323,10 +515,7 @@ function renderAssessment(data) {
           if(q.type==='multiAnswer')q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
           else q.answer=Number(raw);
         }
-        if(q.type==='audio'){
-          const at=card.querySelector('.qbAudioTextInline');
-          if(at)q.audioText=at.textContent.trim();
-        }
+        if(q.type==='audio'){const at=card.querySelector('.qbAudioTextInline');if(at)q.audioText=at.textContent.trim();}
         q.explanation=card.querySelector('.qbExplanationDisplay')?.textContent.trim()||'';
         q.reviewed=!!card.querySelector('.qbSelect')?.checked;
         const p=card.querySelector('[data-role="difficultyPill"]');
@@ -352,46 +541,37 @@ function renderAssessment(data) {
 
   const approveBtn=$('.qbApproveDayTop');if(approveBtn)approveBtn.onclick=()=>approveQuestionBankDay(activeDay,approveBtn);
 }
-function readVisibleQuestionBank() {
-  if (!adminQuestionBank) return;
-  const cards = [...document.querySelectorAll('.questionBankItem')];
-  const byId = new Map(adminQuestionBank.questions.map(q=>[q.id,q]));
-  cards.forEach(card=>{
-    const q=byId.get(card.dataset.qid); if(!q)return;
-    q.difficulty=card.querySelector('.qbDifficulty').value;
-    q.prompt=card.querySelector('.qbPrompt').value.trim();
-    q.options=card.querySelector('.qbOptions').value.split('\n').map(x=>x.trim()).filter(Boolean);
-    const raw=card.querySelector('.qbAnswer').value.trim();
-    if(q.type==='multiAnswer') q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
-    else if(q.type==='match'){ try{q.answer=JSON.parse(raw||'{}');}catch(e){throw new Error('Invalid Match JSON in '+q.id);}}
-    else q.answer=Number(raw);
-    if(q.type==='audio') q.audioText=card.querySelector('.qbAudioText').value.trim();
-    q.explanation=card.querySelector('.qbExplanation').value.trim();
-  });
-}
+function readVisibleQuestionBank() { readVisibleQuestionBankDay(adminQuestionDay); }
 function readVisibleQuestionBankDay(day) {
   const cards=[...document.querySelectorAll('.questionBankItem')];
   if(!cards.length)return;
   const byId=new Map(adminQuestionBank.questions.map(q=>[q.id,q]));
   cards.forEach(card=>{
     const q=byId.get(card.dataset.qid); if(!q)return;
-    const difficulty=card.querySelector('.qbDifficulty');
-    const prompt=card.querySelector('.qbPrompt');
-    const options=card.querySelector('.qbOptions');
-    const answer=card.querySelector('.qbAnswer');
-    const audioText=card.querySelector('.qbAudioText');
-    const explanation=card.querySelector('.qbExplanation');
-    if(difficulty) q.difficulty=difficulty.value;
-    if(prompt) q.prompt=prompt.value.trim();
-    if(options) q.options=options.value.split('\n').map(x=>x.trim()).filter(Boolean);
-    if(answer){
-      const raw=answer.value.trim();
-      if(q.type==='multiAnswer') q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
-      else if(q.type==='match'){ try{q.answer=JSON.parse(raw||'{}');}catch(e){throw new Error('Invalid Match JSON in '+q.id);}}
-      else q.answer=Number(raw);
+    const difficulty=card.querySelector('.qbInlineDifficulty');
+    const prompt=card.querySelector('.qbPromptDisplay');
+    const answer=card.querySelector('.qbAnswerDisplay');
+    const explanation=card.querySelector('.qbExplanationDisplay');
+    if(difficulty && !difficulty.hidden) q.difficulty=difficulty.value;
+    if(prompt) q.prompt=prompt.textContent.trim();
+    if(q.type==='match'){
+      const rows=[...card.querySelectorAll('.qbMatchReviewRow')],mapping={};
+      q.options=rows.map((row,i)=>{
+        const left=row.querySelector('.qbMatchLeft')?.textContent.trim()||'';
+        const right=row.querySelector('.qbMatchRight')?.textContent.trim()||'';
+        mapping[String(i)]=right;
+        return left+' -> '+right;
+      });
+      q.answer=mapping;
+    }else{
+      q.options=[...card.querySelectorAll('.qbOptionText')].map(x=>x.textContent.trim()).filter(Boolean);
+      const raw=answer?.textContent.trim()||'';
+      if(q.type==='multiAnswer')q.answer=raw.split(',').map(x=>Number(x.trim())).filter(Number.isInteger);
+      else if(raw!=='')q.answer=Number(raw);
     }
-    if(q.type==='audio' && audioText) q.audioText=audioText.value.trim();
-    if(explanation) q.explanation=explanation.value.trim();
+    if(q.type==='audio'){const at=card.querySelector('.qbAudioTextInline');if(at)q.audioText=at.textContent.trim();}
+    if(explanation)q.explanation=explanation.textContent.trim();
+    const reviewed=card.querySelector('.qbSelect'); if(reviewed)q.reviewed=reviewed.checked;
   });
 }
 async function loadAdminQuestionBank() {
