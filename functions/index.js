@@ -713,6 +713,7 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
   const action = event.data?.data();
   if (!action || action.status !== 'requested') return;
   const id = event.params.actionId;
+
   if (id === 'seedQuestionBank') {
     const ref = db.collection('questionBank').doc('master');
     if (!(await ref.get()).exists) {
@@ -721,13 +722,62 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
     await event.data.ref.set({status:'completed',completedAt:FieldValue.serverTimestamp()},{merge:true});
     return;
   }
+
+  const dayMatch = /^publishQuestionBankDay(\\d+)_/.exec(id);
+  if (dayMatch) {
+    const day = Number(dayMatch[1]);
+    const bank = await getQuestionBankForAdmin();
+    const allQuestions = (bank.questions || []).map(normalizeDraftQuestion);
+    const dayQuestions = allQuestions.filter(q => Number(String(q.id).match(/^D(\\d+)-/)?.[1] || 0) === day);
+    if (!dayQuestions.length) {
+      await event.data.ref.set({status:'failed',error:'No questions found for Day '+day,completedAt:FieldValue.serverTimestamp()},{merge:true});
+      return;
+    }
+    const error = validateQuestionBank(allQuestions);
+    if (error) {
+      await event.data.ref.set({status:'failed',error,completedAt:FieldValue.serverTimestamp()},{merge:true});
+      return;
+    }
+    const date = FIVE_DAY_SCHEDULE[day-1]?.date;
+    if (!date) {
+      await event.data.ref.set({status:'failed',error:'No schedule date configured for Day '+day,completedAt:FieldValue.serverTimestamp()},{merge:true});
+      return;
+    }
+    const enriched=[];
+    for (const q0 of dayQuestions.map(normalizeMatch)) {
+      const item={...q0};
+      delete item.audioPath;
+      if(q0.type==='audio'){
+        const [response]=await tts.synthesizeSpeech({
+          input:{text:q0.audioText||q0.prompt},
+          voice:{languageCode:CONFIG.voice.languageCode,name:CONFIG.voice.name},
+          audioConfig:{audioEncoding:'MP3'}
+        });
+        const path='audio/question-bank/'+date+'/'+q0.id+'.mp3';
+        await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg'});
+        item.audioPath=path;
+      }
+      enriched.push(item);
+    }
+    await db.collection('questionPools').doc(date).set({
+      date,day,topic:FIVE_DAY_SCHEDULE[day-1]?.topic||qTopic(day),status:'ready',
+      source:'admin-question-bank',approvedBy:action.requestedBy||'admin',
+      approvedAt:FieldValue.serverTimestamp(),questions:enriched,updatedAt:FieldValue.serverTimestamp()
+    });
+    await db.collection('questionBank').doc('master').set({
+      dayStatus:{[day]:'approved'},status:'draft',updatedAt:FieldValue.serverTimestamp()
+    },{merge:true});
+    await event.data.ref.set({status:'completed',completedAt:FieldValue.serverTimestamp(),day,questions:enriched.length},{merge:true});
+    return;
+  }
+
   if (id === 'publishQuestionBank') {
     const bank=await getQuestionBankForAdmin();
     const questions=(bank.questions||[]).map(normalizeDraftQuestion);
     const error=validateQuestionBank(questions);
     if(error){await event.data.ref.set({status:'failed',error,completedAt:FieldValue.serverTimestamp()},{merge:true});return;}
     const byDay=new Map();
-    questions.forEach(q=>{const day=Number(String(q.id).match(/^D(\d+)-/)?.[1]||0);if(!byDay.has(day))byDay.set(day,[]);byDay.get(day).push(normalizeMatch(q));});
+    questions.forEach(q=>{const day=Number(String(q.id).match(/^D(\\d+)-/)?.[1]||0);if(!byDay.has(day))byDay.set(day,[]);byDay.get(day).push(normalizeMatch(q));});
     for(const [day,dayQuestions] of byDay.entries()){
       const date=FIVE_DAY_SCHEDULE[day-1]?.date;if(!date)continue;
       const enriched=[];
