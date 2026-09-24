@@ -305,28 +305,35 @@ async function buildQuestionPool(schedule) {
 }
 
 function chooseAssessmentQuestions(poolQuestions) {
-  const byType = {};
-  for (const q of poolQuestions) (byType[q.type] ||= []).push(q);
-  const selected = [];
-  for (const [type, count] of Object.entries(BLUEPRINT)) {
-    const candidates = shuffle(byType[type] || []);
-    if (candidates.length < count) throw new Error(`Not enough ${type} questions`);
-    selected.push(...candidates.slice(0, count));
-  }
-
-  // Prefer 6 easy / 6 moderate / 3 tough while preserving the type blueprint.
-  const target = { easy: 6, moderate: 6, tough: 3 };
-  const result = [];
-  const remaining = [...selected];
-  for (const difficulty of ['tough', 'moderate', 'easy']) {
-    const matches = shuffle(remaining.filter(q => q.difficulty === difficulty)).slice(0, target[difficulty]);
-    result.push(...matches);
-    for (const q of matches) {
-      const i = remaining.indexOf(q);
-      if (i >= 0) remaining.splice(i, 1);
+  // Find a subset satisfying both the question-type blueprint and the target difficulty mix.
+  const targetType = { ...BLUEPRINT };
+  const targetDifficulty = { easy: 6, moderate: 6, tough: 3 };
+  for (let attempt = 0; attempt < 500; attempt++) {
+    const candidate = shuffle(poolQuestions);
+    const typeCounts = { mcq:0, match:0, audio:0, problemSolving:0, multiAnswer:0 };
+    const diffCounts = { easy:0, moderate:0, tough:0 };
+    const picked = [];
+    for (const q of candidate) {
+      if (typeCounts[q.type] >= targetType[q.type]) continue;
+      if (diffCounts[q.difficulty] >= targetDifficulty[q.difficulty]) continue;
+      picked.push(q);
+      typeCounts[q.type]++;
+      diffCounts[q.difficulty]++;
+      if (picked.length === CONFIG.questionsPerStudent) break;
     }
+    if (
+      picked.length === CONFIG.questionsPerStudent &&
+      Object.entries(targetType).every(([k,v]) => typeCounts[k] === v) &&
+      Object.entries(targetDifficulty).every(([k,v]) => diffCounts[k] === v)
+    ) return shuffle(picked);
   }
-  if (result.length < CONFIG.questionsPerStudent) result.push(...shuffle(remaining).slice(0, CONFIG.questionsPerStudent - result.length));
+  // Fallback: preserve the type blueprint even if a generated pool has an unexpected distribution.
+  const result = [];
+  for (const [type, count] of Object.entries(targetType)) {
+    const candidates = shuffle(poolQuestions.filter(q => q.type === type));
+    if (candidates.length < count) throw new Error(`Not enough ${type} questions`);
+    result.push(...candidates.slice(0, count));
+  }
   return shuffle(result).slice(0, CONFIG.questionsPerStudent);
 }
 
@@ -512,7 +519,7 @@ async function sendScheduleEmails(schedule, kind) {
   await Promise.allSettled(promises);
 }
 
-export const assessmentScheduler = onSchedule({ schedule: 'every 15 minutes', timeZone: CONFIG.timezone, timeoutSeconds: 540 }, async () => {
+export const assessmentScheduler = onSchedule({ schedule: 'every 15 minutes', timeZone: CONFIG.timezone, timeoutSeconds: 540, secrets: [ZEPTOMAIL_CONFIG] }, async () => {
   await ensureSchedules();
   const now = new Date();
   const schedules = (await db.collection('assessmentSchedules').where('isPublished', '==', true).get()).docs;
@@ -523,14 +530,14 @@ export const assessmentScheduler = onSchedule({ schedule: 'every 15 minutes', ti
     if (!open || !close) continue;
     const status = now < open ? 'scheduled' : now < close ? 'open' : 'closed';
     const patch = { status, lastSchedulerRunAt: FieldValue.serverTimestamp() };
-    if (status === 'open' && !x.openEmailSent) {
-      patch.openEmailSent = true;
-      await doc.ref.update(patch);
-      try { await sendScheduleEmails({ day: x.day, topic: x.topic }, 'open'); } catch (e) { logger.error(e); }
-    } else if (status === 'open' && now.getTime() >= open.getTime() - 60 * 60 * 1000 && !x.reminderEmailSent) {
+    if (now < open && now.getTime() >= open.getTime() - 60 * 60 * 1000 && !x.reminderEmailSent) {
       patch.reminderEmailSent = true;
       await doc.ref.update(patch);
       try { await sendScheduleEmails({ day: x.day, topic: x.topic }, 'reminder'); } catch (e) { logger.error(e); }
+    } else if (status === 'open' && !x.openEmailSent) {
+      patch.openEmailSent = true;
+      await doc.ref.update(patch);
+      try { await sendScheduleEmails({ day: x.day, topic: x.topic }, 'open'); } catch (e) { logger.error(e); }
     } else {
       await doc.ref.update(patch);
     }
