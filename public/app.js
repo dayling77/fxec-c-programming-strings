@@ -255,28 +255,52 @@ let assessmentAnswers={};
 function renderAssessment(data) {
   show('assessmentPanel');
   $('assessmentPanel').scrollIntoView({behavior:'smooth'});
-  $('assessmentTitle').textContent='Day Assessment – '+data.assessmentDate;
+  $('assessmentTitle').textContent='Day Assessment · '+data.assessmentDate;
   const q=data.questions[assessmentIndex];
+  const total=data.questions.length;
+  const progress=Math.round(((assessmentIndex+1)/total)*100);
   let body='';
+
   if(q.type==='match'){
-    body=(q.leftItems||[]).map(item=>'<label class="matchrow">'+esc(item)+' <select data-match-item="'+esc(item)+'"><option value="">Choose</option>'+((q.rightItems||q.options||[]).map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join(''))+'</select></label>').join('');
+    const left=q.leftItems||[];
+    const right=q.rightItems||q.options||[];
+    body='<div class="studentInstruction">Match each item on the left with the correct answer.</div>'+
+      '<div class="studentMatchList">'+left.map((item,i)=>
+        '<div class="studentMatchRow"><div class="studentMatchNumber">'+(i+1)+'</div><div class="studentMatchLeft">'+esc(item)+'</div><div class="studentMatchArrow">→</div><select data-match-item="'+esc(item)+'"><option value="">Select an answer</option>'+right.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')+'</select></div>'
+      ).join('')+'</div>';
   } else if(q.type==='multiAnswer'){
-    body=(q.options||[]).map((o,k)=>'<label class="option"><input type="checkbox" data-multi="'+k+'"> '+esc(o)+'</label>').join('');
+    body='<div class="studentInstruction">Select all correct answers.</div><div class="studentOptionList">'+(q.options||[]).map((o,k)=>
+      '<label class="studentOption"><input type="checkbox" data-multi="'+k+'"><span class="studentOptionLetter">'+String.fromCharCode(65+k)+'</span><span>'+esc(o)+'</span></label>'
+    ).join('')+'</div>';
   } else {
-    if(q.type==='audio') body='<button class="audioBtn" id="playCurrentAudio" data-audio="'+esc(q.audioPath||'')+'">▶ Play Question</button>';
-    body+=(q.options||[]).map((o,k)=>'<label class="option"><input type="radio" name="currentQ" value="'+k+'"> '+esc(o)+'</label>').join('');
+    if(q.type==='audio'){
+      body='<div class="studentAudioCard"><button class="audioBtn studentPlayBtn" id="playCurrentAudio" data-audio="'+esc(q.audioPath||'')+'">▶ Play Question</button><span>Listen carefully, then select your answer.</span></div>';
+    }
+    body+='<div class="studentOptionList">'+(q.options||[]).map((o,k)=>
+      '<label class="studentOption"><input type="radio" name="currentQ" value="'+k+'"><span class="studentOptionLetter">'+String.fromCharCode(65+k)+'</span><span>'+esc(o)+'</span></label>'
+    ).join('')+'</div>';
   }
-  $('questions').innerHTML='<article class="question"><div class="qhead"><span>Question '+(assessmentIndex+1)+' of '+data.questions.length+'</span><span>'+esc(q.type)+' · '+esc(q.difficulty)+'</span></div><h3>'+((q.type==='audio')?'Listen to the question and choose the correct answer.':esc(q.prompt))+'</h3>'+body+'</article>';
+
+  const prompt=q.type==='audio' ? 'Listen to the question and choose the correct answer.' : esc(q.prompt||'');
+
+  $('questions').innerHTML=
+    '<article class="studentQuestionCard">'+
+      '<div class="studentQuestionTop"><span>QUESTION '+String(assessmentIndex+1).padStart(2,'0')+' / '+String(total).padStart(2,'0')+'</span><span>'+esc(q.type)+' · '+esc(q.difficulty)+'</span></div>'+
+      '<div class="studentProgress"><span style="width:'+progress+'%"></span></div>'+
+      '<div class="studentPrompt">'+prompt+'</div>'+
+      '<div class="studentAnswerArea">'+body+'</div>'+
+    '</article>';
+
   restoreCurrentAnswer(q);
   document.querySelectorAll('#questions input[type=radio]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=Number(x.value);});
   document.querySelectorAll('#questions input[type=checkbox]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=[...document.querySelectorAll('#questions input[type=checkbox]:checked')].map(y=>Number(y.dataset.multi));});
   document.querySelectorAll('#questions select').forEach(x=>x.onchange=()=>{const a={...(assessmentAnswers[q.id]||{})};a[x.dataset.matchItem]=x.value;assessmentAnswers[q.id]=a;});
   const audio=$('playCurrentAudio');
-  if(audio) audio.onclick=async()=>{try{const url=await getDownloadURL(ref(storage,audio.dataset.audio));new Audio(url).play();}catch(e){msg('Audio could not be loaded. Please try again.');}};
-  $('questionCounter').textContent=(assessmentIndex+1)+' / '+data.questions.length;
+  if(audio) audio.onclick=async()=>{try{const url=await getDownloadURL(ref(storage,audio.dataset.audio));new Audio(url).play();audio.textContent='■ Playing Question';setTimeout(()=>{if(audio)audio.textContent='▶ Play Question';},2500);}catch(e){msg('Audio could not be loaded. Please try again.');}};
+  $('questionCounter').textContent=(assessmentIndex+1)+' / '+total;
   $('prevBtn').disabled=assessmentIndex===0;
-  $('nextBtn').hidden=assessmentIndex===data.questions.length-1;
-  $('submitBtn').hidden=assessmentIndex!==data.questions.length-1;
+  $('nextBtn').hidden=assessmentIndex===total-1;
+  $('submitBtn').hidden=assessmentIndex!==total-1;
   const end=new Date(data.closeAt).getTime();
   clearInterval(timer);
   timer=setInterval(()=>{const left=Math.max(0,end-Date.now());const mins=Math.floor(left/60000),secs=Math.floor(left/1000)%60;$('timer').textContent='Time remaining: '+mins+':'+String(secs).padStart(2,'0');if(!left){clearInterval(timer);submitAttempt(true);}},1000);
