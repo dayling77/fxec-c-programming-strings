@@ -373,9 +373,7 @@ export const registerStudent = onCall(async request => {
   return { success: true, status: 'pending' };
 });
 
-export const authorizeStudent = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, async request => {
-  requireAdmin(request);
-  const studentId = cleanText(request.data?.studentId, 200);
+async function approveStudentById(studentId) {
   if (!studentId) throw new HttpsError('invalid-argument', 'studentId is required.');
   const ref = db.collection('students').doc(studentId);
   const snap = await ref.get();
@@ -383,14 +381,45 @@ export const authorizeStudent = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, async re
   const student = snap.data();
   await ref.update({ status: 'approved', approvedAt: FieldValue.serverTimestamp(), updatedAt: FieldValue.serverTimestamp() });
   if (student.email) {
-    await sendEmail({
-      to: student.email, name: student.name,
-      subject: 'FXEC C Programming Assessment – Registration Approved',
-      html: `<p>Dear ${student.name || 'Student'},</p><p>Your registration for the FXEC C Programming – Level 3 Strings assessment has been approved.</p><p>The assessment windows will open automatically according to the published schedule.</p>`,
-      text: `Dear ${student.name || 'Student'}, your FXEC C Programming Strings assessment registration has been approved.`
-    });
+    try {
+      await sendEmail({
+        to: student.email, name: student.name,
+        subject: 'FXEC C Programming Assessment – Registration Approved',
+        html: '<p>Dear ' + (student.name || 'Student') + ',</p><p>Your registration for the FXEC C Programming – Level 3 Strings assessment has been approved.</p><p>The assessment windows will open automatically according to the published schedule.</p>',
+        text: 'Dear ' + (student.name || 'Student') + ', your FXEC C Programming Strings assessment registration has been approved.'
+      });
+    } catch (e) { logger.error('Approval email failed; student approval retained.', e); }
   }
   return { success: true };
+}
+
+export const authorizeStudent = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, async request => {
+  requireAdmin(request);
+  return approveStudentById(cleanText(request.data?.studentId, 200));
+});
+
+export const authorizeStudentsBulk = onCall({ secrets: [ZEPTOMAIL_CONFIG] }, async request => {
+  requireAdmin(request);
+  const ids = Array.isArray(request.data?.studentIds) ? [...new Set(request.data.studentIds.map(x => cleanText(x, 200)).filter(Boolean))] : [];
+  if (!ids.length) throw new HttpsError('invalid-argument', 'Select at least one student.');
+  const results = [];
+  for (const id of ids) { try { await approveStudentById(id); results.push({ id, success: true }); } catch (e) { results.push({ id, success: false, error: e.message || 'Approval failed' }); } }
+  return { success: results.every(x => x.success), approved: results.filter(x => x.success).length, results };
+});
+
+export const updateAssessmentSchedules = onCall(async request => {
+  requireAdmin(request);
+  const schedules = Array.isArray(request.data?.schedules) ? request.data.schedules : [];
+  if (!schedules.length || schedules.length > 10) throw new HttpsError('invalid-argument', 'Provide one or more assessment schedules.');
+  const batch = db.batch();
+  for (const item of schedules) {
+    const day = Number(item.day), date = cleanText(item.date, 20), topic = cleanText(item.topic, 200);
+    const openAt = new Date(cleanText(item.openAt, 50)), closeAt = new Date(cleanText(item.closeAt, 50));
+    if (!Number.isInteger(day) || day < 1 || !date || !topic || Number.isNaN(openAt.getTime()) || Number.isNaN(closeAt.getTime()) || closeAt <= openAt) throw new HttpsError('invalid-argument', 'Each schedule needs a valid Day, date, opening time and closing time.');
+    batch.set(db.collection('assessmentSchedules').doc(date), { day, date, topic, openAt, closeAt, isPublished: item.isPublished !== false, status: 'scheduled', updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+  }
+  await batch.commit();
+  return { success: true, count: schedules.length };
 });
 
 export const getAssessment = onCall(async request => {
@@ -550,10 +579,13 @@ export const assessmentScheduler = onSchedule({ schedule: 'every 15 minutes', ti
 export const assessmentContentScheduler = onSchedule({ schedule: 'every 30 minutes', timeZone: CONFIG.timezone, timeoutSeconds: 540 }, async () => {
   await ensureSchedules();
   const now = Date.now();
-  for (const item of FIVE_DAY_SCHEDULE) {
-    const openMs = new Date(item.openAt).getTime();
-    if (openMs - now > 8 * 60 * 60 * 1000 || openMs - now < -60 * 60 * 1000) continue;
-    try { await buildQuestionPool(item); } catch (e) { logger.error(`Generation failed for ${item.date}`, e); }
+  const docs = await db.collection('assessmentSchedules').where('isPublished', '==', true).get();
+  for (const doc of docs.docs) {
+    const x = doc.data();
+    const openAt = x.openAt?.toDate?.() || new Date(x.openAt);
+    const openMs = openAt.getTime();
+    if (Number.isNaN(openMs) || openMs - now > 8 * 60 * 60 * 1000 || openMs - now < -60 * 60 * 1000) continue;
+    try { await buildQuestionPool({ date: x.date || doc.id, day: x.day, topic: x.topic, openAt, closeAt: x.closeAt?.toDate?.() || new Date(x.closeAt) }); } catch (e) { logger.error('Generation failed for ' + (x.date || doc.id), e); }
   }
 });
 
@@ -578,7 +610,7 @@ export const getAdminDashboard = onCall(async request => {
     passed: resultRows.filter(x => x.passed).length,
     average: resultRows.length ? Math.round(resultRows.reduce((a, x) => a + x.scorePercent, 0) / resultRows.length * 100) / 100 : 0,
     top20: resultRows.slice(0, 20),
-    schedules: schedules.docs.map(d => ({ id: d.id, ...d.data() }))
+    schedules: schedules.docs.map(d => { const x=d.data(); return { id:d.id, day:x.day, date:x.date, topic:x.topic, isPublished:x.isPublished !== false, openAt:x.openAt?.toDate?.().toISOString?.() || x.openAt, closeAt:x.closeAt?.toDate?.().toISOString?.() || x.closeAt, status:x.status }; })
   };
 });
 
