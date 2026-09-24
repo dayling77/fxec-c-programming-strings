@@ -102,3 +102,26 @@ body{background:#f4f7fb;color:var(--ink);line-height:1.55}
 @media(max-width:600px){.studentMenu,.dayButtonGrid{grid-template-columns:1fr}.assessmentNav{flex-wrap:wrap}}
 
 .questionBankToolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;margin:14px 0;border:1px solid #e5e7eb;border-radius:12px;background:#f8fafc}.questionBankToolbar label{font-weight:800}.questionBankToolbar select{margin-left:8px;padding:8px 10px;border:1px solid #cbd5e1;border-radius:8px}.questionBankToolbar span{font-size:13px;color:#475569;font-weight:700}.questionBankItem{border:1px solid #e2e8f0;border-radius:14px;padding:18px;margin:14px 0;background:#fff}.questionBankHead{display:flex;align-items:center;gap:12px;margin-bottom:14px}.questionBankHead strong{font-size:14px}.questionBankHead span{font-size:12px;color:#64748b;flex:1}.questionBankHead select{padding:7px 9px;border-radius:7px;border:1px solid #cbd5e1}.questionBankItem label{display:block;font-size:12px;font-weight:800;color:#334155;margin:10px 0}.questionBankItem small{font-weight:500;color:#64748b}.questionBankItem textarea,.questionBankItem input{width:100%;box-sizing:border-box;margin-top:6px;border:1px solid #cbd5e1;border-radius:8px;padding:9px;font:inherit;background:#fff}.questionBankItem textarea{resize:vertical;line-height:1.45}.questionBankItem textarea:focus,.questionBankItem input:focus{outline:2px solid #c7d2fe;border-color:#6366f1}
+
+
+/* Question Bank Editor — clean admin review layout */
+#questionBankEditor{margin-top:8px}
+.questionBankItem{position:relative;padding:22px 24px;margin:16px 0;border:1px solid #dbe4ef;border-radius:16px;background:#fff;box-shadow:0 4px 16px rgba(15,43,82,.05)}
+.questionBankItem:hover{border-color:#bfd0e5;box-shadow:0 8px 24px rgba(15,43,82,.08)}
+.questionBankHead{display:grid;grid-template-columns:auto 1fr 150px;align-items:center;gap:12px;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid #edf1f6}
+.questionBankHead strong{font-size:15px;color:#102a43;white-space:nowrap}
+.questionBankHead span{font-size:12px;color:#64748b;font-weight:600}
+.questionBankHead select{width:150px;margin:0;padding:9px 11px;background:#f8fafc}
+.questionBankItem label{display:block!important;width:100%!important;margin:14px 0!important;font-size:12px;font-weight:800;color:#334155}
+.questionBankItem label small{display:block;margin-top:2px}
+.questionBankItem textarea,.questionBankItem input{display:block!important;width:100%!important;max-width:100%!important;margin:7px 0 0!important;padding:11px 12px!important;border:1px solid #cbd5e1!important;border-radius:9px!important;background:#fff!important;font-family:inherit!important;font-size:14px!important;line-height:1.45!important}
+.questionBankItem textarea{min-height:76px;resize:vertical}
+.questionBankItem .qbPrompt{min-height:88px}
+.questionBankItem .qbOptions{min-height:130px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace!important;font-size:13px!important}
+.questionBankItem .qbAnswer{max-width:420px!important}
+.questionBankItem .qbAudioText{min-height:70px}
+.questionBankItem .qbExplanation{min-height:68px}
+.questionBankItem textarea:focus,.questionBankItem input:focus,.questionBankItem select:focus{outline:3px solid rgba(37,99,235,.12);border-color:#2563eb!important}
+.questionBankToolbar{position:sticky;top:8px;z-index:5;background:#f8fafc;box-shadow:0 4px 14px rgba(15,43,82,.06)}
+#questionBankStatus{font-size:12px;color:#475569}
+@media(max-width:700px){.questionBankHead{grid-template-columns:1fr}.questionBankHead select{width:100%}.questionBankItem{padding:17px}.questionBankToolbar{position:static}}
