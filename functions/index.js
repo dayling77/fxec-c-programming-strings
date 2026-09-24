@@ -596,6 +596,23 @@ export const assessmentContentScheduler = onSchedule({ schedule: 'every 30 minut
   }
 });
 
+export const getStudentProfile = onCall(async request => {
+  const a = requireAuth(request);
+  const snap = await db.collection('students').doc(a.uid).get();
+  if (!snap.exists) {
+    return { registered: false, status: 'not_registered', email: a.email || '' };
+  }
+  const s = snap.data();
+  return {
+    registered: true,
+    status: s.status || 'pending',
+    name: s.name || '',
+    registerNumber: s.registerNumber || '',
+    email: s.email || a.email || '',
+    rewardPoints: s.rewardPoints || 0
+  };
+});
+
 export const getCourseOverview = onCall(async () => {
   const schedules = (await db.collection('assessmentSchedules').get()).docs
     .map(d => { const x=d.data(); return { day:x.day, date:x.date, topic:x.topic, isPublished:x.isPublished === true, openAt:x.openAt?.toDate?.().toISOString?.() || null, closeAt:x.closeAt?.toDate?.().toISOString?.() || null }; })
