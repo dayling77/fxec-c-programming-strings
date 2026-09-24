@@ -797,14 +797,18 @@ export const questionBankAdminAction = onDocumentCreated({region:'asia-south1',t
           const item={...q0};
           delete item.audioPath;
           if(q0.type==='audio'){
-            const [response]=await tts.synthesizeSpeech({
-              input:{text:q0.audioText||q0.prompt},
-              voice:{languageCode:CONFIG.voice.languageCode,name:CONFIG.voice.name},
-              audioConfig:{audioEncoding:'MP3'}
-            });
-            const path='audio/question-bank/'+date+'/'+q0.id+'.mp3';
-            await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg',resumable:false,metadata:{cacheControl:'public,max-age=31536000',metadata:{firebaseStorageDownloadTokens:randomUUID()}}});
-            item.audioPath=path;
+            try{
+              const [response]=await tts.synthesizeSpeech({
+                input:{text:q0.audioText||q0.prompt},
+                voice:{languageCode:CONFIG.voice.languageCode,name:CONFIG.voice.name},
+                audioConfig:{audioEncoding:'MP3'}
+              });
+              const path='audio/question-bank/'+date+'/'+q0.id+'.mp3';
+              await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg',resumable:false,metadata:{cacheControl:'public,max-age=31536000',metadata:{firebaseStorageDownloadTokens:randomUUID()}}});
+              item.audioPath=path;
+            }catch(ttsError){
+              logger.error('Question audio generation failed; publishing without MP3', {questionId:q0.id,error:ttsError?.message||String(ttsError)});
+            }
           }
           enriched.push(item);
         }
