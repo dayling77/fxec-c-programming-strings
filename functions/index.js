@@ -799,7 +799,7 @@ export const questionBankAdminAction = onDocumentCreated({region:'asia-south1',t
           audioConfig:{audioEncoding:'MP3'}
         });
         const path='audio/question-bank/'+date+'/'+q0.id+'.mp3';
-        await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg'});
+        await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg',resumable:false,metadata:{cacheControl:'public,max-age=31536000',metadata:{firebaseStorageDownloadTokens:randomUUID()}}});
         item.audioPath=path;
       }
       enriched.push(item);
