@@ -105,13 +105,8 @@ function makeScheduleData(item) {
 }
 
 async function ensureSchedules() {
-  const existing = await db.collection('assessmentSchedules').limit(1).get();
-  if (!existing.empty) return;
-  const batch = db.batch();
-  for (const item of FIVE_DAY_SCHEDULE) {
-    batch.set(db.collection('assessmentSchedules').doc(item.date), makeScheduleData(item));
-  }
-  await batch.commit();
+  // Schedules are created and published only by the administrator.
+  return;
 }
 
 async function sendEmail({ to, name, subject, html, text }) {
@@ -585,6 +580,18 @@ export const assessmentContentScheduler = onSchedule({ schedule: 'every 30 minut
     if (Number.isNaN(openMs) || openMs - now > 8 * 60 * 60 * 1000 || openMs - now < -60 * 60 * 1000) continue;
     try { await buildQuestionPool({ date: x.date || doc.id, day: x.day, topic: x.topic, openAt, closeAt: x.closeAt?.toDate?.() || new Date(x.closeAt) }); } catch (e) { logger.error('Generation failed for ' + (x.date || doc.id), e); }
   }
+});
+
+export const getCourseOverview = onCall(async () => {
+  const schedules = (await db.collection('assessmentSchedules').get()).docs
+    .map(d => { const x=d.data(); return { day:x.day, date:x.date, topic:x.topic, isPublished:x.isPublished === true, openAt:x.openAt?.toDate?.().toISOString?.() || null, closeAt:x.closeAt?.toDate?.().toISOString?.() || null }; })
+    .sort((a,b) => Number(a.day)-Number(b.day));
+  return {
+    title: 'C Programming – Level 3 | Strings',
+    duration: 5,
+    overview: 'A 5-day self-learning and assessment programme covering C strings from fundamentals through advanced string problem solving.',
+    schedules
+  };
 });
 
 export const getPublicStats = onCall(async request => {
