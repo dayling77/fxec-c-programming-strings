@@ -542,14 +542,24 @@ export const finalizeAttempt = onCall({ cors: CALLABLE_CORS, secrets: [ZEPTOMAIL
     }, { merge: true });
   });
   const student = (await studentRef.get()).data() || {};
+  // Result is already committed at this point. Notification/leaderboard failures
+  // must never turn a successful submission into an "Internal" error.
   if (student.email) {
     const subject = passed ? 'FXEC C Programming Assessment – Congratulations!' : 'FXEC C Programming Assessment – Result';
     const html = passed
       ? `<p>Dear ${student.name || 'Student'},</p><p>You scored <strong>${scorePercent}%</strong> in the C Programming – Level 3 Strings assessment.</p><p>Congratulations! <strong>${CONFIG.rewardPoints} Reward Points</strong> have been credited to your account.</p>`
       : `<p>Dear ${student.name || 'Student'},</p><p>Your score in the C Programming – Level 3 Strings assessment is <strong>${scorePercent}%</strong>.</p><p>The passing requirement is ${CONFIG.passPercent}%. No Reward Points are credited for this attempt.</p><p>You can continue practising the module and participate in the next scheduled activity.</p>`;
-    await sendEmail({ to: student.email, name: student.name, subject, html, text: `Your score is ${scorePercent}%. ${passed ? `${CONFIG.rewardPoints} Reward Points credited.` : 'The passing requirement is 80%.'}` });
+    try {
+      await sendEmail({ to: student.email, name: student.name, subject, html, text: `Your score is ${scorePercent}%. ${passed ? `${CONFIG.rewardPoints} Reward Points credited.` : 'The passing requirement is 80%.'}` });
+    } catch (emailError) {
+      logger.error('Result email failed after successful submission.', {error: emailError?.message || String(emailError), studentId:a.uid, attemptId});
+    }
   }
-  await updateLeaderboard();
+  try {
+    await updateLeaderboard();
+  } catch (leaderboardError) {
+    logger.error('Leaderboard update failed after successful submission.', {error: leaderboardError?.message || String(leaderboardError), attemptId});
+  }
   return { score: correct, total, scorePercent, passed, rewardPoints };
 });
 
