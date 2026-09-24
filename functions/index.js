@@ -1,5 +1,6 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import { onSchedule } from 'firebase-functions/v2/scheduler';
+import { onDocumentCreated } from 'firebase-functions/v2/firestore';
 import { defineJsonSecret } from 'firebase-functions/params';
 import { logger, setGlobalOptions } from 'firebase-functions';
 import { initializeApp } from 'firebase-admin/app';
@@ -707,6 +708,44 @@ async function getQuestionBankForAdmin() {
   }, {merge:true});
   return draft;
 }
+
+export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId}', async event => {
+  const action = event.data?.data();
+  if (!action || action.status !== 'requested') return;
+  const id = event.params.actionId;
+  if (id === 'seedQuestionBank') {
+    const ref = db.collection('questionBank').doc('master');
+    if (!(await ref.get()).exists) {
+      await ref.set({meta:QUESTION_BANK_META,questions:QUESTION_BANK,status:'draft',source:'repository-question-bank',seededAt:FieldValue.serverTimestamp()});
+    }
+    await event.data.ref.set({status:'completed',completedAt:FieldValue.serverTimestamp()},{merge:true});
+    return;
+  }
+  if (id === 'publishQuestionBank') {
+    const bank=await getQuestionBankForAdmin();
+    const questions=(bank.questions||[]).map(normalizeDraftQuestion);
+    const error=validateQuestionBank(questions);
+    if(error){await event.data.ref.set({status:'failed',error,completedAt:FieldValue.serverTimestamp()},{merge:true});return;}
+    const byDay=new Map();
+    questions.forEach(q=>{const day=Number(String(q.id).match(/^D(\d+)-/)?.[1]||0);if(!byDay.has(day))byDay.set(day,[]);byDay.get(day).push(normalizeMatch(q));});
+    for(const [day,dayQuestions] of byDay.entries()){
+      const date=FIVE_DAY_SCHEDULE[day-1]?.date;if(!date)continue;
+      const enriched=[];
+      for(const q of dayQuestions){
+        const item={...q};delete item.audioPath;
+        if(q.type==='audio'){
+          const [response]=await tts.synthesizeSpeech({input:{text:q.audioText||q.prompt},voice:{languageCode:CONFIG.voice.languageCode,name:CONFIG.voice.name},audioConfig:{audioEncoding:'MP3'}});
+          const path='audio/question-bank/'+date+'/'+q.id+'.mp3';
+          await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg'});item.audioPath=path;
+        }
+        enriched.push(item);
+      }
+      await db.collection('questionPools').doc(date).set({date,day,topic:FIVE_DAY_SCHEDULE[day-1]?.topic||qTopic(day),status:'ready',source:'admin-question-bank',approvedBy:action.requestedBy||'admin',approvedAt:FieldValue.serverTimestamp(),questions:enriched,updatedAt:FieldValue.serverTimestamp()});
+    }
+    await db.collection('questionBank').doc('master').set({status:'published',publishedAt:FieldValue.serverTimestamp()},{merge:true});
+    await event.data.ref.set({status:'completed',completedAt:FieldValue.serverTimestamp(),questions:questions.length},{merge:true});
+  }
+});
 
 export const getAdminQuestionBank = onCall({ cors: CALLABLE_CORS }, async request => {
   requireAdmin(request);
