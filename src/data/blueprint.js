@@ -1,0 +1,1 @@
+export const ASSESSMENT_BLUEPRINT = Object.freeze({poolSize:25,questionsPerStudent:15,passPercent:80,rewardPoints:40,distribution:{mcq:3,match:3,audio:5,problemSolving:1,multiAnswer:3},difficulty:{easy:0.40,moderate:0.40,tough:0.20}});
