@@ -9,6 +9,7 @@ import { getStorage } from 'firebase-admin/storage';
 import { GoogleGenAI } from '@google/genai';
 import textToSpeech from '@google-cloud/text-to-speech';
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { randomUUID } from 'node:crypto';
 
 initializeApp();
 const db = getFirestore();
@@ -280,7 +281,7 @@ async function buildQuestionPool(schedule) {
         });
         const audioPath = `audio/${schedule.date}/${item.id}.mp3`;
         const file = bucket.file(audioPath);
-        await file.save(ttsResponse.audioContent, { contentType: 'audio/mpeg', resumable: false, metadata: { cacheControl: 'public,max-age=31536000' } });
+        await file.save(ttsResponse.audioContent, { contentType: 'audio/mpeg', resumable: false, metadata: { cacheControl: 'public,max-age=31536000', metadata: { firebaseStorageDownloadTokens: randomUUID() } } });
         item.audioPath = audioPath;
       }
       questions.push(item);
