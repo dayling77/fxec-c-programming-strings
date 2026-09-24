@@ -53,3 +53,38 @@
 #message{position:fixed;right:20px;bottom:20px;z-index:9999;max-width:520px;box-shadow:0 8px 30px rgba(0,0,0,.15)}
 @media(max-width:800px){.adminHero{align-items:flex-start;flex-direction:column}.adminStatGrid{grid-template-columns:repeat(2,1fr)}.adminSectionTitle,.adminToolbar,.saveBar{flex-direction:column;align-items:flex-start}.adminActions{display:flex;flex-wrap:wrap}}
 .scheduleSaveStatus{margin-top:10px;padding:11px 14px;border-radius:10px;font-size:12px;font-weight:700;display:none}.scheduleSaveStatus.saving{display:block;background:#eff6ff;color:#1d4ed8}.scheduleSaveStatus.success{display:block;background:#ecfdf5;color:#047857}.scheduleSaveStatus.error{display:block;background:#fef2f2;color:#b91c1c}
+
+/* International-style portal refinement */
+:root{--navy:#102a43;--blue:#2563eb;--ink:#142033;--muted:#64748b;--line:#e4eaf2;--soft:#f7faff}
+body{background:#f4f7fb;color:var(--ink);line-height:1.55}
+.hero{background:linear-gradient(135deg,#0b2440,#174a9c 55%,#2563eb);padding:54px 22px}
+.hero>div{max-width:1180px}.hero h1{font-size:44px;line-height:1.05}.hero p{opacity:.9}
+#publicShell .container{max-width:1180px}
+.courseHeroCard{border-radius:22px;padding:30px;box-shadow:0 14px 40px rgba(15,43,82,.12)}
+.courseHeroCard h2{font-size:30px}
+.card{border:1px solid #e3eaf3;border-radius:18px;box-shadow:0 10px 30px rgba(20,40,80,.07)}
+.publicDayGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.publicDay{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 5px 18px rgba(20,40,80,.05)}
+.publicDay h3{margin:10px 0 4px}.publicDay p,.publicDay li{font-size:12px;color:#64748b}
+.dayTop{display:flex;justify-content:space-between;gap:8px}.dayBadge{background:#eaf1ff;color:#1746a2;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:900}
+.accessCard{background:linear-gradient(135deg,#102a43,#2563eb);color:#fff;border-radius:22px;padding:28px;box-shadow:0 15px 40px rgba(15,43,82,.16)}
+.accessCard p{color:#d7e2ef}.authBox{border-radius:16px}
+.sampleGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.sampleQ{border:1px solid var(--line);border-radius:13px;padding:15px;background:#fbfdff}
+.sampleNumber{font-size:10px;color:#2563eb;font-weight:900}.sampleQuestion{font-weight:750;margin:5px 0 10px}
+.learningCentreQuickLink{display:inline-block;margin:12px 0 16px;background:#2563eb;color:#fff;text-decoration:none;padding:10px 15px;border-radius:9px;font-weight:800;font-size:12px}
+.statusBanner{display:flex;gap:12px;align-items:flex-start;border-radius:12px;padding:13px 15px;margin:12px 0}
+.pendingStatus{background:#fff7ed;border:1px solid #fed7aa}.approvedStatus{background:#ecfdf5;border:1px solid #bbf7d0}
+.statusBanner span{display:block;color:#475569;font-size:12px}
+.studentDay{border:1px solid var(--line);border-radius:15px;padding:17px;background:#fbfdff;margin:10px 0}
+.studentDay h3{margin:5px 0}.topicChips{display:flex;flex-wrap:wrap;gap:6px}.topicChips span{font-size:10px;background:#eef4ff;padding:5px 8px;border-radius:999px}
+.adminHero{background:linear-gradient(135deg,#102a43,#2563eb);border-radius:22px;padding:28px;color:#fff;box-shadow:0 14px 35px rgba(15,43,82,.16)}
+.adminStatGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.adminStat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px}.adminStat strong{font-size:28px}
+.adminSectionTitle{border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:16px}
+.adminToolbar{background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:13px}
+.pending{padding:13px 4px;border-bottom:1px solid var(--line)}
+.scheduleWrap{border:1px solid var(--line);border-radius:12px}.saveBar{background:#f8fafc;border-radius:12px;padding:15px}
+.scheduleSaveStatus{font-weight:800}
+#message{border:1px solid #e5e7eb}
+@media(max-width:1000px){.publicDayGrid{grid-template-columns:repeat(2,1fr)}.adminStatGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.hero h1{font-size:31px}.publicDayGrid,.sampleGrid{grid-template-columns:1fr}.accessCard{padding:20px}.adminStatGrid{grid-template-columns:repeat(2,1fr)}}
