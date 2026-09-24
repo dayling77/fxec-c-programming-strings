@@ -30,17 +30,19 @@ function setTab(name) {
 }
 document.querySelectorAll('.tab').forEach(x => x.onclick = () => setTab(x.dataset.tab));
 
-$('registerForm').onsubmit = async e => {
+async function registerStudentForm(form, nameId, noId, emailId, e) {
   e.preventDefault();
   try {
     await call('registerStudent')({
-      name: $('regName').value,
-      registerNumber: $('regNo').value,
-      email: $('regEmail').value
+      name: $(nameId).value,
+      registerNumber: $(noId).value,
+      email: $(emailId).value
     });
     msg('Registration submitted. Your account is waiting for admin approval.', true);
   } catch (e) { msg(e.message); }
-};
+}
+$('registerForm').onsubmit = e => registerStudentForm($('registerForm'),'regName','regNo','regEmail',e);
+$('studentRegisterForm').onsubmit = e => registerStudentForm($('studentRegisterForm'),'studentRegName','studentRegNo','studentRegEmail',e);
 
 $('signupForm').onsubmit = async e => {
   e.preventDefault();
@@ -189,8 +191,10 @@ onAuthStateChanged(auth, async user => {
   if (!user) return;
   $('userEmail').textContent = user.email;
   const token = await user.getIdTokenResult(true);
-  show('adminArea', token.claims.admin === true);
-  show('adminBootstrap', user.email?.toLowerCase() === 'admin@francisxavier.ac.in' && token.claims.admin !== true);
+  const isConfiguredAdminEmail = user.email?.toLowerCase() === 'admin@francisxavier.ac.in';
+  show('admin', token.claims.admin === true || isConfiguredAdminEmail);
+  show('adminBootstrap', isConfiguredAdminEmail && token.claims.admin !== true);
   if (token.claims.admin === true) { setTab('admin'); loadAdmin(); }
+  else if (isConfiguredAdminEmail) { setTab('admin'); }
   else { setTab('student'); loadStudent(); }
 });
