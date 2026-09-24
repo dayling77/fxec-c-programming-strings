@@ -3,7 +3,7 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
-    function admin() { return signedIn() && request.auth.token.admin == true; }
+    function admin() { return signedIn() && (request.auth.token.admin == true || request.auth.token.email == 'admin@fxecdigital.org'); }
 
     match /students/{id} {
       allow create: if signedIn() && request.auth.uid == id;
@@ -35,6 +35,16 @@ service cloud.firestore {
     match /publicStats/{id} {
       allow read: if true;
       allow write: if admin();
+    }
+
+    match /questionBank/{id} {
+      allow read, write: if admin();
+    }
+
+    match /adminActions/{id} {
+      allow create: if admin();
+      allow read: if admin();
+      allow update, delete: if false;
     }
   }
 }
