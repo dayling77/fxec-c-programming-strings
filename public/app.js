@@ -200,6 +200,14 @@ async function loadStudent() {
       $('studentRegName').value=''; $('studentRegNo').value=''; $('studentRegEmail').value=currentUser?.email||'';
     }
   } catch(e) { msg(e.message); }
+  try {
+    const profile=(await call('getStudentProfile')({})).data;
+    if(profile.latestResult){
+      $('myScore').innerHTML='<div class="result"><strong>Latest Score: '+profile.latestResult.scorePercent+'%</strong><br>'+ (profile.latestResult.passed?'PASS · '+profile.latestResult.rewardPoints+' Reward Points credited.':'FAIL · Passing mark is 80%.') + '<br><small>Assessment: '+esc(profile.latestResult.assessmentDate)+'</small></div>';
+    } else {
+      $('myScore').innerHTML='<p>No completed assessment result is available yet.</p>';
+    }
+  } catch(e) {}
   try { const overview=await call('getCourseOverview')({}); renderStudentLearning(overview.data.schedules||[]); } catch(e){ renderStudentLearning([]); }
   try {
     const r=await call('getAssessment')({}), d=r.data;
