@@ -245,20 +245,23 @@ async function loadStudent() {
   $('myScore').innerHTML='<p>Open <strong>Check My Score</strong> to review your latest completed assessment.</p>';
 }
 $('startBtn').onclick = async () => {
-  try { const r=await call('startAttempt')({}); currentAttempt=r.data; assessmentAnswers={}; assessmentIndex=0; renderAssessment(currentAttempt); }
+  try { const r=await call('startAttempt')({}); currentAttempt=r.data; assessmentAnswers={}; assessmentIndex=0; questionDeadlines={}; clearInterval(questionTimer); renderAssessment(currentAttempt); }
   catch(e){ msg(e.message); }
 };
 
 let assessmentIndex=0;
 let assessmentAnswers={};
+let questionDeadlines={};
+let questionTimer=null;
 
 function renderAssessment(data) {
   show('assessmentPanel');
   $('assessmentPanel').scrollIntoView({behavior:'smooth'});
-  $('assessmentTitle').textContent='Day Assessment · '+data.assessmentDate;
   const q=data.questions[assessmentIndex];
   const total=data.questions.length;
   const progress=Math.round(((assessmentIndex+1)/total)*100);
+  const limit=Math.max(10,Number(q.timeLimitSeconds||60));
+  if(!questionDeadlines[q.id]) questionDeadlines[q.id]=Date.now()+limit*1000;
   let body='';
 
   if(q.type==='match'){
@@ -274,7 +277,7 @@ function renderAssessment(data) {
     ).join('')+'</div>';
   } else {
     if(q.type==='audio'){
-      body='<div class="studentAudioCard"><button class="audioBtn studentPlayBtn" id="playCurrentAudio" data-audio="'+esc(q.audioPath||'')+'">▶ Play Question</button><span>Listen carefully, then select your answer.</span></div>';
+      body='<div class="studentAudioCard"><button type="button" class="audioBtn studentPlayBtn" id="playCurrentAudio" data-audio="'+esc(q.audioPath||'')+'">▶ Play Question</button><span>Listen carefully, then select your answer.</span></div>';
     }
     body+='<div class="studentOptionList">'+(q.options||[]).map((o,k)=>
       '<label class="studentOption"><input type="radio" name="currentQ" value="'+k+'"><span class="studentOptionLetter">'+String.fromCharCode(65+k)+'</span><span>'+esc(o)+'</span></label>'
@@ -282,11 +285,11 @@ function renderAssessment(data) {
   }
 
   const prompt=q.type==='audio' ? 'Listen to the question and choose the correct answer.' : esc(q.prompt||'');
-
   $('questions').innerHTML=
     '<article class="studentQuestionCard">'+
       '<div class="studentQuestionTop"><span>QUESTION '+String(assessmentIndex+1).padStart(2,'0')+' / '+String(total).padStart(2,'0')+'</span><span>'+esc(q.type)+' · '+esc(q.difficulty)+'</span></div>'+
       '<div class="studentProgress"><span style="width:'+progress+'%"></span></div>'+
+      '<div class="studentTimingBar"><div><small>QUESTION TIME</small><strong id="questionTimer">--:--</strong></div><div><small>TOTAL TIME</small><strong id="timer">--:--</strong></div><div><small>TIME ALLOTTED</small><strong>'+Math.floor(limit/60)+':'+String(limit%60).padStart(2,'0')+'</strong></div></div>'+
       '<div class="studentPrompt">'+prompt+'</div>'+
       '<div class="studentAnswerArea">'+body+'</div>'+
     '</article>';
@@ -295,15 +298,50 @@ function renderAssessment(data) {
   document.querySelectorAll('#questions input[type=radio]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=Number(x.value);});
   document.querySelectorAll('#questions input[type=checkbox]').forEach(x=>x.onchange=()=>{assessmentAnswers[q.id]=[...document.querySelectorAll('#questions input[type=checkbox]:checked')].map(y=>Number(y.dataset.multi));});
   document.querySelectorAll('#questions select').forEach(x=>x.onchange=()=>{const a={...(assessmentAnswers[q.id]||{})};a[x.dataset.matchItem]=x.value;assessmentAnswers[q.id]=a;});
+
   const audio=$('playCurrentAudio');
-  if(audio) audio.onclick=async()=>{try{const url=await getDownloadURL(ref(storage,audio.dataset.audio));new Audio(url).play();audio.textContent='■ Playing Question';setTimeout(()=>{if(audio)audio.textContent='▶ Play Question';},2500);}catch(e){msg('Audio could not be loaded. Please try again.');}};
+  if(audio) audio.onclick=async()=>{
+    try{
+      const url=await getDownloadURL(ref(storage,audio.dataset.audio));
+      const player=new Audio(url); player.play();
+      audio.textContent='■ Playing Question';
+      player.onended=()=>{if(audio)audio.textContent='▶ Play Question';};
+    }catch(e){msg('Audio could not be loaded. Please try again.');}
+  };
+
   $('questionCounter').textContent=(assessmentIndex+1)+' / '+total;
   $('prevBtn').disabled=assessmentIndex===0;
   $('nextBtn').hidden=assessmentIndex===total-1;
   $('submitBtn').hidden=assessmentIndex!==total-1;
+
   const end=new Date(data.closeAt).getTime();
+  clearInterval(questionTimer);
   clearInterval(timer);
-  timer=setInterval(()=>{const left=Math.max(0,end-Date.now());const mins=Math.floor(left/60000),secs=Math.floor(left/1000)%60;$('timer').textContent='Time remaining: '+mins+':'+String(secs).padStart(2,'0');if(!left){clearInterval(timer);submitAttempt(true);}},1000);
+
+  const tick=()=>{
+    const totalLeft=Math.max(0,end-Date.now());
+    const questionLeft=Math.max(0,questionDeadlines[q.id]-Date.now());
+    const totalM=Math.floor(totalLeft/60000),totalS=Math.floor(totalLeft/1000)%60;
+    const qM=Math.floor(questionLeft/60000),qS=Math.floor(questionLeft/1000)%60;
+    if($('timer'))$('timer').textContent=totalM+':'+String(totalS).padStart(2,'0');
+    if($('questionTimer'))$('questionTimer').textContent=qM+':'+String(qS).padStart(2,'0');
+    if(questionLeft<=0){
+      clearInterval(questionTimer);
+      if(assessmentIndex<total-1){
+        assessmentIndex++;
+        renderAssessment(currentAttempt);
+      }else{
+        submitAttempt(true);
+      }
+      return;
+    }
+    if(totalLeft<=0){
+      clearInterval(questionTimer);
+      submitAttempt(true);
+    }
+  };
+  tick();
+  questionTimer=setInterval(tick,250);
 }
 function restoreCurrentAnswer(q){
   const a=assessmentAnswers[q.id];
@@ -630,12 +668,12 @@ async function approveQuestionBankDay(day,button) {
     adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
     adminQuestionBank.dayStatus[day]='pending';
     button.textContent='Processing…';
-    msg('Day '+day+' approval submitted. Preparing the secure question pool and audio…',true);
+    msg('Day '+day+' approval submitted. The server is validating the questions and generating the audio. This may take a few minutes.',true);
 
     // Follow the server action so the Admin sees the real result instead of
     // remaining indefinitely on "Processing…".
     let finished=false;
-    for(let attempt=0;attempt<90;attempt++){
+    for(let attempt=0;attempt<200;attempt++){
       await new Promise(resolve=>setTimeout(resolve,3000));
       const snap=await getDoc(doc(firestore,'adminActions',actionId));
       if(!snap.exists())continue;
@@ -661,7 +699,7 @@ async function approveQuestionBankDay(day,button) {
     if(!finished){
       button.disabled=false;
       button.textContent='Approve Day '+day;
-      msg('The approval is still processing on the server. Reload the Question Bank shortly to check its status.');
+      msg('Approval is still processing on the server. The page will remain available while the secure pool is being prepared.');
     }
   }catch(e){
     button.disabled=false;
