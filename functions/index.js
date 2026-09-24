@@ -19,7 +19,7 @@ const bucket = getStorage().bucket();
 const tts = new textToSpeech.TextToSpeechClient();
 
 const ZEPTOMAIL_CONFIG = defineJsonSecret('ZEPTOMAIL_CONFIG');
-const CALLABLE_CORS = ['https://fxec-c-strings.web.app', 'https://fxec-c-strings.firebaseapp.com'];
+const CALLABLE_CORS = true;
 
 const CONFIG = Object.freeze({
   adminEmail: 'admin@fxecdigital.org',
