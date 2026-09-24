@@ -175,8 +175,8 @@ ${SOURCE_MAP}
 async function generateJson(prompt) {
   const ai = new GoogleGenAI({
     vertexai: true,
-    project: process.env.GOOGLE_CLOUD_PROJECT,
-    location: process.env.GOOGLE_CLOUD_LOCATION || 'global'
+    project: process.env.GOOGLE_CLOUD_PROJECT || process.env.GCLOUD_PROJECT || 'fxec-c-strings',
+    location: process.env.GOOGLE_CLOUD_LOCATION || 'us-central1'
   });
   const response = await ai.models.generateContent({
     model: CONFIG.model,
