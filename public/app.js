@@ -412,15 +412,14 @@ function renderAdminQuestionBank() {
     btn.onclick=()=>{
       const q=adminQuestionBank.questions.find(x=>x.id===btn.dataset.audioQid), status=$('audioStatus-'+btn.dataset.audioQid);
       if(!q)return;
-      if(window.speechSynthesis){
-        window.speechSynthesis.cancel();
-        const u=new SpeechSynthesisUtterance(q.audioText||q.prompt||'');u.lang='en-IN';u.rate=.9;
-        u.onstart=()=>{btn.textContent='■ Stop Audio';if(status)status.textContent='Playing…';};
-        u.onend=()=>{btn.textContent='▶ Preview Audio';if(status)status.textContent='Audio preview complete';};
-        u.onerror=()=>{btn.textContent='▶ Preview Audio';if(status)status.textContent='Audio preview unavailable';};
-        window.speechSynthesis.speak(u);
-        btn.onclick=()=>{window.speechSynthesis.cancel();btn.textContent='▶ Preview Audio';if(status)status.textContent='Stopped';};
-      }else if(status)status.textContent='Browser audio preview is not supported.';
+      if(!window.speechSynthesis){if(status)status.textContent='Browser audio preview is not supported.';return;}
+      if(btn.dataset.playing==='true'){window.speechSynthesis.cancel();btn.dataset.playing='false';btn.textContent='▶ Preview Audio';if(status)status.textContent='Stopped';return;}
+      window.speechSynthesis.cancel();
+      const u=new SpeechSynthesisUtterance(q.audioText||q.prompt||'');u.lang='en-IN';u.rate=.9;
+      btn.dataset.playing='true';btn.textContent='■ Stop Audio';if(status)status.textContent='Playing…';
+      u.onend=()=>{btn.dataset.playing='false';btn.textContent='▶ Preview Audio';if(status)status.textContent='Audio preview complete';};
+      u.onerror=()=>{btn.dataset.playing='false';btn.textContent='▶ Preview Audio';if(status)status.textContent='Audio preview unavailable';};
+      window.speechSynthesis.speak(u);
     };
   });
   const approveBtn=$('.qbApproveDayTop');if(approveBtn)approveBtn.onclick=()=>approveQuestionBankDay(activeDay,approveBtn);
