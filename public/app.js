@@ -459,6 +459,10 @@ function renderAdminQuestionBank() {
   const qs=adminQuestionBank.questions.filter(q=>String(q.id).startsWith('D'+activeDay+'-'));
   const approved=adminQuestionBank.dayStatus?.[activeDay]==='approved';
   const pending=adminQuestionBank.dayStatus?.[activeDay]==='pending';
+  // A previous trigger-based approval may have left a stale "pending" flag. The
+  // current approval path is direct and deterministic, so pending must never
+  // disable the button permanently.
+  const approvalLocked=approved;
 
   if(nav){
     nav.innerHTML=days.map(day=>{
@@ -527,7 +531,7 @@ function renderAdminQuestionBank() {
       '<div class="qbSummaryCounts"><b>'+diff.easy+'/'+diff.moderate+'/'+diff.tough+'</b><span>Easy · Moderate · Tough</span></div>'+
     '</div>'+
     '<div class="qbDayActionBar"><div><strong>Day '+activeDay+'</strong><span>'+esc(approved?'Approved and published':pending?'Approval is being processed':'Draft — review all questions before approval')+'</span></div>'+
-      '<div class="adminActions"><button type="button" class="secondary" id="qbSelectAllCurrent">Select All</button><button type="button" class="secondary" id="qbDeselectAllCurrent">Deselect All</button><button type="button" class="qbApproveDayTop" '+(approved||pending?'disabled':'')+'>'+(approved?'✓ Day '+activeDay+' Approved':pending?'Processing…':'Approve Day '+activeDay)+'</button></div></div>'+
+      '<div class="adminActions"><button type="button" class="secondary" id="qbSelectAllCurrent">Select All</button><button type="button" class="secondary" id="qbDeselectAllCurrent">Deselect All</button><button type="button" class="qbApproveDayTop" '+(approvalLocked?'disabled':'')+'>'+(approved?'✓ Day '+activeDay+' Approved':'Approve Day '+activeDay)+'</button></div></div>'+
     '<div class="qbQuestionList">'+cards+'</div>';
 
   $('questionBankStatus').textContent='Day '+activeDay+' · '+qs.length+' questions · '+(approved?'APPROVED':pending?'PROCESSING':'DRAFT');
