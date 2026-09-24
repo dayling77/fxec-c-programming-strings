@@ -677,50 +677,27 @@ async function approveQuestionBankDay(day,button){
     adminQuestionBank.dayStatus[day]='pending';
     await saveQuestionBankDraft();
 
-    const defaultDates={1:'2026-09-24',2:'2026-09-25',3:'2026-09-26',4:'2026-09-27',5:'2026-09-28'};
-    const scheduleSnap=await getDoc(doc(firestore,'assessmentSchedules',defaultDates[day]));
-    const schedule=scheduleSnap.exists()?scheduleSnap.data():null;
-    const date=schedule?.date||defaultDates[day];
-    if(!date)throw new Error('No assessment date is configured for Day '+day+'.');
-
-    const published=qs.map(q=>{
-      const item=JSON.parse(JSON.stringify(q));
-      delete item.reviewed;
-      if(item.type==='match'){
-        const pairs=Array.isArray(item.options)?item.options:[];
-        const leftItems=pairs.map(p=>String(p).split(' -> ')[0].trim());
-        const rightItems=pairs.map(p=>String(p).split(' -> ')[1]?.trim()||String(p).trim());
-        const mapping={};
-        Object.entries(item.answer||{}).forEach(([k,v])=>{
-          const value=String(v);
-          const idx=rightItems.findIndex(x=>x===value);
-          mapping[k]=idx>=0?rightItems[idx]:value;
-        });
-        item.leftItems=leftItems;
-        item.rightItems=rightItems;
-        item.options=rightItems;
-        item.answer=mapping;
-      }
-      return item;
+    const actionId='publishQuestionBankDay'+day+'_'+Date.now();
+    await setDoc(doc(firestore,'adminActions',actionId),{
+      status:'requested',
+      day,
+      requestedBy:currentUser.uid,
+      requestedByEmail:currentUser.email||'',
+      requestedAt:new Date()
     });
 
-    await setDoc(doc(firestore,'questionPools',date),{
-      date,day,
-      topic:schedule?.topic||published[0]?.topic||('Day '+day),
-      status:'ready',
-      source:'admin-question-bank-direct',
-      approvedBy:currentUser.email||currentUser.uid,
-      approvedAt:new Date(),
-      questions:published,
-      updatedAt:new Date()
-    });
+    let actionSnap=null;
+    for(let i=0;i<120;i++){
+      await new Promise(r=>setTimeout(r,2500));
+      actionSnap=await getDoc(doc(firestore,'adminActions',actionId));
+      if(actionSnap.exists() && ['completed','failed'].includes(actionSnap.data().status))break;
+    }
+    const result=actionSnap?.exists()?actionSnap.data():null;
+    if(!result || result.status!=='completed'){
+      throw new Error(result?.error || 'The server did not complete the approval within 5 minutes.');
+    }
 
     adminQuestionBank.dayStatus[day]='approved';
-    await setDoc(doc(firestore,'questionBank','master'),{
-      dayStatus:adminQuestionBank.dayStatus,status:'draft',
-      updatedAt:new Date(),updatedBy:currentUser.uid
-    },{merge:true});
-
     button.disabled=false;
     button.textContent='✓ Day '+day+' Approved';
     renderAdminQuestionBank();
