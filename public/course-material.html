@@ -1,1 +1,3800 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+C Programming Level 3 - Strings
+</title>
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f4f7fb;
+
+    color: #1f2937;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1d4ed8
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 40px;
+}
+
+header h2 {
+
+    margin: 8px 0;
+
+    font-weight: 500;
+}
+
+header p {
+
+    max-width: 900px;
+
+    margin: 10px auto;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding:
+        25px
+        18px
+        60px;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-box {
+
+    background: white;
+
+    padding: 18px 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0,0,0,0.05);
+}
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 11px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+
+.progress-fill {
+
+    height: 100%;
+
+    width: 20%;
+
+    background: #2563eb;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================================
+   DAY BUTTONS
+========================================================= */
+
+.day-buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: #f4f7fb;
+
+    padding: 12px 0;
+
+    margin-bottom: 25px;
+}
+
+.day-button {
+
+    border: none;
+
+    padding: 15px 8px;
+
+    border-radius: 10px;
+
+    background: #dbeafe;
+
+    color: #1e3a8a;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.day-button:hover {
+
+    background: #bfdbfe;
+
+    transform:
+        translateY(-2px);
+}
+
+.day-button.active {
+
+    background: #1d4ed8;
+
+    color: white;
+
+    box-shadow:
+        0 4px 12px
+        rgba(29,78,216,0.25);
+}
+
+
+/* =========================================================
+   DAY SECTIONS
+========================================================= */
+
+.day {
+
+    display: none;
+}
+
+.day.active {
+
+    display: block;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(0,0,0,0.06);
+}
+
+.day-title {
+
+    color: #1e3a8a;
+
+    border-bottom:
+        3px solid #dbeafe;
+
+    padding-bottom: 12px;
+
+    margin-top: 0;
+}
+
+h3 {
+
+    color: #1d4ed8;
+
+    margin-top: 30px;
+}
+
+h4 {
+
+    color: #374151;
+}
+
+
+/* =========================================================
+   LEARNING BOXES
+========================================================= */
+
+.learn {
+
+    background: #eff6ff;
+
+    border-left:
+        5px solid #2563eb;
+
+    padding: 18px 20px;
+
+    border-radius: 7px;
+
+    margin: 20px 0;
+}
+
+.remember {
+
+    background: #f0fdf4;
+
+    border-left:
+        5px solid #16a34a;
+
+    padding: 18px 20px;
+
+    border-radius: 7px;
+
+    margin: 20px 0;
+}
+
+.warning {
+
+    background: #fff7ed;
+
+    border-left:
+        5px solid #f97316;
+
+    padding: 18px 20px;
+
+    border-radius: 7px;
+
+    margin: 20px 0;
+}
+
+.tip {
+
+    background: #faf5ff;
+
+    border-left:
+        5px solid #9333ea;
+
+    padding: 18px 20px;
+
+    border-radius: 7px;
+
+    margin: 20px 0;
+}
+
+.challenge {
+
+    background: #fdf4ff;
+
+    border-left:
+        5px solid #a21caf;
+
+    padding: 18px 20px;
+
+    border-radius: 7px;
+
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-container {
+
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    margin: 25px 0;
+}
+
+.video-container iframe {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   CODE
+========================================================= */
+
+pre {
+
+    background: #111827;
+
+    color: #e5e7eb;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+code {
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 20px 0;
+}
+
+th,
+td {
+
+    border:
+        1px solid #d1d5db;
+
+    padding: 12px;
+
+    text-align: left;
+
+    vertical-align: top;
+}
+
+th {
+
+    background: #e0e7ff;
+
+    color: #1e3a8a;
+}
+
+
+/* =========================================================
+   QUESTIONS
+========================================================= */
+
+.question {
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+
+    padding: 18px;
+
+    border-radius: 9px;
+
+    margin: 14px 0;
+}
+
+.answer {
+
+    display: none;
+
+    margin-top: 12px;
+
+    padding: 14px;
+
+    background: #ecfdf5;
+
+    border-left:
+        4px solid #10b981;
+
+    border-radius: 5px;
+}
+
+.show-answer {
+
+    border: none;
+
+    background: #1d4ed8;
+
+    color: white;
+
+    padding:
+        7px
+        13px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-top: 8px;
+}
+
+.show-answer:hover {
+
+    background: #1e40af;
+}
+
+
+/* =========================================================
+   RESOURCE BUTTON
+========================================================= */
+
+.resource-button {
+
+    display: inline-block;
+
+    background: #1d4ed8;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding:
+        11px
+        18px;
+
+    border-radius: 8px;
+
+    margin:
+        7px
+        5px
+        7px
+        0;
+
+    font-weight: 600;
+}
+
+.resource-button:hover {
+
+    background: #1e40af;
+}
+
+
+/* =========================================================
+   CHECKLIST
+========================================================= */
+
+.checklist {
+
+    list-style: none;
+
+    padding: 0;
+}
+
+.checklist li {
+
+    margin: 10px 0;
+
+    padding: 10px 12px;
+
+    background: #f8fafc;
+
+    border-radius: 7px;
+}
+
+.checklist li::before {
+
+    content: "☐ ";
+
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    background: #172554;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px) {
+
+    header h1 {
+
+        font-size: 28px;
+    }
+
+    .day-buttons {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .card {
+
+        padding: 20px;
+    }
+
+    pre {
+
+        font-size: 13px;
+    }
+
+    table {
+
+        font-size: 14px;
+    }
+
+}
+
+</style>
+
+<script src="/firebase-config.js"></script>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js';
+import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
+const app=initializeApp(window.FXEC_FIREBASE_CONFIG),auth=getAuth(app),functions=getFunctions(app,'us-central1');
+onAuthStateChanged(auth,async user=>{const gate=document.getElementById('courseGate'),course=document.getElementById('protectedCourse');if(!user){gate.hidden=false;course.hidden=true;return;}try{const p=(await httpsCallable(functions,'getStudentProfile')({})).data;if(!p.registered){gate.hidden=false;course.hidden=true;return;}gate.hidden=true;course.hidden=false;}catch(e){gate.hidden=false;course.hidden=true;}});
+</script>
+<style>
+body{background:#f5f7fb}.learningTopbar{position:sticky;top:0;z-index:1000;background:rgba(15,43,82,.97);color:#fff;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 5px 20px rgba(15,43,82,.18)}.learningTopbar a{color:#fff;text-decoration:none;background:#2563eb;padding:8px 13px;border-radius:9px;font-weight:700;font-size:13px}.courseGate{min-height:100vh;display:grid;place-items:center;padding:30px}.courseGateCard{max-width:620px;background:#fff;border-radius:22px;padding:40px;box-shadow:0 18px 50px rgba(15,43,82,.12);text-align:center}.courseGateCard h1{color:#102a43;margin:0 0 10px}.courseGateCard p{color:#64748b;line-height:1.7}.courseGateCard a{display:inline-block;margin-top:12px;background:#2563eb;color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700}.learningShell{max-width:1180px;margin:auto}.learningShell .container{max-width:1180px}.learningShell .card{box-shadow:0 8px 30px rgba(20,40,80,.07);border:1px solid #e6edf5}
+</style>
+</head>
+
+
+<body><div id="courseGate" class="courseGate"><div class="courseGateCard"><div style="color:#2563eb;letter-spacing:1.5px;font-weight:800;font-size:11px">FXEC · LEARNING CENTRE</div><h1>C Programming – Level 3 | Strings</h1><p>Please sign in and complete your one-time student registration to access the full five-day learning material. Registration may remain pending; learning content is available while you wait for Administrator approval.</p><a href="/">← Return to Student Portal</a></div></div><div id="protectedCourse" class="learningShell" hidden><div class="learningTopbar"><strong>FXEC C Programming Academy · Level 3 · Strings</strong><a href="/">← Student Dashboard</a></div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<h1>
+C Programming – Level 3
+</h1>
+
+<h2>
+Strings
+</h2>
+
+<p>
+5-Day Self-Learning Study Material
+</p>
+
+<p>
+Reward Points Activity
+</p>
+
+<p>
+<strong>
+Learn → Watch → Practice → Think → Code → Test
+</strong>
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- =========================================================
+     PROGRESS
+========================================================= -->
+
+<div class="progress-box">
+
+<strong id="progressText">
+
+Day 1 of 5 – String Basics
+
+</strong>
+
+<div class="progress-bar">
+
+<div
+    id="progressFill"
+    class="progress-fill">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     DAY BUTTONS
+========================================================= -->
+
+<div class="day-buttons">
+
+
+<button
+    class="day-button active"
+    onclick="showDay(1,this)">
+
+DAY 1
+
+<br>
+
+<small>
+String Basics
+</small>
+
+</button>
+
+
+<button
+    class="day-button"
+    onclick="showDay(2,this)">
+
+DAY 2
+
+<br>
+
+<small>
+String Functions
+</small>
+
+</button>
+
+
+<button
+    class="day-button"
+    onclick="showDay(3,this)">
+
+DAY 3
+
+<br>
+
+<small>
+Manual Processing
+</small>
+
+</button>
+
+
+<button
+    class="day-button"
+    onclick="showDay(4,this)">
+
+DAY 4
+
+<br>
+
+<small>
+String Analysis
+</small>
+
+</button>
+
+
+<button
+    class="day-button"
+    onclick="showDay(5,this)">
+
+DAY 5
+
+<br>
+
+<small>
+Advanced Problems
+</small>
+
+</button>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     DAY 1
+========================================================= -->
+
+<section
+    id="day1"
+    class="day active">
+
+
+<!-- INTRO -->
+
+<div class="card">
+
+<h2 class="day-title">
+
+DAY 1 – Understanding Strings
+
+</h2>
+
+
+<div class="learn">
+
+<strong>
+Today's Learning Goal
+</strong>
+
+<p>
+By the end of Day 1, you should be able to:
+</p>
+
+<ul>
+
+<li>
+Explain what a string is in C.
+</li>
+
+<li>
+Understand character arrays.
+</li>
+
+<li>
+Explain the null character <code>\0</code>.
+</li>
+
+<li>
+Declare and initialize strings.
+</li>
+
+<li>
+Read strings from the user.
+</li>
+
+<li>
+Access characters using indexes.
+</li>
+
+<li>
+Modify individual characters.
+</li>
+
+</ul>
+
+</div>
+
+
+<h3>
+1. What is a String?
+</h3>
+
+<p>
+A string is a sequence of characters used to represent
+textual data.
+</p>
+
+<p>
+For example:
+</p>
+
+<pre>
+Jack
+</pre>
+
+<p>
+The individual characters are:
+</p>
+
+<pre>
+J   a   c   k
+</pre>
+
+<p>
+In C, strings are represented using arrays of characters.
+</p>
+
+<pre>
+char name[] = "Jack";
+</pre>
+
+
+<h3>
+2. The Null Character
+</h3>
+
+<p>
+A C string ends with a special character called the
+<strong>null character</strong>.
+</p>
+
+<pre>
+'\0'
+</pre>
+
+<p>
+Therefore:
+</p>
+
+<pre>
+J   a   c   k   \0
+</pre>
+
+<div class="remember">
+
+<strong>
+Remember:
+</strong>
+
+<p>
+The null character tells C where the string ends.
+</p>
+
+</div>
+
+
+<h3>
+3. String Size
+</h3>
+
+<p>
+"Jack" has four visible characters.
+But a C string also needs <code>\0</code>.
+</p>
+
+<pre>
+J   a   c   k   \0
+
+1   2   3   4    5
+</pre>
+
+<p>
+Therefore five positions are required.
+</p>
+
+
+<h3>
+4. Character Array
+</h3>
+
+<pre>
+char name[20];
+</pre>
+
+<p>
+This creates space for 20 characters.
+</p>
+
+<p>
+A string can also be initialized directly:
+</p>
+
+<pre>
+char name[] = "Jack";
+</pre>
+
+
+<h3>
+5. Printing a String
+</h3>
+
+<pre>
+printf("%s", name);
+</pre>
+
+<p>
+The <code>%s</code> format specifier tells
+<code>printf()</code> that we are printing a string.
+</p>
+
+
+<h3>
+6. Accessing Individual Characters
+</h3>
+
+<pre>
+char name[] = "Jack";
+
+printf("%c", name[0]);
+</pre>
+
+<p>
+Output:
+</p>
+
+<pre>
+J
+</pre>
+
+<p>
+Remember that indexing starts from zero.
+</p>
+
+<table>
+
+<tr>
+<th>Index</th>
+<th>Character</th>
+</tr>
+<tr>
+<td>0</td>
+<td>J</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>a</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>c</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>k</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>\0</td>
+</tr>
+
+</table>
+
+
+<h3>
+7. Reading a String
+</h3>
+
+<pre>
+char name[50];
+
+scanf("%49s", name);
+</pre>
+
+<p>
+Notice that we do not use:
+</p>
+
+<pre>
+&name
+</pre>
+
+<p>
+because the array expression is used as the address
+of its first element in this context.
+</p>
+
+
+<h3>
+8. Why scanf() Has a Limitation
+</h3>
+
+<p>
+Suppose the user enters:
+</p>
+
+<pre>
+Jack Smith
+</pre>
+
+<p>
+With:
+</p>
+
+<pre>
+scanf("%49s", name);
+</pre>
+
+<p>
+the first word is read because whitespace terminates
+the <code>%s</code> conversion.
+</p>
+
+
+<h3>
+9. Reading a Complete Line</h3>
+
+<pre>
+char name[100];
+
+fgets(
+    name,
+    sizeof(name),
+    stdin
+);
+</pre>
+
+<p>
+This is suitable when the input may contain spaces.
+</p>
+
+
+<div class="warning">
+
+<strong>
+Important:
+</strong>
+
+<p>
+Do not use <code>gets()</code>.
+It was removed from the C standard because it cannot
+safely limit input length.
+</p>
+
+</div>
+
+
+<h3>
+10. Modifying a Character
+</h3>
+
+<pre>
+char name[] = "Jack";
+
+name[0] = 'L';
+
+printf("%s", name);
+</pre>
+
+<p>
+Output:
+</p>
+
+<pre>
+Lack
+</pre>
+
+</div>
+
+
+<!-- VIDEO -->
+
+<div class="card">
+
+<h2>
+🎥 Day 1 – Programiz Video
+</h2>
+
+<div class="learn">
+
+<strong>
+Watch this before doing the exercises.
+</strong>
+
+<p>
+This Programiz video covers C strings, string creation,
+input, <code>fgets()</code>, indexing and modifying
+characters.
+</p>
+
+<p>
+It is the direct video companion for Day 1.
+</p>
+
+</div>
+
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/l7zI3nswO1g"
+title="Programiz - C Strings"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<p>
+<strong>
+Video:
+</strong>
+Programiz – #21 C Strings | C Programming For Beginners
+</p>
+
+</div>
+
+
+<!-- QUESTIONS -->
+
+<div class="card">
+
+<h2>
+Day 1 – Test Your Knowledge
+</h2>
+
+
+<div class="question">
+
+<strong>
+Question 1
+</strong>
+
+<p>
+How many visible characters are present in:
+</p>
+
+<pre>
+"Computer"
+</pre>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d1q1')">
+
+Show Answer
+
+</button>
+
+<div
+id="d1q1"
+class="answer">
+
+8 visible characters.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<strong>
+Question 2
+</strong>
+
+<p>
+How many array positions are required to store
+<code>"Computer"</code> as a C string?
+</p>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d1q2')">
+
+Show Answer
+
+</button>
+
+<div
+id="d1q2"
+class="answer">
+
+9 positions, including <code>\0</code>.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<strong>
+Question 3
+</strong>
+
+<p>
+What will this print?
+</p>
+
+<pre>
+char str[] = "Hello";
+
+printf("%c", str[1]);
+</pre>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d1q3')">
+
+Show Answer
+
+</button>
+
+<div
+id="d1q3"
+class="answer">
+
+<code>e</code>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<strong>
+Question 4
+</strong>
+
+<p>
+Which function should be used when a complete input line
+may contain spaces?
+</p>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d1q4')">
+
+Show Answer
+
+</button>
+
+<div
+id="d1q4"
+class="answer">
+
+<code>fgets()</code>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- EXERCISES -->
+
+<div class="card">
+
+<h2>
+Day 1 – Exercises
+</h2>
+
+<ol>
+
+<li>
+Print every character of a string.
+</li>
+
+<li>
+Find string length without using <code>strlen()</code>.
+</li>
+
+<li>
+Print the first character.
+</li>
+
+<li>
+Print the last character.
+</li>
+
+<li>
+Count vowels.
+</li>
+
+<li>
+Count digits.
+</li>
+
+<li>
+Read a student's full name using <code>fgets()</code>.
+</li>
+
+<li>
+Change the first character of the name to <code>X</code>.
+</li>
+
+</ol>
+
+
+<div class="challenge">
+
+<strong>
+Day 1 Coding Challenge
+</strong>
+
+<p>
+Read a student's full name and print the name.
+Then change the first character to <code>X</code>.
+</p>
+
+<pre>
+Input:
+Jack Williams
+
+Output:
+Xack Williams
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DAY 2
+========================================================= -->
+
+<section
+    id="day2"
+    class="day">
+
+
+<div class="card">
+
+<h2 class="day-title">
+
+DAY 2 – String Library Functions
+
+</h2>
+
+
+<div class="learn">
+
+<strong>
+Today's Learning Goal
+</strong>
+
+<p>
+Today you will learn the four most commonly used
+C string functions:
+</p>
+
+<ul>
+
+<li><code>strlen()</code></li>
+
+<li><code>strcpy()</code></li>
+
+<li><code>strcat()</code></li>
+
+<li><code>strcmp()</code></li>
+
+</ul>
+
+</div>
+
+
+<h3>
+1. The string.h Header File
+</h3>
+
+<pre>
+#include &lt;string.h&gt;
+</pre>
+
+<p>
+The standard string handling functions are declared
+in this header.
+</p>
+
+
+<h3>
+2. strlen()
+</h3>
+
+<pre>
+char word[] = "Computer";
+
+printf("%zu", strlen(word));
+</pre>
+
+<p>
+Output:
+</p>
+
+<pre>
+8
+</pre>
+
+<p>
+The null character is not included in the returned length.
+</p>
+
+
+<h3>
+3. strcpy()
+</h3>
+
+<pre>
+char source[] = "Programming";
+
+char destination[50];
+
+strcpy(destination, source);
+</pre>
+
+<p>
+The contents of <code>source</code> are copied to
+<code>destination</code>.
+</p>
+
+
+<h3>
+4. strcat()
+</h3>
+
+<pre>
+char first[50] = "Hello ";
+
+char second[] = "World";
+
+strcat(first, second);
+
+printf("%s", first);
+</pre>
+
+<p>
+Output:
+</p>
+
+<pre>
+Hello World
+</pre>
+
+
+<h3>
+5. strcmp()
+</h3>
+
+<pre>
+if(strcmp(a,b) == 0)
+{
+    printf("Equal");
+}
+</pre>
+
+<p>
+A return value of zero means that the strings are equal.
+</p>
+
+
+<table>
+
+<tr>
+<th>Function</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>strlen()</td>
+<td>Find string length</td>
+</tr>
+
+<tr>
+<td>strcpy()</td>
+<td>Copy a string</td>
+</tr>
+
+<tr>
+<td>strcat()</td>
+<td>Join strings</td>
+</tr>
+
+<tr>
+<td>strcmp()</td>
+<td>Compare strings</td>
+</tr>
+
+</table>
+
+
+<div class="warning">
+
+<strong>
+Important:
+</strong>
+
+<p>
+The destination array used by <code>strcpy()</code> and
+<code>strcat()</code> must have enough capacity for the
+result including the terminating null character.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- VIDEO -->
+
+<div class="card">
+
+<h2>
+🎥 Day 2 – Programiz Video
+</h2>
+
+<div class="learn">
+
+<strong>
+Watch this video:
+</strong>
+
+<p>
+This Programiz video specifically teaches the four
+string functions used in this day.
+</p>
+
+</div>
+
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/XdnmsKUvGsc"
+title="Programiz - C String Functions"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<p>
+<strong>
+Programiz:
+</strong>
+#22 C String Functions | C Programming For Beginners
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 2 – Worked Example
+</h2>
+
+<p>
+Read two strings and determine whether they are equal.
+</p>
+
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main()
+{
+    char first[50];
+    char second[50];
+
+    scanf("%49s", first);
+    scanf("%49s", second);
+
+    if(strcmp(first, second) == 0)
+    {
+        printf("Equal");
+    }
+    else
+    {
+        printf("Not Equal");
+    }
+
+    return 0;
+}
+</pre>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 2 – Exercises
+</h2>
+
+<ol>
+
+<li>
+Find the length of a string using <code>strlen()</code>.
+</li>
+
+<li>
+Copy one string into another.
+</li>
+
+<li>
+Join first name and last name.
+</li>
+
+<li>
+Compare two passwords.
+</li>
+
+<li>
+Find the longer of two strings.
+</li>
+
+<li>
+Read two strings and determine whether they are identical.
+</li>
+
+</ol>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 2 – Test Your Knowledge
+</h2>
+
+
+<div class="question">
+
+Which header file is required for
+<code>strlen()</code>?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d2q1')">
+
+Show Answer
+
+</button>
+
+<div
+id="d2q1"
+class="answer">
+
+<code>&lt;string.h&gt;</code>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+Does <code>strlen()</code> count <code>\0</code>?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d2q2')">
+
+Show Answer
+
+</button>
+
+<div
+id="d2q2"
+class="answer">
+
+No.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+Which function compares two strings?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d2q3')">
+
+Show Answer
+
+</button>
+
+<div
+id="d2q3"
+class="answer">
+
+<code>strcmp()</code>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+Which function joins two strings?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d2q4')">
+
+Show Answer
+
+</button>
+
+<div
+id="d2q4"
+class="answer">
+
+<code>strcat()</code>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 2 – Coding Challenge
+</h2>
+
+<div class="challenge">
+
+<p>
+Create a student name program.
+</p>
+
+<p>
+Input:
+</p>
+
+<ul>
+
+<li>First name</li>
+
+<li>Last name</li>
+
+</ul>
+
+<p>
+Output:
+</p>
+
+<ul>
+
+<li>Full name</li>
+
+<li>Full name length</li>
+
+</ul>
+
+<p>
+Use <code>strcpy()</code>,
+<code>strcat()</code> and
+<code>strlen()</code>.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DAY 3
+========================================================= -->
+
+<section
+    id="day3"
+    class="day">
+
+
+<div class="card">
+
+<h2 class="day-title">
+
+DAY 3 – Manual String Processing
+
+</h2>
+
+
+<div class="learn">
+
+<strong>
+Today's Learning Goal
+</strong>
+
+<p>
+Today you will learn how string functions work by
+implementing the basic operations yourself.
+</p>
+
+<p>
+This is important for coding assessments because
+you should understand the algorithm rather than
+only memorizing library functions.
+</p>
+
+</div>
+
+
+<h3>
+1. Manual String Length
+</h3>
+
+<pre>
+int stringLength(char str[])
+{
+    int count = 0;
+
+    while(str[count] != '\0')
+    {
+        count++;
+    }
+
+    return count;
+}
+</pre>
+
+
+<h3>
+2. Manual String Copy
+</h3>
+
+<pre>
+void copyString(
+    char destination[],
+    char source[]
+)
+{
+    int i = 0;
+
+    while(source[i] != '\0')
+    {
+        destination[i] = source[i];
+
+        i++;
+    }
+
+    destination[i] = '\0';
+}
+</pre>
+
+
+<h3>
+3. Manual String Comparison
+</h3>
+
+<pre>
+int compareStrings(
+    char a[],
+    char b[]
+)
+{
+    int i = 0;
+
+    while(
+        a[i] != '\0' &&
+        b[i] != '\0'
+    )
+    {
+        if(a[i] != b[i])
+        {
+            return a[i] - b[i];
+        }
+
+        i++;
+    }
+
+    return a[i] - b[i];
+}
+</pre>
+
+
+<h3>
+4. Reverse a String
+</h3>
+
+<p>
+The two-pointer method is useful here.
+</p>
+
+<pre>
+LEFT  →        ← RIGHT
+
+H E L L O
+</pre>
+
+<p>
+Swap the characters and move the pointers toward the center.
+</p>
+
+<pre>
+char temp;
+
+temp = str[left];
+
+str[left] = str[right];
+
+str[right] = temp;
+</pre>
+
+
+<h3>
+5. Removing Spaces
+</h3>
+
+<pre>
+void removeSpaces(char str[])
+{
+    int i;
+    int j = 0;
+
+    for(i = 0;        str[i] != '\0';
+        i++)
+    {
+        if(str[i] != ' ')
+        {
+            str[j] = str[i];
+
+            j++;
+        }
+    }
+
+    str[j] = '\0';
+}
+</pre>
+
+
+<h3>
+6. Character Conversion
+</h3>
+
+<pre>
+if(
+    str[i] >= 'a' &&
+    str[i] <= 'z'
+)
+{
+    str[i] =
+        str[i] - 'a' + 'A';
+}
+</pre>
+
+
+<div class="tip">
+
+<strong>
+Programming Pattern:
+</strong>
+
+<p>
+Many string algorithms follow this structure:
+</p>
+
+<pre>
+Start
+  ↓
+Read character
+  ↓
+Check condition
+  ↓
+Process character
+  ↓
+Move to next character
+  ↓
+Stop at \0
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- RESOURCE -->
+
+<div class="card">
+
+<h2>
+📚 Day 3 – Programiz Learning Resources
+</h2>
+
+<p>
+Programiz provides worked examples that complement this day.
+These are particularly useful after watching Days 1 and 2.
+</p>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/examples/string-length"
+target="_blank">
+
+Manual String Length
+
+</a>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/examples/string-copy"
+target="_blank">
+
+Copy String Without strcpy()
+
+</a>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/c-string-examples"
+target="_blank">
+
+C String Examples
+
+</a>
+
+
+<div class="remember">
+
+<strong>
+Study Method:
+</strong>
+
+<p>
+Do not copy the Programiz solution immediately.
+First attempt the problem yourself.
+Then compare your logic with the worked example.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 3 – Exercises
+</h2>
+
+<ol>
+
+<li>
+Implement <code>strlen()</code> manually.
+</li>
+
+<li>
+Implement <code>strcpy()</code> manually.
+</li>
+
+<li>
+Implement <code>strcmp()</code> manually.
+</li>
+
+<li>
+Reverse a string.
+</li>
+
+<li>
+Remove spaces.
+</li>
+
+<li>
+Convert lowercase characters to uppercase.
+</li>
+
+<li>
+Replace one character with another.
+</li>
+
+<li>
+Count vowels without using string library functions.
+</li>
+
+</ol>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 3 – Test Your Knowledge
+</h2>
+
+<div class="question">
+
+Why must a manually copied string end with
+<code>\0</code>?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d3q1')">
+
+Show Answer
+
+</button>
+
+<div
+id="d3q1"
+class="answer">
+
+Because C uses <code>\0</code> to identify the end of
+the string.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+Which technique is useful for reversing a string?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d3q2')">
+
+Show Answer
+
+</button>
+
+<div
+id="d3q2"
+class="answer">
+
+The two-pointer technique.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+What condition normally identifies the end of a C string?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d3q3')">
+
+Show Answer
+
+</button>
+
+<div
+id="d3q3"
+class="answer">
+
+<code>str[i] == '\0'</code>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 3 – Coding Challenge
+</h2>
+
+<div class="challenge">
+
+<p>
+Write a program that reads a sentence and:
+</p>
+
+<ol>
+
+<li>Removes all spaces.</li>
+
+<li>Converts lowercase letters to uppercase.</li>
+
+<li>Reverses the resulting string.</li>
+
+</ol>
+
+<pre>
+Input:
+hello world
+
+Output:
+DLROWOLLEH
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DAY 4
+========================================================= -->
+
+<section
+    id="day4"
+    class="day">
+
+
+<div class="card">
+
+<h2 class="day-title">
+
+DAY 4 – Character Frequency and String Analysis
+
+</h2>
+
+
+<div class="learn">
+
+<strong>
+Today's Learning Goal
+</strong>
+
+<p>
+Today you will learn how to analyse the information contained
+inside a string.
+</p>
+
+<p>
+You will learn:
+</p>
+
+<ul>
+
+<li>Character frequency</li>
+
+<li>Repeating characters</li>
+
+<li>Non-repeating characters</li>
+
+<li>Vowels and consonants</li>
+
+<li>Digits and special characters</li>
+
+<li>Word counting</li>
+
+<li>Longest word</li>
+
+</ul>
+
+</div>
+
+
+<h3>
+1. Character Frequency
+</h3>
+
+<p>
+Consider:
+</p>
+
+<pre>
+banana
+</pre>
+
+<p>
+The frequency is:
+</p>
+
+<pre>
+b = 1
+a = 3
+n = 2
+</pre>
+
+
+<h3>
+2. Frequency Array
+</h3>
+
+<pre>
+int frequency[256] = {0};
+
+for(
+    int i = 0;
+    str[i] != '\0';
+    i++
+)
+{
+    frequency[
+        (unsigned char)str[i]
+    ]++;
+}
+</pre>
+
+
+<h3>
+3. Most Frequent Character
+</h3>
+
+<pre>
+int max = 0;
+
+char result;
+
+for(int i = 0; i < 256; i++)
+{
+    if(frequency[i] > max)
+    {
+        max = frequency[i];
+
+        result = i;
+    }
+}
+
+printf("%c", result);
+</pre>
+
+
+<h3>
+4. First Non-Repeating Character
+</h3>
+
+<p>
+Consider:
+</p>
+
+<pre>
+swiss
+</pre>
+
+<p>
+The frequencies are:
+</p>
+
+<pre>
+s = 3
+w = 1
+i = 1
+</pre>
+
+<p>
+The first character with frequency 1 is:
+</p>
+
+<pre>
+w
+</pre>
+
+
+<h3>
+5. Count Vowels</h3>
+
+<pre>
+if(
+    str[i] == 'a' ||
+    str[i] == 'e' ||
+    str[i] == 'i' ||
+    str[i] == 'o' ||
+    str[i] == 'u'
+)
+{
+    vowels++;
+}
+</pre>
+
+
+<h3>
+6. Character Classification
+</h3>
+
+<pre>
+if(
+    str[i] >= 'A' &&
+    str[i] <= 'Z'
+)
+{
+    uppercase++;
+}
+
+else if(
+    str[i] >= 'a' &&
+    str[i] <= 'z'
+)
+{
+    lowercase++;
+}
+
+else if(
+    str[i] >= '0' &&
+    str[i] <= '9'
+)
+{
+    digits++;
+}
+
+else if(str[i] == ' ')
+{
+    spaces++;
+}
+
+else
+{
+    special++;
+}
+</pre>
+
+
+<h3>
+7. Word Counting
+</h3>
+
+<p>
+For:
+</p>
+
+<pre>
+C programming is interesting
+</pre>
+
+<p>
+the number of words is four.
+</p>
+
+<p>
+A useful strategy is to detect the beginning of a word,
+rather than simply counting spaces.
+</p>
+
+
+<h3>
+8. Longest Word
+</h3>
+
+<pre>
+C programming develops logical thinking
+</pre>
+
+<p>
+The longest word is:
+</p>
+
+<pre>
+programming
+</pre>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+📚 Day 4 – Programiz Practice Resources
+</h2>
+
+<p>
+Programiz provides a collection of C string problems that
+fit naturally into today's learning.
+</p>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/c-string-examples"
+target="_blank">
+
+C String Examples
+
+</a>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/examples/string-length"
+target="_blank">
+
+String Length
+
+</a>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/examples/remove-characters-string"
+target="_blank">
+
+Remove Characters
+
+</a>
+
+<div class="tip">
+
+<strong>
+Challenge yourself:
+</strong>
+
+<p>
+Try the Programiz examples without looking at the solution first.
+Then compare your algorithm with the reference implementation.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 4 – Exercises
+</h2>
+
+<ol>
+
+<li>
+Find frequency of every character.
+</li>
+
+<li>
+Find the most frequent character.
+</li>
+
+<li>
+Find the first repeating character.
+</li>
+
+<li>
+Find the first non-repeating character.
+</li>
+
+<li>
+Count vowels and consonants.
+</li>
+
+<li>
+Count uppercase and lowercase letters.
+</li>
+
+<li>
+Count digits and special characters.
+</li>
+
+<li>
+Count words.
+</li>
+
+<li>
+Find the longest word.
+</li>
+
+<li>
+Find the shortest word.
+</li>
+
+</ol>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 4 – Test Your Knowledge
+</h2>
+
+
+<div class="question">
+
+What is the frequency of <code>a</code> in:
+
+<pre>
+banana
+</pre>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d4q1')">
+
+Show Answer
+
+</button>
+
+<div
+id="d4q1"
+class="answer">
+
+3
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+What is the first non-repeating character in:
+
+<pre>
+swiss
+</pre>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d4q2')">
+
+Show Answer
+
+</button>
+
+<div
+id="d4q2"
+class="answer">
+
+w
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+How many words are present?
+
+<pre>
+C programming is interesting
+</pre>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d4q3')">
+
+Show Answer
+
+</button>
+
+<div
+id="d4q3"
+class="answer">
+
+4
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 4 – Coding Challenge
+</h2>
+
+<div class="challenge">
+
+<p>
+Build a complete String Analyzer.
+</p>
+
+<p>
+Given a sentence, display:
+</p>
+
+<ul>
+
+<li>Total characters</li>
+
+<li>Total words</li>
+
+<li>Total vowels</li>
+
+<li>Total consonants</li>
+
+<li>Total digits</li>
+
+<li>Total spaces</li>
+
+<li>Total special characters</li>
+
+<li>Most frequent character</li>
+
+<li>First non-repeating character</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DAY 5
+========================================================= -->
+
+<section
+    id="day5"
+    class="day">
+
+
+<div class="card">
+
+<h2 class="day-title">
+
+DAY 5 – Advanced String Problem Solving
+
+</h2>
+
+
+<div class="learn">
+
+<strong>
+Today's Learning Goal
+</strong>
+
+<p>
+Today you will combine the techniques learned during Days 1–4
+to solve more challenging programming problems.
+</p>
+
+<p>
+The focus is not memorizing code.
+The focus is recognising the correct algorithmic pattern.
+</p>
+
+</div>
+
+
+<h3>
+1. Palindrome
+</h3>
+
+<p>
+A palindrome reads the same from both directions.
+</p>
+
+<pre>
+madam
+level
+radar
+civic
+</pre>
+
+
+<h3>
+2. Palindrome Using Two Pointers
+</h3>
+
+<pre>
+int left = 0;
+
+int right =
+    strlen(str) - 1;
+
+while(left < right)
+{
+    if(str[left] != str[right])
+    {
+        printf(
+            "Not Palindrome"
+        );
+
+        return 0;
+    }
+
+    left++;
+
+    right--;
+}
+
+printf("Palindrome");
+</pre>
+
+
+<h3>
+3. Case-Insensitive Palindrome
+</h3>
+
+<p>
+Should:
+</p>
+
+<pre>
+Madam
+</pre>
+
+<p>
+be treated as a palindrome?
+</p>
+
+<p>
+If the problem says that case should be ignored, then yes.
+The algorithm must normalize the characters before comparison.
+</p>
+
+
+<h3>
+4. Palindrome Ignoring Spaces
+</h3>
+
+<p>
+An advanced problem may give:
+</p>
+
+<pre>
+A man a plan a canal Panama
+</pre>
+
+<p>
+The program may need to ignore spaces and case.
+</p>
+
+
+<h3>
+5. Anagram
+</h3>
+
+<p>
+Two strings are anagrams when they contain the same characters
+with the same frequencies.
+</p>
+
+<pre>
+listen
+silent
+</pre>
+
+<p>
+These are anagrams.
+</p>
+
+
+<h3>
+6. Anagram Using Frequency Array
+</h3>
+
+<pre>
+int freq1[256] = {0};
+
+int freq2[256] = {0};
+
+for(
+    int i = 0;
+    str1[i] != '\0';
+    i++
+)
+{
+    freq1[
+        (unsigned char)str1[i]
+    ]++;
+}
+
+for(
+    int i = 0;
+    str2[i] != '\0';
+    i++
+)
+{
+    freq2[
+        (unsigned char)str2[i]
+    ]++;
+}
+
+for(int i = 0; i < 256; i++)
+{
+    if(freq1[i] != freq2[i])
+    {
+        printf(
+            "Not Anagram"
+        );
+
+        return 0;
+    }
+}
+
+printf("Anagram");
+</pre>
+
+
+<h3>
+7. String Rotation
+</h3>
+
+<p>
+Consider:
+</p>
+
+<pre>
+abcd
+</pre>
+
+<p>
+Rotations include:
+</p>
+
+<pre>
+bcda
+cdab
+dabc
+</pre>
+
+
+<p>
+A common technique is to consider:
+</p>
+
+<pre>
+abcdabcd
+</pre>
+
+<p>
+If the candidate string appears inside this doubled string,
+it can be a rotation of the original.
+</p>
+
+
+<h3>8. Remove Duplicate Characters
+</h3>
+
+<p>
+Given:
+</p>
+
+<pre>
+programming
+</pre>
+
+<p>
+Try to produce a version that retains only the first occurrence
+of each character.
+</p>
+
+
+<h3>
+9. String Compression
+</h3>
+
+<p>
+Given:
+</p>
+
+<pre>
+aaabbcccc
+</pre>
+
+<p>
+Produce:
+</p>
+
+<pre>
+a3b2c4
+</pre>
+
+<p>
+This is a basic form of run-length encoding.
+</p>
+
+
+<h3>
+10. Subsequence
+</h3>
+
+<p>
+Consider:
+</p>
+
+<pre>
+Main string:
+abcdef
+
+Candidate:
+ace
+</pre>
+
+<p>
+The candidate is a subsequence because the characters occur
+in the same order.
+</p>
+
+
+<h3>
+11. Longest Substring Without Repeating Characters
+</h3>
+
+<p>
+Given:
+</p>
+
+<pre>
+abcabcbb
+</pre>
+
+<p>
+One longest substring without repeating characters is:
+</p>
+
+<pre>
+abc
+</pre>
+
+<p>
+Therefore the answer is:
+</p>
+
+<pre>
+3
+</pre>
+
+
+<div class="challenge">
+
+<strong>
+Advanced Thinking:
+</strong>
+
+<p>
+First solve this using a straightforward nested-loop approach.
+Then try to improve it using a frequency array.
+Finally, study the sliding-window technique.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RESOURCES -->
+
+<div class="card">
+
+<h2>
+📚 Day 5 – Programiz Advanced Practice
+</h2>
+
+<p>
+Programiz has a collection of string problems that can be used
+for additional practice after completing the core material.
+</p>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/c-string-examples"
+target="_blank">
+
+Programiz String Examples
+
+</a>
+
+<a
+class="resource-button"
+href="https://www.programiz.com/c-programming/c-strings"
+target="_blank">
+
+Programiz C Strings Tutorial
+
+</a>
+
+
+<div class="remember">
+
+<strong>
+Important:
+</strong>
+
+<p>
+Do not attempt every advanced problem immediately.
+Work in this order:
+</p>
+
+<pre>
+Understand
+    ↓
+Write algorithm
+    ↓
+Write pseudocode
+    ↓
+Write C code
+    ↓
+Test normal input
+    ↓
+Test edge cases
+    ↓
+Improve the algorithm
+</pre>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 5 – Exercises
+</h2>
+
+<ol>
+
+<li>
+Check whether a string is a palindrome.
+</li>
+
+<li>
+Check whether two strings are anagrams.
+</li>
+
+<li>
+Check whether one string is a rotation of another.
+</li>
+
+<li>
+Remove duplicate characters.
+</li>
+
+<li>
+Find the first non-repeating character.
+</li>
+
+<li>
+Compress a string.
+</li>
+
+<li>
+Check whether one string is a subsequence of another.
+</li>
+
+<li>
+Find the longest word.
+</li>
+
+<li>
+Find the longest substring without repeating characters.
+</li>
+
+</ol>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+Day 5 – Test Your Knowledge
+</h2>
+
+
+<div class="question">
+
+Is <code>madam</code> a palindrome?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d5q1')">
+
+Show Answer
+
+</button>
+
+<div
+id="d5q1"
+class="answer">
+
+Yes.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+Are <code>listen</code> and <code>silent</code> anagrams?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d5q2')">
+
+Show Answer
+
+</button>
+
+<div
+id="d5q2"
+class="answer">
+
+Yes.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+Is <code>ace</code> a subsequence of <code>abcde</code>?
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d5q3')">
+
+Show Answer
+
+</button>
+
+<div
+id="d5q3"
+class="answer">
+
+Yes.
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+What is the compressed form of:
+
+<pre>
+AAABBCCCC
+</pre>
+
+<button
+class="show-answer"
+onclick="toggleAnswer('d5q4')">
+
+Show Answer
+
+</button>
+
+<div
+id="d5q4"
+class="answer">
+
+A3B2C4
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+🎯 Day 5 – Final Coding Challenge
+</h2>
+
+<div class="challenge">
+
+<h3>
+Complete String Analyzer
+</h3>
+
+<p>
+Write one C program that accepts a complete sentence and displays:
+</p>
+
+<ol>
+
+<li>
+Number of characters
+</li>
+
+<li>
+Number of words
+</li>
+
+<li>
+Number of vowels
+</li>
+
+<li>
+Number of consonants
+</li>
+
+<li>
+Number of digits
+</li>
+
+<li>
+Number of spaces
+</li>
+
+<li>
+Number of special characters
+</li>
+
+<li>
+Most frequent character
+</li>
+
+<li>
+First non-repeating character
+</li>
+
+<li>
+Reversed string
+</li>
+
+<li>
+Palindrome status
+</li>
+
+<li>
+Longest word
+</li>
+
+</ol>
+
+
+<h4>
+Advanced Extension
+</h4>
+
+<ul>
+
+<li>
+Ignore case during palindrome checking.
+</li>
+
+<li>
+Ignore spaces.
+</li>
+
+<li>
+Ignore punctuation.
+</li>
+
+<li>
+Handle multiple spaces between words.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL MASTER CHECKLIST
+========================================================= -->
+
+<div class="card">
+
+<h2>
+Level 3 Strings – Mastery Checklist
+</h2>
+
+<p>
+Before moving to the next Level 3 topic, you should be able
+to do the following without copying code.
+</p>
+
+
+<ul class="checklist">
+
+<li>
+Explain what a C string is.
+</li>
+
+<li>
+Explain the purpose of <code>\0</code>.
+</li>
+
+<li>
+Declare character arrays.
+</li>
+
+<li>
+Initialize strings.
+</li>
+
+<li>
+Print strings using <code>%s</code>.
+</li>
+
+<li>
+Read a word using <code>scanf()</code>.
+</li>
+
+<li>
+Read a complete line using <code>fgets()</code>.
+</li>
+
+<li>
+Access characters using indexes.
+</li>
+
+<li>
+Modify characters.
+</li>
+
+<li>
+Use <code>strlen()</code>.
+</li>
+
+<li>
+Use <code>strcpy()</code>.
+</li>
+
+<li>
+Use <code>strcmp()</code>.
+</li>
+
+<li>
+Use <code>strcat()</code>.
+</li>
+
+<li>
+Implement string operations manually.
+</li>
+
+<li>
+Reverse a string.
+</li>
+
+<li>
+Use the two-pointer technique.
+</li>
+
+<li>
+Calculate character frequency.
+</li>
+
+<li>
+Find repeating characters.
+</li>
+
+<li>
+Find non-repeating characters.
+</li>
+
+<li>
+Count vowels and consonants.
+</li>
+
+<li>
+Count words.
+</li>
+
+<li>
+Find the longest word.
+</li>
+
+<li>
+Check palindromes.
+</li>
+
+<li>
+Check anagrams.
+</li>
+
+<li>
+Check string rotations.
+</li>
+
+<li>
+Remove duplicate characters.
+</li>
+
+<li>
+Perform basic string compression.
+</li>
+
+<li>
+Check subsequences.
+</li>
+
+<li>
+Approach advanced string problems systematically.
+</li>
+
+</ul>
+
+
+<div class="remember">
+
+<strong>
+Level 3 Standard
+</strong>
+
+<p>
+You should now be able to look at an unfamiliar string problem,
+identify the pattern involved, develop an algorithm, implement
+it in C, test edge cases and explain your solution.
+</p>
+
+<p>
+The objective is not merely to know string functions.
+The objective is to become capable of
+<strong>solving string problems independently.</strong>
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<strong>
+C Programming Academy – Level 3
+</strong>
+
+<p>
+Strings | 5-Day Self-Learning Module
+</p>
+
+<p>
+Reward Points Activity
+</p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+function showDay(day, button)
+{
+
+    /*
+       Hide all day sections
+    */
+
+    const days =
+        document.querySelectorAll(".day");
+
+
+    days.forEach(
+        function(section)
+        {
+            section.classList.remove(
+                "active"
+            );
+        }
+    );
+
+
+    /*
+       Display selected day
+    */
+
+    const selectedDay =
+        document.getElementById(
+            "day" + day
+        );
+
+
+    if(selectedDay)
+    {
+
+        selectedDay.classList.add(
+            "active"
+        );
+
+    }
+
+
+    /*
+       Reset buttons
+    */
+
+    const buttons =
+        document.querySelectorAll(
+            ".day-button"
+        );
+
+
+    buttons.forEach(
+        function(btn)
+        {
+
+            btn.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    /*
+       Activate selected button
+    */
+
+    button.classList.add(
+        "active"
+    );
+
+
+    /*
+       Progress
+    */
+
+    const progress =
+        document.getElementById(
+            "progressFill"
+        );
+
+
+    const progressText =
+        document.getElementById(
+            "progressText"
+        );
+
+
+    const percentage =
+        (day / 5) * 100;
+
+
+    progress.style.width =
+        percentage + "%";
+
+
+    const titles =
+    {
+
+        1:
+        "String Basics",
+
+        2:
+        "String Functions",
+
+        3:
+        "Manual String Processing",
+
+        4:
+        "String Analysis",
+
+        5:
+        "Advanced Problems"
+
+    };
+
+
+    progressText.innerHTML =
+        "Day " +
+        day +
+        " of 5 – " +
+        titles[day];
+
+
+    /*
+       Scroll to top
+    */
+
+    window.scrollTo(
+        {
+            top: 0,
+            behavior: "smooth"
+        }
+    );
+
+}
+
+
+
+function toggleAnswer(id)
+{
+
+    const answer =
+        document.getElementById(id);
+
+
+    if(
+        answer.style.display ===
+        "block"
+    )
+    {
+
+        answer.style.display =
+            "none";
+
+    }
+    else
+    {
+
+        answer.style.display =
+            "block";
+
+    }
+
+}
+
+</script>
+
+
+</div></body>
+</html>
