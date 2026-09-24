@@ -81,8 +81,9 @@ function renderRewardPointsRegistration(){
   const existing=$('rewardPointsActivity');
   if(!existing) return;
   const formUrl='https://forms.gle/NpgpUTK9F1dqYg2D7';
-  const deadline=new Date();
-  deadline.setHours(19,0,0,0);
+  const istParts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const ist={}; istParts.forEach(p=>{if(p.type!=='literal') ist[p.type]=p.value;});
+  const deadline=new Date(Date.UTC(Number(ist.year),Number(ist.month)-1,Number(ist.day),13,30,0));
   const update=()=>{
     const left=Math.max(0,deadline.getTime()-Date.now());
     const h=Math.floor(left/3600000);
