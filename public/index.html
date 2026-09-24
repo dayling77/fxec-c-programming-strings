@@ -29,7 +29,15 @@
 
 <section id="admin" class="panel" hidden>
 <div class="card"><h2>Admin Dashboard</h2><div id="adminStats"></div><button id="adminBootstrap" hidden>Activate Admin Access</button></div>
-<div class="card"><h3>Pending Student Approvals</h3><div id="pending"></div></div>
+<div class="card"><h3>Pending Student Approvals</h3>
+<div id="pending"></div>
+<div class="adminActions"><button id="selectAllBtn" class="secondary">Select All</button><button id="bulkApproveBtn">Approve Selected</button></div>
+</div>
+<div class="card"><h3>Assessment Schedule</h3>
+<p>Set the Day, date, opening time and closing time. Question generation and student access will follow the saved schedule automatically.</p>
+<div id="scheduleEditor"></div>
+<button id="saveSchedulesBtn">Save Assessment Schedule</button>
+</div>
 <div class="card"><h3>Results</h3><div id="adminResults"></div><button id="csvBtn">Generate CSV</button> <button id="pdfBtn">Generate PDF</button><p id="downloadInfo"></p></div>
 </section>
 
