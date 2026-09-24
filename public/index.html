@@ -19,35 +19,49 @@
   </div>
   <div id="publicSchedule"></div>
 </section>
-<section id="sampleAssessment" class="card">
-  <div class="sectionHeading"><div><span class="sectionEyebrow">QUICK RECAP</span><h2>10-Question Practice Assessment</h2></div><span class="practiceBadge">No Reward Points</span></div>
-  <p>Test your understanding before attempting the main assessment. You can practise this recap before or after registration.</p>
-  <div id="sampleQuestions"></div>
-  <button id="sampleSubmit">Check My Score</button><div id="sampleResult"></div>
-</section>
 <section id="authArea" class="card">
 <h2>Student Access</h2>
 <div class="tabs"><button class="tab active" data-tab="login">Login</button><button class="tab" data-tab="signup">Create Account</button></div>
-<div id="login" class="panel"><form id="loginForm"><input id="loginEmail" type="email" placeholder="Admin or College Email" required><input id="loginPassword" type="password" placeholder="Password" required><button>Login</button></form></div>
+<div id="login" class="panel"><form id="loginForm"><input id="loginEmail" type="email" placeholder="Admin or College Email" required><input id="loginPassword" type="password" placeholder="Password" required><button>Login</button><button type="button" id="forgotPasswordBtn" class="linkButton">Forgot Password?</button></form></div>
 <div id="signup" class="panel" hidden><form id="signupForm"><input id="signupEmail" type="email" placeholder="College Email (@francisxavier.ac.in)" required><input id="signupPassword" type="password" minlength="6" placeholder="Password (6+ characters)" required><button>Create Account</button></form></div>
-<div class="divider"></div>
-<h3>After creating your account</h3>
-<form id="registerForm"><input id="regName" placeholder="Full Name" required><input id="regNo" placeholder="Register Number" required><input id="regEmail" type="email" placeholder="College email (@francisxavier.ac.in)" required><button>Submit Student Registration</button></form>
+<div class="divider"></div><p class="authHint">After creating your account, sign in to complete your one-time student registration.</p>
 </section>
 </main></div>
 
 <main class="container appContainer"><section id="appArea" hidden>
 <div class="userbar">Signed in as <b id="userEmail"></b><button id="logoutBtn" class="secondary">Sign out</button></div>
-<section id="student" class="panel"><div id="registrationStatus" class="statusBanner" hidden></div><a class="learningCentreQuickLink" href="/course-material.html">Open Full 5-Day Learning Centre →</a>
-<div class="card"><h2>Your Learning Dashboard</h2><div id="studentCourseDashboard"></div></div>
-<div class="card"><h2>Video Learning Materials</h2><div id="studentVideos"></div></div>
-<div class="card"><h2>10-Question Recap Assessment</h2><div id="studentSampleQuestions"></div><button id="studentSampleSubmit">Check My Score</button><div id="studentSampleResult"></div></div>
-<div class="card"><h2>Complete Student Registration</h2><form id="studentRegisterForm"><input id="studentRegName" placeholder="Full Name" required><input id="studentRegNo" placeholder="Register Number" required><input id="studentRegEmail" type="email" placeholder="Email used for login" required><button>Submit Registration</button></form></div>
-<div class="card"><h2>Today's Assessment</h2><div id="studentStatus">Checking...</div><button id="startBtn" disabled>Start Assessment</button></div>
+<section id="student" class="panel">
+<div id="registrationStatus" class="statusBanner" hidden></div>
+<div class="studentWelcome card"><span class="sectionEyebrow">STUDENT LEARNING PORTAL</span><h2>Welcome to your C Programming Learning Centre</h2><p>Choose a section below. Your learning material stays organized day by day, while assessments open automatically according to the published schedule.</p></div>
+<div class="studentMenu card">
+  <button class="menuButton" data-panel="learningPanel">📚 5-Day Learning Centre</button>
+  <button class="menuButton" data-panel="practicePanel">📝 Sample Assessment</button>
+  <button class="menuButton" data-panel="scorePanel">📊 Check My Score</button>
+  <button class="menuButton" data-panel="assessmentPanel">🎯 Today's Assessment</button>
+</div>
+<div id="learningPanel" class="studentHiddenPanel" hidden>
+  <div class="card"><div id="studentCourseDashboard"></div></div>
+</div>
+<div id="practicePanel" class="studentHiddenPanel" hidden>
+  <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">PRACTICE</span><h2>10-Question Sample Assessment</h2></div><span class="practiceBadge">No Reward Points</span></div><p>Practice before the main assessment.</p><div id="studentSampleQuestions" hidden></div><button id="studentSampleSubmit">Check My Score</button><div id="studentSampleResult"></div></div>
+</div>
+<div id="scorePanel" class="studentHiddenPanel" hidden>
+  <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">RESULTS</span><h2>My Assessment Score</h2></div></div><div id="myScore">Your completed assessment results will appear here.</div></div>
+</div>
+<div id="assessmentPanel" class="card studentHiddenPanel" hidden>
+  <div class="assessmentTop"><h2 id="assessmentTitle"></h2><div id="timer"></div></div>
+  <div id="questions"></div>
+  <div id="assessmentNav" class="assessmentNav"><button id="prevBtn" class="secondary">Previous</button><span id="questionCounter"></span><button id="nextBtn">Next</button><button id="submitBtn" hidden>Submit Assessment</button></div>
+  <div id="result" hidden></div>
+</div>
+<div id="studentRegistrationPanel" class="card" hidden>
+  <h2>Complete Student Registration</h2>
+  <form id="studentRegisterForm"><input id="studentRegName" placeholder="Full Name" required><input id="studentRegNo" placeholder="Register Number" required><input id="studentRegEmail" type="email" placeholder="Email used for login" required><button>Submit Registration</button></form>
+</div>
 <div class="card"><h2>Participation</h2><div id="stats"></div><table><thead><tr><th>Rank</th><th>Name</th><th>Register No.</th><th>Score</th></tr></thead><tbody id="leaderboard"></tbody></table></div>
 </section>
 
-<section id="admin" class="panel" hidden>
+<section id="admin"> class="panel" hidden>
 <div class="adminHero">
   <div><span class="courseKicker">FXEC ASSESSMENT CONTROL CENTRE</span><h2>Administrator Dashboard</h2><p>Manage students, publish the five-day programme, control assessment windows and monitor results from one place.</p></div>
   <div class="adminHeroBadge">LIVE PORTAL</div>
@@ -72,13 +86,6 @@
   <div id="adminResults"></div><p id="downloadInfo"></p>
 </div>
 <button id="adminBootstrap" hidden>Activate Admin Access</button>
-</section>
-<section id="assessmentPanel" class="card" hidden>
-<div class="assessmentTop"><h2 id="assessmentTitle"></h2><div id="timer"></div></div>
-<div id="questions"></div>
-<button id="submitBtn">Submit Assessment</button>
-<div id="result" hidden></div>
-</section>
 </section>
 <div id="message" class="message"></div>
 </main>
