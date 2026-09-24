@@ -606,15 +606,51 @@ async function approveQuestionBankDay(day,button) {
     if(!total) return msg('No questions are loaded for Day '+day+'.');
     if(selected.length!==total) return msg('Review/select all '+total+' questions in Day '+day+' before approving.');
     if(!confirm('Approve Day '+day+' and publish its '+total+' questions?'))return;
+
     button.disabled=true; button.textContent='Saving…';
     await saveQuestionBankDraft();
-    await setDoc(doc(firestore,'adminActions','publishQuestionBankDay'+day+'_'+Date.now()),{
+
+    const actionId='publishQuestionBankDay'+day+'_'+Date.now();
+    await setDoc(doc(firestore,'adminActions',actionId),{
       requestedBy:currentUser.uid,requestedAt:new Date(),status:'requested',day
     });
+
     adminQuestionBank.dayStatus=adminQuestionBank.dayStatus||{};
     adminQuestionBank.dayStatus[day]='pending';
     button.textContent='Processing…';
-    msg('Day '+day+' approval requested. The server is preparing its secure pool and audio.',true);
+    msg('Day '+day+' approval submitted. Preparing the secure question pool and audio…',true);
+
+    // Follow the server action so the Admin sees the real result instead of
+    // remaining indefinitely on "Processing…".
+    let finished=false;
+    for(let attempt=0;attempt<90;attempt++){
+      await new Promise(resolve=>setTimeout(resolve,3000));
+      const snap=await getDoc(doc(firestore,'adminActions',actionId));
+      if(!snap.exists())continue;
+      const result=snap.data()||{};
+      if(result.status==='completed'){
+        finished=true;
+        adminQuestionBank.dayStatus[day]='approved';
+        button.disabled=false;
+        button.textContent='✓ Day '+day+' Approved';
+        await loadAdminQuestionBank();
+        msg('Day '+day+' approved successfully. The secure question pool is ready.',true);
+        break;
+      }
+      if(result.status==='failed'){
+        finished=true;
+        adminQuestionBank.dayStatus[day]='draft';
+        button.disabled=false;
+        button.textContent='Approve Day '+day;
+        msg('Day '+day+' approval failed: '+(result.error||'Unknown server error.'));
+        break;
+      }
+    }
+    if(!finished){
+      button.disabled=false;
+      button.textContent='Approve Day '+day;
+      msg('The approval is still processing on the server. Reload the Question Bank shortly to check its status.');
+    }
   }catch(e){
     button.disabled=false;
     button.textContent='Approve Day '+day;
