@@ -43,6 +43,18 @@ const BLUEPRINT = Object.freeze({
   multiAnswer: 3
 });
 
+const QUESTION_TIME_LIMITS = Object.freeze({
+  mcq: 45,
+  match: 60,
+  audio: 45,
+  problemSolving: 90,
+  multiAnswer: 60
+});
+
+function questionTimeLimitSeconds(q) {
+  return QUESTION_TIME_LIMITS[q?.type] || 60;
+}
+
 const POOL_DISTRIBUTION = Object.freeze({
   mcq: 5,
   match: 5,
@@ -339,7 +351,7 @@ function chooseAssessmentQuestions(poolQuestions) {
 
 function publicQuestion(q) {
   const { answer, explanation, audioText, ...safe } = q;
-  return safe;
+  return { ...safe, timeLimitSeconds: questionTimeLimitSeconds(q) };
 }
 
 export const bootstrapAdmin = onCall({ cors: CALLABLE_CORS }, async request => {
@@ -472,13 +484,18 @@ export const startAttempt = onCall({ cors: CALLABLE_CORS }, async request => {
   }
   const selected = chooseAssessmentQuestions(poolSnap.data().questions || []);
   const questions = selected.map(publicQuestion);
+  const totalTimeLimitSeconds = questions.reduce((sum, q) => sum + Number(q.timeLimitSeconds || 60), 0);
+  const startedAt = Date.now();
+  const scheduleCloseMs = schedule.closeAt.toDate().getTime();
+  const assessmentCloseMs = Math.min(scheduleCloseMs, startedAt + totalTimeLimitSeconds * 1000);
+  const assessmentCloseAt = new Date(assessmentCloseMs);
   const attemptRef = db.collection('attempts').doc();
   await attemptRef.set({
     studentId: a.uid, assessmentDate: schedule.date, poolId: schedule.date, totalQuestions: questions.length,
-    questions, status: 'started', startedAt: FieldValue.serverTimestamp(), closeAt: schedule.closeAt,
+    questions, totalTimeLimitSeconds, status: 'started', startedAt: FieldValue.serverTimestamp(), closeAt: assessmentCloseAt,
     questionIds: questions.map(q => q.id)
   });
-  return { attemptId: attemptRef.id, assessmentDate: schedule.date, closeAt: schedule.closeAt.toDate().toISOString(), questions };
+  return { attemptId: attemptRef.id, assessmentDate: schedule.date, closeAt: assessmentCloseAt.toISOString(), totalTimeLimitSeconds, questions };
 });
 
 export const finalizeAttempt = onCall({ cors: CALLABLE_CORS, secrets: [ZEPTOMAIL_CONFIG] }, async request => {
@@ -732,7 +749,7 @@ async function getQuestionBankForAdmin() {
   return draft;
 }
 
-export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId}', async event => {
+export const questionBankAdminAction = onDocumentCreated({region:'asia-south1',timeoutSeconds:540,memory:'1GiB',retry:true}, 'adminActions/{actionId}', async event => {
   const action = event.data?.data();
   if (!action || action.status !== 'requested') return;
   const id = event.params.actionId;
@@ -754,7 +771,7 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
     const day = requestedDay;
     const bank = await getQuestionBankForAdmin();
     const allQuestions = (bank.questions || []).map(normalizeDraftQuestion);
-    const dayQuestions = allQuestions.filter(q => Number(String(q.id).match(/^D(\\d+)-/)?.[1] || 0) === day);
+    const dayQuestions = allQuestions.filter(q => Number(String(q.id).match(/^D(\d+)-/)?.[1] || 0) === day);
     if (!dayQuestions.length) {
       await event.data.ref.set({status:'failed',error:'No questions found for Day '+day,completedAt:FieldValue.serverTimestamp()},{merge:true});
       return;
@@ -764,7 +781,9 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
       await event.data.ref.set({status:'failed',error,completedAt:FieldValue.serverTimestamp()},{merge:true});
       return;
     }
-    const date = FIVE_DAY_SCHEDULE[day-1]?.date;
+    const scheduleSnap = await db.collection('assessmentSchedules').where('day','==',day).limit(1).get();
+    const savedSchedule = scheduleSnap.empty ? null : scheduleSnap.docs[0].data();
+    const date = savedSchedule?.date || FIVE_DAY_SCHEDULE[day-1]?.date;
     if (!date) {
       await event.data.ref.set({status:'failed',error:'No schedule date configured for Day '+day,completedAt:FieldValue.serverTimestamp()},{merge:true});
       return;
@@ -803,7 +822,7 @@ export const questionBankAdminAction = onDocumentCreated('adminActions/{actionId
     const error=validateQuestionBank(questions);
     if(error){await event.data.ref.set({status:'failed',error,completedAt:FieldValue.serverTimestamp()},{merge:true});return;}
     const byDay=new Map();
-    questions.forEach(q=>{const day=Number(String(q.id).match(/^D(\\d+)-/)?.[1]||0);if(!byDay.has(day))byDay.set(day,[]);byDay.get(day).push(normalizeMatch(q));});
+    questions.forEach(q=>{const day=Number(String(q.id).match(/^D(\d+)-/)?.[1]||0);if(!byDay.has(day))byDay.set(day,[]);byDay.get(day).push(normalizeMatch(q));});
     for(const [day,dayQuestions] of byDay.entries()){
       const date=FIVE_DAY_SCHEDULE[day-1]?.date;if(!date)continue;
       const enriched=[];
@@ -853,7 +872,7 @@ export const publishAdminQuestionBank = onCall({ cors: CALLABLE_CORS, timeoutSec
 
   const byDay = new Map();
   questions.forEach(q => {
-    const day = Number(String(q.id).match(/^D(\\d+)-/)?.[1] || 0);
+    const day = Number(String(q.id).match(/^D(\d+)-/)?.[1] || 0);
     if (!byDay.has(day)) byDay.set(day, []);
     byDay.get(day).push(normalizeMatch(q));
   });
