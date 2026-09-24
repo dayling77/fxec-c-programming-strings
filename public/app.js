@@ -104,7 +104,7 @@ function renderAssessment(data) {
       if (q.type === 'audio') body += `<button class="audioBtn" data-audio="${esc(q.audioPath || '')}" data-q="${esc(q.id)}">▶ Play Question</button>`;
       body += q.options.map((o,k)=>`<label class="option"><input type="radio" name="q-${esc(q.id)}" value="${k}"> ${esc(o)}</label>`).join('');
     }
-    return `<article class="question"><div class="qhead"><span>Q${i+1}</span><span>${esc(q.type)} · ${esc(q.difficulty)}</span></div><h3>${esc(q.prompt)}</h3>${body}</article>`;
+    return `<article class="question"><div class="qhead"><span>Q${i+1}</span><span>${esc(q.type)} · ${esc(q.difficulty)}</span></div><h3>${q.type === 'audio' ? 'Listen to the question and choose the correct answer.' : esc(q.prompt)}</h3>${body}</article>`;
   }).join('');
   document.querySelectorAll('.audioBtn').forEach(b => b.onclick = async () => {
     const path = b.dataset.audio;
@@ -178,10 +178,10 @@ async function loadAdmin() {
   }
 }
 $('csvBtn').onclick = async () => {
-  try { const r=await call('exportResults')({format:'csv'}); $('downloadInfo').textContent=`CSV generated at Firebase Storage: ${r.data.path}`; } catch(e){msg(e.message);}
+  try { const r=await call('exportResults')({format:'csv'}); const url=await getDownloadURL(ref(storage,r.data.path)); $('downloadInfo').innerHTML=`<a href="${url}" target="_blank">Download CSV</a>`; } catch(e){msg(e.message);}
 };
 $('pdfBtn').onclick = async () => {
-  try { const r=await call('exportResults')({format:'pdf'}); $('downloadInfo').textContent=`PDF generated at Firebase Storage: ${r.data.path}`; } catch(e){msg(e.message);}
+  try { const r=await call('exportResults')({format:'pdf'}); const url=await getDownloadURL(ref(storage,r.data.path)); $('downloadInfo').innerHTML=`<a href="${url}" target="_blank">Download PDF</a>`; } catch(e){msg(e.message);}
 };
 
 onAuthStateChanged(auth, async user => {
