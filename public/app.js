@@ -416,13 +416,13 @@ async function loadAdminQuestionBank() {
     msg('Question bank loaded for review.',true);
   } catch(e){ msg(e.message); }
 }
-$('loadQuestionBankBtn').onclick=loadAdminQuestionBank;
-$('questionBankDay').onchange=()=>{
+if ($('loadQuestionBankBtn')) $('loadQuestionBankBtn').onclick=loadAdminQuestionBank;
+if ($('questionBankDay')) $('questionBankDay').onchange=()=>{
   try{readVisibleQuestionBankDay();}catch(e){msg(e.message);return;}
   adminQuestionDay=Number($('questionBankDay').value);
   renderAdminQuestionBank();
 };
-$('saveQuestionBankBtn').onclick=async()=>{
+if ($('saveQuestionBankBtn')) $('saveQuestionBankBtn').onclick=async()=>{
   if(!adminQuestionBank)return msg('Load the question bank first.');
   try{
     readVisibleQuestionBankDay();
@@ -433,7 +433,7 @@ $('saveQuestionBankBtn').onclick=async()=>{
     msg('Question bank draft saved. It is not yet published to students.',true);
   }catch(e){msg(e.message);}finally{$('saveQuestionBankBtn').disabled=false;$('saveQuestionBankBtn').textContent='Save Draft';}
 };
-$('publishQuestionBankBtn').onclick=async()=>{
+if ($('publishQuestionBankBtn')) $('publishQuestionBankBtn').onclick=async()=>{
   if(!adminQuestionBank)return msg('Load the question bank first.');
   try{
     readVisibleQuestionBankDay();
