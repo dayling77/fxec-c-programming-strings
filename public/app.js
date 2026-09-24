@@ -2,12 +2,15 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/fireba
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
 import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-storage.js';
+import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js';
 
 const config = window.FXEC_FIREBASE_CONFIG;
 const app = initializeApp(config);
 const auth = getAuth(app);
 const functions = getFunctions(app, 'us-central1');
 const storage = getStorage(app);
+const firestore = getFirestore(app);
+const ADMIN_EMAIL = 'admin@fxecdigital.org';
 
 const $ = id => document.getElementById(id);
 const call = name => httpsCallable(functions, name);
@@ -410,11 +413,19 @@ function readVisibleQuestionBankDay() {
 }
 async function loadAdminQuestionBank() {
   try {
-    const r=await call('getAdminQuestionBank')({});
-    adminQuestionBank=r.data;
+    if (!currentUser || currentUser.email?.toLowerCase() !== ADMIN_EMAIL) throw new Error('Administrator account required.');
+    const bankRef = doc(firestore, 'questionBank', 'master');
+    const snap = await getDoc(bankRef);
+    if (!snap.exists()) {
+      await setDoc(doc(firestore, 'adminActions', 'seedQuestionBank'), {requestedBy: currentUser.uid, requestedAt: new Date(), status:'requested'});
+      throw new Error('Question bank is being initialized. Click Load Question Bank again in a few seconds.');
+    }
+    const data=snap.data();
+    adminQuestionBank={meta:data.meta||{},status:data.status||'draft',questions:data.questions||[]};
+    if(!adminQuestionBank.questions.length) throw new Error('Question bank is empty.');
     renderAdminQuestionBank();
     msg('Question bank loaded for review.',true);
-  } catch(e){ msg(e.message); }
+  } catch(e){ msg(e.message || String(e)); }
 }
 if ($('loadQuestionBankBtn')) $('loadQuestionBankBtn').onclick=loadAdminQuestionBank;
 if ($('questionBankDay')) $('questionBankDay').onchange=()=>{
@@ -427,8 +438,8 @@ if ($('saveQuestionBankBtn')) $('saveQuestionBankBtn').onclick=async()=>{
   try{
     readVisibleQuestionBankDay();
     const button=$('saveQuestionBankBtn'); button.disabled=true; button.textContent='Saving…';
-    const r=await call('saveAdminQuestionBank')({questions:adminQuestionBank.questions});
-    adminQuestionBank.status=r.data.status;
+    await setDoc(doc(firestore, 'questionBank', 'master'), {meta:adminQuestionBank.meta||{},questions:adminQuestionBank.questions,status:'draft',updatedAt:new Date(),updatedBy:currentUser.uid}, {merge:true});
+    adminQuestionBank.status='draft';
     $('questionBankStatus').textContent='Draft saved ✓ · Day '+adminQuestionDay;
     msg('Question bank draft saved. It is not yet published to students.',true);
   }catch(e){msg(e.message);}finally{$('saveQuestionBankBtn').disabled=false;$('saveQuestionBankBtn').textContent='Save Draft';}
@@ -439,11 +450,11 @@ if ($('publishQuestionBankBtn')) $('publishQuestionBankBtn').onclick=async()=>{
     readVisibleQuestionBankDay();
     if(!confirm('Approve and publish all 125 questions? This generates secure audio and replaces the current question pools for the five days.'))return;
     const button=$('publishQuestionBankBtn'); button.disabled=true; button.textContent='Publishing…';
-    await call('saveAdminQuestionBank')({questions:adminQuestionBank.questions});
-    const r=await call('publishAdminQuestionBank')({});
-    adminQuestionBank.status='published';
-    $('questionBankStatus').textContent='PUBLISHED ✓ · '+r.data.questions+' questions across '+r.data.days+' days';
-    msg('Question bank approved and published. Secure assessment pools are ready.',true);
+    await setDoc(doc(firestore, 'questionBank', 'master'), {meta:adminQuestionBank.meta||{},questions:adminQuestionBank.questions,status:'draft',updatedAt:new Date(),updatedBy:currentUser.uid}, {merge:true});
+    await setDoc(doc(firestore, 'adminActions', 'publishQuestionBank'), {requestedBy:currentUser.uid,requestedAt:new Date(),status:'requested'});
+    adminQuestionBank.status='publishing';
+    $('questionBankStatus').textContent='PUBLISH REQUESTED · Server is generating secure pools/audio…';
+    msg('Question bank saved. Publishing is being processed securely by the server.',true);
   }catch(e){msg(e.message);}finally{$('publishQuestionBankBtn').disabled=false;$('publishQuestionBankBtn').textContent='Approve & Publish';}
 };
 
