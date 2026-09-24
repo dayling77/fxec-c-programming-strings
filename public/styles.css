@@ -167,6 +167,21 @@ body{background:#f4f7fb;color:var(--ink);line-height:1.55}
 .qbEditPanel{margin-top:14px;padding:16px;border:1px solid #bfdbfe;border-radius:12px;background:#f8fbff}.qbEditPanel[hidden]{display:none}.qbEditToolbar{margin-bottom:12px}.qbEditToolbar label{max-width:180px}.qbEditToolbar select{display:block;width:100%;margin-top:5px;padding:8px;border:1px solid #cbd5e1;border-radius:8px;background:#fff}
 .qbEditGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.qbEditPanel label{display:block;font-size:11px;font-weight:800;color:#334155}.qbEditPanel textarea,.qbEditPanel input{width:100%;box-sizing:border-box;margin-top:6px;padding:10px;border:1px solid #cbd5e1;border-radius:8px;background:#fff;font:inherit}.qbEditPanel textarea{resize:vertical}.qbDoneEditing{margin-top:10px!important}
 .questionBankItem.editing{border-color:#93c5fd!important;box-shadow:0 6px 20px rgba(37,99,235,.08)!important}
+/* Inline question editing — edit directly inside the review card */
+.questionBankItem.editing .qbPromptDisplay,
+.questionBankItem.editing .qbOptionText,
+.questionBankItem.editing .qbAnswerDisplay,
+.questionBankItem.editing .qbExplanationDisplay,
+.questionBankItem.editing .qbAudioTextInline{outline:none;border-radius:8px;background:#f8fbff;box-shadow:inset 0 0 0 1px #bfdbfe;padding:3px 6px;cursor:text}
+.questionBankItem.editing .qbPromptDisplay:focus,
+.questionBankItem.editing .qbOptionText:focus,
+.questionBankItem.editing .qbAnswerDisplay:focus,
+.questionBankItem.editing .qbExplanationDisplay:focus,
+.questionBankItem.editing .qbAudioTextInline:focus{box-shadow:inset 0 0 0 2px #2563eb;background:#fff}
+.qbInlineDifficulty{border:1px solid #cbd5e1;border-radius:8px;padding:7px 9px;background:#fff;font-size:11px;font-weight:800;letter-spacing:.4px;color:#334155}
+.qbAudioTextInline{display:block;margin-left:12px;color:#475569;font-size:12px;line-height:1.5}
+.qbEditBtn{min-width:68px}
+
 @media(max-width:800px){.qbReviewHeader{grid-template-columns:42px 1fr auto}.qbReviewCheck{grid-column:2}.qbReviewHeader .qbEditBtn{grid-column:3;grid-row:2}.qbMetaRow,.qbEditGrid{grid-template-columns:1fr}}
 
 /* Student assessment — polished web-page experience */
