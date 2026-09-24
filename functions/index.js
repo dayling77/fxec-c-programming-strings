@@ -695,8 +695,11 @@ function normalizeMatch(q) {
 async function getQuestionBankForAdmin() {
   const snap = await db.collection('questionBank').doc('master').get();
   if (snap.exists) return snap.data();
-  const draft = {meta: QUESTION_BANK_META, questions: QUESTION_BANK, status:'draft', updatedAt: FieldValue.serverTimestamp()};
-  await db.collection('questionBank').doc('master').set(draft, {merge:true});
+  const draft = {meta: QUESTION_BANK_META, questions: QUESTION_BANK, status:'draft'};
+  await db.collection('questionBank').doc('master').set({
+    ...draft,
+    updatedAt: FieldValue.serverTimestamp()
+  }, {merge:true});
   return draft;
 }
 
