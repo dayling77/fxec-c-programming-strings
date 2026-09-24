@@ -402,17 +402,31 @@ export const updateAssessmentSchedules = onCall(async request => {
   requireAdmin(request);
   const schedules = Array.isArray(request.data?.schedules) ? request.data.schedules : [];
   if (!schedules.length || schedules.length > 10) throw new HttpsError('invalid-argument', 'Provide one or more assessment schedules.');
-  const existing = await db.collection('assessmentSchedules').get();
-  const batch = db.batch();
-  existing.docs.forEach(d => batch.delete(d.ref));
-  for (const item of schedules) {
-    const day = Number(item.day), date = cleanText(item.date, 20), topic = cleanText(item.topic, 200);
-    const openAt = new Date(cleanText(item.openAt, 50)), closeAt = new Date(cleanText(item.closeAt, 50));
-    if (!Number.isInteger(day) || day < 1 || !date || !topic || Number.isNaN(openAt.getTime()) || Number.isNaN(closeAt.getTime()) || closeAt <= openAt) throw new HttpsError('invalid-argument', 'Each schedule needs a valid Day, date, opening time and closing time.');
-    batch.set(db.collection('assessmentSchedules').doc(date), { day, date, topic, videoUrl: cleanText(item.videoUrl, 500), openAt, closeAt, isPublished: item.isPublished === true, status: item.isPublished === true ? 'scheduled' : 'draft', updatedAt: FieldValue.serverTimestamp() });
+  const normalized = schedules.map(item => {
+    const day = Number(item.day);
+    const date = cleanText(item.date, 20);
+    const topic = cleanText(item.topic, 200);
+    const openAt = new Date(cleanText(item.openAt, 50));
+    const closeAt = new Date(cleanText(item.closeAt, 50));
+    if (!Number.isInteger(day) || day < 1 || !date || !topic || Number.isNaN(openAt.getTime()) || Number.isNaN(closeAt.getTime()) || closeAt <= openAt) {
+      throw new HttpsError('invalid-argument', 'Each schedule needs a valid Day, date, opening time and closing time.');
+    }
+    return {day,date,topic,videoUrl:cleanText(item.videoUrl,500),openAt,closeAt,isPublished:item.isPublished===true,status:item.isPublished===true?'scheduled':'draft'};
+  });
+  const dates = new Set();
+  const days = new Set();
+  for (const s of normalized) {
+    if (dates.has(s.date)) throw new HttpsError('invalid-argument','Each assessment day must have a unique date.');
+    if (days.has(s.day)) throw new HttpsError('invalid-argument','Each assessment day must have a unique Day number.');
+    dates.add(s.date); days.add(s.day);
   }
+  const batch = db.batch();
+  const existing = await db.collection('assessmentSchedules').get();
+  existing.docs.forEach(d => batch.delete(d.ref));
+  normalized.forEach(s => batch.set(db.collection('assessmentSchedules').doc(s.date), {...s,updatedAt:FieldValue.serverTimestamp()}));
   await batch.commit();
-  return { success: true, count: schedules.length };
+  logger.info('Assessment schedules saved', {count:normalized.length, adminUid:request.auth?.uid, dates:[...dates]});
+  return {success:true,count:normalized.length};
 });
 
 export const getAssessment = onCall(async request => {
