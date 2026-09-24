@@ -7,6 +7,7 @@
 <script src="/firebase-config.js"></script>
 </head>
 <body>
+<div id="publicShell">
 <header class="hero"><div><div class="eyebrow">FRANCIS XAVIER ENGINEERING COLLEGE</div><h1>C Programming – Level 3</h1><p>Strings · 5-Day Automated Assessment</p></div></header>
 <main class="container">
 <section id="courseOverview" class="courseHeroCard">
@@ -33,10 +34,11 @@
 <h3>After creating your account</h3>
 <form id="registerForm"><input id="regName" placeholder="Full Name" required><input id="regNo" placeholder="Register Number" required><input id="regEmail" type="email" placeholder="College email (@francisxavier.ac.in)" required><button>Submit Student Registration</button></form>
 </section>
+</main></div>
 
 <section id="appArea" hidden>
 <div class="userbar">Signed in as <b id="userEmail"></b><button id="logoutBtn" class="secondary">Sign out</button></div>
-<section id="student" class="panel">
+<section id="student" class="panel"><div id="registrationStatus" class="statusBanner" hidden></div><a class="learningCentreQuickLink" href="/course-material.html">Open Full 5-Day Learning Centre →</a>
 <div class="card"><h2>Your Learning Dashboard</h2><div id="studentCourseDashboard"></div></div>
 <div class="card"><h2>Video Learning Materials</h2><div id="studentVideos"></div></div>
 <div class="card"><h2>10-Question Recap Assessment</h2><div id="studentSampleQuestions"></div><button id="studentSampleSubmit">Check My Score</button><div id="studentSampleResult"></div></div>
