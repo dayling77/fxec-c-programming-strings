@@ -539,7 +539,19 @@ function renderAdminQuestionBank() {
     };
   });
 
-  const approveBtn=document.querySelector('.qbApproveDayTop');if(approveBtn)approveBtn.onclick=()=>approveQuestionBankDay(activeDay,approveBtn);
+  // Approval uses delegated binding because the Day workspace is re-rendered dynamically.
+  // This keeps the button live after day switches, edits and reloads.
+  if(!window.__fxecApprovalDelegate){
+    window.__fxecApprovalDelegate=true;
+    document.addEventListener('click',e=>{
+      const btn=e.target.closest('.qbApproveDayTop');
+      if(!btn)return;
+      e.preventDefault();
+      if(btn.disabled)return;
+      const day=Number(btn.dataset.day||document.querySelector('.qbDayTab.active')?.dataset.qbDay||adminQuestionDay||1);
+      approveQuestionBankDay(day,btn);
+    });
+  }
 }
 function readVisibleQuestionBank() { readVisibleQuestionBankDay(adminQuestionDay); }
 function readVisibleQuestionBankDay(day) {
