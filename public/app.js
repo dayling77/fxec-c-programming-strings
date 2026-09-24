@@ -197,6 +197,11 @@ async function loadAdmin() {
       try { await call('authorizeStudent')({studentId:b.dataset.approve}); await loadAdmin(); msg('Student approved. The student can now wait for the assessment window.',true); }
       catch(e){ b.disabled=false; msg(e.message); }
     });
+    $('approvedStudents').innerHTML = d.approved.map(s => `
+      <div class="pending">
+        <span><b>${esc(s.name)}</b> · ${esc(s.registerNumber)} · ${esc(s.email)}</span>
+        <span>Approved</span>
+      </div>`).join('') || '<p>No approved students yet.</p>';
     renderSchedules(d.schedules);
     $('adminResults').innerHTML = d.top20.map(x => `<tr><td>${esc(x.studentId)}</td><td>${x.scorePercent}%</td><td>${x.passed ? 'PASS':'FAIL'}</td><td>${x.rewardPoints}</td></tr>`).join('') || '<tr><td colspan="4">No results yet.</td></tr>';
   } catch (e) {
