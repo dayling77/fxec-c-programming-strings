@@ -518,8 +518,17 @@ export const finalizeAttemptSubmission = onDocumentCreated('assessmentSubmission
       return;
     }
 
-    const closeAt = attempt.closeAt?.toDate ? attempt.closeAt.toDate() : new Date(attempt.closeAt);
-    if (!Number.isNaN(closeAt.getTime()) && new Date() > closeAt) throw new Error('The assessment window has closed.');
+    // The assessment is governed by the published Day window. The client
+    // enforces the per-question/overall timer; the server only rejects
+    // submissions after the published assessment window itself closes.
+    const scheduleSnap = await db.collection('assessmentSchedules').doc(attempt.assessmentDate).get();
+    if (scheduleSnap.exists) {
+      const schedule = scheduleSnap.data();
+      const scheduleClose = schedule.closeAt?.toDate ? schedule.closeAt.toDate() : new Date(schedule.closeAt);
+      if (!Number.isNaN(scheduleClose.getTime()) && new Date() > scheduleClose) {
+        throw new Error('The assessment window has closed.');
+      }
+    }
 
     const poolSnap = await db.collection('questionPools').doc(attempt.poolId).get();
     if (!poolSnap.exists) throw new Error('Question pool unavailable.');
