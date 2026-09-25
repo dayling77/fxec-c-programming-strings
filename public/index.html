@@ -36,6 +36,8 @@
 <div class="studentMenu card">
   <button class="menuButton" data-panel="learningPanel">📚 5-Day Learning Centre</button>
   <button class="menuButton" data-panel="practicePanel">📝 Sample Assessment</button>
+  <button class="menuButton" data-panel="codingPanel">💻 C Coding Lab</button>
+  <button class="menuButton" data-panel="journeyPanel">🚀 Competency Journey</button>
   <button class="menuButton" data-panel="scorePanel">📊 Check My Score</button>
   <button class="menuButton" data-panel="assessmentPanel">🎯 Today's Assessment</button>
 </div>
@@ -44,6 +46,43 @@
 </div>
 <div id="practicePanel" class="studentHiddenPanel" hidden>
   <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">PRACTICE</span><h2>10-Question Sample Assessment</h2></div><span class="practiceBadge">No Reward Points</span></div><p>Practice before the main assessment.</p><div id="studentSampleQuestions"></div><button id="studentSampleSubmit">Check My Score</button><div id="studentSampleResult"></div></div>
+</div>
+<div id="codingPanel" class="studentHiddenPanel" hidden>
+  <div class="card codingLabCard">
+    <div class="sectionHeading"><div><span class="sectionEyebrow">C PROGRAMMING · LEVEL 3</span><h2>C Coding Lab</h2></div><span class="practiceBadge">Sandboxed Compiler</span></div>
+    <p>Write, compile and run C programs. Your source code is sent to the secure server-side execution service; answer keys and hidden challenge tests are never sent to the browser.</p>
+    <div class="codingChallengeBar">
+      <label>Challenge
+        <select id="codingChallengeSelect">
+          <option value="playground">Free Coding Playground</option>
+          <option value="count-vowels">Count Vowels</option>
+          <option value="reverse-string">Reverse a String</option>
+          <option value="palindrome">Palindrome Check</option>
+        </select>
+      </label>
+      <button id="loadCodingChallengeBtn" class="secondary">Load Challenge</button>
+    </div>
+    <div id="codingChallengePrompt" class="codingChallengePrompt">Use the playground to experiment with C strings.</div>
+    <div class="codingEditorGrid">
+      <div><label class="editorLabel">C Source Code</label><textarea id="cCodeEditor" spellcheck="false">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void) {
+    char name[100];
+    fgets(name, sizeof(name), stdin);
+    name[strcspn(name, "\n")] = '\0';
+    printf("Hello, %s!\n", name);
+    return 0;
+}</textarea></div>
+      <div><label class="editorLabel">Standard Input</label><textarea id="cCodeInput" spellcheck="false">FXEC Student</textarea></div>
+    </div>
+    <div class="codingActions"><button id="runCCodeBtn">▶ Compile & Run</button><button id="submitCChallengeBtn" class="secondary">✓ Submit Challenge</button><span id="compilerStatus"></span></div>
+    <pre id="compilerOutput" class="compilerOutput">Compiler output will appear here.</pre>
+    <div id="challengeResult" class="challengeResult"></div>
+  </div>
+</div>
+<div id="journeyPanel" class="studentHiddenPanel" hidden>
+  <div class="card"><div id="competencyJourney"></div></div>
 </div>
 <div id="scorePanel" class="studentHiddenPanel" hidden>
   <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">RESULTS</span><h2>My Assessment Score</h2></div></div><div id="myScore">Your completed assessment results will appear here.</div></div>
@@ -101,6 +140,6 @@
 </section>
 <div id="message" class="message"></div>
 </main>
-<script type="module" src="/app.js?v=20260925-firebase-fix-v2"></script>
+<script type="module" src="/app.js?v=20260925-competency-phase1"></script>
 </body>
 </html>
