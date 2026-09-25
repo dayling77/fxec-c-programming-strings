@@ -320,3 +320,31 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
   .studentMenu{grid-template-columns:1fr!important}
   .studentOption{font-size:14px!important;padding:13px!important}
 }
+
+
+/* Competency + C Coding Lab */
+.codingLabCard{border:1px solid #dbe3ef}
+.codingChallengeBar{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:16px 0}
+.codingChallengeBar label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.codingChallengeBar select{min-width:260px;padding:11px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
+.codingChallengePrompt{background:#f8fafc;border-left:4px solid #2563eb;padding:14px;border-radius:8px;margin-bottom:14px;line-height:1.6}
+.codingEditorGrid{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.editorLabel{display:block;font-size:12px;font-weight:800;margin-bottom:6px;color:#475569}
+#cCodeEditor,#cCodeInput{width:100%;min-height:330px;box-sizing:border-box;border:1px solid #1e293b;border-radius:10px;background:#0f172a;color:#e2e8f0;padding:14px;font:13px/1.55 Consolas,Monaco,monospace;resize:vertical}
+#cCodeInput{min-height:150px}
+.codingActions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0}
+#compilerStatus{font-size:13px;color:#475569}
+.compilerOutput{min-height:130px;background:#020617;color:#e2e8f0;border-radius:10px;padding:16px;white-space:pre-wrap;overflow:auto}
+.challengeResult{margin-top:12px;padding:14px;border-radius:10px;background:#f8fafc;min-height:20px}
+.journeyHero{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:24px;border-radius:16px;margin-bottom:18px}
+.journeyHero h2{margin:6px 0}
+.xpStrip{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.xpStrip strong{font-size:28px}
+.trackGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.trackCard{padding:18px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}
+.trackCard.active{border-color:#2563eb;box-shadow:0 8px 24px rgba(37,99,235,.10)}
+.trackNumber{font-size:11px;font-weight:900;color:#64748b}
+.trackCard h3{margin:8px 0 5px}.trackCard p{color:#64748b;min-height:42px}
+.trackProgress{height:7px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin:14px 0 8px}.trackProgress span{display:block;height:100%;background:#2563eb}
+.journeyNote{margin-top:16px;padding:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;color:#1e3a8a}
+@media(max-width:800px){.codingEditorGrid,.trackGrid{grid-template-columns:1fr}.codingChallengeBar select{min-width:0;width:100%}}
