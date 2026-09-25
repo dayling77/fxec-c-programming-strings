@@ -1210,6 +1210,40 @@ export const evaluateCConceptChallenge = onCall({cors:CALLABLE_CORS},async reque
   return {correct,xpEarned,explanation:correct?challenge.explanation:'Review the code carefully and try again.'};
 });
 
+
+const C_SKILL_DEFS = Object.freeze({
+ fundamentals:{xp:20},strings:{xp:40},arrays:{xp:30},functions:{xp:30},pointers:{xp:40},algorithms:{xp:40},coding:{xp:50}
+});
+export const getCProgression = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const snap=await db.collection('cProgression').doc(user.uid).get();
+  if(!snap.exists)return {xp:0,completedSkills:[]};
+  return snap.data();
+});
+export const completeCSkill = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const skillId=String(request.data?.skillId||'');
+  const skill=C_SKILL_DEFS[skillId];
+  if(!skill)throw new HttpsError('invalid-argument','Unknown C skill.');
+  const ref=db.collection('cProgression').doc(user.uid);
+  let result;
+  await db.runTransaction(async tx=>{
+    const snap=await tx.get(ref);const d=snap.exists?snap.data():{};
+    const done=Array.isArray(d.completedSkills)?[...d.completedSkills]:[];
+    if(done.includes(skillId)){result={xp:Number(d.xp||0),completedSkills:done,alreadyCompleted:true};return;}
+    const previousId=['fundamentals','strings','arrays','functions','pointers','algorithms','coding'][['fundamentals','strings','arrays','functions','pointers','algorithms','coding'].indexOf(skillId)-1];
+    if(previousId && !done.includes(previousId))throw new HttpsError('failed-precondition','Complete the previous C skill first.');
+    done.push(skillId);const xp=Number(d.xp||0)+skill.xp;
+    tx.set(ref,{xp,completedSkills:done,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    const progressRef=db.collection('competencyProgress').doc(user.uid);
+    const cp=await tx.get(progressRef);const cpd=cp.exists?cp.data():{};
+    const totalXp=Math.max(Number(cpd.xp||0),xp);
+    tx.set(progressRef,{xp:totalXp,level:Math.floor(totalXp/100)+1,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    result={xp,completedSkills:done,alreadyCompleted:false};
+  });
+  return result;
+});
+
 export const getCompetencyProgress = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
   const snap=await db.collection('competencyProgress').doc(user.uid).get();

@@ -198,6 +198,7 @@ $('loginForm').onsubmit = async e => {
 $('logoutBtn').onclick = () => signOut(auth);
 setupCodingLab();
 setupStudio();
+loadCProgression();
 
 
 const STUDIO_CHALLENGES = {
@@ -248,6 +249,32 @@ function setupStudio(){
     finally{b.disabled=false;b.textContent='Check Answer';}
   };
   renderStudio();
+}
+
+
+const C_SKILL_PATH = [
+ {id:'fundamentals',title:'C Fundamentals',items:['Variables & data types','Input/output','Operators','Conditions','Loops'],xp:20},
+ {id:'strings',title:'Strings',items:['Character arrays','\\0','String functions','Manual processing','String analysis'],xp:40},
+ {id:'arrays',title:'Arrays',items:['1D arrays','Traversal','Searching','Sorting','Frequency arrays'],xp:30},
+ {id:'functions',title:'Functions',items:['Parameters','Return values','Scope','Modular design','Recursion'],xp:30},
+ {id:'pointers',title:'Pointers',items:['Addresses','Dereferencing','Pointers & arrays','Pointers & strings','Dynamic memory'],xp:40},
+ {id:'algorithms',title:'Algorithms & Problem Solving',items:['Decomposition','Patterns','Complexity','Debugging','Edge cases'],xp:40},
+ {id:'coding',title:'Coding Challenges',items:['Compile & run','Output prediction','Bug fixing','Missing code','Hidden tests'],xp:50}
+];
+async function loadCProgression(){
+ const host=$('cProgressionGrid'); if(!host)return;
+ let p={xp:0,completedSkills:[]};
+ try{const r=await call('getCProgression')({});p=r.data||p;}catch(_){}
+ const done=new Set(p.completedSkills||[]);
+ host.innerHTML='<div class="skillPath">'+C_SKILL_PATH.map((s,i)=>{
+   const complete=done.has(s.id);
+   const unlocked=i===0||done.has(C_SKILL_PATH[i-1].id);
+   return '<article class="skillNode '+(complete?'complete ':unlocked?'unlocked':'locked')+'"><div class="skillNodeTop"><span class="skillStep">'+String(i+1).padStart(2,'0')+'</span><span class="skillState">'+(complete?'✓ Completed':unlocked?'Unlocked':'Locked')+'</span></div><h3>'+esc(s.title)+'</h3><ul>'+s.items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><div class="skillNodeBottom"><span>'+s.xp+' XP</span><button class="skillCompleteBtn" data-skill="'+s.id+'" '+(unlocked&&!complete?'':'disabled')+'>'+(complete?'Completed':unlocked?'Mark Skill Complete':'Locked')+'</button></div></article>';
+ }).join('')+'</div><div class="progressionSummary"><strong>'+done.size+'/'+C_SKILL_PATH.length+'</strong> skill areas completed · <strong>'+Number(p.xp||0)+' XP</strong> total';
+ host.querySelectorAll('.skillCompleteBtn').forEach(btn=>btn.onclick=async()=>{
+   btn.disabled=true;btn.textContent='Saving…';
+   try{await call('completeCSkill')({skillId:btn.dataset.skill});await loadCProgression();loadCompetencyJourney();}catch(e){msg(e.message||String(e));btn.disabled=false;btn.textContent='Mark Skill Complete';}
+ });
 }
 
 const CODING_CHALLENGES = {
