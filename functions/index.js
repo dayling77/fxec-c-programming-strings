@@ -498,6 +498,107 @@ export const startAttempt = onCall({ cors: CALLABLE_CORS }, async request => {
   return { attemptId: attemptRef.id, assessmentDate: schedule.date, closeAt: assessmentCloseAt.toISOString(), totalTimeLimitSeconds, questions };
 });
 
+
+export const finalizeAttemptSubmission = onDocumentCreated('assessmentSubmissions/{attemptId}', async event => {
+  const submissionRef = event.data?.ref;
+  const submission = event.data?.data();
+  const attemptId = event.params.attemptId;
+  if (!submissionRef || !submission) return;
+  try {
+    const attemptRef = db.collection('attempts').doc(attemptId);
+    const attemptSnap = await attemptRef.get();
+    if (!attemptSnap.exists) throw new Error('Attempt not found.');
+    const attempt = attemptSnap.data();
+    if (submission.studentId !== attempt.studentId) throw new Error('Submission ownership mismatch.');
+
+    const existingResultRef = db.collection('results').doc(attemptId);
+    const existingResult = await existingResultRef.get();
+    if (existingResult.exists) {
+      await submissionRef.set({status:'completed', result:existingResult.data(), completedAt:FieldValue.serverTimestamp()},{merge:true});
+      return;
+    }
+
+    const poolSnap = await db.collection('questionPools').doc(attempt.poolId).get();
+    if (!poolSnap.exists) throw new Error('Question pool unavailable.');
+    const byId = new Map((poolSnap.data().questions || []).map(q => [q.id, q]));
+    const answers = Array.isArray(submission.answers) ? submission.answers : [];
+    let correct = 0;
+    for (const submitted of answers) {
+      const q = byId.get(submitted.questionId);
+      if (q && answersEqual(q.answer, submitted.answer)) correct++;
+    }
+
+    const total = Number(attempt.totalQuestions || CONFIG.questionsPerStudent);
+    const scorePercent = Math.round((correct / total) * 10000) / 100;
+    const passed = scorePercent >= CONFIG.passPercent;
+    const rewardPoints = passed ? CONFIG.rewardPoints : 0;
+    const studentRef = db.collection('students').doc(attempt.studentId);
+
+    await db.runTransaction(async tx => {
+      const current = await tx.get(existingResultRef);
+      if (current.exists) return;
+      tx.set(existingResultRef, {
+        studentId:attempt.studentId,
+        attemptId,
+        assessmentDate:attempt.assessmentDate,
+        score:correct,
+        total,
+        scorePercent,
+        passed,
+        rewardPoints,
+        completedAt:FieldValue.serverTimestamp()
+      });
+      tx.update(attemptRef, {status:'finalized', finalizedAt:FieldValue.serverTimestamp()});
+      if (passed) {
+        tx.set(studentRef, {
+          rewardPoints:FieldValue.increment(CONFIG.rewardPoints),
+          lastRewardAt:FieldValue.serverTimestamp()
+        }, {merge:true});
+      }
+      tx.set(db.collection('publicStats').doc('global'), {
+        totalAttempts:FieldValue.increment(1),
+        totalPassed:FieldValue.increment(passed ? 1 : 0),
+        totalRewardPoints:FieldValue.increment(rewardPoints),
+        updatedAt:FieldValue.serverTimestamp()
+      }, {merge:true});
+    });
+
+    const result = {score:correct,total,scorePercent,passed,rewardPoints};
+    await submissionRef.set({status:'completed',result,completedAt:FieldValue.serverTimestamp()},{merge:true});
+
+    try {
+      const student=(await studentRef.get()).data()||{};
+      if(student.email) {
+        await sendEmail({
+          to:student.email,
+          name:student.name,
+          subject:passed?'FXEC C Programming Assessment – Congratulations!':'FXEC C Programming Assessment – Result',
+          html:`<p>Dear ${student.name||'Student'},</p><p>You scored <strong>${scorePercent}%</strong>.</p><p>${passed?'Congratulations! 40 Reward Points have been credited.':'The passing requirement is 80%.'}</p>`,
+          text:`Your score is ${scorePercent}%.`
+        });
+      }
+    } catch(e) {
+      logger.error('Result email failed after score commit.',{error:e?.message||String(e),attemptId});
+    }
+    try {
+      await updateLeaderboard();
+    } catch(e) {
+      logger.error('Leaderboard update failed after score commit.',{error:e?.message||String(e),attemptId});
+    }
+  } catch(error) {
+    logger.error('finalizeAttemptSubmission failed',{
+      error:error?.stack||error?.message||String(error),
+      attemptId,
+      studentId:submission.studentId||''
+    });
+    await submissionRef.set({
+      status:'failed',
+      error:'Unable to process the assessment submission. Please contact the administrator.',
+      failedAt:FieldValue.serverTimestamp()
+    },{merge:true});
+  }
+});
+
 export const finalizeAttempt = onCall({ cors: CALLABLE_CORS }, async request => {
   const a = requireAuth(request);
   const attemptId = cleanText(request.data?.attemptId, 200);
