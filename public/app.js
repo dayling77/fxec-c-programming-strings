@@ -197,6 +197,58 @@ $('loginForm').onsubmit = async e => {
 
 $('logoutBtn').onclick = () => signOut(auth);
 setupCodingLab();
+setupStudio();
+
+
+const STUDIO_CHALLENGES = {
+  observation:{
+    prompt:'Watch the code and identify the value printed after the observation sequence.',
+    code:['int x = 2;','for (int i = 0; i < 3; i++) {','    x = x * 2;','}','printf("%d", x);'],
+    answer:'16',options:['6','8','12','16']
+  },
+  output:{
+    prompt:'Predict the exact output.',
+    code:['char s[] = "FXEC";','printf("%c %c", s[0], s[3]);'],
+    answer:'F C',options:['F C','C F','FXEC','E X']
+  },
+  bug:{
+    prompt:'Which line contains the primary bug?',
+    code:['char name[5];','strcpy(name, "David");','printf("%s", name);'],
+    answer:'2',options:['1','2','3','No bug']
+  },
+  missing:{
+    prompt:'Choose the missing statement that correctly removes the newline added by fgets().',
+    code:['char s[100];','fgets(s, sizeof(s), stdin);','__________;','printf("%s", s);'],
+    answer:'s[strcspn(s, "\\n")] = \'\\0\';',
+    options:['s[strcspn(s, "\\n")] = \'\\0\';','s = \'\\0\';','strlen(s) = 0;','remove(s);']
+  }
+};
+
+let activeStudio='observation';
+function renderStudio(){
+  const c=STUDIO_CHALLENGES[activeStudio], el=$('studioChallenge');
+  if(!el)return;
+  const codeHtml='<div class="observationViewport">'+c.code.map((line,i)=>'<div class="codeLine" style="--line:'+i+'"><span class="lineNo">'+(i+1)+'</span><code>'+esc(line)+'</code></div>').join('')+'</div>';
+  const options='<div class="studioOptions">'+c.options.map((o,i)=>'<label><input type="radio" name="studioAnswer" value="'+esc(o)+'"><span>'+String.fromCharCode(65+i)+'</span>'+esc(o)+'</label>').join('')+'</div>';
+  el.innerHTML='<div class="studioPrompt">'+esc(c.prompt)+'</div>'+codeHtml+options;
+}
+function setupStudio(){
+  document.querySelectorAll('.studioTab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.studioTab').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeStudio=b.dataset.studio;renderStudio();$('studioResult').textContent='';});
+  if($('submitStudioBtn'))$('submitStudioBtn').onclick=async()=>{
+    const selected=document.querySelector('input[name="studioAnswer"]:checked');
+    if(!selected)return msg('Select an answer first.');
+    const b=$('submitStudioBtn');b.disabled=true;b.textContent='Checking…';$('studioStatus').textContent='Server verification…';
+    try{
+      const r=await call('evaluateCConceptChallenge')({challengeId:activeStudio,answer:selected.value});
+      const d=r.data;
+      $('studioResult').innerHTML='<strong>'+esc(d.correct?'✓ Correct':'✗ Not quite')+'</strong><br>'+esc(d.explanation||'')+'<br><span>+'+d.xpEarned+' XP</span>';
+      $('studioStatus').textContent=d.correct?'Skill completed':'Review and try again';
+      loadCompetencyJourney();
+    }catch(e){$('studioResult').textContent=e.message||String(e);}
+    finally{b.disabled=false;b.textContent='Check Answer';}
+  };
+  renderStudio();
+}
 
 const CODING_CHALLENGES = {
   'count-vowels': {

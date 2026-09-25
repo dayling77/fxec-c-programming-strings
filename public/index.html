@@ -37,6 +37,7 @@
   <button class="menuButton" data-panel="learningPanel">📚 5-Day Learning Centre</button>
   <button class="menuButton" data-panel="practicePanel">📝 Sample Assessment</button>
   <button class="menuButton" data-panel="codingPanel">💻 C Coding Lab</button>
+  <button class="menuButton" data-panel="competencyStudioPanel">🧠 Skill Builder</button>
   <button class="menuButton" data-panel="journeyPanel">🚀 Competency Journey</button>
   <button class="menuButton" data-panel="scorePanel">📊 Check My Score</button>
   <button class="menuButton" data-panel="assessmentPanel">🎯 Today's Assessment</button>
@@ -81,7 +82,21 @@ int main(void) {
     <div id="challengeResult" class="challengeResult"></div>
   </div>
 </div>
-<div id="journeyPanel" class="studentHiddenPanel" hidden>
+<div id="competencyStudioPanel" class="studentHiddenPanel" hidden>
+  <div class="card competencyStudio">
+    <div class="sectionHeading"><div><span class="sectionEyebrow">C PROGRAMMING · COMPETENCY STUDIO</span><h2>Observe · Predict · Debug · Complete</h2></div><span class="practiceBadge">Skill Builder</span></div>
+    <p>Short challenges build the same skills used in the main assessment and coding lab.</p>
+    <div class="studioTabs">
+      <button class="studioTab active" data-studio="observation">Code Observation</button>
+      <button class="studioTab" data-studio="output">Output Prediction</button>
+      <button class="studioTab" data-studio="bug">Bug Identification</button>
+      <button class="studioTab" data-studio="missing">Missing Code</button>
+    </div>
+    <div id="studioChallenge"></div>
+    <div class="studioActions"><button id="submitStudioBtn">Check Answer</button><span id="studioStatus"></span></div>
+    <div id="studioResult" class="challengeResult"></div>
+  </div>
+</div><div id="journeyPanel" class="studentHiddenPanel" hidden>
   <div class="card"><div id="competencyJourney"></div></div>
 </div>
 <div id="scorePanel" class="studentHiddenPanel" hidden>
