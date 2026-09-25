@@ -1,7 +1,7 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import { onSchedule } from 'firebase-functions/v2/scheduler';
 import { onDocumentCreated } from 'firebase-functions/v2/firestore';
-import { defineJsonSecret } from 'firebase-functions/params';
+import { defineJsonSecret, defineString } from 'firebase-functions/params';
 import { logger, setGlobalOptions } from 'firebase-functions';
 import { initializeApp } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
@@ -21,6 +21,8 @@ const bucket = getStorage().bucket();
 const tts = new textToSpeech.TextToSpeechClient();
 
 const ZEPTOMAIL_CONFIG = defineJsonSecret('ZEPTOMAIL_CONFIG');
+const COMPILER_API_URL = defineString('COMPILER_API_URL', {default: 'https://ce.judge0.com'});
+const COMPILER_API_TOKEN = defineString('COMPILER_API_TOKEN', {default: ''});
 const CALLABLE_CORS = ['https://fxec-c-strings.web.app','https://fxec-c-strings.firebaseapp.com','http://localhost:5000','http://127.0.0.1:5000'];
 
 const CONFIG = Object.freeze({
@@ -1040,6 +1042,151 @@ export const getCourseOverview = onCall(async () => {
     overview: 'A 5-day self-learning and assessment programme covering C strings from fundamentals through advanced string problem solving.',
     schedules
   };
+});
+
+
+
+const C_CHALLENGES = Object.freeze({
+  'count-vowels': {
+    title: 'Count Vowels',
+    xp: 20,
+    tests: [
+      ['Engineering','4'],['AEIOU','5'],['rhythm','0'],['Hello World','3'],['FXEC Engineering College','9']
+    ]
+  },
+  'reverse-string': {
+    title: 'Reverse a String',
+    xp: 20,
+    tests: [
+      ['hello','olleh'],['hello world','dlrow olleh'],['FXEC','CEXF'],['a','a'],['Engineering','gnireenignE']
+    ]
+  },
+  'palindrome': {
+    title: 'Palindrome Check',
+    xp: 20,
+    tests: [
+      ['madam','YES'],['Never odd or even','YES'],['hello','NO'],['Level','YES'],['engineering','NO']
+    ]
+  }
+});
+
+function normalizeCompilerText(value){
+  return String(value ?? '').replace(/\r\n/g,'\n').trim();
+}
+
+async function judge0Submit(sourceCode, stdin, expectedOutput){
+  const base=String(COMPILER_API_URL.value()||'').replace(/\/$/,'');
+  if(!base) throw new HttpsError('failed-precondition','Compiler service is not configured.');
+  const headers={'Content-Type':'application/json'};
+  const token=String(COMPILER_API_TOKEN.value()||'').trim();
+  if(token) headers['X-Auth-Token']=token;
+  const response=await fetch(base+'/submissions?base64_encoded=false&wait=true',{
+    method:'POST',headers,
+    body:JSON.stringify({
+      language_id:50,
+      source_code:sourceCode,
+      stdin:stdin||'',
+      expected_output:expectedOutput,
+      cpu_time_limit:2,
+      wall_time_limit:5,
+      memory_limit:128000,
+      max_file_size:1024
+    })
+  });
+  const body=await response.json().catch(()=>({}));
+  if(!response.ok) throw new Error(body.error||body.message||('Compiler service returned HTTP '+response.status));
+  if(body.token && !body.status){
+    for(let i=0;i<12;i++){
+      await new Promise(r=>setTimeout(r,750));
+      const poll=await fetch(base+'/submissions/'+encodeURIComponent(body.token)+'?base64_encoded=false',{headers});
+      const data=await poll.json().catch(()=>({}));
+      if(!poll.ok) throw new Error(data.error||'Compiler polling failed.');
+      if(data.status && ![1,2].includes(Number(data.status.id))) return data;
+    }
+    throw new Error('Compiler timed out while waiting for the execution result.');
+  }
+  return body;
+}
+
+function enforceCodeLimits(sourceCode, stdin){
+  if(typeof sourceCode!=='string'||sourceCode.length<1||sourceCode.length>20000) throw new HttpsError('invalid-argument','C source code must be between 1 and 20,000 characters.');
+  if(typeof stdin!=='string'||stdin.length>5000) throw new HttpsError('invalid-argument','Input is limited to 5,000 characters.');
+}
+
+async function consumeCompilerQuota(uid, amount=1){
+  const ref=db.collection('compilerUsage').doc(uid);
+  const today=new Date().toISOString().slice(0,10);
+  return db.runTransaction(async tx=>{
+    const snap=await tx.get(ref); const d=snap.exists?snap.data():{};
+    const count=d.date===today?Number(d.count||0):0;
+    if(count+amount>30) throw new HttpsError('resource-exhausted','Daily coding-run limit reached (30 runs).');
+    tx.set(ref,{date:today,count:count+amount,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    return count+amount;
+  });
+}
+
+export const runCCode = onCall({cors:CALLABLE_CORS,timeoutSeconds:30,memory:'512MiB'}, async request=>{
+  const user=requireAuth(request);
+  const sourceCode=String(request.data?.sourceCode||'');
+  const stdin=String(request.data?.stdin||'');
+  enforceCodeLimits(sourceCode,stdin);
+  await consumeCompilerQuota(user.uid,1);
+  const result=await judge0Submit(sourceCode,stdin,null);
+  const accepted=Number(result.status?.id)===3;
+  return {
+    accepted,
+    status:result.status?.description||'Unknown',
+    stdout:String(result.stdout||''),
+    stderr:String(result.stderr||''),
+    compileOutput:String(result.compile_output||''),
+    message:String(result.message||''),
+    time:result.time||null,
+    memory:result.memory||null
+  };
+});
+
+export const submitCChallenge = onCall({cors:CALLABLE_CORS,timeoutSeconds:120,memory:'512MiB'}, async request=>{
+  const user=requireAuth(request);
+  const challengeId=String(request.data?.challengeId||'');
+  const challenge=C_CHALLENGES[challengeId];
+  if(!challenge) throw new HttpsError('invalid-argument','Unknown C challenge.');
+  const sourceCode=String(request.data?.sourceCode||'');
+  enforceCodeLimits(sourceCode,'');
+  await consumeCompilerQuota(user.uid,challenge.tests.length);
+  const results=[];
+  for(const [input,expected] of challenge.tests){
+    const r=await judge0Submit(sourceCode,input,expected);
+    results.push({
+      input,expected,
+      passed:Number(r.status?.id)===3,
+      status:r.status?.description||'Unknown',
+      stdout:String(r.stdout||'').slice(0,1000),
+      stderr:String(r.stderr||'').slice(0,1000)
+    });
+  }
+  const passedTests=results.filter(x=>x.passed).length;
+  const passed=passedTests===results.length;
+  const xpEarned=passed?challenge.xp:Math.min(5,passedTests);
+  const progressRef=db.collection('competencyProgress').doc(user.uid);
+  await db.runTransaction(async tx=>{
+    const snap=await tx.get(progressRef); const d=snap.exists?snap.data():{};
+    const oldXp=Number(d.xp||0), newXp=oldXp+xpEarned;
+    const level=Math.floor(newXp/100)+1;
+    const badges=Array.isArray(d.badges)?[...d.badges]:[];
+    if(passed && !badges.includes('C Strings Coder')) badges.push('C Strings Coder');
+    tx.set(progressRef,{xp:newXp,level,badges,updatedAt:FieldValue.serverTimestamp(),lastChallenge:challengeId,lastChallengePassed:passed},{merge:true});
+  });
+  return {
+    passed,passedTests,totalTests:results.length,xpEarned,
+    message:passed?'All hidden tests passed. Challenge completed.':'Some hidden tests failed. Review your algorithm and try again.',
+    results:results.map(x=>({passed:x.passed,status:x.status}))
+  };
+});
+
+export const getCompetencyProgress = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const snap=await db.collection('competencyProgress').doc(user.uid).get();
+  return snap.exists?snap.data():{xp:0,level:1,badges:[],tracks:[]};
 });
 
 export const getPublicStats = onCall({ cors: CALLABLE_CORS }, async request => {
