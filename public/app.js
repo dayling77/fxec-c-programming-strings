@@ -245,8 +245,31 @@ async function loadStudent() {
   $('myScore').innerHTML='<p>Open <strong>Check My Score</strong> to review your latest completed assessment.</p>';
 }
 $('startBtn').onclick = async () => {
-  try { const r=await call('startAttempt')({}); currentAttempt=r.data; assessmentAnswers={}; assessmentIndex=0; questionDeadlines={}; clearInterval(questionTimer); renderAssessment(currentAttempt); }
-  catch(e){ msg(e.message); }
+  const startButton=$('startBtn');
+  const questionsEl=$('questions');
+  const statusEl=$('studentStatus');
+  startButton.disabled=true;
+  startButton.textContent='Loading…';
+  if(questionsEl){
+    questionsEl.innerHTML='<div class="assessmentLoadingCard" role="status" aria-live="polite"><div class="assessmentSpinner"></div><strong>Please wait…</strong><span>Question loading...</span><small>Preparing your assessment securely. Please do not refresh the page.</small></div>';
+  }
+  if(statusEl) statusEl.innerHTML='<div class="scheduledState"><strong>Please wait… Question loading...</strong><span>Your assessment is being prepared. This may take a few seconds.</span></div>';
+  try {
+    const r=await call('startAttempt')({});
+    currentAttempt=r.data;
+    assessmentAnswers={};
+    assessmentIndex=0;
+    questionDeadlines={};
+    clearInterval(questionTimer);
+    renderAssessment(currentAttempt);
+  } catch(e) {
+    if(questionsEl) questionsEl.innerHTML='';
+    if(statusEl) statusEl.innerHTML='<div class="closedState">'+esc(e.message||'Unable to start the assessment.')+'</div>';
+    msg(e.message);
+  } finally {
+    startButton.disabled=false;
+    startButton.textContent='Start Assessment';
+  }
 };
 
 let assessmentIndex=0;
