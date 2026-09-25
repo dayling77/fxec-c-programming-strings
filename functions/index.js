@@ -518,12 +518,17 @@ export const finalizeAttemptSubmission = onDocumentCreated('assessmentSubmission
       return;
     }
 
+    const closeAt = attempt.closeAt?.toDate ? attempt.closeAt.toDate() : new Date(attempt.closeAt);
+    if (!Number.isNaN(closeAt.getTime()) && new Date() > closeAt) throw new Error('The assessment window has closed.');
+
     const poolSnap = await db.collection('questionPools').doc(attempt.poolId).get();
     if (!poolSnap.exists) throw new Error('Question pool unavailable.');
     const byId = new Map((poolSnap.data().questions || []).map(q => [q.id, q]));
+    const allowedIds = new Set(Array.isArray(attempt.questionIds) ? attempt.questionIds : []);
     const answers = Array.isArray(submission.answers) ? submission.answers : [];
     let correct = 0;
     for (const submitted of answers) {
+      if (!allowedIds.has(submitted.questionId)) continue;
       const q = byId.get(submitted.questionId);
       if (q && answersEqual(q.answer, submitted.answer)) correct++;
     }
