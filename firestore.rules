@@ -29,11 +29,11 @@ service cloud.firestore {
 
 
     match /assessmentSubmissions/{id} {
-      // The server-side trigger performs the authoritative ownership check.
-      // The client may create/read its own submission document.
-      allow create: if signedIn() && request.resource.data.studentId == request.auth.uid;
-      allow read: if signedIn() && resource.data.studentId == request.auth.uid;
-      allow update, delete: if false;
+      // Students only need permission to create a submission. The Cloud
+      // Firestore trigger performs the authoritative ownership, question,
+      // scoring and deadline checks using the Admin SDK.
+      allow create: if signedIn();
+      allow read, update, delete: if false;
     }
 
     match /results/{id} {
