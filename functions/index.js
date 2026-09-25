@@ -108,24 +108,7 @@ function answersEqual(a, b) {
   return JSON.stringify(normalizeAnswer(a)) === JSON.stringify(normalizeAnswer(b));
 }
 
-function matchAnswersEqual(q, submitted) {
-  if (!q || q.type !== 'match' || !submitted || typeof submitted !== 'object' || Array.isArray(submitted)) return false;
-  const leftItems = Array.isArray(q.leftItems) ? q.leftItems : [];
-  const expected = q.answer && typeof q.answer === 'object' ? q.answer : {};
-  if (!leftItems.length) return answersEqual(expected, submitted);
 
-  // The student UI stores match answers by the visible left-item text,
-  // while the published answer key is indexed by the left-item position.
-  // Convert the student's representation to the canonical indexed form
-  // before comparing it with the answer key.
-  const normalizedSubmitted = {};
-  for (let i = 0; i < leftItems.length; i++) {
-    const left = String(leftItems[i]);
-    if (!Object.prototype.hasOwnProperty.call(submitted, left)) return false;
-    normalizedSubmitted[String(i)] = submitted[left];
-  }
-  return answersEqual(expected, normalizedSubmitted);
-}
 function stripJson(text) {
   const t = String(text || '').trim();
   const fenced = t.match(/\`\`\`(?:json)?\\s*([\\s\\S]*?)\`\`\`/i);
@@ -559,11 +542,7 @@ export const finalizeAttemptSubmission = onDocumentCreated('assessmentSubmission
     for (const submitted of answers) {
       if (!allowedIds.has(submitted.questionId)) continue;
       const q = byId.get(submitted.questionId);
-      if (q && (
-        q.type === 'match'
-          ? matchAnswersEqual(q, submitted.answer)
-          : answersEqual(q.answer, submitted.answer)
-      )) correct++;
+      if (q && answersEqual(q.answer, submitted.answer)) correct++;
     }
 
     const total = Number(attempt.totalQuestions || CONFIG.questionsPerStudent);
