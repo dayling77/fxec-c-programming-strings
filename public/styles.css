@@ -348,3 +348,10 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .trackProgress{height:7px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin:14px 0 8px}.trackProgress span{display:block;height:100%;background:#2563eb}
 .journeyNote{margin-top:16px;padding:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;color:#1e3a8a}
 @media(max-width:800px){.codingEditorGrid,.trackGrid{grid-template-columns:1fr}.codingChallengeBar select{min-width:0;width:100%}}
+
+
+/* C Competency Studio */
+.competencyStudio{padding:24px}.studioTabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.studioTab{border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800;cursor:pointer}.studioTab.active{background:#2563eb;color:#fff;border-color:#2563eb}
+.studioPrompt{background:#eff6ff;border:1px solid #bfdbfe;padding:14px;border-radius:10px;margin-bottom:14px;font-weight:650}.observationViewport{height:210px;max-width:760px;overflow:hidden;background:#020617;border-radius:12px;padding:14px;box-sizing:border-box;position:relative}.codeLine{display:flex;gap:15px;color:#e2e8f0;font:13px/1.65 Consolas,Monaco,monospace;animation:codeObserve 7s ease-in-out 1}.lineNo{width:25px;text-align:right;color:#64748b;user-select:none}.codeLine code{white-space:pre}.studioOptions{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}.studioOptions label{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid #e2e8f0;border-radius:10px;background:#fff;cursor:pointer}.studioOptions label:hover{border-color:#93c5fd}.studioOptions span{font-weight:900;color:#2563eb}.studioActions{display:flex;align-items:center;gap:12px;margin-top:15px}.studioActions span{font-size:12px;color:#64748b}
+@keyframes codeObserve{0%{transform:translateY(120px);opacity:.2}20%{transform:translateY(0);opacity:1}80%{transform:translateY(calc(var(--line) * -1px));opacity:1}100%{transform:translateY(calc(var(--line) * -1px));opacity:1}}
+@media(max-width:700px){.studioOptions{grid-template-columns:1fr}.observationViewport{height:190px}}
