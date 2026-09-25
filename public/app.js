@@ -404,15 +404,18 @@ async function submitAttempt(auto=false){
 
     $('submitBtn').textContent='Processing…';
     let result=null;
+    // Poll the authenticated server-side profile instead of reading the
+    // submission document back from Firestore.
     for(let i=0;i<60;i++){
       await new Promise(resolve=>setTimeout(resolve,500));
-      const snap=await getDoc(submissionRef);
-      if(!snap.exists())continue;
-      const data=snap.data();
-      if(data.status==='completed' && data.result){ result=data.result; break; }
-      if(data.status==='failed') throw new Error(data.error||'Assessment submission failed. Please contact the administrator.');
+      const profile=(await call('getStudentProfile')({})).data;
+      const latest=profile.latestResult;
+      if(latest && latest.assessmentDate===currentAttempt.assessmentDate){
+        result=latest;
+        break;
+      }
     }
-    if(!result) throw new Error('The assessment was submitted, but the result is still being processed. Please wait a moment and check My Score.');
+    if(!result) throw new Error('The assessment was submitted, but the result is still being processed. Please open Check My Score in a moment.');
     clearInterval(timer);
     clearInterval(questionTimer);
     $('result').innerHTML='<div class="result"><strong>Score: '+result.scorePercent+'%</strong><br>'+ (result.passed?'Congratulations! 40 Reward Points have been credited.':'The passing mark is 80%. No Reward Points are credited for this attempt.')+'</div>';
