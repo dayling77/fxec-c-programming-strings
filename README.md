@@ -35,3 +35,46 @@ Automated 5-Day Assessment Portal.
 
 ## Important
 A statistical target such as only about 5% of students scoring 100% cannot be guaranteed before real student response data exists. The generator deliberately makes the tough portion challenging and the system stores outcomes so the pool can be tuned later.
+
+## Competency Portal Phase 1
+
+The existing C Programming | Level 3 | Strings portal now includes a reusable competency layer and C Coding Lab without replacing the existing approval, question-pool, assessment, or server-side scoring flow.
+
+### C Coding Lab
+
+- Student-facing C editor with standard input.
+- Compile & Run sends source code to the server-side `runCCode` callable.
+- Submit Challenge evaluates against hidden server-side test cases.
+- Hidden test inputs/expected outputs are never sent to the browser.
+- Daily compiler quota: 30 execution/test units per student.
+- Successful challenge completion awards XP and the first C Strings badge.
+
+### Compiler configuration
+
+The portal uses a Judge0-compatible API. The Firebase function defaults to `https://ce.judge0.com`, but for an institution serving a large cohort, configure a dedicated Judge0 deployment or another compatible endpoint through the Firebase Functions parameters:
+
+- `COMPILER_API_URL`
+- `COMPILER_API_TOKEN` (only when the selected Judge0 instance requires it)
+
+Judge0 provides sandboxed compilation/execution and supports self-hosting. The portal submits asynchronously and polls for completion.
+
+### Track model
+
+The C Programming model is the reference implementation for the other first-year competency tracks. Track definitions live in `src/data/competencyTracks.js`:
+
+1. Communication
+2. Aptitude
+3. Core Engineering
+4. C Programming
+5. Problem Solving
+6. Reading & Listening / Analytical Skills
+
+Each track follows the same pipeline:
+
+`Learn → Watch/Observe → Practice → Knowledge Check → Challenge → Assessment → XP/Badge`
+
+The existing C Strings assessment remains the first live implementation; the other tracks can be populated against the same engine rather than creating separate portals.
+
+### Deployment note
+
+The GitHub phase adds the code and configuration. The compiler endpoint must be configured and available before student code execution is enabled in production. The compiler service should be capacity-tested before opening coding challenges to the full cohort.
