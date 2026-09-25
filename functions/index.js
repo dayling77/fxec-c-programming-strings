@@ -1183,6 +1183,33 @@ export const submitCChallenge = onCall({cors:CALLABLE_CORS,timeoutSeconds:120,me
   };
 });
 
+
+const C_CONCEPT_CHALLENGES = Object.freeze({
+  observation:{answer:'16',xp:8,explanation:'x starts at 2 and is doubled three times: 2 → 4 → 8 → 16.'},
+  output:{answer:'F C',xp:8,explanation:'s[0] is F and s[3] is C, so printf outputs F C.'},
+  bug:{answer:'2',xp:8,explanation:'The destination array has space for only 5 characters including the null terminator, but "David" needs 6 bytes.'},
+  missing:{answer:"s[strcspn(s, "\\n")] = '\\0';",xp:8,explanation:'This replaces the newline inserted by fgets with the string terminator.'}
+});
+
+export const evaluateCConceptChallenge = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const challengeId=String(request.data?.challengeId||'');
+  const answer=String(request.data?.answer||'');
+  const challenge=C_CONCEPT_CHALLENGES[challengeId];
+  if(!challenge) throw new HttpsError('invalid-argument','Unknown skill-builder challenge.');
+  const correct=answer===challenge.answer;
+  const xpEarned=correct?challenge.xp:0;
+  if(correct){
+    const ref=db.collection('competencyProgress').doc(user.uid);
+    await db.runTransaction(async tx=>{
+      const snap=await tx.get(ref); const d=snap.exists?snap.data():{};
+      const oldXp=Number(d.xp||0),newXp=oldXp+xpEarned;
+      tx.set(ref,{xp:newXp,level:Math.floor(newXp/100)+1,badges:Array.isArray(d.badges)?d.badges:[],updatedAt:FieldValue.serverTimestamp(),lastSkill:challengeId},{merge:true});
+    });
+  }
+  return {correct,xpEarned,explanation:correct?challenge.explanation:'Review the code carefully and try again.'};
+});
+
 export const getCompetencyProgress = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
   const snap=await db.collection('competencyProgress').doc(user.uid).get();
