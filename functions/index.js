@@ -1080,7 +1080,7 @@ async function judge0Submit(sourceCode, stdin, expectedOutput){
   const headers={'Content-Type':'application/json'};
   const token=String(COMPILER_API_TOKEN.value()||'').trim();
   if(token) headers['X-Auth-Token']=token;
-  const response=await fetch(base+'/submissions?base64_encoded=false&wait=true',{
+  const response=await fetch(base+'/submissions?base64_encoded=false&wait=false',{
     method:'POST',headers,
     body:JSON.stringify({
       language_id:50,
