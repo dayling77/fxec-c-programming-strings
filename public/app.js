@@ -2,7 +2,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/fireba
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
 import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-storage.js';
-import { getFirestore, doc, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js';
+import { getFirestore, doc, getDoc, setDoc, addDoc, collection } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js';
 
 const config = window.FXEC_FIREBASE_CONFIG;
 const app = initializeApp(config);
@@ -393,8 +393,8 @@ async function submitAttempt(auto=false){
   try{
     // Submit directly to Firestore. A secure server-side Firestore trigger scores it.
     // This avoids the organization-level HTTPS callable CORS/IAM problem.
-    const submissionRef=doc(firestore,'assessmentSubmissions',currentAttempt.attemptId);
-    await setDoc(submissionRef,{
+    const submissionRef=await addDoc(collection(firestore,'assessmentSubmissions'),{
+      
       studentId:currentUser.uid,
       attemptId:currentAttempt.attemptId,
       answers,
