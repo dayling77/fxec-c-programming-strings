@@ -196,6 +196,84 @@ $('loginForm').onsubmit = async e => {
 };
 
 $('logoutBtn').onclick = () => signOut(auth);
+setupCodingLab();
+
+const CODING_CHALLENGES = {
+  'count-vowels': {
+    title:'Count Vowels',
+    prompt:'Read one line and print the number of vowels (a, e, i, o, u), case-insensitive.',
+    starter:'#include <stdio.h>\n#include <ctype.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
+  },
+  'reverse-string': {
+    title:'Reverse a String',
+    prompt:'Read one line and print the characters in reverse order. Preserve spaces and ignore the trailing newline.',
+    starter:'#include <stdio.h>\n#include <string.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
+  },
+  'palindrome': {
+    title:'Palindrome Check',
+    prompt:'Read one line and print YES if it is a palindrome ignoring case and spaces; otherwise print NO.',
+    starter:'#include <stdio.h>\n#include <ctype.h>\n#include <string.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
+  }
+};
+
+function renderCompetencyJourney(progress){
+  const p=progress||{xp:0,level:1,badges:[],tracks:[]};
+  const tracks=[
+    ['Communication','Concepts · Listening · Grammar · GD'],
+    ['Aptitude','Quantitative · Logical · Data Interpretation'],
+    ['Core Engineering','Branch fundamentals · Diagrams · Decisions'],
+    ['C Programming','Syntax · Strings · Algorithms · Coding'],
+    ['Problem Solving','Patterns · Algorithms · Debugging'],
+    ['Analytical Skills','Reading · Listening · Reasoning']
+  ];
+  const level=Math.max(1,Number(p.level||1));
+  const xp=Number(p.xp||0);
+  $('competencyJourney').innerHTML='<div class="journeyHero"><span class="sectionEyebrow">FIRST-YEAR ENGINEERING COMPETENCY</span><h2>Your Learning Journey</h2><p>One reusable model: Learn → Practice → Observe → Code → Challenge → Assess → Earn XP.</p><div class="xpStrip"><strong>'+xp+' XP</strong><span>Level '+level+'</span><span>'+(p.badges?.length||0)+' Badges</span></div></div><div class="trackGrid">'+tracks.map((t,i)=>'<article class="trackCard '+(i===3?'active':'')+'"><span class="trackNumber">'+String(i+1).padStart(2,'0')+'</span><h3>'+esc(t[0])+'</h3><p>'+esc(t[1])+'</p><div class="trackProgress"><span style="width:'+(i===3?'35':'0')+'%"></span></div><small>'+(i===3?'Current model: C Programming':'Ready for rollout')+'</small></article>').join('')+'</div><div class="journeyNote"><strong>Architecture is now track-based.</strong> The C Programming model becomes the template for the remaining competency tracks without replacing the working assessment engine.</div>';
+}
+
+async function loadCompetencyJourney(){
+  try{ const r=await call('getCompetencyProgress')({}); renderCompetencyJourney(r.data); }
+  catch(_){ renderCompetencyJourney({xp:0,level:1,badges:[]}); }
+}
+
+function setupCodingLab(){
+  const select=$('codingChallengeSelect'), editor=$('cCodeEditor'), prompt=$('codingChallengePrompt');
+  if(!select||!editor)return;
+  $('loadCodingChallengeBtn').onclick=()=>{
+    const key=select.value;
+    if(key==='playground'){prompt.textContent='Use the playground to experiment with C strings.';return;}
+    const c=CODING_CHALLENGES[key];
+    if(!c)return;
+    prompt.innerHTML='<strong>'+esc(c.title)+'</strong><br>'+esc(c.prompt);
+    editor.value=c.starter;
+    $('cCodeInput').value= key==='count-vowels'?'Engineering':key==='reverse-string'?'hello world':'Never odd or even';
+    $('challengeResult').textContent='';
+  };
+  $('runCCodeBtn').onclick=async()=>{
+    const b=$('runCCodeBtn'),out=$('compilerOutput'),status=$('compilerStatus');
+    b.disabled=true;b.textContent='Compiling…';status.textContent='Sending to secure compiler…';out.textContent='';
+    try{
+      const r=await call('runCCode')({sourceCode:editor.value,stdin:$('cCodeInput').value});
+      out.textContent=(r.data.compileOutput||'')+(r.data.stdout||'')+(r.data.stderr?('\n'+r.data.stderr):'')+(r.data.message?('\n'+r.data.message):'');
+      status.textContent=r.data.accepted?'✓ Compiled & executed':'⚠ Execution completed with errors';
+    }catch(e){out.textContent=e.message||String(e);status.textContent='Compiler error';}
+    finally{b.disabled=false;b.textContent='▶ Compile & Run';}
+  };
+  $('submitCChallengeBtn').onclick=async()=>{
+    const key=select.value;
+    if(key==='playground')return msg('Choose a challenge before submitting.');
+    const b=$('submitCChallengeBtn');b.disabled=true;b.textContent='Checking hidden tests…';
+    $('challengeResult').textContent='Running server-side hidden tests…';
+    try{
+      const r=await call('submitCChallenge')({challengeId:key,sourceCode:editor.value});
+      const d=r.data;
+      $('challengeResult').innerHTML='<strong>'+esc(d.passed?'✓ Challenge Passed':'✗ Challenge Not Passed')+'</strong><br>'+esc(d.message||'')+'<br><span>'+d.passedTests+'/'+d.totalTests+' hidden tests passed · +'+d.xpEarned+' XP</span>';
+      loadCompetencyJourney();
+    }catch(e){$('challengeResult').textContent=e.message||String(e);}
+    finally{b.disabled=false;b.textContent='✓ Submit Challenge';}
+  };
+}
+
 $('adminBootstrap').onclick = async () => {
   try {
     const r = await call('bootstrapAdmin')({});
@@ -242,6 +320,7 @@ async function loadStudent() {
     $('startBtn').disabled=d.status!=='open'||!d.ready;
   } catch(e) { $('studentStatus').textContent=e.message; }
   loadStats();
+  loadCompetencyJourney();
   $('myScore').innerHTML='<p>Open <strong>Check My Score</strong> to review your latest completed assessment.</p>';
 }
 $('startBtn').onclick = async () => {
