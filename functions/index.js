@@ -498,100 +498,58 @@ export const startAttempt = onCall({ cors: CALLABLE_CORS }, async request => {
   return { attemptId: attemptRef.id, assessmentDate: schedule.date, closeAt: assessmentCloseAt.toISOString(), totalTimeLimitSeconds, questions };
 });
 
-export const finalizeAttempt = onCall({ cors: CALLABLE_CORS, secrets: [ZEPTOMAIL_CONFIG] }, async request => {
+export const finalizeAttempt = onCall({ cors: CALLABLE_CORS }, async request => {
   const a = requireAuth(request);
   const attemptId = cleanText(request.data?.attemptId, 200);
   const answers = Array.isArray(request.data?.answers) ? request.data.answers : [];
   if (!attemptId) throw new HttpsError('invalid-argument', 'attemptId is required.');
-  const attemptRef = db.collection('attempts').doc(attemptId);
-  const attemptSnap = await attemptRef.get();
-  if (!attemptSnap.exists) throw new HttpsError('not-found', 'Attempt not found.');
-  const attempt = attemptSnap.data();
-  if (attempt.studentId !== a.uid) throw new HttpsError('permission-denied', 'Attempt ownership mismatch.');
-  if (attempt.status === 'finalized') return (await db.collection('results').doc(attemptId).get()).data();
-  if (new Date() > attempt.closeAt.toDate()) throw new HttpsError('deadline-exceeded', 'The assessment window has closed.');
-  const poolSnap = await db.collection('questionPools').doc(attempt.poolId).get();
-  if (!poolSnap.exists) throw new HttpsError('failed-precondition', 'Question pool unavailable.');
-  const byId = new Map((poolSnap.data().questions || []).map(q => [q.id, q]));
-  let correct = 0;
-  for (const submitted of answers) {
-    const q = byId.get(submitted.questionId);
-    if (q && answersEqual(q.answer, submitted.answer)) correct++;
-  }
-  const total = attempt.totalQuestions || CONFIG.questionsPerStudent;
-  const scorePercent = Math.round((correct / total) * 10000) / 100;
-  const passed = scorePercent >= CONFIG.passPercent;
-  const rewardPoints = passed ? CONFIG.rewardPoints : 0;
-  const studentRef = db.collection('students').doc(a.uid);
-  const resultRef = db.collection('results').doc(attemptId);
-  await db.runTransaction(async tx => {
-    const current = await tx.get(resultRef);
-    if (current.exists) return;
-    tx.set(resultRef, {
-      studentId: a.uid, attemptId, assessmentDate: attempt.assessmentDate,
-      score: correct, total, scorePercent, passed, rewardPoints,
-      completedAt: FieldValue.serverTimestamp()
-    });
-    tx.update(attemptRef, { status: 'finalized', finalizedAt: FieldValue.serverTimestamp() });
-    if (passed) tx.set(studentRef, { rewardPoints: FieldValue.increment(CONFIG.rewardPoints), lastRewardAt: FieldValue.serverTimestamp() }, { merge: true });
-    tx.set(db.collection('publicStats').doc('global'), {
-      totalAttempts: FieldValue.increment(1),
-      totalPassed: FieldValue.increment(passed ? 1 : 0),
-      totalRewardPoints: FieldValue.increment(rewardPoints),
-      updatedAt: FieldValue.serverTimestamp()
-    }, { merge: true });
-  });
-  const student = (await studentRef.get()).data() || {};
-  // Result is already committed at this point. Notification/leaderboard failures
-  // must never turn a successful submission into an "Internal" error.
-  if (student.email) {
-    const subject = passed ? 'FXEC C Programming Assessment – Congratulations!' : 'FXEC C Programming Assessment – Result';
-    const html = passed
-      ? `<p>Dear ${student.name || 'Student'},</p><p>You scored <strong>${scorePercent}%</strong> in the C Programming – Level 3 Strings assessment.</p><p>Congratulations! <strong>${CONFIG.rewardPoints} Reward Points</strong> have been credited to your account.</p>`
-      : `<p>Dear ${student.name || 'Student'},</p><p>Your score in the C Programming – Level 3 Strings assessment is <strong>${scorePercent}%</strong>.</p><p>The passing requirement is ${CONFIG.passPercent}%. No Reward Points are credited for this attempt.</p><p>You can continue practising the module and participate in the next scheduled activity.</p>`;
-    try {
-      await sendEmail({ to: student.email, name: student.name, subject, html, text: `Your score is ${scorePercent}%. ${passed ? `${CONFIG.rewardPoints} Reward Points credited.` : 'The passing requirement is 80%.'}` });
-    } catch (emailError) {
-      logger.error('Result email failed after successful submission.', {error: emailError?.message || String(emailError), studentId:a.uid, attemptId});
-    }
-  }
   try {
-    await updateLeaderboard();
-  } catch (leaderboardError) {
-    logger.error('Leaderboard update failed after successful submission.', {error: leaderboardError?.message || String(leaderboardError), attemptId});
+    const attemptRef = db.collection('attempts').doc(attemptId);
+    const attemptSnap = await attemptRef.get();
+    if (!attemptSnap.exists) throw new HttpsError('not-found', 'Attempt not found.');
+    const attempt = attemptSnap.data();
+    if (attempt.studentId !== a.uid) throw new HttpsError('permission-denied', 'Attempt ownership mismatch.');
+    if (attempt.status === 'finalized') {
+      const existing = await db.collection('results').doc(attemptId).get();
+      if (existing.exists) return existing.data();
+      throw new HttpsError('failed-precondition', 'This attempt was already submitted.');
+    }
+    const closeAt = attempt.closeAt?.toDate ? attempt.closeAt.toDate() : new Date(attempt.closeAt);
+    if (!Number.isNaN(closeAt.getTime()) && new Date() > closeAt) throw new HttpsError('deadline-exceeded', 'The assessment window has closed.');
+    const poolSnap = await db.collection('questionPools').doc(attempt.poolId).get();
+    if (!poolSnap.exists) throw new HttpsError('failed-precondition', 'Question pool unavailable.');
+    const byId = new Map((poolSnap.data().questions || []).map(q => [q.id, q]));
+    let correct = 0;
+    for (const submitted of answers) {
+      const q = byId.get(submitted.questionId);
+      if (q && answersEqual(q.answer, submitted.answer)) correct++;
+    }
+    const total = Number(attempt.totalQuestions || CONFIG.questionsPerStudent);
+    const scorePercent = Math.round((correct / total) * 10000) / 100;
+    const passed = scorePercent >= CONFIG.passPercent;
+    const rewardPoints = passed ? CONFIG.rewardPoints : 0;
+    const studentRef = db.collection('students').doc(a.uid);
+    const resultRef = db.collection('results').doc(attemptId);
+    await db.runTransaction(async tx => {
+      const current = await tx.get(resultRef);
+      if (current.exists) return;
+      tx.set(resultRef, {studentId:a.uid,attemptId,assessmentDate:attempt.assessmentDate,score:correct,total,scorePercent,passed,rewardPoints,completedAt:FieldValue.serverTimestamp()});
+      tx.update(attemptRef, {status:'finalized',finalizedAt:FieldValue.serverTimestamp()});
+      if (passed) tx.set(studentRef,{rewardPoints:FieldValue.increment(CONFIG.rewardPoints),lastRewardAt:FieldValue.serverTimestamp()},{merge:true});
+      tx.set(db.collection('publicStats').doc('global'),{totalAttempts:FieldValue.increment(1),totalPassed:FieldValue.increment(passed?1:0),totalRewardPoints:FieldValue.increment(rewardPoints),updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    });
+    try {
+      const student=(await studentRef.get()).data()||{};
+      if(student.email) await sendEmail({to:student.email,name:student.name,subject:passed?'FXEC C Programming Assessment – Congratulations!':'FXEC C Programming Assessment – Result',html:`<p>Dear ${student.name||'Student'},</p><p>You scored <strong>${scorePercent}%</strong>.</p><p>${passed?'Congratulations! 40 Reward Points have been credited.':'The passing requirement is 80%.'}</p>`,text:`Your score is ${scorePercent}%.`});
+    } catch(e) { logger.error('Result email failed after score commit.',{error:e?.message||String(e),attemptId}); }
+    try { await updateLeaderboard(); } catch(e) { logger.error('Leaderboard update failed after score commit.',{error:e?.message||String(e),attemptId}); }
+    return {score:correct,total,scorePercent,passed,rewardPoints};
+  } catch(error) {
+    if(error instanceof HttpsError) throw error;
+    logger.error('finalizeAttempt failed',{error:error?.stack||error?.message||String(error),attemptId,studentId:a.uid});
+    throw new HttpsError('internal','Unable to submit the assessment. Please try again.');
   }
-  return { score: correct, total, scorePercent, passed, rewardPoints };
 });
-
-async function updateLeaderboard() {
-  const snap = await db.collection('results').orderBy('scorePercent', 'desc').limit(20).get();
-  const leaderboard = [];
-  for (const doc of snap.docs) {
-    const r = doc.data();
-    const s = await db.collection('students').doc(r.studentId).get();
-    const d = s.data() || {};
-    leaderboard.push({ rank: leaderboard.length + 1, name: d.name || 'Student', registerNumber: d.registerNumber || '', scorePercent: r.scorePercent, assessmentDate: r.assessmentDate });
-  }
-  await db.collection('publicStats').doc('global').set({ leaderboard, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
-}
-
-async function sendScheduleEmails(schedule, kind) {
-  const students = await db.collection('students').where('status', '==', 'approved').get();
-  const promises = [];
-  for (const doc of students.docs) {
-    const s = doc.data();
-    if (!s.email) continue;
-    const subject = kind === 'open'
-      ? `FXEC C Strings Assessment – Day ${schedule.day} is OPEN`
-      : `Reminder: FXEC C Strings Assessment – Day ${schedule.day}`;
-    const html = kind === 'open'
-      ? `<p>Dear ${s.name || 'Student'},</p><p>Day ${schedule.day} – <strong>${schedule.topic}</strong> is now open.</p><p>Assessment: 15 questions. Pass mark: 80%. Passing earns 40 Reward Points.</p><p>Open until <strong>7:00 AM tomorrow</strong> (IST).</p>`
-      : `<p>Dear ${s.name || 'Student'},</p><p>This is an automatic reminder that Day ${schedule.day} – <strong>${schedule.topic}</strong> closes at 7:00 AM tomorrow (IST).</p>`;
-    promises.push(sendEmail({ to: s.email, name: s.name, subject, html, text: subject }));
-  }
-  await Promise.allSettled(promises);
-}
-
 export const assessmentScheduler = onSchedule({ schedule: 'every 15 minutes', timeZone: CONFIG.timezone, timeoutSeconds: 540, secrets: [ZEPTOMAIL_CONFIG] }, async () => {
   await ensureSchedules();
   const now = new Date();
