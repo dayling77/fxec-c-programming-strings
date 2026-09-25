@@ -499,10 +499,11 @@ export const startAttempt = onCall({ cors: CALLABLE_CORS }, async request => {
 });
 
 
-export const finalizeAttemptSubmission = onDocumentCreated('assessmentSubmissions/{attemptId}', async event => {
+export const finalizeAttemptSubmission = onDocumentCreated('assessmentSubmissions/{submissionId}', async event => {
   const submissionRef = event.data?.ref;
   const submission = event.data?.data();
-  const attemptId = event.params.attemptId;
+  const attemptId = String(submission?.attemptId || '');
+  const submissionId = event.params.submissionId;
   if (!submissionRef || !submission) return;
   try {
     const attemptRef = db.collection('attempts').doc(attemptId);
