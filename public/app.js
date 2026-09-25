@@ -250,9 +250,7 @@ $('startBtn').onclick = async () => {
   const statusEl=$('studentStatus');
   startButton.disabled=true;
   startButton.textContent='Loading…';
-  if(questionsEl){
-    questionsEl.innerHTML='<div class="assessmentLoadingCard" role="status" aria-live="polite"><div class="assessmentSpinner"></div><strong>Please wait…</strong><span>Question loading...</span><small>Preparing your assessment securely. Please do not refresh the page.</small></div>';
-  }
+  if(questionsEl) questionsEl.innerHTML='<div class="assessmentLoadingCard" role="status" aria-live="polite"><div class="assessmentSpinner"></div><strong>Please wait…</strong><span>Question loading...</span><small>Preparing your assessment securely. Please do not refresh the page.</small></div>';
   if(statusEl) statusEl.innerHTML='<div class="scheduledState"><strong>Please wait… Question loading...</strong><span>Your assessment is being prepared. This may take a few seconds.</span></div>';
   try {
     const r=await call('startAttempt')({});
@@ -261,6 +259,7 @@ $('startBtn').onclick = async () => {
     assessmentIndex=0;
     questionDeadlines={};
     clearInterval(questionTimer);
+    // renderAssessment replaces the loading card with the first question.
     renderAssessment(currentAttempt);
   } catch(e) {
     if(questionsEl) questionsEl.innerHTML='';
