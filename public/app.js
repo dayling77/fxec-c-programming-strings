@@ -391,12 +391,38 @@ async function submitAttempt(auto=false){
   const answers=currentAttempt.questions.map(q=>({questionId:q.id,answer:assessmentAnswers[q.id] ?? (q.type==='match'?{}:q.type==='multiAnswer'?[]:-1)}));
   $('submitBtn').disabled=true;
   try{
-    const r=await call('finalizeAttempt')({attemptId:currentAttempt.attemptId,answers});
+    // Submit directly to Firestore. A secure server-side Firestore trigger scores it.
+    // This avoids the organization-level HTTPS callable CORS/IAM problem.
+    const submissionRef=doc(firestore,'assessmentSubmissions',currentAttempt.attemptId);
+    await setDoc(submissionRef,{
+      studentId:currentUser.uid,
+      attemptId:currentAttempt.attemptId,
+      answers,
+      status:'pending',
+      submittedAt:new Date()
+    });
+
+    $('submitBtn').textContent='Processing…';
+    let result=null;
+    for(let i=0;i<60;i++){
+      await new Promise(resolve=>setTimeout(resolve,500));
+      const snap=await getDoc(submissionRef);
+      if(!snap.exists())continue;
+      const data=snap.data();
+      if(data.status==='completed' && data.result){ result=data.result; break; }
+      if(data.status==='failed') throw new Error(data.error||'Assessment submission failed. Please contact the administrator.');
+    }
+    if(!result) throw new Error('The assessment was submitted, but the result is still being processed. Please wait a moment and check My Score.');
     clearInterval(timer);
-    $('result').innerHTML='<div class="result"><strong>Score: '+r.data.scorePercent+'%</strong><br>'+ (r.data.passed?'Congratulations! 40 Reward Points have been credited.':'The passing mark is 80%. No Reward Points are credited for this attempt.')+'</div>';
+    clearInterval(questionTimer);
+    $('result').innerHTML='<div class="result"><strong>Score: '+result.scorePercent+'%</strong><br>'+ (result.passed?'Congratulations! 40 Reward Points have been credited.':'The passing mark is 80%. No Reward Points are credited for this attempt.')+'</div>';
     show('result'); $('submitBtn').disabled=true;
-    $('myScore').innerHTML='<div class="result"><strong>Latest Score: '+r.data.scorePercent+'%</strong><br>'+ (r.data.passed?'PASS · 40 Reward Points credited.':'FAIL · Passing mark is 80%.')+'</div>';
-  }catch(e){$('submitBtn').disabled=false;msg(e.message);}
+    $('myScore').innerHTML='<div class="result"><strong>Latest Score: '+result.scorePercent+'%</strong><br>'+ (result.passed?'PASS · 40 Reward Points credited.':'FAIL · Passing mark is 80%.')+'</div>';
+  }catch(e){
+    $('submitBtn').disabled=false;
+    $('submitBtn').textContent='Submit Assessment';
+    msg(e.message);
+  }
 }
 $('prevBtn').onclick=()=>{if(assessmentIndex>0){assessmentIndex--;renderAssessment(currentAttempt);}};
 $('nextBtn').onclick=()=>{if(assessmentIndex<currentAttempt.questions.length-1){assessmentIndex++;renderAssessment(currentAttempt);}};
