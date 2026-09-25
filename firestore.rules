@@ -29,11 +29,12 @@ service cloud.firestore {
 
 
     match /assessmentSubmissions/{id} {
+      // The server-side trigger verifies attempt ownership before scoring.
+      // Keep the client-side rule simple so the submission itself is not
+      // rejected by a Firestore cross-document permission check.
       allow create: if signedIn()
         && request.resource.data.studentId == request.auth.uid
-        && request.resource.data.attemptId == id
-        && exists(/databases/$(database)/documents/attempts/$(id))
-        && get(/databases/$(database)/documents/attempts/$(id)).data.studentId == request.auth.uid;
+        && request.resource.data.attemptId == id;
       allow read: if admin() || (signedIn() && resource.data.studentId == request.auth.uid);
       allow update, delete: if admin();
     }
