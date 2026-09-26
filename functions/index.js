@@ -1522,9 +1522,10 @@ function validateCompetencyQuestions(questions){
 
 
 const COMPETENCY_ASSESSMENT_BLUEPRINT = Object.freeze({
-  questionsPerDay: 25,
-  difficulty: {easy: 8, moderate: 10, tough: 7},
-  types: {mcq: 15, multipleCorrect: 5, scenario: 5}
+  questionsPerDay: 50,
+  recommendedPerStudent: 15,
+  difficulty: {easy: 15, moderate: 20, tough: 15},
+  types: {mcq: 30, multipleCorrect: 10, scenario: 10}
 });
 
 const COMPETENCY_SOURCE_MAPS = Object.freeze({
@@ -1569,7 +1570,7 @@ function competencyQuestionValidation(questions) {
 
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=meta.defaultTopics[day-1]||'Foundations';
-  return 'You are a senior assessment designer for Francis Xavier Engineering College.\nCreate Day '+day+' of a five-day assessment for '+meta.title+', intended for first-year engineering students.\n\nDAY TOPIC: '+topic+'\nCURRICULUM SCOPE:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\n\nGenerate EXACTLY 25 questions: 15 mcq (one correct), 5 multipleCorrect (exactly 2 or 3 correct), 5 scenario (one correct). Difficulty exactly 8 easy, 10 moderate, 7 tough.\n\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Return JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq|multipleCorrect|scenario","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}';
+  return 'You are a senior assessment designer for Francis Xavier Engineering College.\nCreate Day '+day+' of a five-day assessment for '+meta.title+', intended for first-year engineering students.\n\nDAY TOPIC: '+topic+'\nCURRICULUM SCOPE:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\n\nGenerate EXACTLY 50 questions: 30 mcq (one correct), 10 multipleCorrect (exactly 2 or 3 correct), 10 scenario (one correct). Difficulty exactly 15 easy, 20 moderate, 15 tough.\n\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Return JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq|multipleCorrect|scenario","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}';
 }
 
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
@@ -1602,8 +1603,8 @@ export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
     created.push({day,questionCount:questions.length});
   }
   await batch.commit();
-  await db.collection('adminActions').add({action:'autoGenerateCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,days:5,questionCount:125,createdAt:FieldValue.serverTimestamp()});
-  return {success:true,trackId,trackTitle:meta.title,days:created,totalQuestions:125,message:'Five days generated and independently audited twice. Status remains DRAFT until administrator review and approval.'};
+  await db.collection('adminActions').add({action:'autoGenerateCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,days:5,questionCount:250,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,trackTitle:meta.title,days:created,totalQuestions:125,message:'Five days generated with 50-question master pools and independently audited twice. Status remains DRAFT until administrator review and approval.'};
 });
 
 function starterCompetencyQuestions(trackId,day){
@@ -1679,7 +1680,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
   const questions=validateCompetencyQuestions(request.data?.questions);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,recommendedQuestionCount:Math.min(15,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
   await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(15,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolBatch=db.batch();
@@ -1740,7 +1741,7 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
   const poolSnap=await db.collection('competencyQuestionPools').doc(taskId).collection('questions').get();
   const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
   if(sourceQuestions.length<1) throw new HttpsError('failed-precondition','No approved question pool is available.');
-  const recommendedCount=Math.min(Number(task.recommendedQuestionCount||15),sourceQuestions.length);
+  const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
   const questions=shuffle(sourceQuestions).slice(0,recommendedCount).map(q=>{const {answer,explanation,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
   const attemptRef=db.collection('competencyAssessmentAttempts').doc();
   await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
