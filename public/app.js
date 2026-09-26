@@ -217,8 +217,10 @@ const STUDIO_CHALLENGES = {
   missing:{
     prompt:'Choose the missing statement that correctly removes the newline added by fgets().',
     code:['char s[100];','fgets(s, sizeof(s), stdin);','__________;','printf("%s", s);'],
-    answer:'s[strcspn(s, "\\n")] = \'\\0\';',
-    options:['s[strcspn(s, "\\n")] = \'\\0\';','s = \'\\0\';','strlen(s) = 0;','remove(s);']
+    answer:'s[strcspn(s, "\
+")] = \'\\0\';',
+    options:['s[strcspn(s, "\
+")] = \'\\0\';','s = \'\\0\';','strlen(s) = 0;','remove(s);']
   }
 };
 
@@ -284,17 +286,39 @@ const CODING_CHALLENGES = {
   'count-vowels': {
     title:'Count Vowels',
     prompt:'Read one line and print the number of vowels (a, e, i, o, u), case-insensitive.',
-    starter:'#include <stdio.h>\n#include <ctype.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
+    starter:'#include <stdio.h>
+#include <ctype.h>
+int main(void) {
+    char s[500];
+    fgets(s, sizeof(s), stdin);
+    /* Write your solution here */
+    return 0;
+}'
   },
   'reverse-string': {
     title:'Reverse a String',
     prompt:'Read one line and print the characters in reverse order. Preserve spaces and ignore the trailing newline.',
-    starter:'#include <stdio.h>\n#include <string.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
+    starter:'#include <stdio.h>
+#include <string.h>
+int main(void) {
+    char s[500];
+    fgets(s, sizeof(s), stdin);
+    /* Write your solution here */
+    return 0;
+}'
   },
   'palindrome': {
     title:'Palindrome Check',
     prompt:'Read one line and print YES if it is a palindrome ignoring case and spaces; otherwise print NO.',
-    starter:'#include <stdio.h>\n#include <ctype.h>\n#include <string.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
+    starter:'#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+int main(void) {
+    char s[500];
+    fgets(s, sizeof(s), stdin);
+    /* Write your solution here */
+    return 0;
+}'
   }
 };
 
@@ -338,7 +362,9 @@ function setupCodingLab(){
     b.disabled=true;b.textContent='Compiling…';status.textContent='Sending to secure compiler…';out.textContent='';
     try{
       const r=await call('runCCode')({sourceCode:editor.value,stdin:$('cCodeInput').value});
-      out.textContent=(r.data.compileOutput||'')+(r.data.stdout||'')+(r.data.stderr?('\n'+r.data.stderr):'')+(r.data.message?('\n'+r.data.message):'');
+      out.textContent=(r.data.compileOutput||'')+(r.data.stdout||'')+(r.data.stderr?('
+'+r.data.stderr):'')+(r.data.message?('
+'+r.data.message):'');
       status.textContent=r.data.accepted?'✓ Compiled & executed':'⚠ Execution completed with errors';
     }catch(e){out.textContent=e.message||String(e);status.textContent='Compiler error';}
     finally{b.disabled=false;b.textContent='▶ Compile & Run';}
@@ -397,7 +423,8 @@ async function loadStudent() {
       $('myScore').innerHTML='<p>No completed assessment result is available yet.</p>';
     }
   } catch(e) {}
-  try { const overview=await call('getCourseOverview')({}); renderStudentLearning(overview.data.schedules||[]); } catch(e){ renderStudentLearning([]); }\n  try { if(window.FXECCompetencyAssessmentStudent) window.FXECCompetencyAssessmentStudent.load(); } catch(e) { console.warn('Competency assessment launch centre unavailable',e); }
+  try { const overview=await call('getCourseOverview')({}); renderStudentLearning(overview.data.schedules||[]); } catch(e){ renderStudentLearning([]); }
+  try { if(window.FXECCompetencyAssessmentStudent) window.FXECCompetencyAssessmentStudent.load(); } catch(e) { console.warn('Competency assessment launch centre unavailable',e); }
   try {
     const r=await call('getAssessment')({}), d=r.data;
     $('studentStatus').innerHTML = d.status==='open' ? '<div class="openState"><strong>Day '+d.schedule.day+' · '+esc(d.schedule.topic)+'</strong><span>Assessment is open until '+new Date(d.schedule.closeAt).toLocaleString('en-IN')+'</span></div>' : d.status==='scheduled' ? '<div class="scheduledState"><strong>Next assessment · Day '+d.schedule.day+'</strong><span>'+esc(d.schedule.topic)+' · Opens '+new Date(d.schedule.openAt).toLocaleString('en-IN')+'</span></div>' : '<div class="closedState">'+esc(d.message||'No assessment is currently scheduled.')+'</div>';
