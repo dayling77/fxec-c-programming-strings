@@ -254,6 +254,13 @@ function practiceAnswer(title,i){const p=C_FUNDAMENTALS_PRACTICE[i%C_FUNDAMENTAL
 
 function drillStats(){return JSON.parse(localStorage.getItem('fxecDrillRewards')||'{"stars":0,"completed":0}');}
 function saveDrillStats(s){localStorage.setItem('fxecDrillRewards',JSON.stringify(s));}
+function drillBadge(stars){
+ if(stars>=100)return '🏆 Drill Master';
+ if(stars>=50)return '🥇 Practice Champion';
+ if(stars>=25)return '🥈 Persistent Learner';
+ if(stars>=10)return '🥉 Drill Starter';
+ return '🌱 Getting Started';
+}
 function showDrill(button){
  const card=button.closest('.drillCard');
  const old=card.querySelector('.drillInteractive'); if(old){old.remove();button.textContent='Start Drill';return;}
