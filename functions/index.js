@@ -1670,7 +1670,7 @@ export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
 
 function starterCompetencyQuestions(trackId,day){
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
-  const topic=meta.defaultTopics[day-1]||'Foundations';
+  const topic=competencyModuleTitle(trackId,day);
   return Array.from({length:5},(_,i)=>({
     id:trackId+'-D'+day+'-Q'+(i+1),
     type:'mcq',
@@ -1741,7 +1741,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
   const questions=validateCompetencyQuestions(request.data?.questions);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
   await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolBatch=db.batch();
