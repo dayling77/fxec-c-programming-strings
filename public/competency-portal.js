@@ -418,7 +418,7 @@ function practicePoolForStudent(title){
 }
 function renderPracticeTask(task,i){
  const p=task;
- const common='<details class="practiceTask"><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><p>'+esc(p.prompt)+'</p>';
+ const common='<details class="practiceTask" data-answer="'+answer+'><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><p>'+esc(p.prompt)+'</p>';
  if(p.kind==='coding'||p.kind==='bug'){
   const starter=p.starter||p.code||'';
   return common+lineNumberedEditor(starter,'practiceCode'+i)+(p.tests?'<div class="practiceTests"><b>Test cases</b>'+p.tests.map(t=>'<span>Input: '+esc(t[0])+' → Expected: '+esc(t[1])+'</span>').join('')+'</div>':'')+'<label class="practiceInputLabel">Input for your run <input class="practiceInput" placeholder="e.g. 7 5"></label><div class="practiceTaskActions"><button class="runCodeButton">▶ Run C Code</button><button class="revealHintButton">Hint</button></div><div class="practiceRunOutput">Your output will appear here.</div><div class="practiceFeedback" hidden></div></div></details>';
