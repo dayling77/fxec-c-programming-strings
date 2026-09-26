@@ -196,6 +196,19 @@ For match, options may be an array of strings while answer is a mapping object.
 For audio, answer is an option index.
 Use 0-based option indexes for mcq/audio/problemSolving/multiAnswer.
 Make distractors plausible and avoid ambiguity.
+QUALITY STANDARD:
+- Write items to an international higher-education assessment standard: test the stated construct, not reading tricks.
+- Use clear, concise professional English and globally understandable engineering contexts.
+- Avoid culturally local trivia, stereotypes, idioms, vendor-specific assumptions, and ambiguous wording.
+- Use Bloom-style cognitive progression: recall/understand for easy, apply/analyse for moderate, analyse/evaluate/create-oriented reasoning for tough.
+- Every item must have one defensible key unless it is explicitly multi-answer.
+- Distractors must represent realistic misconceptions, not grammatical or obviously absurd alternatives.
+- Code must be standard C appropriate to the stated concept and must be internally consistent.
+- Explanations must teach the underlying principle and explain why the distractors are wrong where useful.
+- Prefer authentic engineering/problem-solving situations over trivia.
+- Do not reward guessing from option length, grammar, formatting, or position.
+- Do not use "all of the above" or "none of the above".
+
 Do not copy the source's knowledge-check questions verbatim; create fresh questions from the same concepts.
 Include C code samples where useful, especially moderate/tough questions.
 Return JSON only as an object: {"questions":[...]}.
