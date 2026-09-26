@@ -1526,6 +1526,23 @@ function validateCompetencyQuestions(questions){
   return questions.map(q=>({...q,id:String(q.id)}));
 }
 
+function starterCompetencyQuestions(trackId,day){
+  const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+  const topic=meta.defaultTopics[day-1]||'Foundations';
+  return Array.from({length:5},(_,i)=>({
+    id:trackId+'-D'+day+'-Q'+(i+1),
+    type:'mcq',
+    difficulty:i<2?'easy':i<4?'moderate':'tough',
+    topic,
+    prompt:'Starter question '+(i+1)+' for '+meta.title+' — '+topic+'. Edit this question before approval.',
+    options:['Option A','Option B','Option C','Option D'],
+    answer:0,
+    explanation:'Starter content. Administrator must review and edit this question before publishing.',
+    timeLimitSeconds:60,
+    reviewed:false
+  }));
+}
+
 export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},async request=>{
   const adminUser=requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
@@ -1538,7 +1555,7 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
       title:cleanText(request.data?.title||meta.title,160)+' — Day '+day,
       topic:meta.defaultTopics[day-1]||('Day '+day),
       date:null,openAt:null,closeAt:null,
-      questions:[],questionCount:0,status:'draft',isPublished:false,
+      questions:starterCompetencyQuestions(trackId,day),questionCount:5,status:'draft',isPublished:false,
       createdBy:adminUser.uid,createdAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
     },{merge:true});
   }
