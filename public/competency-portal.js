@@ -417,7 +417,7 @@ function practicePoolForStudent(title){
  const picked=indices.slice(0,10);try{localStorage.setItem(key,JSON.stringify(picked));}catch(e){}return picked;
 }
 function renderPracticeTask(task,i){
- const p=task;
+ const p=task,answer=Number.isInteger(p.answer)?p.answer:'';
  const common='<details class="practiceTask" data-answer="'+answer+'><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><p>'+esc(p.prompt)+'</p>';
  if(p.kind==='coding'||p.kind==='bug'){
   const starter=p.starter||p.code||'';
