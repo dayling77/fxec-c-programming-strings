@@ -1235,7 +1235,7 @@ export const evaluateCConceptChallenge = onCall({cors:CALLABLE_CORS},async reque
 
 
 const C_SKILL_DEFS = Object.freeze({
- fundamentals:{xp:20},strings:{xp:40},arrays:{xp:30},functions:{xp:30},pointers:{xp:40},algorithms:{xp:40},coding:{xp:50}
+ fundamentals:{xp:20},'control-flow':{xp:25},arrays:{xp:30},functions:{xp:30},pointers:{xp:35},structures:{xp:30},memory:{xp:35},files:{xp:30},strings:{xp:40},advanced:{xp:50}
 });
 export const getCProgression = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
@@ -1254,7 +1254,8 @@ export const completeCSkill = onCall({cors:CALLABLE_CORS},async request=>{
     const snap=await tx.get(ref);const d=snap.exists?snap.data():{};
     const done=Array.isArray(d.completedSkills)?[...d.completedSkills]:[];
     if(done.includes(skillId)){result={xp:Number(d.xp||0),completedSkills:done,alreadyCompleted:true};return;}
-    const previousId=['fundamentals','strings','arrays','functions','pointers','algorithms','coding'][['fundamentals','strings','arrays','functions','pointers','algorithms','coding'].indexOf(skillId)-1];
+    const skillOrder=['fundamentals','control-flow','arrays','functions','pointers','structures','memory','files','strings','advanced'];
+    const previousId=skillOrder[skillOrder.indexOf(skillId)-1];
     if(previousId && !done.includes(previousId))throw new HttpsError('failed-precondition','Complete the previous C skill first.');
     done.push(skillId);const xp=Number(d.xp||0)+skill.xp;
     tx.set(ref,{xp,completedSkills:done,updatedAt:FieldValue.serverTimestamp()},{merge:true});
