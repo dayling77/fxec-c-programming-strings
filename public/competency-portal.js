@@ -426,6 +426,11 @@ function renderPracticeTask(task,i){
  return common+(p.code?'<pre class="codeBlock"><code>'+esc(decodeCode(p.code))+'</code></pre>':'')+(p.options?'<div class="practiceOptions">'+p.options.map((o,j)=>isCodeLike(o)?'<button data-choice="'+j+'" class="practiceCodeChoice">'+String.fromCharCode(65+j)+'.<pre>'+esc(decodeCode(o))+'</pre></button>':'<button data-choice="'+j+'">'+String.fromCharCode(65+j)+'. '+esc(o)+'</button>').join('')+'</div>':'')+'<div class="practiceFeedback" hidden></div></div></details>';
 }
 function wirePracticeTasks(ws){
+ ws.querySelectorAll('.codeEditor').forEach(editor=>{
+   const numbers=editor.closest('.codeEditorWrap')?.querySelector('.codeLineNumbers');
+   const sync=()=>{if(!numbers)return;const count=Math.max(4,editor.value.split('\\n').length);numbers.innerHTML=Array.from({length:count},(_,i)=>'<span>'+(i+1)+'</span>').join('');};
+   editor.addEventListener('input',sync);sync();
+ });
  ws.querySelectorAll('.runCodeButton').forEach(b=>b.onclick=()=>runPracticeCode(b));
  ws.querySelectorAll('.revealHintButton').forEach(b=>b.onclick=()=>{
    const f=b.closest('.practiceTask').querySelector('.practiceFeedback');
