@@ -1123,7 +1123,7 @@ function enforceCodeLimits(sourceCode, stdin){
 
 async function consumeCompilerQuota(uid, amount=1){
   const ref=db.collection('compilerUsage').doc(uid);
-  const today=new Date().toISOString().slice(0,10);
+  const today=new Intl.DateTimeFormat('en-CA',{timeZone:CONFIG.timezone,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   return db.runTransaction(async tx=>{
     const snap=await tx.get(ref); const d=snap.exists?snap.data():{};
     const count=d.date===today?Number(d.count||0):0;
