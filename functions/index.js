@@ -1515,16 +1515,96 @@ function competencyTrackOrThrow(trackId){
   return id;
 }
 function validateCompetencyQuestions(questions){
-  if(!Array.isArray(questions) || questions.length<5 || questions.length>50) throw new HttpsError('invalid-argument','Each assessment day must contain 5 to 50 questions.');
-  const ids=new Set();
-  questions.forEach((q,i)=>{
-    if(!q || !q.id || ids.has(String(q.id))) throw new HttpsError('invalid-argument','Question '+(i+1)+' has a missing or duplicate ID.');
-    ids.add(String(q.id));
-    if(!q.prompt || !Array.isArray(q.options) || q.options.length<2) throw new HttpsError('invalid-argument','Question '+(i+1)+' needs a prompt and at least two options.');
-    if(!Number.isInteger(Number(q.answer)) && !Array.isArray(q.answer) && (!q.answer || typeof q.answer!=='object')) throw new HttpsError('invalid-argument','Question '+(i+1)+' has an invalid answer key.');
-  });
+  const basic=competencyQuestionValidation(questions);
+  if(!basic.ok) throw new HttpsError('invalid-argument','Question validation failed: '+basic.errors.slice(0,8).join(' '));
   return questions.map(q=>({...q,id:String(q.id)}));
 }
+
+
+const COMPETENCY_ASSESSMENT_BLUEPRINT = Object.freeze({
+  questionsPerDay: 25,
+  difficulty: {easy: 8, moderate: 10, tough: 7},
+  types: {mcq: 15, multipleCorrect: 5, scenario: 5}
+});
+
+const COMPETENCY_SOURCE_MAPS = Object.freeze({
+  communication: 'Communication for first-year engineering students: grammar and usage in academic/professional contexts; sentence structure; subject-verb agreement; tenses; articles, prepositions, conjunctions; vocabulary in engineering contexts; word formation; collocations; formal email; technical description; paraphrasing; concise writing; presentation language; group discussion; listening comprehension; tone, clarity, register; avoiding ambiguity; interpreting instructions. Assess application and analysis, not trivia.',
+  aptitude: 'First-year engineering aptitude: percentages; ratios and proportions; averages; profit/loss; simple and compound interest; time, speed and distance; time and work; mixtures; number systems; algebraic simplification; equations; sequences and series; permutations/combinations basics; probability basics; logical reasoning; syllogisms; coding-decoding; directions; blood relations; arrangements; data interpretation from tables/charts; estimation and quantitative reasoning. Use engineering-style numerical contexts where useful.',
+  'core-engineering': 'First-year engineering core foundations: engineering measurements and units; dimensional analysis; significant figures; basic mechanics and force concepts; work, power and energy; materials and properties; stress/strain basics; manufacturing and machining fundamentals; electrical quantities, Ohm law, series/parallel circuits, Kirchhoff basics, AC/DC distinctions; semiconductor/electronic fundamentals; sensors and instrumentation basics; digital logic fundamentals; CAD/digital prototyping concepts; engineering safety and sustainable engineering. Keep mathematics appropriate to first-year level.',
+  'c-programming': 'First-year C programming: program structure; data types; operators; expressions; input/output; selection; loops; arrays; strings and null terminators; string.h functions; functions, parameters and return values; pointers at introductory level; structures basics; recursion basics; debugging; algorithmic thinking; time/space reasoning at an introductory level. Questions may use short standard C code and require output prediction, tracing, debugging or algorithm selection. Avoid compiler-specific undefined behaviour.',
+  'problem-solving': 'Engineering problem solving for first-year students: problem decomposition; identifying inputs/outputs/constraints; abstraction; pattern recognition; stepwise refinement; flowcharts/pseudocode; algorithm selection; tracing; edge cases; debugging strategies; decomposition into functions/modules; greedy vs exhaustive reasoning at an introductory level; validation and testing; complexity intuition; interpreting requirements; choosing representations; communicating a solution. Use authentic engineering-style problems.',
+  analytical: 'Analytical skills for first-year engineering: reading comprehension; extracting claims/evidence; inference; assumptions; cause/effect; comparison; data interpretation; identifying trends and anomalies; distinguishing fact from opinion; evaluating evidence; consistency; logical conclusions; error/uncertainty awareness; short technical passages, tables and simple charts; listening/reading style interpretation without cultural trivia. Questions should require reasoning rather than recall.'
+});
+
+function competencyQuestionValidation(questions) {
+  const errors = [];
+  if (!Array.isArray(questions) || questions.length !== COMPETENCY_ASSESSMENT_BLUEPRINT.questionsPerDay) return {ok:false, errors:['Exactly 25 questions are required.']};
+  const ids = new Set(), counts = {mcq:0, multipleCorrect:0, scenario:0}, diffs = {easy:0, moderate:0, tough:0};
+  questions.forEach((q,i)=>{
+    const n=i+1;
+    if(!q || typeof q!=='object') { errors.push('Q'+n+': invalid object.'); return; }
+    if(!q.id || ids.has(String(q.id))) errors.push('Q'+n+': missing or duplicate id.');
+    ids.add(String(q.id));
+    if(!['mcq','multipleCorrect','scenario'].includes(q.type)) errors.push('Q'+n+': invalid type.'); else counts[q.type]++;
+    if(!['easy','moderate','tough'].includes(q.difficulty)) errors.push('Q'+n+': invalid difficulty.'); else diffs[q.difficulty]++;
+    if(!cleanText(q.prompt,5000)) errors.push('Q'+n+': missing prompt.');
+    if(!Array.isArray(q.options) || q.options.length!==4) errors.push('Q'+n+': exactly 4 options required.');
+    else {
+      const normalized=q.options.map(x=>cleanText(x,1000).toLowerCase());
+      if(normalized.some(x=>!x)) errors.push('Q'+n+': blank option.');
+      if(new Set(normalized).size!==4) errors.push('Q'+n+': duplicate options.');
+      if(q.type==='multipleCorrect') {
+        if(!Array.isArray(q.answer) || q.answer.length<2 || q.answer.length>3) errors.push('Q'+n+': multiple-correct needs 2 or 3 keys.');
+        else q.answer.forEach(a=>{if(!Number.isInteger(a)||a<0||a>=4) errors.push('Q'+n+': answer index '+a+' is not a valid option.');});
+        if(Array.isArray(q.answer) && new Set(q.answer).size!==q.answer.length) errors.push('Q'+n+': duplicate answer indexes.');
+      } else if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=4) errors.push('Q'+n+': answer key does not point to an existing option.');
+    }
+    if(!cleanText(q.explanation,50)) errors.push('Q'+n+': missing explanation.');
+    if(!Number.isFinite(Number(q.timeLimitSeconds)) || Number(q.timeLimitSeconds)<20) errors.push('Q'+n+': invalid time limit.');
+  });
+  for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.types)) if(counts[k]!==v) errors.push('Type distribution '+k+' must be '+v+'.');
+  for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.difficulty)) if(diffs[k]!==v) errors.push('Difficulty distribution '+k+' must be '+v+'.');
+  return {ok:errors.length===0,errors};
+}
+
+function competencyGenerationPrompt(trackId, day) {
+  const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=meta.defaultTopics[day-1]||'Foundations';
+  return 'You are a senior assessment designer for Francis Xavier Engineering College.\nCreate Day '+day+' of a five-day assessment for '+meta.title+', intended for first-year engineering students.\n\nDAY TOPIC: '+topic+'\nCURRICULUM SCOPE:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\n\nGenerate EXACTLY 25 questions: 15 mcq (one correct), 5 multipleCorrect (exactly 2 or 3 correct), 5 scenario (one correct). Difficulty exactly 8 easy, 10 moderate, 7 tough.\n\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Return JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq|multipleCorrect|scenario","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}';
+}
+
+async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
+  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 25 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Day '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\nQUESTIONS:\n'+JSON.stringify(questions);
+  return generateJson(auditPrompt);
+}
+
+async function generateHighStandardCompetencyDay(trackId, day) {
+  let lastIssues=[];
+  for(let attempt=1; attempt<=4; attempt++){
+    const generated=(await generateJson(competencyGenerationPrompt(trackId,day))).questions;
+    const structural=competencyQuestionValidation(generated);
+    if(!structural.ok){ lastIssues=structural.errors; continue; }
+    const audit1=await auditCompetencyQuestions(trackId,day,generated,1);
+    if(audit1.valid!==true){ lastIssues=audit1.issues||['Audit pass 1 failed.']; continue; }
+    const audit2=await auditCompetencyQuestions(trackId,day,generated,2);
+    if(audit2.valid!==true){ lastIssues=audit2.issues||['Audit pass 2 failed.']; continue; }
+    return generated.map((q,i)=>({...q,id:trackId+'-D'+day+'-Q'+String(i+1).padStart(2,'0'),reviewed:false,generatedBy:'AI',generatedAt:new Date()}));
+  }
+  throw new Error('Could not produce a fully validated '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' Day '+day+' question bank. '+lastIssues.slice(0,5).join(' '));
+}
+
+export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
+  const adminUser=requireAdmin(request), trackId=competencyTrackOrThrow(request.data?.trackId), meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+  const batch=db.batch(), created=[];
+  for(let day=1;day<=5;day++){
+    const questions=await generateHighStandardCompetencyDay(trackId,day);
+    const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+    batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Day '+day,topic:meta.defaultTopics[day-1]||('Day '+day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    created.push({day,questionCount:questions.length});
+  }
+  await batch.commit();
+  await db.collection('adminActions').add({action:'autoGenerateCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,days:5,questionCount:125,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,trackTitle:meta.title,days:created,totalQuestions:125,message:'Five days generated and independently audited twice. Status remains DRAFT until administrator review and approval.'};
+});
 
 function starterCompetencyQuestions(trackId,day){
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
@@ -1561,7 +1641,7 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
   }
   await batch.commit();
   await db.collection('adminActions').add({action:'createCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
-  return {success:true,trackId,days:5};
+  return {success:true,trackId,days:5,message:'Blank editable programme created. Use Auto Generate for the full 125-question audited bank.'};
 });
 
 export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},async request=>{
