@@ -137,7 +137,7 @@ function renderAssessment(){
    '<div class="studentProgress"><span style="width:'+progress+'%"></span></div>'+
    '<div class="studentTimingBar"><div><small>QUESTION TIME</small><strong id="caQuestionTimer">--:--</strong></div><div><small>TOTAL TIME</small><strong id="caTotalTimer">--:--</strong></div><div><small>TIME ALLOTTED</small><strong>'+formatClock(limit)+'</strong></div></div>'+
    (q.code?assessmentCodeViewer(q.code):'')+
-   '<div class="studentPrompt audioAssessmentPrompt"><div><span class="promptKicker">QUESTION</span><p>'+esc(q.prompt||q.audioText||'')+'</p></div><button id="playAssessmentAudio" class="audioQuestionButton">🔊 Listen to Question</button></div>'+
+   '<div class="studentPrompt audioAssessmentPrompt '+(audioMode?'audioOnlyPrompt':'')+'"><div><span class="promptKicker">QUESTION</span>'+(audioMode?'<p class="audioPromptPlaceholder">🔊 Question available by audio</p>':'<p>'+esc(q.prompt||'')+'</p>')+'</div><button id="playAssessmentAudio" class="audioQuestionButton">🔊 Listen to Question</button></div>'+
    (audioMode?'<div class="audioAssessmentStage" id="audioAssessmentStage"><strong>READY</strong><span>Press Listen to Question to hear the options one at a time.</span></div>':'')+
    '<div class="caInstruction">'+(isMulti?'Select all correct answers.':'Select the one best answer.')+'</div>'+
    '<div class="studentAnswerArea"><div class="studentOptionList">'+options+'</div></div>'+
