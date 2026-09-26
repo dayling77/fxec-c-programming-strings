@@ -112,7 +112,34 @@ const C_FUNDAMENTALS_PRACTICE=[
  {title:'Debugging Decision',kind:'mcq',prompt:'A program compiles but prints the wrong total. What should you inspect first?',options:['Logic and formula','Keyboard cable','Font family','File extension only'],answer:0,hint:'A compiling program can still contain logic errors.'}
 ];
 
-
+const C_FUNDAMENTALS_PRACTICE_POOL=[
+ ...C_FUNDAMENTALS_PRACTICE,
+ {title:'Output Prediction — Variables',kind:'trace',prompt:'Predict the exact value printed.',code:'int a=12;\nint b=5;\nprintf("%d", a-b);',options:['7','17','60','2'],answer:0,hint:'Subtract b from a.'},
+ {title:'Bug Fixing — scanf',kind:'bug',prompt:'Fix the input statement so n receives an integer.',starter:'#include <stdio.h>\nint main(void) {\n int n;\n scanf("%d", n);\n printf("%d", n);\n return 0;\n}',tests:[['25','25']],hint:'scanf needs the address of the variable.'},
+ {title:'Missing Code — Comparison',kind:'missing',prompt:'Complete the condition so PASS prints when mark is 40 or higher.',starter:'#include <stdio.h>\nint main(void) {\n int mark=40;\n if (__________) printf("PASS");\n return 0;\n}',tests:[['','PASS']],hint:'Use the >= relational operator.'},
+ {title:'Coding Task — Difference',kind:'coding',prompt:'Read two integers and print the first minus the second.',starter:'#include <stdio.h>\nint main(void) {\n int a,b;\n scanf("%d%d",&a,&b);\n // print the difference\n return 0;\n}',tests:[['9 4','5'],['20 7','13']],hint:'Print a-b.'},
+ {title:'Coding Task — Even Check',kind:'coding',prompt:'Read an integer and print EVEN if it is divisible by 2, otherwise ODD.',starter:'#include <stdio.h>\nint main(void) {\n int n;\n scanf("%d",&n);\n // complete the decision\n return 0;\n}',tests:[['8','EVEN'],['7','ODD']],hint:'Use n % 2.'},
+ {title:'Debugging Decision — Logic',kind:'mcq',prompt:'A condition should pass when both marks and attendance are valid. Which operator combines the two requirements?',options:['&&','||','!','%'],answer:0,hint:'Both requirements must be true.'},
+ {title:'Output Prediction — Modulo',kind:'mcq',prompt:'What does this program print?',code:'int n=17;\nprintf("%d", n%5);',options:['2','3','5','12'],answer:1,hint:'Modulo gives the remainder.'},
+ {title:'Code Completion — printf',kind:'coding',prompt:'Complete the program so it prints the value of total.',starter:'#include <stdio.h>\nint main(void) {\n int total=35;\n // print total\n return 0;\n}',tests:[['','35']],hint:'Use printf with the %d format.'},
+ {title:'Edge-Case Testing — Average',kind:'mcq',prompt:'Which input is most useful for checking a pass condition at 40?',options:['39','40','41','80'],answer:1,hint:'Test the exact boundary.'},
+ {title:'Bug Identification — Formula',kind:'bug',prompt:'The requirement is addition, but the program multiplies. Choose the corrected expression.',code:'int a=14,b=6;\nprintf("%d", a*b);',options:['a+b','a-b','a*b','a/b'],answer:0,hint:'The requirement says addition.'},
+ {title:'Trace — Assignment',kind:'mcq',prompt:'What is the final value of x?',code:'int x=4;\nx=x+3;\nx=x*2;',options:['10','14','11','7'],answer:1,hint:'Trace 4 → 7 → 14.'},
+ {title:'Syntax Check — Declaration',kind:'mcq',prompt:'Which declaration is valid?',options:['int total = 25;','integer total = 25;','int = total 25;','total int = 25;'],answer:0,hint:'Use the C type followed by the identifier.'},
+ {title:'Coding Task — Three Values',kind:'coding',prompt:'Read three integers and print their total.',starter:'#include <stdio.h>\nint main(void) {\n int a,b,c;\n // read values and print their total\n return 0;\n}',tests:[['1 2 3','6'],['10 20 30','60']],hint:'Read a, b and c, then print a+b+c.'},
+ {title:'Bug Fixing — Division',kind:'bug',prompt:'The program must calculate a decimal average. Choose the correct expression.',code:'int total=75,count=2;\nprintf("%.1f", total/count);',options:['total/count','(double)total/count','total%count','(int)total/count'],answer:1,hint:'Force floating-point division.'},
+ {title:'Output Prediction — Condition',kind:'mcq',prompt:'What is printed?',code:'int mark=45;\nif(mark>=40) printf("PASS"); else printf("FAIL");',options:['PASS','FAIL','45','Error'],answer:0,hint:'45 meets the >=40 condition.'},
+ {title:'Testing — Range',kind:'mcq',prompt:'For an input range 1 to 100, which set gives strong boundary coverage?',options:['20,40,60','1,2,99,100','25,50,75','10,30,80'],answer:1,hint:'Use exact boundaries and nearby values.'},
+ {title:'Algorithm Thinking — IPO',kind:'mcq',prompt:'Before coding a problem, which three elements should be made explicit?',options:['Input, process, output','Font, colour, title','Keyboard, mouse, screen','File, folder, password'],answer:0,hint:'IPO gives the program a clear structure.'},
+ {title:'Missing Code — Remainder',kind:'mcq',prompt:'Which expression tests whether n is even?',options:['n/2==0','n%2==0','n*2==0','n+2==0'],answer:1,hint:'An even integer has remainder zero when divided by 2.'},
+ {title:'Debugging — Compile vs Logic',kind:'mcq',prompt:'The program compiles but produces the wrong result. What should you inspect first?',options:['Logic and formula','Monitor cable','Font size','File name'],answer:0,hint:'A compiling program can still contain logic errors.'},
+ {title:'Coding Task — Larger Value',kind:'coding',prompt:'Read two integers and print the larger value.',starter:'#include <stdio.h>\nint main(void) {\n int a,b;\n // read a and b\n // print the larger value\n return 0;\n}',tests:[['7 5','7'],['12 19','19']],hint:'Compare a and b with if.'},
+ {title:'Output Prediction — Precedence',kind:'mcq',prompt:'What is printed?',code:'int x=3+4*2;\nprintf("%d",x);',options:['11','14','10','9'],answer:0,hint:'Multiplication is evaluated before addition.'},
+ {title:'Code Completion — Counter',kind:'coding',prompt:'Complete the loop so it prints 1 2 3.',starter:'#include <stdio.h>\nint main(void) {\n for(int i=1; ______; i++) printf("%d ",i);\n return 0;\n}',tests:[['','1 2 3 ']],hint:'Continue while i is at most 3.'},
+ {title:'Bug Identification — Missing Semicolon',kind:'bug',prompt:'Which edit fixes the syntax error?',code:'int total = 10 + 20\nprintf("%d", total);',options:['Add ; after 20','Remove printf','Change int to integer','Add a comma after total'],answer:0,hint:'The declaration statement needs its terminating semicolon.'},
+ {title:'Trace — Integer Division',kind:'mcq',prompt:'What is stored in result?',code:'int result=9/2;',options:['4','4.5','5','2'],answer:0,hint:'Both operands are int.'},
+ {title:'Coding Task — Pass or Fail',kind:'coding',prompt:'Read mark and print PASS for mark >= 40, otherwise FAIL.',starter:'#include <stdio.h>\nint main(void) {\n int mark;\n // read mark and print PASS or FAIL\n return 0;\n}',tests:[['40','PASS'],['39','FAIL']],hint:'Use an if-else decision with mark >= 40.'}
+];
 
 const C_MODULES=[
  {id:1,title:'C Fundamentals',scope:'Build a strong foundation in C so that a beginner can read, write, compile, trace and explain simple programs confidently.',
@@ -327,10 +354,19 @@ function speak(textValue){
 function startAudioSequence(box,options){
  const stage=box.querySelector('.drillAudioStage'), status=box.querySelector('.drillAudioStatus');
  let i=0;const next=()=>{
-   if(i>=options.length){status.textContent='All four options played. Select A, B, C or D.';return;}
+   if(i>=options.length){status.textContent='All options played. Select A, B, C or D.';return;}
    stage.innerHTML='<strong>OPTION '+String.fromCharCode(65+i)+'</strong><span>Listening…</span>';
-   speak(options[i]);i++;setTimeout(next,3000);
+   speak(options[i]);i++;setTimeout(next,2000);
  };next();
+}
+function isCodeLike(value){
+ const x=String(value||'');
+ return /\\n|#include|\\b(?:int|char|float|double|printf|scanf|if|for|while|return)\\b|[{};]/.test(x);
+}
+function renderDrillOption(value,index,audio){
+ const label=String.fromCharCode(65+index);
+ if(audio) return '<button data-answer="'+index+'" class="audioDrillOption"><span class="audioOptionLetter">'+label+'</span><span class="srOnlyOption">'+esc(value)+'</span></button>';
+ return '<button data-answer="'+index+'" class="'+(isCodeLike(value)?'drillCodeOption':'')+'"><span class="drillOptionLetter">'+label+'.</span>'+(isCodeLike(value)?'<pre>'+esc(decodeCode(value))+'</pre>':'<span>'+esc(value)+'</span>')+'</button>';
 }
 function showDrill(button){
  const card=button.closest('.drillCard'),title=card.dataset.module||'C Fundamentals';
@@ -341,7 +377,7 @@ function showDrill(button){
    '<h6>'+esc(q[0])+'</h6>'+
    '<div class="drillQuestion '+(audioQ?'audioOnlyQuestion':'')+'">'+(audioQ?'<button class="playAudioQuestion">🔊 Play Question</button><small>Listen once or replay if needed.</small>':'<p>'+esc(q[1])+'</p>')+'</div>'+
    (audioOptions?'<div class="drillAudioStage"><strong>OPTION A</strong><span>Preparing audio…</span></div><div class="drillAudioStatus">Options will play one at a time for about 3 seconds.</div>':'')+
-   '<div class="drillOptions '+(audioOptions?'audioChoiceOptions':'')+'">'+q[2].map((o,i)=>audioOptions?'<button data-answer="'+i+'">'+String.fromCharCode(65+i)+'<span class="srOnlyOption">'+esc(o)+'</span></button>':'<button data-answer="'+i+'">'+String.fromCharCode(65+i)+'. '+esc(o)+'</button>').join('')+'</div>'+
+   '<div class="drillOptions '+(audioOptions?'audioChoiceOptions':'')+'">'+q[2].map((o,i)=>renderDrillOption(o,i,audioOptions)).join('')+'</div>'+
    '<div class="drillFeedback"></div>';
  card.appendChild(box);button.textContent='Close Drill';
  if(audioQ)box.querySelector('.playAudioQuestion').onclick=()=>speak(q[1]);
@@ -373,20 +409,34 @@ async function runPracticeCode(button){
  }catch(e){out.className='practiceRunOutput failed';out.textContent=e.message||String(e);}
  finally{button.disabled=false;}
 }
+function practicePoolForStudent(title){
+ const key='fxecPracticeSet:'+String(title||'module').replace(/[^a-z0-9]+/gi,'-').toLowerCase();
+ try{const saved=JSON.parse(localStorage.getItem(key)||'null');if(Array.isArray(saved)&&saved.length===10)return saved;}catch(e){}
+ const pool=C_FUNDAMENTALS_PRACTICE_POOL||C_FUNDAMENTALS_PRACTICE,indices=pool.map((_,i)=>i);
+ for(let i=indices.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[indices[i],indices[j]]=[indices[j],indices[i]];}
+ const picked=indices.slice(0,10);try{localStorage.setItem(key,JSON.stringify(picked));}catch(e){}return picked;
+}
 function renderPracticeTask(task,i){
- const p=C_FUNDAMENTALS_PRACTICE[i%C_FUNDAMENTALS_PRACTICE.length];
+ const p=task;
+ const common='<details class="practiceTask"><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><p>'+esc(p.prompt)+'</p>';
  if(p.kind==='coding'||p.kind==='bug'){
   const starter=p.starter||p.code||'';
-  return '<article class="practiceTask"><div class="practiceTaskHead"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong></div><p>'+esc(p.prompt)+'</p>'+lineNumberedEditor(starter,'practiceCode'+i)+(p.tests?'<div class="practiceTests"><b>Test cases</b>'+p.tests.map(t=>'<span>Input: '+esc(t[0])+' → Expected: '+esc(t[1])+'</span>').join('')+'</div>':'')+'<label class="practiceInputLabel">Input for your run <input class="practiceInput" placeholder="e.g. 7 5"></label><div class="practiceTaskActions"><button class="runCodeButton">▶ Run C Code</button><button class="revealHintButton">Hint</button></div><div class="practiceRunOutput">Your output will appear here.</div><div class="practiceFeedback"><span>'+esc(p.hint)+'</span></div></article>';
+  return common+lineNumberedEditor(starter,'practiceCode'+i)+(p.tests?'<div class="practiceTests"><b>Test cases</b>'+p.tests.map(t=>'<span>Input: '+esc(t[0])+' → Expected: '+esc(t[1])+'</span>').join('')+'</div>':'')+'<label class="practiceInputLabel">Input for your run <input class="practiceInput" placeholder="e.g. 7 5"></label><div class="practiceTaskActions"><button class="runCodeButton">▶ Run C Code</button><button class="revealHintButton">Hint</button></div><div class="practiceRunOutput">Your output will appear here.</div><div class="practiceFeedback" hidden></div></div></details>';
  }
- return '<article class="practiceTask"><div class="practiceTaskHead"><span>PRACTICE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong></div><p>'+esc(p.prompt)+'</p>'+(p.code?'<pre class="codeBlock"><code>'+esc(decodeCode(p.code))+'</code></pre>':'')+(p.options?'<div class="practiceOptions">'+p.options.map((o,j)=>'<button data-choice="'+j+'">'+String.fromCharCode(65+j)+'. '+esc(o)+'</button>').join('')+'</div>':'')+'<div class="practiceFeedback"></div></article>';
+ return common+(p.code?'<pre class="codeBlock"><code>'+esc(decodeCode(p.code))+'</code></pre>':'')+(p.options?'<div class="practiceOptions">'+p.options.map((o,j)=>isCodeLike(o)?'<button data-choice="'+j+'" class="practiceCodeChoice">'+String.fromCharCode(65+j)+'.<pre>'+esc(decodeCode(o))+'</pre></button>':'<button data-choice="'+j+'">'+String.fromCharCode(65+j)+'. '+esc(o)+'</button>').join('')+'</div>':'')+'<div class="practiceFeedback" hidden></div></div></details>';
 }
 function wirePracticeTasks(ws){
  ws.querySelectorAll('.runCodeButton').forEach(b=>b.onclick=()=>runPracticeCode(b));
- ws.querySelectorAll('.revealHintButton').forEach(b=>b.onclick=()=>{const f=b.closest('.practiceTask').querySelector('.practiceFeedback');f.innerHTML='💡 '+esc(C_FUNDAMENTALS_PRACTICE[Number(b.closest('.practiceTask').querySelector('.codeEditor').id.replace('practiceCode',''))%C_FUNDAMENTALS_PRACTICE.length].hint);});
+ ws.querySelectorAll('.revealHintButton').forEach(b=>b.onclick=()=>{
+   const f=b.closest('.practiceTask').querySelector('.practiceFeedback');
+   const i=Number(b.closest('.practiceTask').querySelector('.codeEditor').id.replace('practiceCode',''));
+   const selected=practicePoolForStudent('C Fundamentals')[i]??i;
+   const p=(C_FUNDAMENTALS_PRACTICE_POOL||C_FUNDAMENTALS_PRACTICE)[selected];
+   f.hidden=false;f.innerHTML='💡 '+esc(p?.hint||'Use the requirement, trace the code and test a boundary value.');
+ });
  ws.querySelectorAll('.practiceTask .practiceOptions button').forEach(b=>b.onclick=()=>{
-   const task=b.closest('.practiceTask'),idx=[...task.querySelectorAll('[data-choice]')].indexOf(b),p=C_FUNDAMENTALS_PRACTICE[Number(task.querySelector('.practiceTaskHead span').textContent.match(/\\d+/)?.[0]||1)-1%C_FUNDAMENTALS_PRACTICE.length];
-   const ok=idx===p.answer;task.querySelector('.practiceFeedback').className='practiceFeedback '+(ok?'correct':'review');task.querySelector('.practiceFeedback').textContent=ok?'✓ Correct. Now explain why.':'↻ Review the code and try again.';
+   const task=b.closest('.practiceTask'),idx=[...task.querySelectorAll('[data-choice]')].indexOf(b),answer=Number(task.dataset.answer);
+   const ok=idx===answer;const f=task.querySelector('.practiceFeedback');f.className='practiceFeedback '+(ok?'correct':'review');f.hidden=false;f.textContent=ok?'✓ Correct. Now explain why.':'↻ Review the code and try again.';
    if(ok)task.querySelectorAll('[data-choice]').forEach(x=>x.disabled=true);
  });
 }
@@ -403,7 +453,7 @@ function moduleView(track,data,no,programme){
  const topicHtml=data.topics.map(x=>'<li>'+esc(x)+'</li>').join('');
  const matHtml=data.title==='C Fundamentals'?C_FUNDAMENTALS_LESSON.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join(''):data.materials.map((x,i)=>'<div class="studyMaterial"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x)+'</strong><button class="materialToggle" data-open="0">Teach me</button><p class="materialBody" hidden>'+esc(materialGuide(x,data.title))+'</p></div>').join('');
  const st=drillState(data.title),drillHtml=data.drills.map((x,i)=>'<article class="drillCard" data-module="'+esc(data.title)+'"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(x)+'</h5><p>Game-style practice. Solve the mission, earn a Star for the attempt and keep building your streak. Drills do not replace the formal assessment.</p></div><button class="drillReveal">Start Drill</button></article>').join('')+renderDrillReward(data.title);
- const practiceHtml=data.title==='C Fundamentals'?'<div class="practiceTaskGrid">'+C_FUNDAMENTALS_PRACTICE.map((_,i)=>renderPracticeTask(C_FUNDAMENTALS_PRACTICE[i],i)).join('')+'</div>':data.practice.map((x,i)=>'<article class="practiceTask"><div class="practiceTaskHead"><span>PRACTICE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x.replace(/^Level \\d+ — /,''))+'</strong></div><p>'+esc(practiceInstruction(data.title,i))+'</p><button class="checkAnswer" data-question="'+esc(x)+'" data-answer="'+esc(practiceInstruction(data.title,i))+'">Open Practice</button></article>').join('');
+ const practiceHtml=data.title==='C Fundamentals'?'<div class="practiceTaskGrid">'+practicePoolForStudent(data.title).map((idx,i)=>renderPracticeTask(C_FUNDAMENTALS_PRACTICE_POOL[idx]||C_FUNDAMENTALS_PRACTICE[i],i)).join('')+'</div>':data.practice.map((x,i)=>'<details class="practiceTask"><summary><span class="practiceTaskSummary"><span>PRACTICE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x.replace(/^Level \\d+ — /,''))+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><p>'+esc(practiceInstruction(data.title,i))+'</p><button class="checkAnswer" data-question="'+esc(x)+'" data-answer="'+esc(practiceInstruction(data.title,i))+'">Open Practice</button></div></details>').join('');
  return '<section class="moduleLearningWorkspace">'+
   '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
   '<div class="masteryStrip"><div><strong>1</strong><span>Understand</span></div><div><strong>2</strong><span>Drill</span></div><div><strong>3</strong><span>Practise</span></div><div><strong>4</strong><span>Apply</span></div><div><strong>5</strong><span>Assess</span></div></div>'+
