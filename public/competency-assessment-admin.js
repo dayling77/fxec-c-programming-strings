@@ -45,7 +45,7 @@ function readQuestions(){
 }
 function wireEditor(){host().querySelector('#caSave').onclick=()=>save(false);host().querySelector('#caApprove').onclick=()=>save(true);}
 async function save(approve){
- const questions=readQuestions(),payload={trackId:selectedTrack,day:selectedDay,title:host().querySelector('#caTitle').value.trim(),topic:host().querySelector('#caTopic').value.trim(),date:host().querySelector('#caDate').value,openAt:host().querySelector('#caOpen').value,closeAt:host().querySelector('#caClose').value,questions};
+ const questions=readQuestions(),payload={trackId:selectedTrack,day:selectedDay,title:host().querySelector('#caTitle').value.trim(),topic:host().querySelector('#caTopic').value.trim(),date:host().querySelector('#caDate').value,openAt:new Date(host().querySelector('#caOpen').value).toISOString(),closeAt:new Date(host().querySelector('#caClose').value).toISOString(),questions};
  try{setStatus('Saving draft…','saving');await call('saveCompetencyAssessmentDay')(payload);if(approve){if(!confirm('Approve this day? It will be visible to approved students during the published window.'))return;await call('approveCompetencyAssessmentDay')({trackId:selectedTrack,day:selectedDay});}await load();setStatus(approve?'✓ Approved and launched for the scheduled window.':'✓ Draft saved.','success');}catch(e){setStatus(e.message||String(e));}
 }
 function setStatus(message,kind='error'){const el=host()?.querySelector('#caStatus');if(el){el.textContent=message;el.className='scheduleSaveStatus '+kind;}}
