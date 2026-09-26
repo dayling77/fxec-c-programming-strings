@@ -1072,7 +1072,7 @@ onAuthStateChanged(auth, async user => {
     competencyRole='admin';
   }else{
     try{
-      const cr=await call('getAdminCompetencyAssessmentPrograms')({});
+      const cr=await call('getCompetencyAssessmentRole')({});
       competencyRole=cr.data?.role||'student';
     }catch(e){competencyRole='student';}
   }
