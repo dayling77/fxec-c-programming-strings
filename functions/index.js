@@ -1431,3 +1431,70 @@ export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async r
  if(xp){const ref=db.collection('competencyProgress').doc(a.uid);await db.runTransaction(async tx=>{const s=await tx.get(ref),d=s.exists?s.data():{xp:0,badges:[],tracks:{}};const next=(d.xp||0)+xp;const tracks={...(d.tracks||{})};const cur=tracks.communication||{xp:0,progress:0};tracks.communication={...cur,xp:(cur.xp||0)+xp,progress:Math.min(100,Math.round(((cur.xp||0)+xp)))};tx.set(ref,{...d,xp:next,level:Math.floor(next/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});});}
  return {taskType,target,transcript:result.transcript,score,xp,accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words||[],feedback:score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the words marked for improvement and practise again.':'Keep practising. Record again with clear, steady speech.'};
 });
+
+
+// Reusable competency activity engine. Answer keys remain server-side.
+const COMPETENCY_ACTIVITY_BANK = Object.freeze({
+  'c-programming': [
+    {id:'c-fundamentals-01',stage:'Concept',title:'C Fundamentals Check',type:'mcq',prompt:'Which declaration creates an integer variable named count?',options:['int count;','integer count;','count int;','num count;'],answer:0,xp:10},
+    {id:'c-control-flow-01',stage:'Knowledge Check',title:'Control Flow Check',type:'mcq',prompt:'Which statement exits the current loop immediately?',options:['continue','break','return 0;','goto'],answer:1,xp:10},
+    {id:'c-arrays-01',stage:'Practice',title:'Array Index Check',type:'mcq',prompt:'For int a[5], which is the last valid index?',options:['5','4','3','1'],answer:1,xp:10},
+    {id:'c-functions-01',stage:'Knowledge Check',title:'Function Prototype',type:'mcq',prompt:'Which is a valid prototype for a function that returns an int and accepts two ints?',options:['int add(int a, int b);','add int(a,b);','function int add(a,b);','int add(a,b)'],answer:0,xp:10},
+    {id:'c-pointers-01',stage:'Concept',title:'Pointer Dereference',type:'mcq',prompt:'What does *p access when p points to an int?',options:['The address of p','The value stored at the pointed address','The size of p','The variable name'],answer:1,xp:10},
+    {id:'c-structures-01',stage:'Practice',title:'Structure Member',type:'mcq',prompt:'Which operator accesses a member of a structure variable s?',options:['->','.','::','&'],answer:1,xp:10},
+    {id:'c-memory-01',stage:'Knowledge Check',title:'Dynamic Memory',type:'mcq',prompt:'Which function releases memory allocated with malloc?',options:['delete','remove','free','release'],answer:2,xp:10},
+    {id:'c-files-01',stage:'Practice',title:'File Opening',type:'mcq',prompt:'Which mode opens a text file for reading?',options:['w','a','r','x'],answer:2,xp:10},
+    {id:'c-strings-01',stage:'Practice',title:'String Terminator',type:'mcq',prompt:'Which character terminates a C string?',options:['\\n','\\0','EOF','\\t'],answer:1,xp:15},
+    {id:'c-advanced-01',stage:'Challenge',title:'Advanced C Check',type:'mcq',prompt:'Which feature allows storing the address of a function in a variable?',options:['Function pointer','Structure padding','Macro only','File pointer'],answer:0,xp:20}
+  ]
+});
+function competencyActivityDefinitions(trackId){ return COMPETENCY_ACTIVITY_BANK[trackId] || []; }
+
+export const getCompetencyJourney = onCall({cors:CALLABLE_CORS}, async request => {
+  const user=requireAuth(request);
+  const trackId=cleanText(request.data?.trackId,80);
+  if(!COMPETENCY_TRACK_META[trackId]) throw new HttpsError('invalid-argument','Unknown competency track.');
+  const activities=competencyActivityDefinitions(trackId).map(({answer,...safe})=>safe);
+  const ref=db.collection('competencyTrackProgress').doc(user.uid+'_'+trackId);
+  const snap=await ref.get();
+  const progress=snap.exists?snap.data():{completedActivityIds:[],xp:0};
+  const completed=new Set(Array.isArray(progress.completedActivityIds)?progress.completedActivityIds:[]);
+  return {trackId,trackTitle:COMPETENCY_TRACK_META[trackId],activities:activities.map((a,i)=>({...a,sequence:i+1,completed:completed.has(a.id)})),xp:Number(progress.xp||0),completedCount:completed.size};
+});
+
+export const evaluateCompetencyActivity = onCall({cors:CALLABLE_CORS}, async request => {
+  const user=requireAuth(request);
+  const trackId=cleanText(request.data?.trackId,80);
+  const activityId=cleanText(request.data?.activityId,120);
+  const answer=request.data?.answer;
+  if(!COMPETENCY_TRACK_META[trackId]) throw new HttpsError('invalid-argument','Unknown competency track.');
+  const ordered=competencyActivityDefinitions(trackId);
+  const activity=ordered.find(x=>x.id===activityId);
+  if(!activity) throw new HttpsError('not-found','Activity not found.');
+  const index=ordered.findIndex(x=>x.id===activityId);
+  const progressRef=db.collection('competencyTrackProgress').doc(user.uid+'_'+trackId);
+  let result;
+  await db.runTransaction(async tx=>{
+    const snap=await tx.get(progressRef);
+    const data=snap.exists?snap.data():{};
+    const completed=Array.isArray(data.completedActivityIds)?[...data.completedActivityIds]:[];
+    if(completed.includes(activityId)){ result={correct:true,alreadyCompleted:true,xp:Number(data.xp||0),earned:0}; return; }
+    const previous=ordered[index-1];
+    if(previous && !completed.includes(previous.id)) throw new HttpsError('failed-precondition','Complete the previous competency activity first.');
+    const correct=answersEqual(answer,activity.answer);
+    const earned=correct?activity.xp:0;
+    if(correct) completed.push(activityId);
+    const xp=Number(data.xp||0)+earned;
+    tx.set(progressRef,{uid:user.uid,trackId,completedActivityIds:completed,xp,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    const overallRef=db.collection('competencyProgress').doc(user.uid);
+    const overallSnap=await tx.get(overallRef);
+    const overall=overallSnap.exists?overallSnap.data():{};
+    const tracks={...(overall.tracks||{})};
+    const track={...(tracks[trackId]||{})};
+    tracks[trackId]={...track,xp:Number(track.xp||0)+earned,progress:Math.min(100,Math.round(completed.length/ordered.length*100))};
+    const overallXp=Number(overall.xp||0)+earned;
+    tx.set(overallRef,{uid:user.uid,xp:overallXp,level:Math.floor(overallXp/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    result={correct,alreadyCompleted:false,xp,earned};
+  });
+  return {...result,explanation:result.correct?'Correct.':'Review the concept and try again.'};
+});
