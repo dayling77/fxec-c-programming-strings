@@ -196,7 +196,6 @@ $('loginForm').onsubmit = async e => {
 };
 
 $('logoutBtn').onclick = () => signOut(auth);
-setupCodingLab();
 
 
 const STUDIO_CHALLENGES = {
@@ -298,6 +297,8 @@ const CODING_CHALLENGES = {
     starter:'#include <stdio.h>\n#include <ctype.h>\n#include <string.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
   }
 };
+
+setupCodingLab();
 
 function renderCompetencyJourney(progress){
   const p=progress||{xp:0,level:1,badges:[],tracks:[]};
