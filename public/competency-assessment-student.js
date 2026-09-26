@@ -5,6 +5,8 @@ const fxecApp = getApps().length ? getApp() : initializeApp(window.FXEC_FIREBASE
 const functions = getFunctions(fxecApp, 'us-central1');
 const call = name => httpsCallable(functions, name);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function speak(textValue){if(!('speechSynthesis' in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(textValue||''));u.rate=.9;window.speechSynthesis.speak(u);}
+function playOptionSequence(options,stage){let i=0;const next=()=>{if(i>=options.length){stage.textContent='All options played. Select A, B, C or D.';return;}stage.textContent='Listening to Option '+String.fromCharCode(65+i)+'…';speak(options[i]);i++;setTimeout(next,3000);};next();}
 
 let current = null;
 let answers = {};
@@ -40,7 +42,7 @@ function renderList(items){
       const open=x.status==='open';
       const when=open?'OPEN NOW':'Opens '+new Date(x.openAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
       h+='<article class="caStudentDay '+(open?'isOpen':'')+'">'+
-        '<div class="caDayTop"><span>DAY '+x.day+'</span><span class="caOpenPill '+(open?'open':'scheduled')+'">'+(open?'OPEN':'SCHEDULED')+'</span></div>'+
+        '<div class="caDayTop"><span>MODULE '+x.day+'</span><span class="caOpenPill '+(open?'open':'scheduled')+'">'+(open?'OPEN':'SCHEDULED')+'</span></div>'+
         '<h5>'+esc(x.title)+'</h5><p>'+esc(x.topic)+'</p>'+
         '<div class="caDayMeta"><span>▣ '+Number(x.questionCount||15)+' questions</span><span>◷ '+esc(when)+'</span></div>'+
         '<button class="caStartButton" data-task="'+esc(x.id)+'" '+(open?'':'disabled')+'>'+(open?'Start Assessment →':'Not Open Yet')+'</button>'+
@@ -116,14 +118,15 @@ function renderAssessment(){
   const typeLabel=q.activityType?String(q.activityType).replace(/-/g,' ').toUpperCase():(q.type==='multipleCorrect'?'MULTIPLE CORRECT':q.type==='scenario'?'SCENARIO':'MCQ');
   const isMulti=q.type==='multipleCorrect';
 
+  const listening=q.activityType==='listening';
   const options=(q.options||[]).map((o,i)=>
-    '<label class="studentOption"><input type="'+(isMulti?'checkbox':'radio')+'" name="caAnswer" value="'+i+'"><span class="studentOptionLetter">'+String.fromCharCode(65+i)+'</span><span class="studentOptionText">'+esc(o)+'</span></label>'
+    '<label class="studentOption '+(listening?'audioAssessmentOption':'')+'"><input type="'+(isMulti?'checkbox':'radio')+'" name="caAnswer" value="'+i+'"><span class="studentOptionLetter">'+String.fromCharCode(65+i)+'</span><span class="studentOptionText">'+(listening?'<span class="srOnlyOption">'+esc(o)+'</span>Audio Option '+String.fromCharCode(65+i):esc(o))+'</span></label>'
   ).join('');
 
   root.innerHTML=
     '<div class="caLiveShell">'+
       '<div class="caLiveHeader">'+
-        '<div><span class="sectionEyebrow">'+esc(current.trackId)+' · DAY '+current.day+'</span><h3>'+esc(current.title)+'</h3><p>Question '+String(index+1).padStart(2,'0')+' of '+String(total).padStart(2,'0')+'</p></div>'+
+        '<div><span class="sectionEyebrow">'+esc(current.trackId)+' · MODULE '+current.day+'</span><h3>'+esc(current.title)+'</h3><p>Question '+String(index+1).padStart(2,'0')+' of '+String(total).padStart(2,'0')+'</p></div>'+
         '<button class="caExitButton" id="caExit">← Assessment List</button>'+
       '</div>'+
       '<article class="studentQuestionCard caLiveCard">'+
@@ -135,7 +138,8 @@ function renderAssessment(){
           '<div><small>TIME ALLOTTED</small><strong>'+formatClock(limit)+'</strong></div>'+
         '</div>'+
         (q.code?'<pre class="assessmentCodeBlock"><code>'+esc(q.code)+'</code></pre>':'')+
-        '<div class="studentPrompt">'+esc(q.prompt||'')+'</div>'+
+        (listening?'<div class="studentPrompt audioAssessmentPrompt"><button id="playAssessmentAudio">🔊 Play Question</button><span>Listen to the question and options.</span></div>':'<div class="studentPrompt">'+esc(q.prompt||'')+'</div>')+
+        (listening?'<div class="audioAssessmentStage" id="audioAssessmentStage">Press Play to hear the options one at a time.</div>':'')+
         '<div class="caInstruction">'+(isMulti?'Select all correct answers.':'Select the one best answer.')+'</div>'+
         '<div class="studentAnswerArea"><div class="studentOptionList">'+options+'</div></div>'+
         '<div class="caLiveNav"><button class="secondary" id="caPrev" '+(index===0?'disabled':'')+'>← Previous</button><span>'+String(index+1)+' / '+String(total)+'</span><button id="caNext">'+(index===total-1?'Submit Assessment':'Next Question →')+'</button></div>'+
@@ -143,6 +147,10 @@ function renderAssessment(){
     '</div>';
 
   restoreAnswer(q,root);
+  if(listening){
+    const play=root.querySelector('#playAssessmentAudio');
+    if(play)play.onclick=()=>{speak(q.audioText||q.prompt||'');const stage=root.querySelector('#audioAssessmentStage');setTimeout(()=>playOptionSequence(q.options||[],stage),1000);};
+  }
 
   root.querySelectorAll('input[name="caAnswer"]').forEach(x=>x.addEventListener('change',()=>saveAnswer(q,root)));
   root.querySelector('#caPrev').onclick=()=>{
