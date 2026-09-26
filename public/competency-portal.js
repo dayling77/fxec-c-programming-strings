@@ -274,10 +274,9 @@ function toggleMaterial(button){
 }
 function handlePracticeChoice(button){
  const task=button.closest('.practiceLevel'), all=[...task.querySelectorAll('[data-practice-answer]')], idx=all.indexOf(button);
- const bank=C_FUNDAMENTALS_PRACTICE; const p=bank[Number(task.dataset.practice)%bank.length]; if(!p)return;
- const ok=idx===p.answer,fb=task.querySelector('.practiceFeedback');
+ const ok=idx===Number(task.dataset.correct),fb=task.querySelector('.practiceFeedback');
  fb.className='practiceFeedback '+(ok?'correct':'review');
- fb.innerHTML=(ok?'✓ Correct. Continue to the next level when you can repeat it independently.':'↻ Review and try again.')+'<br><small>'+esc(p.hint)+'</small>';
+ fb.innerHTML=(ok?'✓ Correct. Continue only after you can repeat the task independently.':'↻ Review the concept, inspect the code again and try once more.')+'<br><small>'+esc(task.dataset.hint||'Use the study material and explain why the answer is correct.')+'</small>';
  if(ok) all.forEach(x=>x.disabled=true);
 }function checkPracticeAnswer(button){
  const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model check:</b> '+esc(button.dataset.answer)+'</p>';
