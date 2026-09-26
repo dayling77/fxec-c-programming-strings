@@ -395,8 +395,8 @@ function showDrill(button){
 function toggleMaterial(button){const body=button.parentElement.querySelector('.materialBody');const open=button.dataset.open==='1';body.hidden=open;button.dataset.open=open?'0':'1';button.textContent=open?'Teach me':'Hide lesson';}
 function practiceInstruction(title,i){return i===0?'Predict first, then prove it by tracing each line.':i===1?'Repair the code and explain the exact defect.':i===2?'Complete the missing expression and test two values.':i===3?'Trace the variables line by line before checking.':i===4?'Write the program yourself, then run it against the supplied test cases.':'Complete the coding task, test an edge case and improve your solution.';}
 function lineNumberedEditor(initial,id){
- const lines=decodeCode(initial).split('\n').length;
- return '<div class="codeEditorWrap"><div class="codeLineNumbers" data-lines="'+id+'">'+Array.from({length:Math.max(lines,4)},(_,i)=>'<span>'+(i+1)+'</span>').join('')+'</div><textarea class="codeEditor" id="'+id+'" spellcheck="false">'+esc(decodeCode(initial))+'</textarea></div>';
+ const code=decodeCode(initial),lines=code.split('\n').length;
+ return '<div class="codeEditorWrap codeThreeLine"><div class="codeLineNumbers" data-lines="'+id+'">'+Array.from({length:Math.max(lines,4)},(_,i)=>'<span>'+(i+1)+'</span>').join('')+'</div><textarea class="codeEditor" id="'+id+'" spellcheck="false">'+esc(code)+'</textarea></div>';
 }
 async function runPracticeCode(button){
  const task=button.closest('.practiceTask'),editor=task.querySelector('.codeEditor'),stdin=task.querySelector('.practiceInput')?.value||'';
@@ -418,7 +418,7 @@ function practicePoolForStudent(title){
 }
 function renderPracticeTask(task,i){
  const p=task,answer=Number.isInteger(p.answer)?p.answer:'';
- const common='<details class="practiceTask" data-answer="'+answer+'><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><p>'+esc(p.prompt)+'</p>';
+ const common='<details class="practiceTask" data-answer="'+answer+'"><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><div class="practicePromptBar"><p>'+esc(p.prompt)+'</p><button type="button" class="practicePlayQuestion" data-speech="'+esc(p.prompt)+'">🔊 Listen</button></div>';
  if(p.kind==='coding'||p.kind==='bug'){
   const starter=p.starter||p.code||'';
   return common+lineNumberedEditor(starter,'practiceCode'+i)+(p.tests?'<div class="practiceTests"><b>Test cases</b>'+p.tests.map(t=>'<span>Input: '+esc(t[0])+' → Expected: '+esc(t[1])+'</span>').join('')+'</div>':'')+'<label class="practiceInputLabel">Input for your run <input class="practiceInput" placeholder="e.g. 7 5"></label><div class="practiceTaskActions"><button class="runCodeButton">▶ Run C Code</button><button class="revealHintButton">Hint</button></div><div class="practiceRunOutput">Your output will appear here.</div><div class="practiceFeedback" hidden></div></div></details>';
@@ -431,6 +431,7 @@ function wirePracticeTasks(ws){
    const sync=()=>{if(!numbers)return;const count=Math.max(4,editor.value.split('\\n').length);numbers.innerHTML=Array.from({length:count},(_,i)=>'<span>'+(i+1)+'</span>').join('');};
    editor.addEventListener('input',sync);sync();
  });
+ ws.querySelectorAll('.practicePlayQuestion').forEach(b=>b.onclick=()=>speak(b.dataset.speech||'')); 
  ws.querySelectorAll('.runCodeButton').forEach(b=>b.onclick=()=>runPracticeCode(b));
  ws.querySelectorAll('.revealHintButton').forEach(b=>b.onclick=()=>{
    const f=b.closest('.practiceTask').querySelector('.practiceFeedback');
