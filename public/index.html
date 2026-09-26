@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FXEC Learning & Assessment Portal · C Programming Level 3</title>
+<title>FXEC First-Year Engineering Competency Portal</title>
 <link rel="stylesheet" href="/styles.css">
 <script src="/firebase-config.js"></script>
 </head>
 <body>
 <div id="publicShell">
-<header class="hero modernHero"><div class="heroInner"><div class="brandMark">FXEC</div><div><div class="eyebrow">FRANCIS XAVIER ENGINEERING COLLEGE</div><h1>C Programming · Level 3</h1><p>Strings Learning & Assessment Portal</p></div><div class="heroStatus"><span></span> LIVE LEARNING PORTAL</div></div></header>
+<header class="hero modernHero firstYearHero"><div class="heroInner"><div class="brandMark">FXEC</div><div><div class="eyebrow">FRANCIS XAVIER ENGINEERING COLLEGE</div><h1>First-Year Engineering Competency Portal</h1><p>Learn · Practise · Apply · Demonstrate · Grow</p></div><div class="heroStatus"><span></span> LIVE COMPETENCY PORTAL</div></div></header>
 <main class="container">
-<section id="courseOverview" class="courseHeroCard">
+<section id="courseOverview" class="courseHeroCard firstYearLanding">
   <div class="courseHeroText">
-    <span class="courseKicker">FXEC • REWARD POINTS LEARNING ACTIVITY</span>
-    <h2>C Programming – Level 3 | Strings</h2>
-    <p class="courseLead">A structured 5-day journey from string fundamentals to advanced problem solving.</p>
-    <div class="learningFlow"><span>Learn</span><i>→</i><span>Watch</span><i>→</i><span>Practice</span><i>→</i><span>Code</span><i>→</i><span>Test</span></div>
+    <span class="courseKicker">FXEC • FIRST-YEAR ENGINEERING</span>
+    <h2>Build the competencies that matter from Day One.</h2>
+    <p class="courseLead">A single learning journey for Communication, Aptitude, Core Engineering, C Programming, Problem Solving and Analytical Skills.</p>
+    <div class="learningFlow"><span>Concept</span><i>→</i><span>Example</span><i>→</i><span>Practise</span><i>→</i><span>Challenge</span><i>→</i><span>Assess</span></div>
   </div>
-  <div id="publicSchedule"></div>
+  <div class="firstYearTrackPreview">
+    <div><b>6</b><span>Competency Tracks</span></div><div><b>7</b><span>Learning Stages</span></div><div><b>12+</b><span>Activity Types</span></div><div><b>∞</b><span>Practice & Growth</span></div>
+  </div>
+  <div id="publicSchedule" class="legacyScheduleHost"></div>
 </section>
 <section id="authArea" class="card">
 <h2>Student Access</h2>
@@ -32,16 +35,26 @@
 <div class="userbar">Signed in as <b id="userEmail"></b><button id="logoutBtn" class="secondary">Sign out</button></div>
 <section id="student" class="panel">
 <div id="registrationStatus" class="statusBanner" hidden></div>
-<div class="studentWelcome card"><span class="sectionEyebrow">STUDENT LEARNING PORTAL</span><h2>Welcome to your C Programming Learning Centre</h2><p>Choose a section below. Your learning material stays organized day by day, while assessments open automatically according to the published schedule.</p></div>
-<div class="studentMenu card">
-  <button class="menuButton" data-panel="learningPanel">📚 5-Day Learning Centre</button>
-  <button class="menuButton" data-panel="practicePanel">📝 Sample Assessment</button>
-  <button class="menuButton" data-panel="codingPanel">💻 C Coding Lab</button>
-  <button class="menuButton" data-panel="cProgressionPanel">🧭 C Skill Path</button>
+<div class="studentWelcome card firstYearWelcome">
+  <div><span class="sectionEyebrow">YOUR ENGINEERING JOURNEY</span><h2>Welcome to the FXEC First-Year Competency Portal</h2><p>Build foundational skills through short, measurable learning experiences. Your progress, XP and completed activities are tracked as you move through the journey.</p></div>
+  <div class="welcomeStats"><div><strong>6</strong><span>Tracks</span></div><div><strong>7</strong><span>Stages</span></div><div><strong>XP</strong><span>Progress</span></div></div>
+</div>
+<div class="studentMenu card firstYearMenu">
+  <div class="menuSectionTitle"><span class="sectionEyebrow">COMPETENCY TRACKS</span><h3>Choose where you want to build your skills</h3></div>
+  <button class="menuButton primaryMenu" data-panel="firstYearCompetencyPanel">🌐 Open Competency Dashboard</button>
+  <button class="menuButton" data-panel="communicationSpeechPanel">💬 Communication Lab</button>
+  <button class="menuButton" data-panel="codingPanel">💻 C Programming Lab</button>
   <button class="menuButton" data-panel="competencyStudioPanel">🧠 Skill Builder</button>
-  <button class="menuButton" data-panel="journeyPanel">🚀 Competency Journey</button>\n  <button class="menuButton" data-panel="firstYearCompetencyPanel">🌐 First-Year Competency Hub</button>\n  <button class="menuButton" data-panel="communicationSpeechPanel">🎙️ Communication Lab</button>
-  <button class="menuButton" data-panel="scorePanel">📊 Check My Score</button>
-  <button class="menuButton" data-panel="assessmentPanel">🎯 Today's Assessment</button>
+  <button class="menuButton" data-panel="learningPanel">📚 Learning Centre</button>
+  <button class="menuButton" data-panel="assessmentPanel">🎯 Assessments</button>
+  <button class="menuButton" data-panel="scorePanel">📊 My Results</button>
+  <details class="legacyTools"><summary>More learning tools</summary>
+    <div class="legacyMenuGrid">
+      <button class="menuButton" data-panel="practicePanel">📝 Sample Assessment</button>
+      <button class="menuButton" data-panel="cProgressionPanel">🧭 C Skill Path</button>
+      <button class="menuButton" data-panel="journeyPanel">🚀 Competency Journey</button>
+    </div>
+  </details>
 </div>
 <div id="learningPanel" class="studentHiddenPanel" hidden>
   <div class="card"><div id="studentCourseDashboard"></div></div>
@@ -103,7 +116,7 @@ int main(void) {
     <div class="studioActions"><button id="submitStudioBtn">Check Answer</button><span id="studioStatus"></span></div>
     <div id="studioResult" class="challengeResult"></div>
   </div>
-</div><div id="communicationSpeechPanel" class="studentHiddenPanel" hidden><div class="card speechStudio"><div class="sectionHeading"><div><span class="sectionEyebrow">COMMUNICATION LAB</span><h2>Speak · Record · Assess</h2><p>Practise pronunciation, vocabulary and spoken responses with automatic assessment.</p></div></div><div class="speechTaskGrid"><button class="speechTask active" data-speech-task="pronunciation">🗣️ Pronunciation</button><button class="speechTask" data-speech-task="wordUsage">📚 Word Usage</button><button class="speechTask" data-speech-task="listeningSpeaking">🎧 Listen & Respond</button></div><div class="speechPrompt"><span id="speechTaskLabel">Pronunciation Practice</span><strong id="speechTarget">Please read this sentence clearly and naturally.</strong><p id="speechInstruction">Read the sentence aloud at a natural pace.</p></div><div class="speechRecorder"><div class="recordIndicator" id="recordIndicator">● Ready</div><div class="speechTimer" id="speechTimer">00:00</div><div class="speechActions"><button id="speechStartBtn">🎙️ Start Recording</button><button id="speechStopBtn" disabled>⏹ Stop</button><button id="speechPlaybackBtn" disabled>▶ Play Recording</button><button id="speechAssessBtn" disabled>✓ Assess</button></div><audio id="speechAudio" controls hidden></audio></div><div id="speechResult" class="speechResult" aria-live="polite"></div></div></div>\n<div id="firstYearCompetencyPanel" class="studentHiddenPanel" hidden><div id="firstYearCompetencyRoot"></div></div>\n<div id="journeyPanel" class="studentHiddenPanel" hidden>
+</div><div id="communicationSpeechPanel" class="studentHiddenPanel" hidden><div class="card speechStudio"><div class="sectionHeading"><div><span class="sectionEyebrow">COMMUNICATION LAB</span><h2>Speak · Record · Assess</h2><p>Practise pronunciation, vocabulary and spoken responses with automatic assessment.</p></div></div><div class="speechTaskGrid"><button class="speechTask active" data-speech-task="pronunciation">🗣️ Pronunciation</button><button class="speechTask" data-speech-task="wordUsage">📚 Word Usage</button><button class="speechTask" data-speech-task="listeningSpeaking">🎧 Listen & Respond</button></div><div class="speechPrompt"><span id="speechTaskLabel">Pronunciation Practice</span><strong id="speechTarget">Please read this sentence clearly and naturally.</strong><p id="speechInstruction">Read the sentence aloud at a natural pace.</p></div><div class="speechRecorder"><div class="recordIndicator" id="recordIndicator">● Ready</div><div class="speechTimer" id="speechTimer">00:00</div><div class="speechActions"><button id="speechStartBtn">🎙️ Start Recording</button><button id="speechStopBtn" disabled>⏹ Stop</button><button id="speechPlaybackBtn" disabled>▶ Play Recording</button><button id="speechAssessBtn" disabled>✓ Assess</button></div><audio id="speechAudio" controls hidden></audio></div><div id="speechResult" class="speechResult" aria-live="polite"></div></div></div>\n<div id="firstYearCompetencyPanel" class="firstYearCompetencyHome"><div id="firstYearCompetencyRoot"></div></div>\n<div id="journeyPanel" class="studentHiddenPanel" hidden>
   <div class="card"><div id="competencyJourney"></div></div>
 </div>
 <div id="scorePanel" class="studentHiddenPanel" hidden>
