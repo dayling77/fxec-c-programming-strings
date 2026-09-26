@@ -1268,6 +1268,47 @@ export const completeCSkill = onCall({cors:CALLABLE_CORS},async request=>{
   return result;
 });
 
+export const recordCompetencyDrillAttempt = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const moduleId=cleanText(request.data?.moduleId||'C Fundamentals',120);
+  const drillId=cleanText(request.data?.drillId||'',80);
+  const trackId=competencyTrackOrThrow(request.data?.trackId||'c-programming');
+  if(!drillId) throw new HttpsError('invalid-argument','drillId is required.');
+  const attemptKey=user.uid+'_'+trackId+'_'+moduleId.replace(/[^a-zA-Z0-9_-]/g,'-')+'_'+drillId.replace(/[^a-zA-Z0-9_-]/g,'-');
+  const attemptRef=db.collection('competencyDrillAttempts').doc(attemptKey);
+  const progressRef=db.collection('competencyProgress').doc(user.uid);
+  const boardRef=db.collection('competencyLeaderboards').doc(trackId).collection('students').doc(user.uid);
+  let result;
+  await db.runTransaction(async tx=>{
+    const [attemptSnap,progressSnap,boardSnap]=await Promise.all([tx.get(attemptRef),tx.get(progressRef),tx.get(boardRef)]);
+    if(attemptSnap.exists){
+      result={alreadyRecorded:true,stars:Number(progressSnap.exists?progressSnap.data().drillStars||0:0),bonusPoints:Number(progressSnap.exists?progressSnap.data().drillBonusPoints||0:0)};
+      return;
+    }
+    const cp=progressSnap.exists?progressSnap.data():{xp:0,level:1,tracks:{}};
+    const tracks={...(cp.tracks||{})};
+    const cur={...(tracks[trackId]||{xp:0,progress:0,drillStars:0,drillBonusPoints:0,totalPoints:0})};
+    const stars=Number(cp.drillStars||0)+1;
+    const bonus=Math.min(5,stars*0.05);
+    const trackStars=Number(cur.drillStars||0)+1;
+    const trackBonus=Math.min(5,trackStars*0.05);
+    const totalPoints=Number(cur.xp||0)+trackBonus;
+    tracks[trackId]={...cur,drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints};
+    tx.set(attemptRef,{uid:user.uid,trackId,moduleId,drillId,createdAt:FieldValue.serverTimestamp()});
+    tx.set(progressRef,{drillStars:stars,drillBonusPoints:bonus,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    tx.set(boardRef,{uid:user.uid,trackId,displayName:request.auth.token.name||request.auth.token.email||'Student',drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    result={alreadyRecorded:false,stars,bonusPoints:bonus,trackStars,trackBonus,totalPoints};
+  });
+  return result;
+});
+
+export const getCompetencyLeaderboard = onCall({cors:CALLABLE_CORS},async request=>{
+  requireAuth(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId||'c-programming');
+  const snap=await db.collection('competencyLeaderboards').doc(trackId).collection('students').orderBy('totalPoints','desc').limit(10).get();
+  return {trackId,items:snap.docs.map((d,i)=>({rank:i+1,displayName:d.data().displayName||'Student',totalPoints:Number(d.data().totalPoints||0),drillStars:Number(d.data().drillStars||0),drillBonusPoints:Number(d.data().drillBonusPoints||0)}))};
+});
+
 export const getCompetencyProgress = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
   const snap=await db.collection('competencyProgress').doc(user.uid).get();
