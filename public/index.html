@@ -91,8 +91,10 @@
 int main(void) {
     char name[100];
     fgets(name, sizeof(name), stdin);
-    name[strcspn(name, "\n")] = '\0';
-    printf("Hello, %s!\n", name);
+    name[strcspn(name, "
+")] = '\0';
+    printf("Hello, %s!
+", name);
     return 0;
 }</textarea></div>
       <div><label class="editorLabel">Standard Input</label><textarea id="cCodeInput" spellcheck="false">FXEC Student</textarea></div>
@@ -116,13 +118,16 @@ int main(void) {
     <div class="studioActions"><button id="submitStudioBtn">Check Answer</button><span id="studioStatus"></span></div>
     <div id="studioResult" class="challengeResult"></div>
   </div>
-</div><div id="communicationSpeechPanel" class="studentHiddenPanel" hidden><div class="card speechStudio"><div class="sectionHeading"><div><span class="sectionEyebrow">COMMUNICATION LAB</span><h2>Speak · Record · Assess</h2><p>Practise pronunciation, vocabulary and spoken responses with automatic assessment.</p></div></div><div class="speechTaskGrid"><button class="speechTask active" data-speech-task="pronunciation">🗣️ Pronunciation</button><button class="speechTask" data-speech-task="wordUsage">📚 Word Usage</button><button class="speechTask" data-speech-task="listeningSpeaking">🎧 Listen & Respond</button></div><div class="speechPrompt"><span id="speechTaskLabel">Pronunciation Practice</span><strong id="speechTarget">Please read this sentence clearly and naturally.</strong><p id="speechInstruction">Read the sentence aloud at a natural pace.</p></div><div class="speechRecorder"><div class="recordIndicator" id="recordIndicator">● Ready</div><div class="speechTimer" id="speechTimer">00:00</div><div class="speechActions"><button id="speechStartBtn">🎙️ Start Recording</button><button id="speechStopBtn" disabled>⏹ Stop</button><button id="speechPlaybackBtn" disabled>▶ Play Recording</button><button id="speechAssessBtn" disabled>✓ Assess</button></div><audio id="speechAudio" controls hidden></audio></div><div id="speechResult" class="speechResult" aria-live="polite"></div></div></div>\n<div id="firstYearCompetencyPanel" class="firstYearCompetencyHome"><div id="firstYearCompetencyRoot"></div></div>\n<div id="journeyPanel" class="studentHiddenPanel" hidden>
+</div><div id="communicationSpeechPanel" class="studentHiddenPanel" hidden><div class="card speechStudio"><div class="sectionHeading"><div><span class="sectionEyebrow">COMMUNICATION LAB</span><h2>Speak · Record · Assess</h2><p>Practise pronunciation, vocabulary and spoken responses with automatic assessment.</p></div></div><div class="speechTaskGrid"><button class="speechTask active" data-speech-task="pronunciation">🗣️ Pronunciation</button><button class="speechTask" data-speech-task="wordUsage">📚 Word Usage</button><button class="speechTask" data-speech-task="listeningSpeaking">🎧 Listen & Respond</button></div><div class="speechPrompt"><span id="speechTaskLabel">Pronunciation Practice</span><strong id="speechTarget">Please read this sentence clearly and naturally.</strong><p id="speechInstruction">Read the sentence aloud at a natural pace.</p></div><div class="speechRecorder"><div class="recordIndicator" id="recordIndicator">● Ready</div><div class="speechTimer" id="speechTimer">00:00</div><div class="speechActions"><button id="speechStartBtn">🎙️ Start Recording</button><button id="speechStopBtn" disabled>⏹ Stop</button><button id="speechPlaybackBtn" disabled>▶ Play Recording</button><button id="speechAssessBtn" disabled>✓ Assess</button></div><audio id="speechAudio" controls hidden></audio></div><div id="speechResult" class="speechResult" aria-live="polite"></div></div></div>
+<div id="firstYearCompetencyPanel" class="firstYearCompetencyHome"><div id="firstYearCompetencyRoot"></div></div>
+<div id="journeyPanel" class="studentHiddenPanel" hidden>
   <div class="card"><div id="competencyJourney"></div></div>
 </div>
 <div id="scorePanel" class="studentHiddenPanel" hidden>
   <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">RESULTS</span><h2>My Assessment Score</h2></div></div><div id="myScore">Your completed assessment results will appear here.</div></div>
 </div>
-<div id="competencyAssessmentPanel" class="studentHiddenPanel" hidden><div class="card"><div id="competencyAssessmentLaunch"></div></div></div>\n<div id="assessmentPanel" class="card studentHiddenPanel" hidden>
+<div id="competencyAssessmentPanel" class="studentHiddenPanel" hidden><div class="card"><div id="competencyAssessmentLaunch"></div></div></div>
+<div id="assessmentPanel" class="card studentHiddenPanel" hidden>
   <div id="studentStatus" class="assessmentStatus">Checking assessment window…</div><button id="startBtn" disabled>Start Assessment</button>
   <div class="assessmentTop"><h2 id="assessmentTitle"></h2><div id="timer"></div></div>
   <div id="questions"></div>
@@ -177,5 +182,9 @@ int main(void) {
 </main>
 <script type="module" src="/app.js?v=20260926-full-competency"></script>
 <script type="module">import { renderCompetencyPortal } from "/competency-portal.js"; window.addEventListener("DOMContentLoaded",()=>{const r=document.getElementById("firstYearCompetencyRoot"); if(r) renderCompetencyPortal(r);});</script>
-<script type="module" src="/competency-assessment-admin.js"></script>\n<script type="module" src="/competency-assessment-student.js"></script>\n<script type="module" src="/faculty-content-admin.js"></script>\n<script type="module" src="/communication-speech.js"></script>\n</body>
+<script type="module" src="/competency-assessment-admin.js"></script>
+<script type="module" src="/competency-assessment-student.js"></script>
+<script type="module" src="/faculty-content-admin.js"></script>
+<script type="module" src="/communication-speech.js"></script>
+</body>
 </html>
