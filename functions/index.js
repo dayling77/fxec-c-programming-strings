@@ -23,6 +23,8 @@ const tts = new textToSpeech.TextToSpeechClient();
 const ZEPTOMAIL_CONFIG = defineJsonSecret('ZEPTOMAIL_CONFIG');
 const COMPILER_API_URL = defineString('COMPILER_API_URL', {default: 'https://ce.judge0.com'});
 const COMPILER_API_TOKEN = defineString('COMPILER_API_TOKEN', {default: ''});
+const AZURE_SPEECH_KEY = defineString('AZURE_SPEECH_KEY', {default: ''});
+const AZURE_SPEECH_REGION = defineString('AZURE_SPEECH_REGION', {default: 'eastus'});
 const CALLABLE_CORS = ['https://fxec-c-strings.web.app','https://fxec-c-strings.firebaseapp.com','http://localhost:5000','http://127.0.0.1:5000'];
 
 const CONFIG = Object.freeze({
@@ -1369,38 +1371,52 @@ const COMMUNICATION_TASKS = Object.freeze({
   listeningSpeaking: { title:'Listen & Respond', prompt:'Listen to the prompt and respond clearly.', xp:20 }
 });
 function normalizeWords(s){ return cleanText(s,5000).toLowerCase().replace(/[^a-z0-9' ]+/g,' ').split(/\s+/).filter(Boolean); }
-function scoreWordAlignment(target, transcript){
- const a=normalizeWords(target), b=normalizeWords(transcript); const used=new Set(); let matched=0;
- for(const w of a){ const i=b.findIndex((x,j)=>x===w&&!used.has(j)); if(i>=0){used.add(i);matched++;} }
- const wordAccuracy=a.length?Math.round(matched/a.length*100):0;
- const extra=Math.max(0,b.length-matched); const missing=Math.max(0,a.length-matched);
- return {wordAccuracy,matched,totalTarget:a.length,missing,extra};
-}
 function scoreWordUsage(target, transcript){
- const t=cleanText(target,120).toLowerCase(); const words=normalizeWords(transcript); const present=words.includes(t.replace(/[^a-z0-9']/g,''));
- const sentence=words.length>=4; const starts=words.length?words[0]:''; const score=present?(sentence?100:70):0;
+ const targetWord=normalizeWords(target)[2] || normalizeWords(target)[0] || ''; const words=normalizeWords(transcript);
+ const present=words.includes(targetWord); const sentence=words.length>=4; const score=present?(sentence?100:70):0;
  return {score,wordPresent:present,sufficientSentence:sentence,wordCount:words.length};
 }
-async function transcribeSpeech(base64Audio, mimeType='audio/webm'){
- const key=process.env.GOOGLE_SPEECH_API_KEY || '';
- if(!key) throw new HttpsError('failed-precondition','Speech assessment is not configured. Set GOOGLE_SPEECH_API_KEY.');
- const bytes=Buffer.from(String(base64Audio||''),'base64');
- if(!bytes.length || bytes.length>SPEECH_CONFIG.maxAudioBytes) throw new HttpsError('invalid-argument','Audio file is missing or too large.');
- const r=await fetch('https://speech.googleapis.com/v1/speech:recognize?key='+encodeURIComponent(key),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({config:{encoding:mimeType.includes('wav')?'LINEAR16':'WEBM_OPUS',languageCode:'en-IN',alternativeLanguageCodes:['en-US'],enableAutomaticPunctuation:true,model:'latest_long'},audio:{content:bytes.toString('base64')}})});
- const body=await r.json(); if(!r.ok) throw new HttpsError('internal','Speech recognition failed.');
- const transcript=(body.results||[]).map(x=>x.alternatives?.[0]?.transcript||'').join(' ').trim();
- if(!transcript) throw new HttpsError('invalid-argument','No speech could be detected.'); return transcript;
+function speechAssessmentHeader(referenceText){
+ return Buffer.from(JSON.stringify({
+   ReferenceText: referenceText, GradingSystem:'HundredMark', Granularity:'Phoneme',
+   Dimension:'Comprehensive', EnableMiscue:true, EnableProsodyAssessment:true,
+   PhonemeAlphabet:'IPA'
+ })).toString('base64');
 }
+async function azurePronunciationAssessment(wavBytes, referenceText){
+ const key=AZURE_SPEECH_KEY.value(), region=AZURE_SPEECH_REGION.value();
+ if(!key) throw new HttpsError('failed-precondition','Phoneme-level pronunciation assessment is not configured. Set AZURE_SPEECH_KEY.');
+ const url='https://'+region+'.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US&format=detailed';
+ const r=await fetch(url,{method:'POST',headers:{
+   'Ocp-Apim-Subscription-Key':key,'Pronunciation-Assessment':speechAssessmentHeader(referenceText),
+   'Content-Type':'audio/wav; codecs=audio/pcm; samplerate=16000'
+ },body:wavBytes});
+ const body=await r.json(); if(!r.ok) throw new HttpsError('internal','Azure pronunciation assessment failed.');
+ const json=body.NBest?.[0] || body;
+ const pa=json.PronunciationAssessment || {};
+ const words=(json.Words||[]).map(w=>({word:w.Word,accuracyScore:w.PronunciationAssessment?.AccuracyScore??null,errorType:w.PronunciationAssessment?.ErrorType||'None',phonemes:(w.Phonemes||[]).map(p=>({phoneme:p.Phoneme,accuracyScore:p.PronunciationAssessment?.AccuracyScore??null,spokenPhoneme:p.PronunciationAssessment?.NBestPhonemes?.[0]?.Phoneme||null}))}));
+ return {transcript:json.Display||json.ITN||'',pronunciationScore:Math.round(pa.PronScore??pa.AccuracyScore??0),accuracyScore:Math.round(pa.AccuracyScore??0),fluencyScore:Math.round(pa.FluencyScore??0),completenessScore:Math.round(pa.CompletenessScore??0),prosodyScore:pa.ProsodyScore==null?null:Math.round(pa.ProsodyScore),words};
+}
+
 export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async request => {
- const a=requireAuth(request); const taskType=cleanText(request.data?.taskType,40); const target=cleanText(request.data?.target,1000); const audioBase64=String(request.data?.audioBase64||''); const mimeType=cleanText(request.data?.mimeType||'audio/webm',80);
+ const a=requireAuth(request); const taskType=cleanText(request.data?.taskType,40); const target=cleanText(request.data?.target,1000);
+ const audioBase64=String(request.data?.audioBase64||''); const mimeType=cleanText(request.data?.mimeType||'audio/wav',80);
  if(!COMMUNICATION_TASKS[taskType] || !target || !audioBase64) throw new HttpsError('invalid-argument','Task type, target and recording are required.');
- const transcript=await transcribeSpeech(audioBase64,mimeType);
+ const bytes=Buffer.from(audioBase64,'base64'); if(!bytes.length || bytes.length>SPEECH_CONFIG.maxAudioBytes) throw new HttpsError('invalid-argument','Audio file is missing or too large.');
  let result;
- if(taskType==='wordUsage') result={...scoreWordUsage(target,transcript),transcript};
- else result={...scoreWordAlignment(target,transcript),transcript,pronunciationScore:Math.min(100,Math.max(0,Math.round(scoreWordAlignment(target,transcript).wordAccuracy*.8+(transcript.length>target.length*.65?20:0))))};
+ if(taskType==='pronunciation'){
+   if(!mimeType.includes('wav')) throw new HttpsError('invalid-argument','Pronunciation assessment requires 16 kHz WAV audio.');
+   result=await azurePronunciationAssessment(bytes,target);
+ } else {
+   result=await azurePronunciationAssessment(bytes,target);
+   if(taskType==='wordUsage') { const usage=scoreWordUsage(target,result.transcript); result={...result,...usage}; }
+ }
  const score=taskType==='wordUsage'?result.score:result.pronunciationScore;
  const xp=score>=80?COMMUNICATION_TASKS[taskType].xp:score>=60?Math.round(COMMUNICATION_TASKS[taskType].xp*.5):0;
- await db.collection('communicationSpeechAttempts').add({uid:a.uid,taskType,target,transcript,score,xp,createdAt:FieldValue.serverTimestamp()});
+ await db.collection('communicationSpeechAttempts').add({uid:a.uid,taskType,target,transcript:result.transcript,score,xp,pronunciation:taskType==='pronunciation'?{accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words}:null,createdAt:FieldValue.serverTimestamp()});
+ if(xp){const ref=db.collection('competencyProgress').doc(a.uid);await db.runTransaction(async tx=>{const s=await tx.get(ref),d=s.exists?s.data():{xp:0,badges:[],tracks:{}};const next=(d.xp||0)+xp;const tracks={...(d.tracks||{})};const cur=tracks.communication||{xp:0,progress:0};tracks.communication={...cur,xp:(cur.xp||0)+xp,progress:Math.min(100,Math.round(((cur.xp||0)+xp)))};tx.set(ref,{...d,xp:next,level:Math.floor(next/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});});}
+ return {taskType,target,transcript:result.transcript,score,xp,accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words||[],feedback:score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the words marked for improvement and practise again.':'Keep practising. Record again with clear, steady speech.'};
+});
  if(xp){const ref=db.collection('competencyProgress').doc(a.uid);await db.runTransaction(async tx=>{const s=await tx.get(ref),d=s.exists?s.data():{xp:0,badges:[],tracks:{}};const next=(d.xp||0)+xp;const tracks={...(d.tracks||{})};const cur=tracks.communication||{xp:0,progress:0};tracks.communication={...cur,xp:(cur.xp||0)+xp,progress:Math.min(100,Math.round(((cur.xp||0)+xp)/100*100))};tx.set(ref,{...d,xp:next,level:Math.floor(next/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});});}
  return {taskType,target,transcript,score,xp,feedback:score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the highlighted words and practise again.':'Keep practising. Record again with clear, steady speech.'};
 });
