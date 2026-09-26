@@ -1549,6 +1549,18 @@ const COMPETENCY_ASSESSMENT_TRACKS = Object.freeze({
   'problem-solving': {title:'Problem Solving', defaultTopics:['Decomposition','Pattern Recognition','Algorithms','Debugging','Decision Making']},
   analytical: {title:'Analytical Skills', defaultTopics:['Reading Comprehension','Listening','Inference','Critical Analysis','Evidence Based Reasoning']}
 });
+const COMPETENCY_MODULE_TITLES = Object.freeze({
+  communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],
+  aptitude:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude'],
+  'core-engineering':['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],
+  'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],
+  'problem-solving':['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge'],
+  analytical:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']
+});
+function competencyModuleTitle(trackId,day){
+  return COMPETENCY_MODULE_TITLES[trackId]?.[Number(day)-1] || COMPETENCY_ASSESSMENT_TRACKS[trackId]?.defaultTopics?.[Number(day)-1] || ('Module '+day);
+}
+
 
 function competencyTrackOrThrow(trackId){
   const id=cleanText(trackId,80);
@@ -1637,7 +1649,7 @@ async function generateHighStandardCompetencyDay(trackId, day) {
 export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request), trackId=competencyTrackOrThrow(request.data?.trackId), meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
   const batch=db.batch(), poolWrites=[], created=[];
-  for(let day=1;day<=5;day++){
+  for(let day=1;day<=10){
     const questions=await generateHighStandardCompetencyDay(trackId,day);
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
     batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Day '+day,topic:meta.defaultTopics[day-1]||('Day '+day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
@@ -1698,7 +1710,7 @@ export const getAdminCompetencyQuestionPool = onCall({cors:CALLABLE_CORS},async 
   requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
   const day=Number(request.data?.day);
-  if(!Number.isInteger(day)||day<1||day>5) throw new HttpsError('invalid-argument','Day must be between 1 and 5.');
+  if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
   const taskSnap=await db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day).get();
   if(!taskSnap.exists) throw new HttpsError('not-found','Assessment day not found.');
   const task=taskSnap.data();
