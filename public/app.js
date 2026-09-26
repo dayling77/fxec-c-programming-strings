@@ -217,9 +217,8 @@ const STUDIO_CHALLENGES = {
   missing:{
     prompt:'Choose the missing statement that correctly removes the newline added by fgets().',
     code:['char s[100];','fgets(s, sizeof(s), stdin);','__________;','printf("%s", s);'],
-    answer:'s[strcspn(s, "\\n")] = '\\0';',
-    options:['s[strcspn(s, "\\n")] = '\\0';','s = '\\0';','strlen(s) = 0;','remove(s);']
-
+    answer:"s[strcspn(s, \"\\n\")] = '\\0';",
+    options:["s[strcspn(s, \"\\n\")] = '\\0';","s = '\\0';","strlen(s) = 0;","remove(s);"]
 ")] = \'\\0\';','s = \'\\0\';','strlen(s) = 0;','remove(s);']
   }
 };
