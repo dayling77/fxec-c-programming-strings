@@ -6,7 +6,7 @@ const functions = getFunctions(fxecApp, 'us-central1');
 const call = name => httpsCallable(functions, name);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function speak(textValue){if(!('speechSynthesis' in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(textValue||''));u.rate=.9;window.speechSynthesis.speak(u);}
-function playOptionSequence(options,stage){let i=0;const next=()=>{if(i>=options.length){stage.textContent='All options played. Select A, B, C or D.';return;}stage.textContent='Listening to Option '+String.fromCharCode(65+i)+'…';speak(options[i]);i++;setTimeout(next,3000);};next();}
+function playOptionSequence(options,stage){let i=0;const next=()=>{if(i>=options.length){stage.textContent='All options played. Select A, B, C or D.';return;}stage.textContent='Listening to Option '+String.fromCharCode(65+i)+'…';speak(options[i]);i++;setTimeout(next,2000);};next();}
 
 let current = null;
 let answers = {};
@@ -33,10 +33,10 @@ function renderList(items){
   const groups={};
   items.forEach(x=>(groups[x.trackId]??=[]).push(x));
 
-  let h='<div class="caStudentIntro"><div><span class="sectionEyebrow">ASSESSMENT LAUNCH CENTRE</span><h3>Competency Assessments</h3><p>Administrator-approved assessments are shown here. Your recommended questions are selected securely on the server.</p></div><div class="caLaunchBadge">15 QUESTIONS</div></div>';
+  let h='<div class="caStudentIntro"><div><span class="sectionEyebrow">ASSESSMENT LAUNCH CENTRE</span><h3>Competency Assessments</h3><p>Administrator-approved assessments are shown here. Your recommended questions are selected securely on the server.</p></div><div class="caLaunchBadge">15 QUESTIONS · DIFFERENT SET PER STUDENT</div></div>';
 
   Object.entries(groups).forEach(([track,list])=>{
-    h+='<section class="caStudentTrack"><div class="caTrackHeader"><div><span class="sectionEyebrow">COMPETENCY TRACK</span><h4>'+esc(list[0].trackTitle)+'</h4></div><span class="caTrackDayCount">'+list.length+' DAY'+(list.length===1?'':'S')+'</span></div><div class="caStudentDayGrid">';
+    h+='<section class="caStudentTrack"><div class="caTrackHeader"><div><span class="sectionEyebrow">COMPETENCY TRACK</span><h4>'+esc(list[0].trackTitle)+'</h4></div><span class="caTrackDayCount">'+list.length+' MODULE'+(list.length===1?'':'S')+'</span></div><div class="caStudentDayGrid">';
 
     list.forEach(x=>{
       const open=x.status==='open';
