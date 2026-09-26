@@ -1502,7 +1502,7 @@ export const evaluateCompetencyActivity = onCall({cors:CALLABLE_CORS}, async req
 
 const COMPETENCY_ASSESSMENT_TRACKS = Object.freeze({
   communication: {title:'Communication', defaultTopics:['Grammar & Usage','Vocabulary','Professional Communication','Presentation','Group Discussion']},
-  aptitude: {title:'Aptitude', defaultTopics:['Quantitative Aptitude','Logical Reasoning','Data Interpretation','Verbal Reasoning','Verbal Reasoning']},
+  aptitude: {title:'Aptitude', defaultTopics:['Quantitative Aptitude','Logical Reasoning','Data Interpretation','Numerical Reasoning','Integrated Aptitude']},
   'core-engineering': {title:'Core Engineering', defaultTopics:['Engineering Fundamentals','Measurements','Materials','Circuits','Digital Prototyping']},
   'c-programming': {title:'C Programming', defaultTopics:['C Fundamentals','Control Flow','Arrays & Functions','Strings','Problem Solving']},
   'problem-solving': {title:'Problem Solving', defaultTopics:['Decomposition','Pattern Recognition','Algorithms','Debugging','Decision Making']},
@@ -1666,7 +1666,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
   const questions=validateCompetencyQuestions(request.data?.questions);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:title||topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   return {success:true,trackId,day,questionCount:questions.length,status:'draft'};
 });
 
