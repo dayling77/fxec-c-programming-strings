@@ -409,3 +409,60 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .caDayTabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.caDayTabs button{padding:9px 14px;border:1px solid #d7dde7;border-radius:9px;background:#fff;cursor:pointer}.caDayTabs button.active{background:#172554;color:#fff}
 .caEditor{border:1px solid #e3e7ee;border-radius:16px;padding:18px;background:#fafbfc}.caEditorHead{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.caMetaGrid{display:grid;grid-template-columns:repeat(5,minmax(130px,1fr));gap:10px;margin:18px 0}.caQuestionHead{display:flex;justify-content:space-between;align-items:center;margin:18px 0 10px}.caQuestion{display:grid;grid-template-columns:55px 1fr;gap:14px;background:#fff;border:1px solid #e3e7ee;border-radius:12px;padding:14px;margin:10px 0}.caQuestionNo{font-weight:900;font-size:18px}.caQuestionFields{display:grid;gap:10px}.caPrompt,.caExplanation{min-height:65px;resize:vertical}.caOptions{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.caQuestionMeta{display:grid;grid-template-columns:1fr 1fr 120px;gap:8px}.caActions{display:flex;gap:10px;margin-top:16px}.caStudentIntro{margin-bottom:16px}.caStudentTrack{border-top:1px solid #e5e7eb;padding-top:15px;margin-top:15px}.caStudentDayGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.caStudentDay{border:1px solid #e3e7ee;border-radius:12px;padding:13px;background:#fff}.caStudentDay span{font-size:11px;font-weight:900}.caStudentDay h5{margin:6px 0}.caStudentDay button{width:100%;margin-top:10px;padding:9px;border:0;border-radius:8px;background:#172554;color:#fff}.caStudentDay button:disabled{opacity:.5}.caLiveHeader{margin-bottom:15px}.caLiveQuestion{border:1px solid #e3e7ee;border-radius:14px;padding:20px;background:#fff}.caLiveOptions{display:grid;gap:10px}.caLiveOptions label{padding:12px;border:1px solid #e3e7ee;border-radius:9px;cursor:pointer}.caLiveActions{margin-top:18px}.caResult{padding:25px;text-align:center;border:1px solid #dbe3ef;border-radius:14px}.caResult strong{font-size:42px;display:block}.caEmpty,.caStudentEmpty{padding:25px;border:1px dashed #cbd5e1;border-radius:12px}
 @media(max-width:800px){.caMetaGrid,.caQuestionMeta,.caOptions,.caStudentDayGrid{grid-template-columns:1fr}.caQuestion{grid-template-columns:1fr}}
+
+
+/* ============================================================
+   COMPETENCY ASSESSMENT — MATCH THE STRINGS PORTAL EXPERIENCE
+   ============================================================ */
+.caStudentIntro{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:24px 26px;margin-bottom:18px;background:linear-gradient(135deg,#f8fbff 0%,#eef5ff 100%);border:1px solid #dbe7f6;border-radius:18px}
+.caStudentIntro h3{margin:5px 0 4px;font-size:25px;color:#102a43;letter-spacing:-.03em}
+.caStudentIntro p{margin:0;color:#64748b;font-size:13px;line-height:1.5}
+.caLaunchBadge,.caTrackDayCount{display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;background:#e8f1ff;color:#2563eb;font-size:10px;font-weight:900;letter-spacing:.7px;white-space:nowrap}
+.caStudentTrack{margin:18px 0 24px}
+.caTrackHeader{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.caTrackHeader h4{margin:3px 0 0;font-size:20px;color:#102a43}
+.caStudentDayGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.caStudentDay{border:1px solid #dbe4ef;border-radius:15px;padding:16px;background:#fff;box-shadow:0 4px 14px rgba(15,43,82,.045);transition:.15s}
+.caStudentDay.isOpen{border-color:#b9d3f6;box-shadow:0 7px 20px rgba(37,99,235,.08)}
+.caStudentDay:hover.isOpen{transform:translateY(-1px);border-color:#8fb5e8}
+.caDayTop{display:flex;justify-content:space-between;align-items:center;gap:7px;margin-bottom:10px}
+.caDayTop>span:first-child{font-size:10px;font-weight:900;letter-spacing:.8px;color:#2563eb}
+.caOpenPill{padding:5px 8px;border-radius:999px;font-size:9px;font-weight:900;letter-spacing:.5px}
+.caOpenPill.open{background:#dcfce7;color:#166534}.caOpenPill.scheduled{background:#f1f5f9;color:#64748b}
+.caStudentDay h5{margin:0 0 5px;font-size:15px;color:#172b4d}
+.caStudentDay p{margin:0 0 13px;font-size:12px;line-height:1.45;color:#64748b;min-height:34px}
+.caDayMeta{display:grid;gap:5px;padding-top:10px;border-top:1px solid #edf1f6;font-size:10px;color:#64748b}
+.caStartButton{width:100%;margin:13px 0 0!important;padding:10px 12px!important;border-radius:9px!important;font-size:11px!important}
+.caStartButton:disabled{background:#e2e8f0!important;color:#64748b!important;opacity:1!important}
+.caLoading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:230px;padding:30px;text-align:center;border:1px solid #dbe4ef;border-radius:18px;background:#fff}
+.caLoading strong{font-size:16px;color:#102a43}.caLoading span{font-size:12px;color:#64748b}
+.caLiveShell{max-width:980px;margin:0 auto}
+.caLiveHeader{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:14px}
+.caLiveHeader h3{margin:4px 0;font-size:25px;color:#102a43;letter-spacing:-.03em}
+.caLiveHeader p{margin:0;color:#64748b;font-size:12px}
+.caExitButton{background:#fff!important;color:#475569!important;border:1px solid #dbe4ef!important;font-size:11px!important;margin:0!important}
+.caLiveCard{margin:0!important}
+.caLiveCard .studentPrompt{min-height:0}
+.caInstruction{margin:0 30px 16px;padding:10px 12px;border:1px solid #e5ebf3;border-radius:10px;background:#f8fafc;color:#64748b;font-size:12px}
+.caInstructionError{border-color:#fecaca;background:#fef2f2;color:#b91c1c}
+.caLiveCard .studentAnswerArea{padding-bottom:20px}
+.caLiveCard .studentOption{min-height:58px}
+.caLiveNav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 30px;border-top:1px solid #e5ebf3;background:#f8fafc}
+.caLiveNav span{font-size:11px;font-weight:800;color:#64748b}
+.caLiveNav button{margin:0!important}
+.caResult{max-width:720px;margin:20px auto;padding:36px;text-align:center;border:1px solid #dbe4ef;border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(15,43,82,.08)}
+.caResult h3{margin:6px 0 20px;font-size:24px;color:#102a43}
+.caScoreRing{width:150px;height:150px;margin:0 auto 16px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f0f6ff;border:8px solid #dbeafe;color:#2563eb}
+.caScoreRing strong{font-size:34px;line-height:1}.caScoreRing span{margin-top:5px;font-size:10px;color:#64748b}
+.caResultStatus{display:inline-block;padding:8px 13px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.6px}
+.caResultStatus.passed{background:#dcfce7;color:#166534}.caResultStatus.notPassed{background:#fff7ed;color:#9a3412}
+.caResult p{max-width:520px;margin:14px auto;color:#64748b;line-height:1.55;font-size:13px}
+.caResultStats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.caResultStats div{padding:13px;border:1px solid #e5ebf3;border-radius:11px;background:#f8fafc}
+.caResultStats strong,.caResultStats span{display:block}.caResultStats strong{font-size:16px;color:#102a43}.caResultStats span{font-size:10px;color:#64748b;margin-top:3px}
+.caStudentEmpty{padding:28px;text-align:center;border:1px dashed #cbd5e1;border-radius:16px;background:#fff}
+.caStudentEmpty h3{margin:6px 0;color:#102a43}.caStudentEmpty p{color:#64748b;font-size:13px}
+.caStudentEmpty.error{border-color:#fecaca;background:#fffafa}
+@media(max-width:1050px){.caStudentDayGrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:750px){.caStudentIntro,.caLiveHeader{flex-direction:column}.caStudentDayGrid{grid-template-columns:1fr 1fr}.caLiveNav{padding:13px 18px}.caInstruction{margin-left:18px;margin-right:18px}.caLiveCard .studentPrompt{padding-left:18px;padding-right:18px}.caLiveCard .studentAnswerArea{padding-left:18px;padding-right:18px}.caResultStats{grid-template-columns:1fr}}
+@media(max-width:500px){.caStudentDayGrid{grid-template-columns:1fr}.caLiveHeader h3{font-size:21px}}
