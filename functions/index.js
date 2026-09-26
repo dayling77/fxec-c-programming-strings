@@ -1649,7 +1649,7 @@ async function generateHighStandardCompetencyDay(trackId, day) {
 export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request), trackId=competencyTrackOrThrow(request.data?.trackId), meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
   const batch=db.batch(), poolWrites=[], created=[];
-  for(let day=1;day<=10){
+  for(let day=1;day<=10;day++){
     const questions=await generateHighStandardCompetencyDay(trackId,day);
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
     batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),topic:competencyModuleTitle(trackId,day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
@@ -1690,7 +1690,7 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
   const trackId=competencyTrackOrThrow(request.data?.trackId);
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
   const batch=db.batch();
-  for(let day=1;day<=10){
+  for(let day=1;day<=10;day++){
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
     batch.set(ref,{
       trackId,trackTitle:meta.title,day,
