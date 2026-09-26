@@ -261,6 +261,7 @@ function openModule(root,trackId,moduleNo,programme){
  ws.querySelectorAll('.checkAnswer').forEach(b=>b.onclick=()=>checkPracticeAnswer(b));
  ws.querySelectorAll('.materialToggle').forEach(b=>b.onclick=()=>toggleMaterial(b));
  wirePracticeTasks(ws);
+ loadCompetencyLeaderboard(ws,trackId);
  ws.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
@@ -340,7 +341,7 @@ function showDrill(button){
  box.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{
    const st=drillState(title).data;
    if(!st.completed)st.completed=[];
-   if(!box.dataset.rewarded){st.stars=Number(st.stars||0)+1;st.completed.push(chosen.id);st.bonusPoints=Math.min(5,Number(st.stars)*.05);saveDrillState(title,st);box.dataset.rewarded='1';}
+   if(!box.dataset.rewarded){st.stars=Number(st.stars||0)+1;st.completed.push(chosen.id);st.bonusPoints=Math.min(5,Number(st.stars)*.05);saveDrillState(title,st);box.dataset.rewarded='1';call('recordCompetencyDrillAttempt')({trackId:'c-programming',moduleId:title,drillId:chosen.id}).then(()=>loadCompetencyLeaderboard(card.closest('.moduleLearningWorkspace'),'c-programming')).catch(()=>{});}
    const ok=Number(b.dataset.answer)===q[3],fb=box.querySelector('.drillFeedback');
    fb.className='drillFeedback '+(ok?'correct':'review');
    fb.innerHTML=(ok?'⭐ Correct! Drill Star earned. ':'↻ Keep practising. A Star is awarded for completing the attempt. ')+'<b>'+esc(q[4])+'</b><br><span>Stars: '+st.stars+' · Bonus: '+Number(st.bonusPoints||0).toFixed(2)+' / 5</span>';
@@ -381,6 +382,15 @@ function wirePracticeTasks(ws){
    if(ok)task.querySelectorAll('[data-choice]').forEach(x=>x.disabled=true);
  });
 }
+async function loadCompetencyLeaderboard(ws,trackId){
+ const root=ws?.querySelector?.('#competencyLeaderboard');if(!root)return;
+ root.innerHTML='<div class="leaderboardLoading">Loading top performers…</div>';
+ try{
+  const r=await call('getCompetencyLeaderboard')({trackId});
+  const items=r.data?.items||[];
+  root.innerHTML=items.length?'<div class="leaderboardRows">'+items.map(x=>'<div class="leaderboardRow"><b>#'+Number(x.rank)+'</b><span>'+esc(x.displayName)+'</span><strong>'+Number(x.totalPoints).toFixed(2)+' pts</strong><small>⭐ '+Number(x.drillStars)+'</small></div>').join('')+'</div>':'<div class="leaderboardLoading">Complete drills and assessments to appear here.</div>';
+ }catch(e){root.innerHTML='<div class="leaderboardLoading">Leaderboard will appear after your first recorded activity.</div>';}
+}
 function moduleView(track,data,no,programme){
  const topicHtml=data.topics.map(x=>'<li>'+esc(x)+'</li>').join('');
  const matHtml=data.title==='C Fundamentals'?C_FUNDAMENTALS_LESSON.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join(''):data.materials.map((x,i)=>'<div class="studyMaterial"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x)+'</strong><button class="materialToggle" data-open="0">Teach me</button><p class="materialBody" hidden>'+esc(materialGuide(x,data.title))+'</p></div>').join('');
@@ -394,6 +404,7 @@ function moduleView(track,data,no,programme){
   '<section class="learningSection"><span class="sectionEyebrow">02 · STUDY MATERIALS</span><h4>International-style step-by-step learning</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it line by line → answer the micro-check → repeat until you can explain it without notes.</p>'+matHtml+'</section></div>'+
   '<section class="learningSection"><span class="sectionEyebrow">03 · GUIDED DRILLS</span><h4>Practice like a game</h4><p>100-question pool. Students unlock 10 at a time. Each completed attempt earns a Star. A few missions use audio so the question or options are not presented as one static screen.</p><div class="drillGrid">'+drillHtml+'</div></section>'+
   '<section class="learningSection"><span class="sectionEyebrow">04 · PRACTICE LADDER</span><h4>More coding. More debugging. More independence.</h4><p>Use the editor for coding tasks, run standard C, inspect compiler/output feedback, fix the defect and test again. The line-numbered editor keeps code organised as Line 1, Line 2, Line 3…</p><div class="practiceLadder">'+practiceHtml+'</div></section>'+
+  '<section class="learningSection leaderboardSection"><span class="sectionEyebrow">STUDENT PERFORMANCE</span><h4>🏆 Top Performers — '+esc(track.title)+'</h4><p>Shown from recorded competency points and practice rewards.</p><div id="competencyLeaderboard"><div class="leaderboardLoading">Loading top performers…</div></div></section>'+
   '<section class="learningSection challengeSection"><span class="sectionEyebrow">05 · CHALLENGE</span><h4>Apply what you have learned</h4><div class="challengeBox"><p>'+esc(data.challenge)+'</p><ul><li>Write the solution in the line-numbered editor.</li><li>Run it against normal, boundary and unusual inputs.</li><li>Fix every compiler or logic error.</li><li>Review and improve before moving to assessment.</li></ul></div></section>'+
   '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · ASSESSMENT</span><h4>Module Mastery Assessment</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ Study completed</span><span>✓ Drills attempted</span><span>✓ Practice attempted</span><span>✓ Challenge attempted</span></div><button id="startAssessment">Open Assessment Centre →</button><p class="assessmentNote">Only faculty/admin-approved assessment pools appear to students. Each assessment has its own launch date, opening time and closing time.</p></section></section>';
 }
