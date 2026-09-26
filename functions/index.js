@@ -1885,6 +1885,8 @@ export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async requ
     tx.set(resultRef,{studentId:user.uid,attemptId,taskId:attempt.taskId,trackId:attempt.trackId,day:attempt.day,score:correct,total,scorePercent,passed,xp,completedAt:FieldValue.serverTimestamp()});
     tx.update(attemptRef,{status:'finalized',finalizedAt:FieldValue.serverTimestamp()});
     const cpRef=db.collection('competencyProgress').doc(user.uid),cpSnap=await tx.get(cpRef),cp=cpSnap.exists?cpSnap.data():{xp:0,level:1,tracks:{}};
+    const studentSnap=await tx.get(db.collection('students').doc(user.uid));
+    const studentData=studentSnap.exists?studentSnap.data():{};
     const tracks={...(cp.tracks||{})},cur={...(tracks[attempt.trackId]||{xp:0,progress:0})};
     const newTrackXp=Number(cur.xp||0)+xp;
     const drillBonusPoints=Number(cur.drillBonusPoints||0);
@@ -1893,8 +1895,6 @@ export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async requ
     const totalXp=Number(cp.xp||0)+xp;
     tx.set(cpRef,{xp:totalXp,level:Math.floor(totalXp/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
     const boardRef=db.collection('competencyLeaderboards').doc(attempt.trackId).collection('students').doc(user.uid);
-    const studentSnap=await db.collection('students').doc(user.uid).get();
-    const studentData=studentSnap.exists?studentSnap.data():{};
     tx.set(boardRef,{uid:user.uid,trackId:attempt.trackId,displayName:studentData.name||request.auth.token.name||'Student',displayClass:studentData.className||studentData.class||studentData.section||studentData.programme||studentData.department||'Class not set',drillStars:Number(cur.drillStars||0),drillBonusPoints,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   });
   return {score:correct,total,scorePercent,passed,xp,trackId:attempt.trackId,day:attempt.day};
