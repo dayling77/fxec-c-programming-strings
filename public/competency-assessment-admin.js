@@ -34,13 +34,13 @@ function renderQuestion(q,i){
  let h='<article class="caQuestion"><div class="caQuestionNo">Q'+String(i+1).padStart(2,'0')+'</div><div class="caQuestionFields">';
  h+='<label>Question<textarea class="caPrompt">'+esc(q.prompt)+'</textarea></label><div class="caOptions">';
  h+=(q.options||[]).map((o,j)=>'<label>Option '+String.fromCharCode(65+j)+'<input class="caOpt" value="'+esc(o)+'"></label>').join('');
- h+='</div><div class="caQuestionMeta"><label>Type<select class="caType"><option value="mcq" '+(q.type==='mcq'?'selected':'')+'>MCQ</option><option value="multiple-correct" '+(q.type==='multiple-correct'?'selected':'')+'>Multiple Correct</option></select></label><label>Correct index(es)<input class="caAnswer" value="'+esc(Array.isArray(q.answer)?q.answer.join(','):q.answer)+'"></label><label>Time (sec)<input class="caTime" type="number" min="10" value="'+Number(q.timeLimitSeconds||60)+'"></label></div>';
+ h+='</div><div class="caQuestionMeta"><label>Type<select class="caType"><option value="mcq" '+(q.type==='mcq'?'selected':'')+'>MCQ</option><option value="multipleCorrect" '+(q.type==='multipleCorrect'?'selected':'')+'>Multiple Correct</option><option value="scenario" '+(q.type==='scenario'?'selected':'')+'>Scenario MCQ</option></select></label><label>Correct index(es)<input class="caAnswer" value="'+esc(Array.isArray(q.answer)?q.answer.join(','):q.answer)+'"></label><label>Time (sec)<input class="caTime" type="number" min="10" value="'+Number(q.timeLimitSeconds||60)+'"></label></div>';
  h+='<label>Explanation<textarea class="caExplanation">'+esc(q.explanation||'')+'</textarea></label></div></article>';return h;
 }
 function readQuestions(){
  return Array.from(host().querySelectorAll('.caQuestion')).map((card,i)=>{
   const type=card.querySelector('.caType').value,raw=card.querySelector('.caAnswer').value.trim();
-  const answer=type==='multiple-correct'?raw.split(',').map(Number).filter(Number.isInteger):Number(raw);
+  const answer=type==='multipleCorrect'?raw.split(',').map(Number).filter(Number.isInteger):Number(raw);
   return {id:(task(selectedTrack,selectedDay)?.questions?.[i]?.id)||selectedTrack+'-D'+selectedDay+'-Q'+(i+1),type,difficulty:i<2?'easy':i<4?'moderate':'tough',topic:host().querySelector('#caTopic').value.trim(),prompt:card.querySelector('.caPrompt').value.trim(),options:Array.from(card.querySelectorAll('.caOpt')).map(x=>x.value.trim()),answer,explanation:card.querySelector('.caExplanation').value.trim(),timeLimitSeconds:Number(card.querySelector('.caTime').value||60),reviewed:true};
  });
 }
