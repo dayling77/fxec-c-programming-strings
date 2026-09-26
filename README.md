@@ -83,3 +83,16 @@ The GitHub phase adds the code and configuration. The compiler endpoint must be 
 ## Communication pronunciation assessment
 
 The Communication Lab supports browser microphone recording and server-side Azure Speech Pronunciation Assessment. Pronunciation tasks are sent as 16 kHz PCM WAV and request HundredMark + Phoneme granularity + IPA, with miscue and comprehensive scoring. Results can include overall pronunciation, accuracy, fluency, completeness, prosody, word-level errors, and phoneme-level scores. Configure Firebase parameters `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION` before deployment. Azure documents that Phoneme granularity returns full-text, word, syllable (where supported), and phoneme-level results, with IPA available for en-US.
+
+
+## Launch-readiness checklist
+
+1. Confirm Firebase CLI is targeting project fxec-c-strings (the repository now pins this in .firebaserc).
+2. Copy functions/.env.example to a local functions/.env only when local/deployment parameters are needed; never commit real credentials.
+3. Configure ZEPTOMAIL_CONFIG in Secret Manager if approval/result email delivery is required.
+4. Configure a production-capacity Judge0-compatible endpoint before enabling C Coding Lab for a large cohort. The public demo endpoint should not be treated as a guaranteed institutional capacity target.
+5. Configure AZURE_SPEECH_KEY and AZURE_SPEECH_REGION before enabling phoneme-level Communication assessment.
+6. Deploy Firestore rules, Storage rules, Functions and Hosting together, then verify student registration, admin approval, assessment start/submission, C competency journey and result flows with a test account.
+7. If the Google Cloud project is governed by an organization policy that blocks public Cloud Run invokers, resolve that policy before production deployment; Firebase 2nd-gen callable functions currently use public invoker configuration and enforce application authentication in the callable handler.
+
+No deployment is considered verified merely because source packaging succeeds; production readiness requires a successful Firebase release and an authenticated end-to-end smoke test.
