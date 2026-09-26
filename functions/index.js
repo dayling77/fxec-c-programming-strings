@@ -1738,6 +1738,15 @@ export const getAdminCompetencyQuestionPool = onCall({cors:CALLABLE_CORS},async 
   return {trackId,day,title:task.title,topic:task.topic,moduleTitle:competencyModuleTitle(trackId,day),questionCount:questions.length,recommendedQuestionCount:Number(task.recommendedQuestionCount||Math.min(15,questions.length)),status:task.status,questions};
 });
 
+export const getCompetencyAssessmentRole = onCall({cors:CALLABLE_CORS},async request=>{
+  const a=requireAuth(request);
+  if(isAdminAuth(a)) return {role:'admin'};
+  const email=String(a.token.email||'').toLowerCase();
+  if(!email) return {role:'student'};
+  const snap=await db.collection('competencyAssessmentTasks').where('facultyEmail','==',email).limit(1).get();
+  return {role:snap.empty?'student':'faculty'};
+});
+
 export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},async request=>{
   const a=requireAuth(request),admin=isAdminAuth(a),email=String(a.token.email||'').toLowerCase();
   const snap=await db.collection('competencyAssessmentTasks').get();
