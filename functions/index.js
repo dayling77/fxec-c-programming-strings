@@ -1291,6 +1291,8 @@ export const recordCompetencyDrillAttempt = onCall({cors:CALLABLE_CORS},async re
   const attemptRef=db.collection('competencyDrillAttempts').doc(attemptKey);
   const progressRef=db.collection('competencyProgress').doc(user.uid);
   const boardRef=db.collection('competencyLeaderboards').doc(trackId).collection('students').doc(user.uid);
+  const studentSnap=await db.collection('students').doc(user.uid).get();
+  const studentData=studentSnap.exists?studentSnap.data():{};
   let result;
   await db.runTransaction(async tx=>{
     const [attemptSnap,progressSnap,boardSnap]=await Promise.all([tx.get(attemptRef),tx.get(progressRef),tx.get(boardRef)]);
@@ -1309,9 +1311,7 @@ export const recordCompetencyDrillAttempt = onCall({cors:CALLABLE_CORS},async re
     tracks[trackId]={...cur,drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints};
     tx.set(attemptRef,{uid:user.uid,trackId,moduleId,drillId,createdAt:FieldValue.serverTimestamp()});
     tx.set(progressRef,{drillStars:stars,drillBonusPoints:bonus,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
-    const student=await db.collection('students').doc(user.uid).get();
-    const sd=student.exists?student.data():{};
-    tx.set(boardRef,{uid:user.uid,trackId,displayName:sd.name||request.auth.token.name||'Student',displayClass:sd.className||sd.class||sd.section||sd.programme||sd.department||'Class not set',drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    tx.set(boardRef,{uid:user.uid,trackId,displayName:studentData.name||request.auth.token.name||'Student',displayClass:studentData.className||studentData.class||studentData.section||studentData.programme||studentData.department||'Class not set',drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
     result={alreadyRecorded:false,stars,bonusPoints:bonus,trackStars,trackBonus,totalPoints};
   });
   return result;
