@@ -1067,9 +1067,29 @@ onAuthStateChanged(auth, async user => {
   const token = await user.getIdTokenResult(true);
   const isConfiguredAdminEmail = user.email?.toLowerCase() === 'admin@fxecdigital.org';
   if (isConfiguredAdminEmail && token.claims.admin === true) { msg('', true); $('message').style.display = 'none'; } else { $('message').style.display = ''; }
-  show('admin', token.claims.admin === true || isConfiguredAdminEmail);
+  let competencyRole='student';
+  if(token.claims.admin===true || isConfiguredAdminEmail){
+    competencyRole='admin';
+  }else{
+    try{
+      const cr=await call('getAdminCompetencyAssessmentPrograms')({});
+      competencyRole=cr.data?.role||'student';
+    }catch(e){competencyRole='student';}
+  }
+  const isAdminUser=token.claims.admin===true || isConfiguredAdminEmail;
+  const isFacultyUser=competencyRole==='faculty';
+  show('admin', isAdminUser || isFacultyUser);
   show('adminBootstrap', isConfiguredAdminEmail && token.claims.admin !== true);
-  if (token.claims.admin === true) { setTab('admin'); loadAdmin(); setTimeout(()=>window.FXECCompetencyAssessmentAdmin?.load?.(),0); }
-  else if (isConfiguredAdminEmail) { setTab('admin'); }
-  else { setTab('student'); loadStudent(); }
+  if(isAdminUser){
+    setTab('admin');loadAdmin();setTimeout(()=>window.FXECCompetencyAssessmentAdmin?.load?.(),0);
+  }else if(isFacultyUser){
+    setTab('admin');
+    document.querySelectorAll('#admin > .adminCard').forEach(x=>{x.hidden=x.id!=='competencyAssessmentAdminCard';});
+    document.querySelector('#admin .adminHero')?.setAttribute('hidden','hidden');
+    document.querySelector('#admin .adminStatGrid')?.setAttribute('hidden','hidden');
+    document.querySelector('#admin #adminBootstrap')?.setAttribute('hidden','hidden');
+    setTimeout(()=>window.FXECCompetencyAssessmentAdmin?.load?.(),0);
+  }else{
+    setTab('student');loadStudent();
+  }
 });
