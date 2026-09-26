@@ -397,7 +397,7 @@ async function loadStudent() {
       $('myScore').innerHTML='<p>No completed assessment result is available yet.</p>';
     }
   } catch(e) {}
-  try { const overview=await call('getCourseOverview')({}); renderStudentLearning(overview.data.schedules||[]); } catch(e){ renderStudentLearning([]); }
+  try { const overview=await call('getCourseOverview')({}); renderStudentLearning(overview.data.schedules||[]); } catch(e){ renderStudentLearning([]); }\n  try { if(window.FXECCompetencyAssessmentStudent) window.FXECCompetencyAssessmentStudent.load(); } catch(e) { console.warn('Competency assessment launch centre unavailable',e); }
   try {
     const r=await call('getAssessment')({}), d=r.data;
     $('studentStatus').innerHTML = d.status==='open' ? '<div class="openState"><strong>Day '+d.schedule.day+' · '+esc(d.schedule.topic)+'</strong><span>Assessment is open until '+new Date(d.schedule.closeAt).toLocaleString('en-IN')+'</span></div>' : d.status==='scheduled' ? '<div class="scheduledState"><strong>Next assessment · Day '+d.schedule.day+'</strong><span>'+esc(d.schedule.topic)+' · Opens '+new Date(d.schedule.openAt).toLocaleString('en-IN')+'</span></div>' : '<div class="closedState">'+esc(d.message||'No assessment is currently scheduled.')+'</div>';
@@ -1046,7 +1046,7 @@ onAuthStateChanged(auth, async user => {
   if (isConfiguredAdminEmail && token.claims.admin === true) { msg('', true); $('message').style.display = 'none'; } else { $('message').style.display = ''; }
   show('admin', token.claims.admin === true || isConfiguredAdminEmail);
   show('adminBootstrap', isConfiguredAdminEmail && token.claims.admin !== true);
-  if (token.claims.admin === true) { setTab('admin'); loadAdmin(); }
+  if (token.claims.admin === true) { setTab('admin'); loadAdmin(); setTimeout(()=>window.FXECCompetencyAssessmentAdmin?.load?.(),0); }
   else if (isConfiguredAdminEmail) { setTab('admin'); }
   else { setTab('student'); loadStudent(); }
 });
