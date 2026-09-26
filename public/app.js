@@ -219,7 +219,6 @@ const STUDIO_CHALLENGES = {
     code:['char s[100];','fgets(s, sizeof(s), stdin);','__________;','printf("%s", s);'],
     answer:"s[strcspn(s, \"\\n\")] = '\\0';",
     options:["s[strcspn(s, \"\\n\")] = '\\0';","s = '\\0';","strlen(s) = 0;","remove(s);"]
-")] = \'\\0\';','s = \'\\0\';','strlen(s) = 0;','remove(s);']
   }
 };
 
