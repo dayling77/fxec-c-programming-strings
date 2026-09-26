@@ -108,6 +108,15 @@ async function requireCompetencyAssessmentManager(request, trackId, day) {
   }
   return a;
 }
+function asJsDate(value) {
+  if (value instanceof Date) return value;
+  if (value && typeof value.toDate === 'function') return value.toDate();
+  if (value && typeof value.toMillis === 'function') return new Date(value.toMillis());
+  if (value && typeof value.seconds === 'number') return new Date(Number(value.seconds) * 1000 + Math.floor(Number(value.nanoseconds || 0) / 1e6));
+  const d = new Date(value);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
 function cleanText(value, max = 2000) {
   return String(value ?? '').trim().slice(0, max);
 }
@@ -1112,7 +1121,7 @@ function normalizeCompilerText(value){
 }
 
 async function judge0Submit(sourceCode, stdin, expectedOutput){
- const configured=String(COMPILER_API_URL.value()||'').replace(/\/$/,'');
+ const configured=String(COMPILER_API_URL.value()||'').trim().replace(/\/$/,'');
  const primary=configured||'https://ce.judge0.com';
  const bases=[primary,...(primary==='https://ce.judge0.com'?[]:['https://ce.judge0.com'])];
  let lastError='';
@@ -1121,31 +1130,39 @@ async function judge0Submit(sourceCode, stdin, expectedOutput){
   const token=String(COMPILER_API_TOKEN.value()||'').trim();
   if(token&&base===primary)headers['X-Auth-Token']=token;
   try{
-   const response=await fetch(base+'/submissions?base64_encoded=false&wait=false',{
-    method:'POST',headers,
-    body:JSON.stringify({language_id:50,source_code:sourceCode,stdin:stdin||'',expected_output:expectedOutput,cpu_time_limit:2,wall_time_limit:5,memory_limit:128000,max_file_size:1024})
-   });
-   const body=await response.json().catch(()=>({}));
-   if(!response.ok){lastError=body.error||body.message||('Compiler service returned HTTP '+response.status);continue;}
-   if(body.token&&!body.status){
-    for(let i=0;i<12;i++){
-     await new Promise(r=>setTimeout(r,750));
-     const poll=await fetch(base+'/submissions/'+encodeURIComponent(body.token)+'?base64_encoded=false',{headers});
-     const data=await poll.json().catch(()=>({}));
-     if(!poll.ok){lastError=data.error||('Compiler polling failed: HTTP '+poll.status);break;}
-     if(data.status&&! [1,2].includes(Number(data.status.id)))return data;
+   const payload={language_id:50,source_code:sourceCode,stdin:stdin||'',cpu_time_limit:2,wall_time_limit:5,memory_limit:128000,max_file_size:1024};
+   if(expectedOutput!==null&&expectedOutput!==undefined) payload.expected_output=String(expectedOutput);
+   let response=await fetch(base+'/submissions/?base64_encoded=false&wait=true',{method:'POST',headers,body:JSON.stringify(payload)});
+   let body=await response.json().catch(()=>({}));
+   if(!response.ok){
+    lastError=String(body?.error||body?.message||('Compiler service returned HTTP '+response.status));
+    if(response.status===400 && /wait not allowed/i.test(lastError)){
+      response=await fetch(base+'/submissions/?base64_encoded=false&wait=false',{method:'POST',headers,body:JSON.stringify(payload)});
+      body=await response.json().catch(()=>({}));
+    }else continue;
+   }
+   if(!response.ok){lastError=String(body?.error||body?.message||('Compiler service returned HTTP '+response.status));continue;}
+   if(body.token && !body.status){
+    for(let i=0;i<16;i++){
+      await new Promise(r=>setTimeout(r,750));
+      const poll=await fetch(base+'/submissions/'+encodeURIComponent(body.token)+'?base64_encoded=false',{headers});
+      const data=await poll.json().catch(()=>({}));
+      if(!poll.ok){lastError=String(data?.error||('Compiler polling failed: HTTP '+poll.status));break;}
+      if(data.status && ![1,2].includes(Number(data.status.id))) return data;
     }
-    if(lastError)continue;
+    if(lastError) continue;
     throw new HttpsError('deadline-exceeded','Compiler timed out while waiting for the execution result.');
    }
+   if(body.status && Number(body.status.id)===13){lastError='Judge0 reported an internal execution error.';continue;}
    return body;
   }catch(e){
-   if(e instanceof HttpsError)throw e;
+   if(e instanceof HttpsError) throw e;
    lastError=e?.message||String(e);
   }
  }
  throw new HttpsError('failed-precondition','The C compiler service is unavailable right now. '+(lastError||'Please try again in a moment.'));
 }
+
 function enforceCodeLimits(sourceCode, stdin){
   if(typeof sourceCode!=='string'||sourceCode.length<1||sourceCode.length>20000) throw new HttpsError('invalid-argument','C source code must be between 1 and 20,000 characters.');
   if(typeof stdin!=='string'||stdin.length>5000) throw new HttpsError('invalid-argument','Input is limited to 5,000 characters.');
@@ -1165,22 +1182,18 @@ async function consumeCompilerQuota(uid, amount=1){
 
 export const runCCode = onCall({cors:CALLABLE_CORS,timeoutSeconds:30,memory:'512MiB'}, async request=>{
   const user=requireAuth(request);
-  const sourceCode=String(request.data?.sourceCode||'');
-  const stdin=String(request.data?.stdin||'');
-  enforceCodeLimits(sourceCode,stdin);
-  await consumeCompilerQuota(user.uid,1);
-  const result=await judge0Submit(sourceCode,stdin,null);
-  const accepted=Number(result.status?.id)===3;
-  return {
-    accepted,
-    status:result.status?.description||'Unknown',
-    stdout:String(result.stdout||''),
-    stderr:String(result.stderr||''),
-    compileOutput:String(result.compile_output||''),
-    message:String(result.message||''),
-    time:result.time||null,
-    memory:result.memory||null
-  };
+  try{
+    const sourceCode=String(request.data?.sourceCode||''),stdin=String(request.data?.stdin||'');
+    enforceCodeLimits(sourceCode,stdin);
+    await consumeCompilerQuota(user.uid,1);
+    const result=await judge0Submit(sourceCode,stdin,null);
+    const accepted=Number(result.status?.id)===3;
+    return {accepted,status:result.status?.description||'Unknown',stdout:String(result.stdout||''),stderr:String(result.stderr||''),compileOutput:String(result.compile_output||''),message:String(result.message||''),time:result.time||null,memory:result.memory||null};
+  }catch(e){
+    if(e instanceof HttpsError) throw e;
+    logger.error('runCCode failed',{uid:user.uid,error:String(e?.stack||e)});
+    throw new HttpsError('failed-precondition','C code execution failed. Please try again.');
+  }
 });
 
 export const submitCChallenge = onCall({cors:CALLABLE_CORS,timeoutSeconds:120,memory:'512MiB'}, async request=>{
@@ -1817,43 +1830,69 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
 
 export const getStudentCompetencyAssessments = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
-  const student=await db.collection('students').doc(user.uid).get();
-  if(!student.exists||student.data().status!=='approved') throw new HttpsError('permission-denied','Student is not approved.');
-  const snap=await db.collection('competencyAssessmentTasks').where('isPublished','==',true).get();
-  const now=new Date();
-  const items=snap.docs.map(d=>{
-    const x=d.data();
-    const open=x.openAt?.toDate?.()||new Date(x.openAt),close=x.closeAt?.toDate?.()||new Date(x.closeAt);
-    const status=now>=open&&now<close?'open':now<open?'scheduled':'closed';
-    return {id:d.id,trackId:x.trackId,trackTitle:x.trackTitle,day:x.day,title:x.title,topic:x.topic,date:x.date,openAt:open.toISOString(),closeAt:close.toISOString(),questionCount:x.questionCount||0,status};
-  }).filter(x=>x.status!=='closed').sort((a,b)=>a.openAt.localeCompare(b.openAt));
-  return {items};
+  try{
+    const admin=isAdminAuth(user);
+    if(!admin){
+      const student=await db.collection('students').doc(user.uid).get();
+      if(!student.exists || String(student.data().status||'').toLowerCase()!=='approved'){
+        throw new HttpsError('permission-denied','Your student account is not approved for assessments.');
+      }
+    }
+    const snap=await db.collection('competencyAssessmentTasks').where('isPublished','==',true).get();
+    const now=new Date(),items=[];
+    for(const d of snap.docs){
+      const x=d.data(),open=asJsDate(x.openAt),close=asJsDate(x.closeAt);
+      if(!open||!close) continue;
+      const status=now>=open&&now<close?'open':now<open?'scheduled':'closed';
+      if(status==='closed') continue;
+      items.push({id:d.id,trackId:String(x.trackId||''),trackTitle:String(x.trackTitle||''),day:Number(x.day||0),title:String(x.title||''),topic:String(x.topic||''),date:String(x.date||''),openAt:open.toISOString(),closeAt:close.toISOString(),questionCount:Number(x.questionCount||0),status});
+    }
+    items.sort((a,b)=>a.openAt.localeCompare(b.openAt));
+    return {items,preview:admin};
+  }catch(e){
+    if(e instanceof HttpsError) throw e;
+    logger.error('getStudentCompetencyAssessments failed',{uid:user.uid,error:String(e?.stack||e)});
+    throw new HttpsError('internal','Assessment Centre could not load its published modules. Please try again.');
+  }
 });
 
 export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
-  const student=await db.collection('students').doc(user.uid).get();
-  if(!student.exists||student.data().status!=='approved') throw new HttpsError('permission-denied','Student is not approved.');
-  const taskId=cleanText(request.data?.taskId,120);
-  const taskSnap=await db.collection('competencyAssessmentTasks').doc(taskId).get();
-  if(!taskSnap.exists||taskSnap.data().isPublished!==true) throw new HttpsError('failed-precondition','This assessment is not published.');
-  const task=taskSnap.data();
-  const now=new Date(),open=task.openAt.toDate(),close=task.closeAt.toDate();
-  if(now<open||now>=close) throw new HttpsError('failed-precondition','This assessment is not currently open.');
-  const existing=await db.collection('competencyAssessmentAttempts').where('studentId','==',user.uid).where('taskId','==',taskId).limit(1).get();
-  if(!existing.empty){
-    const x=existing.docs[0];
-    if(x.data().status==='finalized') throw new HttpsError('already-exists','You have already completed this assessment.');
-    return {attemptId:x.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions:x.data().questions,resumed:true,recommendedQuestionCount:x.data().questions.length};
+  try{
+    const admin=isAdminAuth(user);
+    if(!admin){
+      const student=await db.collection('students').doc(user.uid).get();
+      if(!student.exists || String(student.data().status||'').toLowerCase()!=='approved'){
+        throw new HttpsError('permission-denied','Your student account is not approved for assessments.');
+      }
+    }
+    const taskId=cleanText(request.data?.taskId,120);
+    if(!taskId) throw new HttpsError('invalid-argument','Assessment module is required.');
+    const taskSnap=await db.collection('competencyAssessmentTasks').doc(taskId).get();
+    if(!taskSnap.exists||taskSnap.data().isPublished!==true) throw new HttpsError('failed-precondition','This assessment is not published.');
+    const task=taskSnap.data(),open=asJsDate(task.openAt),close=asJsDate(task.closeAt);
+    if(!open||!close) throw new HttpsError('failed-precondition','This assessment has an invalid opening or closing time.');
+    const now=new Date();
+    if(now<open||now>=close) throw new HttpsError('failed-precondition','This assessment is not currently open.');
+    const existing=await db.collection('competencyAssessmentAttempts').where('studentId','==',user.uid).where('taskId','==',taskId).limit(1).get();
+    if(!existing.empty){
+      const x=existing.docs[0];
+      if(x.data().status==='finalized') throw new HttpsError('already-exists','You have already completed this assessment.');
+      return {attemptId:x.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions:x.data().questions||[],resumed:true,recommendedQuestionCount:(x.data().questions||[]).length};
+    }
+    const poolSnap=await db.collection('competencyQuestionPools').doc(taskId).collection('questions').get();
+    const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
+    if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
+    const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
+    const questions=shuffle(sourceQuestions).slice(0,recommendedCount).map(q=>{const {answer,explanation,audioText,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
+    const attemptRef=db.collection('competencyAssessmentAttempts').doc();
+    await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
+    return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions,recommendedQuestionCount:questions.length,preview:admin};
+  }catch(e){
+    if(e instanceof HttpsError) throw e;
+    logger.error('startCompetencyAssessment failed',{uid:user.uid,error:String(e?.stack||e)});
+    throw new HttpsError('internal','Assessment could not be started. Please try again.');
   }
-  const poolSnap=await db.collection('competencyQuestionPools').doc(taskId).collection('questions').get();
-  const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
-  if(sourceQuestions.length<1) throw new HttpsError('failed-precondition','No approved question pool is available.');
-  const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
-  const questions=shuffle(sourceQuestions).slice(0,recommendedCount).map(q=>{const {answer,explanation,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
-  const attemptRef=db.collection('competencyAssessmentAttempts').doc();
-  await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
-  return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions};
 });
 
 export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async request=>{
