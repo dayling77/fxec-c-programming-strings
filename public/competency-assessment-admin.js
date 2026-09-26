@@ -15,7 +15,7 @@ function render(){
  h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
  h+='</select></label><button id="caAuto" class="primaryButton">✨ AI Generate & Audit 10 × 50 Questions</button><button id="caCreate" class="secondary">Create Blank 10-Module Programme</button><button id="caRefresh" class="secondary">Refresh</button></div>';
  h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
- h+=t?renderEditor(t):'<div class="caEmpty">Create the five-day programme for this competency first.</div><div id="caStatus"></div>';
+ h+=t?renderEditor(t):'<div class="caEmpty">Create the ten-module programme for this competency first.</div><div id="caStatus"></div>';
  root.innerHTML=h;
  root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
  root.querySelector('#caTrack').onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
