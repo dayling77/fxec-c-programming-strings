@@ -1112,39 +1112,40 @@ function normalizeCompilerText(value){
 }
 
 async function judge0Submit(sourceCode, stdin, expectedOutput){
-  const base=String(COMPILER_API_URL.value()||'').replace(/\/$/,'');
-  if(!base) throw new HttpsError('failed-precondition','Compiler service is not configured.');
+ const configured=String(COMPILER_API_URL.value()||'').replace(/\/$/,'');
+ const primary=configured||'https://ce.judge0.com';
+ const bases=[primary,...(primary==='https://ce.judge0.com'?[]:['https://ce.judge0.com'])];
+ let lastError='';
+ for(const base of bases){
   const headers={'Content-Type':'application/json'};
   const token=String(COMPILER_API_TOKEN.value()||'').trim();
-  if(token) headers['X-Auth-Token']=token;
-  const response=await fetch(base+'/submissions?base64_encoded=false&wait=false',{
+  if(token&&base===primary)headers['X-Auth-Token']=token;
+  try{
+   const response=await fetch(base+'/submissions?base64_encoded=false&wait=false',{
     method:'POST',headers,
-    body:JSON.stringify({
-      language_id:50,
-      source_code:sourceCode,
-      stdin:stdin||'',
-      expected_output:expectedOutput,
-      cpu_time_limit:2,
-      wall_time_limit:5,
-      memory_limit:128000,
-      max_file_size:1024
-    })
-  });
-  const body=await response.json().catch(()=>({}));
-  if(!response.ok) throw new Error(body.error||body.message||('Compiler service returned HTTP '+response.status));
-  if(body.token && !body.status){
+    body:JSON.stringify({language_id:50,source_code:sourceCode,stdin:stdin||'',expected_output:expectedOutput,cpu_time_limit:2,wall_time_limit:5,memory_limit:128000,max_file_size:1024})
+   });
+   const body=await response.json().catch(()=>({}));
+   if(!response.ok){lastError=body.error||body.message||('Compiler service returned HTTP '+response.status);continue;}
+   if(body.token&&!body.status){
     for(let i=0;i<12;i++){
-      await new Promise(r=>setTimeout(r,750));
-      const poll=await fetch(base+'/submissions/'+encodeURIComponent(body.token)+'?base64_encoded=false',{headers});
-      const data=await poll.json().catch(()=>({}));
-      if(!poll.ok) throw new Error(data.error||'Compiler polling failed.');
-      if(data.status && ![1,2].includes(Number(data.status.id))) return data;
+     await new Promise(r=>setTimeout(r,750));
+     const poll=await fetch(base+'/submissions/'+encodeURIComponent(body.token)+'?base64_encoded=false',{headers});
+     const data=await poll.json().catch(()=>({}));
+     if(!poll.ok){lastError=data.error||('Compiler polling failed: HTTP '+poll.status);break;}
+     if(data.status&&! [1,2].includes(Number(data.status.id)))return data;
     }
-    throw new Error('Compiler timed out while waiting for the execution result.');
+    if(lastError)continue;
+    throw new HttpsError('deadline-exceeded','Compiler timed out while waiting for the execution result.');
+   }
+   return body;
+  }catch(e){
+   if(e instanceof HttpsError)throw e;
+   lastError=e?.message||String(e);
   }
-  return body;
+ }
+ throw new HttpsError('failed-precondition','The C compiler service is unavailable right now. '+(lastError||'Please try again in a moment.'));
 }
-
 function enforceCodeLimits(sourceCode, stdin){
   if(typeof sourceCode!=='string'||sourceCode.length<1||sourceCode.length>20000) throw new HttpsError('invalid-argument','C source code must be between 1 and 20,000 characters.');
   if(typeof stdin!=='string'||stdin.length>5000) throw new HttpsError('invalid-argument','Input is limited to 5,000 characters.');
