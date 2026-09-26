@@ -128,8 +128,16 @@ function makeScheduleData(item) {
 }
 
 async function ensureSchedules() {
-  // Schedules are created and published only by the administrator.
-  return;
+  // Idempotently seed missing five-day assessment windows.
+  // Existing documents are never overwritten, so administrator changes remain authoritative.
+  for (const item of FIVE_DAY_SCHEDULE) {
+    const ref = db.collection('assessmentSchedules').doc(item.date);
+    const snap = await ref.get();
+    if (!snap.exists) {
+      await ref.set(makeScheduleData(item));
+      logger.info('Seeded missing assessment schedule', { date: item.date, day: item.day });
+    }
+  }
 }
 
 async function sendEmail({ to, name, subject, html, text }) {
