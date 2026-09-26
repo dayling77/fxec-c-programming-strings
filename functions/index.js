@@ -1211,7 +1211,7 @@ const C_CONCEPT_CHALLENGES = Object.freeze({
   observation:{answer:'16',xp:8,explanation:'x starts at 2 and is doubled three times: 2 → 4 → 8 → 16.'},
   output:{answer:'F C',xp:8,explanation:'s[0] is F and s[3] is C, so printf outputs F C.'},
   bug:{answer:'2',xp:8,explanation:'The destination array has space for only 5 characters including the null terminator, but "David" needs 6 bytes.'},
-  missing:{answer:"s[strcspn(s, "\\n")] = '\\0';",xp:8,explanation:'This replaces the newline inserted by fgets with the string terminator.'}
+  missing:{answer:"s[strcspn(s, \\"\\n\\")] = '\\0';",xp:8,explanation:'This replaces the newline inserted by fgets with the string terminator.'}
 });
 
 export const evaluateCConceptChallenge = onCall({cors:CALLABLE_CORS},async request=>{
