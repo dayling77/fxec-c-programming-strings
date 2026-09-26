@@ -412,12 +412,13 @@ export const registerStudent = onCall({ cors: CALLABLE_CORS }, async request => 
   const a = requireAuth(request);
   const name = cleanText(request.data?.name, 120);
   const registerNumber = cleanText(request.data?.registerNumber, 50);
+  const className = cleanText(request.data?.className, 100);
   const email = cleanText(request.data?.email || a.token.email, 180).toLowerCase();
   if (!name || !registerNumber || !email) throw new HttpsError('invalid-argument', 'Name, register number and email are required.');
   if (email !== String(a.token.email || '').toLowerCase()) throw new HttpsError('permission-denied', 'Use the email address of the signed-in account.');
   if (!email.endsWith(CONFIG.studentEmailDomain)) throw new HttpsError('invalid-argument', 'Students must use their @francisxavier.ac.in college email address.');
   await db.collection('students').doc(a.uid).set({
-    uid: a.uid, name, registerNumber, email, status: 'pending', role: 'student',
+    uid: a.uid, name, registerNumber, className, email, status: 'pending', role: 'student',
     createdAt: FieldValue.serverTimestamp(), updatedAt: FieldValue.serverTimestamp()
   }, { merge: true });
   return { success: true, status: 'pending' };
