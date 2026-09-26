@@ -5,7 +5,7 @@ const functions=getFunctions(fxecApp,'us-central1');
 const call=name=>httpsCallable(functions,name);
 const TRACKS=[['communication','Communication'],['aptitude','Aptitude'],['core-engineering','Core Engineering'],['c-programming','C Programming'],['problem-solving','Problem Solving'],['analytical','Analytical Skills']];
 const MODULES={communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],aptitude:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude'],'core-engineering':['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],'problem-solving':['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge'],analytical:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']};
-let programs=[],selectedTrack='communication',selectedDay=1;
+let programs=[],selectedTrack='communication',selectedDay=1,viewerRole='admin';
 const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function host(){return document.getElementById('competencyAssessmentAdmin');}
 function task(track,day){return programs.find(x=>x.trackId===track&&Number(x.day)===day);}
@@ -30,6 +30,7 @@ function renderEditor(t){
  const close=t.closeAt&&t.closeAt.seconds?new Date(t.closeAt.seconds*1000).toISOString().slice(0,16):String(t.closeAt||'').slice(0,16);
  let h='<div class="caEditor"><div class="caEditorHead"><div><span class="sectionEyebrow">MODULE '+t.day+' · '+esc(t.trackTitle)+'</span><h3>'+esc(t.title)+'</h3><p>Status: <b>'+esc(t.status||'draft')+'</b> · '+Number(t.questionCount||0)+' questions · '+Number(t.recommendedQuestionCount||15)+' recommended per student</p></div><span class="practiceBadge">'+(t.isPublished?'PUBLISHED':'DRAFT')+'</span></div>';
  h+='<div class="caMetaGrid"><label>Title<input id="caTitle" value="'+esc(t.title)+'"></label><label>Topic<input id="caTopic" value="'+esc(t.topic)+'"></label><label>Date<input id="caDate" type="date" value="'+esc(t.date||'')+'"></label><label>Open<input id="caOpen" type="datetime-local" value="'+esc(open)+'"></label><label>Close<input id="caClose" type="datetime-local" value="'+esc(close)+'"></label></div>';
+ h+='<div class="caFacultyAssign"><div><span class="sectionEyebrow">VERIFICATION WORKFLOW</span><strong>Faculty verifier</strong><p>'+(t.facultyEmail?'Assigned to '+esc(t.facultyName||t.facultyEmail):'No faculty verifier assigned. Admin can review directly.')+'</p></div>'+(viewerRole==='admin'?'<div class="caFacultyControls"><input id="caFacultyEmail" type="email" placeholder="faculty@francisxavier.ac.in" value="'+esc(t.facultyEmail||'')+'"><button id="caAssignFaculty" class="secondary">Assign Faculty</button></div>':'<span class="practiceBadge">Assigned Faculty</span>')+'</div>';
  h+='<div class="caQuestionHead"><h4>Question Review & Assignment</h4><span>AI-generated questions are structurally validated and independently audited twice. Faculty/admin must still review before publishing.</span></div><div id="caQuestions">'+(t.questions||[]).map((q,i)=>renderQuestion(q,i)).join('')+'</div>';
  h+='<div class="caActions"><button id="caSave">Save Draft</button><button id="caApprove" class="primaryButton" '+(t.isPublished?'disabled':'')+'>'+(t.isPublished?'✓ Published':'Approve & Launch Module '+t.day)+'</button></div><div id="caStatus"></div></div>';
  return h;
@@ -48,11 +49,21 @@ function readQuestions(){
   return {id:(task(selectedTrack,selectedDay)?.questions?.[i]?.id)||selectedTrack+'-D'+selectedDay+'-Q'+(i+1),type,activityType:card.querySelector('.caActivityType')?.value||'mcq',difficulty:i<15?'easy':i<35?'moderate':'tough',topic:host().querySelector('#caTopic').value.trim(),prompt:card.querySelector('.caPrompt').value.trim(),code:card.querySelector('.caCode')?.value.trim()||'',audioText:card.querySelector('.caAudioText')?.value.trim()||'',options:Array.from(card.querySelectorAll('.caOpt')).map(x=>x.value.trim()),answer,explanation:card.querySelector('.caExplanation').value.trim(),timeLimitSeconds:Number(card.querySelector('.caTime').value||60),reviewed:true};
  });
 }
-function wireEditor(){host().querySelector('#caSave').onclick=()=>save(false);host().querySelector('#caApprove').onclick=()=>save(true);}
+function wireEditor(){
+ host().querySelector('#caSave').onclick=()=>save(false);
+ host().querySelector('#caApprove').onclick=()=>save(true);
+ const assign=host().querySelector('#caAssignFaculty');
+ if(assign)assign.onclick=async()=>{
+   const email=host().querySelector('#caFacultyEmail').value.trim();
+   if(!email)return setStatus('Enter the faculty email address.');
+   try{assign.disabled=true;setStatus('Assigning faculty verifier…','saving');await call('assignCompetencyAssessmentFaculty')({trackId:selectedTrack,day:selectedDay,facultyEmail:email});await load();setStatus('✓ Faculty verifier assigned.','success');}
+   catch(e){assign.disabled=false;setStatus(e.message||String(e));}
+ };
+}
 async function save(approve){
  const questions=readQuestions(),payload={trackId:selectedTrack,day:selectedDay,title:host().querySelector('#caTitle').value.trim(),topic:host().querySelector('#caTopic').value.trim(),date:host().querySelector('#caDate').value,openAt:new Date(host().querySelector('#caOpen').value).toISOString(),closeAt:new Date(host().querySelector('#caClose').value).toISOString(),questions};
  try{setStatus('Saving draft…','saving');await call('saveCompetencyAssessmentDay')(payload);if(approve){if(!confirm('Approve this module? It will be visible to approved students during the published window.'))return;await call('approveCompetencyAssessmentDay')({trackId:selectedTrack,day:selectedDay});}await load();setStatus(approve?'✓ Approved and launched for the scheduled window.':'✓ Draft saved.','success');}catch(e){setStatus(e.message||String(e));}
 }
 function setStatus(message,kind='error'){const el=host()?.querySelector('#caStatus');if(el){el.textContent=message;el.className='scheduleSaveStatus '+kind;}}
-async function load(){try{const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];render();}catch(e){const h=host();if(h)h.innerHTML='<p>Competency assessment administration is unavailable: '+esc(e.message)+'</p>';}}
+async function load(){try{const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];viewerRole=r.data?.role||'admin';render();}catch(e){const h=host();if(h)h.innerHTML='<p>Competency assessment administration is unavailable: '+esc(e.message)+'</p>';}}
 window.FXECCompetencyAssessmentAdmin={load};
