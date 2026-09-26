@@ -113,7 +113,7 @@ function renderAssessment(){
   if(!questionDeadlines[q.id])questionDeadlines[q.id]=Date.now()+limit*1000;
 
   const progress=Math.round(((index+1)/total)*100);
-  const typeLabel=q.type==='multipleCorrect'?'MULTIPLE CORRECT':q.type==='scenario'?'SCENARIO':'MCQ';
+  const typeLabel=q.activityType?String(q.activityType).replace(/-/g,' ').toUpperCase():(q.type==='multipleCorrect'?'MULTIPLE CORRECT':q.type==='scenario'?'SCENARIO':'MCQ');
   const isMulti=q.type==='multipleCorrect';
 
   const options=(q.options||[]).map((o,i)=>
@@ -134,6 +134,7 @@ function renderAssessment(){
           '<div><small>TOTAL TIME</small><strong id="caTotalTimer">--:--</strong></div>'+
           '<div><small>TIME ALLOTTED</small><strong>'+formatClock(limit)+'</strong></div>'+
         '</div>'+
+        (q.code?'<pre class="assessmentCodeBlock"><code>'+esc(q.code)+'</code></pre>':'')+
         '<div class="studentPrompt">'+esc(q.prompt||'')+'</div>'+
         '<div class="caInstruction">'+(isMulti?'Select all correct answers.':'Select the one best answer.')+'</div>'+
         '<div class="studentAnswerArea"><div class="studentOptionList">'+options+'</div></div>'+
