@@ -6,7 +6,7 @@ service cloud.firestore {
     function admin() { return signedIn() && (request.auth.token.admin == true || request.auth.token.email == 'admin@fxecdigital.org'); }
 
     match /students/{id} {
-      allow create: if signedIn() && request.auth.uid == id;
+      allow create: if false;
       allow read: if admin() || (signedIn() && request.auth.uid == id);
       allow update: if admin();
       allow delete: if admin();
