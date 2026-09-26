@@ -274,7 +274,7 @@ function genericModule(title,trackTitle,no){
  assessment:'Module mastery assessment with concept, application, reasoning and challenge questions.'};
 }
 
-function decodeCode(value){return String(value??'').replace(/\\\\n/g,'\\n');}
+function decodeCode(value){return String(value??'').replace(/\\n/g,'\n');}
 function drillState(title){
  const key='fxecDrillState:'+String(title||'module').replace(/[^a-z0-9]+/gi,'-').toLowerCase();
  try{return {key,data:{active:10,stars:0,completed:[],bonusPoints:0,...JSON.parse(localStorage.getItem(key)||'{}')}};}catch(e){return {key,data:{active:10,stars:0,completed:[],bonusPoints:0}};}
@@ -350,7 +350,7 @@ function showDrill(button){
 function toggleMaterial(button){const body=button.parentElement.querySelector('.materialBody');const open=button.dataset.open==='1';body.hidden=open;button.dataset.open=open?'0':'1';button.textContent=open?'Teach me':'Hide lesson';}
 function practiceInstruction(title,i){return i===0?'Predict first, then prove it by tracing each line.':i===1?'Repair the code and explain the exact defect.':i===2?'Complete the missing expression and test two values.':i===3?'Trace the variables line by line before checking.':i===4?'Write the program yourself, then run it against the supplied test cases.':'Complete the coding task, test an edge case and improve your solution.';}
 function lineNumberedEditor(initial,id){
- const lines=decodeCode(initial).split('\\n').length;
+ const lines=decodeCode(initial).split('\n').length;
  return '<div class="codeEditorWrap"><div class="codeLineNumbers" data-lines="'+id+'">'+Array.from({length:Math.max(lines,4)},(_,i)=>'<span>'+(i+1)+'</span>').join('')+'</div><textarea class="codeEditor" id="'+id+'" spellcheck="false">'+esc(decodeCode(initial))+'</textarea></div>';
 }
 async function runPracticeCode(button){
