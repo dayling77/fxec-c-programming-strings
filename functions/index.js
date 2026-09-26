@@ -25,7 +25,7 @@ const COMPILER_API_URL = defineString('COMPILER_API_URL', {default: 'https://ce.
 const COMPILER_API_TOKEN = defineString('COMPILER_API_TOKEN', {default: ''});
 const AZURE_SPEECH_KEY = defineString('AZURE_SPEECH_KEY', {default: ''});
 const AZURE_SPEECH_REGION = defineString('AZURE_SPEECH_REGION', {default: 'eastus'});
-const CALLABLE_CORS = true;
+const CALLABLE_CORS = ['https://fxec-c-strings.web.app','https://fxec-c-strings.firebaseapp.com'];
 
 const CONFIG = Object.freeze({
   adminEmail: 'admin@fxecdigital.org',
