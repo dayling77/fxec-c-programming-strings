@@ -284,31 +284,31 @@ const CODING_CHALLENGES = {
   'count-vowels': {
     title:'Count Vowels',
     prompt:'Read one line and print the number of vowels (a, e, i, o, u), case-insensitive.',
-    starter:'#include <stdio.h>
+    starter:`#include <stdio.h>
 #include <ctype.h>
 int main(void) {
     char s[500];
     fgets(s, sizeof(s), stdin);
     /* Write your solution here */
     return 0;
-}'
+}`
   },
   'reverse-string': {
     title:'Reverse a String',
     prompt:'Read one line and print the characters in reverse order. Preserve spaces and ignore the trailing newline.',
-    starter:'#include <stdio.h>
+    starter:`#include <stdio.h>
 #include <string.h>
 int main(void) {
     char s[500];
     fgets(s, sizeof(s), stdin);
     /* Write your solution here */
     return 0;
-}'
+}`
   },
   'palindrome': {
     title:'Palindrome Check',
     prompt:'Read one line and print YES if it is a palindrome ignoring case and spaces; otherwise print NO.',
-    starter:'#include <stdio.h>
+    starter:`#include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 int main(void) {
@@ -316,7 +316,7 @@ int main(void) {
     fgets(s, sizeof(s), stdin);
     /* Write your solution here */
     return 0;
-}'
+}`
   }
 };
 
@@ -360,9 +360,7 @@ function setupCodingLab(){
     b.disabled=true;b.textContent='Compiling…';status.textContent='Sending to secure compiler…';out.textContent='';
     try{
       const r=await call('runCCode')({sourceCode:editor.value,stdin:$('cCodeInput').value});
-      out.textContent=(r.data.compileOutput||'')+(r.data.stdout||'')+(r.data.stderr?('
-'+r.data.stderr):'')+(r.data.message?('
-'+r.data.message):'');
+      out.textContent=(r.data.compileOutput||'')+(r.data.stdout||'')+(r.data.stderr?('\\n'+r.data.stderr):'')+(r.data.message?('\\n'+r.data.message):'');
       status.textContent=r.data.accepted?'✓ Compiled & executed':'⚠ Execution completed with errors';
     }catch(e){out.textContent=e.message||String(e);status.textContent='Compiler error';}
     finally{b.disabled=false;b.textContent='▶ Compile & Run';}
