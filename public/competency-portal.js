@@ -476,10 +476,12 @@ function materialGuide(resource,title){return 'Study this topic in three passes.
 function checkPracticeAnswer(button){const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model approach:</b> '+esc(button.dataset.answer)+'</p>';button.parentElement.appendChild(box);button.textContent='Review Prompt';}
 
 function launchAssessmentCentre(){
- const btn=document.querySelector('.menuButton[data-panel="competencyAssessmentPanel"]');
- if(btn){btn.click();return;}
+ document.querySelectorAll('.studentHiddenPanel').forEach(p=>p.hidden=true);
  const panel=document.getElementById('competencyAssessmentPanel');
- if(panel){document.querySelectorAll('.studentHiddenPanel').forEach(p=>p.hidden=true);panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});}
+ if(!panel)return;
+ panel.hidden=false;
+ panel.scrollIntoView({behavior:'smooth',block:'start'});
+ if(window.FXECCompetencyAssessmentStudent?.load) window.FXECCompetencyAssessmentStudent.load();
 }
 
 document.addEventListener('click',e=>{
