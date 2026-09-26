@@ -1361,3 +1361,46 @@ export const publishCompetencyContent = onCall({ cors: CALLABLE_CORS }, async re
   await db.collection('adminActions').add({action:'publishCompetencyContent',resourceId:ref.id,trackId,title,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
   return { success:true,id:ref.id };
 });
+
+const SPEECH_CONFIG = Object.freeze({ maxAudioBytes: 8 * 1024 * 1024, maxSeconds: 90, dailyMinutes: 20 });
+const COMMUNICATION_TASKS = Object.freeze({
+  pronunciation: { title:'Pronunciation Practice', prompt:'Read the target sentence clearly and naturally.', xp:15 },
+  wordUsage: { title:'Word Usage Challenge', prompt:'Use the target word naturally in a meaningful sentence.', xp:20 },
+  listeningSpeaking: { title:'Listen & Respond', prompt:'Listen to the prompt and respond clearly.', xp:20 }
+});
+function normalizeWords(s){ return cleanText(s,5000).toLowerCase().replace(/[^a-z0-9' ]+/g,' ').split(/\s+/).filter(Boolean); }
+function scoreWordAlignment(target, transcript){
+ const a=normalizeWords(target), b=normalizeWords(transcript); const used=new Set(); let matched=0;
+ for(const w of a){ const i=b.findIndex((x,j)=>x===w&&!used.has(j)); if(i>=0){used.add(i);matched++;} }
+ const wordAccuracy=a.length?Math.round(matched/a.length*100):0;
+ const extra=Math.max(0,b.length-matched); const missing=Math.max(0,a.length-matched);
+ return {wordAccuracy,matched,totalTarget:a.length,missing,extra};
+}
+function scoreWordUsage(target, transcript){
+ const t=cleanText(target,120).toLowerCase(); const words=normalizeWords(transcript); const present=words.includes(t.replace(/[^a-z0-9']/g,''));
+ const sentence=words.length>=4; const starts=words.length?words[0]:''; const score=present?(sentence?100:70):0;
+ return {score,wordPresent:present,sufficientSentence:sentence,wordCount:words.length};
+}
+async function transcribeSpeech(base64Audio, mimeType='audio/webm'){
+ const key=process.env.GOOGLE_SPEECH_API_KEY || '';
+ if(!key) throw new HttpsError('failed-precondition','Speech assessment is not configured. Set GOOGLE_SPEECH_API_KEY.');
+ const bytes=Buffer.from(String(base64Audio||''),'base64');
+ if(!bytes.length || bytes.length>SPEECH_CONFIG.maxAudioBytes) throw new HttpsError('invalid-argument','Audio file is missing or too large.');
+ const r=await fetch('https://speech.googleapis.com/v1/speech:recognize?key='+encodeURIComponent(key),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({config:{encoding:mimeType.includes('wav')?'LINEAR16':'WEBM_OPUS',languageCode:'en-IN',alternativeLanguageCodes:['en-US'],enableAutomaticPunctuation:true,model:'latest_long'},audio:{content:bytes.toString('base64')}})});
+ const body=await r.json(); if(!r.ok) throw new HttpsError('internal','Speech recognition failed.');
+ const transcript=(body.results||[]).map(x=>x.alternatives?.[0]?.transcript||'').join(' ').trim();
+ if(!transcript) throw new HttpsError('invalid-argument','No speech could be detected.'); return transcript;
+}
+export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async request => {
+ const a=requireAuth(request); const taskType=cleanText(request.data?.taskType,40); const target=cleanText(request.data?.target,1000); const audioBase64=String(request.data?.audioBase64||''); const mimeType=cleanText(request.data?.mimeType||'audio/webm',80);
+ if(!COMMUNICATION_TASKS[taskType] || !target || !audioBase64) throw new HttpsError('invalid-argument','Task type, target and recording are required.');
+ const transcript=await transcribeSpeech(audioBase64,mimeType);
+ let result;
+ if(taskType==='wordUsage') result={...scoreWordUsage(target,transcript),transcript};
+ else result={...scoreWordAlignment(target,transcript),transcript,pronunciationScore:Math.min(100,Math.max(0,Math.round(scoreWordAlignment(target,transcript).wordAccuracy*.8+(transcript.length>target.length*.65?20:0))))};
+ const score=taskType==='wordUsage'?result.score:result.pronunciationScore;
+ const xp=score>=80?COMMUNICATION_TASKS[taskType].xp:score>=60?Math.round(COMMUNICATION_TASKS[taskType].xp*.5):0;
+ await db.collection('communicationSpeechAttempts').add({uid:a.uid,taskType,target,transcript,score,xp,createdAt:FieldValue.serverTimestamp()});
+ if(xp){const ref=db.collection('competencyProgress').doc(a.uid);await db.runTransaction(async tx=>{const s=await tx.get(ref),d=s.exists?s.data():{xp:0,badges:[],tracks:{}};const next=(d.xp||0)+xp;const tracks={...(d.tracks||{})};const cur=tracks.communication||{xp:0,progress:0};tracks.communication={...cur,xp:(cur.xp||0)+xp,progress:Math.min(100,Math.round(((cur.xp||0)+xp)/100*100))};tx.set(ref,{...d,xp:next,level:Math.floor(next/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});});}
+ return {taskType,target,transcript,score,xp,feedback:score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the highlighted words and practise again.':'Keep practising. Record again with clear, steady speech.'};
+});
