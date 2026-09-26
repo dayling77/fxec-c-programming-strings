@@ -612,3 +612,38 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .caFacultyAssign p{margin:4px 0 0;color:#64748b;font-size:12px}.caFacultyControls{display:flex;gap:8px;align-items:center}.caFacultyControls input{min-width:280px;padding:10px 12px;border:1px solid #cbd5e1;border-radius:9px}
 .dashboardLeaderboardRow span,.leaderboardRow span{display:flex;flex-direction:column;gap:2px}.dashboardLeaderboardRow span small,.leaderboardRow span small{font-size:10px;color:#64748b;font-weight:600}
 @media(max-width:700px){.caFacultyAssign{flex-direction:column;align-items:stretch}.caFacultyControls{flex-direction:column;align-items:stretch}.caFacultyControls input{min-width:0;width:100%}}
+
+/* Modern competency / assessment UI */
+.practicePromptBar{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:12px 14px;margin-bottom:12px;border:1px solid #dbe4ef;border-radius:12px;background:linear-gradient(135deg,#f8fbff,#fff)}
+.practicePromptBar p{margin:0;flex:1}
+.practicePlayQuestion,.audioQuestionButton,.playAudioQuestion{border:0;border-radius:10px;padding:9px 13px;font-weight:800;cursor:pointer;white-space:nowrap}
+.practicePlayQuestion{background:#e8f0ff;color:#1746a2}
+.audioQuestionButton,.playAudioQuestion{background:#2563eb;color:#fff;box-shadow:0 5px 14px rgba(37,99,235,.18)}
+.codeThreeLine{height:92px;max-height:92px}
+.codeThreeLine .codeEditor{height:92px;min-height:92px;resize:none;overflow-y:auto}
+.codeThreeLine .codeLineNumbers{height:92px;overflow:hidden}
+.assessmentCodeViewport{display:grid;grid-template-columns:42px minmax(0,1fr);height:92px;max-height:92px;margin:14px 0;border:1px solid #cbd5e1;border-radius:12px;overflow:hidden;background:#0f172a}
+.assessmentCodeNumbers{padding:9px 8px;background:#17233a;color:#64748b;text-align:right;font:12px/24px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.assessmentCodeNumbers span{display:block;height:24px}
+.assessmentCodeScroll{margin:0;padding:9px 14px;overflow:auto;white-space:pre;font:13px/24px Consolas,Monaco,monospace;color:#e2e8f0;scrollbar-width:auto}
+.caModernAssessment .studentPrompt{border:1px solid #dbe4ef;border-radius:14px;background:#fff;padding:15px 17px}
+.caModernAssessment .studentPrompt p{margin:5px 0 0;font-size:17px;line-height:1.55;color:#0f2d52}
+.promptKicker{font-size:10px;font-weight:900;letter-spacing:.12em;color:#2563eb}
+.caModernAssessment .studentAnswerArea{margin-top:14px}
+.caModernAssessment .studentOption{transition:.15s ease;border:1px solid #dbe4ef;border-radius:12px;background:#fff}
+.caModernAssessment .studentOption:hover{border-color:#7aa8f7;transform:translateY(-1px)}
+.caModernAssessment .audioAssessmentOption{min-height:54px}
+.caModernAssessment .audioAssessmentOption .studentOptionText{font-weight:800;color:#173b67}
+.caModernAssessment .audioAssessmentStage,.caModernAssessment .audioAssessmentPrompt+ .audioAssessmentStage{display:flex;gap:12px;align-items:center;margin-top:10px;padding:12px 15px;border-radius:12px;background:#0b1f33;color:#fff}
+.caModernAssessment .audioAssessmentStage strong{color:#93c5fd;letter-spacing:.08em}
+.caModernAssessment .audioAssessmentStage span{color:#dbeafe}
+.caStudentIntro{border-radius:20px;padding:24px;background:linear-gradient(135deg,#0f2d52,#1d4ed8);color:#fff;display:flex;justify-content:space-between;gap:20px;align-items:center;box-shadow:0 15px 35px rgba(15,45,82,.18)}
+.caStudentIntro h3{margin:5px 0;color:#fff;font-size:25px}.caStudentIntro p{margin:0;color:#dbeafe}
+.caLaunchBadge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:11px 14px;border-radius:12px;font-size:11px;font-weight:900;white-space:nowrap}
+.caStudentTrack{margin-top:18px;border:1px solid #dbe4ef;border-radius:18px;padding:18px;background:#fff}
+.caStudentDay{border:1px solid #e1e8f0;border-radius:14px;padding:16px;transition:.18s;background:#fbfdff}
+.caStudentDay.isOpen{box-shadow:0 8px 22px rgba(37,99,235,.08);border-color:#9cc0ff}
+.caStudentDay.isOpen:hover{transform:translateY(-2px)}
+.caStartButton{width:100%;margin-top:12px;border:0;border-radius:10px;padding:10px 13px;background:#2563eb;color:#fff;font-weight:800;cursor:pointer}
+.caStartButton:disabled{background:#e5e7eb;color:#64748b;cursor:not-allowed}
+@media(max-width:700px){.practicePromptBar,.caStudentIntro{flex-direction:column;align-items:stretch}.caLaunchBadge{white-space:normal}.audioQuestionButton{width:100%}}
