@@ -50,7 +50,7 @@ service cloud.firestore {
       allow read, write: if admin();
     }
 
-    match /adminActions/{id} {
+    match /competencyContent/{id} {\n      allow read: if signedIn() && resource.data.published == true;\n      allow write: if admin();\n    }\n\n    match /adminActions/{id} {
       allow create: if admin();
       allow read: if admin();
       allow update, delete: if false;
