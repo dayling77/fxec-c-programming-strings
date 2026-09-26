@@ -365,3 +365,39 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .facultyAdminForm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.facultyAdminForm textarea{grid-column:1/-1;min-height:90px}.facultyAdminForm button{width:max-content}.facultyAdminRow{display:grid;grid-template-columns:180px 1fr 1.5fr;gap:.7rem;padding:.65rem 0;border-bottom:1px solid #e5e7eb;font-size:.88rem}@media(max-width:700px){.facultyAdminForm{grid-template-columns:1fr}.facultyAdminRow{grid-template-columns:1fr}}
 .speechStudio{padding:24px}.speechTaskGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.speechTask{padding:14px;border:1px solid #dbe3ef;border-radius:12px;background:#fff;font-weight:800;cursor:pointer}.speechTask.active{border-color:#2563eb;background:#eff6ff;color:#1d4ed8}.speechPrompt{padding:20px;border-radius:14px;background:#f8fafc;border:1px solid #e2e8f0}.speechPrompt span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#64748b;font-weight:900}.speechPrompt strong{display:block;font-size:21px;margin:10px 0}.speechPrompt p{color:#64748b}.speechRecorder{margin-top:16px;padding:18px;border-radius:14px;background:#0b1f33;color:#fff}.recordIndicator{font-weight:900}.speechTimer{font-size:32px;font-weight:900;margin:8px 0}.speechActions{display:flex;gap:8px;flex-wrap:wrap}.speechActions button{padding:10px 14px;border:0;border-radius:9px;cursor:pointer}.speechResult{margin-top:16px;padding:16px;border-radius:12px;background:#f8fafc;min-height:35px}.speechScore{display:flex;align-items:baseline;gap:10px}.speechScore strong{font-size:38px;color:#2563eb}.speechScore span{color:#64748b}@media(max-width:700px){.speechTaskGrid{grid-template-columns:1fr}.speechPrompt strong{font-size:18px}}
 .phonemeList{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.phonemeWord{padding:7px 9px;border:1px solid #dbe3ef;border-radius:8px;background:#fff;font-size:12px}.phonemeWord b{color:#2563eb;margin-left:4px}.phonemeWord:after{content:'%';color:#94a3b8}
+
+/* First-Year Competency Portal home */
+.firstYearHero{padding:38px 20px;background:linear-gradient(135deg,#0b1f3a 0%,#123d68 55%,#176b87 100%)}
+.firstYearHero .heroInner{display:flex;align-items:center;gap:22px}
+.firstYearHero .heroStatus{margin-left:auto;white-space:nowrap;font-size:12px;font-weight:800;letter-spacing:.08em}
+.firstYearHero .heroStatus span{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:7px}
+.firstYearLanding{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.8fr);gap:24px;align-items:center}
+.firstYearLanding .legacyScheduleHost{display:none}
+.firstYearTrackPreview{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.firstYearTrackPreview div{background:#f1f7fb;border:1px solid #d8e7ef;border-radius:14px;padding:16px}
+.firstYearTrackPreview b{display:block;font-size:25px;color:#123d68}
+.firstYearTrackPreview span{font-size:12px;color:#526579}
+.firstYearWelcome{display:flex;justify-content:space-between;gap:24px;align-items:center;border:1px solid #dce8f2;background:linear-gradient(135deg,#fff,#f4f9fc)}
+.firstYearWelcome h2{margin:6px 0 8px}
+.welcomeStats{display:flex;gap:10px;flex-shrink:0}
+.welcomeStats div{min-width:78px;text-align:center;background:#eef6fb;border-radius:13px;padding:12px}
+.welcomeStats strong{display:block;font-size:21px;color:#123d68}
+.welcomeStats span{font-size:11px;color:#526579}
+.firstYearMenu{border:1px solid #dce8f2}
+.menuSectionTitle{margin-bottom:8px}
+.menuSectionTitle h3{margin:4px 0 14px}
+.firstYearMenu .menuButton{min-width:150px}
+.firstYearMenu .primaryMenu{background:linear-gradient(135deg,#0f5c82,#176b87);padding:14px 20px}
+.legacyTools{margin-top:12px;border-top:1px solid #e5edf3;padding-top:12px}
+.legacyTools summary{cursor:pointer;font-weight:700;color:#526579}
+.legacyMenuGrid{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px}
+.firstYearCompetencyHome{margin-bottom:20px}
+.firstYearCompetencyHome>.card{margin-bottom:0}
+@media(max-width:760px){
+  .firstYearHero .heroInner,.firstYearWelcome{flex-direction:column;align-items:flex-start}
+  .firstYearHero .heroStatus{margin-left:0}
+  .firstYearLanding{grid-template-columns:1fr}
+  .firstYearTrackPreview{grid-template-columns:1fr 1fr}
+  .welcomeStats{width:100%}
+  .welcomeStats div{flex:1}
+}
