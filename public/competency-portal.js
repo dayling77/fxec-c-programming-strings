@@ -1,5 +1,7 @@
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
-const cpFunctions=getFunctions(undefined,'us-central1');
+import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+const fxecApp = getApps().length ? getApp() : initializeApp(window.FXEC_FIREBASE_CONFIG);
+const cpFunctions=getFunctions(fxecApp,'us-central1');
 const cpCall=name=>httpsCallable(cpFunctions,name);
 
 const TRACKS=[
