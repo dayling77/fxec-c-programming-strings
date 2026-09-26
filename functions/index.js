@@ -1671,15 +1671,15 @@ export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
 function starterCompetencyQuestions(trackId,day){
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
   const topic=competencyModuleTitle(trackId,day);
-  return Array.from({length:5},(_,i)=>({
-    id:trackId+'-D'+day+'-Q'+(i+1),
-    type:'mcq',
-    difficulty:i<2?'easy':i<4?'moderate':'tough',
+  return Array.from({length:50},(_,i)=>({
+    id:trackId+'-D'+day+'-Q'+String(i+1).padStart(2,'0'),
+    type:i<30?'mcq':i<40?'multipleCorrect':'scenario',
+    difficulty:i<15?'easy':i<35?'moderate':'tough',
     topic,
     prompt:'Starter question '+(i+1)+' for '+meta.title+' — '+topic+'. Edit this question before approval.',
     options:['Option A','Option B','Option C','Option D'],
-    answer:0,
-    explanation:'Starter content. Administrator must review and edit this question before publishing.',
+    answer:i<30?[0,1]:0,
+    explanation:'Starter content. Administrator must replace this with a reviewed question before publishing.',
     timeLimitSeconds:60,
     reviewed:false
   }));
@@ -1697,7 +1697,7 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
       title:cleanText(request.data?.title||meta.title,160)+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
       topic:competencyModuleTitle(trackId,day),
       date:null,openAt:null,closeAt:null,
-      questions:starterCompetencyQuestions(trackId,day),questionCount:5,status:'draft',isPublished:false,
+      questions:starterCompetencyQuestions(trackId,day),questionCount:50,status:'draft',isPublished:false,
       createdBy:adminUser.uid,createdAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
     },{merge:true});
   }
