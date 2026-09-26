@@ -56,51 +56,63 @@ async function loadProgress(root){
 
 async function loadJourney(root,trackId){
  const area=root.querySelector('#journeyArea');
- area.innerHTML='<h3>Loading '+esc2(TRACKS.find(t=>t.id===trackId)?.title||trackId)+'…</h3><p>Please wait.</p>';
+ const track=TRACKS.find(t=>t.id===trackId)||{id:trackId,title:trackId,skills:[]};
+ area.innerHTML='<div class="trackDetailLoading"><div class="assessmentSpinner"></div><strong>Loading '+esc2(track.title)+'…</strong><span>Preparing your competency dashboard.</span></div>';
  try{
-  const r=await cpCall('getCompetencyJourney')({trackId});
-  const d=r.data||{};
-  if(!d.activities?.length){
-   area.innerHTML='<h3>'+esc2(d.trackTitle||trackId)+'</h3><p>This track is part of the common competency framework, but its interactive activity content has not yet been published. No placeholder score or XP is awarded.</p>';
-   return;
-  }
-  area.innerHTML='<div class="sectionHeading"><div><span class="sectionEyebrow">'+esc2(d.trackTitle||trackId)+'</span><h3>Sequential Learning Journey</h3></div><span class="practiceBadge">'+Number(d.xp||0)+' XP</span></div>'+
-   '<p>Activities unlock in sequence. The correct answers remain server-side.</p><div id="activityList">'+d.activities.map(a=>renderActivityRow(a)).join('')+'</div>';
-  area.querySelectorAll('.journeyStart').forEach(btn=>btn.addEventListener('click',()=>openActivity(root,trackId,btn.dataset.activity)));
+  const r=await cpCall('getStudentCompetencyAssessments')({});
+  const all=r.data?.items||[];
+  const assessments=all.filter(x=>x.trackId===trackId);
+  const progressCall=await cpCall('getCompetencyProgress')({});
+  const p=progressCall.data?.tracks?.[trackId]||{};
+  const progress=Math.max(0,Math.min(100,Number(p.progress||0)));
+
+  area.innerHTML=
+   '<div class="trackDetailHeader">'+
+    '<div><span class="sectionEyebrow">FIRST-YEAR ENGINEERING · COMPETENCY TRACK</span><h3>'+esc2(track.title)+'</h3><p>Build the core skills, practise deliberately, and demonstrate your competency through the five-day assessment programme.</p></div>'+
+    '<div class="trackDetailScore"><strong>'+progress+'%</strong><span>TRACK PROGRESS</span></div>'+
+   '</div>'+
+   '<div class="trackProgressLarge"><span style="width:'+progress+'%"></span></div>'+
+   '<div class="trackSkillGrid">'+track.skills.map((s,i)=>'<div class="trackSkillCard"><span>0'+(i+1)+'</span><strong>'+esc2(s)+'</strong><small>Competency area</small></div>').join('')+'</div>'+
+   '<div class="trackAssessmentSection">'+
+    '<div class="sectionHeading"><div><span class="sectionEyebrow">ASSESSMENT PROGRAMME</span><h4>Five-Day Competency Assessment</h4><p>Each day contains a secure question pool. Your recommended questions are selected server-side.</p></div><span class="practiceBadge">15 QUESTIONS / DAY</span></div>'+
+    '<div class="trackAssessmentDays">'+(
+      assessments.length
+      ? assessments.map(x=>{
+        const open=x.status==='open',scheduled=x.status==='scheduled';
+        const when=open?'OPEN NOW':scheduled?'Opens '+new Date(x.openAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'}):'Closed';
+        return '<article class="trackAssessmentDay '+(open?'open':'')+'"><div class="trackAssessmentDayTop"><span>DAY '+x.day+'</span><b class="'+(open?'open':'')+'">'+(open?'OPEN':scheduled?'SCHEDULED':'CLOSED')+'</b></div><h5>'+esc2(x.title)+'</h5><p>'+esc2(x.topic||'Competency assessment')+'</p><small>'+Number(x.questionCount||15)+' recommended questions · '+esc2(when)+'</small><button class="trackAssessmentStart" data-task="'+esc2(x.id)+'" '+(open?'':'disabled')+'>'+(open?'Start Assessment →':scheduled?'Not Open Yet':'Closed')+'</button></article>';
+      }).join('')
+      : '<div class="trackNoAssessment"><strong>Assessment programme is being prepared.</strong><span>The Administrator will publish the five-day assessment after reviewing the question pool.</span></div>'
+    )+'</div>'+
+    '<div class="trackDetailActions"><button id="openCompetencyAssessments">Open Assessment Centre</button><button id="backToTracks" class="secondary">← Back to Competency Tracks</button></div>'+
+   '</div>';
+
+  area.querySelectorAll('.trackAssessmentStart').forEach(btn=>btn.addEventListener('click',async()=>{
+    const panel=document.getElementById('competencyAssessmentPanel');
+    const launch=document.getElementById('competencyAssessmentLaunch');
+    if(panel&&launch){
+      document.querySelectorAll('.studentHiddenPanel').forEach(x=>x.hidden=true);
+      panel.hidden=false;
+      if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load();
+      launch.scrollIntoView({behavior:'smooth',block:'start'});
+      setTimeout(()=>launch.querySelector('[data-task="'+CSS.escape(btn.dataset.task)+'"]')?.click(),100);
+    }
+  }));
+  area.querySelector('#openCompetencyAssessments')?.addEventListener('click',()=>{
+    const panel=document.getElementById('competencyAssessmentPanel');
+    document.querySelectorAll('.studentHiddenPanel').forEach(x=>x.hidden=true);
+    if(panel){panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'start'});}
+    window.FXECCompetencyAssessmentStudent?.load?.();
+  });
+  area.querySelector('#backToTracks')?.addEventListener('click',()=>{
+    area.innerHTML='<div class="sectionHeading"><div><span class="sectionEyebrow">COMPETENCY DASHBOARD</span><h3>Choose a competency track</h3></div></div><p>Select a track above to view its learning areas and five-day assessment programme.</p>';
+    root.querySelector('.trackGrid')?.scrollIntoView({behavior:'smooth',block:'start'});
+  });
  }catch(e){
-  area.innerHTML='<h3>Journey unavailable</h3><p>Unable to load this track right now.</p>';
+  area.innerHTML='<div class="trackDetailError"><span class="sectionEyebrow">COMPETENCY TRACK</span><h3>Unable to load '+esc2(track.title)+'</h3><p>'+esc2(e.message||'Please try again.')+'</p><button id="retryTrack">Try Again</button></div>';
+  area.querySelector('#retryTrack')?.addEventListener('click',()=>loadJourney(root,trackId));
  }
 }
-function renderActivityRow(a){
- return '<article class="activityEngineItem '+(a.completed?'completed':'')+'"><div><span class="sectionEyebrow">STEP '+a.sequence+' · '+esc2(a.stage)+'</span><h4>'+esc2(a.title)+'</h4><p>'+esc2(a.prompt)+'</p></div>'+
- (a.completed?'<span class="practiceBadge">✓ Completed</span>':'<button type="button" class="journeyStart" data-activity="'+esc2(a.id)+'">Start</button>')+'</article>';
-}
-async function openActivity(root,trackId,activityId){
- const area=root.querySelector('#journeyArea');
- try{
-  const r=await cpCall('getCompetencyJourney')({trackId});
-  const a=(r.data?.activities||[]).find(x=>x.id===activityId);
-  if(!a)return;
-  const options=Array.isArray(a.options)?a.options.map((o,i)=>'<label class="competencyOption"><input type="radio" name="fxecCompetencyAnswer" value="'+i+'"> '+esc2(o)+'</label>').join(''):'';
-  area.innerHTML='<div class="sectionHeading"><div><span class="sectionEyebrow">'+esc2(a.stage)+'</span><h3>'+esc2(a.title)+'</h3></div><span class="practiceBadge">'+Number(a.sequence)+' / '+Number(r.data?.activities?.length||0)+'</span></div>'+
-   '<p>'+esc2(a.prompt)+'</p><div class="competencyOptions">'+options+'</div><button id="submitJourneyAnswer" type="button">Submit Answer</button><div id="journeyFeedback"></div>';
-  area.querySelector('#submitJourneyAnswer').addEventListener('click',async()=>{
-   const selected=area.querySelector('input[name="fxecCompetencyAnswer"]:checked');
-   if(!selected){area.querySelector('#journeyFeedback').textContent='Select an answer first.';return;}
-   const button=area.querySelector('#submitJourneyAnswer');button.disabled=true;button.textContent='Evaluating…';
-   try{
-    const result=await cpCall('evaluateCompetencyActivity')({trackId,activityId,answer:Number(selected.value)});
-    area.querySelector('#journeyFeedback').textContent=result.data?.correct?'Correct — +'+Number(result.data?.earned||0)+' XP.':'Not correct yet. Review the concept and try again.';
-    await loadProgress(root);
-    setTimeout(()=>loadJourney(root,trackId),500);
-   }catch(e){
-    button.disabled=false;button.textContent='Submit Answer';
-    area.querySelector('#journeyFeedback').textContent=e.message||'Evaluation failed. Please try again.';
-   }
-  });
- }catch(e){area.innerHTML='<p>Unable to open this activity.</p>';}
-}
-
 async function loadFacultyContent(target){
  try{
   const r=await cpCall('getCompetencyContent')({});
