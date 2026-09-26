@@ -87,11 +87,24 @@ function requireAuth(request) {
   if (!request.auth) throw new HttpsError('unauthenticated', 'Login required.');
   return request.auth;
 }
+function isAdminAuth(a) {
+  const email = String(a?.token?.email || '').toLowerCase();
+  return a?.token?.admin === true || email === CONFIG.adminEmail.toLowerCase();
+}
 function requireAdmin(request) {
   const a = requireAuth(request);
-  const email = String(a.token.email || '').toLowerCase();
-  if (a.token.admin !== true && email !== CONFIG.adminEmail.toLowerCase()) {
-    throw new HttpsError('permission-denied', 'Admin authorization required.');
+  if (!isAdminAuth(a)) throw new HttpsError('permission-denied', 'Admin authorization required.');
+  return a;
+}
+async function requireCompetencyAssessmentManager(request, trackId, day) {
+  const a = requireAuth(request);
+  if (isAdminAuth(a)) return a;
+  const ref = db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+  const snap = await ref.get();
+  if (!snap.exists) throw new HttpsError('not-found','Assessment module not found.');
+  const assigned = String(snap.data().facultyEmail || '').toLowerCase();
+  if (!assigned || assigned !== String(a.token.email || '').toLowerCase()) {
+    throw new HttpsError('permission-denied','You are not assigned as the faculty verifier for this assessment module.');
   }
   return a;
 }
@@ -1296,7 +1309,9 @@ export const recordCompetencyDrillAttempt = onCall({cors:CALLABLE_CORS},async re
     tracks[trackId]={...cur,drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints};
     tx.set(attemptRef,{uid:user.uid,trackId,moduleId,drillId,createdAt:FieldValue.serverTimestamp()});
     tx.set(progressRef,{drillStars:stars,drillBonusPoints:bonus,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
-    tx.set(boardRef,{uid:user.uid,trackId,displayName:request.auth.token.name||request.auth.token.email||'Student',drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    const student=await db.collection('students').doc(user.uid).get();
+    const sd=student.exists?student.data():{};
+    tx.set(boardRef,{uid:user.uid,trackId,displayName:sd.name||request.auth.token.name||'Student',displayClass:sd.className||sd.class||sd.section||sd.programme||sd.department||'Class not set',drillStars:trackStars,drillBonusPoints:trackBonus,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
     result={alreadyRecorded:false,stars,bonusPoints:bonus,trackStars,trackBonus,totalPoints};
   });
   return result;
@@ -1306,7 +1321,11 @@ export const getCompetencyLeaderboard = onCall({cors:CALLABLE_CORS},async reques
   requireAuth(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId||'c-programming');
   const snap=await db.collection('competencyLeaderboards').doc(trackId).collection('students').orderBy('totalPoints','desc').limit(10).get();
-  return {trackId,items:snap.docs.map((d,i)=>({rank:i+1,displayName:d.data().displayName||'Student',totalPoints:Number(d.data().totalPoints||0),drillStars:Number(d.data().drillStars||0),drillBonusPoints:Number(d.data().drillBonusPoints||0)}))};
+  const items=await Promise.all(snap.docs.map(async(d,i)=>{
+    const x=d.data(),student=await db.collection('students').doc(d.id).get(),st=student.exists?student.data():{};
+    return {rank:i+1,displayName:x.displayName||st.name||'Student',displayClass:st.className||st.class||st.section||st.programme||st.department||x.displayClass||'Class not set',totalPoints:Number(x.totalPoints||0),drillStars:Number(x.drillStars||0),drillBonusPoints:Number(x.drillBonusPoints||0)};
+  }));
+  return {trackId,items};
 });
 
 export const getCompetencyProgress = onCall({cors:CALLABLE_CORS},async request=>{
@@ -1720,16 +1739,33 @@ export const getAdminCompetencyQuestionPool = onCall({cors:CALLABLE_CORS},async 
 });
 
 export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},async request=>{
-  requireAdmin(request);
+  const a=requireAuth(request),admin=isAdminAuth(a),email=String(a.token.email||'').toLowerCase();
   const snap=await db.collection('competencyAssessmentTasks').get();
-  const items=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>String(a.trackId).localeCompare(String(b.trackId))||Number(a.day)-Number(b.day));
-  return {items};
+  const items=snap.docs.map(d=>({id:d.id,...d.data()})).filter(x=>admin||String(x.facultyEmail||'').toLowerCase()===email).sort((a,b)=>String(a.trackId).localeCompare(String(b.trackId))||Number(a.day)-Number(b.day));
+  return {items,role:admin?'admin':'faculty'};
 });
 
-export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
+export const assignCompetencyAssessmentFaculty = onCall({cors:CALLABLE_CORS},async request=>{
   const adminUser=requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
   const day=Number(request.data?.day);
+  const facultyEmail=cleanText(request.data?.facultyEmail,180).toLowerCase();
+  if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
+  if(!facultyEmail||!facultyEmail.includes('@')) throw new HttpsError('invalid-argument','Enter a valid faculty email address.');
+  const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day),snap=await ref.get();
+  if(!snap.exists) throw new HttpsError('not-found','Create the assessment module before assigning faculty.');
+  let facultyName='';
+  const facultySnap=await db.collection('students').where('email','==',facultyEmail).limit(1).get();
+  if(!facultySnap.empty) facultyName=facultySnap.docs[0].data().name||'';
+  await ref.set({facultyEmail,facultyName,assignedBy:adminUser.uid,assignedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await db.collection('adminActions').add({action:'assignCompetencyAssessmentFaculty',trackId,day,facultyEmail,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,day,facultyEmail,facultyName};
+});
+
+export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const day=Number(request.data?.day);
+  const adminUser=await requireCompetencyAssessmentManager(request,trackId,day);
   if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
   const date=cleanText(request.data?.date,20);
   const openAt=cleanText(request.data?.openAt,60);
@@ -1753,9 +1789,9 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
 });
 
 export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
-  const adminUser=requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
   const day=Number(request.data?.day);
+  const adminUser=await requireCompetencyAssessmentManager(request,trackId,day);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
   const snap=await ref.get();
   if(!snap.exists) throw new HttpsError('not-found','Assessment day has not been created.');
@@ -1848,7 +1884,9 @@ export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async requ
     const totalXp=Number(cp.xp||0)+xp;
     tx.set(cpRef,{xp:totalXp,level:Math.floor(totalXp/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
     const boardRef=db.collection('competencyLeaderboards').doc(attempt.trackId).collection('students').doc(user.uid);
-    tx.set(boardRef,{uid:user.uid,trackId:attempt.trackId,displayName:request.auth.token.name||request.auth.token.email||'Student',drillStars:Number(cur.drillStars||0),drillBonusPoints,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    const studentSnap=await db.collection('students').doc(user.uid).get();
+    const studentData=studentSnap.exists?studentSnap.data():{};
+    tx.set(boardRef,{uid:user.uid,trackId:attempt.trackId,displayName:studentData.name||request.auth.token.name||'Student',displayClass:studentData.className||studentData.class||studentData.section||studentData.programme||studentData.department||'Class not set',drillStars:Number(cur.drillStars||0),drillBonusPoints,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   });
   return {score:correct,total,scorePercent,passed,xp,trackId:attempt.trackId,day:attempt.day};
 });
