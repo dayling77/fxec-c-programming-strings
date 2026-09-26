@@ -46,7 +46,7 @@
   <button class="menuButton" data-panel="codingPanel">💻 C Programming Lab</button>
   <button class="menuButton" data-panel="competencyStudioPanel">🧠 Skill Builder</button>
   <button class="menuButton" data-panel="learningPanel">📚 Learning Centre</button>
-  <button class="menuButton" data-panel="assessmentPanel">🎯 Assessments</button>
+  <button class="menuButton" data-panel="assessmentPanel">🎯 C Strings Assessment</button><button class="menuButton" data-panel="competencyAssessmentPanel">🚀 Competency Assessments</button>
   <button class="menuButton" data-panel="scorePanel">📊 My Results</button>
   <details class="legacyTools"><summary>More learning tools</summary>
     <div class="legacyMenuGrid">
@@ -122,7 +122,7 @@ int main(void) {
 <div id="scorePanel" class="studentHiddenPanel" hidden>
   <div class="card"><div class="sectionHeading"><div><span class="sectionEyebrow">RESULTS</span><h2>My Assessment Score</h2></div></div><div id="myScore">Your completed assessment results will appear here.</div></div>
 </div>
-<div id="assessmentPanel" class="card studentHiddenPanel" hidden>
+<div id="competencyAssessmentPanel" class="studentHiddenPanel" hidden><div class="card"><div id="competencyAssessmentLaunch"></div></div></div>\n<div id="assessmentPanel" class="card studentHiddenPanel" hidden>
   <div id="studentStatus" class="assessmentStatus">Checking assessment window…</div><button id="startBtn" disabled>Start Assessment</button>
   <div class="assessmentTop"><h2 id="assessmentTitle"></h2><div id="timer"></div></div>
   <div id="questions"></div>
@@ -177,5 +177,5 @@ int main(void) {
 </main>
 <script type="module" src="/app.js?v=20260926-full-competency"></script>
 <script type="module">import { renderCompetencyPortal } from "/competency-portal.js"; window.addEventListener("DOMContentLoaded",()=>{const r=document.getElementById("firstYearCompetencyRoot"); if(r) renderCompetencyPortal(r);});</script>
-<script type="module" src="/faculty-content-admin.js"></script>\n<script type="module" src="/communication-speech.js"></script>\n</body>
+<script type="module" src="/competency-assessment-admin.js"></script>\n<script type="module" src="/competency-assessment-student.js"></script>\n<script type="module" src="/faculty-content-admin.js"></script>\n<script type="module" src="/communication-speech.js"></script>\n</body>
 </html>

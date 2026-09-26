@@ -1498,3 +1498,185 @@ export const evaluateCompetencyActivity = onCall({cors:CALLABLE_CORS}, async req
   });
   return {...result,explanation:result.correct?'Correct.':'Review the concept and try again.'};
 });
+
+
+const COMPETENCY_ASSESSMENT_TRACKS = Object.freeze({
+  communication: {title:'Communication', defaultTopics:['Grammar & Usage','Vocabulary','Professional Communication','Presentation','Group Discussion']},
+  aptitude: {title:'Aptitude', defaultTopics:['Quantitative Aptitude','Logical Reasoning','Data Interpretation','Verbal Reasoning','Verbal Reasoning']},
+  'core-engineering': {title:'Core Engineering', defaultTopics:['Engineering Fundamentals','Measurements','Materials','Circuits','Digital Prototyping']},
+  'c-programming': {title:'C Programming', defaultTopics:['C Fundamentals','Control Flow','Arrays & Functions','Strings','Problem Solving']},
+  'problem-solving': {title:'Problem Solving', defaultTopics:['Decomposition','Pattern Recognition','Algorithms','Debugging','Decision Making']},
+  analytical: {title:'Analytical Skills', defaultTopics:['Reading Comprehension','Listening','Inference','Critical Analysis','Evidence Based Reasoning']}
+});
+
+function competencyTrackOrThrow(trackId){
+  const id=cleanText(trackId,80);
+  if(!Object.prototype.hasOwnProperty.call(COMPETENCY_ASSESSMENT_TRACKS,id)) throw new HttpsError('invalid-argument','Unknown competency track.');
+  return id;
+}
+function validateCompetencyQuestions(questions){
+  if(!Array.isArray(questions) || questions.length<5 || questions.length>50) throw new HttpsError('invalid-argument','Each assessment day must contain 5 to 50 questions.');
+  const ids=new Set();
+  questions.forEach((q,i)=>{
+    if(!q || !q.id || ids.has(String(q.id))) throw new HttpsError('invalid-argument','Question '+(i+1)+' has a missing or duplicate ID.');
+    ids.add(String(q.id));
+    if(!q.prompt || !Array.isArray(q.options) || q.options.length<2) throw new HttpsError('invalid-argument','Question '+(i+1)+' needs a prompt and at least two options.');
+    if(!Number.isInteger(Number(q.answer)) && !Array.isArray(q.answer) && (!q.answer || typeof q.answer!=='object')) throw new HttpsError('invalid-argument','Question '+(i+1)+' has an invalid answer key.');
+  });
+  return questions.map(q=>({...q,id:String(q.id)}));
+}
+
+function starterCompetencyQuestions(trackId,day){
+  const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+  const topic=meta.defaultTopics[day-1]||'Foundations';
+  return Array.from({length:5},(_,i)=>({
+    id:trackId+'-D'+day+'-Q'+(i+1),
+    type:'mcq',
+    difficulty:i<2?'easy':i<4?'moderate':'tough',
+    topic,
+    prompt:'Starter question '+(i+1)+' for '+meta.title+' — '+topic+'. Edit this question before approval.',
+    options:['Option A','Option B','Option C','Option D'],
+    answer:0,
+    explanation:'Starter content. Administrator must review and edit this question before publishing.',
+    timeLimitSeconds:60,
+    reviewed:false
+  }));
+}
+
+export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},async request=>{
+  const adminUser=requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+  const batch=db.batch();
+  for(let day=1;day<=5;day++){
+    const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+    batch.set(ref,{
+      trackId,trackTitle:meta.title,day,
+      title:cleanText(request.data?.title||meta.title,160)+' — Day '+day,
+      topic:meta.defaultTopics[day-1]||('Day '+day),
+      date:null,openAt:null,closeAt:null,
+      questions:starterCompetencyQuestions(trackId,day),questionCount:5,status:'draft',isPublished:false,
+      createdBy:adminUser.uid,createdAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+    },{merge:true});
+  }
+  await batch.commit();
+  await db.collection('adminActions').add({action:'createCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,days:5};
+});
+
+export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},async request=>{
+  requireAdmin(request);
+  const snap=await db.collection('competencyAssessmentTasks').get();
+  const items=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>String(a.trackId).localeCompare(String(b.trackId))||Number(a.day)-Number(b.day));
+  return {items};
+});
+
+export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
+  const adminUser=requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const day=Number(request.data?.day);
+  if(!Number.isInteger(day)||day<1||day>5) throw new HttpsError('invalid-argument','Day must be between 1 and 5.');
+  const date=cleanText(request.data?.date,20);
+  const openAt=cleanText(request.data?.openAt,60);
+  const closeAt=cleanText(request.data?.closeAt,60);
+  const topic=cleanText(request.data?.topic,180);
+  const title=cleanText(request.data?.title,180);
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new HttpsError('invalid-argument','Use YYYY-MM-DD for the assessment date.');
+  const open=new Date(openAt),close=new Date(closeAt);
+  if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
+  const questions=validateCompetencyQuestions(request.data?.questions);
+  const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:title||topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  return {success:true,trackId,day,questionCount:questions.length,status:'draft'};
+});
+
+export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
+  const adminUser=requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const day=Number(request.data?.day);
+  const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+  const snap=await ref.get();
+  if(!snap.exists) throw new HttpsError('not-found','Assessment day has not been created.');
+  const d=snap.data();
+  validateCompetencyQuestions(d.questions);
+  if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date and assessment window before approval.');
+  await ref.update({status:'published',isPublished:true,approvedBy:adminUser.uid,approvedByEmail:adminUser.token.email||'',approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
+  await db.collection('adminActions').add({action:'approveCompetencyAssessmentDay',trackId,day,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,day,status:'published'};
+});
+
+export const getStudentCompetencyAssessments = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const student=await db.collection('students').doc(user.uid).get();
+  if(!student.exists||student.data().status!=='approved') throw new HttpsError('permission-denied','Student is not approved.');
+  const snap=await db.collection('competencyAssessmentTasks').where('isPublished','==',true).get();
+  const now=new Date();
+  const items=snap.docs.map(d=>{
+    const x=d.data();
+    const open=x.openAt?.toDate?.()||new Date(x.openAt),close=x.closeAt?.toDate?.()||new Date(x.closeAt);
+    const status=now>=open&&now<close?'open':now<open?'scheduled':'closed';
+    return {id:d.id,trackId:x.trackId,trackTitle:x.trackTitle,day:x.day,title:x.title,topic:x.topic,date:x.date,openAt:open.toISOString(),closeAt:close.toISOString(),questionCount:x.questionCount||0,status};
+  }).filter(x=>x.status!=='closed').sort((a,b)=>a.openAt.localeCompare(b.openAt));
+  return {items};
+});
+
+export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const student=await db.collection('students').doc(user.uid).get();
+  if(!student.exists||student.data().status!=='approved') throw new HttpsError('permission-denied','Student is not approved.');
+  const taskId=cleanText(request.data?.taskId,120);
+  const taskSnap=await db.collection('competencyAssessmentTasks').doc(taskId).get();
+  if(!taskSnap.exists||taskSnap.data().isPublished!==true) throw new HttpsError('failed-precondition','This assessment is not published.');
+  const task=taskSnap.data();
+  const now=new Date(),open=task.openAt.toDate(),close=task.closeAt.toDate();
+  if(now<open||now>=close) throw new HttpsError('failed-precondition','This assessment is not currently open.');
+  const existing=await db.collection('competencyAssessmentAttempts').where('studentId','==',user.uid).where('taskId','==',taskId).limit(1).get();
+  if(!existing.empty){
+    const x=existing.docs[0];
+    if(x.data().status==='finalized') throw new HttpsError('already-exists','You have already completed this assessment.');
+    return {attemptId:x.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions:x.data().questions,resumed:true};
+  }
+  const questions=shuffle(task.questions).map(q=>{const {answer,explanation,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
+  const attemptRef=db.collection('competencyAssessmentAttempts').doc();
+  await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
+  return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions};
+});
+
+export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const attemptId=cleanText(request.data?.attemptId,120);
+  const answers=Array.isArray(request.data?.answers)?request.data.answers:[];
+  const attemptRef=db.collection('competencyAssessmentAttempts').doc(attemptId);
+  const attemptSnap=await attemptRef.get();
+  if(!attemptSnap.exists) throw new HttpsError('not-found','Assessment attempt not found.');
+  const attempt=attemptSnap.data();
+  if(attempt.studentId!==user.uid) throw new HttpsError('permission-denied','Attempt ownership mismatch.');
+  if(attempt.status==='finalized') return (await db.collection('competencyAssessmentResults').doc(attemptId).get()).data();
+  if(new Date()>attempt.closeAt.toDate()) throw new HttpsError('deadline-exceeded','Assessment window has closed.');
+  const taskSnap=await db.collection('competencyAssessmentTasks').doc(attempt.taskId).get();
+  if(!taskSnap.exists) throw new HttpsError('failed-precondition','Assessment definition unavailable.');
+  const pool=taskSnap.data().questions||[],byId=new Map(pool.map(q=>[q.id,q]));
+  const allowed=new Set(attempt.questionIds||[]);
+  let correct=0;
+  for(const submitted of answers){
+    if(!allowed.has(submitted.questionId))continue;
+    const q=byId.get(submitted.questionId);
+    if(q&&answersEqual(q.answer,submitted.answer))correct++;
+  }
+  const total=Number(attempt.questions?.length||pool.length||1);
+  const scorePercent=Math.round(correct/total*10000)/100;
+  const passed=scorePercent>=80;
+  const xp=passed?50:Math.round(scorePercent/100*25);
+  const resultRef=db.collection('competencyAssessmentResults').doc(attemptId);
+  await db.runTransaction(async tx=>{
+    const current=await tx.get(resultRef);if(current.exists)return;
+    tx.set(resultRef,{studentId:user.uid,attemptId,taskId:attempt.taskId,trackId:attempt.trackId,day:attempt.day,score:correct,total,scorePercent,passed,xp,completedAt:FieldValue.serverTimestamp()});
+    tx.update(attemptRef,{status:'finalized',finalizedAt:FieldValue.serverTimestamp()});
+    const cpRef=db.collection('competencyProgress').doc(user.uid),cpSnap=await tx.get(cpRef),cp=cpSnap.exists?cpSnap.data():{xp:0,level:1,tracks:{}};
+    const tracks={...(cp.tracks||{})},cur={...(tracks[attempt.trackId]||{xp:0,progress:0})};
+    tracks[attempt.trackId]={...cur,xp:Number(cur.xp||0)+xp,progress:Math.min(100,Number(cur.progress||0)+xp)};
+    const totalXp=Number(cp.xp||0)+xp;
+    tx.set(cpRef,{xp:totalXp,level:Math.floor(totalXp/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  });
+  return {score:correct,total,scorePercent,passed,xp,trackId:attempt.trackId,day:attempt.day};
+});
