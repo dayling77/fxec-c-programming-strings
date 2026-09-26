@@ -196,9 +196,6 @@ $('loginForm').onsubmit = async e => {
 };
 
 $('logoutBtn').onclick = () => signOut(auth);
-setupCodingLab();
-setupStudio();
-loadCProgression();
 
 
 const STUDIO_CHALLENGES = {
@@ -251,6 +248,7 @@ function setupStudio(){
   renderStudio();
 }
 
+setupStudio();
 
 const C_SKILL_PATH = [
  {id:'fundamentals',title:'C Fundamentals',items:['Program structure','Variables & data types','Constants','Input/output','Operators'],xp:20},
@@ -280,6 +278,8 @@ async function loadCProgression(){
  });
 }
 
+loadCProgression();
+
 const CODING_CHALLENGES = {
   'count-vowels': {
     title:'Count Vowels',
@@ -297,6 +297,8 @@ const CODING_CHALLENGES = {
     starter:'#include <stdio.h>\n#include <ctype.h>\n#include <string.h>\nint main(void) {\n    char s[500];\n    fgets(s, sizeof(s), stdin);\n    /* Write your solution here */\n    return 0;\n}'
   }
 };
+
+setupCodingLab();
 
 function renderCompetencyJourney(progress){
   const p=progress||{xp:0,level:1,badges:[],tracks:[]};
