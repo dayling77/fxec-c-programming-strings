@@ -204,13 +204,21 @@ function renderPortal(root){
   '<div class="competencyHero"><div><span class="sectionEyebrow">FXEC · FIRST-YEAR ENGINEERING</span><h2>Competency Learning Centre</h2><p>One complete learning system across six competencies. Every module is designed for mastery: <b>Concept → Example → Guided Drill → Practice → Knowledge Check → Challenge → Assess → XP</b>.</p></div>'+
   '<div class="competencyHeroStats"><div><strong>6</strong><span>Competencies</span></div><div><strong>60</strong><span>Learning Modules</span></div><div><strong>60</strong><span>Module Assessments</span></div></div></div>'+
   '<div class="competencyFlowLarge"><span>CONCEPT</span><i>→</i><span>EXAMPLE</span><i>→</i><span>GUIDED DRILL</span><i>→</i><span>PRACTISE</span><i>→</i><span>CHECK</span><i>→</i><span>CHALLENGE</span><i>→</i><span>ASSESS</span></div>'+
-  '<div class="competencyTrackGrid" id="competencyTrackGrid"></div><div id="competencyWorkspace"></div></div>';
+  '<div class="competencyTrackGrid" id="competencyTrackGrid"></div><section class="dashboardLeaderboardSection"><div class="moduleSectionHeading"><div><span class="sectionEyebrow">STUDENT PERFORMANCE</span><h4>🏆 Top Performers Across Competencies</h4><p>Recognise sustained learning, assessment performance and practice rewards.</p></div></div><div class="dashboardLeaderboardGrid" id="dashboardLeaderboardGrid"><div class="leaderboardLoading">Loading top performers…</div></div></section><div id="competencyWorkspace"></div></div>';
  const grid=root.querySelector('#competencyTrackGrid');
  grid.innerHTML=TRACKS.map((t,i)=>'<article class="competencyTrackCard" data-track="'+esc(t.id)+'"><div class="competencyTrackIcon">'+t.icon+'</div><div class="competencyTrackNo">0'+(i+1)+'</div><h3>'+esc(t.title)+'</h3><p>'+esc(t.description)+'</p><div class="competencyTrackMeta"><span>10 modules</span><span>10 assessments</span></div><div class="trackProgress"><span data-p="'+esc(t.id)+'" style="width:0%"></span></div><small data-pl="'+esc(t.id)+'">Loading progress…</small></article>').join('');
  grid.querySelectorAll('[data-track]').forEach(card=>card.onclick=()=>openTrack(root,card.dataset.track));
  loadProgress(root);
+ loadDashboardLeaderboards(root);
 }
 
+async function loadDashboardLeaderboards(root){
+ const box=root.querySelector('#dashboardLeaderboardGrid');if(!box)return;
+ try{
+  const rows=await Promise.all(TRACKS.map(async t=>{try{const r=await call('getCompetencyLeaderboard')({trackId:t.id});return {track:t,items:(r.data?.items||[]).slice(0,3)};}catch(e){return {track:t,items:[]};}}));
+  box.innerHTML=rows.map(x=>'<article class="dashboardLeaderboardCard"><div class="dashboardLeaderboardHead"><span>'+x.track.icon+'</span><strong>'+esc(x.track.title)+'</strong></div>'+(x.items.length?x.items.map(i=>'<div class="dashboardLeaderboardRow"><b>#'+i.rank+'</b><span>'+esc(i.displayName)+'</span><strong>'+Number(i.totalPoints).toFixed(2)+' pts</strong></div>').join(''):'<p class="leaderboardLoading">No ranked students yet.</p>')+'</article>').join('');
+ }catch(e){box.innerHTML='<div class="leaderboardLoading">Top performers will appear after recorded activity.</div>';}
+}
 async function loadProgress(root){
  try{
   const r=await call('getCompetencyProgress')({}),tracks=progressMap(r.data);
