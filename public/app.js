@@ -155,6 +155,7 @@ async function registerStudentForm(form, nameId, noId, emailId, e) {
     await call('registerStudent')({
       name: $(nameId).value.trim(),
       registerNumber: $(noId).value.trim(),
+      className: $('studentRegClass')?.value.trim() || '',
       email: $(emailId).value.trim()
     });
     form.hidden = true;
