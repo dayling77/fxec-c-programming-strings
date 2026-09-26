@@ -39,7 +39,7 @@
   <button class="menuButton" data-panel="codingPanel">💻 C Coding Lab</button>
   <button class="menuButton" data-panel="cProgressionPanel">🧭 C Skill Path</button>
   <button class="menuButton" data-panel="competencyStudioPanel">🧠 Skill Builder</button>
-  <button class="menuButton" data-panel="journeyPanel">🚀 Competency Journey</button>
+  <button class="menuButton" data-panel="journeyPanel">🚀 Competency Journey</button>\n  <button class="menuButton" data-panel="firstYearCompetencyPanel">🌐 First-Year Competency Hub</button>
   <button class="menuButton" data-panel="scorePanel">📊 Check My Score</button>
   <button class="menuButton" data-panel="assessmentPanel">🎯 Today's Assessment</button>
 </div>
@@ -103,7 +103,7 @@ int main(void) {
     <div class="studioActions"><button id="submitStudioBtn">Check Answer</button><span id="studioStatus"></span></div>
     <div id="studioResult" class="challengeResult"></div>
   </div>
-</div><div id="journeyPanel" class="studentHiddenPanel" hidden>
+</div><div id="firstYearCompetencyPanel" class="studentHiddenPanel" hidden><div id="firstYearCompetencyRoot"></div></div>\n<div id="journeyPanel" class="studentHiddenPanel" hidden>
   <div class="card"><div id="competencyJourney"></div></div>
 </div>
 <div id="scorePanel" class="studentHiddenPanel" hidden>
@@ -162,6 +162,6 @@ int main(void) {
 </section>
 <div id="message" class="message"></div>
 </main>
-<script type="module" src="/app.js?v=20260925-competency-phase1"></script>
-</body>
+<script type="module" src="/app.js?v=20260926-full-competency"></script>\n<script type="module">import { renderCompetencyPortal } from "/competency-portal.js"; window.addEventListener("DOMContentLoaded",()=>{const r=document.getElementById("firstYearCompetencyRoot"); if(r) renderCompetencyPortal(r);});</script>
+<script type="module" src="/faculty-content-admin.js"></script>\n</body>
 </html>

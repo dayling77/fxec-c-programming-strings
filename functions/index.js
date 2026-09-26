@@ -1325,3 +1325,39 @@ export const exportResults = onCall({ cors: CALLABLE_CORS }, async request => {
   await bucket.file(path).save(bytes, { contentType: 'application/pdf' });
   return { format, path };
 });
+
+const COMPETENCY_TRACK_META = Object.freeze({
+  communication:'Communication',
+  aptitude:'Aptitude',
+  'core-engineering':'Core Engineering',
+  'c-programming':'C Programming',
+  'problem-solving':'Problem Solving',
+  analytical:'Reading & Listening / Analytical Skills'
+});
+
+export const getCompetencyContent = onCall({ cors: CALLABLE_CORS }, async request => {
+  requireAuth(request);
+  const snap = await db.collection('competencyContent').where('published','==',true).get();
+  const items = snap.docs.map(d => ({ id:d.id, ...d.data() }));
+  items.sort((a,b) => String(a.trackId).localeCompare(String(b.trackId)) || String(a.title).localeCompare(String(b.title)));
+  return { items };
+});
+
+export const publishCompetencyContent = onCall({ cors: CALLABLE_CORS }, async request => {
+  const adminUser = requireAdmin(request);
+  const trackId = cleanText(request.data?.trackId, 80);
+  const title = cleanText(request.data?.title, 180);
+  const description = cleanText(request.data?.description, 1200);
+  const videoUrl = cleanText(request.data?.videoUrl, 1000);
+  if (!COMPETENCY_TRACK_META[trackId]) throw new HttpsError('invalid-argument','Unknown competency track.');
+  if (!title) throw new HttpsError('invalid-argument','Resource title is required.');
+  if (videoUrl && !/^https?:\/\//i.test(videoUrl)) throw new HttpsError('invalid-argument','Video URL must begin with http:// or https://.');
+  const ref = db.collection('competencyContent').doc();
+  await ref.set({
+    trackId, trackTitle:COMPETENCY_TRACK_META[trackId], title, description, videoUrl,
+    published:true, publishedBy:adminUser.uid, publishedByEmail:adminUser.token.email || '',
+    publishedAt:FieldValue.serverTimestamp(), updatedAt:FieldValue.serverTimestamp()
+  });
+  await db.collection('adminActions').add({action:'publishCompetencyContent',resourceId:ref.id,trackId,title,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
+  return { success:true,id:ref.id };
+});
