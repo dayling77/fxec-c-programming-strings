@@ -243,7 +243,7 @@ async function loadDashboardLeaderboards(root){
  const box=root.querySelector('#dashboardLeaderboardGrid');if(!box)return;
  try{
   const rows=await Promise.all(TRACKS.map(async t=>{try{const r=await call('getCompetencyLeaderboard')({trackId:t.id});return {track:t,items:(r.data?.items||[]).slice(0,3)};}catch(e){return {track:t,items:[]};}}));
-  box.innerHTML=rows.map(x=>'<article class="dashboardLeaderboardCard"><div class="dashboardLeaderboardHead"><span>'+x.track.icon+'</span><strong>'+esc(x.track.title)+'</strong></div>'+(x.items.length?x.items.map(i=>'<div class="dashboardLeaderboardRow"><b>#'+i.rank+'</b><span>'+esc(i.displayName)+'</span><strong>'+Number(i.totalPoints).toFixed(2)+' pts</strong></div>').join(''):'<p class="leaderboardLoading">No ranked students yet.</p>')+'</article>').join('');
+  box.innerHTML=rows.map(x=>'<article class="dashboardLeaderboardCard"><div class="dashboardLeaderboardHead"><span>'+x.track.icon+'</span><strong>'+esc(x.track.title)+'</strong></div>'+(x.items.length?x.items.map(i=>'<div class="dashboardLeaderboardRow"><b>#'+i.rank+'</b><span><strong>'+esc(i.displayName)+'</strong><small>'+esc(i.displayClass||'Class not set')+'</small></span><strong>'+Number(i.totalPoints).toFixed(2)+' pts</strong></div>').join(''):'<p class="leaderboardLoading">No ranked students yet.</p>')+'</article>').join('');
  }catch(e){box.innerHTML='<div class="leaderboardLoading">Top performers will appear after recorded activity.</div>';}
 }
 async function loadProgress(root){
@@ -446,7 +446,7 @@ async function loadCompetencyLeaderboard(ws,trackId){
  try{
   const r=await call('getCompetencyLeaderboard')({trackId});
   const items=r.data?.items||[];
-  root.innerHTML=items.length?'<div class="leaderboardRows">'+items.map(x=>'<div class="leaderboardRow"><b>#'+Number(x.rank)+'</b><span>'+esc(x.displayName)+'</span><strong>'+Number(x.totalPoints).toFixed(2)+' pts</strong><small>⭐ '+Number(x.drillStars)+'</small></div>').join('')+'</div>':'<div class="leaderboardLoading">Complete drills and assessments to appear here.</div>';
+  root.innerHTML=items.length?'<div class="leaderboardRows">'+items.map(x=>'<div class="leaderboardRow"><b>#'+Number(x.rank)+'</b><span><strong>'+esc(x.displayName)+'</strong><small>'+esc(x.displayClass||'Class not set')+'</small></span><strong>'+Number(x.totalPoints).toFixed(2)+' pts</strong><small>⭐ '+Number(x.drillStars)+'</small></div>').join('')+'</div>':'<div class="leaderboardLoading">Complete drills and assessments to appear here.</div>';
  }catch(e){root.innerHTML='<div class="leaderboardLoading">Leaderboard will appear after your first recorded activity.</div>';}
 }
 function moduleView(track,data,no,programme){
