@@ -6,7 +6,19 @@ const functions = getFunctions(fxecApp, 'us-central1');
 const call = name => httpsCallable(functions, name);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function speak(textValue){if(!('speechSynthesis' in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(textValue||''));u.rate=.9;window.speechSynthesis.speak(u);}
-function playOptionSequence(options,stage){let i=0;const next=()=>{if(i>=options.length){stage.textContent='All options played. Select A, B, C or D.';return;}stage.textContent='Listening to Option '+String.fromCharCode(65+i)+'…';speak(options[i]);i++;setTimeout(next,2000);};next();}
+function playOptionSequence(options,stage){
+ let i=0;
+ const next=()=>{
+  if(i>=options.length){stage.textContent='All options played. Select A, B, C or D.';return;}
+  stage.innerHTML='<strong>OPTION '+String.fromCharCode(65+i)+'</strong><span>Listening…</span>';
+  speak(options[i]);i++;setTimeout(next,2000);
+ };
+ next();
+}
+function assessmentCodeViewer(code){
+ const lines=String(code||'').replace(/\\n/g,'\n').split('\n');
+ return '<div class="assessmentCodeViewport"><div class="assessmentCodeNumbers">'+lines.map((_,i)=>'<span>'+String(i+1)+'</span>').join('')+'</div><pre class="assessmentCodeScroll"><code>'+esc(lines.join('\n'))+'</code></pre></div>';
+}
 
 let current = null;
 let answers = {};
@@ -105,99 +117,60 @@ function restoreAnswer(q,root){
 }
 
 function renderAssessment(){
-  const root=host();
-  const q=current?.questions?.[index];
-  const total=current?.questions?.length||0;
-  if(!root||!current)return;
-  if(!q){ submit(); return; }
-
-  const limit=Math.max(20,Number(q.timeLimitSeconds||60));
-  if(!questionDeadlines[q.id])questionDeadlines[q.id]=Date.now()+limit*1000;
-
-  const progress=Math.round(((index+1)/total)*100);
-  const typeLabel=q.activityType?String(q.activityType).replace(/-/g,' ').toUpperCase():(q.type==='multipleCorrect'?'MULTIPLE CORRECT':q.type==='scenario'?'SCENARIO':'MCQ');
-  const isMulti=q.type==='multipleCorrect';
-
-  const listening=q.activityType==='listening';
-  const options=(q.options||[]).map((o,i)=>
-    '<label class="studentOption '+(listening?'audioAssessmentOption':'')+'"><input type="'+(isMulti?'checkbox':'radio')+'" name="caAnswer" value="'+i+'"><span class="studentOptionLetter">'+String.fromCharCode(65+i)+'</span><span class="studentOptionText">'+(listening?'<span class="srOnlyOption">'+esc(o)+'</span>Audio Option '+String.fromCharCode(65+i):esc(o))+'</span></label>'
-  ).join('');
-
-  root.innerHTML=
-    '<div class="caLiveShell">'+
-      '<div class="caLiveHeader">'+
-        '<div><span class="sectionEyebrow">'+esc(current.trackId)+' · MODULE '+current.day+'</span><h3>'+esc(current.title)+'</h3><p>Question '+String(index+1).padStart(2,'0')+' of '+String(total).padStart(2,'0')+'</p></div>'+
-        '<button class="caExitButton" id="caExit">← Assessment List</button>'+
-      '</div>'+
-      '<article class="studentQuestionCard caLiveCard">'+
-        '<div class="studentQuestionTop"><span>QUESTION '+String(index+1).padStart(2,'0')+' / '+String(total).padStart(2,'0')+'</span><span>'+typeLabel+' · '+esc(q.difficulty||'standard')+'</span></div>'+
-        '<div class="studentProgress"><span style="width:'+progress+'%"></span></div>'+
-        '<div class="studentTimingBar">'+
-          '<div><small>QUESTION TIME</small><strong id="caQuestionTimer">--:--</strong></div>'+
-          '<div><small>TOTAL TIME</small><strong id="caTotalTimer">--:--</strong></div>'+
-          '<div><small>TIME ALLOTTED</small><strong>'+formatClock(limit)+'</strong></div>'+
-        '</div>'+
-        (q.code?'<pre class="assessmentCodeBlock"><code>'+esc(q.code)+'</code></pre>':'')+
-        (listening?'<div class="studentPrompt audioAssessmentPrompt"><button id="playAssessmentAudio">🔊 Play Question</button><span>Listen to the question and options.</span></div>':'<div class="studentPrompt">'+esc(q.prompt||'')+'</div>')+
-        (listening?'<div class="audioAssessmentStage" id="audioAssessmentStage">Press Play to hear the options one at a time.</div>':'')+
-        '<div class="caInstruction">'+(isMulti?'Select all correct answers.':'Select the one best answer.')+'</div>'+
-        '<div class="studentAnswerArea"><div class="studentOptionList">'+options+'</div></div>'+
-        '<div class="caLiveNav"><button class="secondary" id="caPrev" '+(index===0?'disabled':'')+'>← Previous</button><span>'+String(index+1)+' / '+String(total)+'</span><button id="caNext">'+(index===total-1?'Submit Assessment':'Next Question →')+'</button></div>'+
-      '</article>'+
-    '</div>';
-
-  restoreAnswer(q,root);
-  if(listening){
-    const play=root.querySelector('#playAssessmentAudio');
-    if(play)play.onclick=()=>{speak(q.audioText||q.prompt||'');const stage=root.querySelector('#audioAssessmentStage');setTimeout(()=>playOptionSequence(q.options||[],stage),1000);};
-  }
-
-  root.querySelectorAll('input[name="caAnswer"]').forEach(x=>x.addEventListener('change',()=>saveAnswer(q,root)));
-  root.querySelector('#caPrev').onclick=()=>{
-    saveAnswer(q,root);
-    if(index>0){index--;renderAssessment();}
-  };
-  root.querySelector('#caNext').onclick=()=>{
-    saveAnswer(q,root);
-    const a=answers[q.id];
-    if(a===undefined||(Array.isArray(a)&&!a.length)){
-      const note=root.querySelector('.caInstruction');
-      note.textContent='Please select an answer before continuing.';
-      note.classList.add('caInstructionError');
-      return;
-    }
-    if(index===total-1)submit();
-    else{index++;renderAssessment();}
-  };
-  root.querySelector('#caExit').onclick=()=>{
-    if(confirm('Leave the assessment and return to the assessment list? Your current attempt will remain open.'))load();
-  };
-
-  clearInterval(timer);
-  const closeAt=new Date(current.closeAt).getTime();
-  const tick=()=>{
-    const qLeft=Math.max(0,questionDeadlines[q.id]-Date.now());
-    const totalLeft=Math.max(0,closeAt-Date.now());
-    const qTimer=root.querySelector('#caQuestionTimer');
-    const totalTimer=root.querySelector('#caTotalTimer');
-    if(qTimer)qTimer.textContent=formatClock(qLeft);
-    if(totalTimer)totalTimer.textContent=formatClock(totalLeft);
-    if(qLeft<=0){
-      clearInterval(timer);
-      saveAnswer(q,root);
-      if(index<total-1){index++;renderAssessment();}
-      else submit();
-      return;
-    }
-    if(totalLeft<=0){
-      clearInterval(timer);
-      submit(true);
-    }
-  };
-  tick();
-  timer=setInterval(tick,250);
+ const root=host(),q=current?.questions?.[index],total=current?.questions?.length||0;
+ if(!root||!current)return;
+ if(!q){submit();return;}
+ const limit=Math.max(20,Number(q.timeLimitSeconds||60));
+ if(!questionDeadlines[q.id])questionDeadlines[q.id]=Date.now()+limit*1000;
+ const progress=Math.round(((index+1)/total)*100);
+ const typeLabel=q.activityType?String(q.activityType).replace(/-/g,' ').toUpperCase():(q.type==='multipleCorrect'?'MULTIPLE CORRECT':q.type==='scenario'?'SCENARIO':q.type==='audio'?'AUDIO':'MCQ');
+ const isMulti=q.type==='multipleCorrect';
+ const audioMode=q.type==='audio'||q.activityType==='listening'||q.activityType==='audio-options';
+ const audioOptions=audioMode;
+ const options=(q.options||[]).map((o,i)=>
+   '<label class="studentOption '+(audioOptions?'audioAssessmentOption':'')+'"><input type="'+(isMulti?'checkbox':'radio')+'" name="caAnswer" value="'+i+'"><span class="studentOptionLetter">'+String.fromCharCode(65+i)+'</span><span class="studentOptionText">'+(audioOptions?'<span class="srOnlyOption">'+esc(o)+'</span>Audio Option '+String.fromCharCode(65+i):esc(o))+'</span></label>'
+ ).join('');
+ root.innerHTML='<div class="caLiveShell caModernAssessment">'+
+  '<div class="caLiveHeader"><div><span class="sectionEyebrow">'+esc(current.trackId)+' · MODULE '+current.day+'</span><h3>'+esc(current.title)+'</h3><p>Question '+String(index+1).padStart(2,'0')+' of '+String(total).padStart(2,'0')+'</p></div><button class="caExitButton" id="caExit">← Assessment List</button></div>'+
+  '<article class="studentQuestionCard caLiveCard">'+
+   '<div class="studentQuestionTop"><span>QUESTION '+String(index+1).padStart(2,'0')+' / '+String(total).padStart(2,'0')+'</span><span>'+typeLabel+' · '+esc(q.difficulty||'standard')+'</span></div>'+
+   '<div class="studentProgress"><span style="width:'+progress+'%"></span></div>'+
+   '<div class="studentTimingBar"><div><small>QUESTION TIME</small><strong id="caQuestionTimer">--:--</strong></div><div><small>TOTAL TIME</small><strong id="caTotalTimer">--:--</strong></div><div><small>TIME ALLOTTED</small><strong>'+formatClock(limit)+'</strong></div></div>'+
+   (q.code?assessmentCodeViewer(q.code):'')+
+   '<div class="studentPrompt audioAssessmentPrompt"><div><span class="promptKicker">QUESTION</span><p>'+esc(q.prompt||q.audioText||'')+'</p></div><button id="playAssessmentAudio" class="audioQuestionButton">🔊 Listen to Question</button></div>'+
+   (audioMode?'<div class="audioAssessmentStage" id="audioAssessmentStage"><strong>READY</strong><span>Press Listen to Question to hear the options one at a time.</span></div>':'')+
+   '<div class="caInstruction">'+(isMulti?'Select all correct answers.':'Select the one best answer.')+'</div>'+
+   '<div class="studentAnswerArea"><div class="studentOptionList">'+options+'</div></div>'+
+   '<div class="caLiveNav"><button class="secondary" id="caPrev" '+(index===0?'disabled':'')+'>← Previous</button><span>'+String(index+1)+' / '+String(total)+'</span><button id="caNext">'+(index===total-1?'Submit Assessment':'Next Question →')+'</button></div>'+
+  '</article></div>';
+ restoreAnswer(q,root);
+ const play=root.querySelector('#playAssessmentAudio');
+ if(play)play.onclick=()=>{
+   speak(q.audioText||q.prompt||'');
+   if(audioMode){
+    const stage=root.querySelector('#audioAssessmentStage');
+    setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
+   }
+ };
+ root.querySelectorAll('input[name="caAnswer"]').forEach(x=>x.addEventListener('change',()=>saveAnswer(q,root)));
+ root.querySelector('#caPrev').onclick=()=>{saveAnswer(q,root);if(index>0){index--;renderAssessment();}};
+ root.querySelector('#caNext').onclick=()=>{
+   saveAnswer(q,root);const a=answers[q.id];
+   if(a===undefined||(Array.isArray(a)&&!a.length)){const note=root.querySelector('.caInstruction');note.textContent='Please select an answer before continuing.';note.classList.add('caInstructionError');return;}
+   if(index===total-1)submit();else{index++;renderAssessment();}
+ };
+ root.querySelector('#caExit').onclick=()=>{if(confirm('Leave the assessment and return to the assessment list? Your current attempt will remain open.'))load();};
+ clearInterval(timer);
+ const closeAt=new Date(current.closeAt).getTime();
+ const tick=()=>{
+  const qLeft=Math.max(0,questionDeadlines[q.id]-Date.now()),totalLeft=Math.max(0,closeAt-Date.now());
+  const qTimer=root.querySelector('#caQuestionTimer'),totalTimer=root.querySelector('#caTotalTimer');
+  if(qTimer)qTimer.textContent=formatClock(qLeft);if(totalTimer)totalTimer.textContent=formatClock(totalLeft);
+  if(qLeft<=0){clearInterval(timer);saveAnswer(q,root);if(index<total-1){index++;renderAssessment();}else submit();return;}
+  if(totalLeft<=0){clearInterval(timer);submit(true);}
+ };
+ tick();timer=setInterval(tick,250);
 }
-
 async function submit(auto=false){
   if(!current)return;
   clearInterval(timer);
