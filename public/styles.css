@@ -607,3 +607,8 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .practiceCodeChoice pre{flex:1}
 .practiceFeedback{margin-top:10px}
 @media(max-width:700px){.practiceTaskSummary{grid-template-columns:1fr;gap:5px}.practiceTaskSummary em{display:block}}
+
+.caFacultyAssign{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 20px;margin:14px 0;border:1px solid #dbe4ee;border-radius:14px;background:#f8fafc}
+.caFacultyAssign p{margin:4px 0 0;color:#64748b;font-size:12px}.caFacultyControls{display:flex;gap:8px;align-items:center}.caFacultyControls input{min-width:280px;padding:10px 12px;border:1px solid #cbd5e1;border-radius:9px}
+.dashboardLeaderboardRow span,.leaderboardRow span{display:flex;flex-direction:column;gap:2px}.dashboardLeaderboardRow span small,.leaderboardRow span small{font-size:10px;color:#64748b;font-weight:600}
+@media(max-width:700px){.caFacultyAssign{flex-direction:column;align-items:stretch}.caFacultyControls{flex-direction:column;align-items:stretch}.caFacultyControls input{min-width:0;width:100%}}
