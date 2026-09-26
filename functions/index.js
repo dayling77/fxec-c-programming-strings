@@ -1644,6 +1644,19 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
   return {success:true,trackId,days:5,message:'Blank editable programme created. Use Auto Generate for the full 125-question audited bank.'};
 });
 
+export const getAdminCompetencyQuestionPool = onCall({cors:CALLABLE_CORS},async request=>{
+  requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const day=Number(request.data?.day);
+  if(!Number.isInteger(day)||day<1||day>5) throw new HttpsError('invalid-argument','Day must be between 1 and 5.');
+  const taskSnap=await db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day).get();
+  if(!taskSnap.exists) throw new HttpsError('not-found','Assessment day not found.');
+  const task=taskSnap.data();
+  const poolSnap=await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).collection('questions').get();
+  const questions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
+  return {trackId,day,title:task.title,topic:task.topic,questionCount:questions.length,recommendedQuestionCount:Number(task.recommendedQuestionCount||Math.min(15,questions.length)),status:task.status,questions};
+});
+
 export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},async request=>{
   requireAdmin(request);
   const snap=await db.collection('competencyAssessmentTasks').get();
@@ -1666,8 +1679,15 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
   const questions=validateCompetencyQuestions(request.data?.questions);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
-  return {success:true,trackId,day,questionCount:questions.length,status:'draft'};
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,recommendedQuestionCount:Math.min(15,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
+  await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(15,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  const poolBatch=db.batch();
+  for(const q of questions){
+    poolBatch.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day,poolId:poolRef.id,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  }
+  await poolBatch.commit();
+  return {success:true,trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(15,questions.length),status:'draft'};
 });
 
 export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
@@ -1681,6 +1701,7 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
   validateCompetencyQuestions(d.questions);
   if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date and assessment window before approval.');
   await ref.update({status:'published',isPublished:true,approvedBy:adminUser.uid,approvedByEmail:adminUser.token.email||'',approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
+  await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'published',approvedBy:adminUser.uid,approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
   await db.collection('adminActions').add({action:'approveCompetencyAssessmentDay',trackId,day,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
   return {success:true,trackId,day,status:'published'};
 });
@@ -1714,9 +1735,13 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
   if(!existing.empty){
     const x=existing.docs[0];
     if(x.data().status==='finalized') throw new HttpsError('already-exists','You have already completed this assessment.');
-    return {attemptId:x.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions:x.data().questions,resumed:true};
+    return {attemptId:x.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions:x.data().questions,resumed:true,recommendedQuestionCount:x.data().questions.length};
   }
-  const questions=shuffle(task.questions).map(q=>{const {answer,explanation,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
+  const poolSnap=await db.collection('competencyQuestionPools').doc(taskId).collection('questions').get();
+  const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
+  if(sourceQuestions.length<1) throw new HttpsError('failed-precondition','No approved question pool is available.');
+  const recommendedCount=Math.min(Number(task.recommendedQuestionCount||15),sourceQuestions.length);
+  const questions=shuffle(sourceQuestions).slice(0,recommendedCount).map(q=>{const {answer,explanation,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
   const attemptRef=db.collection('competencyAssessmentAttempts').doc();
   await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
   return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions};
