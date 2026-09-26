@@ -25,7 +25,7 @@ function renderAssessment(){
  const root=host(),q=current.questions[current.index||0],index=current.index||0,total=current.questions.length;
  if(!q){return submit();}
  let h='<div class="caLiveHeader"><span class="sectionEyebrow">'+esc(current.trackId)+' · DAY '+current.day+'</span><h3>'+esc(current.title)+'</h3><p>Question '+(index+1)+' of '+total+'</p></div><article class="caLiveQuestion"><h4>'+esc(q.prompt)+'</h4><div class="caLiveOptions">';
- (q.options||[]).forEach((o,i)=>{const checked=Array.isArray(answers[q.id])?answers[q.id].includes(i):Number(answers[q.id])===i;h+='<label><input type="'+(q.type==='multiple-correct'?'checkbox':'radio')+'" name="caAnswer" value="'+i+'" '+(checked?'checked':'')+'>'+String.fromCharCode(65+i)+'. '+esc(o)+'</label>';});
+ (q.options||[]).forEach((o,i)=>{const checked=Array.isArray(answers[q.id])?answers[q.id].includes(i):Number(answers[q.id])===i;h+='<label><input type="'+(q.type==='multipleCorrect'?'checkbox':'radio')+'" name="caAnswer" value="'+i+'" '+(checked?'checked':'')+'>'+String.fromCharCode(65+i)+'. '+esc(o)+'</label>';});
  h+='</div><div class="caLiveActions">'+(index?'':'')+'<button id="caNext">'+(index===total-1?'Submit Assessment':'Next Question')+'</button></div></article>';
  root.innerHTML=h;
  root.querySelectorAll('input[name="caAnswer"]').forEach(x=>x.onchange=()=>{if(q.type==='multiple-correct')answers[q.id]=Array.from(root.querySelectorAll('input[name="caAnswer"]:checked')).map(y=>Number(y.value));else answers[q.id]=Number(x.value);});
