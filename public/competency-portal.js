@@ -30,7 +30,7 @@ const C_FUNDAMENTALS_LESSON=[
  {title:'8. First Mini-Programs',level:'Applied',teach:'Combine variables, expressions and input/output to solve small problems. Start with one clear task, test normal values, boundary values and unusual values.',example:'A marks calculator can read three marks, calculate total and average, then display both.',code:'int a,b,c;\\nscanf("%d%d%d",&a,&b,&c);\\nint total=a+b+c;\\nprintf("%d",total);',check:'What test values would you use to verify the program?'}
 ];
 
-const C_FUNDAMENTALS_DRILLS=[
+const C_FUNDAMENTALS_DRILL_BASE=[
  ['Identifier Hunt','Which is a valid C identifier?',['2marks','total_marks','float','student-name'],1,'Identifiers may contain letters, digits and underscore but cannot begin with a digit or be a keyword.'],
  ['Identifier Hunt','Which identifier is invalid because it begins with a digit?',['student1','_student','1student','student_1'],2,'An identifier cannot begin with a digit.'],
  ['Program Anatomy','Where does execution of a normal C program begin?',['printf()','main()','scanf()','include'],1,'The main function is the entry point of a hosted C program.'],
@@ -53,14 +53,66 @@ const C_FUNDAMENTALS_DRILLS=[
  ['Algorithm','Before coding a small problem, what should you identify first?',['Font size','Input, process and output','Keyboard layout','File name only'],1,'IPO analysis gives the program a clear purpose and structure.']
 ];
 
+const C_FUNDAMENTALS_DRILLS=[...C_FUNDAMENTALS_DRILL_BASE];
+(function buildHundredDrills(){
+  const add=(category,prompt,options,answer,explanation,mode='text')=>C_FUNDAMENTALS_DRILLS.push([category,prompt,options,answer,explanation,mode]);
+  const nums=[3,4,5,6,7,8,9,11,12,13];
+  nums.forEach((n,i)=>{
+    const m=(i%5)+2;
+    add('Output Prediction','What is the value of '+n+' % '+m+'?',String([n%m,n,m,0]).split(',').map(Number).sort(()=>0).map(String),0,'The modulo operator returns the remainder after integer division.','audio-question');
+  });
+  for(let i=0;i<10;i++){
+    const a=2+i,b=3+(i%4),c=4+(i%3),ans=a+b*c;
+    add('Expression Trace','What is the value of '+a+' + '+b+' * '+c+'?',[String(ans),String((a+b)*c),String(a+b+c),String(a*b+c)],0,'Multiplication is evaluated before addition.','text');
+  }
+  for(let i=0;i<10;i++){
+    const a=9+i,b=2+(i%5),ans=Math.floor(a/b);
+    add('Integer Division','Both operands are int. What does '+a+' / '+b+' produce?',[String(ans),String(a/b),String(ans+1),'0'],0,'Integer division discards the fractional part.','audio-question');
+  }
+  for(let i=0;i<10;i++){
+    const marks=35+i,att=70+(i%6)*2;
+    const ans=(marks>=40&&att>=75)?1:0;
+    add('Logic Check','Which result is produced by (marks >= 40) && (attendance >= 75) when marks='+marks+' and attendance='+att+'?',['0','1','marks','attendance'],ans,'Logical AND is true only when both conditions are true.','audio-options');
+  }
+  for(let i=0;i<10;i++){
+    const value=10+i*3;
+    add('Input & Output','Which statement correctly reads an integer into n?',['scanf("%d", n);','scanf("%d", &n);','scanf("%f", &n);','scanf("%d", *n);'],1,'scanf needs the address of an int variable for %d.','audio-options');
+  }
+  for(let i=0;i<10;i++){
+    const x=2+i,y=5+i,ans=x+y;
+    add('Bug Fixing','The program must print '+ans+'. Which expression should replace ??? in printf("%d", ???);?',['x+y','x*y','y-x','x/y'],0,'Match the expression to the stated requirement and test it with the given values.','text');
+  }
+  for(let i=0;i<10;i++){
+    const boundary=20+i*5;
+    add('Testing','If the valid range begins at '+boundary+', which is the most important boundary test?',[String(boundary-1),String(boundary),String(boundary+10),String(boundary+20)],1,'The exact boundary value should be tested along with values just below and above it.','audio-question');
+  }
+  for(let i=0;i<10;i++){
+    const val=4+i;
+    add('Syntax & Types','Which declaration is valid C syntax for an integer initialized to '+val+'?',['int value = '+val+';','integer value = '+val+';','int = value '+val+';','value int = '+val+';'],0,'C uses the type name followed by the identifier and initializer.','text');
+  }
+  for(let i=0;i<10;i++){
+    const a=6+i,b=2+(i%3),ans=a+b;
+    add('Algorithm Thinking','A program receives '+a+' and '+b+'. Which first step best represents the processing for a sum problem?',['Add the two inputs','Display a random value','Change the variable names','Skip input validation'],0,'Translate the requirement into a precise input-process-output sequence.','audio-question');
+  }
+  C_FUNDAMENTALS_DRILLS.splice(100);
+})();
+
+
+
 const C_FUNDAMENTALS_PRACTICE=[
- {title:'Output Prediction',kind:'mcq',prompt:'What does this program print?',code:'int a = 8, b = 3;\\nprintf("%d %d", a+b, a%b);',options:['11 2','83 2','11 3','5 2'],answer:0,hint:'Evaluate + and % separately.'},
- {title:'Bug Fixing',kind:'bug',prompt:'Fix the input statement so the user can enter an integer.',code:'int age;\\nscanf("%d", age);',options:['scanf("%d", &age);','scanf("%d", age*1);','scanf("%d", *age);','scanf("%d", #age);'],answer:0,hint:'scanf needs the address of age.'},
- {title:'Missing Code',kind:'missing',prompt:'Choose the missing expression that calculates the average as a decimal.',code:'int total=75, count=2;\\ndouble average = ______;',options:['total/count','(double)total/count','total%count','(int)total/count'],answer:1,hint:'At least one operand must participate in floating-point division.'},
- {title:'Bug Fixing',kind:'bug',prompt:'The output should be 7. What should replace ???',code:'int a=3,b=4;\\nprintf("%d", ???);',options:['a+b','a*b','a-b','a/b'],answer:0,hint:'The requirement says add the two values.'},
- {title:'Code Observation',kind:'trace',prompt:'What value is stored in result?',code:'int x=5;\\nint y=2;\\nint result=x/y;',options:['2','2.5','3','0'],answer:0,hint:'Both operands are integers.'},
- {title:'Debugging Decision',kind:'scenario',prompt:'A program compiles successfully but prints the wrong total. What should you inspect first?',code:'The program builds without errors, but total is wrong.',options:['Logic and formula','Keyboard cable','Font family','File extension only'],answer:0,hint:'A compiling program can still contain logic errors.'}
+ {title:'Output Prediction',kind:'mcq',prompt:'Predict the exact output before checking.',code:'int a = 8, b = 3;\\nprintf("%d %d", a+b, a%b);',options:['11 2','83 2','11 3','5 2'],answer:0,hint:'Evaluate + and % separately.'},
+ {title:'Bug Fixing',kind:'bug',prompt:'Repair the scanf line. Type the corrected line in the editor.',code:'int age;\\nscanf("%d", age);',starter:'int age;\\nscanf("%d", age);',tests:[['18','18']],answerText:'scanf("%d", &age);',hint:'scanf needs the address of age.'},
+ {title:'Missing Code',kind:'missing',prompt:'Complete the expression so average is calculated as a decimal.',code:'int total = 75, count = 2;\\ndouble average = ______;',options:['total/count','(double)total/count','total%count','(int)total/count'],answer:1,hint:'At least one operand must participate in floating-point division.'},
+ {title:'Output Prediction',kind:'trace',prompt:'Trace the variables line by line. What is stored in result?',code:'int x = 5;\\nint y = 2;\\nint result = x / y;',options:['2','2.5','3','0'],answer:0,hint:'Both operands are integers.'},
+ {title:'Coding Task',kind:'coding',prompt:'Write a complete C program that reads two integers and prints their sum.',starter:'#include <stdio.h>\\n\\nint main(void) {\\n    // write your code here\\n    return 0;\\n}',tests:[['7 5','12'],['20 22','42']],hint:'Read two ints, add them and print the result.'},
+ {title:'Coding Task',kind:'coding',prompt:'Write a C program that reads three marks and prints the total.',starter:'#include <stdio.h>\\n\\nint main(void) {\\n    // read three marks\\n    // calculate total\\n    // print total\\n    return 0;\\n}',tests:[['10 20 30','60'],['35 40 25','100']],hint:'Use three int variables and add them.'},
+ {title:'Bug Fixing',kind:'bug',prompt:'The program should print 14. Fix the expression and test it.',code:'int a=6, b=8;\\nprintf("%d", a*b);',options:['a+b','a-b','a*b','a/b'],answer:0,hint:'The requirement is addition, not multiplication.'},
+ {title:'Code Completion',kind:'coding',prompt:'Complete the missing condition so the program prints PASS when mark is at least 40.',starter:'#include <stdio.h>\\nint main(void) {\\n    int mark = 56;\\n    if (__________)\\n        printf("PASS");\\n    else\\n        printf("FAIL");\\n    return 0;\\n}',tests:[['','PASS']],hint:'Use a relational expression involving mark and the boundary 40.'},
+ {title:'Edge-Case Testing',kind:'mcq',prompt:'For a program that accepts marks from 0 to 100, which test set gives useful boundary coverage?',options:['50,60,70','0,1,99,100','25,50,75','10,40,80'],answer:1,hint:'Test the exact boundaries and values immediately inside them.'},
+ {title:'Debugging Decision',kind:'mcq',prompt:'A program compiles but prints the wrong total. What should you inspect first?',options:['Logic and formula','Keyboard cable','Font family','File extension only'],answer:0,hint:'A compiling program can still contain logic errors.'}
 ];
+
+
 
 const C_MODULES=[
  {id:1,title:'C Fundamentals',scope:'Build a strong foundation in C so that a beginner can read, write, compile, trace and explain simple programs confidently.',
@@ -205,9 +257,10 @@ function openModule(root,trackId,moduleNo,programme){
  ws.querySelector('#backToModules').onclick=()=>openTrack(root,trackId);
  ws.querySelector('#startAssessment').onclick=()=>launchAssessmentCentre();
  ws.querySelectorAll('.drillReveal').forEach(b=>b.onclick=()=>showDrill(b));
+ ws.querySelectorAll('.addDrillsButton').forEach(b=>b.onclick=()=>addTenDrills(b.closest('.drillRewardBar')?.parentElement?.querySelector('.drillCard')?.dataset.module||'C Fundamentals',b.closest('.drillRewardBar')));
  ws.querySelectorAll('.checkAnswer').forEach(b=>b.onclick=()=>checkPracticeAnswer(b));
- ws.querySelectorAll('[data-practice-answer]').forEach(b=>b.onclick=()=>handlePracticeChoice(b));
  ws.querySelectorAll('.materialToggle').forEach(b=>b.onclick=()=>toggleMaterial(b));
+ wirePracticeTasks(ws);
  ws.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
@@ -221,74 +274,131 @@ function genericModule(title,trackTitle,no){
  assessment:'Module mastery assessment with concept, application, reasoning and challenge questions.'};
 }
 
-function moduleView(track,data,no,programme){
- const topicHtml=data.topics.map(x=>'<li>'+esc(x)+'</li>').join('');
- const matHtml=data.title==='C Fundamentals'?C_FUNDAMENTALS_LESSON.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(lesson.code)+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join(''):data.materials.map((x,i)=>'<div class="studyMaterial"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x)+'</strong><button class="materialToggle" data-open="0">Teach me</button><p class="materialBody" hidden>'+esc(materialGuide(x,data.title))+'</p></div>').join('');
- const ds=drillStats(); const drillHtml=data.drills.map((x,i)=>'<article class="drillCard"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(x)+'</h5><p>Short game-style practice. Attempt the mission, get instant feedback and collect a Drill Star. Stars are rewards only and never change the academic score.</p></div><button class="drillReveal">Start Drill</button></article>').join('')+'<div class="drillRewardBar"><strong>⭐ Drill Stars: '+ds.stars+'</strong><span>'+ds.completed+' drills completed · up to 100 drills can be added to this module</span></div>';
- const practiceHtml=data.practice.map((x,i)=>'<article class="practiceLevel"><div class="practiceLevelNo">0'+(i+1)+'</div><div><span>PRACTICE LEVEL '+(i+1)+'</span><h5>'+esc(x.replace(/^Level \d+ — /,''))+'</h5><p>'+esc(practiceInstruction(data.title,i))+'</p></div><button class="checkAnswer" data-question="'+esc(practiceQuestion(data.title,i))+'" data-answer="'+esc(practiceAnswer(data.title,i))+'">Try One</button></article>').join('');
- return '<section class="moduleLearningWorkspace">'+
-  '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
-  '<div class="masteryStrip"><div><strong>1</strong><span>Understand</span></div><div><strong>2</strong><span>Drill</span></div><div><strong>3</strong><span>Practise</span></div><div><strong>4</strong><span>Apply</span></div><div><strong>5</strong><span>Assess</span></div></div><div class="studentRewardBanner">🏅 <b>Drill Rewards</b><span>Collect stars for practice effort. Stars are motivational rewards only — they never alter marks, XP or academic results.</span><strong>⭐ '+drillStats().stars+' Stars</strong></div>'+
-  '<div class="moduleLearningGrid">'+
-   '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · SCOPE & OUTCOMES</span><h4>What you will master</h4><ul class="scopeList">'+topicHtml+'</ul></section>'+
-   '<section class="learningSection"><span class="sectionEyebrow">02 · STUDY MATERIALS</span><h4>Learn at your own pace</h4><p class="slowLearnerNote">If a concept is difficult, do not skip it. Read the guide again, work through the example, repeat the drill and return to practice.</p>'+matHtml+'</section>'+
-  '</div>'+
-  '<section class="learningSection"><span class="sectionEyebrow">03 · GUIDED DRILLS</span><h4>Build accuracy before speed</h4><p>These short drills are deliberately repetitive. Master the pattern first; speed comes later.</p><div class="drillGrid">'+drillHtml+'</div></section>'+
-  '<section class="learningSection"><span class="sectionEyebrow">04 · PRACTICE LADDER</span><h4>Five levels from guided to independent</h4><p>Do not move up until you can complete the current level confidently. A slow learner gets more repetition, not less opportunity.</p><div class="practiceLadder">'+practiceHtml+'</div></section>'+
-  '<section class="learningSection challengeSection"><span class="sectionEyebrow">05 · CHALLENGE</span><h4>Apply what you have learned</h4><div class="challengeBox"><p>'+esc(data.challenge)+'</p><ul><li>First explain your approach.</li><li>Then write the solution.</li><li>Test with normal, boundary and unusual inputs.</li><li>Review and improve before moving to assessment.</li></ul></div></section>'+
-  '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · ASSESSMENT</span><h4>Module Mastery Assessment</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ Concepts reviewed</span><span>✓ Drills attempted</span><span>✓ Practice ladder completed</span><span>✓ Challenge attempted</span></div><button id="startAssessment">Open Assessment Centre →</button><p class="assessmentNote">The formal assessment engine uses administrator-approved question pools and server-side scoring. Module-specific assessment pools can be published from Assessment Studio.</p></section>'+
-  '</section>';
+function decodeCode(value){return String(value??'').replace(/\\\\n/g,'\\n');}
+function drillState(title){
+ const key='fxecDrillState:'+String(title||'module').replace(/[^a-z0-9]+/gi,'-').toLowerCase();
+ try{return {key,data:{active:10,stars:0,completed:[],bonusPoints:0,...JSON.parse(localStorage.getItem(key)||'{}')}};}catch(e){return {key,data:{active:10,stars:0,completed:[],bonusPoints:0}};}
 }
-
-function materialGuide(resource,title){
- if(title==='C Fundamentals'){
-  const lesson=C_FUNDAMENTALS_LESSON.find(x=>resource.toLowerCase().includes(x.title.split('.')[1]?.trim().toLowerCase()||'@@'));
-  if(lesson)return lesson.teach+'\\n\\nWorked example:\\n'+lesson.example+'\\n\\nCode:\\n'+lesson.code+'\\n\\nMicro-check: '+lesson.check;
- }
- return 'Read this resource in three passes: first for understanding, second while making your own notes, and third without looking at the notes. Then explain the idea aloud and complete a related drill.';
-}
-function drillPrompt(title,drill){return 'Module: '+title+'. Drill: '+drill+'.\n\nStep 1: attempt independently.\nStep 2: explain why your answer works.\nStep 3: create one similar example yourself.\nStep 4: repeat without notes.';}
-function practiceInstruction(title,i){return i===0?'Solve the guided task, then explain each line.':i===1?'Find and fix the bug before checking the model.':i===2?'Predict the output before running or checking anything.':i===3?'Write the missing code and test at least two cases.':'Complete the challenge independently, then review edge cases and improve your solution.';}
-function practiceQuestion(title,i){const p=C_FUNDAMENTALS_PRACTICE[i%C_FUNDAMENTALS_PRACTICE.length];return p?.prompt||('Solve one '+title+' task and explain your reasoning.');}
-function practiceAnswer(title,i){const p=C_FUNDAMENTALS_PRACTICE[i%C_FUNDAMENTALS_PRACTICE.length];return p?'Model approach: '+p.hint:'Compare your solution with the module study material and repeat the task until you can explain every step.';}
-
-function drillStats(){return JSON.parse(localStorage.getItem('fxecDrillRewards')||'{"stars":0,"completed":0}');}
-function saveDrillStats(s){localStorage.setItem('fxecDrillRewards',JSON.stringify(s));}
+function saveDrillState(title,data){try{localStorage.setItem(drillState(title).key,JSON.stringify(data));}catch(e){}}
+function drillStats(){const all=drillState('C Fundamentals').data;return {stars:Number(all.stars||0),completed:Array.isArray(all.completed)?all.completed.length:Number(all.completed||0),active:Number(all.active||10),bonusPoints:Number(all.bonusPoints||0)};}
 function drillBadge(stars){
  if(stars>=100)return '🏆 Drill Master';
+ if(stars>=75)return '💎 Elite Practice';
  if(stars>=50)return '🥇 Practice Champion';
  if(stars>=25)return '🥈 Persistent Learner';
  if(stars>=10)return '🥉 Drill Starter';
  return '🌱 Getting Started';
 }
+function addTenDrills(title,box){
+ const st=drillState(title).data;
+ if(st.active>=100)return;
+ st.active=Math.min(100,Number(st.active||10)+10);
+ saveDrillState(title,st);
+ box.innerHTML=renderDrillReward(title);
+}
+function renderDrillReward(title){
+ const st=drillState(title).data;
+ const bonus=Math.min(5,Number(st.stars||0)*0.05);
+ st.bonusPoints=bonus;saveDrillState(title,st);
+ return '<div class="drillRewardBar"><div><strong>⭐ '+Number(st.stars||0)+' Drill Stars</strong><span>'+Number(Array.isArray(st.completed)?st.completed.length:st.completed||0)+' completed · '+drillBadge(Number(st.stars||0))+'</span></div><div><b>+'+bonus.toFixed(2)+' bonus points</b><small> · max 5 points from drills</small></div><button class="addDrillsButton" '+(Number(st.active||10)>=100?'disabled':'')+'>+10 Drills</button></div>';
+}
+function chooseDrill(title){
+ const st=drillState(title).data,limit=Math.min(100,Number(st.active||10));
+ const done=new Set(Array.isArray(st.completed)?st.completed:[]);
+ const available=C_FUNDAMENTALS_DRILLS.slice(0,limit).filter((_,i)=>!done.has('D'+i));
+ const pool=available.length?available:C_FUNDAMENTALS_DRILLS.slice(0,limit);
+ const i=Math.floor(Math.random()*pool.length);
+ return {q:pool[i],id:'D'+C_FUNDAMENTALS_DRILLS.indexOf(pool[i])};
+}
+function speak(textValue){
+ if(!('speechSynthesis' in window))return;
+ window.speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(String(textValue||''));u.rate=.9;u.pitch=1;u.volume=1;window.speechSynthesis.speak(u);
+}
+function startAudioSequence(box,options){
+ const stage=box.querySelector('.drillAudioStage'), status=box.querySelector('.drillAudioStatus');
+ let i=0;const next=()=>{
+   if(i>=options.length){status.textContent='All four options played. Select A, B, C or D.';return;}
+   stage.innerHTML='<strong>OPTION '+String.fromCharCode(65+i)+'</strong><span>Listening…</span>';
+   speak(options[i]);i++;setTimeout(next,3000);
+ };next();
+}
 function showDrill(button){
- const card=button.closest('.drillCard');
- const old=card.querySelector('.drillInteractive'); if(old){old.remove();button.textContent='Start Drill';return;}
- const q=C_FUNDAMENTALS_DRILLS[Math.floor(Math.random()*C_FUNDAMENTALS_DRILLS.length)];
- const box=document.createElement('div');box.className='drillInteractive';
- box.innerHTML='<div class="drillGameHeader"><b>🎯 DRILL MISSION</b><span>+1 ★ for an attempt</span></div><h6>'+esc(q[0])+'</h6><p>'+esc(q[1])+'</p><div class="drillOptions">'+q[2].map((o,i)=>'<button data-answer="'+i+'">'+String.fromCharCode(65+i)+'. '+esc(o)+'</button>').join('')+'</div><div class="drillFeedback"></div>';
+ const card=button.closest('.drillCard'),title=card.dataset.module||'C Fundamentals';
+ const old=card.querySelector('.drillInteractive');if(old){old.remove();button.textContent='Start Drill';return;}
+ const chosen=chooseDrill(title),q=chosen.q,box=document.createElement('div');box.className='drillInteractive';
+ const audioQ=q[5]==='audio-question',audioOptions=q[5]==='audio-options';
+ box.innerHTML='<div class="drillGameHeader"><b>🎯 DRILL MISSION</b><span>+1 ★ for an attempt</span></div>'+
+   '<h6>'+esc(q[0])+'</h6>'+
+   '<div class="drillQuestion '+(audioQ?'audioOnlyQuestion':'')+'">'+(audioQ?'<button class="playAudioQuestion">🔊 Play Question</button><small>Listen once or replay if needed.</small>':'<p>'+esc(q[1])+'</p>')+'</div>'+
+   (audioOptions?'<div class="drillAudioStage"><strong>OPTION A</strong><span>Preparing audio…</span></div><div class="drillAudioStatus">Options will play one at a time for about 3 seconds.</div>':'')+
+   '<div class="drillOptions '+(audioOptions?'audioChoiceOptions':'')+'">'+q[2].map((o,i)=>audioOptions?'<button data-answer="'+i+'">'+String.fromCharCode(65+i)+'<span class="srOnlyOption">'+esc(o)+'</span></button>':'<button data-answer="'+i+'">'+String.fromCharCode(65+i)+'. '+esc(o)+'</button>').join('')+'</div>'+
+   '<div class="drillFeedback"></div>';
  card.appendChild(box);button.textContent='Close Drill';
+ if(audioQ)box.querySelector('.playAudioQuestion').onclick=()=>speak(q[1]);
+ if(audioOptions)startAudioSequence(box,q[2]);
  box.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{
-  const stats=drillStats(); if(!box.dataset.rewarded){stats.stars+=1;stats.completed+=1;saveDrillStats(stats);box.dataset.rewarded='1';}
-  const ok=Number(b.dataset.answer)===q[3],fb=box.querySelector('.drillFeedback');
-  fb.className='drillFeedback '+(ok?'correct':'review');fb.innerHTML=(ok?'⭐ Correct! Drill Star earned. ':'Keep going. ')+'<b>'+esc(q[4])+'</b><br><span>Drill Stars: '+stats.stars+' · Completed: '+stats.completed+'</span>';
-  if(ok)b.disabled=true;
+   const st=drillState(title).data;
+   if(!st.completed)st.completed=[];
+   if(!box.dataset.rewarded){st.stars=Number(st.stars||0)+1;st.completed.push(chosen.id);st.bonusPoints=Math.min(5,Number(st.stars)*.05);saveDrillState(title,st);box.dataset.rewarded='1';}
+   const ok=Number(b.dataset.answer)===q[3],fb=box.querySelector('.drillFeedback');
+   fb.className='drillFeedback '+(ok?'correct':'review');
+   fb.innerHTML=(ok?'⭐ Correct! Drill Star earned. ':'↻ Keep practising. A Star is awarded for completing the attempt. ')+'<b>'+esc(q[4])+'</b><br><span>Stars: '+st.stars+' · Bonus: '+Number(st.bonusPoints||0).toFixed(2)+' / 5</span>';
+   if(ok)box.querySelectorAll('[data-answer]').forEach(x=>x.disabled=true);
  });
 }
-function toggleMaterial(button){
- const body=button.parentElement.querySelector('.materialBody');const open=button.dataset.open==='1';
- body.hidden=open;button.dataset.open=open?'0':'1';button.textContent=open?'Teach me':'Hide lesson';
+function toggleMaterial(button){const body=button.parentElement.querySelector('.materialBody');const open=button.dataset.open==='1';body.hidden=open;button.dataset.open=open?'0':'1';button.textContent=open?'Teach me':'Hide lesson';}
+function practiceInstruction(title,i){return i===0?'Predict first, then prove it by tracing each line.':i===1?'Repair the code and explain the exact defect.':i===2?'Complete the missing expression and test two values.':i===3?'Trace the variables line by line before checking.':i===4?'Write the program yourself, then run it against the supplied test cases.':'Complete the coding task, test an edge case and improve your solution.';}
+function lineNumberedEditor(initial,id){
+ const lines=decodeCode(initial).split('\\n').length;
+ return '<div class="codeEditorWrap"><div class="codeLineNumbers" data-lines="'+id+'">'+Array.from({length:Math.max(lines,4)},(_,i)=>'<span>'+(i+1)+'</span>').join('')+'</div><textarea class="codeEditor" id="'+id+'" spellcheck="false">'+esc(decodeCode(initial))+'</textarea></div>';
 }
-function handlePracticeChoice(button){
- const task=button.closest('.practiceLevel'), all=[...task.querySelectorAll('[data-practice-answer]')], idx=all.indexOf(button);
- const ok=idx===Number(task.dataset.correct),fb=task.querySelector('.practiceFeedback');
- fb.className='practiceFeedback '+(ok?'correct':'review');
- fb.innerHTML=(ok?'✓ Correct. Continue only after you can repeat the task independently.':'↻ Review the concept, inspect the code again and try once more.')+'<br><small>'+esc(task.dataset.hint||'Use the study material and explain why the answer is correct.')+'</small>';
- if(ok) all.forEach(x=>x.disabled=true);
-}function checkPracticeAnswer(button){
- const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model check:</b> '+esc(button.dataset.answer)+'</p>';
- button.parentElement.appendChild(box);button.textContent='Review Prompt';
+async function runPracticeCode(button){
+ const task=button.closest('.practiceTask'),editor=task.querySelector('.codeEditor'),stdin=task.querySelector('.practiceInput')?.value||'';
+ const out=task.querySelector('.practiceRunOutput');if(!editor||!out)return;
+ button.disabled=true;out.textContent='Running C code…';
+ try{
+  const r=await call('runCCode')({sourceCode:editor.value,stdin});
+  out.className='practiceRunOutput '+(r.data?.accepted?'passed':'failed');
+  out.textContent=(r.data?.stdout||r.data?.compileOutput||r.data?.stderr||r.data?.status||'No output')+(r.data?.accepted?'\n✓ Program executed successfully.':'\n↻ Read the compiler/output message and fix the code.');
+ }catch(e){out.className='practiceRunOutput failed';out.textContent=e.message||String(e);}
+ finally{button.disabled=false;}
 }
+function renderPracticeTask(task,i){
+ const p=C_FUNDAMENTALS_PRACTICE[i%C_FUNDAMENTALS_PRACTICE.length];
+ if(p.kind==='coding'||p.kind==='bug'){
+  const starter=p.starter||p.code||'';
+  return '<article class="practiceTask"><div class="practiceTaskHead"><span>PRACTICE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong></div><p>'+esc(p.prompt)+'</p>'+lineNumberedEditor(starter,'practiceCode'+i)+(p.tests?'<div class="practiceTests"><b>Test cases</b>'+p.tests.map(t=>'<span>Input: '+esc(t[0])+' → Expected: '+esc(t[1])+'</span>').join('')+'</div>':'')+'<label class="practiceInputLabel">Input for your run <input class="practiceInput" placeholder="e.g. 7 5"></label><div class="practiceTaskActions"><button class="runCodeButton">▶ Run C Code</button><button class="revealHintButton">Hint</button></div><div class="practiceRunOutput">Your output will appear here.</div><div class="practiceFeedback"><span>'+esc(p.hint)+'</span></div></article>';
+ }
+ return '<article class="practiceTask"><div class="practiceTaskHead"><span>PRACTICE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong></div><p>'+esc(p.prompt)+'</p>'+(p.code?'<pre class="codeBlock"><code>'+esc(decodeCode(p.code))+'</code></pre>':'')+(p.options?'<div class="practiceOptions">'+p.options.map((o,j)=>'<button data-choice="'+j+'">'+String.fromCharCode(65+j)+'. '+esc(o)+'</button>').join('')+'</div>':'')+'<div class="practiceFeedback"></div></article>';
+}
+function wirePracticeTasks(ws){
+ ws.querySelectorAll('.runCodeButton').forEach(b=>b.onclick=()=>runPracticeCode(b));
+ ws.querySelectorAll('.revealHintButton').forEach(b=>b.onclick=()=>{const f=b.closest('.practiceTask').querySelector('.practiceFeedback');f.innerHTML='💡 '+esc(C_FUNDAMENTALS_PRACTICE[Number(b.closest('.practiceTask').querySelector('.codeEditor').id.replace('practiceCode',''))%C_FUNDAMENTALS_PRACTICE.length].hint);});
+ ws.querySelectorAll('.practiceTask .practiceOptions button').forEach(b=>b.onclick=()=>{
+   const task=b.closest('.practiceTask'),idx=[...task.querySelectorAll('[data-choice]')].indexOf(b),p=C_FUNDAMENTALS_PRACTICE[Number(task.querySelector('.practiceTaskHead span').textContent.match(/\\d+/)?.[0]||1)-1%C_FUNDAMENTALS_PRACTICE.length];
+   const ok=idx===p.answer;task.querySelector('.practiceFeedback').className='practiceFeedback '+(ok?'correct':'review');task.querySelector('.practiceFeedback').textContent=ok?'✓ Correct. Now explain why.':'↻ Review the code and try again.';
+   if(ok)task.querySelectorAll('[data-choice]').forEach(x=>x.disabled=true);
+ });
+}
+function moduleView(track,data,no,programme){
+ const topicHtml=data.topics.map(x=>'<li>'+esc(x)+'</li>').join('');
+ const matHtml=data.title==='C Fundamentals'?C_FUNDAMENTALS_LESSON.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join(''):data.materials.map((x,i)=>'<div class="studyMaterial"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x)+'</strong><button class="materialToggle" data-open="0">Teach me</button><p class="materialBody" hidden>'+esc(materialGuide(x,data.title))+'</p></div>').join('');
+ const st=drillState(data.title),drillHtml=data.drills.map((x,i)=>'<article class="drillCard" data-module="'+esc(data.title)+'"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(x)+'</h5><p>Game-style practice. Solve the mission, earn a Star for the attempt and keep building your streak. Drills do not replace the formal assessment.</p></div><button class="drillReveal">Start Drill</button></article>').join('')+renderDrillReward(data.title);
+ const practiceHtml=data.title==='C Fundamentals'?'<div class="practiceTaskGrid">'+C_FUNDAMENTALS_PRACTICE.map((_,i)=>renderPracticeTask(C_FUNDAMENTALS_PRACTICE[i],i)).join('')+'</div>':data.practice.map((x,i)=>'<article class="practiceTask"><div class="practiceTaskHead"><span>PRACTICE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x.replace(/^Level \\d+ — /,''))+'</strong></div><p>'+esc(practiceInstruction(data.title,i))+'</p><button class="checkAnswer" data-question="'+esc(x)+'" data-answer="'+esc(practiceInstruction(data.title,i))+'">Open Practice</button></article>').join('');
+ return '<section class="moduleLearningWorkspace">'+
+  '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
+  '<div class="masteryStrip"><div><strong>1</strong><span>Understand</span></div><div><strong>2</strong><span>Drill</span></div><div><strong>3</strong><span>Practise</span></div><div><strong>4</strong><span>Apply</span></div><div><strong>5</strong><span>Assess</span></div></div>'+
+  '<div class="studentRewardBanner">🏅 <b>Practice Rewards</b><span>Drill Stars motivate repetition. They add only a small bonus to overall points and never replace assessment marks.</span><strong>⭐ '+Number(st.data.stars||0)+' · '+drillBadge(Number(st.data.stars||0))+'</strong></div>'+
+  '<div class="moduleLearningGrid"><section class="learningSection scopeSection"><span class="sectionEyebrow">01 · SCOPE & OUTCOMES</span><h4>What you will master</h4><ul class="scopeList">'+topicHtml+'</ul></section>'+
+  '<section class="learningSection"><span class="sectionEyebrow">02 · STUDY MATERIALS</span><h4>International-style step-by-step learning</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it line by line → answer the micro-check → repeat until you can explain it without notes.</p>'+matHtml+'</section></div>'+
+  '<section class="learningSection"><span class="sectionEyebrow">03 · GUIDED DRILLS</span><h4>Practice like a game</h4><p>100-question pool. Students unlock 10 at a time. Each completed attempt earns a Star. A few missions use audio so the question or options are not presented as one static screen.</p><div class="drillGrid">'+drillHtml+'</div></section>'+
+  '<section class="learningSection"><span class="sectionEyebrow">04 · PRACTICE LADDER</span><h4>More coding. More debugging. More independence.</h4><p>Use the editor for coding tasks, run standard C, inspect compiler/output feedback, fix the defect and test again. The line-numbered editor keeps code organised as Line 1, Line 2, Line 3…</p><div class="practiceLadder">'+practiceHtml+'</div></section>'+
+  '<section class="learningSection challengeSection"><span class="sectionEyebrow">05 · CHALLENGE</span><h4>Apply what you have learned</h4><div class="challengeBox"><p>'+esc(data.challenge)+'</p><ul><li>Write the solution in the line-numbered editor.</li><li>Run it against normal, boundary and unusual inputs.</li><li>Fix every compiler or logic error.</li><li>Review and improve before moving to assessment.</li></ul></div></section>'+
+  '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · ASSESSMENT</span><h4>Module Mastery Assessment</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ Study completed</span><span>✓ Drills attempted</span><span>✓ Practice attempted</span><span>✓ Challenge attempted</span></div><button id="startAssessment">Open Assessment Centre →</button><p class="assessmentNote">Only faculty/admin-approved assessment pools appear to students. Each assessment has its own launch date, opening time and closing time.</p></section></section>';
+}
+function materialGuide(resource,title){return 'Study this topic in three passes. First understand the idea. Second trace the worked example line by line. Third close the notes and reproduce the idea yourself. Then complete a related drill and explain the reasoning aloud. Resource: '+resource+'.';}
+function checkPracticeAnswer(button){const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model approach:</b> '+esc(button.dataset.answer)+'</p>';button.parentElement.appendChild(box);button.textContent='Review Prompt';}
 
 function launchAssessmentCentre(){
  const btn=document.querySelector('.menuButton[data-panel="competencyAssessmentPanel"]');
