@@ -1,5 +1,7 @@
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
-const functions=getFunctions(undefined,'us-central1');
+import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+const fxecApp = getApps().length ? getApp() : initializeApp(window.FXEC_FIREBASE_CONFIG);
+const functions=getFunctions(fxecApp,'us-central1');
 const call=name=>httpsCallable(functions,name);
 const TRACKS=[['communication','Communication'],['aptitude','Aptitude'],['core-engineering','Core Engineering'],['c-programming','C Programming'],['problem-solving','Problem Solving'],['analytical','Analytical Skills']];
 let programs=[],selectedTrack='communication',selectedDay=1;
