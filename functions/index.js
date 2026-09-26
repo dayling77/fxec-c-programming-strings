@@ -1742,7 +1742,7 @@ export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},
   const a=requireAuth(request),admin=isAdminAuth(a),email=String(a.token.email||'').toLowerCase();
   const snap=await db.collection('competencyAssessmentTasks').get();
   const items=snap.docs.map(d=>({id:d.id,...d.data()})).filter(x=>admin||String(x.facultyEmail||'').toLowerCase()===email).sort((a,b)=>String(a.trackId).localeCompare(String(b.trackId))||Number(a.day)-Number(b.day));
-  return {items,role:admin?'admin':'faculty'};
+  return {items,role:admin?'admin':(items.length?'faculty':'student')};
 });
 
 export const assignCompetencyAssessmentFaculty = onCall({cors:CALLABLE_CORS},async request=>{
