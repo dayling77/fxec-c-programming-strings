@@ -1,5 +1,7 @@
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
-const assess=httpsCallable(getFunctions(undefined,'us-central1'),'assessCommunicationSpeech');
+import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+const fxecApp = getApps().length ? getApp() : initializeApp(window.FXEC_FIREBASE_CONFIG);
+const assess=httpsCallable(getFunctions(fxecApp,'us-central1'),'assessCommunicationSpeech');
 const tasks={pronunciation:{label:'Pronunciation Practice',target:'Please read this sentence clearly and naturally.',instruction:'Read the sentence aloud at a natural pace.'},wordUsage:{label:'Word Usage Challenge',target:'Use the word “innovative” in a meaningful sentence.',instruction:'Speak a complete sentence that uses the target word correctly.'},listeningSpeaking:{label:'Listen & Respond',target:'Explain one practical way an engineering student can solve a real-world problem.',instruction:'Respond clearly in your own words.'}};
 let type='pronunciation',rec=null,chunks=[],blob=null,start=0,timer=null;
 const $=id=>document.getElementById(id);
