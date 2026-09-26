@@ -197,8 +197,6 @@ $('loginForm').onsubmit = async e => {
 
 $('logoutBtn').onclick = () => signOut(auth);
 setupCodingLab();
-setupStudio();
-loadCProgression();
 
 
 const STUDIO_CHALLENGES = {
@@ -251,6 +249,7 @@ function setupStudio(){
   renderStudio();
 }
 
+setupStudio();
 
 const C_SKILL_PATH = [
  {id:'fundamentals',title:'C Fundamentals',items:['Program structure','Variables & data types','Constants','Input/output','Operators'],xp:20},
@@ -279,6 +278,8 @@ async function loadCProgression(){
    try{await call('completeCSkill')({skillId:btn.dataset.skill});await loadCProgression();loadCompetencyJourney();}catch(e){msg(e.message||String(e));btn.disabled=false;btn.textContent='Mark Skill Complete';}
  });
 }
+
+loadCProgression();
 
 const CODING_CHALLENGES = {
   'count-vowels': {
