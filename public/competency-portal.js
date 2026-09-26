@@ -19,6 +19,49 @@ const C_PROGRAMMING=[
  'Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'
 ];
 
+const C_FUNDAMENTALS_LESSON=[
+ {title:'1. From Problem to Program',level:'Foundation',teach:'A computer program is a precise sequence of instructions. Start with the problem, identify the inputs, decide the processing, define the output, then express those steps in C.',example:'Problem: calculate the area of a rectangle. Input length and width → multiply them → display the result.',code:'int length = 10;\\nint width = 5;\\nint area = length * width;\\nprintf("%d", area);',check:'Can you state the input, process and output before writing code?'},
+ {title:'2. Anatomy of a C Program',level:'Foundation',teach:'A C program is built from declarations, statements, functions and blocks. Execution begins in main(). Braces define a block and semicolons terminate most statements.',example:'Read a program from top to bottom. Identify the header, main function, declarations, statements and output.',code:'#include <stdio.h>\\n\\nint main(void) {\\n    int age = 18;\\n    printf("%d", age);\\n    return 0;\\n}',check:'Why is main() important? What does return 0 communicate?'},
+ {title:'3. Variables, Constants & Identifiers',level:'Foundation',teach:'A variable is a named storage location whose value can change. An identifier must follow C naming rules: it can contain letters, digits and underscore, but cannot begin with a digit or be a keyword.',example:'Use meaningful names such as totalMarks rather than x when the meaning matters.',code:'int totalMarks = 85;\\nconst int passMark = 40;',check:'Which names are legal identifiers: total_1, 2total, float, studentName?'},
+ {title:'4. Data Types & Conversion',level:'Core',teach:'Choose a data type that matches the value you need. int represents whole numbers, float and double represent fractional values, and char stores a character. Conversion can be implicit or explicit.',example:'Integer division discards the fractional part when both operands are integers.',code:'int a = 5, b = 2;\\nprintf("%d", a / b);\\nprintf("%.1f", (double)a / b);',check:'Why does 5/2 differ from (double)5/2?'},
+ {title:'5. Operators & Expressions',level:'Core',teach:'Arithmetic, relational and logical operators combine values into expressions. Precedence and associativity determine evaluation order, but parentheses should be used when clarity matters.',example:'Use (marks >= 40) && (attendance >= 75) when both conditions are required.',code:'int marks = 72;\\nint attendance = 80;\\nprintf("%d", marks >= 40 && attendance >= 75);',check:'What value does the logical expression produce?'},
+ {title:'6. Input & Output',level:'Core',teach:'printf displays formatted output. scanf reads formatted input and normally needs the address of the variable so that the function can store the entered value.',example:'For an int variable n, scanf("%d", &n) passes its address.',code:'int n;\\nscanf("%d", &n);\\nprintf("You entered %d", n);',check:'Why is &n used with scanf for an int?'},
+ {title:'7. Compile, Read Errors, Fix, Recompile',level:'Applied',teach:'Debugging is a cycle: reproduce the problem, read the compiler message, locate the smallest likely cause, fix it, compile again, then test the behaviour.',example:'A missing semicolon is a syntax error. A wrong formula may compile successfully but produce an incorrect result.',code:'int total = 10 + 20;\\nprintf("%d", total);',check:'Can you distinguish a compile-time error from a logic error?'},
+ {title:'8. First Mini-Programs',level:'Applied',teach:'Combine variables, expressions and input/output to solve small problems. Start with one clear task, test normal values, boundary values and unusual values.',example:'A marks calculator can read three marks, calculate total and average, then display both.',code:'int a,b,c;\\nscanf("%d%d%d",&a,&b,&c);\\nint total=a+b+c;\\nprintf("%d",total);',check:'What test values would you use to verify the program?'}
+];
+
+const C_FUNDAMENTALS_DRILLS=[
+ ['Identifier Hunt','Which is a valid C identifier?',['2marks','total_marks','float','student-name'],1,'Identifiers may contain letters, digits and underscore but cannot begin with a digit or be a keyword.'],
+ ['Identifier Hunt','Which identifier is invalid because it begins with a digit?',['student1','_student','1student','student_1'],2,'An identifier cannot begin with a digit.'],
+ ['Program Anatomy','Where does execution of a normal C program begin?',['printf()','main()','scanf()','include'],1,'The main function is the entry point of a hosted C program.'],
+ ['Program Anatomy','Which symbol terminates this statement: int x = 5 ?',[':',';','.',','],1,'Most C statements end with a semicolon.'],
+ ['Variables','Which declaration creates an integer variable named count?',['integer count;','int count;','count int;','num count;'],1,'int is the standard C integer type keyword.'],
+ ['Variables','Which is a constant declaration?',['const int pass=40;','constant int pass=40;','int const? pass=40;','fixed int pass=40;'],0,'const makes the object non-modifiable through that identifier.'],
+ ['Types','What is the value of 5 / 2 when both operands are int?',['2','2.5','3','0'],0,'Integer division produces the integer quotient.'],
+ ['Types','Which expression forces floating-point division?',['5/2','(double)5/2','5%2','5-2'],1,'Casting one operand to double makes the division floating point.'],
+ ['Operators','What is 7 % 3?',['1','2','3','0'],0,'The remainder after integer division of 7 by 3 is 1.'],
+ ['Operators','Which operator means logical AND?',['&','&&','||','!'],1,'&& is logical AND; & is bitwise AND.'],
+ ['Input','Why is &n normally used in scanf("%d",&n)?',['It prints n','It passes n’s address','It converts n to double','It ends the program'],1,'scanf needs the address where it should store the input.'],
+ ['Output','What does printf("%d", 4+3) display?',['43','7','4+3','Error'],1,'The expression is evaluated before printf formats the integer result.'],
+ ['Debugging','A program compiles but calculates average incorrectly. What kind of problem is most likely?',['Syntax error','Logic error','Linker keyword','Identifier rule'],1,'Incorrect output from valid code is commonly a logic error.'],
+ ['Debugging','What should you read first after a compiler error?',['Random code','The compiler message','The keyboard manual','The final output'],1,'Compiler diagnostics usually identify the location and nature of syntax/type problems.'],
+ ['Expressions','What is the value of 3 + 4 * 2?',['14','11','10','9'],1,'Multiplication has higher precedence than addition, giving 3+8.'],
+ ['Expressions','Which improves clarity when combining conditions?',['Remove all parentheses','Use meaningful parentheses','Use random casts','Repeat the condition'],1,'Parentheses make intended grouping explicit.'],
+ ['Testing','Which is a boundary test for a pass mark of 40?',['85','60','40','25'],2,'40 is exactly the decision boundary.'],
+ ['Testing','Why test unusual inputs?',['To make code longer','To expose assumptions and defects','To avoid compiling','To remove variables'],1,'Unusual and boundary values reveal hidden assumptions.'],
+ ['Syntax','Which line is syntactically correct?',['int x = 5;','int x = ;','integer x = 5;','int = x 5;'],0,'The first declaration follows C syntax.'],
+ ['Algorithm','Before coding a small problem, what should you identify first?',['Font size','Input, process and output','Keyboard layout','File name only'],1,'IPO analysis gives the program a clear purpose and structure.']
+];
+
+const C_FUNDAMENTALS_PRACTICE=[
+ {title:'Output Prediction',kind:'mcq',prompt:'What does this program print?',code:'int a = 8, b = 3;\\nprintf("%d %d", a+b, a%b);',options:['11 2','83 2','11 3','5 2'],answer:0,hint:'Evaluate + and % separately.'},
+ {title:'Bug Fixing',kind:'bug',prompt:'Fix the input statement so the user can enter an integer.',code:'int age;\\nscanf("%d", age);',options:['scanf("%d", &age);','scanf("%d", age*1);','scanf("%d", *age);','scanf("%d", #age);'],answer:0,hint:'scanf needs the address of age.'},
+ {title:'Missing Code',kind:'missing',prompt:'Choose the missing expression that calculates the average as a decimal.',code:'int total=75, count=2;\\ndouble average = ______;',options:['total/count','(double)total/count','total%count','(int)total/count'],answer:1,hint:'At least one operand must participate in floating-point division.'},
+ {title:'Bug Fixing',kind:'bug',prompt:'The output should be 7. What should replace ???',code:'int a=3,b=4;\\nprintf("%d", ???);',options:['a+b','a*b','a-b','a/b'],answer:0,hint:'The requirement says add the two values.'},
+ {title:'Code Observation',kind:'trace',prompt:'What value is stored in result?',code:'int x=5;\\nint y=2;\\nint result=x/y;',options:['2','2.5','3','0'],answer:0,hint:'Both operands are integers.'},
+ {title:'Debugging Decision',kind:'scenario',prompt:'A program compiles successfully but prints the wrong total. What should you inspect first?',code:'The program builds without errors, but total is wrong.',options:['Logic and formula','Keyboard cable','Font family','File extension only'],answer:0,hint:'A compiling program can still contain logic errors.'}
+];
+
 const C_MODULES=[
  {id:1,title:'C Fundamentals',scope:'Build a strong foundation in C so that a beginner can read, write, compile, trace and explain simple programs confidently.',
   topics:['Programming mindset and problem statements','C program structure','main(), statements and blocks','Variables, constants and identifiers','Data types and type conversion','Operators and expressions','Input and output with printf/scanf','Compilation, errors and debugging basics'],
@@ -163,6 +206,7 @@ function openModule(root,trackId,moduleNo,programme){
  ws.querySelector('#startAssessment').onclick=()=>launchAssessmentCentre();
  ws.querySelectorAll('.drillReveal').forEach(b=>b.onclick=()=>showDrill(b));
  ws.querySelectorAll('.checkAnswer').forEach(b=>b.onclick=()=>checkPracticeAnswer(b));
+ ws.querySelectorAll('[data-practice-answer]').forEach(b=>b.onclick=()=>handlePracticeChoice(b));
  ws.querySelectorAll('.materialToggle').forEach(b=>b.onclick=()=>toggleMaterial(b));
  ws.scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -180,11 +224,11 @@ function genericModule(title,trackTitle,no){
 function moduleView(track,data,no,programme){
  const topicHtml=data.topics.map(x=>'<li>'+esc(x)+'</li>').join('');
  const matHtml=data.materials.map((x,i)=>'<div class="studyMaterial"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x)+'</strong><button class="materialToggle" data-open="0">Show guide</button><p class="materialBody" hidden>'+esc(materialGuide(x,data.title))+'</p></div>').join('');
- const drillHtml=data.drills.map((x,i)=>'<article class="drillCard"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(x)+'</h5><p>Attempt without looking at the answer. Then reveal the guidance and repeat until you can do it independently.</p></div><button class="drillReveal" data-text="'+esc(drillPrompt(data.title,x))+'">Start Drill</button></article>').join('');
+ const ds=drillStats(); const drillHtml=data.drills.map((x,i)=>'<article class="drillCard"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(x)+'</h5><p>Short game-style practice. Attempt the mission, get instant feedback and collect a Drill Star. Stars are rewards only and never change the academic score.</p></div><button class="drillReveal">Start Drill</button></article>').join('')+'<div class="drillRewardBar"><strong>⭐ Drill Stars: '+ds.stars+'</strong><span>'+ds.completed+' drills completed · up to 100 drills can be added to this module</span></div>';
  const practiceHtml=data.practice.map((x,i)=>'<article class="practiceLevel"><div class="practiceLevelNo">0'+(i+1)+'</div><div><span>PRACTICE LEVEL '+(i+1)+'</span><h5>'+esc(x.replace(/^Level \d+ — /,''))+'</h5><p>'+esc(practiceInstruction(data.title,i))+'</p></div><button class="checkAnswer" data-question="'+esc(practiceQuestion(data.title,i))+'" data-answer="'+esc(practiceAnswer(data.title,i))+'">Try One</button></article>').join('');
  return '<section class="moduleLearningWorkspace">'+
   '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
-  '<div class="masteryStrip"><div><strong>1</strong><span>Understand</span></div><div><strong>2</strong><span>Drill</span></div><div><strong>3</strong><span>Practise</span></div><div><strong>4</strong><span>Apply</span></div><div><strong>5</strong><span>Assess</span></div></div>'+
+  '<div class="masteryStrip"><div><strong>1</strong><span>Understand</span></div><div><strong>2</strong><span>Drill</span></div><div><strong>3</strong><span>Practise</span></div><div><strong>4</strong><span>Apply</span></div><div><strong>5</strong><span>Assess</span></div></div><div class="studentRewardBanner">🏅 <b>Drill Rewards</b><span>Collect stars for practice effort. Stars are motivational rewards only — they never alter marks, XP or academic results.</span><strong>⭐ '+drillStats().stars+' Stars</strong></div>'+
   '<div class="moduleLearningGrid">'+
    '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · SCOPE & OUTCOMES</span><h4>What you will master</h4><ul class="scopeList">'+topicHtml+'</ul></section>'+
    '<section class="learningSection"><span class="sectionEyebrow">02 · STUDY MATERIALS</span><h4>Learn at your own pace</h4><p class="slowLearnerNote">If a concept is difficult, do not skip it. Read the guide again, work through the example, repeat the drill and return to practice.</p>'+matHtml+'</section>'+
@@ -197,22 +241,45 @@ function moduleView(track,data,no,programme){
 }
 
 function materialGuide(resource,title){
- return 'Study this '+resource.toLowerCase()+' for '+title+'. Read it once for understanding, once while making your own notes, then close it and explain the idea in your own words. Return to this guide whenever a drill exposes a gap.';
+ if(title==='C Fundamentals'){
+  const lesson=C_FUNDAMENTALS_LESSON.find(x=>resource.toLowerCase().includes(x.title.split('.')[1]?.trim().toLowerCase()||'@@'));
+  if(lesson)return lesson.teach+'\\n\\nWorked example:\\n'+lesson.example+'\\n\\nCode:\\n'+lesson.code+'\\n\\nMicro-check: '+lesson.check;
+ }
+ return 'Read this resource in three passes: first for understanding, second while making your own notes, and third without looking at the notes. Then explain the idea aloud and complete a related drill.';
 }
 function drillPrompt(title,drill){return 'Module: '+title+'. Drill: '+drill+'.\n\nStep 1: attempt independently.\nStep 2: explain why your answer works.\nStep 3: create one similar example yourself.\nStep 4: repeat without notes.';}
-function practiceInstruction(title,i){return 'Complete a '+title+' exercise at this level. Check your work, correct errors, and repeat a similar question before progressing.';}
-function practiceQuestion(title,i){return 'For '+title+', explain the key idea for Practice Level '+(i+1)+' and give one small example that demonstrates it.';}
-function practiceAnswer(title,i){return 'Your answer should correctly explain the central '+title+' concept, show the relevant steps and include a valid example. Compare your explanation with the study material before progressing.';}
+function practiceInstruction(title,i){return i===0?'Solve the guided task, then explain each line.':i===1?'Find and fix the bug before checking the model.':i===2?'Predict the output before running or checking anything.':i===3?'Write the missing code and test at least two cases.':'Complete the challenge independently, then review edge cases and improve your solution.';}
+function practiceQuestion(title,i){const p=C_FUNDAMENTALS_PRACTICE[i%C_FUNDAMENTALS_PRACTICE.length];return p?.prompt||('Solve one '+title+' task and explain your reasoning.');}
+function practiceAnswer(title,i){const p=C_FUNDAMENTALS_PRACTICE[i%C_FUNDAMENTALS_PRACTICE.length];return p?'Model approach: '+p.hint:'Compare your solution with the module study material and repeat the task until you can explain every step.';}
 
+function drillStats(){return JSON.parse(localStorage.getItem('fxecDrillRewards')||'{"stars":0,"completed":0}');}
+function saveDrillStats(s){localStorage.setItem('fxecDrillRewards',JSON.stringify(s));}
 function showDrill(button){
- const old=button.parentElement.querySelector('.drillResult'); if(old){old.remove();return;}
- const p=document.createElement('div');p.className='drillResult';p.textContent=button.dataset.text;button.parentElement.appendChild(p);button.textContent='Hide Guidance';
+ const card=button.closest('.drillCard');
+ const old=card.querySelector('.drillInteractive'); if(old){old.remove();button.textContent='Start Drill';return;}
+ const q=C_FUNDAMENTALS_DRILLS[Math.floor(Math.random()*C_FUNDAMENTALS_DRILLS.length)];
+ const box=document.createElement('div');box.className='drillInteractive';
+ box.innerHTML='<div class="drillGameHeader"><b>🎯 DRILL MISSION</b><span>+1 ★ for an attempt</span></div><h6>'+esc(q[0])+'</h6><p>'+esc(q[1])+'</p><div class="drillOptions">'+q[2].map((o,i)=>'<button data-answer="'+i+'">'+String.fromCharCode(65+i)+'. '+esc(o)+'</button>').join('')+'</div><div class="drillFeedback"></div>';
+ card.appendChild(box);button.textContent='Close Drill';
+ box.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{
+  const stats=drillStats(); if(!box.dataset.rewarded){stats.stars+=1;stats.completed+=1;saveDrillStats(stats);box.dataset.rewarded='1';}
+  const ok=Number(b.dataset.answer)===q[3],fb=box.querySelector('.drillFeedback');
+  fb.className='drillFeedback '+(ok?'correct':'review');fb.innerHTML=(ok?'⭐ Correct! Drill Star earned. ':'Keep going. ')+'<b>'+esc(q[4])+'</b><br><span>Drill Stars: '+stats.stars+' · Completed: '+stats.completed+'</span>';
+  if(ok)b.disabled=true;
+ });
 }
 function toggleMaterial(button){
  const body=button.parentElement.querySelector('.materialBody');const open=button.dataset.open==='1';
- body.hidden=open;button.dataset.open=open?'0':'1';button.textContent=open?'Show guide':'Hide guide';
+ body.hidden=open;button.dataset.open=open?'0':'1';button.textContent=open?'Teach me':'Hide lesson';
 }
-function checkPracticeAnswer(button){
+function handlePracticeChoice(button){
+ const task=button.closest('.practiceLevel'), all=[...task.querySelectorAll('[data-practice-answer]')], idx=all.indexOf(button);
+ const bank=C_FUNDAMENTALS_PRACTICE; const p=bank[Number(task.dataset.practice)%bank.length]; if(!p)return;
+ const ok=idx===p.answer,fb=task.querySelector('.practiceFeedback');
+ fb.className='practiceFeedback '+(ok?'correct':'review');
+ fb.innerHTML=(ok?'✓ Correct. Continue to the next level when you can repeat it independently.':'↻ Review and try again.')+'<br><small>'+esc(p.hint)+'</small>';
+ if(ok) all.forEach(x=>x.disabled=true);
+}function checkPracticeAnswer(button){
  const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model check:</b> '+esc(button.dataset.answer)+'</p>';
  button.parentElement.appendChild(box);button.textContent='Review Prompt';
 }
