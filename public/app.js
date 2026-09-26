@@ -253,13 +253,16 @@ function setupStudio(){
 
 
 const C_SKILL_PATH = [
- {id:'fundamentals',title:'C Fundamentals',items:['Variables & data types','Input/output','Operators','Conditions','Loops'],xp:20},
- {id:'strings',title:'Strings',items:['Character arrays','\\0','String functions','Manual processing','String analysis'],xp:40},
- {id:'arrays',title:'Arrays',items:['1D arrays','Traversal','Searching','Sorting','Frequency arrays'],xp:30},
- {id:'functions',title:'Functions',items:['Parameters','Return values','Scope','Modular design','Recursion'],xp:30},
- {id:'pointers',title:'Pointers',items:['Addresses','Dereferencing','Pointers & arrays','Pointers & strings','Dynamic memory'],xp:40},
- {id:'algorithms',title:'Algorithms & Problem Solving',items:['Decomposition','Patterns','Complexity','Debugging','Edge cases'],xp:40},
- {id:'coding',title:'Coding Challenges',items:['Compile & run','Output prediction','Bug fixing','Missing code','Hidden tests'],xp:50}
+ {id:'fundamentals',title:'C Fundamentals',items:['Program structure','Variables & data types','Constants','Input/output','Operators'],xp:20},
+ {id:'control-flow',title:'Control Flow',items:['Conditions','if/else','switch','for loops','while/do-while loops','Nested control flow'],xp:25},
+ {id:'arrays',title:'Arrays',items:['1D arrays','Traversal','Searching','Sorting','Frequency arrays','2D arrays'],xp:30},
+ {id:'functions',title:'Functions & Modular Programming',items:['Function declaration/definition','Parameters','Return values','Scope','Modular design','Recursion'],xp:30},
+ {id:'pointers',title:'Pointers',items:['Addresses','Dereferencing','Pointer arithmetic','Pointers & arrays','Pointers & functions'],xp:35},
+ {id:'structures',title:'Structures, Unions & User-Defined Types',items:['Structures','Nested structures','Arrays of structures','Unions','typedef','Enumerations'],xp:30},
+ {id:'memory',title:'Dynamic Memory & Memory Management',items:['malloc()','calloc()','realloc()','free()','Memory ownership','Common memory errors'],xp:35},
+ {id:'files',title:'File Handling',items:['File pointers','Opening and closing files','Reading and writing','Text files','Binary files','Error handling'],xp:30},
+ {id:'strings',title:'Strings',items:['Character arrays','\\0','String input','String library functions','Manual string processing','String analysis','Pattern-based problems'],xp:40},
+ {id:'advanced',title:'Advanced C',items:['Pointers & strings','Function pointers','Preprocessor and macros','Command-line arguments','Bitwise operations','Advanced debugging','Integrated problem solving'],xp:50}
 ];
 async function loadCProgression(){
  const host=$('cProgressionGrid'); if(!host)return;
