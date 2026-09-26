@@ -1622,12 +1622,12 @@ function competencyQuestionValidation(questions) {
 }
 
 function competencyGenerationPrompt(trackId, day) {
-  const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=meta.defaultTopics[day-1]||'Foundations';
+  const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
   return 'You are a senior assessment designer for Francis Xavier Engineering College.\nCreate Day '+day+' of a five-day assessment for '+meta.title+', intended for first-year engineering students.\n\nDAY TOPIC: '+topic+'\nCURRICULUM SCOPE:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\n\nGenerate EXACTLY 50 questions: 30 mcq (one correct), 10 multipleCorrect (exactly 2 or 3 correct), 10 scenario (one correct). Difficulty exactly 15 easy, 20 moderate, 15 tough.\n\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Each question must also have an activityType chosen from: mcq, multiple-correct, match, code-observation, output-prediction, bug-identification, missing-code, coding-challenge, diagram-interpretation, scenario-analysis, listening, engineering-decision. The activityType controls presentation while type controls scoring. For code-observation, output-prediction, bug-identification, missing-code or coding-challenge, include a short standard-C code field when appropriate. For match/diagram/listening/engineering-decision, use the four-option scoring format while framing the task appropriately. Return JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq|multipleCorrect|scenario","activityType":"...","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","code":"optional standard C code","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}';
 }
 
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
-  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 50 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Day '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\nQUESTIONS:\n'+JSON.stringify(questions);
+  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 50 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Module '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\nQUESTIONS:\n'+JSON.stringify(questions);
   return generateJson(auditPrompt);
 }
 
@@ -1643,7 +1643,7 @@ async function generateHighStandardCompetencyDay(trackId, day) {
     if(audit2.valid!==true){ lastIssues=audit2.issues||['Audit pass 2 failed.']; continue; }
     return generated.map((q,i)=>({...q,id:trackId+'-D'+day+'-Q'+String(i+1).padStart(2,'0'),reviewed:false,generatedBy:'AI',generatedAt:new Date()}));
   }
-  throw new Error('Could not produce a fully validated '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' Day '+day+' question bank. '+lastIssues.slice(0,5).join(' '));
+  throw new Error('Could not produce a fully validated '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' Module '+day+' question bank. '+lastIssues.slice(0,5).join(' '));
 }
 
 export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
@@ -1652,7 +1652,7 @@ export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
   for(let day=1;day<=10){
     const questions=await generateHighStandardCompetencyDay(trackId,day);
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-    batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Day '+day,topic:meta.defaultTopics[day-1]||('Day '+day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),topic:competencyModuleTitle(trackId,day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
     poolWrites.push({day,questions});
     created.push({day,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent});
   }
@@ -1664,8 +1664,8 @@ export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
     for(const q of item.questions) pb.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day:item.day,poolId:poolRef.id,updatedAt:FieldValue.serverTimestamp()},{merge:true});
     await pb.commit();
   }
-  await db.collection('adminActions').add({action:'autoGenerateCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,days:5,questionCount:250,createdAt:FieldValue.serverTimestamp()});
-  return {success:true,trackId,trackTitle:meta.title,days:created,totalQuestions:250,message:'Five days generated with 50-question master pools and independently audited twice. Status remains DRAFT until administrator review and approval.'};
+  await db.collection('adminActions').add({action:'autoGenerateCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,modules:10,questionCount:500,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,trackTitle:meta.title,modules:created,totalQuestions:500,message:'Ten module assessments generated with 50-question master pools and independently audited twice. Status remains DRAFT until administrator review and approval.'};
 });
 
 function starterCompetencyQuestions(trackId,day){
@@ -1690,12 +1690,12 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
   const trackId=competencyTrackOrThrow(request.data?.trackId);
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
   const batch=db.batch();
-  for(let day=1;day<=5;day++){
+  for(let day=1;day<=10){
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
     batch.set(ref,{
       trackId,trackTitle:meta.title,day,
-      title:cleanText(request.data?.title||meta.title,160)+' — Day '+day,
-      topic:meta.defaultTopics[day-1]||('Day '+day),
+      title:cleanText(request.data?.title||meta.title,160)+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
+      topic:competencyModuleTitle(trackId,day),
       date:null,openAt:null,closeAt:null,
       questions:starterCompetencyQuestions(trackId,day),questionCount:5,status:'draft',isPublished:false,
       createdBy:adminUser.uid,createdAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
@@ -1703,7 +1703,7 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
   }
   await batch.commit();
   await db.collection('adminActions').add({action:'createCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
-  return {success:true,trackId,days:5,message:'Blank editable programme created. Use Auto Generate for the full 250-question audited bank.'};
+  return {success:true,trackId,modules:10,message:'Blank editable 10-module programme created. Faculty/admin must load, review, schedule and approve each module assessment before students can see it.'};
 });
 
 export const getAdminCompetencyQuestionPool = onCall({cors:CALLABLE_CORS},async request=>{
@@ -1716,7 +1716,7 @@ export const getAdminCompetencyQuestionPool = onCall({cors:CALLABLE_CORS},async 
   const task=taskSnap.data();
   const poolSnap=await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).collection('questions').get();
   const questions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
-  return {trackId,day,title:task.title,topic:task.topic,questionCount:questions.length,recommendedQuestionCount:Number(task.recommendedQuestionCount||Math.min(15,questions.length)),status:task.status,questions};
+  return {trackId,day,title:task.title,topic:task.topic,moduleTitle:competencyModuleTitle(trackId,day),questionCount:questions.length,recommendedQuestionCount:Number(task.recommendedQuestionCount||Math.min(15,questions.length)),status:task.status,questions};
 });
 
 export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},async request=>{
@@ -1730,7 +1730,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   const adminUser=requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
   const day=Number(request.data?.day);
-  if(!Number.isInteger(day)||day<1||day>5) throw new HttpsError('invalid-argument','Day must be between 1 and 5.');
+  if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
   const date=cleanText(request.data?.date,20);
   const openAt=cleanText(request.data?.openAt,60);
   const closeAt=cleanText(request.data?.closeAt,60);
