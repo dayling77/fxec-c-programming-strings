@@ -1342,6 +1342,67 @@ export const exportResults = onCall({ cors: CALLABLE_CORS }, async request => {
   return { format, path };
 });
 
+const COMPETENCY_ACTIVITY_CATALOG = Object.freeze({
+  communication:[{id:'communication-foundation',title:'Communication Foundation',type:'concept',xp:10},{id:'communication-listening',title:'Listening & Meaning',type:'listening',xp:10},{id:'communication-speaking',title:'Speaking & Professional Interaction',type:'scenario-analysis',xp:10},{id:'communication-writing',title:'Professional Writing',type:'practice',xp:10},{id:'communication-assessment',title:'Communication Assessment',type:'assessment',xp:10}],
+  aptitude:[{id:'aptitude-quantitative',title:'Quantitative Foundations',type:'mcq',xp:10},{id:'aptitude-logic',title:'Logical Reasoning',type:'multiple-correct',xp:10},{id:'aptitude-data',title:'Data Interpretation',type:'diagram-interpretation',xp:10},{id:'aptitude-timed',title:'Timed Problem Solving',type:'challenge',xp:10},{id:'aptitude-assessment',title:'Aptitude Assessment',type:'assessment',xp:10}],
+  'core-engineering':[{id:'core-fundamentals',title:'Engineering Fundamentals',type:'concept',xp:10},{id:'core-diagrams',title:'Diagram Interpretation',type:'diagram-interpretation',xp:10},{id:'core-decisions',title:'Engineering Decisions',type:'engineering-decision',xp:10},{id:'core-scenarios',title:'Engineering Scenario Analysis',type:'scenario-analysis',xp:10},{id:'core-assessment',title:'Core Engineering Assessment',type:'assessment',xp:10}],
+  'c-programming':[{id:'c-foundation',title:'C Fundamentals',type:'mcq',xp:10},{id:'c-observe',title:'Code Observation & Output',type:'code-observation',xp:10},{id:'c-practice',title:'Debugging & Missing Code',type:'bug-identification',xp:10},{id:'c-coding',title:'Hidden-Test Coding Challenge',type:'coding-challenge',xp:15},{id:'c-assessment',title:'C Programming Assessment',type:'assessment',xp:15}],
+  'problem-solving':[{id:'problem-decomposition',title:'Problem Decomposition',type:'concept',xp:10},{id:'problem-patterns',title:'Pattern Recognition',type:'output-prediction',xp:10},{id:'problem-debugging',title:'Debugging Strategy',type:'bug-identification',xp:10},{id:'problem-algorithms',title:'Algorithmic Challenge',type:'coding-challenge',xp:10},{id:'problem-assessment',title:'Problem-Solving Assessment',type:'assessment',xp:10}],
+  analytical:[{id:'analytical-reading',title:'Reading for Meaning',type:'reading',xp:10},{id:'analytical-listening',title:'Listening for Evidence',type:'listening',xp:10},{id:'analytical-inference',title:'Inference & Evidence',type:'scenario-analysis',xp:10},{id:'analytical-critical',title:'Critical Reasoning',type:'multiple-correct',xp:10},{id:'analytical-assessment',title:'Analytical Skills Assessment',type:'assessment',xp:10}]
+});
+
+function competencyTrackId(trackId){
+  const normalized=String(trackId||'').trim();
+  if(!Object.prototype.hasOwnProperty.call(COMPETENCY_ACTIVITY_CATALOG,normalized)) throw new HttpsError('invalid-argument','Unknown competency track.');
+  return normalized;
+}
+
+export const getCompetencyActivities = onCall({cors:CALLABLE_CORS},async request=>{
+  requireAuth(request);
+  const trackId=competencyTrackId(request.data?.trackId);
+  const activities=COMPETENCY_ACTIVITY_CATALOG[trackId].map((x,i)=>({...x,sequence:i+1}));
+  const snap=await db.collection('competencyActivityProgress').doc(request.auth.uid).get();
+  const completed=Array.isArray(snap.data()?.tracks?.[trackId])?snap.data().tracks[trackId]:[];
+  return {trackId,activities:activities.map(x=>({...x,completed:completed.includes(x.id)}))};
+});
+
+export const completeCompetencyActivity = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const trackId=competencyTrackId(request.data?.trackId);
+  const activityId=cleanText(request.data?.activityId,120);
+  const activities=COMPETENCY_ACTIVITY_CATALOG[trackId];
+  const index=activities.findIndex(x=>x.id===activityId);
+  if(index<0) throw new HttpsError('invalid-argument','Unknown competency activity.');
+  const progressRef=db.collection('competencyActivityProgress').doc(user.uid);
+  let result;
+  await db.runTransaction(async tx=>{
+    const snap=await tx.get(progressRef);
+    const data=snap.exists?snap.data():{};
+    const tracks={...(data.tracks||{})};
+    const completed=Array.isArray(tracks[trackId])?[...tracks[trackId]]:[];
+    if(completed.includes(activityId)){ result={alreadyCompleted:true,xpEarned:0,completed}; return; }
+    const previous=activities[index-1];
+    if(previous && !completed.includes(previous.id)) throw new HttpsError('failed-precondition','Complete the previous activity first.');
+    completed.push(activityId);
+    tracks[trackId]=completed;
+    const xpEarned=Number(activities[index].xp||0);
+    const cpRef=db.collection('competencyProgress').doc(user.uid);
+    const cpSnap=await tx.get(cpRef);
+    const cp=cpSnap.exists?cpSnap.data():{};
+    const oldTotal=Number(cp.xp||0);
+    const trackData={...(cp.tracks||{})};
+    const currentTrack=trackData[trackId]||{xp:0,progress:0};
+    const trackXp=Number(currentTrack.xp||0)+xpEarned;
+    const trackTotal=activities.reduce((sum,x)=>sum+Number(x.xp||0),0);
+    const nextTrack={...currentTrack,xp:trackXp,progress:Math.min(100,Math.round(trackXp/Math.max(1,trackTotal)*100))};
+    const totalXp=oldTotal+xpEarned;
+    tx.set(progressRef,{tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    tx.set(cpRef,{xp:totalXp,level:Math.floor(totalXp/100)+1,tracks:{...trackData,[trackId]:nextTrack},updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    result={alreadyCompleted:false,xpEarned,completed};
+  });
+  return result;
+});
+
 const COMPETENCY_TRACK_META = Object.freeze({
   communication:'Communication',
   aptitude:'Aptitude',
