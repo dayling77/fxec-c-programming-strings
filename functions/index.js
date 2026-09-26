@@ -1539,7 +1539,7 @@ const COMPETENCY_SOURCE_MAPS = Object.freeze({
 
 function competencyQuestionValidation(questions) {
   const errors = [];
-  if (!Array.isArray(questions) || questions.length !== COMPETENCY_ASSESSMENT_BLUEPRINT.questionsPerDay) return {ok:false, errors:['Exactly 25 questions are required.']};
+  if (!Array.isArray(questions) || questions.length !== COMPETENCY_ASSESSMENT_BLUEPRINT.questionsPerDay) return {ok:false, errors:['Exactly 50 questions are required.']};
   const ids = new Set(), counts = {mcq:0, multipleCorrect:0, scenario:0}, diffs = {easy:0, moderate:0, tough:0};
   questions.forEach((q,i)=>{
     const n=i+1;
@@ -1574,7 +1574,7 @@ function competencyGenerationPrompt(trackId, day) {
 }
 
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
-  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 25 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Day '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\nQUESTIONS:\n'+JSON.stringify(questions);
+  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 50 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Day '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\nQUESTIONS:\n'+JSON.stringify(questions);
   return generateJson(auditPrompt);
 }
 
@@ -1595,16 +1595,24 @@ async function generateHighStandardCompetencyDay(trackId, day) {
 
 export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request), trackId=competencyTrackOrThrow(request.data?.trackId), meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
-  const batch=db.batch(), created=[];
+  const batch=db.batch(), poolWrites=[], created=[];
   for(let day=1;day<=5;day++){
     const questions=await generateHighStandardCompetencyDay(trackId,day);
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-    batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Day '+day,topic:meta.defaultTopics[day-1]||('Day '+day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
-    created.push({day,questionCount:questions.length});
+    batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Day '+day,topic:meta.defaultTopics[day-1]||('Day '+day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    poolWrites.push({day,questions});
+    created.push({day,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent});
   }
   await batch.commit();
+  for(const item of poolWrites){
+    const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+item.day);
+    await poolRef.set({trackId,day:item.day,questionCount:item.questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',generatedBy:'AI',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    let pb=db.batch();
+    for(const q of item.questions) pb.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day:item.day,poolId:poolRef.id,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    await pb.commit();
+  }
   await db.collection('adminActions').add({action:'autoGenerateCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,days:5,questionCount:250,createdAt:FieldValue.serverTimestamp()});
-  return {success:true,trackId,trackTitle:meta.title,days:created,totalQuestions:125,message:'Five days generated with 50-question master pools and independently audited twice. Status remains DRAFT until administrator review and approval.'};
+  return {success:true,trackId,trackTitle:meta.title,days:created,totalQuestions:250,message:'Five days generated with 50-question master pools and independently audited twice. Status remains DRAFT until administrator review and approval.'};
 });
 
 function starterCompetencyQuestions(trackId,day){
@@ -1642,7 +1650,7 @@ export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},asy
   }
   await batch.commit();
   await db.collection('adminActions').add({action:'createCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
-  return {success:true,trackId,days:5,message:'Blank editable programme created. Use Auto Generate for the full 125-question audited bank.'};
+  return {success:true,trackId,days:5,message:'Blank editable programme created. Use Auto Generate for the full 250-question audited bank.'};
 });
 
 export const getAdminCompetencyQuestionPool = onCall({cors:CALLABLE_CORS},async request=>{
@@ -1682,7 +1690,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
   await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||COMPETENCY_ASSESSMENT_TRACKS[trackId].defaultTopics[day-1],title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Day '+day,questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
-  await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(15,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolBatch=db.batch();
   for(const q of questions){
     poolBatch.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day,poolId:poolRef.id,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
