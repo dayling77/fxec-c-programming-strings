@@ -128,8 +128,16 @@ function makeScheduleData(item) {
 }
 
 async function ensureSchedules() {
-  // Schedules are created and published only by the administrator.
-  return;
+  // Idempotently seed missing five-day assessment windows.
+  // Existing documents are never overwritten, so administrator changes remain authoritative.
+  for (const item of FIVE_DAY_SCHEDULE) {
+    const ref = db.collection('assessmentSchedules').doc(item.date);
+    const snap = await ref.get();
+    if (!snap.exists) {
+      await ref.set(makeScheduleData(item));
+      logger.info('Seeded missing assessment schedule', { date: item.date, day: item.day });
+    }
+  }
 }
 
 async function sendEmail({ to, name, subject, html, text }) {
@@ -1115,7 +1123,7 @@ function enforceCodeLimits(sourceCode, stdin){
 
 async function consumeCompilerQuota(uid, amount=1){
   const ref=db.collection('compilerUsage').doc(uid);
-  const today=new Date().toISOString().slice(0,10);
+  const today=new Intl.DateTimeFormat('en-CA',{timeZone:CONFIG.timezone,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   return db.runTransaction(async tx=>{
     const snap=await tx.get(ref); const d=snap.exists?snap.data():{};
     const count=d.date===today?Number(d.count||0):0;
