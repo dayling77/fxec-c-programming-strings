@@ -422,6 +422,8 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .caTrackHeader{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .caTrackHeader h4{margin:3px 0 0;font-size:20px;color:#102a43}
 .caStudentDayGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.caDayTabs button{min-width:92px}.caDayTabs button small{display:block;margin-top:3px;font-size:8px;font-weight:800;opacity:.7}
+
 .caStudentDay{border:1px solid #dbe4ef;border-radius:15px;padding:16px;background:#fff;box-shadow:0 4px 14px rgba(15,43,82,.045);transition:.15s}
 .caStudentDay.isOpen{border-color:#b9d3f6;box-shadow:0 7px 20px rgba(37,99,235,.08)}
 .caStudentDay:hover.isOpen{transform:translateY(-1px);border-color:#8fb5e8}
