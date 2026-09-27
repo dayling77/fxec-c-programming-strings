@@ -291,7 +291,7 @@ function openModule(root,trackId,moduleNo,programme){
  const ws=root.querySelector('#competencyWorkspace');
  ws.innerHTML=moduleView(track,data,moduleNo,programme);
  ws.querySelector('#backToModules').onclick=()=>openTrack(root,trackId);
- ws.querySelector('#startAssessment').onclick=()=>launchModuleAssessment(trackId,moduleNo);
+ ws.querySelector('#startAssessment').onclick=()=>launchModuleAssessment(trackId,moduleNo,ws);
  ws.querySelectorAll('.drillReveal').forEach(b=>b.onclick=()=>showDrill(b));
  ws.querySelectorAll('.addDrillsButton').forEach(b=>b.onclick=()=>addTenDrills(b.closest('.drillRewardBar')?.parentElement?.querySelector('.drillCard')?.dataset.module||'C Fundamentals',b.closest('.drillRewardBar')));
  ws.querySelectorAll('.checkAnswer').forEach(b=>b.onclick=()=>checkPracticeAnswer(b));
@@ -589,19 +589,18 @@ function moduleView(track,data,no,programme){
   '<section class="learningSection leaderboardSection"><span class="sectionEyebrow">STUDENT PERFORMANCE</span><h4>🏆 Top Performers — '+esc(track.title)+'</h4><p>Shown from recorded competency points and practice rewards.</p><div id="competencyLeaderboard"><div class="leaderboardLoading">Loading top performers…</div></div></section>'+
   codingHtml+
   '<section class="learningSection challengeSection"><span class="sectionEyebrow">'+(track.id==='c-programming'?'06':'05')+' · CHALLENGE</span><h4>Apply what you have learned</h4><div class="challengeBox"><p>'+esc(data.challenge)+'</p><ul><li>Write the solution in the line-numbered editor.</li><li>Run it against normal, boundary and unusual inputs.</li><li>Fix every compiler or logic error.</li><li>Review and improve before moving to assessment.</li></ul></div></section>'+
-  '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · ASSESSMENT</span><h4>Module Mastery Assessment</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ Study completed</span><span>✓ Drills attempted</span><span>✓ Practice attempted</span><span>✓ Challenge attempted</span></div><button id="startAssessment">Open Assessment Centre →</button><p class="assessmentNote">Only faculty/admin-approved assessment pools appear to students. Each assessment has its own launch date, opening time and closing time.</p></section></section>';
+  '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · ⭐ STAR ASSESSMENT</span><h4>Module Mastery Assessment</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ '+(track.id==='c-programming'?'Coding included':'Module questions only')+'</span><span>✓ 15 questions for each student</span><span>✓ Module-specific question pool</span><span>✓ Admin/faculty approval required</span></div><button id="startAssessment">Load Module '+String(no).padStart(2,'0')+' STAR Assessment →</button><div id="moduleAssessmentMount" class="assessmentInlineMount"></div><p class="assessmentNote">This assessment stays inside '+esc(data.title)+'. Questions are never mixed with another module.</p></section></section>';
 }
 function materialGuide(resource,title){return 'Study this topic in three passes. First understand the idea. Second trace the worked example line by line. Third close the notes and reproduce the idea yourself. Then complete a related drill and explain the reasoning aloud. Resource: '+resource+'.';}
 function checkPracticeAnswer(button){const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model approach:</b> '+esc(button.dataset.answer)+'</p>';button.parentElement.appendChild(box);button.textContent='Review Prompt';}
 
-async function launchModuleAssessment(trackId,moduleNo){
- document.querySelectorAll('.studentHiddenPanel').forEach(p=>p.hidden=true);
- const panel=document.getElementById('competencyAssessmentPanel');
- if(!panel)return;
- panel.hidden=false;
- panel.scrollIntoView({behavior:'smooth',block:'start'});
+async function launchModuleAssessment(trackId,moduleNo,workspace=null){
  const taskId=String(trackId)+'_D'+String(moduleNo);
- if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId);
+ const mount=workspace?.querySelector('#moduleAssessmentMount')||document.getElementById('competencyAssessmentLaunch');
+ if(!mount)return;
+ mount.innerHTML='<div class="caLoading"><strong>Loading Module '+String(moduleNo)+' STAR Assessment…</strong><span>Checking the approved question pool and opening window.</span></div>';
+ mount.scrollIntoView({behavior:'smooth',block:'start'});
+ if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId,mount.id||'moduleAssessmentMount');
 }
 
 document.addEventListener('click',async e=>{
