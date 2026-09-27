@@ -1,6 +1,7 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import { PREPARED_C_PROGRAMMING_QUESTION_BANK } from './prepared-c-programming-bank.js';
 import { C_STAR_CODING_QUESTIONS } from './c-competency-coding-bank.js';
+import { C_COMPETITIVE_CHALLENGES } from './c-competitive-coding-bank.js';
 import { onSchedule } from 'firebase-functions/v2/scheduler';
 import { onDocumentCreated } from 'firebase-functions/v2/firestore';
 import { defineJsonSecret, defineString } from 'firebase-functions/params';
@@ -1078,6 +1079,8 @@ const C_CHALLENGES = Object.freeze({
   }
 });
 
+const C_COMPETITIVE_CHALLENGE_MAP = Object.freeze(Object.fromEntries(C_COMPETITIVE_CHALLENGES.map(x => [x.id, x])));
+
 function normalizeCompilerText(value){
   return String(value ?? '').replace(/\r\n/g,'\n').trim();
 }
@@ -1174,7 +1177,7 @@ export const runCCode = onCall({cors:CALLABLE_CORS,timeoutSeconds:30,memory:'512
 export const submitCChallenge = onCall({cors:CALLABLE_CORS,timeoutSeconds:120,memory:'512MiB'}, async request=>{
   const user=requireAuth(request);
   const challengeId=String(request.data?.challengeId||'');
-  const challenge=C_CHALLENGES[challengeId];
+  const challenge=C_CHALLENGES[challengeId] || C_COMPETITIVE_CHALLENGE_MAP[challengeId];
   if(!challenge) throw new HttpsError('invalid-argument','Unknown C challenge.');
   const sourceCode=String(request.data?.sourceCode||'');
   enforceCodeLimits(sourceCode,'');
