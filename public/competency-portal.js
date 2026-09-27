@@ -684,9 +684,10 @@ async function launchModuleAssessment(trackId,moduleNo,workspace=null){
  const taskId=String(trackId)+'_D'+String(moduleNo);
  const mount=workspace?.querySelector('#moduleAssessmentMount')||document.getElementById('competencyAssessmentLaunch');
  if(!mount)return;
+ mount.id='moduleAssessmentMount';
  mount.innerHTML='<div class="caLoading"><strong>Loading Module '+String(moduleNo)+' Final Assessment…</strong><span>Checking the approved question pool and opening window.</span></div>';
  mount.scrollIntoView({behavior:'smooth',block:'start'});
- if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId,mount.id||'moduleAssessmentMount');
+ if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId,'moduleAssessmentMount');
 }
 
 document.addEventListener('click',async e=>{
