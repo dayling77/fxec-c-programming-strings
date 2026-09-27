@@ -1,5 +1,6 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
 import { PREPARED_C_PROGRAMMING_QUESTION_BANK } from './prepared-c-programming-bank.js';
+import { C_STAR_CODING_QUESTIONS } from './c-competency-coding-bank.js';
 import { onSchedule } from 'firebase-functions/v2/scheduler';
 import { onDocumentCreated } from 'firebase-functions/v2/firestore';
 import { defineJsonSecret, defineString } from 'firebase-functions/params';
@@ -1650,16 +1651,23 @@ function competencyQuestionValidation(questions) {
     if(!['mcq','multipleCorrect','scenario'].includes(q.type)) errors.push('Q'+n+': invalid type.'); else counts[q.type]++;
     if(!['easy','moderate','tough'].includes(q.difficulty)) errors.push('Q'+n+': invalid difficulty.'); else diffs[q.difficulty]++;
     if(!cleanText(q.prompt,5000)) errors.push('Q'+n+': missing prompt.');
-    if(!Array.isArray(q.options) || q.options.length!==4) errors.push('Q'+n+': exactly 4 options required.');
-    else {
-      const normalized=q.options.map(x=>cleanText(x,1000).toLowerCase());
-      if(normalized.some(x=>!x)) errors.push('Q'+n+': blank option.');
-      if(new Set(normalized).size!==4) errors.push('Q'+n+': duplicate options.');
-      if(q.type==='multipleCorrect') {
-        if(!Array.isArray(q.answer) || q.answer.length<2 || q.answer.length>3) errors.push('Q'+n+': multiple-correct needs 2 or 3 keys.');
-        else q.answer.forEach(a=>{if(!Number.isInteger(a)||a<0||a>=4) errors.push('Q'+n+': answer index '+a+' is not a valid option.');});
-        if(Array.isArray(q.answer) && new Set(q.answer).size!==q.answer.length) errors.push('Q'+n+': duplicate answer indexes.');
-      } else if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=4) errors.push('Q'+n+': answer key does not point to an existing option.');
+    const isCoding=q.activityType==='coding-challenge';
+    if(isCoding){
+      if(!cleanText(q.starter,20000)) errors.push('Q'+n+': coding starter missing.');
+      if(!Array.isArray(q.codingTests)||q.codingTests.length<2) errors.push('Q'+n+': coding tests missing.');
+      if(!cleanText(q.sampleInput,5000)||!cleanText(q.sampleOutput,5000)) errors.push('Q'+n+': coding sample missing.');
+    }else{
+      if(!Array.isArray(q.options) || q.options.length!==4) errors.push('Q'+n+': exactly 4 options required.');
+      else {
+        const normalized=q.options.map(x=>cleanText(x,1000).toLowerCase());
+        if(normalized.some(x=>!x)) errors.push('Q'+n+': blank option.');
+        if(new Set(normalized).size!==4) errors.push('Q'+n+': duplicate options.');
+        if(q.type==='multipleCorrect') {
+          if(!Array.isArray(q.answer) || q.answer.length<2 || q.answer.length>3) errors.push('Q'+n+': multiple-correct needs 2 or 3 keys.');
+          else q.answer.forEach(a=>{if(!Number.isInteger(a)||a<0||a>=4) errors.push('Q'+n+': answer index '+a+' is not a valid option.');});
+          if(Array.isArray(q.answer) && new Set(q.answer).size!==q.answer.length) errors.push('Q'+n+': duplicate answer indexes.');
+        } else if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=4) errors.push('Q'+n+': answer key does not point to an existing option.');
+      }
     }
     if(!cleanText(q.explanation,50)) errors.push('Q'+n+': missing explanation.');
     if(!Number.isFinite(Number(q.timeLimitSeconds)) || Number(q.timeLimitSeconds)<20) errors.push('Q'+n+': invalid time limit.');
@@ -1702,8 +1710,16 @@ export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
   const batch=db.batch();
   const created=[];
   for(let day=1;day<=10;day++){
-    const questions=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP'+String(day).padStart(2,'0')+'-D'+day+'-'));
-    if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' does not contain exactly 50 questions.');
+    const baseQuestions=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP'+String(day).padStart(2,'0')+'-D'+day+'-'));
+    if(baseQuestions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' does not contain exactly 50 questions.');
+    const coding=C_STAR_CODING_QUESTIONS.filter(q=>Number(String(q.id).split('-D')[1]?.split('-')[0])===day);
+    if(coding.length!==1) throw new HttpsError('failed-precondition','C STAR coding bank is missing Module '+day+'.');
+    const questions=[...baseQuestions.filter(q=>q.type!=='scenario'),coding[0]];
+    if(questions.length!==41) throw new HttpsError('failed-precondition','Prepared Module '+day+' coding composition is invalid.');
+    // Keep the formal master size at 50: retain nine of the original scenario items and replace one with the real coding task.
+    const scenario=baseQuestions.filter(q=>q.type==='scenario').slice(0,9);
+    questions.push(...scenario);
+    if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' must contain exactly 50 questions.');
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
     batch.set(ref,{
       trackId,trackTitle:meta.title,day,
@@ -1933,7 +1949,7 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
     if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
     const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
-    const questions=shuffle(sourceQuestions).slice(0,recommendedCount).map(q=>{const {answer,explanation,audioText,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
+    const questions=shuffle(sourceQuestions).slice(0,recommendedCount).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
     const attemptRef=db.collection('competencyAssessmentAttempts').doc();
     await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
     return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions,recommendedQuestionCount:questions.length,preview:admin};
@@ -1960,10 +1976,25 @@ export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async requ
   const pool=taskSnap.data().questions||[],byId=new Map(pool.map(q=>[q.id,q]));
   const allowed=new Set(attempt.questionIds||[]);
   let correct=0;
+  const codingSubmissions=answers.filter(x=>allowed.has(x.questionId)&&byId.get(x.questionId)?.activityType==='coding-challenge');
+  if(codingSubmissions.length) await consumeCompilerQuota(user.uid,codingSubmissions.reduce((n,x)=>n+Number(byId.get(x.questionId)?.codingTests?.length||0),0));
   for(const submitted of answers){
     if(!allowed.has(submitted.questionId))continue;
     const q=byId.get(submitted.questionId);
-    if(q&&answersEqual(q.answer,submitted.answer))correct++;
+    if(!q)continue;
+    if(q.activityType==='coding-challenge'){
+      const sourceCode=String(submitted.answer||'');
+      try{
+        enforceCodeLimits(sourceCode,'');
+        const tests=Array.isArray(q.codingTests)?q.codingTests:[];
+        let passedAll=true;
+        for(const [input,expected] of tests){
+          const r=await judge0Submit(sourceCode,String(input||''),String(expected||''));
+          if(Number(r.status?.id)!==3){passedAll=false;break;}
+        }
+        if(passedAll)correct++;
+      }catch(e){ logger.warn('Competency coding question failed',{questionId:q.id,error:String(e?.message||e)}); }
+    }else if(answersEqual(q.answer,submitted.answer))correct++;
   }
   const total=Number(attempt.questions?.length||pool.length||1);
   const scorePercent=Math.round(correct/total*10000)/100;
