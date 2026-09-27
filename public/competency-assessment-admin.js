@@ -30,10 +30,22 @@ function renderEditor(t){
  let h='<div class="caEditor"><div class="caEditorHead"><div><span class="sectionEyebrow">MODULE '+t.day+' · '+esc(t.trackTitle)+'</span><h3>'+esc(t.title)+'</h3><p>Status: <b>'+esc(t.status||'draft')+'</b> · <b>'+Number(t.questionCount||t.questions?.length||0)+' master questions</b> · <b>'+Number(t.recommendedQuestionCount||15)+' questions per student</b></p></div><span class="practiceBadge">'+(t.isPublished?'PUBLISHED':'DRAFT')+'</span></div>';
  h+='<div class="caMetaGrid"><label>Title<input id="caTitle" value="'+esc(t.title)+'"></label><label>Topic<input id="caTopic" value="'+esc(t.topic)+'"></label><label>Date<input id="caDate" type="date" value="'+esc(t.date||'')+'"></label><label>Open<input id="caOpen" type="datetime-local" value="'+esc(open)+'"></label><label>Close<input id="caClose" type="datetime-local" value="'+esc(close)+'"></label></div>';
  h+='<div class="caFacultyAssign"><div><span class="sectionEyebrow">VERIFICATION WORKFLOW</span><strong>Faculty verifier</strong><p>'+(t.facultyEmail?'Assigned to '+esc(t.facultyName||t.facultyEmail):'No faculty verifier assigned. Admin can review directly.')+'</p></div>'+(viewerRole==='admin'?'<div class="caFacultyControls"><input id="caFacultyEmail" type="email" placeholder="faculty@francisxavier.ac.in" value="'+esc(t.facultyEmail||'')+'"><button id="caAssignFaculty" class="secondary">Assign Faculty</button></div>':'<span class="practiceBadge">Assigned Faculty</span>')+'</div>';
- h+='<div class="caQuestionHead"><h4>Question Review & Assignment</h4><span>AI-generated questions are structurally validated and independently audited twice. Faculty/admin must still review before publishing.</span></div><div id="caQuestions">'+(t.questions||[]).map((q,i)=>renderQuestion(q,i)).join('')+'</div>';
+ const cSummary=selectedTrack==='c-programming'?renderCCompositionSummary(t.questions||[]):'';
+ h+='<div class="caQuestionHead"><h4>Question Review & Assignment</h4><span>AI-generated questions are structurally validated and independently audited twice. Faculty/admin must still review before publishing.</span></div>'+cSummary+'<div id="caQuestions">'+(t.questions||[]).map((q,i)=>renderQuestion(q,i)).join('')+'</div>';
  h+='<div class="caActions"><button id="caSave">Save Draft</button><button id="caApprove" class="primaryButton" '+(t.isPublished?'disabled':'')+'>'+(t.isPublished?'✓ Published':'Approve & Publish Module '+t.day)+'</button></div><div id="caStatus"></div></div>';
  return h;
 }
+function renderCCompositionSummary(questions){
+ const target={mcq:15,'output-prediction':8,'bug-identification':6,'missing-code':5,'code-observation':5,listening:3,'coding-challenge':3,'scenario-analysis':5};
+ const counts={};
+ (questions||[]).forEach(q=>{const k=String(q.activityType||'mcq');counts[k]=(counts[k]||0)+1;});
+ const labels={'mcq':'MCQ / Concept','output-prediction':'Output Prediction','bug-identification':'Debugging / Bug ID','missing-code':'Missing Code','code-observation':'Code Observation / Trace','listening':'Audio / Listening','coding-challenge':'C Coding Challenge','scenario-analysis':'Scenario Analysis'};
+ const total=(questions||[]).length;
+ const allExpected=Object.entries(target).every(([k,v])=>counts[k]===v);
+ const allMcq=total>0 && counts.mcq===total;
+ return '<div class="caCompositionBox '+(allExpected?'isComplete':'isIncomplete')+'"><div><strong>C Assessment Composition</strong><span>'+total+' / 50 master questions currently loaded</span></div><div class="caCompositionGrid">'+Object.entries(target).map(([k,v])=>'<span class="'+(counts[k]===v?'ok':'missing')+'"><b>'+Number(counts[k]||0)+' / '+v+'</b> '+labels[k]+'</span>').join('')+'</div>'+(allMcq?'<div class="caCompositionWarning">⚠ This is the old MCQ-only bank. Do not publish it. Use <b>Load / Generate 10 × 50 Questions</b> to create the new mixed-format C bank.</div>':'')+'</div>';
+}
+
 function renderQuestion(q,i){
  const coding=q.activityType==='coding-challenge';
  let h='<article class="caQuestion '+(coding?'caCodingQuestion':'')+'"><div class="caQuestionNo">Q'+String(i+1).padStart(2,'0')+'</div><div class="caQuestionFields">';
