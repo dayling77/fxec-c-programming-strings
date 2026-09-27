@@ -1822,12 +1822,17 @@ export const processCompetencyGenerationJob = onDocumentCreated(
           if(!snap.exists) return;
           const run=snap.data()||{};
           const completed=Number(run.completed||0)+1;
+          const finished=Number(run.finished||0)+1;
           const patch={
             ['modules.'+day]:'completed',
             completed,
+            finished,
             updatedAt:FieldValue.serverTimestamp()
           };
-          if(completed>=10){patch.status='completed';patch.completedAt=FieldValue.serverTimestamp();}
+          if(finished>=10){
+            patch.status=Object.keys(run.errors||{}).length?'completed-with-errors':'completed';
+            patch.completedAt=FieldValue.serverTimestamp();
+          }
           tx.update(runRef,patch);
         });
       }
@@ -1836,11 +1841,22 @@ export const processCompetencyGenerationJob = onDocumentCreated(
       logger.error('Competency generation job failed',{trackId,day,runId,error:String(e?.stack||e)});
       await jobRef.update({status:'failed',error:message,failedAt:FieldValue.serverTimestamp()});
       if(runRef){
-        await runRef.update({
-          ['modules.'+day]:'failed',
-          ['errors.'+day]:message,
-          status:'failed',
-          updatedAt:FieldValue.serverTimestamp()
+        await db.runTransaction(async tx=>{
+          const snap=await tx.get(runRef);
+          if(!snap.exists) return;
+          const run=snap.data()||{};
+          const finished=Number(run.finished||0)+1;
+          const patch={
+            ['modules.'+day]:'failed',
+            ['errors.'+day]:message,
+            finished,
+            updatedAt:FieldValue.serverTimestamp()
+          };
+          if(finished>=10){
+            patch.status='completed-with-errors';
+            patch.completedAt=FieldValue.serverTimestamp();
+          }
+          tx.update(runRef,patch);
         }).catch(()=>{});
       }
     }
@@ -1857,7 +1873,7 @@ export const startCompetencyAssessmentGeneration = onCall(
     for(let day=1;day<=10;day++) modules[day]='queued';
     await db.collection('competencyGenerationRuns').doc(runId).set({
       runId,trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,
-      status:'running',totalModules:10,completed:0,modules,errors:{},
+      status:'running',totalModules:10,completed:0,finished:0,modules,errors:{},
       startedAt:FieldValue.serverTimestamp(),startedBy:adminUser.uid
     });
     const batch=db.batch();
