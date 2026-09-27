@@ -1639,23 +1639,16 @@ function competencyQuestionValidation(questions) {
 
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
-  return 'You are a senior assessment designer for Francis Xavier Engineering College.
-Create Module '+day+' of a ten-module assessment programme for '+meta.title+', intended for first-year engineering students.
+  return `You are a senior assessment designer for Francis Xavier Engineering College.
+Create Module `+day+' of a ten-module assessment programme for '+meta.title+', intended for first-year engineering students.
 
-MODULE TOPIC: '+topic+'
-CURRICULUM SCOPE:
-'+COMPETENCY_SOURCE_MAPS[trackId]+'
-
-Generate EXACTLY 50 questions: 30 mcq (one correct), 10 multipleCorrect (exactly 2 or 3 correct), 10 scenario (one correct). Difficulty exactly 15 easy, 20 moderate, 15 tough.
+MODULE TOPIC: ${topic}\nCURRICULUM SCOPE:\n${COMPETENCY_SOURCE_MAPS[trackId]}\n\nGenerate EXACTLY 50 questions: 30 mcq (one correct), 10 multipleCorrect (exactly 2 or 3 correct), 10 scenario (one correct). Difficulty exactly 15 easy, 20 moderate, 15 tough.
 
 QUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Each question must also have an activityType chosen from: mcq, multiple-correct, match, code-observation, output-prediction, bug-identification, missing-code, coding-challenge, diagram-interpretation, scenario-analysis, listening, engineering-decision. The activityType controls presentation while type controls scoring. For code-observation, output-prediction, bug-identification, missing-code or coding-challenge, include a short standard-C code field when appropriate. For match/diagram/listening/engineering-decision, use the four-option scoring format while framing the task appropriately. Return JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq|multipleCorrect|scenario","activityType":"...","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","code":"optional standard C code","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}';
 }
 
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
-  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 50 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Module '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:
-'+COMPETENCY_SOURCE_MAPS[trackId]+'
-QUESTIONS:
-'+JSON.stringify(questions);
+  const auditPrompt = `You are an independent senior university assessment auditor. Audit these 50 questions for ${COMPETENCY_ASSESSMENT_TRACKS[trackId].title}, Module ${day}. This is audit pass ${auditNumber}; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:\n${COMPETENCY_SOURCE_MAPS[trackId]}\nQUESTIONS:\n${JSON.stringify(questions)};`
   return generateJson(auditPrompt);
 }
 
