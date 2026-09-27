@@ -31,7 +31,7 @@ function renderEditor(t){
  h+='<div class="caMetaGrid"><label>Title<input id="caTitle" value="'+esc(t.title)+'"></label><label>Topic<input id="caTopic" value="'+esc(t.topic)+'"></label><label>Date<input id="caDate" type="date" value="'+esc(t.date||'')+'"></label><label>Open<input id="caOpen" type="datetime-local" value="'+esc(open)+'"></label><label>Close<input id="caClose" type="datetime-local" value="'+esc(close)+'"></label></div>';
  h+='<div class="caFacultyAssign"><div><span class="sectionEyebrow">VERIFICATION WORKFLOW</span><strong>Faculty verifier</strong><p>'+(t.facultyEmail?'Assigned to '+esc(t.facultyName||t.facultyEmail):'No faculty verifier assigned. Admin can review directly.')+'</p></div>'+(viewerRole==='admin'?'<div class="caFacultyControls"><input id="caFacultyEmail" type="email" placeholder="faculty@francisxavier.ac.in" value="'+esc(t.facultyEmail||'')+'"><button id="caAssignFaculty" class="secondary">Assign Faculty</button></div>':'<span class="practiceBadge">Assigned Faculty</span>')+'</div>';
  h+='<div class="caQuestionHead"><h4>Question Review & Assignment</h4><span>AI-generated questions are structurally validated and independently audited twice. Faculty/admin must still review before publishing.</span></div><div id="caQuestions">'+(t.questions||[]).map((q,i)=>renderQuestion(q,i)).join('')+'</div>';
- h+='<div class="caActions"><button id="caSave">Save Draft</button><button id="caApprove" class="primaryButton" '+(t.isPublished?'disabled':'')+'>'+(t.isPublished?'✓ Published':'Approve & Launch Module '+t.day)+'</button></div><div id="caStatus"></div></div>';
+ h+='<div class="caActions"><button id="caSave">Save Draft</button><button id="caApprove" class="primaryButton" '+(t.isPublished?'disabled':'')+'>'+(t.isPublished?'✓ Published':'Approve & Publish Module '+t.day)+'</button></div><div id="caStatus"></div></div>';
  return h;
 }
 function renderQuestion(q,i){
@@ -71,8 +71,21 @@ function wireEditor(){
  };
 }
 async function save(approve){
- const questions=readQuestions(),payload={trackId:selectedTrack,day:selectedDay,title:host().querySelector('#caTitle').value.trim(),topic:host().querySelector('#caTopic').value.trim(),date:host().querySelector('#caDate').value,openAt:new Date(host().querySelector('#caOpen').value).toISOString(),closeAt:new Date(host().querySelector('#caClose').value).toISOString(),questions};
- try{setStatus('Saving draft…','saving');await call('saveCompetencyAssessmentDay')(payload);if(approve){if(!confirm('Approve this module? It will be visible to approved students during the published window.'))return;await call('approveCompetencyAssessmentDay')({trackId:selectedTrack,day:selectedDay});}await load();setStatus(approve?'✓ Approved and launched for the scheduled window.':'✓ Draft saved.','success');}catch(e){setStatus(e.message||String(e));}
+ const date=host().querySelector('#caDate').value;
+ const openValue=host().querySelector('#caOpen').value;
+ const closeValue=host().querySelector('#caClose').value;
+ const payload={trackId:selectedTrack,day:selectedDay,title:host().querySelector('#caTitle').value.trim(),topic:host().querySelector('#caTopic').value.trim(),date,openAt:openValue?new Date(openValue).toISOString():'',closeAt:closeValue?new Date(closeValue).toISOString():'',questions:readQuestions()};
+ try{
+   if(approve && (!date||!openValue||!closeValue)){setStatus('Set the assessment date, opening time and closing time before approval/publishing.');return;}
+   setStatus('Saving draft…','saving');
+   await call('saveCompetencyAssessmentDay')(payload);
+   if(approve){
+     if(!confirm('Approve and publish this module? Students will see it only during the scheduled assessment window.'))return;
+     await call('approveCompetencyAssessmentDay')({trackId:selectedTrack,day:selectedDay});
+   }
+   await load();
+   setStatus(approve?'✓ Approved and published for the scheduled window.':'✓ Draft saved.','success');
+ }catch(e){setStatus(e.message||String(e));}
 }
 function setStatus(message,kind='error'){const el=host()?.querySelector('#caStatus');if(el){el.textContent=message;el.className='scheduleSaveStatus '+kind;}}
 async function load(){try{const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];viewerRole=r.data?.role||'admin';render();}catch(e){const h=host();if(h)h.innerHTML='<p>Competency assessment administration is unavailable: '+esc(e.message)+'</p>';}}
