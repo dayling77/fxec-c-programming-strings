@@ -39,7 +39,7 @@ function renderList(items,preferredTaskId=''){
   if(!root)return;
 
   if(!items.length){
-    root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">STAR ASSESSMENT</span><h3>This module has no published assessment yet</h3><p>The study material and drills remain available. The ⭐ STAR Assessment opens here after faculty/admin approval and scheduling.</p></div>';
+    root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">FINAL ASSESSMENT</span><h3>No published assessment window for this module yet</h3><p>Your study materials, Guided Drills and Practice Ladder remain available. The 15-question Final Assessment appears here only after the module question bank is reviewed, scheduled and approved by the administrator/faculty.</p><p><strong>Admin path:</strong> Assessment Control → Competency Assessment Programme → C Programming → Load / Generate 10 × 50 Questions → review → set date/open/close → Approve.</p></div>';
     return;
   }
   if(preferredTaskId){
