@@ -393,7 +393,7 @@ function genericModule(title,trackTitle,no){
   'Practice guide: move from guided attempt to independent application',
   b.audio?'Listening task: listen first, note the evidence, then answer without seeing the hidden prompt':'Explain-it-aloud task: close the notes and explain the core idea in your own words'
  ];
- const lessonTopics=topics.slice(0,3);
+ const lessonTopics=topics;
  const lessons=lessonTopics.map((topic,i)=>({level:i===0?'Foundation':i===1?'Core':'Applied',title:topic+' — learn, trace and apply',teach:'Understand '+topic+' as part of '+title+'. Identify the key terms, the decision or process involved, and the condition that tells you whether your answer is correct.',example:i===0?(b.example||'Apply '+topic+' to a realistic first-year engineering situation.'):i===1?'Work through '+topic+' step by step, recording the evidence or intermediate result before deciding.':'Apply '+topic+' to a new situation, test one edge case and explain one possible error.',code:'/* '+topic+' */\\n/* Read the concept, trace the example, then complete the related task. */',check:'Can you explain '+topic+' without looking at the notes?'}));
  return {id:no,title,scope:focus,topics,materials,lessons,
   drills:['Concept recognition — identify the principle used','Trace and explain — follow the example step by step','Guided completion — fill the missing reasoning step','Error finding — identify and correct the common mistake','Transfer challenge — apply the idea to a new situation'],
