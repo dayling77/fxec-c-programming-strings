@@ -221,7 +221,8 @@ async function generateJson(prompt) {
     model: CONFIG.model,
     contents: prompt,
     config: {
-      temperature: 0.35,
+      temperature: 0.25,
+      thinkingConfig: { thinkingBudget: 0 },
       responseMimeType: 'application/json',
       maxOutputTokens: 30000
     }
@@ -1742,18 +1743,139 @@ ${JSON.stringify(questions)}`;
 
 async function generateHighStandardCompetencyDay(trackId, day) {
   let lastIssues=[];
-  for(let attempt=1; attempt<=4; attempt++){
+  // Two attempts are sufficient because each successful attempt still receives
+  // two independent audit passes. This avoids the old 4-attempt/serial-audit
+  // path exhausting the 9-minute Gen2 event limit.
+  for(let attempt=1; attempt<=2; attempt++){
     const generated=(await generateJson(competencyGenerationPrompt(trackId,day))).questions;
     const structural=competencyQuestionValidation(generated,trackId);
     if(!structural.ok){ lastIssues=structural.errors; continue; }
-    const audit1=await auditCompetencyQuestions(trackId,day,generated,1);
+    const [audit1,audit2]=await Promise.all([
+      auditCompetencyQuestions(trackId,day,generated,1),
+      auditCompetencyQuestions(trackId,day,generated,2)
+    ]);
     if(audit1.valid!==true){ lastIssues=audit1.issues||['Audit pass 1 failed.']; continue; }
-    const audit2=await auditCompetencyQuestions(trackId,day,generated,2);
     if(audit2.valid!==true){ lastIssues=audit2.issues||['Audit pass 2 failed.']; continue; }
     return generated.map((q,i)=>({...q,id:trackId+'-D'+day+'-Q'+String(i+1).padStart(2,'0'),reviewed:false,generatedBy:'AI',generatedAt:new Date()}));
   }
   throw new Error('Could not produce a fully validated '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' Module '+day+' question bank. '+lastIssues.slice(0,5).join(' '));
 }
+
+
+// Long-running generation is intentionally moved out of the browser callable.
+// The admin UI starts ten Firestore jobs and immediately receives a runId.
+// Each module is generated independently, so one slow module cannot make the
+// whole 10-module request hit a callable deadline. Firestore-triggered Gen2
+// functions can run for up to 540 seconds.
+export const processCompetencyGenerationJob = onDocumentCreated(
+  {timeoutSeconds:540, memory:'1GiB', maxInstances:10},
+  'competencyGenerationJobs/{jobId}',
+  async event=>{
+    const jobRef=event.data?.ref;
+    if(!jobRef) return;
+    const claimed=await db.runTransaction(async tx=>{
+      const snap=await tx.get(jobRef);
+      if(!snap.exists || snap.data().status!=='queued') return false;
+      tx.update(jobRef,{status:'running',startedAt:FieldValue.serverTimestamp()});
+      return true;
+    });
+    if(!claimed) return;
+
+    const job=(await jobRef.get()).data()||{};
+    const trackId=String(job.trackId||'');
+    const day=Number(job.day||0);
+    const runId=String(job.runId||'');
+    const runRef=runId?db.collection('competencyGenerationRuns').doc(runId):null;
+    try{
+      const questions=await generateHighStandardCompetencyDay(trackId,day);
+      if(!Array.isArray(questions)||questions.length!==50) throw new Error('Generated module did not contain exactly 50 questions.');
+      const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+      const adminUid=String(job.adminUid||'system');
+      const taskRef=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+      await taskRef.set({
+        trackId,trackTitle:meta.title,day,
+        title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
+        topic:competencyModuleTitle(trackId,day),
+        date:null,openAt:null,closeAt:null,
+        questions,questionCount:50,recommendedQuestionCount:trackId==='c-programming'?15:10,
+        status:'draft',isPublished:false,source:'ai-validated-mixed-format',
+        generatedBy:'Gemini + 2 audit passes',loadedBy:adminUid,
+        loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+      },{merge:true});
+      const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
+      await poolRef.set({
+        trackId,day,questionCount:50,recommendedQuestionCount:trackId==='c-programming'?15:10,
+        status:'draft',source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()
+      },{merge:true});
+      const questionsBatch=db.batch();
+      for(const q of questions){
+        questionsBatch.set(poolRef.collection('questions').doc(String(q.id)),{
+          ...q,trackId,day,poolId:poolRef.id,source:'ai-validated-mixed-format',
+          updatedAt:FieldValue.serverTimestamp()
+        },{merge:true});
+      }
+      await questionsBatch.commit();
+      await jobRef.update({status:'completed',completedAt:FieldValue.serverTimestamp(),questionCount:50});
+      if(runRef){
+        const runSnap=await runRef.get(),run=runSnap.exists?runSnap.data():{};
+        const completed=Number(run.completed||0)+1;
+        await runRef.update({
+          ['modules.'+day]:'completed',
+          completed,
+          updatedAt:FieldValue.serverTimestamp(),
+          ...(completed>=10?{status:'completed',completedAt:FieldValue.serverTimestamp()}: {})
+        });
+      }
+    }catch(e){
+      const message=String(e?.message||e).slice(0,3000);
+      logger.error('Competency generation job failed',{trackId,day,runId,error:String(e?.stack||e)});
+      await jobRef.update({status:'failed',error:message,failedAt:FieldValue.serverTimestamp()});
+      if(runRef){
+        await runRef.update({
+          ['modules.'+day]:'failed',
+          ['errors.'+day]:message,
+          status:'failed',
+          updatedAt:FieldValue.serverTimestamp()
+        }).catch(()=>{});
+      }
+    }
+  }
+);
+
+export const startCompetencyAssessmentGeneration = onCall(
+  {cors:CALLABLE_CORS},
+  async request=>{
+    const adminUser=requireAdmin(request);
+    const trackId=competencyTrackOrThrow(request.data?.trackId);
+    const runId=trackId+'_'+Date.now()+'_'+randomUUID().slice(0,8);
+    const modules={};
+    for(let day=1;day<=10;day++) modules[day]='queued';
+    await db.collection('competencyGenerationRuns').doc(runId).set({
+      runId,trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,
+      status:'running',totalModules:10,completed:0,modules,errors:{},
+      startedAt:FieldValue.serverTimestamp(),startedBy:adminUser.uid
+    });
+    const batch=db.batch();
+    for(let day=1;day<=10;day++){
+      const jobRef=db.collection('competencyGenerationJobs').doc(runId+'_D'+day);
+      batch.set(jobRef,{runId,trackId,day,adminUid:adminUser.uid,status:'queued',createdAt:FieldValue.serverTimestamp()});
+    }
+    await batch.commit();
+    return {success:true,runId,trackId,totalModules:10,message:'Generation started. Ten module jobs are running independently; the page can be refreshed without losing progress.'};
+  }
+);
+
+export const getCompetencyAssessmentGenerationRun = onCall(
+  {cors:CALLABLE_CORS},
+  async request=>{
+    requireAdmin(request);
+    const runId=cleanText(request.data?.runId,160);
+    if(!runId) throw new HttpsError('invalid-argument','runId is required.');
+    const snap=await db.collection('competencyGenerationRuns').doc(runId).get();
+    if(!snap.exists) throw new HttpsError('not-found','Generation run not found.');
+    return snap.data();
+  }
+);
 
 export const generatePreparedCompetencyModule = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request);
@@ -2035,7 +2157,8 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const poolSnap=await db.collection('competencyQuestionPools').doc(taskId).collection('questions').get();
     const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
     if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
-    const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
+    const targetStudentCount=task.trackId==='c-programming'?15:10;
+    const recommendedCount=Math.min(targetStudentCount,sourceQuestions.length);
     const codingPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='coding-challenge'):[];
     const audioPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='listening'):[];
     // Keep the student experience balanced: one genuine coding task and one audio task,
