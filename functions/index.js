@@ -1119,7 +1119,9 @@ const C_CHALLENGES = Object.freeze({
 });
 
 function normalizeCompilerText(value){
-  return String(value ?? '').replace(/\r\n/g,'\n').trim();
+  return String(value ?? '').replace(/\r
+/g,'
+').trim();
 }
 
 async function judge0Submit(sourceCode, stdin, expectedOutput){
@@ -1254,7 +1256,8 @@ const C_CONCEPT_CHALLENGES = Object.freeze({
   observation:{answer:'16',xp:8,explanation:'x starts at 2 and is doubled three times: 2 → 4 → 8 → 16.'},
   output:{answer:'F C',xp:8,explanation:'s[0] is F and s[3] is C, so printf outputs F C.'},
   bug:{answer:'2',xp:8,explanation:'The destination array has space for only 5 characters including the null terminator, but "David" needs 6 bytes.'},
-  missing:{answer:'s[strcspn(s, "\\n")] = \'\\0\';',xp:8,explanation:'This replaces the newline inserted by fgets with the string terminator.'}
+  missing:{answer:'s[strcspn(s, "\
+")] = \'\\0\';',xp:8,explanation:'This replaces the newline inserted by fgets with the string terminator.'}
 });
 
 export const evaluateCConceptChallenge = onCall({cors:CALLABLE_CORS},async request=>{
@@ -1407,7 +1410,8 @@ export const exportResults = onCall({ cors: CALLABLE_CORS }, async request => {
   }
   if (format === 'csv') {
     const header = Object.keys(rows[0] || { registerNumber:'',name:'',email:'',date:'',score:'',total:'',percent:'',passed:'',rewardPoints:'' });
-    const csv = [header.join(','), ...rows.map(r => header.map(k => `"${String(r[k] ?? '').replaceAll('"','""')}"`).join(','))].join('\n');
+    const csv = [header.join(','), ...rows.map(r => header.map(k => `"${String(r[k] ?? '').replaceAll('"','""')}"`).join(','))].join('
+');
     const path = `exports/results-${Date.now()}.csv`;
     await bucket.file(path).save(csv, { contentType: 'text/csv' });
     return { format, path };
@@ -1534,7 +1538,8 @@ const COMPETENCY_ACTIVITY_BANK = Object.freeze({
     {id:'c-structures-01',stage:'Practice',title:'Structure Member',type:'mcq',prompt:'Which operator accesses a member of a structure variable s?',options:['->','.','::','&'],answer:1,xp:10},
     {id:'c-memory-01',stage:'Knowledge Check',title:'Dynamic Memory',type:'mcq',prompt:'Which function releases memory allocated with malloc?',options:['delete','remove','free','release'],answer:2,xp:10},
     {id:'c-files-01',stage:'Practice',title:'File Opening',type:'mcq',prompt:'Which mode opens a text file for reading?',options:['w','a','r','x'],answer:2,xp:10},
-    {id:'c-strings-01',stage:'Practice',title:'String Terminator',type:'mcq',prompt:'Which character terminates a C string?',options:['\\n','\\0','EOF','\\t'],answer:1,xp:15},
+    {id:'c-strings-01',stage:'Practice',title:'String Terminator',type:'mcq',prompt:'Which character terminates a C string?',options:['\
+','\\0','EOF','\\t'],answer:1,xp:15},
     {id:'c-advanced-01',stage:'Challenge',title:'Advanced C Check',type:'mcq',prompt:'Which feature allows storing the address of a function in a variable?',options:['Function pointer','Structure padding','Macro only','File pointer'],answer:0,xp:20}
   ]
 });
@@ -1679,11 +1684,23 @@ function competencyQuestionValidation(questions) {
 
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
-  return 'You are a senior assessment designer for Francis Xavier Engineering College.\nCreate Module '+day+' of a ten-module assessment programme for '+meta.title+', intended for first-year engineering students.\n\nMODULE TOPIC: '+topic+'\nCURRICULUM SCOPE:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\n\nGenerate EXACTLY 50 questions: 30 mcq (one correct), 10 multipleCorrect (exactly 2 or 3 correct), 10 scenario (one correct). Difficulty exactly 15 easy, 20 moderate, 15 tough.\n\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Each question must also have an activityType chosen from: mcq, multiple-correct, match, code-observation, output-prediction, bug-identification, missing-code, coding-challenge, diagram-interpretation, scenario-analysis, listening, engineering-decision. The activityType controls presentation while type controls scoring. For code-observation, output-prediction, bug-identification, missing-code or coding-challenge, include a short standard-C code field when appropriate. For match/diagram/listening/engineering-decision, use the four-option scoring format while framing the task appropriately. Return JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq|multipleCorrect|scenario","activityType":"...","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","code":"optional standard C code","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}';
+  return 'You are a senior assessment designer for Francis Xavier Engineering College.
+Create Module '+day+' of a ten-module assessment programme for '+meta.title+', intended for first-year engineering students.
+
+MODULE TOPIC: '+topic+'
+CURRICULUM SCOPE:
+'+COMPETENCY_SOURCE_MAPS[trackId]+'
+
+Generate EXACTLY 50 questions: 30 mcq (one correct), 10 multipleCorrect (exactly 2 or 3 correct), 10 scenario (one correct). Difficulty exactly 15 easy, 20 moderate, 15 tough.
+
+QUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Each question must also have an activityType chosen from: mcq, multiple-correct, match, code-observation, output-prediction, bug-identification, missing-code, coding-challenge, diagram-interpretation, scenario-analysis, listening, engineering-decision. The activityType controls presentation while type controls scoring. For code-observation, output-prediction, bug-identification, missing-code or coding-challenge, include a short standard-C code field when appropriate. For match/diagram/listening/engineering-decision, use the four-option scoring format while framing the task appropriately. Return JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq|multipleCorrect|scenario","activityType":"...","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","code":"optional standard C code","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}';
 }
 
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
-  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 50 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Module '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:\n'+COMPETENCY_SOURCE_MAPS[trackId]+'\nQUESTIONS:\n'+JSON.stringify(questions);
+  const auditPrompt = 'You are an independent senior university assessment auditor. Audit these 50 questions for '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+', Module '+day+'. This is audit pass '+auditNumber+'; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:
+'+COMPETENCY_SOURCE_MAPS[trackId]+'
+QUESTIONS:
+'+JSON.stringify(questions);
   return generateJson(auditPrompt);
 }
 
@@ -1949,7 +1966,10 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
     if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
     const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
-    const codingPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='coding-challenge'):[];\n    const codingRequired=shuffle(codingPool).slice(0,Math.min(codingPool.length,recommendedCount));\n    const remaining=sourceQuestions.filter(q=>!codingRequired.some(c=>c.id===q.id));\n    const questions=shuffle(codingRequired.concat(shuffle(remaining).slice(0,Math.max(0,recommendedCount-codingRequired.length)))).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
+    const codingPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='coding-challenge'):[];
+    const codingRequired=shuffle(codingPool).slice(0,Math.min(codingPool.length,recommendedCount));
+    const remaining=sourceQuestions.filter(q=>!codingRequired.some(c=>c.id===q.id));
+    const questions=shuffle(codingRequired.concat(shuffle(remaining).slice(0,Math.max(0,recommendedCount-codingRequired.length)))).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
     const attemptRef=db.collection('competencyAssessmentAttempts').doc();
     await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
     return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions,recommendedQuestionCount:questions.length,preview:admin};
