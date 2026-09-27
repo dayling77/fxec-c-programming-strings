@@ -657,3 +657,7 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .starAssessmentButton{background:#f59e0b!important;color:#fff!important;border:0!important;font-weight:900!important}
 @media(max-width:900px){.competencyQuickGrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.competencyQuickGrid{grid-template-columns:1fr}}
+
+.codingProgrammeGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.codingProgrammeCard{border:1px solid #dbe4ef;border-radius:14px;padding:15px;background:#fff}.codingProgrammeCard>div span{font-size:8px;font-weight:900;color:#2563eb;letter-spacing:.7px}.codingProgrammeCard h5{margin:6px 0;color:#102a43;font-size:15px}.codingProgrammeCard p{font-size:11px;line-height:1.55;color:#475569;min-height:58px}.openCodingProgramme{font-size:10px!important;padding:8px 11px!important}
+@media(max-width:700px){.codingProgrammeGrid{grid-template-columns:1fr}}
