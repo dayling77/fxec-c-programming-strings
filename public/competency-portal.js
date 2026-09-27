@@ -279,8 +279,8 @@ function programmeChooser(){
 
 function moduleGrid(track,programme){
  return '<div class="moduleProgrammeBanner">'+(programme?'<span>PROGRAMME</span><strong>'+esc(programme.title)+'</strong>':'<span>COMPETENCY PATHWAY</span><strong>'+esc(track.title)+'</strong>')+'</div>'+
-  '<div class="moduleSectionHeading"><div><span class="sectionEyebrow">LEARNING MODULES</span><h4>Complete the modules in sequence</h4><p>Slow, steady mastery is built into every module. Learn the idea, see it work, drill it repeatedly, then apply it.</p></div><span class="practiceBadge">'+track.modules.length+' ASSESSMENTS</span></div>'+
-  '<div class="moduleGrid">'+track.modules.map((m,i)=>'<article class="learningModuleCard"><div class="moduleTop"><span>MODULE '+String(i+1).padStart(2,'0')+'</span><b>ASSESSMENT '+String(i+1).padStart(2,'0')+'</b></div><h5>'+esc(m)+'</h5><div class="moduleFlow"><span>Concept</span><i>→</i><span>Example</span><i>→</i><span>Guided Drill</span><i>→</i><span>Practise</span><i>→</i><span>Challenge</span></div><div class="moduleBottom"><small>Scope + Study Material + Drills + Practice + Assessment</small><button class="moduleOpen" data-track="'+esc(track.id)+'" data-module="'+(i+1)+'">Open Module →</button></div></article>').join('')+'</div>';
+  '<div class="moduleSectionHeading"><div><span class="sectionEyebrow">DAY / MODULE LEARNING PATH</span><h4>Every module keeps its own learning flow</h4><p>Concept → material → guided drill → practice → challenge → ⭐ STAR Assessment. Assessment questions belong to this module; they are not mixed into one global question list.</p></div><span class="practiceBadge">'+track.modules.length+' STAR ASSESSMENTS</span></div>'+
+  '<div class="moduleGrid">'+track.modules.map((m,i)=>'<article class="learningModuleCard"><div class="moduleTop"><span>DAY / MODULE '+String(i+1).padStart(2,'0')+'</span><b>⭐ STAR ASSESSMENT</b></div><h5>'+esc(m)+'</h5><div class="moduleFlow"><span>Concept</span><i>→</i><span>Material</span><i>→</i><span>Drill</span><i>→</i><span>Practice</span><i>→</i><span>Challenge</span><i>→</i><span>Assess</span></div><div class="moduleBottom"><small>Topic material · drills · coding practice · module question bank</small><button class="moduleOpen" data-track="'+esc(track.id)+'" data-module="'+(i+1)+'">Open Day '+(i+1)+' →</button><button class="starAssessmentButton" data-star-track="'+esc(track.id)+'" data-star-module="'+(i+1)+'">⭐ STAR Assessment</button></div></article>').join('')+'</div>';
 }
 
 function openModule(root,trackId,moduleNo,programme){
@@ -290,7 +290,7 @@ function openModule(root,trackId,moduleNo,programme){
  const ws=root.querySelector('#competencyWorkspace');
  ws.innerHTML=moduleView(track,data,moduleNo,programme);
  ws.querySelector('#backToModules').onclick=()=>openTrack(root,trackId);
- ws.querySelector('#startAssessment').onclick=()=>launchAssessmentCentre();
+ ws.querySelector('#startAssessment').onclick=()=>launchModuleAssessment(trackId,moduleNo);
  ws.querySelectorAll('.drillReveal').forEach(b=>b.onclick=()=>showDrill(b));
  ws.querySelectorAll('.addDrillsButton').forEach(b=>b.onclick=()=>addTenDrills(b.closest('.drillRewardBar')?.parentElement?.querySelector('.drillCard')?.dataset.module||'C Fundamentals',b.closest('.drillRewardBar')));
  ws.querySelectorAll('.checkAnswer').forEach(b=>b.onclick=()=>checkPracticeAnswer(b));
@@ -590,18 +590,25 @@ function moduleView(track,data,no,programme){
 function materialGuide(resource,title){return 'Study this topic in three passes. First understand the idea. Second trace the worked example line by line. Third close the notes and reproduce the idea yourself. Then complete a related drill and explain the reasoning aloud. Resource: '+resource+'.';}
 function checkPracticeAnswer(button){const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model approach:</b> '+esc(button.dataset.answer)+'</p>';button.parentElement.appendChild(box);button.textContent='Review Prompt';}
 
-function launchAssessmentCentre(){
+async function launchModuleAssessment(trackId,moduleNo){
  document.querySelectorAll('.studentHiddenPanel').forEach(p=>p.hidden=true);
  const panel=document.getElementById('competencyAssessmentPanel');
  if(!panel)return;
  panel.hidden=false;
  panel.scrollIntoView({behavior:'smooth',block:'start'});
- if(window.FXECCompetencyAssessmentStudent?.load) window.FXECCompetencyAssessmentStudent.load();
+ const taskId=String(trackId)+'_D'+String(moduleNo);
+ if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId);
 }
 
-document.addEventListener('click',e=>{
+document.addEventListener('click',async e=>{
  const audio=e.target.closest('.moduleAudioButton');
  if(audio){ e.preventDefault(); speak(audio.dataset.speech||''); return; }
+ const star=e.target.closest('.starAssessmentButton');
+ if(star){
+  e.preventDefault();
+  await launchModuleAssessment(star.dataset.starTrack,Number(star.dataset.starModule));
+  return;
+ }
  const b=e.target.closest('.moduleOpen'); if(!b)return;
  const root=b.closest('.competencyPortal'); if(!root)return;
  const trackId=b.dataset.track, no=Number(b.dataset.module);
