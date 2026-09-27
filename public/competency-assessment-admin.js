@@ -32,9 +32,12 @@ function render(){
          setStatus('Generating C Programming Module '+day+' of 10… This may take a few minutes. Do not close this page.','saving');
          selectedDay=day;
          await call('generatePreparedCompetencyModule')({trackId:'c-programming',day});
-         setStatus('✓ Module '+day+' of 10 generated and saved. Continuing…','success');
+         await load();
+         setStatus('✓ C Programming Module '+day+' generated. Continuing with Module '+(day+1)+'…','success');
        }
        await load();
+       selectedDay=1;
+       render();
        setStatus('✓ All 10 C Programming modules generated: 500 mixed-format master questions. All remain DRAFT.','success');
      }else{
        setStatus('Generating the 10-module question bank…','saving');
