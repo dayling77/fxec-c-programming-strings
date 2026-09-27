@@ -1861,7 +1861,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
   const questions=validateCompetencyQuestions(request.data?.questions);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date:hasDate?date:null,openAt:safeOpen,closeAt:safeClose,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
   await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolBatch=db.batch();
@@ -1881,41 +1881,12 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
   if(!snap.exists) throw new HttpsError('not-found','Assessment day has not been created.');
   const d=snap.data();
   validateCompetencyQuestions(d.questions);
-  if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date and assessment window before approval.');
+  if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before approval/publishing.');
   await ref.update({status:'published',isPublished:true,approvedBy:adminUser.uid,approvedByEmail:adminUser.token.email||'',approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
   await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'published',approvedBy:adminUser.uid,approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
   await db.collection('adminActions').add({action:'approveCompetencyAssessmentDay',trackId,day,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
   return {success:true,trackId,day,status:'published'};
 });
-
-async function ensureAdminCTrialModule(){
-  const taskId='c-programming_D1';
-  const ref=db.collection('competencyAssessmentTasks').doc(taskId);
-  const snap=await ref.get();
-  if(snap.exists)return snap.data();
-  const base=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP01-D1-'));
-  const coding=C_STAR_CODING_QUESTIONS.find(q=>Number(String(q.id).split('-D')[1]?.split('-')[0])===1);
-  if(base.length!==50 || !coding) throw new HttpsError('failed-precondition','C Fundamentals trial question bank is unavailable.');
-  const questions=[...base.filter(q=>q.type!=='scenario'),coding,...base.filter(q=>q.type==='scenario').slice(0,9)];
-  const now=new Date();
-  const close=new Date(now.getTime()+24*60*60*1000);
-  const task={
-    trackId:'c-programming',trackTitle:'C Programming',day:1,
-    title:'C Programming — Module 1 · C Fundamentals',
-    topic:'C Fundamentals',
-    date:now.toISOString().slice(0,10),openAt:now,closeAt:close,
-    questions,questionCount:50,recommendedQuestionCount:15,
-    status:'draft',isPublished:false,source:'admin-trial-preview',
-    createdAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
-  };
-  await ref.set(task,{merge:true});
-  const poolRef=db.collection('competencyQuestionPools').doc(taskId);
-  await poolRef.set({trackId:'c-programming',day:1,questionCount:50,recommendedQuestionCount:15,status:'draft',source:'admin-trial-preview',updatedAt:FieldValue.serverTimestamp()},{merge:true});
-  let batch=db.batch();
-  for(const q of questions) batch.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId:'c-programming',day:1,poolId:taskId,source:'admin-trial-preview',updatedAt:FieldValue.serverTimestamp()},{merge:true});
-  await batch.commit();
-  return task;
-}
 
 export const getStudentCompetencyAssessments = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
@@ -1927,9 +1898,6 @@ export const getStudentCompetencyAssessments = onCall({cors:CALLABLE_CORS},async
         throw new HttpsError('permission-denied','Your student account is not approved for assessments.');
       }
     }
-    if(admin){
-      await ensureAdminCTrialModule();
-    }
     const snap=await db.collection('competencyAssessmentTasks').where('isPublished','==',true).get();
     const now=new Date(),items=[];
     for(const d of snap.docs){
@@ -1939,15 +1907,8 @@ export const getStudentCompetencyAssessments = onCall({cors:CALLABLE_CORS},async
       if(status==='closed') continue;
       items.push({id:d.id,trackId:String(x.trackId||''),trackTitle:String(x.trackTitle||''),day:Number(x.day||0),title:String(x.title||''),topic:String(x.topic||''),date:String(x.date||''),openAt:open.toISOString(),closeAt:close.toISOString(),questionCount:Number(x.questionCount||0),status});
     }
-    if(admin){
-      const trial=await db.collection('competencyAssessmentTasks').doc('c-programming_D1').get();
-      if(trial.exists && trial.data().isPublished!==true){
-        const x=trial.data(),open=asJsDate(x.openAt),close=asJsDate(x.closeAt);
-        if(open&&close) items.push({id:trial.id,trackId:String(x.trackId||''),trackTitle:String(x.trackTitle||''),day:1,title:String(x.title||''),topic:String(x.topic||''),date:String(x.date||''),openAt:open.toISOString(),closeAt:close.toISOString(),questionCount:50,status:'preview'});
-      }
-    }
     items.sort((a,b)=>a.openAt.localeCompare(b.openAt));
-    return {items,preview:admin};
+    return {items};
   }catch(e){
     if(e instanceof HttpsError) throw e;
     logger.error('getStudentCompetencyAssessments failed',{uid:user.uid,error:String(e?.stack||e)});
@@ -1968,12 +1929,11 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const taskId=cleanText(request.data?.taskId,120);
     if(!taskId) throw new HttpsError('invalid-argument','Assessment module is required.');
     const taskSnap=await db.collection('competencyAssessmentTasks').doc(taskId).get();
-    const preview=Boolean(request.data?.preview) && admin;
-    if(!taskSnap.exists||(!taskSnap.data().isPublished && !preview)) throw new HttpsError('failed-precondition','This assessment is not published.');
+    if(!taskSnap.exists||taskSnap.data().isPublished!==true) throw new HttpsError('failed-precondition','This assessment is not published.');
     const task=taskSnap.data(),open=asJsDate(task.openAt),close=asJsDate(task.closeAt);
     if(!open||!close) throw new HttpsError('failed-precondition','This assessment has an invalid opening or closing time.');
     const now=new Date();
-    if(!preview && (now<open||now>=close)) throw new HttpsError('failed-precondition','This assessment is not currently open.');
+    if(now<open||now>=close) throw new HttpsError('failed-precondition','This assessment is not currently open.');
     const existing=await db.collection('competencyAssessmentAttempts').where('studentId','==',user.uid).where('taskId','==',taskId).limit(1).get();
     if(!existing.empty){
       const x=existing.docs[0];
@@ -1990,7 +1950,7 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const questions=shuffle(codingRequired.concat(shuffle(remaining).slice(0,Math.max(0,recommendedCount-codingRequired.length)))).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
     const attemptRef=db.collection('competencyAssessmentAttempts').doc();
     await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
-    return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions,recommendedQuestionCount:questions.length,preview:admin};
+    return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions,recommendedQuestionCount:questions.length};
   }catch(e){
     if(e instanceof HttpsError) throw e;
     logger.error('startCompetencyAssessment failed',{uid:user.uid,error:String(e?.stack||e)});
