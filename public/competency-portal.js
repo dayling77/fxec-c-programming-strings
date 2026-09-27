@@ -691,16 +691,22 @@ async function launchModuleAssessment(trackId,moduleNo,workspace=null){
    const roleResult=await call('getAdminCompetencyAssessmentPrograms')({});
    const role=roleResult.data?.role||'student';
    if(role==='admin'||role==='faculty'){
-     mount.innerHTML='<div id="moduleAssessmentAdminMount"></div>';
-     if(window.FXECCompetencyAssessmentAdmin?.load){
-       await window.FXECCompetencyAssessmentAdmin.load('moduleAssessmentAdminMount',trackId,moduleNo);
+     if(!window.FXECCompetencyAssessmentAdmin?.load){
+       mount.innerHTML='<div class="caError"><strong>Assessment administration script is not loaded.</strong><span>Refresh the page after the latest Hosting deployment.</span></div>';
+       return;
      }
+     mount.innerHTML='<div id="moduleAssessmentAdminMount"></div>';
+     await window.FXECCompetencyAssessmentAdmin.load('moduleAssessmentAdminMount',trackId,moduleNo);
      return;
    }
+   if(role==='student'){
+     if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId,'moduleAssessmentMount');
+     return;
+   }
+   mount.innerHTML='<div class="caError"><strong>Assessment role could not be determined.</strong><span>Please refresh and try again.</span></div>';
  }catch(e){
-   // Non-admin/faculty users continue to the student assessment flow.
+   mount.innerHTML='<div class="caError"><strong>Assessment administration could not be loaded.</strong><span>'+esc(e?.message||String(e))+'</span><p>For Admin/Faculty, this screen will not fall back to the student assessment.</p></div>';
  }
- if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId,'moduleAssessmentMount');
 }
 
 document.addEventListener('click',async e=>{
