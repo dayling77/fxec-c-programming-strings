@@ -13,14 +13,13 @@ function render(){
  const root=host();if(!root)return;const t=task(selectedTrack,selectedDay);
  let h='<div class="competencyAdminToolbar"><label>Competency <select id="caTrack">';
  h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
- h+='</select></label>'+(viewerRole==='admin'?'<button id="caAuto" class="primaryButton">✨ AI Generate & Audit 10 × 50 Questions</button><button id="caCreate" class="secondary">Create Blank 10-Module Programme</button>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh</button></div>';
+ h+='</select></label>'+(viewerRole==='admin'?'<button id="caLoadPrepared" class="primaryButton">📚 Load Prepared Question Bank</button>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh</button></div>';
  h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
  h+=t?renderEditor(t):'<div class="caEmpty">Create the ten-module programme for this competency first.</div><div id="caStatus"></div>';
  root.innerHTML=h;
  root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
  root.querySelector('#caTrack').onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
- root.querySelector('#caAuto')?.addEventListener('click',async()=>{if(!confirm('Generate 500 high-standard questions for this competency (50 per module), then run two independent answer/ambiguity audits? This may take several minutes and will remain DRAFT. The result will remain DRAFT for faculty review.'))return;try{setStatus('Generating 10 modules × 50 questions and running two audits per module. This may take several minutes…','saving');const r=await call('autoGenerateCompetencyAssessmentProgram')({trackId:selectedTrack});await load();setStatus('✓ '+r.data.message,'success');}catch(e){setStatus(e.message||String(e));}});
- root.querySelector('#caCreate')?.addEventListener('click',async()=>{if(!confirm('Create/reset the ten-module programme?'))return;try{await call('createCompetencyAssessmentProgram')({trackId:selectedTrack});await load();setStatus('Ten-module programme created with editable starter questions. Each module can now be scheduled and approved separately.','success');}catch(e){setStatus(e.message);}});
+ root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{if(selectedTrack!=='c-programming'){setStatus('The prepared question bank is currently available for C Programming. Select C Programming first.');return;}if(!confirm('Load the prepared 10-module C Programming question bank (500 questions) into the Assessment Studio? All modules will remain DRAFT until review and approval.'))return;try{setStatus('Loading the prepared 500-question bank…','saving');const r=await call('loadPreparedCompetencyAssessmentProgram')({trackId:selectedTrack});await load();setStatus('✓ '+r.data.message,'success');}catch(e){setStatus(e.message||String(e));}});
  root.querySelector('#caRefresh').onclick=load;
  root.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{selectedDay=Number(b.dataset.day);render();});
  if(t)wireEditor();
