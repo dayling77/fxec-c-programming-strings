@@ -2069,6 +2069,29 @@ export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},
     if(!snap.exists) return {items:[],role:admin?'admin':'student'};
     const item={id:snap.id,...snap.data()};
     if(!admin&&String(item.facultyEmail||'').toLowerCase()!==email) return {items:[],role:'student'};
+
+    // Prefer the prepared question-pool subcollection for the selected module.
+    // This prevents an older MCQ-only task document from masking a newly
+    // generated mixed-format master bank.
+    const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
+    const poolSnap=await poolRef.get();
+    if(poolSnap.exists){
+      const pool=poolSnap.data()||{};
+      const questionSnap=await poolRef.collection('questions').get();
+      if(!questionSnap.empty){
+        const poolQuestions=questionSnap.docs.map(d=>d.data());
+        const isPrepared=String(pool.source||'').toLowerCase()==='ai-validated-mixed-format'
+          || poolQuestions.some(q=>String(q.source||'').toLowerCase()==='ai-validated-mixed-format')
+          || (trackId==='c-programming' && poolQuestions.some(q=>String(q.activityType||'')!=='mcq'));
+        if(isPrepared){
+          item.questions=poolQuestions;
+          item.questionCount=poolQuestions.length;
+          item.recommendedQuestionCount=Number(pool.recommendedQuestionCount||item.recommendedQuestionCount||15);
+          item.source='ai-validated-mixed-format';
+          item.poolLoaded=true;
+        }
+      }
+    }
     return {items:[item],role:admin?'admin':'faculty'};
   }
   // Legacy callers may request the complete list; the competency admin UI no longer does.
