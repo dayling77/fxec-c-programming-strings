@@ -1,4 +1,5 @@
 import { onCall, HttpsError } from 'firebase-functions/v2/https';
+import { PREPARED_C_PROGRAMMING_QUESTION_BANK } from './prepared-c-programming-bank.js';
 import { onSchedule } from 'firebase-functions/v2/scheduler';
 import { onDocumentCreated } from 'firebase-functions/v2/firestore';
 import { defineJsonSecret, defineString } from 'firebase-functions/params';
@@ -1692,6 +1693,41 @@ async function generateHighStandardCompetencyDay(trackId, day) {
   }
   throw new Error('Could not produce a fully validated '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' Module '+day+' question bank. '+lastIssues.slice(0,5).join(' '));
 }
+
+export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS}, async request=>{
+  const adminUser=requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  if(trackId!=='c-programming') throw new HttpsError('invalid-argument','The prepared bank is currently available for C Programming.');
+  const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+  const batch=db.batch();
+  const created=[];
+  for(let day=1;day<=10;day++){
+    const questions=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP'+String(day).padStart(2,'0')+'-D'+day+'-'));
+    if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' does not contain exactly 50 questions.');
+    const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+    batch.set(ref,{
+      trackId,trackTitle:meta.title,day,
+      title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
+      topic:competencyModuleTitle(trackId,day),
+      date:null,openAt:null,closeAt:null,
+      questions,questionCount:50,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,
+      status:'draft',isPublished:false,source:'prepared-bank',generatedBy:'FXEC Prepared Question Bank',
+      loadedBy:adminUser.uid,loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+    },{merge:true});
+    created.push({day,questionCount:50});
+  }
+  await batch.commit();
+  for(const item of created){
+    const day=item.day, questions=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP'+String(day).padStart(2,'0')+'-D'+day+'-'));
+    const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
+    await poolRef.set({trackId,day,questionCount:50,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',source:'prepared-bank',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    let pb=db.batch();
+    for(const q of questions) pb.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day,poolId:poolRef.id,source:'prepared-bank',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    await pb.commit();
+  }
+  await db.collection('adminActions').add({action:'loadPreparedCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,modules:10,questionCount:500,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,modules:created,totalQuestions:500,message:'Prepared 10-module C Programming bank loaded. All modules remain DRAFT until administrator/faculty review and approval.'};
+});
 
 export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request), trackId=competencyTrackOrThrow(request.data?.trackId), meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
