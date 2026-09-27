@@ -20,13 +20,14 @@ function assessmentCodeViewer(code){
  return '<div class="assessmentCodeViewport"><div class="assessmentCodeNumbers">'+lines.map((_,i)=>'<span>'+String(i+1)+'</span>').join('')+'</div><pre class="assessmentCodeScroll"><code>'+esc(lines.join('\n'))+'</code></pre></div>';
 }
 
+let activeHostId = 'competencyAssessmentLaunch';
 let current = null;
 let answers = {};
 let index = 0;
 let questionDeadlines = {};
 let timer = null;
 
-function host(){ return document.getElementById('competencyAssessmentLaunch'); }
+function host(){ return document.getElementById(activeHostId) || document.getElementById('competencyAssessmentLaunch'); }
 
 function formatClock(seconds){
   const s=Math.max(0,Math.floor(seconds));
@@ -72,7 +73,8 @@ function renderList(items,preferredTaskId=''){
   root.querySelectorAll('[data-task]').forEach(b=>b.onclick=()=>start(b.dataset.task));
 }
 
-async function load(preferredTaskId=''){
+async function load(preferredTaskId='',hostId=''){
+  if(hostId) activeHostId=hostId;
   const root=host();
   if(!root)return;
   root.innerHTML='<div class="caLoading"><div class="assessmentSpinner"></div><strong>Loading assessments…</strong><span>Checking the published assessment windows.</span></div>';
