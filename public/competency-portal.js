@@ -393,7 +393,9 @@ function genericModule(title,trackTitle,no){
   'Practice guide: move from guided attempt to independent application',
   b.audio?'Listening task: listen first, note the evidence, then answer without seeing the hidden prompt':'Explain-it-aloud task: close the notes and explain the core idea in your own words'
  ];
- return {id:no,title,scope:focus,topics,materials,
+ const lessonTopics=topics.slice(0,3);
+ const lessons=lessonTopics.map((topic,i)=>({level:i===0?'Foundation':i===1?'Core':'Applied',title:topic+' — learn, trace and apply',teach:'Understand '+topic+' as part of '+title+'. Identify the key terms, the decision or process involved, and the condition that tells you whether your answer is correct.',example:i===0?(b.example||'Apply '+topic+' to a realistic first-year engineering situation.'):i===1?'Work through '+topic+' step by step, recording the evidence or intermediate result before deciding.':'Apply '+topic+' to a new situation, test one edge case and explain one possible error.',code:'/* '+topic+' */\\n/* Read the concept, trace the example, then complete the related task. */',check:'Can you explain '+topic+' without looking at the notes?'}));
+ return {id:no,title,scope:focus,topics,materials,lessons,
   drills:['Concept recognition — identify the principle used','Trace and explain — follow the example step by step','Guided completion — fill the missing reasoning step','Error finding — identify and correct the common mistake','Transfer challenge — apply the idea to a new situation'],
   practice:['Level 1 — guided concept and vocabulary check','Level 2 — worked example with one missing step','Level 3 — independent application to a short scenario','Level 4 — mixed reasoning and error-correction practice','Level 5 — timed first-year engineering challenge'],
   example:b.example||'Apply '+title+' to a realistic engineering or professional situation.',audio:!!b.audio,
@@ -402,6 +404,16 @@ function genericModule(title,trackTitle,no){
 }
 
 const C_MODULE_ENRICHMENT={
+  1:{lessons:[
+   {level:'Foundation',title:'From problem statement to C program',teach:'Start with the requirement, identify inputs, processing and outputs, then map each step to C syntax. Keep identifiers meaningful and compile after small changes.',example:'For a marks-total problem, identify three integer inputs, add them, and print the total before writing the complete program.',code:'#include <stdio.h>\\nint main(void){\\n int a,b;\\n scanf("%d%d",&a,&b);\\n printf("%d",a+b);\\n return 0;\\n}',check:'What are the input, process and output in this program?'},
+   {level:'Core',title:'Expressions, types and input/output',teach:'C expressions combine values with operators. Match the data type and format specifier to the value being read or printed, and watch integer division.',example:'When total and count are integers, cast total before division if a decimal average is required.',code:'double avg=(double)total/count;\\nprintf("%.2f",avg);',check:'Why is the cast needed for a decimal average?'},
+   {level:'Applied',title:'Compile, trace and debug systematically',teach:'Separate syntax errors, warnings, logic errors and incorrect assumptions. Compile early, trace variables with a small input and test a boundary case.',example:'If a program prints the wrong total, trace each assignment before changing the formula.',code:'int total=0;\\nfor(int i=0;i<n;i++) total+=a[i];\\nprintf("%d",total);',check:'Which test input would help expose an off-by-one loop error?'}
+  ]},
+  9:{lessons:[
+   {level:'Foundation',title:'Strings are character arrays',teach:'A C string is a character array terminated by the null character. Indexing and the terminator determine where the string begins and ends.',example:'The literal "hello" occupies six characters including \\0.',code:'char s[]="hello";\\nprintf("%s",s);',check:'Why is the null terminator required?'},
+   {level:'Core',title:'String library functions have precise contracts',teach:'strlen counts characters before \\0; strcpy copies a string; strcat appends; strcmp compares strings. Always provide sufficient destination storage.',example:'strcmp returns zero when two strings contain the same character sequence.',code:'if(strcmp(a,b)==0) printf("Equal");',check:'What does strcmp return when the strings are equal?'},
+   {level:'Applied',title:'Trace strings and prevent input bugs',teach:'For reliable string programs, choose the correct input method, respect buffer limits and trace each character before modifying the array.',example:'Use fgets for a complete line, then process spaces, punctuation and the terminating newline deliberately.',code:'fgets(s,sizeof s,stdin);\\n/* inspect and process the characters */',check:'Why can fgets be safer than scanf("%s", s) for a complete line?'}
+  ]},
  2:{lessons:[
   {level:'Foundation',title:'Decisions are Boolean questions',teach:'A decision evaluates a condition to choose one path. Relational operators compare values and logical operators combine conditions.',example:'For marks >= 40 && attendance >= 75, both requirements must be true.',code:'if (marks >= 40 && attendance >= 75) {\n    printf("Eligible");\n}',check:'What changes if || replaces &&?'},
   {level:'Core',title:'Loops need a clear boundary',teach:'A loop repeats while its control condition permits. Before coding, identify the initial value, condition, update and termination point.',example:'A for loop from i=1 to i<=5 executes five times.',code:'for (int i=1; i<=5; i++)\n    printf("%d ", i);',check:'Which part prevents this loop from continuing forever?'},
