@@ -1726,7 +1726,10 @@ export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
   }
   await batch.commit();
   for(const item of created){
-    const day=item.day, questions=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP'+String(day).padStart(2,'0')+'-D'+day+'-'));
+    const day=item.day;
+    const taskSnap=await db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day).get();
+    const questions=Array.isArray(taskSnap.data()?.questions)?taskSnap.data().questions:[];
+    if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' master bank is not exactly 50 questions.');
     const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
     await poolRef.set({trackId,day,questionCount:50,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',source:'prepared-bank',updatedAt:FieldValue.serverTimestamp()},{merge:true});
     let pb=db.batch();
