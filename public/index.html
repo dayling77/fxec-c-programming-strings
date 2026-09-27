@@ -180,7 +180,21 @@ int main(void) {
 </main>
 <script type="module" src="/app.js?v=20260927-2135"></script>
 <script type="module">import { renderCompetencyPortal } from "/competency-portal.js?v=20260927-2415"; window.addEventListener("DOMContentLoaded",()=>{const r=document.getElementById("firstYearCompetencyRoot"); if(r) renderCompetencyPortal(r);});</script>
-<script type="module" src="/competency-assessment-admin-v3.js"></script>
+<script>
+window.FXECCompetencyAssessmentAdmin=window.FXECCompetencyAssessmentAdmin||{};
+window.FXECCompetencyAssessmentAdmin.load=window.FXECCompetencyAssessmentAdmin.load||async function(...args){
+  try{
+    await import('/competency-assessment-admin-v3.js?v=20260927-2500');
+    const loader=window.FXECCompetencyAssessmentAdmin?.load;
+    if(typeof loader!=='function'||loader===arguments.callee) throw new Error('The competency administration module did not initialize.');
+    return loader(...args);
+  }catch(e){
+    console.error('Competency administration module failed to load',e);
+    throw new Error('Assessment administration script failed to load: '+(e?.message||String(e)));
+  }
+};
+</script>
+<script type="module" src="/competency-assessment-admin-v3.js?v=20260927-2500"></script>
 <script type="module" src="/competency-assessment-student.js?v=20260927-2135"></script>
 <script type="module" src="/faculty-content-admin.js"></script>
 <script type="module" src="/communication-speech.js"></script>
