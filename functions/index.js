@@ -1949,7 +1949,7 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
     if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
     const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
-    const questions=shuffle(sourceQuestions).slice(0,recommendedCount).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
+    const codingPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='coding-challenge'):[];\n    const codingRequired=shuffle(codingPool).slice(0,Math.min(codingPool.length,recommendedCount));\n    const remaining=sourceQuestions.filter(q=>!codingRequired.some(c=>c.id===q.id));\n    const questions=shuffle(codingRequired.concat(shuffle(remaining).slice(0,Math.max(0,recommendedCount-codingRequired.length)))).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
     const attemptRef=db.collection('competencyAssessmentAttempts').doc();
     await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
     return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions,recommendedQuestionCount:questions.length,preview:admin};
