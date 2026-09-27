@@ -670,3 +670,10 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .codingProgrammeGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
 .codingProgrammeCard{border:1px solid #dbe4ef;border-radius:14px;padding:15px;background:#fff}.codingProgrammeCard>div span{font-size:8px;font-weight:900;color:#2563eb;letter-spacing:.7px}.codingProgrammeCard h5{margin:6px 0;color:#102a43;font-size:15px}.codingProgrammeCard p{font-size:11px;line-height:1.55;color:#475569;min-height:58px}.openCodingProgramme{font-size:10px!important;padding:8px 11px!important}
 @media(max-width:700px){.codingProgrammeGrid{grid-template-columns:1fr}}
+
+/* FIX: the six-track home is a single full-width section, not a four-column legacy menu */
+.firstYearMenu{display:block!important;grid-template-columns:none!important}.firstYearMenu>.firstYearTrackIntro,.firstYearMenu>.competencyQuickGrid,.firstYearMenu>.firstYearUtilityRow,.firstYearMenu>.legacyTools{width:100%;box-sizing:border-box}
+.competencyQuickGrid{grid-template-columns:repeat(3,minmax(220px,1fr))!important}.competencyQuickCard{min-width:0;width:100%}
+@media(max-width:900px){.competencyQuickGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){.competencyQuickGrid{grid-template-columns:1fr!important}}
+.moduleLearningWorkspace{width:100%;max-width:1180px;margin:0 auto}.moduleLearningGrid{display:grid;grid-template-columns:1fr;gap:14px}.learningSection{width:100%;box-sizing:border-box}.moduleLearningHero{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.assessmentInlineMount{margin-top:14px}.assessmentInlineMount:empty{display:none}
