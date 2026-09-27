@@ -15,11 +15,42 @@ function render(){
  h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
  h+='</select></label>'+(viewerRole==='admin'?'<button id="caLoadPrepared" class="primaryButton">📚 Load / Generate 10 × 50 Questions</button>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh</button></div>';
  h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
- h+=t?renderEditor(t):'<div class="caEmpty">Load the prepared question bank for this competency first.</div><div id="caStatus"></div>';
+ h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
+ h+=t?renderEditor(t):'<div class="caEmpty">Load the prepared question bank for this competency first.</div>';
  root.innerHTML=h;
  root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
  root.querySelector('#caTrack').onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
- root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{const isC=selectedTrack==='c-programming';const action=isC?'loadPreparedCompetencyAssessmentProgram':'autoGenerateCompetencyAssessmentProgram';const label=isC?'prepared C Programming':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack);if(!confirm('Load 10 modules × 50 questions for '+label+'? All modules remain DRAFT until review, scheduling and approval.'))return;try{setStatus('Loading the 10-module question bank…','saving');const r=await call(action)({trackId:selectedTrack});await load();setStatus('✓ '+r.data.message,'success');}catch(e){setStatus(e.message||String(e));}});
+ root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{
+   const isC=selectedTrack==='c-programming';
+   const label=isC?'C Programming':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack);
+   if(!confirm('Load 10 modules × 50 questions for '+label+'? All modules remain DRAFT until review and approval.'))return;
+   const button=root.querySelector('#caLoadPrepared');
+   try{
+     if(button)button.disabled=true;
+     if(isC){
+       for(let day=1;day<=10;day++){
+         setStatus('Generating C Programming Module '+day+' of 10… This may take a few minutes. Do not close this page.','saving');
+         selectedDay=day;
+         await call('generatePreparedCompetencyModule')({trackId:'c-programming',day});
+         setStatus('✓ Module '+day+' of 10 generated and saved. Continuing…','success');
+       }
+       await load();
+       setStatus('✓ All 10 C Programming modules generated: 500 mixed-format master questions. All remain DRAFT.','success');
+     }else{
+       setStatus('Generating the 10-module question bank…','saving');
+       const action='autoGenerateCompetencyAssessmentProgram';
+       const r=await call(action)({trackId:selectedTrack});
+       await load();
+       setStatus('✓ '+r.data.message,'success');
+     }
+   }catch(e){
+     setStatus(e.message||String(e));
+     await load();
+   }finally{
+     const b=host()?.querySelector('#caLoadPrepared');
+     if(b)b.disabled=false;
+   }
+ });
  root.querySelector('#caRefresh').onclick=load;
  root.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{selectedDay=Number(b.dataset.day);render();});
  if(t)wireEditor();
