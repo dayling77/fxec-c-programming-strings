@@ -1119,9 +1119,7 @@ const C_CHALLENGES = Object.freeze({
 });
 
 function normalizeCompilerText(value){
-  return String(value ?? '').replace(/\r
-/g,'
-').trim();
+  return String(value ?? '').replace(/\r\n/g,'\n').trim();
 }
 
 async function judge0Submit(sourceCode, stdin, expectedOutput){
