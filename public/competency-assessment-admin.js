@@ -16,14 +16,16 @@ const call=name=>{
 const TRACKS=[['communication','Communication'],['aptitude','Aptitude'],['core-engineering','Core Engineering'],['c-programming','C Programming'],['problem-solving','Problem Solving'],['analytical','Analytical Skills']];
 const MODULES={communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],aptitude:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude'],'core-engineering':['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],'problem-solving':['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge'],analytical:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']};
 let programs=[],selectedTrack='communication',selectedDay=1,viewerRole='admin',activeHostId='competencyAssessmentAdmin';
+let generationState=null;
 const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function host(){return document.getElementById(activeHostId)||document.getElementById('competencyAssessmentAdmin');}
 function task(track,day){return programs.find(x=>x.trackId===track&&Number(x.day)===day);}
+async function fetchPrograms(){const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];viewerRole=r.data?.role||'admin';return r;}
 function render(){
  const root=host();if(!root)return;const t=task(selectedTrack,selectedDay);
  let h='<div class="competencyAdminToolbar"><label>Competency <select id="caTrack">';
  h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
- h+='</select></label>'+(viewerRole==='admin'?'<button id="caLoadPrepared" class="primaryButton">📚 Load / Generate 10 × 50 Questions</button>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh</button></div>';
+ h+='</select></label>'+(viewerRole==='admin'?'<button id="caLoadPrepared" class="primaryButton">📚 Generate New 10 × 50 Mixed-Format Bank</button>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh</button></div>';
  h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
  h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
  h+=t?renderEditor(t):'<div class="caEmpty">Load the prepared question bank for this competency first.</div>';
@@ -32,27 +34,40 @@ function render(){
  root.querySelector('#caTrack').onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
  root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{
    const isC=selectedTrack==='c-programming';
-   const label=isC?'C Programming':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack);
-   if(!confirm('Load 10 modules × 50 questions for '+label+'? All modules remain DRAFT until review and approval.'))return;
+   const label=isC?'C Programming — 10 × 50 mixed-format master bank':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack);
+   if(!confirm('Generate a NEW mixed-format master bank for '+label+'? The existing draft is not overwritten until each generated module is successfully saved. All modules remain DRAFT until review and approval.'))return;
    const button=root.querySelector('#caLoadPrepared');
    try{
      if(button)button.disabled=true;
      if(isC){
-       // Generate one module per callable invocation. The 10-module operation cannot safely
-       // fit inside a single callable timeout because every module may require generation
-       // plus two independent audits and retries. Each completed module is persisted as DRAFT,
-       // so a timeout/failure never discards modules that already succeeded.
+       // Keep the existing editor out of view while generation is running. This prevents
+       // an old MCQ-only bank from appearing to change when the new module is still pending.
+       generationState={current:1,completed:[],error:null,startedAt:Date.now()};
+       render();
        for(let day=1;day<=10;day++){
          selectedDay=day;
-         setStatus('Generating C Programming Module '+day+' of 10… This may take a few minutes. Completed modules are saved automatically.','saving');
-         await call('generatePreparedCompetencyModule')({trackId:'c-programming',day});
-         await load();
-         setStatus('✓ Module '+day+' of 10 generated and saved as DRAFT. Continuing…','success');
+         generationState.current=day;
+         generationState.error=null;
+         render();
+         try{
+           await call('generatePreparedCompetencyModule')({trackId:'c-programming',day});
+           await fetchPrograms();
+           generationState.completed.push(day);
+           generationState.current=day<10?day+1:10;
+           render();
+         }catch(err){
+           generationState.error={day,message:err?.message||String(err)};
+           await fetchPrograms().catch(()=>{});
+           render();
+           throw err;
+         }
        }
        selectedDay=1;
-       await load();
+       await fetchPrograms();
+       generationState={current:10,completed:Array.from({length:10},(_,i)=>i+1),error:null,finished:true};
        render();
        setStatus('✓ All 10 C Programming modules generated: 500 mixed-format master questions. All remain DRAFT.','success');
+       setTimeout(()=>{generationState=null;render();},1200);
      }else{
        setStatus('Generating the 10-module question bank…','saving');
        const action='autoGenerateCompetencyAssessmentProgram';
@@ -61,8 +76,8 @@ function render(){
        setStatus('✓ '+r.data.message,'success');
      }
    }catch(e){
-     setStatus(e.message||String(e));
-     await load();
+     if(!isC){setStatus(e.message||String(e));await load();}
+     else if(generationState?.error){setStatus('Generation stopped at Module '+generationState.error.day+'. The existing draft was not replaced.','error');}
    }finally{
      const b=host()?.querySelector('#caLoadPrepared');
      if(b)b.disabled=false;
@@ -72,6 +87,30 @@ function render(){
  root.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{selectedDay=Number(b.dataset.day);render();});
  if(t)wireEditor();
 }
+
+function renderGenerationProgress(){
+ const completed=new Set(generationState?.completed||[]);
+ const current=Number(generationState?.current||1);
+ const failed=generationState?.error;
+ const finished=Boolean(generationState?.finished);
+ const percent=finished?100:Math.round((completed.size/10)*100);
+ let h='<div class="caGenerationPanel '+(failed?'isError':finished?'isComplete':'')+'">';
+ h+='<div class="caGenerationHero"><div><span class="sectionEyebrow">NEW MIXED-FORMAT C BANK</span><h3>'+(finished?'Generation complete':failed?'Generation stopped':'Generating C Programming Master Bank')+'</h3>';
+ h+='<p>'+(failed?'Module '+failed.day+' could not be generated. Your existing draft remains unchanged.':finished?'500 questions generated and saved as DRAFT across all 10 modules.':'The old question editor is temporarily hidden so it cannot be mistaken for the new bank. Each completed module is saved automatically.')+'</p></div><strong>'+percent+'%</strong></div>';
+ h+='<div class="caGenerationBar"><span style="width:'+percent+'%"></span></div>';
+ h+='<div class="caGenerationGrid">';
+ for(let d=1;d<=10;d++){
+   const state=completed.has(d)?'complete':(failed?.day===d?'failed':(!finished&&d===current?'current':'pending'));
+   const icon=state==='complete'?'✓':state==='failed'?'!':state==='current'?'…':'';
+   h+='<div class="caGenerationStep '+state+'"><b>Module '+d+'</b><span>'+icon+' '+(state==='complete'?'50 saved':state==='failed'?'Failed':state==='current'?'Generating…':'Waiting')+'</span></div>';
+ }
+ h+='</div>';
+ if(failed) h+='<div class="caGenerationError"><b>Generation failed for Module '+failed.day+'</b><span>'+esc(failed.message)+'</span><small>No existing questions were overwritten. Fix the server error, then run generation again.</small></div>';
+ if(finished) h+='<div class="caGenerationComplete">✓ The 10-module mixed-format bank is ready. Select a module above to review its 50 master questions.</div>';
+ h+='</div>';
+ return h;
+}
+
 function renderEditor(t){
  const open=t.openAt&&t.openAt.seconds?new Date(t.openAt.seconds*1000).toISOString().slice(0,16):String(t.openAt||'').slice(0,16);
  const close=t.closeAt&&t.closeAt.seconds?new Date(t.closeAt.seconds*1000).toISOString().slice(0,16):String(t.closeAt||'').slice(0,16);
@@ -148,5 +187,5 @@ async function save(approve){
  }catch(e){setStatus(e.message||String(e));}
 }
 function setStatus(message,kind='error'){const el=host()?.querySelector('#caStatus');if(el){el.textContent=message;el.className='scheduleSaveStatus '+kind;}}
-async function load(hostId='',trackId='',day=1){try{if(hostId)activeHostId=hostId;if(trackId)selectedTrack=trackId;if(day)selectedDay=Number(day);const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];viewerRole=r.data?.role||'admin';render();}catch(e){const h=host();if(h)h.innerHTML='<p>Competency assessment administration is unavailable: '+esc(e.message)+'</p>';}}
+async function load(hostId='',trackId='',day=1){try{if(hostId)activeHostId=hostId;if(trackId)selectedTrack=trackId;if(day)selectedDay=Number(day);await fetchPrograms();render();}catch(e){const h=host();if(h)h.innerHTML='<p>Competency assessment administration is unavailable: '+esc(e.message)+'</p>';}}
 window.FXECCompetencyAssessmentAdmin={load};
