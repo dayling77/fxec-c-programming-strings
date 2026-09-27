@@ -1607,7 +1607,8 @@ const COMPETENCY_ASSESSMENT_BLUEPRINT = Object.freeze({
   questionsPerDay: 50,
   recommendedPerStudent: 15,
   difficulty: {easy: 15, moderate: 20, tough: 15},
-  types: {mcq: 30, multipleCorrect: 10, scenario: 10}
+  types: {mcq: 42, multipleCorrect: 0, scenario: 8},
+  cActivityDistribution: {mcq:15,'output-prediction':8,'bug-identification':6,'missing-code':5,'code-observation':5,listening:3,'coding-challenge':3,'scenario-analysis':5}
 });
 
 const COMPETENCY_SOURCE_MAPS = Object.freeze({
