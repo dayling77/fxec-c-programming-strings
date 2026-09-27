@@ -163,8 +163,10 @@ function readQuestions(){
  });
 }
 function wireEditor(){
- host().querySelector('#caSave').onclick=()=>save(false);
- host().querySelector('#caApprove').onclick=()=>save(true);
+ const saveButton=host().querySelector('#caSave');
+ const approveButton=host().querySelector('#caApprove');
+ if(saveButton)saveButton.onclick=()=>save(false);
+ if(approveButton)approveButton.onclick=()=>save(true);
  const assign=host().querySelector('#caAssignFaculty');
  if(assign)assign.onclick=async()=>{
    const email=host().querySelector('#caFacultyEmail').value.trim();
