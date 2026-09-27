@@ -351,7 +351,7 @@ export const C_COMPETITIVE_CHALLENGES = [
     "module": "Pointers",
     "domain": "Two Pointers",
     "difficulty": "moderate",
-    "prompt": "Read N, an array and pivot P. Rearrange so values less than P come first, followed by values equal to P, then values greater than P. No order is required within each group.",
+    "prompt": "Read N, an array and pivot P. Rearrange so values less than P come first, followed by values equal to P, then values greater than P. Sort each of the three groups in ascending order.",
     "xp": 35,
     "tests": [
       [
