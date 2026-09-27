@@ -1624,6 +1624,7 @@ function competencyQuestionValidation(questions) {
   const errors = [];
   if (!Array.isArray(questions) || questions.length !== COMPETENCY_ASSESSMENT_BLUEPRINT.questionsPerDay) return {ok:false, errors:['Exactly 50 questions are required.']};
   const ids = new Set(), counts = {mcq:0, multipleCorrect:0, scenario:0}, diffs = {easy:0, moderate:0, tough:0};
+  const activityCounts = {};
   questions.forEach((q,i)=>{
     const n=i+1;
     if(!q || typeof q!=='object') { errors.push('Q'+n+': invalid object.'); return; }
@@ -1631,11 +1632,14 @@ function competencyQuestionValidation(questions) {
     ids.add(String(q.id));
     if(!['mcq','multipleCorrect','scenario'].includes(q.type)) errors.push('Q'+n+': invalid type.'); else counts[q.type]++;
     if(!['easy','moderate','tough'].includes(q.difficulty)) errors.push('Q'+n+': invalid difficulty.'); else diffs[q.difficulty]++;
+    const activity=String(q.activityType||'mcq');
+    activityCounts[activity]=(activityCounts[activity]||0)+1;
     if(!cleanText(q.prompt,5000)) errors.push('Q'+n+': missing prompt.');
-    const isCoding=q.activityType==='coding-challenge';
+    const isCoding=activity==='coding-challenge';
     if(isCoding){
+      if(q.type!=='scenario') errors.push('Q'+n+': coding challenge must use scenario scoring type.');
       if(!cleanText(q.starter,20000)) errors.push('Q'+n+': coding starter missing.');
-      if(!Array.isArray(q.codingTests)||q.codingTests.length<2) errors.push('Q'+n+': coding tests missing.');
+      if(!Array.isArray(q.codingTests)||q.codingTests.length<5) errors.push('Q'+n+': at least 5 hidden coding tests required.');
       if(!cleanText(q.sampleInput,5000)||!cleanText(q.sampleOutput,5000)) errors.push('Q'+n+': coding sample missing.');
     }else{
       if(!Array.isArray(q.options) || q.options.length!==4) errors.push('Q'+n+': exactly 4 options required.');
@@ -1646,20 +1650,77 @@ function competencyQuestionValidation(questions) {
         if(q.type==='multipleCorrect') {
           if(!Array.isArray(q.answer) || q.answer.length<2 || q.answer.length>3) errors.push('Q'+n+': multiple-correct needs 2 or 3 keys.');
           else q.answer.forEach(a=>{if(!Number.isInteger(a)||a<0||a>=4) errors.push('Q'+n+': answer index '+a+' is not a valid option.');});
-          if(Array.isArray(q.answer) && new Set(q.answer).size!==q.answer.length) errors.push('Q'+n+': duplicate answer indexes.');
         } else if(!Number.isInteger(q.answer)||q.answer<0||q.answer>=4) errors.push('Q'+n+': answer key does not point to an existing option.');
       }
+      if(['output-prediction','bug-identification','missing-code','code-observation'].includes(activity) && !cleanText(q.code,20)) errors.push('Q'+n+': '+activity+' requires C code.');
+      if(activity==='listening' && !cleanText(q.audioText,20)) errors.push('Q'+n+': listening question requires audioText.');
     }
     if(!cleanText(q.explanation,50)) errors.push('Q'+n+': missing explanation.');
     if(!Number.isFinite(Number(q.timeLimitSeconds)) || Number(q.timeLimitSeconds)<20) errors.push('Q'+n+': invalid time limit.');
   });
   for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.types)) if(counts[k]!==v) errors.push('Type distribution '+k+' must be '+v+'.');
   for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.difficulty)) if(diffs[k]!==v) errors.push('Difficulty distribution '+k+' must be '+v+'.');
+  const hasCActivity=Boolean(activityCounts['coding-challenge']);
+  if(hasCActivity){
+    for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.cActivityDistribution)) if((activityCounts[k]||0)!==v) errors.push('C activity distribution '+k+' must be '+v+'.');
+  }
   return {ok:errors.length===0,errors};
 }
 
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
+  if(trackId==='c-programming'){
+    const scopes={
+      1:'problem statements, C program structure, main, statements and blocks, identifiers, variables, constants, data types, type conversion, operators, expressions, printf/scanf, compilation and debugging basics',
+      2:'relational and logical operators, if/else, nested decisions, else-if ladders, switch, for/while/do-while, break/continue, nested loops and control-flow tracing',
+      3:'array declaration/indexing, initialization/traversal, input/output, sum/average/min/max, searching, sorting basics, frequency counting, two-dimensional arrays and matrices',
+      4:'function purpose, declarations/definitions, parameters/arguments, return values, void functions, local/global scope, prototypes, call flow and modular design',
+      5:'addresses, pointer declaration/initialization, & and *, dereferencing, pointers in functions, modifying caller values, pointer arithmetic basics and pointers with arrays',
+      6:'structures, members, arrays of structures, nested structures, typedef, passing structures to functions, unions and choosing structure versus union',
+      7:'stack/heap idea, malloc/calloc/realloc/free, NULL checks, memory leaks, dangling pointers, dynamic arrays and safe memory handling',
+      8:'FILE pointers, fopen/fclose, file modes, fprintf/fscanf, fgets/fputs, fread/fwrite basics, error checking and file safety',
+      9:'character arrays, null terminator, string input, strlen/strcpy/strcat/strcmp, manual traversal, searching/counting, palindrome/reverse, token/word processing and string bugs',
+      10:'preprocessor/macros, const/scope review, command-line arguments, introductory function pointers, bitwise operators, enumerations/user-defined types, defensive programming and reading/debugging unfamiliar code'
+    }[day];
+    return `You are a senior C programming assessment designer for Francis Xavier Engineering College.
+Create Module ${day}: ${topic} for first-year engineering students.
+
+MODULE SCOPE:
+${scopes}
+
+Coding is PART OF this module assessment, never a separate module. Generate EXACTLY 50 master questions using this activity distribution:
+15 mcq/concept
+8 output-prediction
+6 bug-identification/debugging
+5 missing-code/code-completion
+5 code-observation/tracing
+3 listening/audio-based
+3 coding-challenge
+5 scenario-analysis
+TOTAL 50.
+
+Scoring types: use type "mcq" for the first six activity groups and type "scenario" for scenario-analysis and coding-challenge. Thus the exact scoring distribution is 42 mcq and 8 scenario.
+
+Quality:
+- Every question must test the module scope; do not drift into another module.
+- Output-prediction, bug-identification, missing-code and code-observation MUST include a short valid standard-C code snippet in code.
+- Missing-code must visibly contain a placeholder such as /* MISSING */.
+- Bug-identification must contain a real defect and ask the student to identify the defect/correction.
+- Output-prediction must have one deterministically correct output.
+- Code-observation must require tracing state, not merely recalling syntax.
+- Listening questions must contain audioText with the complete spoken question and four answer options.
+- Coding challenges must be genuine C programming tasks, with starter code, sampleInput, sampleOutput and at least 5 hidden codingTests. They must be appropriate to this module and independently solvable. Do not copy TCS, HackerRank, CodeChef or other provider questions.
+- Use realistic engineering, laboratory or student contexts.
+- Standard C only; no undefined behaviour or compiler-specific assumptions.
+- No all/none of the above, duplicate options or trick wording.
+- Exactly 15 easy, 20 moderate and 15 tough.
+- Every non-coding question has four distinct plausible options and one correct answer.
+- Every question has a concise explanation and a suitable time limit.
+- Return JSON only with the fields relevant to each activity.
+
+JSON shape:
+{"questions":[{"id":"D${day}-Q01","type":"mcq|scenario","activityType":"mcq|output-prediction|bug-identification|missing-code|code-observation|listening|coding-challenge|scenario-analysis","difficulty":"easy|moderate|tough","topic":"specific subtopic","prompt":"...","code":"...","options":["A","B","C","D"],"answer":0,"audioText":"...","starter":"...","sampleInput":"...","sampleOutput":"...","codingTests":[["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"]],"explanation":"...","timeLimitSeconds":60}]}`;
+  }
   return `You are a senior assessment designer for Francis Xavier Engineering College.
 Create Module ${day} of a ten-module assessment programme for ${meta.title}, intended for first-year engineering students.
 
@@ -1667,11 +1728,9 @@ MODULE TOPIC: ${topic}
 CURRICULUM SCOPE:
 ${COMPETENCY_SOURCE_MAPS[trackId]}
 
-Generate EXACTLY 50 questions: 30 mcq (one correct), 10 multipleCorrect (exactly 2 or 3 correct), 10 scenario (one correct). Difficulty exactly 15 easy, 20 moderate, 15 tough.
-
-QUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid clues from option length, grammar or position. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Each question must also have an activityType chosen from: mcq, multiple-correct, match, code-observation, output-prediction, bug-identification, missing-code, coding-challenge, diagram-interpretation, scenario-analysis, listening, engineering-decision. The activityType controls presentation while type controls scoring. For code-observation, output-prediction, bug-identification, missing-code or coding-challenge, include a short standard-C code field when appropriate. For match/diagram/listening/engineering-decision, use the four-option scoring format while framing the task appropriately. Return JSON only as {"questions":[{"id":"D${day}-Q01","type":"mcq|multipleCorrect|scenario","activityType":"...","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","code":"optional standard C code","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}`;
+Generate EXACTLY 50 questions: 30 mcq, 10 multipleCorrect, 10 scenario. Difficulty exactly 15 easy, 20 moderate, 15 tough.
+QUALITY STANDARD: University-level first-year engineering standard; test understanding, application and analysis. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom, programming or professional contexts. Moderate/tough questions should require reasoning, calculation, tracing, debugging, interpretation or decision-making. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Return JSON only as {"questions":[{"id":"D${day}-Q01","type":"mcq|multipleCorrect|scenario","activityType":"...","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","code":"optional standard C code","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}`;
 }
-
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
   const auditPrompt = `You are an independent senior university assessment auditor. Audit these 50 questions for ${COMPETENCY_ASSESSMENT_TRACKS[trackId].title}, Module ${day}. This is audit pass ${auditNumber}; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:
 ${COMPETENCY_SOURCE_MAPS[trackId]}
