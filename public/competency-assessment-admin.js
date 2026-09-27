@@ -30,6 +30,10 @@ function render(){
  h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
  h+=(generationState&&generationState.trackId===selectedTrack)?renderGenerationProgress():(t?renderEditor(t):'<div class="caEmpty">Start the automatic module generation to create the assessment bank.</div>');
  root.innerHTML=h;
+ if(generationState){
+   const ts=root.querySelector('#caTrack'); if(ts)ts.disabled=true;
+   root.querySelectorAll('[data-day]').forEach(b=>b.disabled=true);
+ }
  root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
  root.querySelector('#caTrack').onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
  root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{
@@ -112,7 +116,7 @@ function renderEditor(t){
  if(legacyC){
    return '<div class="caLegacyBlocked"><span class="sectionEyebrow">C PROGRAMMING · LEGACY BANK</span><h3>Old MCQ-only bank is blocked</h3><p>The existing 50-question MCQ bank is retained for safety, but it is not the new C assessment and cannot be edited, saved or published from this screen.</p><div class="caLegacyRule"><b>Required new structure</b><span>15 MCQ · 8 Output Prediction · 6 Debugging · 5 Missing Code · 5 Code Observation · 3 Audio · 3 Coding Challenges · 5 Scenario Analysis</span></div><p>Click <b>Generate New 10 × 50 Mixed-Format Bank</b>. Successful modules will replace this draft automatically; failed modules leave this old bank untouched.</p></div>';
  }
- let h='<div class="caEditor"><div class="caEditorHead"><div><span class="sectionEyebrow">MODULE '+t.day+' · '+esc(t.trackTitle)+'</span><h3>'+esc(t.title)+'</h3><p>Status: <b>'+esc(t.status||'draft')+'</b> · <b>'+Number(t.questionCount||t.questions?.length||0)+' master questions</b> · <b>'+Number(t.recommendedQuestionCount||15)+' questions per student</b></div><span class="practiceBadge">'+(t.isPublished?'PUBLISHED':'DRAFT')+'</span></div>';
+ let h='<div class="caEditor"><div class="caEditorHead"><div><span class="sectionEyebrow">MODULE '+t.day+' · '+esc(t.trackTitle)+'</span><h3>'+esc(t.title)+'</h3><p>Status: <b>'+esc(t.status||'draft')+'</b> · <b>'+Number(t.questionCount||t.questions?.length||0)+' master questions</b> · <b>'+Number(t.recommendedQuestionCount||15)+' questions per student</b></p></div><span class="practiceBadge">'+(t.isPublished?'PUBLISHED':'DRAFT')+'</span></div>';
  h+='<div class="caMetaGrid"><label>Title<input id="caTitle" value="'+esc(t.title)+'"></label><label>Topic<input id="caTopic" value="'+esc(t.topic)+'"></label><label>Date<input id="caDate" type="date" value="'+esc(t.date||'')+'"></label><label>Open<input id="caOpen" type="datetime-local" value="'+esc(open)+'"></label><label>Close<input id="caClose" type="datetime-local" value="'+esc(close)+'"></label></div>';
  h+='<div class="caFacultyAssign"><div><span class="sectionEyebrow">VERIFICATION WORKFLOW</span><strong>Faculty verifier</strong><p>'+(t.facultyEmail?'Assigned to '+esc(t.facultyName||t.facultyEmail):'No faculty verifier assigned. Admin can review directly.')+'</p></div>'+(viewerRole==='admin'?'<div class="caFacultyControls"><input id="caFacultyEmail" type="email" placeholder="faculty@francisxavier.ac.in" value="'+esc(t.facultyEmail||'')+'"><button id="caAssignFaculty" class="secondary">Assign Faculty</button></div>':'<span class="practiceBadge">Assigned Faculty</span>')+'</div>';
  const cSummary=selectedTrack==='c-programming'?renderCCompositionSummary(t.questions||[]):'';
