@@ -5,9 +5,9 @@ const functions=getFunctions(fxecApp,'us-central1');
 const call=name=>httpsCallable(functions,name);
 const TRACKS=[['communication','Communication'],['aptitude','Aptitude'],['core-engineering','Core Engineering'],['c-programming','C Programming'],['problem-solving','Problem Solving'],['analytical','Analytical Skills']];
 const MODULES={communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],aptitude:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude'],'core-engineering':['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],'problem-solving':['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge'],analytical:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']};
-let programs=[],selectedTrack='communication',selectedDay=1,viewerRole='admin';
+let programs=[],selectedTrack='communication',selectedDay=1,viewerRole='admin',activeHostId='competencyAssessmentAdmin';
 const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-function host(){return document.getElementById('competencyAssessmentAdmin');}
+function host(){return document.getElementById(activeHostId)||document.getElementById('competencyAssessmentAdmin');}
 function task(track,day){return programs.find(x=>x.trackId===track&&Number(x.day)===day);}
 function render(){
  const root=host();if(!root)return;const t=task(selectedTrack,selectedDay);
@@ -88,5 +88,5 @@ async function save(approve){
  }catch(e){setStatus(e.message||String(e));}
 }
 function setStatus(message,kind='error'){const el=host()?.querySelector('#caStatus');if(el){el.textContent=message;el.className='scheduleSaveStatus '+kind;}}
-async function load(){try{const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];viewerRole=r.data?.role||'admin';render();}catch(e){const h=host();if(h)h.innerHTML='<p>Competency assessment administration is unavailable: '+esc(e.message)+'</p>';}}
+async function load(hostId='',trackId='',day=1){try{if(hostId)activeHostId=hostId;if(trackId)selectedTrack=trackId;if(day)selectedDay=Number(day);const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];viewerRole=r.data?.role||'admin';render();}catch(e){const h=host();if(h)h.innerHTML='<p>Competency assessment administration is unavailable: '+esc(e.message)+'</p>';}}
 window.FXECCompetencyAssessmentAdmin={load};
