@@ -1596,8 +1596,8 @@ function competencyTrackOrThrow(trackId){
   if(!Object.prototype.hasOwnProperty.call(COMPETENCY_ASSESSMENT_TRACKS,id)) throw new HttpsError('invalid-argument','Unknown competency track.');
   return id;
 }
-function validateCompetencyQuestions(questions){
-  const basic=competencyQuestionValidation(questions);
+function validateCompetencyQuestions(questions, trackId=''){
+  const basic=competencyQuestionValidation(questions, trackId);
   if(!basic.ok) throw new HttpsError('invalid-argument','Question validation failed: '+basic.errors.slice(0,8).join(' '));
   return questions.map(q=>({...q,id:String(q.id)}));
 }
@@ -1607,7 +1607,8 @@ const COMPETENCY_ASSESSMENT_BLUEPRINT = Object.freeze({
   questionsPerDay: 50,
   recommendedPerStudent: 15,
   difficulty: {easy: 15, moderate: 20, tough: 15},
-  types: {mcq: 42, multipleCorrect: 0, scenario: 8},
+  genericTypes: {mcq: 30, multipleCorrect: 10, scenario: 10},
+  cTypes: {mcq: 42, multipleCorrect: 0, scenario: 8},
   cActivityDistribution: {mcq:15,'output-prediction':8,'bug-identification':6,'missing-code':5,'code-observation':5,listening:3,'coding-challenge':3,'scenario-analysis':5}
 });
 
@@ -1620,7 +1621,7 @@ const COMPETENCY_SOURCE_MAPS = Object.freeze({
   analytical: 'Analytical skills for first-year engineering: reading comprehension; extracting claims/evidence; inference; assumptions; cause/effect; comparison; data interpretation; identifying trends and anomalies; distinguishing fact from opinion; evaluating evidence; consistency; logical conclusions; error/uncertainty awareness; short technical passages, tables and simple charts; listening/reading style interpretation without cultural trivia. Questions should require reasoning rather than recall.'
 });
 
-function competencyQuestionValidation(questions) {
+function competencyQuestionValidation(questions, trackId='') {
   const errors = [];
   if (!Array.isArray(questions) || questions.length !== COMPETENCY_ASSESSMENT_BLUEPRINT.questionsPerDay) return {ok:false, errors:['Exactly 50 questions are required.']};
   const ids = new Set(), counts = {mcq:0, multipleCorrect:0, scenario:0}, diffs = {easy:0, moderate:0, tough:0};
@@ -1658,10 +1659,10 @@ function competencyQuestionValidation(questions) {
     if(!cleanText(q.explanation,50)) errors.push('Q'+n+': missing explanation.');
     if(!Number.isFinite(Number(q.timeLimitSeconds)) || Number(q.timeLimitSeconds)<20) errors.push('Q'+n+': invalid time limit.');
   });
-  for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.types)) if(counts[k]!==v) errors.push('Type distribution '+k+' must be '+v+'.');
+  const expectedTypes=trackId==='c-programming'?COMPETENCY_ASSESSMENT_BLUEPRINT.cTypes:COMPETENCY_ASSESSMENT_BLUEPRINT.genericTypes;
+  for(const [k,v] of Object.entries(expectedTypes)) if(counts[k]!==v) errors.push('Type distribution '+k+' must be '+v+'.');
   for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.difficulty)) if(diffs[k]!==v) errors.push('Difficulty distribution '+k+' must be '+v+'.');
-  const hasCActivity=Boolean(activityCounts['coding-challenge']);
-  if(hasCActivity){
+  if(trackId==='c-programming'){
     for(const [k,v] of Object.entries(COMPETENCY_ASSESSMENT_BLUEPRINT.cActivityDistribution)) if((activityCounts[k]||0)!==v) errors.push('C activity distribution '+k+' must be '+v+'.');
   }
   return {ok:errors.length===0,errors};
@@ -1914,9 +1915,9 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new HttpsError('invalid-argument','Use YYYY-MM-DD for the assessment date.');
   const open=new Date(openAt),close=new Date(closeAt);
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
-  const questions=validateCompetencyQuestions(request.data?.questions);
+  const questions=validateCompetencyQuestions(request.data?.questions,trackId);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date:hasDate?date:null,openAt:safeOpen,closeAt:safeClose,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
   await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolBatch=db.batch();
@@ -1935,7 +1936,7 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
   const snap=await ref.get();
   if(!snap.exists) throw new HttpsError('not-found','Assessment day has not been created.');
   const d=snap.data();
-  validateCompetencyQuestions(d.questions);
+  validateCompetencyQuestions(d.questions,trackId);
   if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before approval/publishing.');
   await ref.update({status:'published',isPublished:true,approvedBy:adminUser.uid,approvedByEmail:adminUser.token.email||'',approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
   await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'published',approvedBy:adminUser.uid,approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
