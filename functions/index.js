@@ -1254,8 +1254,7 @@ const C_CONCEPT_CHALLENGES = Object.freeze({
   observation:{answer:'16',xp:8,explanation:'x starts at 2 and is doubled three times: 2 → 4 → 8 → 16.'},
   output:{answer:'F C',xp:8,explanation:'s[0] is F and s[3] is C, so printf outputs F C.'},
   bug:{answer:'2',xp:8,explanation:'The destination array has space for only 5 characters including the null terminator, but "David" needs 6 bytes.'},
-  missing:{answer:'s[strcspn(s, "\
-")] = \'\\0\';',xp:8,explanation:'This replaces the newline inserted by fgets with the string terminator.'}
+  missing:{answer:'s[strcspn(s, "\\n")] = \'\\0\';',xp:8,explanation:'This replaces the newline inserted by fgets with the string terminator.'}
 });
 
 export const evaluateCConceptChallenge = onCall({cors:CALLABLE_CORS},async request=>{
@@ -1536,8 +1535,7 @@ const COMPETENCY_ACTIVITY_BANK = Object.freeze({
     {id:'c-structures-01',stage:'Practice',title:'Structure Member',type:'mcq',prompt:'Which operator accesses a member of a structure variable s?',options:['->','.','::','&'],answer:1,xp:10},
     {id:'c-memory-01',stage:'Knowledge Check',title:'Dynamic Memory',type:'mcq',prompt:'Which function releases memory allocated with malloc?',options:['delete','remove','free','release'],answer:2,xp:10},
     {id:'c-files-01',stage:'Practice',title:'File Opening',type:'mcq',prompt:'Which mode opens a text file for reading?',options:['w','a','r','x'],answer:2,xp:10},
-    {id:'c-strings-01',stage:'Practice',title:'String Terminator',type:'mcq',prompt:'Which character terminates a C string?',options:['\
-','\\0','EOF','\\t'],answer:1,xp:15},
+    {id:'c-strings-01',stage:'Practice',title:'String Terminator',type:'mcq',prompt:'Which character terminates a C string?',options:['\\n','\\0','EOF','\\t'],answer:1,xp:15},
     {id:'c-advanced-01',stage:'Challenge',title:'Advanced C Check',type:'mcq',prompt:'Which feature allows storing the address of a function in a variable?',options:['Function pointer','Structure padding','Macro only','File pointer'],answer:0,xp:20}
   ]
 });
