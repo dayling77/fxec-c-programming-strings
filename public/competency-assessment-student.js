@@ -44,7 +44,7 @@ function renderList(items,preferredTaskId=''){
   }
   if(preferredTaskId){
     const preferred=items.find(x=>x.id===preferredTaskId);
-    if(preferred && (preferred.status==='open'||preferred.status==='preview')){ start(preferredTaskId,preferred.status==='preview'); return; }
+    if(preferred && preferred.status==='open'){ start(preferredTaskId); return; }
   }
 
   const groups={};
@@ -56,14 +56,13 @@ function renderList(items,preferredTaskId=''){
     h+='<section class="caStudentTrack"><div class="caTrackHeader"><div><span class="sectionEyebrow">COMPETENCY TRACK</span><h4>'+esc(list[0].trackTitle)+'</h4></div><span class="caTrackDayCount">'+list.length+' MODULE'+(list.length===1?'':'S')+'</span></div><div class="caStudentDayGrid">';
 
     list.forEach(x=>{
-      const open=x.status==='open'||x.status==='preview';
-      const preview=x.status==='preview';
-      const when=preview?'ADMIN TRIAL PREVIEW':open?'OPEN NOW':'Opens '+new Date(x.openAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
+      const open=x.status==='open';
+      const when=open?'OPEN NOW':'Opens '+new Date(x.openAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
       h+='<article class="caStudentDay '+(open?'isOpen':'')+'">'+
-        '<div class="caDayTop"><span>MODULE '+x.day+'</span><span class="caOpenPill '+(open?'open':'scheduled')+'">'+(preview?'TRIAL PREVIEW':open?'OPEN':'SCHEDULED')+'</span></div>'+
+        '<div class="caDayTop"><span>MODULE '+x.day+'</span><span class="caOpenPill '+(open?'open':'scheduled')+'">'+(open?'OPEN':'SCHEDULED')+'</span></div>'+
         '<h5>'+esc(x.title)+'</h5><p>'+esc(x.topic)+'</p>'+
         '<div class="caDayMeta"><span>▣ '+Number(x.questionCount||15)+' questions</span><span>◷ '+esc(when)+'</span></div>'+
-        '<button class="caStartButton" data-task="'+esc(x.id)+'" data-preview="'+(preview?'1':'0')+'" '+(open?'':'disabled')+'>'+(preview?'Preview / Run Assessment →':open?'Start Assessment →':'Not Open Yet')+'</button>'+
+        '<button class="caStartButton" data-task="'+esc(x.id)+'" data-preview="'+(preview?'1':'0')+'" '+(open?'':'disabled')+'>'+(open?'Start Assessment →':'Not Open Yet')+'</button>'+
       '</article>';
     });
 
@@ -71,7 +70,7 @@ function renderList(items,preferredTaskId=''){
   });
 
   root.innerHTML=h;
-  root.querySelectorAll('[data-task]').forEach(b=>b.onclick=()=>start(b.dataset.task,b.dataset.preview==='1'));
+  root.querySelectorAll('[data-task]').forEach(b=>b.onclick=()=>start(b.dataset.task));
 }
 
 async function load(preferredTaskId='',hostId=''){
@@ -88,11 +87,11 @@ async function load(preferredTaskId='',hostId=''){
   }
 }
 
-async function start(taskId,preview=false){
+async function start(taskId){
   const root=host();
   try{
     root.innerHTML='<div class="caLoading"><div class="assessmentSpinner"></div><strong>Preparing your assessment…</strong><span>Your 15-question set is being selected securely. Please do not refresh.</span></div>';
-    const r=await call('startCompetencyAssessment')({taskId,preview});
+    const r=await call('startCompetencyAssessment')({taskId});
     current=r.data;
     answers={};
     index=0;
