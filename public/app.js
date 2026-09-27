@@ -120,6 +120,14 @@ document.querySelectorAll('.menuButton').forEach(b=>b.onclick=()=>{
   if(panel){panel.hidden=false; panel.scrollIntoView({behavior:'smooth',block:'start'});}
 });
 
+document.querySelectorAll('.competencyQuickCard').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.studentHiddenPanel').forEach(p=>p.hidden=true);
+  const panel=$(b.dataset.panel);
+  if(panel){panel.hidden=false; panel.scrollIntoView({behavior:'smooth',block:'start'});}
+  const trackId=b.dataset.track;
+  if(trackId && window.FXECCompetencyPortal?.openTrack) window.FXECCompetencyPortal.openTrack(trackId);
+});
+
 async function loadCourseOverview(){
   try{
     const r=await call('getCourseOverview')({});
