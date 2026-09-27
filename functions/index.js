@@ -1894,7 +1894,7 @@ async function ensureAdminCTrialModule(){
   const snap=await ref.get();
   if(snap.exists)return snap.data();
   const base=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP01-D1-'));
-  const coding=C_STAR_CODING_QUESTIONS.find(q=>String(q.id).startsWith('CSTAR-D1-'));
+  const coding=C_STAR_CODING_QUESTIONS.find(q=>Number(String(q.id).split('-D')[1]?.split('-')[0])===1);
   if(base.length!==50 || !coding) throw new HttpsError('failed-precondition','C Fundamentals trial question bank is unavailable.');
   const questions=[...base.filter(q=>q.type!=='scenario'),coding,...base.filter(q=>q.type==='scenario').slice(0,9)];
   const now=new Date();
