@@ -33,13 +33,17 @@ function formatClock(seconds){
   return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
 }
 
-function renderList(items){
+function renderList(items,preferredTaskId=''){
   const root=host();
   if(!root)return;
 
   if(!items.length){
-    root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">ASSESSMENT LAUNCH CENTRE</span><h3>No published assessments yet</h3><p>Your Administrator will publish each assessment after reviewing and approving its question pool.</p></div>';
+    root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">STAR ASSESSMENT</span><h3>This module has no published assessment yet</h3><p>The study material and drills remain available. The ⭐ STAR Assessment opens here after faculty/admin approval and scheduling.</p></div>';
     return;
+  }
+  if(preferredTaskId){
+    const preferred=items.find(x=>x.id===preferredTaskId);
+    if(preferred && preferred.status==='open'){ start(preferredTaskId); return; }
   }
 
   const groups={};
@@ -68,13 +72,13 @@ function renderList(items){
   root.querySelectorAll('[data-task]').forEach(b=>b.onclick=()=>start(b.dataset.task));
 }
 
-async function load(){
+async function load(preferredTaskId=''){
   const root=host();
   if(!root)return;
   root.innerHTML='<div class="caLoading"><div class="assessmentSpinner"></div><strong>Loading assessments…</strong><span>Checking the published assessment windows.</span></div>';
   try{
     const r=await call('getStudentCompetencyAssessments')({});
-    renderList(r.data?.items||[]);
+    renderList(r.data?.items||[],preferredTaskId);
   }catch(e){
     root.innerHTML='<div class="caStudentEmpty error"><span class="sectionEyebrow">ASSESSMENT CENTRE</span><h3>Unable to load assessments</h3><p>'+esc(e.message||String(e))+'</p><button id="caRetry">Try Again</button></div>';
     root.querySelector('#caRetry')?.addEventListener('click',load);
