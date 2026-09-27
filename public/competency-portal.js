@@ -648,6 +648,7 @@ function openCodingLab(ws,{title,prompt,starter,metaId=''}){
 }
 
 function moduleView(track,data,no,programme){
+ const assessmentCount=track.id==='c-programming'?15:10;
  const topicHtml=(data.topics||[]).map(x=>'<li>'+esc(x)+'</li>').join('');
  let materialHtml='';
  if(Array.isArray(data.lessons)&&data.lessons.length){
@@ -669,13 +670,13 @@ function moduleView(track,data,no,programme){
 
  return '<section class="moduleLearningWorkspace">'+
  '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
- '<div class="moduleFlowBanner"><strong>MODULE LEARNING FLOW</strong><span>01 Topic</span><i>→</i><span>02 Materials</span><i>→</i><span>03 Drills</span><i>→</i><span>04 Practice</span><i>→</i><span>05 Challenge</span><i>→</i><span>06 Final Assessment · 15 Questions</span></div>'+
+ '<div class="moduleFlowBanner"><strong>MODULE LEARNING FLOW</strong><span>01 Topic</span><i>→</i><span>02 Materials</span><i>→</i><span>03 Drills</span><i>→</i><span>04 Practice</span><i>→</i><span>05 Challenge</span><i>→</i><span>06 Final Assessment · '+assessmentCount+' Questions</span></div>'+
  '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · MODULE TOPIC</span><h4>What you will learn</h4><p class="moduleScopeText">'+esc(data.scope)+'</p><ul class="scopeList">'+topicHtml+'</ul></section>'+
  '<section class="learningSection"><span class="sectionEyebrow">02 · MATERIALS</span><h4>Study Materials</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it → complete the micro-check.</p>'+materialHtml+'</section>'+
  '<section class="learningSection"><span class="sectionEyebrow">03 · GUIDED DRILLS</span><h4>Practise like a game</h4><p>Complete the guided missions here. ⭐ Stars belong to drills only.</p><div class="drillGrid">'+drillHtml+'</div></section>'+
  '<section class="learningSection"><span class="sectionEyebrow">04 · PRACTICE</span><h4>Practice Ladder · Levels 1–5</h4><p>Build independence step by step. Practice progress is separate from Drill Stars.</p><div class="practiceLadder">'+practiceHtml+'</div>'+codingHtml+'</section>'+
  '<section class="learningSection challengeSection"><span class="sectionEyebrow">05 · CHALLENGE</span><h4>Apply what you have learned</h4><div class="challengeBox"><p>'+esc(data.challenge)+'</p><ul><li>Write the solution in the editor.</li><li>Run normal, boundary and unusual inputs.</li><li>Fix compiler and logic errors.</li><li>Review before moving to the final assessment.</li></ul></div></section>'+
- '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · FINAL ASSESSMENT</span><h4>Final Module Assessment · 15 Questions</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ Exactly 15 questions</span><span>✓ Module-specific pool</span><span>✓ C modules include coding</span><span>✓ Admin/faculty approval required</span></div><button id="startAssessment">Start Final Assessment · 15 Questions →</button><div id="moduleAssessmentMount" class="assessmentInlineMount"></div><p class="assessmentNote">This is the formal assessment for '+esc(data.title)+'. Drill Stars and practice rewards do not replace the final assessment score.</p></section></section>';
+ '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · FINAL ASSESSMENT</span><h4>Final Module Assessment · '+assessmentCount+' Questions</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ Exactly '+assessmentCount+' questions</span><span>✓ Module-specific pool</span><span>✓ C modules include coding</span><span>✓ Admin/faculty approval required</span></div><button id="startAssessment">Start Final Assessment · '+assessmentCount+' Questions →</button><div id="moduleAssessmentMount" class="assessmentInlineMount"></div><p class="assessmentNote">This is the formal assessment for '+esc(data.title)+'. Drill Stars and practice rewards do not replace the final assessment score.</p></section></section>';
 }
 function materialGuide(resource,title){return 'Study this topic in three passes. First understand the idea. Second trace the worked example line by line. Third close the notes and reproduce the idea yourself. Then complete a related drill and explain the reasoning aloud. Resource: '+resource+'.';}
 function checkPracticeAnswer(button){const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model approach:</b> '+esc(button.dataset.answer)+'</p>';button.parentElement.appendChild(box);button.textContent='Review Prompt';}
@@ -685,7 +686,7 @@ async function launchModuleAssessment(trackId,moduleNo,workspace=null){
  const mount=workspace?.querySelector('#moduleAssessmentMount')||document.getElementById('competencyAssessmentLaunch');
  if(!mount)return;
  mount.id='moduleAssessmentMount';
- mount.innerHTML='<div class="caLoading"><strong>Checking assessment workflow…</strong><span>Admin/faculty review the full master question bank. Students see only the approved 15-question assessment during its scheduled window.</span></div>';
+ mount.innerHTML='<div class="caLoading"><strong>Checking assessment workflow…</strong><span>Admin/faculty review the full master question bank. Students see only the approved module assessment during its scheduled window.</span></div>';
  mount.scrollIntoView({behavior:'smooth',block:'start'});
  try{
    const roleResult=await call('getAdminCompetencyAssessmentPrograms')({});
