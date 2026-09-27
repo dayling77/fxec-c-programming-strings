@@ -1755,6 +1755,41 @@ async function generateHighStandardCompetencyDay(trackId, day) {
   throw new Error('Could not produce a fully validated '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' Module '+day+' question bank. '+lastIssues.slice(0,5).join(' '));
 }
 
+export const generatePreparedCompetencyModule = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
+  const adminUser=requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const day=Number(request.data?.day);
+  if(trackId!=='c-programming') throw new HttpsError('invalid-argument','This generator is currently available for C Programming.');
+  if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
+  try{
+    const questions=await generateHighStandardCompetencyDay(trackId,day);
+    if(!Array.isArray(questions)||questions.length!==50) throw new Error('Generated module did not contain exactly 50 questions.');
+    const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+    const taskRef=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+    await taskRef.set({
+      trackId,trackTitle:meta.title,day,
+      title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
+      topic:competencyModuleTitle(trackId,day),
+      date:null,openAt:null,closeAt:null,
+      questions,questionCount:50,recommendedQuestionCount:15,
+      status:'draft',isPublished:false,source:'ai-validated-mixed-format',
+      generatedBy:'Gemini + 2 audit passes',loadedBy:adminUser.uid,
+      loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+    },{merge:true});
+    const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
+    await poolRef.set({trackId,day,questionCount:50,recommendedQuestionCount:15,status:'draft',source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    const pb=db.batch();
+    for(const q of questions){
+      pb.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day,poolId:poolRef.id,source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    }
+    await pb.commit();
+    return {success:true,trackId,day,questionCount:50,message:'Module '+day+' generated and saved as DRAFT.'};
+  }catch(e){
+    logger.error('C module generation failed',{trackId,day,error:String(e?.stack||e)});
+    throw new HttpsError('internal','Module '+day+' could not be generated. '+String(e?.message||'Please try again.'));
+  }
+});
+
 export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
