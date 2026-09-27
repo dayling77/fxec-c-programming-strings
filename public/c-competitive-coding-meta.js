@@ -157,7 +157,7 @@ export const C_COMPETITIVE_META = [
     "challengeId": "CP-ALG-009",
     "module": "Pointers",
     "domain": "Two Pointers",
-    "prompt": "Read N, an array and pivot P. Rearrange so values less than P come first, followed by values equal to P, then values greater than P. No order is required within each group.",
+    "prompt": "Read N, an array and pivot P. Rearrange so values less than P come first, followed by values equal to P, then values greater than P. Sort each of the three groups in ascending order.",
     "sampleTests": [
       [
         "7 4 9 2 4 7 4 5 4",
