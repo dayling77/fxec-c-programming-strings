@@ -1367,8 +1367,7 @@ export const exportResults = onCall({ cors: CALLABLE_CORS }, async request => {
   }
   if (format === 'csv') {
     const header = Object.keys(rows[0] || { registerNumber:'',name:'',email:'',date:'',score:'',total:'',percent:'',passed:'',rewardPoints:'' });
-    const csv = [header.join(','), ...rows.map(r => header.map(k => `"${String(r[k] ?? '').replaceAll('"','""')}"`).join(','))].join('
-');
+    const csv = [header.join(','), ...rows.map(r => header.map(k => `"${String(r[k] ?? '').replaceAll('"','""')}"`).join(','))].join('\n');
     const path = `exports/results-${Date.now()}.csv`;
     await bucket.file(path).save(csv, { contentType: 'text/csv' });
     return { format, path };
