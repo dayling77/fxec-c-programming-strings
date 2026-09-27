@@ -16,7 +16,7 @@ import { randomUUID } from 'node:crypto';
 import { QUESTION_BANK, QUESTION_BANK_META } from './question-bank.js';
 
 setGlobalOptions({ invoker: 'public' });
-initializeApp();
+initializeApp({ storageBucket: process.env.FIREBASE_STORAGE_BUCKET || 'fxec-c-strings.firebasestorage.app' });
 const db = getFirestore();
 const auth = getAuth();
 const bucket = getStorage().bucket();
