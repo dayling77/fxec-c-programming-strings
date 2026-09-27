@@ -1,4 +1,6 @@
-// FXEC Competitive C Coding Bank — original problems inspired by common competitive-programming domains.\n// Not copied from HackerRank, CodeChef, TCS, or any other platform.\nexport const C_COMPETITIVE_CHALLENGES = [
+// FXEC Competitive C Coding Bank — original problems inspired by common competitive-programming domains.
+// Not copied from HackerRank, CodeChef, TCS, or any other platform.
+export const C_COMPETITIVE_CHALLENGES = [
   {
     "id": "CP-ALG-001",
     "title": "Balanced Digit Sum",
@@ -839,4 +841,5 @@
       ]
     ]
   }
-];\nexport const C_COMPETITIVE_BY_ID = Object.freeze(Object.fromEntries(C_COMPETITIVE_CHALLENGES.map(x=>[x.id,x])));\n
+];
+export const C_COMPETITIVE_BY_ID = Object.freeze(Object.fromEntries(C_COMPETITIVE_CHALLENGES.map(x=>[x.id,x])));
