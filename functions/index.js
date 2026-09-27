@@ -1184,31 +1184,48 @@ export const submitCChallenge = onCall({cors:CALLABLE_CORS,timeoutSeconds:120,me
   await consumeCompilerQuota(user.uid,challenge.tests.length);
   const results=[];
   for(const [input,expected] of challenge.tests){
-    const r=await judge0Submit(sourceCode,input,expected);
-    results.push({
-      input,expected,
-      passed:Number(r.status?.id)===3,
-      status:r.status?.description||'Unknown',
-      stdout:String(r.stdout||'').slice(0,1000),
-      stderr:String(r.stderr||'').slice(0,1000)
-    });
+    try{
+      const r=await judge0Submit(sourceCode,input,expected);
+      results.push({
+        input,expected,
+        passed:Number(r.status?.id)===3,
+        status:r.status?.description||'Unknown',
+        stdout:String(r.stdout||'').slice(0,1000),
+        stderr:String(r.stderr||'').slice(0,1000),
+        compileOutput:String(r.compile_output||'').slice(0,1000),
+        message:String(r.message||'').slice(0,500)
+      });
+    }catch(e){
+      logger.error('C challenge test execution failed',{
+        uid:user.uid,challengeId,testInput:input,error:e?.stack||e?.message||String(e)
+      });
+      if(e instanceof HttpsError) throw e;
+      throw new HttpsError('failed-precondition','The challenge compiler could not complete test execution. Please try again.');
+    }
   }
   const passedTests=results.filter(x=>x.passed).length;
   const passed=passedTests===results.length;
   const xpEarned=passed?challenge.xp:Math.min(5,passedTests);
-  const progressRef=db.collection('competencyProgress').doc(user.uid);
-  await db.runTransaction(async tx=>{
-    const snap=await tx.get(progressRef); const d=snap.exists?snap.data():{};
-    const oldXp=Number(d.xp||0), newXp=oldXp+xpEarned;
-    const level=Math.floor(newXp/100)+1;
-    const badges=Array.isArray(d.badges)?[...d.badges]:[];
-    if(passed && !badges.includes('C Strings Coder')) badges.push('C Strings Coder');
-    tx.set(progressRef,{xp:newXp,level,badges,updatedAt:FieldValue.serverTimestamp(),lastChallenge:challengeId,lastChallengePassed:passed},{merge:true});
-  });
+  try{
+    const progressRef=db.collection('competencyProgress').doc(user.uid);
+    await db.runTransaction(async tx=>{
+      const snap=await tx.get(progressRef); const d=snap.exists?snap.data():{};
+      const oldXp=Number(d.xp||0), newXp=oldXp+xpEarned;
+      const level=Math.floor(newXp/100)+1;
+      const badges=Array.isArray(d.badges)?[...d.badges]:[];
+      if(passed && !badges.includes('C Strings Coder')) badges.push('C Strings Coder');
+      tx.set(progressRef,{xp:newXp,level,badges,updatedAt:FieldValue.serverTimestamp(),lastChallenge:challengeId,lastChallengePassed:passed},{merge:true});
+    });
+  }catch(e){
+    logger.error('C challenge progress update failed',{
+      uid:user.uid,challengeId,passedTests,totalTests:results.length,error:e?.stack||e?.message||String(e)
+    });
+    throw new HttpsError('failed-precondition','Challenge tests completed, but progress could not be saved. Please try again.');
+  }
   return {
     passed,passedTests,totalTests:results.length,xpEarned,
     message:passed?'All hidden tests passed. Challenge completed.':'Some hidden tests failed. Review your algorithm and try again.',
-    results:results.map(x=>({passed:x.passed,status:x.status}))
+    results:results.map(x=>({passed:x.passed,status:x.status,stdout:x.stdout,stderr:x.stderr,compileOutput:x.compileOutput,message:x.message}))
   };
 });
 
