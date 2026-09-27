@@ -557,6 +557,8 @@ function launchAssessmentCentre(){
 }
 
 document.addEventListener('click',e=>{
+ const audio=e.target.closest('.moduleAudioButton');
+ if(audio){ e.preventDefault(); speak(audio.dataset.speech||''); return; }
  const b=e.target.closest('.moduleOpen'); if(!b)return;
  const root=b.closest('.competencyPortal'); if(!root)return;
  const trackId=b.dataset.track, no=Number(b.dataset.module);
