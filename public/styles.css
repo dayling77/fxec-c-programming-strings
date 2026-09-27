@@ -700,3 +700,6 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .moduleFlowBanner{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:14px 0;padding:12px 14px;border:1px solid #dbeafe;border-radius:14px;background:#f8fbff}
 .moduleFlowBanner strong{width:100%;font-size:10px;letter-spacing:1px;color:#1746a2}.moduleFlowBanner span{font-size:10px;font-weight:900;color:#1e3a5f;background:#fff;border:1px solid #dbeafe;border-radius:999px;padding:7px 10px}.moduleFlowBanner i{font-style:normal;color:#64748b;font-weight:900}
 .moduleScopeText{font-size:13px;line-height:1.7;color:#334155}.codingApplyBlock{margin-top:18px;padding-top:16px;border-top:1px dashed #cbd5e1}.codingApplyHeader{margin-bottom:12px}.codingApplyHeader h4{margin:4px 0}.codingApplyHeader p{margin:4px 0;color:#64748b;font-size:11px;line-height:1.55}.competitiveHeader{margin-top:22px;padding-top:16px;border-top:1px solid #e2e8f0}
+
+/* Keep selected competency path in the main viewport */
+#competencyWorkspace[hidden]{display:none!important}.competencyWorkspace{width:100%;margin:0}.competencyTrackGrid[hidden],.dashboardLeaderboardSection[hidden]{display:none!important}
