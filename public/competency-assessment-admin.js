@@ -35,7 +35,8 @@ function render(){
    root.querySelectorAll('[data-day]').forEach(b=>b.disabled=true);
  }
  root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
- root.querySelector('#caTrack').onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
+ const trackSelect=root.querySelector('#caTrack');
+ if(trackSelect)trackSelect.onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
  root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{
    const isC=selectedTrack==='c-programming';
    const label=isC?'C Programming — 10 × 50 mixed-format master bank':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack)+' — 10 modules';
@@ -81,7 +82,8 @@ function render(){
      if(b)b.disabled=false;
    }
  });
- root.querySelector('#caRefresh').onclick=load;
+ const refreshButton=root.querySelector('#caRefresh');
+ if(refreshButton)refreshButton.onclick=load;
  root.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{selectedDay=Number(b.dataset.day);render();});
  if(t)wireEditor();
 }
