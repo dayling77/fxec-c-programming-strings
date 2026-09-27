@@ -262,17 +262,28 @@ async function loadProgress(root){
 function openTrack(root,trackId){
  const track=TRACKS.find(x=>x.id===trackId); if(!track)return;
  const ws=root.querySelector('#competencyWorkspace');
+ const grid=root.querySelector('#competencyTrackGrid');
+ const leaderboard=root.querySelector('.dashboardLeaderboardSection');
  ws.innerHTML='<section class="competencyWorkspace"><div class="workspaceHeader"><div><span class="sectionEyebrow">COMPETENCY PROGRAMME</span><h3>'+esc(track.title)+'</h3><p>'+esc(track.description)+'</p></div><button class="secondary" id="closeTrack">← All Competencies</button></div>'+
   (track.programmeWise?programmeChooser():'')+
   '<div id="moduleArea">'+(track.programmeWise?'<div class="moduleLocked">Select your programme above to open your department-specific Core Engineering modules.</div>':moduleGrid(track,null))+'</div></section>';
- ws.querySelector('#closeTrack').onclick=()=>{ws.innerHTML='';root.querySelector('#competencyTrackGrid')?.scrollIntoView({behavior:'smooth',block:'start'});};
+ grid.hidden=true;
+ if(leaderboard)leaderboard.hidden=true;
+ ws.hidden=false;
+ ws.querySelector('#closeTrack').onclick=()=>{
+   ws.innerHTML='';
+   ws.hidden=true;
+   grid.hidden=false;
+   if(leaderboard)leaderboard.hidden=false;
+   root.closest('#firstYearCompetencyPanel')?.scrollIntoView({behavior:'smooth',block:'start'});
+ };
  if(track.programmeWise){
   ws.querySelector('#programmeSelect').onchange=e=>{
    const value=e.target.value;
    ws.querySelector('#moduleArea').innerHTML=value?moduleGrid(track,PROGRAMMES.find(p=>p.id===value)):'<div class="moduleLocked">Select your programme above to open your department-specific Core Engineering modules.</div>';
   };
  }
- ws.scrollIntoView({behavior:'smooth',block:'start'});
+ root.closest('#firstYearCompetencyPanel')?.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function programmeChooser(){
