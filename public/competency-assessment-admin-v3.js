@@ -16,76 +16,32 @@ const call=name=>{
 const TRACKS=[['communication','Communication'],['aptitude','Aptitude'],['core-engineering','Core Engineering'],['c-programming','C Programming'],['problem-solving','Problem Solving'],['analytical','Analytical Skills']];
 const MODULES={communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],aptitude:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude'],'core-engineering':['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],'problem-solving':['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge'],analytical:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']};
 let programs=[],selectedTrack='communication',selectedDay=1,viewerRole='admin',activeHostId='competencyAssessmentAdmin';
-let generationState=null;
 const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function host(){return document.getElementById(activeHostId)||document.getElementById('competencyAssessmentAdmin');}
 function task(track,day){return programs.find(x=>x.trackId===track&&Number(x.day)===day);}
-async function fetchPrograms(){const r=await call('getAdminCompetencyAssessmentPrograms')({});programs=r.data?.items||[];viewerRole=r.data?.role||'admin';return r;}
+async function fetchPrograms(){
+  const r=await call('getAdminCompetencyAssessmentPrograms')({trackId:selectedTrack,day:selectedDay});
+  programs=r.data?.items||[];
+  viewerRole=r.data?.role||'admin';
+  return r;
+}
 function render(){
- const root=host();if(!root)return;const t=task(selectedTrack,selectedDay);
- let h='<div class="competencyAdminToolbar"><label>Competency <select id="caTrack">';
- h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
- h+='</select></label>'+(viewerRole==='admin'?'<button id="caLoadPrepared" class="primaryButton">📚 Generate New 10 × 50 Mixed-Format Bank</button>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh</button></div>';
- h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
- h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
- h+=(generationState&&generationState.trackId===selectedTrack)?renderGenerationProgress():(t?renderEditor(t):'<div class="caEmpty">Start the automatic module generation to create the assessment bank.</div>');
- root.innerHTML=h;
- if(generationState){
-   const ts=root.querySelector('#caTrack'); if(ts)ts.disabled=true;
-   root.querySelectorAll('[data-day]').forEach(b=>b.disabled=true);
- }
- root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
- const trackSelect=root.querySelector('#caTrack');
- if(trackSelect)trackSelect.addEventListener('change',e=>{selectedTrack=e.target.value;selectedDay=1;render();});
- root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{
-   const isC=selectedTrack==='c-programming';
-   const label=isC?'C Programming — 10 × 50 mixed-format master bank':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack)+' — 10 modules';
-   if(!confirm('Start a NEW '+label+'? Existing draft questions are never overwritten until each module finishes successfully. Generation now runs in the background, so this page will not time out.'))return;
-   const button=root.querySelector('#caLoadPrepared');
-   try{
-     if(button)button.disabled=true;
-     generationState={current:1,completed:[],error:null,startedAt:Date.now(),runId:null,trackId:selectedTrack};
-     render();
-     const started=await call('startCompetencyAssessmentGeneration')({trackId:selectedTrack});
-     generationState.runId=started.data?.runId||null;
-     render();
-     if(!generationState.runId) throw new Error('Generation run was not created.');
-     let done=false;
-     while(!done){
-       await new Promise(resolve=>setTimeout(resolve,4000));
-       const rr=await call('getCompetencyAssessmentGenerationRun')({runId:generationState.runId});
-       const run=rr.data||{};
-       const modules=run.modules||{};
-       generationState.completed=Object.entries(modules).filter(([,s])=>s==='completed').map(([d])=>Number(d));
-       const failed=Object.entries(modules).find(([,s])=>s==='failed');
-       const running=Object.entries(modules).find(([,s])=>s==='running')||Object.entries(modules).find(([,s])=>s==='queued');
-       if(running)generationState.current=Number(running[0]);
-       generationState.error=failed?{day:Number(failed[0]),message:String((run.errors||{})[failed[0]]||'Module generation failed.')} : null;
-       done=['completed','completed-with-errors'].includes(String(run.status||''));
-       generationState.finished=done;
-       render();
-     }
-     await fetchPrograms();
-     render();
-     if(generationState.error){
-       setStatus('Generation finished with an error in Module '+generationState.error.day+'. Other completed modules are saved as DRAFT.','error');
-     }else{
-       setStatus('✓ All 10 '+(isC?'C Programming':'competency')+' modules generated. C has 50-question mixed-format masters; other tracks auto-deliver 10 questions per student.','success');
-     }
-     setTimeout(()=>{generationState=null;render();},1800);
-   }catch(e){
-     generationState.error={day:generationState.current||1,message:e?.message||String(e)};
-     render();
-     setStatus(e?.message||String(e),'error');
-   }finally{
-     const b=host()?.querySelector('#caLoadPrepared');
-     if(b)b.disabled=false;
-   }
- });
- const refreshButton=root.querySelector('#caRefresh');
- if(refreshButton)refreshButton.addEventListener('click',()=>load());
- root.querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>{selectedDay=Number(b.dataset.day);render();}));
- if(t)wireEditor();
+  const root=host();if(!root)return;
+  const t=task(selectedTrack,selectedDay);
+  let h='<div class="competencyAdminToolbar"><label>Competency <select id="caTrack">';
+  h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
+  h+='</select></label>'+(viewerRole==='admin'?'<span class="practiceBadge">PREPARED MASTER BANKS</span>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh Module</button></div>';
+  h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
+  h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
+  h+=t?renderEditor(t):'<div class="caEmpty"><strong>Module '+selectedDay+' is not prepared yet.</strong><p>Select another module or prepare this module in the controlled bank-preparation process. Only the selected module is loaded from Firestore.</p></div>';
+  root.innerHTML=h;
+  root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
+  const trackSelect=root.querySelector('#caTrack');
+  if(trackSelect)trackSelect.addEventListener('change',e=>{selectedTrack=e.target.value;selectedDay=1;load(activeHostId,selectedTrack,selectedDay);});
+  const refreshButton=root.querySelector('#caRefresh');
+  if(refreshButton)refreshButton.addEventListener('click',()=>load(activeHostId,selectedTrack,selectedDay));
+  root.querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>{selectedDay=Number(b.dataset.day);load(activeHostId,selectedTrack,selectedDay);}));
+  if(t)wireEditor();
 }
 
 function renderGenerationProgress(){
