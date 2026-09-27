@@ -382,7 +382,7 @@ const GENERIC_MODULE_BLUEPRINTS = {
  ]
 };
 function genericModule(title,trackTitle,no){
- const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving:'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
+ const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
  const b=(GENERIC_MODULE_BLUEPRINTS[trackKey]||[])[no-1]||{};
  const topics=b.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
  const focus=b.focus||'Build the core skill step by step, with repeated practice before moving to application.';
