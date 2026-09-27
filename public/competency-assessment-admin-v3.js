@@ -175,7 +175,7 @@ function wireEditor(){
    if(!email)return setStatus('Enter the faculty email address.');
    try{assign.disabled=true;setStatus('Assigning faculty verifier…','saving');await call('assignCompetencyAssessmentFaculty')({trackId:selectedTrack,day:selectedDay,facultyEmail:email});await load();setStatus('✓ Faculty verifier assigned.','success');}
    catch(e){assign.disabled=false;setStatus(e.message||String(e));}
- };
+ });
 }
 async function save(approve){
  const date=host().querySelector('#caDate').value;
