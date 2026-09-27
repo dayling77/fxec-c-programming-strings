@@ -298,8 +298,8 @@ function programmeChooser(){
 
 function moduleGrid(track,programme){
  return '<div class="moduleProgrammeBanner">'+(programme?'<span>PROGRAMME</span><strong>'+esc(programme.title)+'</strong>':'<span>COMPETENCY PATHWAY</span><strong>'+esc(track.title)+'</strong>')+'</div>'+
-  '<div class="moduleSectionHeading"><div><span class="sectionEyebrow">DAY / MODULE LEARNING PATH</span><h4>Every module keeps its own learning flow</h4><p>Concept → material → guided drill → practice → challenge → ⭐ STAR Assessment. Questions are loaded and approved inside the corresponding module.</p></div><span class="practiceBadge">'+track.modules.length+' STAR ASSESSMENTS</span></div>'+
-  '<div class="moduleGrid">'+track.modules.map((m,i)=>'<article class="learningModuleCard"><div class="moduleTop"><span>DAY / MODULE '+String(i+1).padStart(2,'0')+'</span><b>⭐ STAR ASSESSMENT</b></div><h5>'+esc(m)+'</h5><div class="moduleFlow"><span>Concept</span><i>→</i><span>Material</span><i>→</i><span>Drill</span><i>→</i><span>Practice</span><i>→</i><span>Challenge</span><i>→</i><span>Assess</span></div><div class="moduleAssessmentMeta"><span><b>15</b> questions / student</span><span><b>50</b> master questions</span>'+(track.id==='c-programming'?'<span class="codingMeta">⌨ 5 coding programmes</span>':'')+'</div><div class="moduleBottom"><small>Question bank belongs to Module '+(i+1)+'</small><button class="moduleOpen" data-track="'+esc(track.id)+'" data-module="'+(i+1)+'">Open Day '+(i+1)+' →</button><button class="starAssessmentButton" data-star-track="'+esc(track.id)+'" data-star-module="'+(i+1)+'">⭐ STAR Assessment</button></div></article>').join('')+'</div>';
+  '<div class="moduleSectionHeading"><div><span class="sectionEyebrow">MODULE LEARNING PATH</span><h4>Every module keeps its own learning flow</h4><p>Topic → materials → guided drills → practice → challenge → final assessment. Drill Stars belong only to Guided Drills.</p></div><span class="practiceBadge">'+track.modules.length+' MODULE ASSESSMENTS</span></div>'+
+  '<div class="moduleGrid">'+track.modules.map((m,i)=>'<article class="learningModuleCard"><div class="moduleTop"><span>MODULE '+String(i+1).padStart(2,'0')+'</span><b>FINAL ASSESSMENT · 15</b></div><h5>'+esc(m)+'</h5><div class="moduleFlow"><span>Topic</span><i>→</i><span>Materials</span><i>→</i><span>Drills</span><i>→</i><span>Practice</span><i>→</i><span>Challenge</span><i>→</i><span>Assessment</span></div><div class="moduleAssessmentMeta"><span><b>15</b> questions / student</span><span><b>50</b> master questions</span>'+(track.id==='c-programming'?'<span class="codingMeta">⌨ coding practice</span>':'')+'</div><div class="moduleBottom"><small>Master question bank belongs to Module '+(i+1)+'</small><button class="moduleOpen" data-track="'+esc(track.id)+'" data-module="'+(i+1)+'">Open Module '+(i+1)+' →</button></div></article>').join('')+'</div>';
 }
 
 function openModule(root,trackId,moduleNo,programme){
@@ -684,7 +684,7 @@ async function launchModuleAssessment(trackId,moduleNo,workspace=null){
  const taskId=String(trackId)+'_D'+String(moduleNo);
  const mount=workspace?.querySelector('#moduleAssessmentMount')||document.getElementById('competencyAssessmentLaunch');
  if(!mount)return;
- mount.innerHTML='<div class="caLoading"><strong>Loading Module '+String(moduleNo)+' STAR Assessment…</strong><span>Checking the approved question pool and opening window.</span></div>';
+ mount.innerHTML='<div class="caLoading"><strong>Loading Module '+String(moduleNo)+' Final Assessment…</strong><span>Checking the approved question pool and opening window.</span></div>';
  mount.scrollIntoView({behavior:'smooth',block:'start'});
  if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId,mount.id||'moduleAssessmentMount');
 }
@@ -730,4 +730,4 @@ document.addEventListener('click',async e=>{
 });
 
 export {renderPortal as renderCompetencyPortal,TRACKS,PROGRAMMES,C_MODULES};
-window.FXECCompetencyPortal={renderCompetencyPortal:renderPortal,TRACKS,PROGRAMMES,C_MODULES,openTrack:(trackId)=>{const root=document.getElementById('firstYearCompetencyRoot');if(root)openTrack(root,trackId);}};
+window.FXECCompetencyPortal={buildStamp:'2026.09.27.1930',renderCompetencyPortal:renderPortal,TRACKS,PROGRAMMES,C_MODULES,openTrack:(trackId)=>{const root=document.getElementById('firstYearCompetencyRoot');if(root)openTrack(root,trackId);}};
