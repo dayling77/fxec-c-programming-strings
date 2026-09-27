@@ -28,15 +28,10 @@ function render(){
    try{
      if(button)button.disabled=true;
      if(isC){
-       for(let day=1;day<=10;day++){
-         setStatus('Generating C Programming Module '+day+' of 10… This may take a few minutes. Do not close this page.','saving');
-         selectedDay=day;
-         await call('generatePreparedCompetencyModule')({trackId:'c-programming',day});
-         await load();
-         setStatus('✓ C Programming Module '+day+' generated. Continuing with Module '+(day+1)+'…','success');
-       }
-       await load();
+       setStatus('Generating all 10 C Programming modules… This can take several minutes. Please keep this page open.','saving');
+       await call('loadPreparedCompetencyAssessmentProgram')({trackId:'c-programming'});
        selectedDay=1;
+       await load();
        render();
        setStatus('✓ All 10 C Programming modules generated: 500 mixed-format master questions. All remain DRAFT.','success');
      }else{
