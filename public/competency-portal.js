@@ -619,4 +619,4 @@ document.addEventListener('click',async e=>{
 });
 
 export {renderPortal as renderCompetencyPortal,TRACKS,PROGRAMMES,C_MODULES};
-window.FXECCompetencyPortal={renderCompetencyPortal:renderPortal,TRACKS,PROGRAMMES,C_MODULES};
+window.FXECCompetencyPortal={renderCompetencyPortal:renderPortal,TRACKS,PROGRAMMES,C_MODULES,openTrack:(trackId)=>{const root=document.getElementById('firstYearCompetencyRoot');if(root)openTrack(root,trackId);}};
