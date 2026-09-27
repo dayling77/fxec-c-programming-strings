@@ -411,6 +411,10 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 @media(max-width:800px){.caMetaGrid,.caQuestionMeta,.caOptions,.caStudentDayGrid{grid-template-columns:1fr}.caQuestion{grid-template-columns:1fr}}
 
 
+
+.caQuestionLabelRow{display:flex;gap:7px;flex-wrap:wrap}.questionKindBadge,.questionTopicBadge{display:inline-flex;padding:5px 8px;border-radius:999px;font-size:8px;font-weight:900;letter-spacing:.5px;background:#eef4ff;color:#2563eb}.questionTopicBadge{background:#f8fafc;color:#64748b}.caCodingQuestion{border-color:#f3c98b;background:#fffdf8}.caCodingMeta{display:grid;grid-template-columns:1fr 1fr;gap:10px}.caHiddenTests{display:flex;gap:10px;align-items:center;padding:9px 11px;background:#fff7ed;border:1px solid #fed7aa;border-radius:9px;font-size:10px;color:#9a3412}.caHiddenTests span{color:#7c5a2b}.codingAssessmentBox{border:1px solid #cfe0f5;background:#f8fbff;border-radius:12px;padding:14px;margin:12px 30px}.codingAssessmentMeta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.codingAssessmentMeta span{font-size:9px;font-weight:900;color:#2563eb;background:#fff;border:1px solid #dbe7f6;border-radius:999px;padding:5px 8px}.caCodeAnswer{width:100%;min-height:280px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.55;border:1px solid #cbd5e1;border-radius:9px;padding:12px;resize:vertical;background:#0f172a;color:#e2e8f0}.codingAssessmentRun{display:flex;align-items:center;gap:10px;margin-top:10px}.codingAssessmentRun span{font-size:10px;color:#64748b;white-space:pre-wrap}.codingAssessmentRun button{margin:0!important}
+@media(max-width:800px){.caCodingMeta{grid-template-columns:1fr}.codingAssessmentBox{margin:12px 15px}.codingAssessmentRun{align-items:flex-start;flex-direction:column}}
+
 /* ============================================================
    COMPETENCY ASSESSMENT — MATCH THE STRINGS PORTAL EXPERIENCE
    ============================================================ */
