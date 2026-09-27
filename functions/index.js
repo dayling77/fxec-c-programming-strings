@@ -1144,7 +1144,7 @@ async function judge0Submit(sourceCode, stdin, expectedOutput){
    if(expectedOutput!==null&&expectedOutput!==undefined){
     payload.expected_output=Buffer.from(String(expectedOutput),'utf8').toString('base64');
    }
-   const submitUrl=base+'/submissions/?base64_encoded=true&wait=true';
+   const submitUrl=base+'/submissions/?base64_encoded=true&wait=false';
    let response=await fetch(submitUrl,{method:'POST',headers,body:JSON.stringify(payload)});
    let body=await response.json().catch(()=>({}));
    if(!response.ok){
