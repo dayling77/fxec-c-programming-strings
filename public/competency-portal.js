@@ -685,8 +685,21 @@ async function launchModuleAssessment(trackId,moduleNo,workspace=null){
  const mount=workspace?.querySelector('#moduleAssessmentMount')||document.getElementById('competencyAssessmentLaunch');
  if(!mount)return;
  mount.id='moduleAssessmentMount';
- mount.innerHTML='<div class="caLoading"><strong>Loading Module '+String(moduleNo)+' Final Assessment…</strong><span>Checking the approved question pool and opening window.</span></div>';
+ mount.innerHTML='<div class="caLoading"><strong>Checking assessment workflow…</strong><span>Admin/faculty review the full master question bank. Students see only the approved 15-question assessment during its scheduled window.</span></div>';
  mount.scrollIntoView({behavior:'smooth',block:'start'});
+ try{
+   const roleResult=await httpsCallablePortal('getAdminCompetencyAssessmentPrograms')({});
+   const role=roleResult.data?.role||'student';
+   if(role==='admin'||role==='faculty'){
+     mount.innerHTML='<div id="moduleAssessmentAdminMount"></div>';
+     if(window.FXECCompetencyAssessmentAdmin?.load){
+       await window.FXECCompetencyAssessmentAdmin.load('moduleAssessmentAdminMount',trackId,moduleNo);
+     }
+     return;
+   }
+ }catch(e){
+   // Non-admin/faculty users continue to the student assessment flow.
+ }
  if(window.FXECCompetencyAssessmentStudent?.load) await window.FXECCompetencyAssessmentStudent.load(taskId,'moduleAssessmentMount');
 }
 
