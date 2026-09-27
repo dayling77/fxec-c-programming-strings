@@ -1817,13 +1817,18 @@ export const processCompetencyGenerationJob = onDocumentCreated(
       await questionsBatch.commit();
       await jobRef.update({status:'completed',completedAt:FieldValue.serverTimestamp(),questionCount:50});
       if(runRef){
-        const runSnap=await runRef.get(),run=runSnap.exists?runSnap.data():{};
-        const completed=Number(run.completed||0)+1;
-        await runRef.update({
-          ['modules.'+day]:'completed',
-          completed,
-          updatedAt:FieldValue.serverTimestamp(),
-          ...(completed>=10?{status:'completed',completedAt:FieldValue.serverTimestamp()}: {})
+        await db.runTransaction(async tx=>{
+          const snap=await tx.get(runRef);
+          if(!snap.exists) return;
+          const run=snap.data()||{};
+          const completed=Number(run.completed||0)+1;
+          const patch={
+            ['modules.'+day]:'completed',
+            completed,
+            updatedAt:FieldValue.serverTimestamp()
+          };
+          if(completed>=10){patch.status='completed';patch.completedAt=FieldValue.serverTimestamp();}
+          tx.update(runRef,patch);
         });
       }
     }catch(e){
