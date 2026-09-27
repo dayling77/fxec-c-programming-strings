@@ -38,19 +38,27 @@ function renderList(items,preferredTaskId=''){
   const root=host();
   if(!root)return;
 
-  if(!items.length){
-    root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">FINAL ASSESSMENT</span><h3>No published assessment window for this module yet</h3><p>Your study materials, Guided Drills and Practice Ladder remain available. The 15-question Final Assessment appears here only after the module question bank is reviewed, scheduled and approved by the administrator/faculty.</p><p><strong>Admin path:</strong> Assessment Control → Competency Assessment Programme → C Programming → Load / Generate 10 × 50 Questions → review → set date/open/close → Approve.</p></div>';
+  const preferred=preferredTaskId?items.find(x=>x.id===preferredTaskId):null;
+  if(preferredTaskId){
+    if(preferred && preferred.status==='open'){ start(preferredTaskId); return; }
+    if(!preferred){
+      root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">FINAL ASSESSMENT</span><h3>No published assessment window for this module yet</h3><p>This module does not currently have an active or scheduled published assessment. Your study materials, Guided Drills and Practice Ladder remain available.</p><p><strong>Assessment status:</strong> The module assessment appears here only after its master question bank is reviewed, scheduled and approved.</p></div>';
+      return;
+    }
+    const when=new Date(preferred.openAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'});
+    root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">FINAL ASSESSMENT · MODULE '+Number(preferred.day)+'</span><h3>'+esc(preferred.title)+'</h3><p>'+esc(preferred.topic)+'</p><div class="caDayMeta"><span>▣ 15 questions / student</span><span>◷ Opens '+esc(when)+'</span></div><button class="caStartButton" disabled>Not Open Yet</button></div>';
     return;
   }
-  if(preferredTaskId){
-    const preferred=items.find(x=>x.id===preferredTaskId);
-    if(preferred && preferred.status==='open'){ start(preferredTaskId); return; }
+
+  if(!items.length){
+    root.innerHTML='<div class="caStudentEmpty"><span class="sectionEyebrow">FINAL ASSESSMENT</span><h3>No published assessment windows</h3><p>Your module learning pages remain available. Final Assessments appear inside their respective modules after review, scheduling and approval.</p></div>';
+    return;
   }
 
   const groups={};
   items.forEach(x=>(groups[x.trackId]??=[]).push(x));
 
-  let h='<div class="caStudentIntro"><div><span class="sectionEyebrow">ASSESSMENT LAUNCH CENTRE</span><h3>Competency Assessments</h3><p>Administrator-approved assessments are shown here. Your recommended questions are selected securely on the server.</p></div><div class="caLaunchBadge">15 QUESTIONS · DIFFERENT SET PER STUDENT</div></div>';
+  let h='<div class="caStudentIntro"><div><span class="sectionEyebrow">ASSESSMENT LIST</span><h3>Published Competency Assessments</h3><p>Use the module page to launch a specific Final Assessment. Your recommended questions are selected securely on the server.</p></div><div class="caLaunchBadge">15 QUESTIONS · DIFFERENT SET PER STUDENT</div></div>';
 
   Object.entries(groups).forEach(([track,list])=>{
     h+='<section class="caStudentTrack"><div class="caTrackHeader"><div><span class="sectionEyebrow">COMPETENCY TRACK</span><h4>'+esc(list[0].trackTitle)+'</h4></div><span class="caTrackDayCount">'+list.length+' MODULE'+(list.length===1?'':'S')+'</span></div><div class="caStudentDayGrid">';
@@ -62,7 +70,7 @@ function renderList(items,preferredTaskId=''){
         '<div class="caDayTop"><span>MODULE '+x.day+'</span><span class="caOpenPill '+(open?'open':'scheduled')+'">'+(open?'OPEN':'SCHEDULED')+'</span></div>'+
         '<h5>'+esc(x.title)+'</h5><p>'+esc(x.topic)+'</p>'+
         '<div class="caDayMeta"><span>▣ '+Number(x.questionCount||15)+' questions</span><span>◷ '+esc(when)+'</span></div>'+
-        '<button class="caStartButton" data-task="'+esc(x.id)+'" data-preview="'+(preview?'1':'0')+'" '+(open?'':'disabled')+'>'+(open?'Start Assessment →':'Not Open Yet')+'</button>'+
+        '<button class="caStartButton" data-task="'+esc(x.id)+'" '+(open?'':'disabled')+'>'+(open?'Start Assessment →':'Not Open Yet')+'</button>'+
       '</article>';
     });
 
