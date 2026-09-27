@@ -572,6 +572,52 @@ async function loadCompetencyLeaderboard(ws,trackId){
   root.innerHTML=items.length?'<div class="leaderboardRows">'+items.map(x=>'<div class="leaderboardRow"><b>#'+Number(x.rank)+'</b><span><strong>'+esc(x.displayName)+'</strong><small>'+esc(x.displayClass||'Class not set')+'</small></span><strong>'+Number(x.totalPoints).toFixed(2)+' pts</strong><small>⭐ '+Number(x.drillStars)+'</small></div>').join('')+'</div>':'<div class="leaderboardLoading">Complete drills and assessments to appear here.</div>';
  }catch(e){root.innerHTML='<div class="leaderboardLoading">Leaderboard will appear after your first recorded activity.</div>';}
 }
+
+function codingLabShell(title,prompt,starter,meta=null){
+ const sampleHtml=meta?.sampleTests?.length?'<div class="codingSampleTests"><b>Sample Test Cases</b>'+meta.sampleTests.map((t,i)=>'<div class="codingSampleCase"><span>Sample '+(i+1)+'</span><code>Input: '+esc(t[0])+'</code><code>Expected: '+esc(t[1])+'</code></div>').join('')+'</div>':'';
+ const hiddenHtml=meta?'<div class="codingHiddenBadge">🔒 '+Number(meta.hiddenTestCount||0)+' hidden test cases · evaluated on submission</div>':'';
+ return '<div class="codingLabCard"><div class="codingLabHead"><div><span class="sectionEyebrow">HACKERRANK-STYLE C CODING LAB</span><h4>'+esc(title)+'</h4><p>'+esc(prompt)+'</p></div><span class="codingDomainBadge">'+(meta?esc(meta.domain):'Placement Implementation')+'</span></div>'+
+ sampleHtml+hiddenHtml+
+ '<div class="codingLabRules"><span>✓ Compile & run</span><span>✓ Sample cases visible</span><span>✓ Hidden cases protected server-side</span><span>✓ Output checked exactly</span></div>'+
+ lineNumberedEditor(starter||'#include <stdio.h>\\n\\nint main(void) {\\n    return 0;\\n}','codingLabEditor')+
+ '<label class="codingLabInputLabel">Custom input <textarea class="codingLabInput" placeholder="Enter test input here"></textarea></label>'+
+ '<div class="codingLabActions"><button type="button" class="codingRunSample">▶ Run Sample Tests</button><button type="button" class="codingRunCustom secondary">▶ Run Custom Input</button>'+(meta?'<button type="button" class="codingSubmitChallenge">Submit Challenge ✓</button>':'')+'<button type="button" class="codingClose secondary">Close Lab</button></div>'+
+ '<div class="codingLabResult" aria-live="polite">Write your solution, then run the sample tests.</div></div>';
+}
+async function wireCodingLab(ws){
+ const mount=ws?.querySelector?.('#moduleCodingLabMount'); if(!mount)return;
+ const editor=mount.querySelector('#codingLabEditor'),numbers=mount.querySelector('.codeLineNumbers');
+ if(editor&&numbers){const sync=()=>{const count=Math.max(4,editor.value.split('\\n').length);numbers.innerHTML=Array.from({length:count},(_,i)=>'<span>'+(i+1)+'</span>').join('');};editor.addEventListener('input',sync);sync();}
+ const result=mount.querySelector('.codingLabResult'),metaId=mount.dataset.metaId||'',meta=C_COMPETITIVE_META_BY_ID[metaId]||null;
+ const runOne=async(input,expected)=>{
+   const r=await call('runCCode')({sourceCode:editor.value,stdin:input});
+   const actual=String(r.data?.stdout||'').replace(/\\r/g,'').trim(),exp=String(expected||'').replace(/\\r/g,'').trim();
+   return {ok:!!r.data?.accepted&&actual===exp,actual,expected:exp};
+ };
+ mount.querySelector('.codingRunSample')?.addEventListener('click',async()=>{
+   if(!meta)return; result.className='codingLabResult running';result.textContent='Running sample tests…';
+   try{const rows=[];for(const [input,expected] of meta.sampleTests) rows.push(await runOne(input,expected));const passed=rows.filter(x=>x.ok).length;result.className='codingLabResult '+(passed===rows.length?'passed':'failed');result.innerHTML='<strong>Sample result: '+passed+'/'+rows.length+' passed</strong>'+rows.map((x,i)=>'<div class="codingTestRow '+(x.ok?'ok':'bad')+'"><span>Sample '+(i+1)+'</span><span>'+(x.ok?'✓ Passed':'✗ Failed')+'</span><code>Output: '+esc(x.actual||'(no output)')+'</code></div>').join('');}
+   catch(e){result.className='codingLabResult failed';result.textContent=e.message||String(e);}
+ });
+ mount.querySelector('.codingRunCustom')?.addEventListener('click',async()=>{
+   const input=mount.querySelector('.codingLabInput')?.value||'';result.className='codingLabResult running';result.textContent='Running custom input…';
+   try{const r=await call('runCCode')({sourceCode:editor.value,stdin:input});result.className='codingLabResult '+(r.data?.accepted?'passed':'failed');result.textContent=String(r.data?.stdout||r.data?.compileOutput||r.data?.stderr||r.data?.status||'No output');}
+   catch(e){result.className='codingLabResult failed';result.textContent=e.message||String(e);}
+ });
+ mount.querySelector('.codingSubmitChallenge')?.addEventListener('click',async()=>{
+   if(!meta)return;result.className='codingLabResult running';result.textContent='Submitting to hidden test suite…';
+   try{const r=await call('submitCChallenge')({challengeId:meta.challengeId,sourceCode:editor.value});result.className='codingLabResult '+(r.data?.passed?'passed':'failed');result.innerHTML='<strong>'+(r.data?.passed?'✓ Challenge completed':'↻ Submission needs improvement')+'</strong><p>'+esc(r.data?.message||'')+'</p><div class="codingSubmissionStats">'+Number(r.data?.passedTests||0)+' / '+Number(r.data?.totalTests||0)+' test cases passed · +'+Number(r.data?.xpEarned||0)+' XP</div>';}
+   catch(e){result.className='codingLabResult failed';result.textContent=e.message||String(e);}
+ });
+ mount.querySelector('.codingClose')?.addEventListener('click',()=>{mount.hidden=true;mount.innerHTML='';});
+}
+function openCodingLab(ws,{title,prompt,starter,metaId=''}){
+ const mount=ws?.querySelector?.('#moduleCodingLabMount'); if(!mount)return;
+ const meta=metaId?C_COMPETITIVE_META_BY_ID[metaId]:null;
+ mount.hidden=false;mount.dataset.metaId=metaId;mount.innerHTML=codingLabShell(title,prompt,starter,meta);
+ wireCodingLab(ws);mount.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
 function moduleView(track,data,no,programme){
  const topicHtml=data.topics.map(x=>'<li>'+esc(x)+'</li>').join('');
  const matHtml=data.lessons?data.lessons.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join('')+(data.example?'<article class="studyLesson moduleExampleLesson"><div class="studyLessonHead"><span>MODULE EXAMPLE</span><strong>Apply it in context</strong></div><p class="studyTeach">'+esc(data.example)+'</p>'+(data.audio?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(data.example)+'">🔊 Listen to Example</button>':'')+'</article>':''):data.title==='C Fundamentals'?C_FUNDAMENTALS_LESSON.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join(''):data.materials.map((x,i)=>'<div class="studyMaterial"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x)+'</strong><button class="materialToggle" data-open="0">Teach me</button><p class="materialBody" hidden>'+esc(materialGuide(x,data.title))+'</p></div>').join('');+(data.example?'<article class="studyLesson moduleExampleLesson"><div class="studyLessonHead"><span>WORKED EXAMPLE</span><strong>See the skill in context</strong></div><p class="studyTeach">'+esc(data.example)+'</p>'+(data.audio?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(data.example)+'">🔊 Listen to Example</button>':'')+'<div class="microCheck"><b>Explain it yourself</b><span>Close the notes and explain the example, the decision and one possible mistake.</span></div></article>':'')
