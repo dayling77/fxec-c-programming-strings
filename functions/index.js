@@ -2059,6 +2059,19 @@ export const getCompetencyAssessmentRole = onCall({cors:CALLABLE_CORS},async req
 
 export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},async request=>{
   const a=requireAuth(request),admin=isAdminAuth(a),email=String(a.token.email||'').toLowerCase();
+  const trackId=String(request.data?.trackId||'').trim();
+  const day=Number(request.data?.day||0);
+  if(trackId){
+    const validTrack=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+    if(!validTrack) throw new HttpsError('invalid-argument','Invalid competency track.');
+    if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
+    const snap=await db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day).get();
+    if(!snap.exists) return {items:[],role:admin?'admin':'student'};
+    const item={id:snap.id,...snap.data()};
+    if(!admin&&String(item.facultyEmail||'').toLowerCase()!==email) return {items:[],role:'student'};
+    return {items:[item],role:admin?'admin':'faculty'};
+  }
+  // Legacy callers may request the complete list; the competency admin UI no longer does.
   const snap=await db.collection('competencyAssessmentTasks').get();
   const items=snap.docs.map(d=>({id:d.id,...d.data()})).filter(x=>admin||String(x.facultyEmail||'').toLowerCase()===email).sort((a,b)=>String(a.trackId).localeCompare(String(b.trackId))||Number(a.day)-Number(b.day));
   return {items,role:admin?'admin':(items.length?'faculty':'student')};
