@@ -12,7 +12,7 @@ export const C_COMPETITIVE_CHALLENGES = [
     "tests": [
       [
         "1234",
-        "YES"
+        "NO"
       ],
       [
         "12345",
@@ -20,7 +20,7 @@ export const C_COMPETITIVE_CHALLENGES = [
       ],
       [
         "2468",
-        "YES"
+        "NO"
       ],
       [
         "1357",
@@ -36,11 +36,11 @@ export const C_COMPETITIVE_CHALLENGES = [
       ],
       [
         "8642",
-        "YES"
+        "NO"
       ],
       [
-        "1212",
-        "NO"
+        "1210",
+        "YES"
       ]
     ]
   },
