@@ -703,3 +703,6 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 
 /* Keep selected competency path in the main viewport */
 #competencyWorkspace[hidden]{display:none!important}.competencyWorkspace{width:100%;margin:0}.competencyTrackGrid[hidden],.dashboardLeaderboardSection[hidden]{display:none!important}
+
+/* Selected competency workspace must not scroll underneath the competency launcher. */
+.firstYearMenu{position:relative!important;top:auto!important;z-index:1!important}
