@@ -28,8 +28,17 @@ function render(){
    try{
      if(button)button.disabled=true;
      if(isC){
-       setStatus('Generating all 10 C Programming modules… This can take several minutes. Please keep this page open.','saving');
-       await call('loadPreparedCompetencyAssessmentProgram')({trackId:'c-programming'});
+       // Generate one module per callable invocation. The 10-module operation cannot safely
+       // fit inside a single callable timeout because every module may require generation
+       // plus two independent audits and retries. Each completed module is persisted as DRAFT,
+       // so a timeout/failure never discards modules that already succeeded.
+       for(let day=1;day<=10;day++){
+         selectedDay=day;
+         setStatus('Generating C Programming Module '+day+' of 10… This may take a few minutes. Completed modules are saved automatically.','saving');
+         await call('generatePreparedCompetencyModule')({trackId:'c-programming',day});
+         await load();
+         setStatus('✓ Module '+day+' of 10 generated and saved as DRAFT. Continuing…','success');
+       }
        selectedDay=1;
        await load();
        render();
