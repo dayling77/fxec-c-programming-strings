@@ -1744,7 +1744,7 @@ async function generateHighStandardCompetencyDay(trackId, day) {
   let lastIssues=[];
   for(let attempt=1; attempt<=4; attempt++){
     const generated=(await generateJson(competencyGenerationPrompt(trackId,day))).questions;
-    const structural=competencyQuestionValidation(generated);
+    const structural=competencyQuestionValidation(generated,trackId);
     if(!structural.ok){ lastIssues=structural.errors; continue; }
     const audit1=await auditCompetencyQuestions(trackId,day,generated,1);
     if(audit1.valid!==true){ lastIssues=audit1.issues||['Audit pass 1 failed.']; continue; }
