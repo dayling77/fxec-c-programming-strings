@@ -198,48 +198,16 @@ async function sendEmail({ to, name, subject, html, text }) {
 }
 
 function questionGenerationPrompt(schedule) {
-  return `
-You are the assessment engine for Francis Xavier Engineering College.
-Generate exactly 25 high-quality C Programming Level 3 Strings questions for Day ${schedule.day}: ${schedule.topic}.
-Use ONLY the supplied source map. Do not introduce concepts not supported by it.
-
-POOL COUNTS:
-5 mcq, 5 match, 8 audio, 2 problemSolving, 5 multiAnswer = 25.
-DIFFICULTY COUNTS:
-10 easy, 10 moderate, 5 tough.
-A question has one difficulty: easy, moderate, tough.
-
-FORMAT:
-- mcq: one correct option.
-- match: include leftItems (an array of labels), rightItems (an array of choices), and answer as a mapping object such as {"A":"1","B":"2"}. options may repeat rightItems for compatibility.
-- audio: same scoring structure as mcq, but include audioText containing the exact spoken question and options. The browser will play an MP3 generated from audioText. Do not put the correct answer in audioText.
-- problemSolving: one best answer; can use a short C code sample, output prediction, assertion/reasoning or algorithmic reasoning.
-- multiAnswer: exactly 2 or 3 correct option indexes; options length 4.
-Every question must include: id, type, difficulty, topic, prompt, options, answer, explanation.
-For match, options may be an array of strings while answer is a mapping object.
-For audio, answer is an option index.
-Use 0-based option indexes for mcq/audio/problemSolving/multiAnswer.
-Make distractors plausible and avoid ambiguity.
-QUALITY STANDARD:
-- Write items to an international higher-education assessment standard: test the stated construct, not reading tricks.
-- Use clear, concise professional English and globally understandable engineering contexts.
-- Avoid culturally local trivia, stereotypes, idioms, vendor-specific assumptions, and ambiguous wording.
-- Use Bloom-style cognitive progression: recall/understand for easy, apply/analyse for moderate, analyse/evaluate/create-oriented reasoning for tough.
-- Every item must have one defensible key unless it is explicitly multi-answer.
-- Distractors must represent realistic misconceptions, not grammatical or obviously absurd alternatives.
-- Code must be standard C appropriate to the stated concept and must be internally consistent.
-- Explanations must teach the underlying principle and explain why the distractors are wrong where useful.
-- Prefer authentic engineering/problem-solving situations over trivia.
-- Do not reward guessing from option length, grammar, formatting, or position.
-- Do not use "all of the above" or "none of the above".
-
-Do not copy the source's knowledge-check questions verbatim; create fresh questions from the same concepts.
-Include C code samples where useful, especially moderate/tough questions.
-Return JSON only as an object: {"questions":[...]}.
-
-SOURCE MAP:
-${SOURCE_MAP}
-`;
+  return "You are the assessment engine for Francis Xavier Engineering College.\n"+
+  "Generate exactly 25 high-quality C Programming Level 3 Strings questions for Day "+schedule.day+": "+schedule.topic+".\n"+
+  "Use ONLY the supplied source map. Do not introduce concepts not supported by it.\n"+
+  "POOL COUNTS: 5 mcq, 5 match, 8 audio, 2 problemSolving, 5 multiAnswer = 25.\n"+
+  "DIFFICULTY COUNTS: 10 easy, 10 moderate, 5 tough.\n"+
+  "FORMAT: mcq one correct option; match uses leftItems/rightItems and answer mapping; audio uses audioText; problemSolving may use C code/output prediction/reasoning; multiAnswer has exactly 2 or 3 correct indexes.\n"+
+  "Every question must include id, type, difficulty, topic, prompt, options, answer, explanation.\n"+
+  "Use 0-based option indexes for mcq/audio/problemSolving/multiAnswer.\n"+
+  "Write clear professional English, globally understandable engineering contexts, realistic distractors, standard C, no all/none of the above, and avoid ambiguity.\n"+
+  "Return JSON only as an object: {\"questions\":[...]}.\n\nSOURCE MAP:\n"+SOURCE_MAP;
 }
 
 async function generateJson(prompt) {
@@ -288,15 +256,7 @@ function structuralValidate(questions) {
 }
 
 async function verifyQuestions(questions) {
-  const prompt = `
-Audit the following generated C Strings questions against this source map.
-Return JSON only: {"valid":true} or {"valid":false,"issues":["..."]}.
-Reject any question if its answer is wrong, ambiguous, has duplicate options, contains unsupported concepts, or its explanation contradicts the source.
-SOURCE:
-${SOURCE_MAP}
-QUESTIONS:
-${JSON.stringify(questions)}
-`;
+  const prompt = "Audit the following generated C Strings questions against this source map. Return JSON only: {\"valid\":true} or {\"valid\":false,\"issues\":[\"...\"]}. Reject any question if its answer is wrong, ambiguous, has duplicate options, contains unsupported concepts, or its explanation contradicts the source.\nSOURCE:\n"+SOURCE_MAP+"\nQUESTIONS:\n"+JSON.stringify(questions);
   return generateJson(prompt);
 }
 
