@@ -659,16 +659,17 @@ document.addEventListener('click',async e=>{
  const coding=e.target.closest('.openCodingProgramme');
  if(coding){
   e.preventDefault();
-  const panel=document.getElementById('codingPanel');
-  if(panel){
-   document.querySelectorAll('.studentHiddenPanel').forEach(p=>p.hidden=true);
-   panel.hidden=false;
-   panel.scrollIntoView({behavior:'smooth',block:'start'});
-   const prompt=document.getElementById('codingChallengePrompt');
-   if(prompt)prompt.textContent=coding.dataset.prompt||'';
-   const editor=document.getElementById('cCodeEditor');
-   if(editor)editor.value='#include <stdio.h>\\n\\nint main(void) {\\n    /* '+String(coding.dataset.title||'Coding Programme').replace(/\*\//g,'')+' */\\n    return 0;\\n}';
-  }
+  const ws=coding.closest('.moduleLearningWorkspace');
+  openCodingLab(ws,{title:coding.dataset.title||'Coding Programme',prompt:coding.dataset.prompt||'',starter:'#include <stdio.h>\n\nint main(void) {\n    /* Write your solution here. */\n    return 0;\n}'});
+  return;
+ }
+ const competitive=e.target.closest('.openCompetitiveCoding');
+ if(competitive){
+  e.preventDefault();
+  const ws=competitive.closest('.moduleLearningWorkspace');
+  const id=competitive.dataset.challengeId;
+  const meta=C_COMPETITIVE_META_BY_ID[id];
+  if(meta) openCodingLab(ws,{title:meta.title,prompt:meta.prompt,starter:meta.starter,metaId:id});
   return;
  }
  const star=e.target.closest('.starAssessmentButton');
