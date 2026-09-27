@@ -2000,9 +2000,14 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
     const recommendedCount=Math.min(Number(task.recommendedQuestionCount||COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent),sourceQuestions.length);
     const codingPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='coding-challenge'):[];
-    const codingRequired=shuffle(codingPool).slice(0,Math.min(codingPool.length,recommendedCount));
-    const remaining=sourceQuestions.filter(q=>!codingRequired.some(c=>c.id===q.id));
-    const questions=shuffle(codingRequired.concat(shuffle(remaining).slice(0,Math.max(0,recommendedCount-codingRequired.length)))).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
+    const audioPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='listening'):[];
+    // Keep the student experience balanced: one genuine coding task and one audio task,
+    // then fill the remaining slots randomly from the approved module pool.
+    const codingRequired=shuffle(codingPool).slice(0,Math.min(1,recommendedCount));
+    const audioRequired=shuffle(audioPool.filter(q=>!codingRequired.some(c=>c.id===q.id))).slice(0,Math.min(1,Math.max(0,recommendedCount-codingRequired.length)));
+    const required=[...codingRequired,...audioRequired];
+    const remaining=sourceQuestions.filter(q=>!required.some(r=>r.id===q.id));
+    const questions=shuffle(required.concat(shuffle(remaining).slice(0,Math.max(0,recommendedCount-required.length)))).map(q=>{const {answer,explanation,audioText,codingTests,...safe}=q;return {...safe,timeLimitSeconds:Number(q.timeLimitSeconds||60)};});
     const attemptRef=db.collection('competencyAssessmentAttempts').doc();
     await attemptRef.set({studentId:user.uid,taskId,trackId:task.trackId,day:task.day,questions,questionIds:questions.map(q=>q.id),status:'started',startedAt:FieldValue.serverTimestamp(),closeAt:close});
     return {attemptId:attemptRef.id,trackId:task.trackId,title:task.title,day:task.day,closeAt:close.toISOString(),questions,recommendedQuestionCount:questions.length};
