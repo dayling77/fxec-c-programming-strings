@@ -688,7 +688,7 @@ async function launchModuleAssessment(trackId,moduleNo,workspace=null){
  mount.innerHTML='<div class="caLoading"><strong>Checking assessment workflow…</strong><span>Admin/faculty review the full master question bank. Students see only the approved 15-question assessment during its scheduled window.</span></div>';
  mount.scrollIntoView({behavior:'smooth',block:'start'});
  try{
-   const roleResult=await httpsCallablePortal('getAdminCompetencyAssessmentPrograms')({});
+   const roleResult=await call('getAdminCompetencyAssessmentPrograms')({});
    const role=roleResult.data?.role||'student';
    if(role==='admin'||role==='faculty'){
      mount.innerHTML='<div id="moduleAssessmentAdminMount"></div>';
