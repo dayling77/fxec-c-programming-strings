@@ -624,7 +624,13 @@ document.addEventListener('click',async e=>{
  const star=e.target.closest('.starAssessmentButton');
  if(star){
   e.preventDefault();
-  await launchModuleAssessment(star.dataset.starTrack,Number(star.dataset.starModule));
+  const root=star.closest('.competencyPortal'); if(!root)return;
+  const trackId=star.dataset.starTrack, no=Number(star.dataset.starModule);
+  const programmeSelect=root.querySelector('#programmeSelect');
+  const programme=programmeSelect?.value?PROGRAMMES.find(p=>p.id===programmeSelect.value):null;
+  openModule(root,trackId,no,programme);
+  const ws=root.querySelector('#competencyWorkspace');
+  if(ws) await launchModuleAssessment(trackId,no,ws);
   return;
  }
  const b=e.target.closest('.moduleOpen'); if(!b)return;
