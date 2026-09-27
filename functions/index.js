@@ -1754,24 +1754,24 @@ async function generateHighStandardCompetencyDay(trackId, day) {
   throw new Error('Could not produce a fully validated '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' Module '+day+' question bank. '+lastIssues.slice(0,5).join(' '));
 }
 
-export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS}, async request=>{
+export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
-  if(trackId!=='c-programming') throw new HttpsError('invalid-argument','The prepared bank is currently available for C Programming.');
+  if(trackId!=='c-programming') throw new HttpsError('invalid-argument','The mixed-format prepared bank is currently available for C Programming.');
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+  // Generate all ten C modules independently in parallel. Each module is structurally validated
+  // and then audited twice before it is written as DRAFT. Nothing is published by this operation.
+  let generated;
+  try{
+    generated=await Promise.all(Array.from({length:10},(_,i)=>generateHighStandardCompetencyDay(trackId,i+1)));
+  }catch(e){
+    logger.error('C mixed-format assessment generation failed',{error:String(e?.stack||e)});
+    throw new HttpsError('internal','The C Programming master bank could not be generated. Please try Load / Generate again.');
+  }
   const batch=db.batch();
-  const created=[];
   for(let day=1;day<=10;day++){
-    const baseQuestions=PREPARED_C_PROGRAMMING_QUESTION_BANK.filter(q=>String(q.id).startsWith('CMP'+String(day).padStart(2,'0')+'-D'+day+'-'));
-    if(baseQuestions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' does not contain exactly 50 questions.');
-    const coding=C_STAR_CODING_QUESTIONS.filter(q=>Number(String(q.id).split('-D')[1]?.split('-')[0])===day);
-    if(coding.length!==1) throw new HttpsError('failed-precondition','C STAR coding bank is missing Module '+day+'.');
-    const questions=[...baseQuestions.filter(q=>q.type!=='scenario'),coding[0]];
-    if(questions.length!==41) throw new HttpsError('failed-precondition','Prepared Module '+day+' coding composition is invalid.');
-    // Keep the formal master size at 50: retain nine of the original scenario items and replace one with the real coding task.
-    const scenario=baseQuestions.filter(q=>q.type==='scenario').slice(0,9);
-    questions.push(...scenario);
-    if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' must contain exactly 50 questions.');
+    const questions=generated[day-1];
+    if(!questions||questions.length!==50) throw new HttpsError('failed-precondition','Module '+day+' did not produce exactly 50 questions.');
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
     batch.set(ref,{
       trackId,trackTitle:meta.title,day,
@@ -1779,27 +1779,22 @@ export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
       topic:competencyModuleTitle(trackId,day),
       date:null,openAt:null,closeAt:null,
       questions,questionCount:50,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,
-      status:'draft',isPublished:false,source:'prepared-bank',generatedBy:'FXEC Prepared Question Bank',
+      status:'draft',isPublished:false,source:'ai-validated-mixed-format',generatedBy:'Gemini + 2 audit passes',
       loadedBy:adminUser.uid,loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
     },{merge:true});
-    created.push({day,questionCount:50});
   }
   await batch.commit();
-  for(const item of created){
-    const day=item.day;
-    const taskSnap=await db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day).get();
-    const questions=Array.isArray(taskSnap.data()?.questions)?taskSnap.data().questions:[];
-    if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' master bank is not exactly 50 questions.');
+  for(let day=1;day<=10;day++){
+    const questions=generated[day-1];
     const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
-    await poolRef.set({trackId,day,questionCount:50,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',source:'prepared-bank',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    await poolRef.set({trackId,day,questionCount:50,recommendedQuestionCount:15,status:'draft',source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()},{merge:true});
     let pb=db.batch();
-    for(const q of questions) pb.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day,poolId:poolRef.id,source:'prepared-bank',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    for(const q of questions) pb.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day,poolId:poolRef.id,source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()},{merge:true});
     await pb.commit();
   }
-  await db.collection('adminActions').add({action:'loadPreparedCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,modules:10,questionCount:500,createdAt:FieldValue.serverTimestamp()});
-  return {success:true,trackId,modules:created,totalQuestions:500,message:'Prepared 10-module C Programming bank loaded. All modules remain DRAFT until administrator/faculty review and approval.'};
+  await db.collection('adminActions').add({action:'loadPreparedCompetencyAssessmentProgram',trackId,adminUid:adminUser.uid,modules:10,questionCount:500,composition:COMPETENCY_ASSESSMENT_BLUEPRINT.cActivityDistribution,createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,modules:Array.from({length:10},(_,i)=>({day:i+1,questionCount:50})),totalQuestions:500,message:'Mixed-format C Programming master bank loaded: 50 questions per module with output prediction, debugging, missing-code, tracing, audio, real coding challenges and scenario questions. All modules remain DRAFT until review, scheduling and approval.'};
 });
-
 export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request), trackId=competencyTrackOrThrow(request.data?.trackId), meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
   const batch=db.batch(), poolWrites=[], created=[];
