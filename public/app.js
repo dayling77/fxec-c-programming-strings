@@ -384,7 +384,10 @@ function setupCodingLab(){
       const d=r.data;
       $('challengeResult').innerHTML='<strong>'+esc(d.passed?'✓ Challenge Passed':'✗ Challenge Not Passed')+'</strong><br>'+esc(d.message||'')+'<br><span>'+d.passedTests+'/'+d.totalTests+' hidden tests passed · +'+d.xpEarned+' XP</span>';
       loadCompetencyJourney();
-    }catch(e){$('challengeResult').textContent=e.message||String(e);}
+    }catch(e){
+      const detail=e?.details||e?.message||String(e);
+      $('challengeResult').innerHTML='<strong>⚠ Challenge submission could not be completed</strong><br>'+esc(detail)+'<br><small>Please do not keep resubmitting if this message repeats; the server log records the exact failure.</small>';
+    }
     finally{b.disabled=false;b.textContent='✓ Submit Challenge';}
   };
 }
