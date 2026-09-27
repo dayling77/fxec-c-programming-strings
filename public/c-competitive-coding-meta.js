@@ -9,7 +9,7 @@ export const C_COMPETITIVE_META = [
     "sampleTests": [
       [
         "1234",
-        "YES"
+        "NO"
       ],
       [
         "12345",
