@@ -40,16 +40,26 @@
   <div class="welcomeStats"><div><strong>6</strong><span>Tracks</span></div><div><strong>7</strong><span>Stages</span></div><div><strong>XP</strong><span>Progress</span></div></div>
 </div>
 <div class="studentMenu card firstYearMenu">
-  <div class="menuSectionTitle"><span class="sectionEyebrow">COMPETENCY TRACKS</span><h3>Choose where you want to build your skills</h3></div>
-  <button class="menuButton primaryMenu" data-panel="firstYearCompetencyPanel">🌐 Open Competency Dashboard</button>
-  <button class="menuButton" data-panel="communicationSpeechPanel">💬 Communication Lab</button>
-  <button class="menuButton" data-panel="codingPanel">💻 C Programming Lab</button>
-  <button class="menuButton" data-panel="competencyStudioPanel">🧠 Skill Builder</button>
-  <button class="menuButton" data-panel="learningPanel">📚 Learning Centre</button>
-  <button class="menuButton" data-panel="assessmentPanel">🎯 C Strings Assessment</button><button class="menuButton" data-panel="competencyAssessmentPanel">🚀 Competency Assessments</button>
-  <button class="menuButton" data-panel="scorePanel">📊 My Results</button>
+  <div class="menuSectionTitle"><span class="sectionEyebrow">SIX COMPETENCY TRACKS</span><h3>Choose your competency — then learn day by day</h3><p>Each card opens the complete learning path: <b>Concept → Material → Drill → Practice → Challenge → ⭐ STAR Assessment</b>. Your assessment questions stay inside the corresponding module.</p></div>
+  <div class="competencyQuickGrid">
+    <button class="competencyQuickCard" data-panel="firstYearCompetencyPanel" data-track="communication"><span>💬</span><strong>Communication</strong><small>10 modules · language, speaking & workplace skills</small></button>
+    <button class="competencyQuickCard" data-panel="firstYearCompetencyPanel" data-track="aptitude"><span>🧮</span><strong>Aptitude</strong><small>10 modules · quantitative & logical reasoning</small></button>
+    <button class="competencyQuickCard" data-panel="firstYearCompetencyPanel" data-track="core-engineering"><span>⚙️</span><strong>Core Engineering</strong><small>10 modules · programme-specific engineering skills</small></button>
+    <button class="competencyQuickCard" data-panel="firstYearCompetencyPanel" data-track="c-programming"><span>💻</span><strong>C Programming</strong><small>10 modules · coding, debugging & problem solving</small></button>
+    <button class="competencyQuickCard" data-panel="firstYearCompetencyPanel" data-track="problem-solving"><span>🧩</span><strong>Problem Solving</strong><small>10 modules · decomposition, algorithms & debugging</small></button>
+    <button class="competencyQuickCard" data-panel="firstYearCompetencyPanel" data-track="analytical"><span>🎧</span><strong>Analytical Skills</strong><small>10 modules · reading, evidence & decisions</small></button>
+  </div>
+  <div class="firstYearUtilityRow">
+    <button class="menuButton" data-panel="codingPanel">💻 C Coding Lab</button>
+    <button class="menuButton" data-panel="competencyAssessmentPanel">🚀 Assessment Centre</button>
+    <button class="menuButton" data-panel="scorePanel">📊 My Results</button>
+  </div>
   <details class="legacyTools"><summary>More learning tools</summary>
     <div class="legacyMenuGrid">
+      <button class="menuButton" data-panel="communicationSpeechPanel">💬 Communication Lab</button>
+      <button class="menuButton" data-panel="competencyStudioPanel">🧠 Skill Builder</button>
+      <button class="menuButton" data-panel="learningPanel">📚 Learning Centre</button>
+      <button class="menuButton" data-panel="assessmentPanel">🎯 C Strings Assessment</button>
       <button class="menuButton" data-panel="practicePanel">📝 Sample Assessment</button>
       <button class="menuButton" data-panel="cProgressionPanel">🧭 C Skill Path</button>
     </div>
