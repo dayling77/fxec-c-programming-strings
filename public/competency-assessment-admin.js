@@ -34,50 +34,44 @@ function render(){
  root.querySelector('#caTrack').onchange=e=>{selectedTrack=e.target.value;selectedDay=1;render();};
  root.querySelector('#caLoadPrepared')?.addEventListener('click',async()=>{
    const isC=selectedTrack==='c-programming';
-   const label=isC?'C Programming — 10 × 50 mixed-format master bank':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack);
-   if(!confirm('Generate a NEW mixed-format master bank for '+label+'? The existing draft is not overwritten until each generated module is successfully saved. All modules remain DRAFT until review and approval.'))return;
+   const label=isC?'C Programming — 10 × 50 mixed-format master bank':'AI-generated '+(TRACKS.find(x=>x[0]===selectedTrack)?.[1]||selectedTrack)+' — 10 modules';
+   if(!confirm('Start a NEW '+label+'? Existing draft questions are never overwritten until each module finishes successfully. Generation now runs in the background, so this page will not time out.'))return;
    const button=root.querySelector('#caLoadPrepared');
    try{
      if(button)button.disabled=true;
-     if(isC){
-       // Keep the existing editor out of view while generation is running. This prevents
-       // an old MCQ-only bank from appearing to change when the new module is still pending.
-       generationState={current:1,completed:[],error:null,startedAt:Date.now()};
+     generationState={current:1,completed:[],error:null,startedAt:Date.now(),runId:null,trackId:selectedTrack};
+     render();
+     const started=await call('startCompetencyAssessmentGeneration')({trackId:selectedTrack});
+     generationState.runId=started.data?.runId||null;
+     render();
+     if(!generationState.runId) throw new Error('Generation run was not created.');
+     let done=false;
+     while(!done){
+       await new Promise(resolve=>setTimeout(resolve,4000));
+       const rr=await call('getCompetencyAssessmentGenerationRun')({runId:generationState.runId});
+       const run=rr.data||{};
+       const modules=run.modules||{};
+       generationState.completed=Object.entries(modules).filter(([,s])=>s==='completed').map(([d])=>Number(d));
+       const failed=Object.entries(modules).find(([,s])=>s==='failed');
+       const running=Object.entries(modules).find(([,s])=>s==='running')||Object.entries(modules).find(([,s])=>s==='queued');
+       if(running)generationState.current=Number(running[0]);
+       generationState.error=failed?{day:Number(failed[0]),message:String((run.errors||{})[failed[0]]||'Module generation failed.')} : null;
+       done=['completed','completed-with-errors'].includes(String(run.status||''));
+       generationState.finished=done;
        render();
-       for(let day=1;day<=10;day++){
-         selectedDay=day;
-         generationState.current=day;
-         generationState.error=null;
-         render();
-         try{
-           await call('generatePreparedCompetencyModule')({trackId:'c-programming',day});
-           await fetchPrograms();
-           generationState.completed.push(day);
-           generationState.current=day<10?day+1:10;
-           render();
-         }catch(err){
-           generationState.error={day,message:err?.message||String(err)};
-           await fetchPrograms().catch(()=>{});
-           render();
-           throw err;
-         }
-       }
-       selectedDay=1;
-       await fetchPrograms();
-       generationState={current:10,completed:Array.from({length:10},(_,i)=>i+1),error:null,finished:true};
-       render();
-       setStatus('✓ All 10 C Programming modules generated: 500 mixed-format master questions. All remain DRAFT.','success');
-       setTimeout(()=>{generationState=null;render();},1200);
-     }else{
-       setStatus('Generating the 10-module question bank…','saving');
-       const action='autoGenerateCompetencyAssessmentProgram';
-       const r=await call(action)({trackId:selectedTrack});
-       await load();
-       setStatus('✓ '+r.data.message,'success');
      }
+     await fetchPrograms();
+     render();
+     if(generationState.error){
+       setStatus('Generation finished with an error in Module '+generationState.error.day+'. Other completed modules are saved as DRAFT.','error');
+     }else{
+       setStatus('✓ All 10 '+(isC?'C Programming':'competency')+' modules generated. C has 50-question mixed-format masters; other tracks auto-deliver 10 questions per student.','success');
+     }
+     setTimeout(()=>{generationState=null;render();},1800);
    }catch(e){
-     if(!isC){setStatus(e.message||String(e));await load();}
-     else if(generationState?.error){setStatus('Generation stopped at Module '+generationState.error.day+'. The existing draft was not replaced.','error');}
+     generationState.error={day:generationState.current||1,message:e?.message||String(e)};
+     render();
+     setStatus(e?.message||String(e),'error');
    }finally{
      const b=host()?.querySelector('#caLoadPrepared');
      if(b)b.disabled=false;
@@ -118,7 +112,8 @@ function renderEditor(t){
  h+='<div class="caMetaGrid"><label>Title<input id="caTitle" value="'+esc(t.title)+'"></label><label>Topic<input id="caTopic" value="'+esc(t.topic)+'"></label><label>Date<input id="caDate" type="date" value="'+esc(t.date||'')+'"></label><label>Open<input id="caOpen" type="datetime-local" value="'+esc(open)+'"></label><label>Close<input id="caClose" type="datetime-local" value="'+esc(close)+'"></label></div>';
  h+='<div class="caFacultyAssign"><div><span class="sectionEyebrow">VERIFICATION WORKFLOW</span><strong>Faculty verifier</strong><p>'+(t.facultyEmail?'Assigned to '+esc(t.facultyName||t.facultyEmail):'No faculty verifier assigned. Admin can review directly.')+'</p></div>'+(viewerRole==='admin'?'<div class="caFacultyControls"><input id="caFacultyEmail" type="email" placeholder="faculty@francisxavier.ac.in" value="'+esc(t.facultyEmail||'')+'"><button id="caAssignFaculty" class="secondary">Assign Faculty</button></div>':'<span class="practiceBadge">Assigned Faculty</span>')+'</div>';
  const cSummary=selectedTrack==='c-programming'?renderCCompositionSummary(t.questions||[]):'';
- h+='<div class="caQuestionHead"><h4>Question Review & Assignment</h4><span>AI-generated questions are structurally validated and independently audited twice. Faculty/admin must still review before publishing.</span></div>'+cSummary+'<div id="caQuestions">'+(t.questions||[]).map((q,i)=>renderQuestion(q,i)).join('')+'</div>';
+ const legacyC=selectedTrack==='c-programming' && Array.isArray(t.questions) && t.questions.length===50 && t.questions.every(q=>String(q.activityType||'mcq')==='mcq');
+ h+=legacyC?'<div class="caLegacyBlocked"><strong>Old MCQ-only C bank is blocked.</strong><p>This draft is retained for safety, but it cannot be edited or published as the new C assessment. Start <b>Generate New 10 × 50 Mixed-Format Bank</b> to replace it only after a successful module generation.</p></div>':'<div class="caQuestionHead"><h4>Question Review & Assignment</h4><span>AI-generated questions are structurally validated and independently audited twice. Faculty/admin must still review before publishing.</span></div>'+cSummary+'<div id="caQuestions">'+(t.questions||[]).map((q,i)=>renderQuestion(q,i)).join('')+'</div>';
  h+='<div class="caActions"><button id="caSave">Save Draft</button><button id="caApprove" class="primaryButton" '+(t.isPublished?'disabled':'')+'>'+(t.isPublished?'✓ Published':'Approve & Publish Module '+t.day)+'</button></div><div id="caStatus"></div></div>';
  return h;
 }
