@@ -1130,14 +1130,27 @@ async function judge0Submit(sourceCode, stdin, expectedOutput){
   const token=String(COMPILER_API_TOKEN.value()||'').trim();
   if(token&&base===primary)headers['X-Auth-Token']=token;
   try{
-   const payload={language_id:50,source_code:sourceCode,stdin:stdin||'',cpu_time_limit:2,wall_time_limit:5,memory_limit:128000,max_file_size:1024};
-   if(expectedOutput!==null&&expectedOutput!==undefined) payload.expected_output=String(expectedOutput);
-   let response=await fetch(base+'/submissions/?base64_encoded=false&wait=true',{method:'POST',headers,body:JSON.stringify(payload)});
+   // Send submission fields as base64 to prevent Judge0's UTF-8 conversion errors
+   // when student code contains non-ASCII characters or pasted Unicode.
+   const payload={
+    language_id:50,
+    source_code:Buffer.from(sourceCode,'utf8').toString('base64'),
+    stdin:Buffer.from(stdin||'','utf8').toString('base64'),
+    cpu_time_limit:2,
+    wall_time_limit:5,
+    memory_limit:128000,
+    max_file_size:1024
+   };
+   if(expectedOutput!==null&&expectedOutput!==undefined){
+    payload.expected_output=Buffer.from(String(expectedOutput),'utf8').toString('base64');
+   }
+   const submitUrl=base+'/submissions/?base64_encoded=true&wait=true';
+   let response=await fetch(submitUrl,{method:'POST',headers,body:JSON.stringify(payload)});
    let body=await response.json().catch(()=>({}));
    if(!response.ok){
     lastError=String(body?.error||body?.message||('Compiler service returned HTTP '+response.status));
     if(response.status===400 && /wait not allowed/i.test(lastError)){
-      response=await fetch(base+'/submissions/?base64_encoded=false&wait=false',{method:'POST',headers,body:JSON.stringify(payload)});
+      response=await fetch(base+'/submissions/?base64_encoded=true&wait=false',{method:'POST',headers,body:JSON.stringify(payload)});
       body=await response.json().catch(()=>({}));
     }else continue;
    }
