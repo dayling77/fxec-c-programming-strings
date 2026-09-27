@@ -1801,8 +1801,9 @@ export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
   try{
     generated=await Promise.all(Array.from({length:10},(_,i)=>generateHighStandardCompetencyDay(trackId,i+1)));
   }catch(e){
-    logger.error('C mixed-format assessment generation failed',{error:String(e?.stack||e)});
-    throw new HttpsError('internal','The C Programming master bank could not be generated. Please try Load / Generate again.');
+    const detail=String(e?.message||e||'Unknown generation error').slice(0,1800);
+    logger.error('C mixed-format assessment generation failed',{error:String(e?.stack||e),detail});
+    throw new HttpsError('internal','C mixed-format generation failed: '+detail);
   }
   const batch=db.batch();
   for(let day=1;day<=10;day++){
