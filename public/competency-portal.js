@@ -231,7 +231,7 @@ function progressMap(data){return data?.tracks||{};}
 function renderPortal(root){
  root.innerHTML='<div class="competencyPortal">'+
   '<div class="competencyHero"><div><span class="sectionEyebrow">FXEC · FIRST-YEAR ENGINEERING</span><h2>Competency Learning Centre</h2><p>One complete learning system across six competencies. Every module is designed for mastery: <b>Concept → Example → Guided Drill → Practice → Knowledge Check → Challenge → Assess → XP</b>.</p></div>'+
-  '<div class="competencyHeroStats"><div><strong>6</strong><span>Competencies</span></div><div><strong>60</strong><span>Learning Modules</span></div><div><strong>60</strong><span>Module Assessments</span></div></div></div>'+
+  '<div class="competencyHeroStats"><div><strong>6</strong><span>Competencies</span></div><div><strong>60</strong><span>Learning Modules</span></div><div><strong>60</strong><span>Module Assessments</span></div></div><small class="portalBuildStamp">PORTAL BUILD 2026.09.27 · MODULE FLOW</small></div>'+
   '<div class="competencyFlowLarge"><span>CONCEPT</span><i>→</i><span>EXAMPLE</span><i>→</i><span>GUIDED DRILL</span><i>→</i><span>PRACTISE</span><i>→</i><span>CHECK</span><i>→</i><span>CHALLENGE</span><i>→</i><span>ASSESS</span></div>'+
   '<div class="competencyTrackGrid" id="competencyTrackGrid"></div><section class="dashboardLeaderboardSection"><div class="moduleSectionHeading"><div><span class="sectionEyebrow">STUDENT PERFORMANCE</span><h4>🏆 Top Performers Across Competencies</h4><p>Recognise sustained learning, assessment performance and practice rewards.</p></div></div><div class="dashboardLeaderboardGrid" id="dashboardLeaderboardGrid"><div class="leaderboardLoading">Loading top performers…</div></div></section><div id="competencyWorkspace"></div></div>';
  const grid=root.querySelector('#competencyTrackGrid');
@@ -268,13 +268,19 @@ function openTrack(root,trackId){
   (track.programmeWise?programmeChooser():'')+
   '<div id="moduleArea">'+(track.programmeWise?'<div class="moduleLocked">Select your programme above to open your department-specific Core Engineering modules.</div>':moduleGrid(track,null))+'</div></section>';
  grid.hidden=true;
+ grid.setAttribute('aria-hidden','true');
  if(leaderboard)leaderboard.hidden=true;
+ if(leaderboard)leaderboard.setAttribute('aria-hidden','true');
  ws.hidden=false;
+ ws.removeAttribute('aria-hidden');
  ws.querySelector('#closeTrack').onclick=()=>{
    ws.innerHTML='';
    ws.hidden=true;
+   ws.setAttribute('aria-hidden','true');
    grid.hidden=false;
+   grid.removeAttribute('aria-hidden');
    if(leaderboard)leaderboard.hidden=false;
+   if(leaderboard)leaderboard.removeAttribute('aria-hidden');
    root.closest('#firstYearCompetencyPanel')?.scrollIntoView({behavior:'smooth',block:'start'});
  };
  if(track.programmeWise){
