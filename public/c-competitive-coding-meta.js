@@ -1,4 +1,5 @@
-// UI metadata for the HackerRank-style competitive coding layer.\nexport const C_COMPETITIVE_META = [
+// UI metadata for the HackerRank-style competitive coding layer.
+export const C_COMPETITIVE_META = [
   {
     "id": "CP-ALG-001",
     "challengeId": "CP-ALG-001",
@@ -15,7 +16,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-002",
@@ -33,7 +39,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-003",
@@ -51,7 +62,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-004",
@@ -69,7 +85,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-005",
@@ -87,7 +108,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-006",
@@ -105,7 +131,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-007",
@@ -123,7 +154,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-008",
@@ -141,7 +177,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-009",
@@ -159,7 +200,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-010",
@@ -177,7 +223,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-011",
@@ -195,7 +246,12 @@
       ]
     ],
     "hiddenTestCount": 5,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-012",
@@ -213,7 +269,12 @@
       ]
     ],
     "hiddenTestCount": 5,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-013",
@@ -231,7 +292,12 @@
       ]
     ],
     "hiddenTestCount": 5,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-014",
@@ -249,7 +315,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-015",
@@ -267,7 +338,12 @@
       ]
     ],
     "hiddenTestCount": 5,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-016",
@@ -285,7 +361,12 @@
       ]
     ],
     "hiddenTestCount": 5,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-017",
@@ -303,7 +384,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-018",
@@ -321,7 +407,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-019",
@@ -339,7 +430,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   },
   {
     "id": "CP-ALG-020",
@@ -357,6 +453,12 @@
       ]
     ],
     "hiddenTestCount": 6,
-    "starter": "#include <stdio.h>\\n\\nint main(void) {\\n    /* Write your solution here. */\\n    return 0;\\n}"
+    "starter": "#include <stdio.h>\
+\
+int main(void) {\
+    /* Write your solution here. */\
+    return 0;\
+}"
   }
-];\nexport const C_COMPETITIVE_META_BY_ID = Object.freeze(Object.fromEntries(C_COMPETITIVE_META.map(x=>[x.id,x])));\n
+];
+export const C_COMPETITIVE_META_BY_ID = Object.freeze(Object.fromEntries(C_COMPETITIVE_META.map(x=>[x.id,x])));
