@@ -91,10 +91,12 @@ function renderGenerationProgress(){
  const current=Number(generationState?.current||1);
  const failed=generationState?.error;
  const finished=Boolean(generationState?.finished);
+ const isC=generationState?.trackId==='c-programming';
+ const trackTitle=TRACKS.find(x=>x[0]===generationState?.trackId)?.[1]||'Competency';
  const percent=finished?100:Math.round((completed.size/10)*100);
  let h='<div class="caGenerationPanel '+(failed?'isError':finished?'isComplete':'')+'">';
- h+='<div class="caGenerationHero"><div><span class="sectionEyebrow">NEW MIXED-FORMAT C BANK</span><h3>'+(finished?'Generation complete':failed?'Generation stopped':'Generating C Programming Master Bank')+'</h3>';
- h+='<p>'+(failed?'Module '+failed.day+' could not be generated. Your existing draft remains unchanged.':finished?'500 questions generated and saved as DRAFT across all 10 modules.':'The old question editor is temporarily hidden so it cannot be mistaken for the new bank. Each completed module is saved automatically.')+'</p></div><strong>'+percent+'%</strong></div>';
+ h+='<div class="caGenerationHero"><div><span class="sectionEyebrow">'+(isC?'NEW MIXED-FORMAT C BANK':'AUTOMATIC '+esc(trackTitle.toUpperCase())+' BANK')+'</span><h3>'+(finished?'Generation complete':failed?'Generation stopped':'Generating '+esc(trackTitle)+' Modules')+'</h3>';
+ h+='<p>'+(failed?'Module '+failed.day+' could not be generated. Your existing draft remains unchanged.':finished?(isC?'500 questions generated and saved as DRAFT across all 10 C modules.':'All 10 module banks were generated and saved as DRAFT; students receive 10 questions automatically.'):'The old question editor is temporarily hidden. Each completed module is saved automatically; this page is only tracking the background jobs.')+'</p></div><strong>'+percent+'%</strong></div>';
  h+='<div class="caGenerationBar"><span style="width:'+percent+'%"></span></div>';
  h+='<div class="caGenerationGrid">';
  for(let d=1;d<=10;d++){
