@@ -2074,26 +2074,24 @@ export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},
     // This prevents an older MCQ-only task document from masking a newly
     // generated mixed-format master bank.
     const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
-    const poolSnap=await poolRef.get();
-    if(poolSnap.exists){
-      const pool=poolSnap.data()||{};
-      const questionSnap=await poolRef.collection('questions').get();
-      if(!questionSnap.empty){
-        const poolQuestions=questionSnap.docs.map(d=>d.data());
-        // C Programming has a separately prepared 50-question master pool.
-        // The prepared subcollection is authoritative; do not let the legacy
-        // competencyAssessmentTasks MCQ draft mask it.
-        const isPrepared=(trackId==='c-programming' && poolQuestions.length===50)
-          || String(pool.source||'').toLowerCase()==='ai-validated-mixed-format'
-          || poolQuestions.some(q=>String(q.source||'').toLowerCase()==='ai-validated-mixed-format')
-          || poolQuestions.some(q=>String(q.activityType||'')!=='mcq');
-        if(isPrepared){
-          item.questions=poolQuestions;
-          item.questionCount=poolQuestions.length;
-          item.recommendedQuestionCount=Number(pool.recommendedQuestionCount||item.recommendedQuestionCount||15);
-          item.source='ai-validated-mixed-format';
-          item.poolLoaded=true;
-        }
+    // The prepared question documents are authoritative even if the parent
+    // metadata document was not created. Query the subcollection directly.
+    const questionSnap=await poolRef.collection('questions').get();
+    if(!questionSnap.empty){
+      const pool= (await poolRef.get()).exists ? ((await poolRef.get()).data()||{}) : {};
+      const poolQuestions=questionSnap.docs.map(d=>d.data());
+      // For C Programming, a verified 50-question prepared pool always
+      // replaces the legacy MCQ-only task document.
+      const isPrepared=(trackId==='c-programming' && poolQuestions.length===50)
+        || String(pool.source||'').toLowerCase()==='ai-validated-mixed-format'
+        || poolQuestions.some(q=>String(q.source||'').toLowerCase()==='ai-validated-mixed-format')
+        || poolQuestions.some(q=>String(q.activityType||'')!=='mcq');
+      if(isPrepared){
+        item.questions=poolQuestions;
+        item.questionCount=poolQuestions.length;
+        item.recommendedQuestionCount=Number(pool.recommendedQuestionCount||item.recommendedQuestionCount||15);
+        item.source='ai-validated-mixed-format';
+        item.poolLoaded=true;
       }
     }
     return {items:[item],role:admin?'admin':'faculty'};
