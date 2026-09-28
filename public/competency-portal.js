@@ -261,7 +261,14 @@ async function loadProgress(root){
 
 function openTrack(root,trackId){
  const track=TRACKS.find(x=>x.id===trackId); if(!track)return;
- const ws=root.querySelector('#competencyWorkspace');
+ // Quick-access cards can fire before the portal markup has been rendered.
+ // Re-render the portal if the workspace mount is missing instead of throwing.
+ let ws=root?.querySelector?.('#competencyWorkspace');
+ if(!ws && root){
+   renderPortal(root);
+   ws=root.querySelector('#competencyWorkspace');
+ }
+ if(!ws)return;
  const grid=root.querySelector('#competencyTrackGrid');
  const leaderboard=root.querySelector('.dashboardLeaderboardSection');
  ws.innerHTML='<section class="competencyWorkspace"><div class="workspaceHeader"><div><span class="sectionEyebrow">COMPETENCY PROGRAMME</span><h3>'+esc(track.title)+'</h3><p>'+esc(track.description)+'</p></div><button class="secondary" id="closeTrack">← All Competencies</button></div>'+
