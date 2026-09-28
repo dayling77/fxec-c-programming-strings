@@ -6936,9 +6936,9 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
     "prompt": "A student is implementing read mode. Which option is valid C?",
     "options": [
       "The mode string r opens an existing file for reading.",
-      "fopen(\"data.txt\",\"r\")",
-      "fopen(\"data.txt\",\"read\")",
-      "fopen(\"data.txt\",\"R\")"
+      "The mode string w opens a file for read-only access.",
+      "The mode string a truncates an existing file before reading.",
+      "The mode string x opens a file only for appending."
     ],
     "answer": 0,
     "explanation": "The mode string r opens an existing file for reading. This is the standard C rule relevant to File Handling.",
@@ -6953,10 +6953,10 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
     "topic": "write mode",
     "prompt": "Which choice correctly applies write mode?",
     "options": [
-      "The mode w creates or truncates a file for writing.",
-      "fopen(\"data.txt\",\"w\")",
-      "fopen(\"data.txt\",\"write\")",
-      "fopen(\"data.txt\",\"W\")"
+      "The mode w creates a file for writing or truncates an existing file.",
+      "The mode w opens an existing file for read-only access.",
+      "The mode w always appends new data without changing existing content.",
+      "The mode w opens a file only when it already exists."
     ],
     "answer": 0,
     "explanation": "The mode w creates or truncates a file for writing. This is the standard C rule relevant to File Handling.",
@@ -7026,9 +7026,9 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
     "prompt": "Which statement is correct about read mode in C?",
     "options": [
       "The mode string r opens an existing file for reading.",
-      "fopen(\"data.txt\",\"r\")",
-      "fopen(\"data.txt\",\"read\")",
-      "fopen(\"data.txt\",\"R\")"
+      "The mode string r creates a new file and writes to it.",
+      "The mode string r truncates an existing file before reading.",
+      "The mode string r opens a file only for appending."
     ],
     "answer": 0,
     "explanation": "The mode string r opens an existing file for reading. This is the standard C rule relevant to File Handling.",
@@ -7043,10 +7043,10 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
     "topic": "write mode",
     "prompt": "A student is implementing write mode. Which option is valid C?",
     "options": [
-      "The mode w creates or truncates a file for writing.",
-      "fopen(\"data.txt\",\"w\")",
-      "fopen(\"data.txt\",\"write\")",
-      "fopen(\"data.txt\",\"W\")"
+      "The mode w creates a file for writing or truncates an existing file.",
+      "The mode w opens a file for read-only access.",
+      "The mode w preserves existing contents and always appends.",
+      "The mode w can be used only when the file already exists."
     ],
     "answer": 0,
     "explanation": "The mode w creates or truncates a file for writing. This is the standard C rule relevant to File Handling.",
@@ -7116,9 +7116,9 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
     "prompt": "Which choice correctly applies read mode?",
     "options": [
       "The mode string r opens an existing file for reading.",
-      "fopen(\"data.txt\",\"r\")",
-      "fopen(\"data.txt\",\"read\")",
-      "fopen(\"data.txt\",\"R\")"
+      "The mode string r creates a new file for writing.",
+      "The mode string r truncates the file before reading.",
+      "The mode string r positions the stream only for appending."
     ],
     "answer": 0,
     "explanation": "The mode string r opens an existing file for reading. This is the standard C rule relevant to File Handling.",
@@ -7133,10 +7133,10 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
     "topic": "write mode",
     "prompt": "Which statement is correct about write mode in C?",
     "options": [
-      "The mode w creates or truncates a file for writing.",
-      "fopen(\"data.txt\",\"w\")",
-      "fopen(\"data.txt\",\"write\")",
-      "fopen(\"data.txt\",\"W\")"
+      "The mode w creates a file for writing or truncates an existing file.",
+      "The mode w opens an existing file for read-only access.",
+      "The mode w always appends data to the end of the file.",
+      "The mode w requires the file to exist before fopen can succeed."
     ],
     "answer": 0,
     "explanation": "The mode w creates or truncates a file for writing. This is the standard C rule relevant to File Handling.",
