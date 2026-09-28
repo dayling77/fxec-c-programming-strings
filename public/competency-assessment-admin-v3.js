@@ -30,7 +30,7 @@ function render(){
   const t=task(selectedTrack,selectedDay);
   let h='<div class="competencyAdminToolbar"><label>Competency <select id="caTrack">';
   h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
-  h+='</select></label>'+(viewerRole==='admin'?'<span class="practiceBadge">PREPARED MASTER BANKS</span>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caRefresh" class="secondary">Refresh Module</button></div>';
+  h+='</select></label>'+(viewerRole==='admin'?'<span class="practiceBadge">PREPARED MASTER BANKS</span>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caLoadQuestions" class="primaryButton">Load Questions</button><button id="caRefresh" class="secondary">Refresh Module</button></div>';
   h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
   h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
   h+=t?renderEditor(t):'<div class="caEmpty"><strong>Module '+selectedDay+' is not prepared yet.</strong><p>Select another module or prepare this module in the controlled bank-preparation process. Only the selected module is loaded from Firestore.</p></div>';
@@ -38,6 +38,16 @@ function render(){
   root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
   const trackSelect=root.querySelector('#caTrack');
   if(trackSelect)trackSelect.addEventListener('change',e=>{selectedTrack=e.target.value;selectedDay=1;load(activeHostId,selectedTrack,selectedDay);});
+  const loadQuestionsButton=root.querySelector('#caLoadQuestions');
+  if(loadQuestionsButton)loadQuestionsButton.addEventListener('click',async()=>{
+    loadQuestionsButton.disabled=true;
+    loadQuestionsButton.textContent='Loading…';
+    try{await load(activeHostId,selectedTrack,selectedDay);}
+    finally{
+      const b=host()?.querySelector('#caLoadQuestions');
+      if(b){b.disabled=false;b.textContent='Load Questions';}
+    }
+  });
   const refreshButton=root.querySelector('#caRefresh');
   if(refreshButton)refreshButton.addEventListener('click',()=>load(activeHostId,selectedTrack,selectedDay));
   root.querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>{selectedDay=Number(b.dataset.day);load(activeHostId,selectedTrack,selectedDay);}));
@@ -74,7 +84,7 @@ function renderEditor(t){
  const close=t.closeAt&&t.closeAt.seconds?new Date(t.closeAt.seconds*1000).toISOString().slice(0,16):String(t.closeAt||'').slice(0,16);
  const legacyC=selectedTrack==='c-programming' && Array.isArray(t.questions) && t.questions.length===50 && t.questions.every(q=>String(q.activityType||'mcq')==='mcq');
  if(legacyC){
-   return '<div class="caLegacyBlocked"><span class="sectionEyebrow">C PROGRAMMING · LEGACY BANK</span><h3>Old MCQ-only bank is blocked</h3><p>The existing 50-question MCQ bank is retained for safety, but it is not the new C assessment and cannot be edited, saved or published from this screen.</p><div class="caLegacyRule"><b>Required new structure</b><span>15 MCQ · 8 Output Prediction · 6 Debugging · 5 Missing Code · 5 Code Observation · 3 Audio · 3 Coding Challenges · 5 Scenario Analysis</span></div><p>Click <b>Generate New 10 × 50 Mixed-Format Bank</b>. Successful modules will replace this draft automatically; failed modules leave this old bank untouched.</p></div>';
+   return '<div class="caLegacyBlocked"><span class="sectionEyebrow">C PROGRAMMING · LEGACY BANK</span><h3>Legacy MCQ bank is blocked</h3><p>The old 50-question MCQ task is retained for safety. The prepared master pool could not be loaded for this module.</p><div class="caLegacyRule"><b>Required new structure</b><span>15 MCQ · 8 Output Prediction · 6 Debugging · 5 Missing Code · 5 Code Observation · 3 Audio · 3 Coding Challenges · 5 Scenario Analysis</span></div><p>Use <b>Load Questions</b> to reload the prepared master pool. Do not regenerate the bank.</p></div>';
  }
  let h='<div class="caEditor"><div class="caEditorHead"><div><span class="sectionEyebrow">MODULE '+t.day+' · '+esc(t.trackTitle)+'</span><h3>'+esc(t.title)+'</h3><p>Status: <b>'+esc(t.status||'draft')+'</b> · <b>'+Number(t.questionCount||t.questions?.length||0)+' master questions</b> · <b>'+Number(t.recommendedQuestionCount||15)+' questions per student</b></p></div><span class="practiceBadge">'+(t.isPublished?'PUBLISHED':'DRAFT')+'</span></div>';
  h+='<div class="caMetaGrid"><label>Title<input id="caTitle" value="'+esc(t.title)+'"></label><label>Topic<input id="caTopic" value="'+esc(t.topic)+'"></label><label>Date<input id="caDate" type="date" value="'+esc(t.date||'')+'"></label><label>Open<input id="caOpen" type="datetime-local" value="'+esc(open)+'"></label><label>Close<input id="caClose" type="datetime-local" value="'+esc(close)+'"></label></div>';
