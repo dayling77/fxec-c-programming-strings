@@ -184,18 +184,7 @@ int main(void) {
 window.FXECCompetencyAssessmentAdmin=window.FXECCompetencyAssessmentAdmin||{};
 const fxecAdminFallbackLoader=async function(...args){
   try{
-    await import('/competency-assessment-admin-v3.js?v=20260928-2700');
-    const loader=window.FXECCompetencyAssessmentAdmin?.load;
-    if(typeof loader!=='function'||loader===fxecAdminFallbackLoader) throw new Error('The competency administration module did not initialize.');
-    return loader(...args);
-  }catch(e){
-    console.error('Competency administration module failed to load',e);
-    throw new Error('Assessment administration script failed to load: '+(e?.message||String(e)));
-  }
-};
-window.FXECCompetencyAssessmentAdmin.load=window.FXECCompetencyAssessmentAdmin.load||fxecAdminFallbackLoader;
-</script>
-<script type="module" src="/competency-assessment-admin-v3.js?v=20260927-2600"></script>
+    await import('/competency-assessment-admin-v3.js?v=20260928-2720"module" src="/competency-assessment-admin-v3.js?v=20260927-2600"></script>
 <script type="module" src="/competency-assessment-student.js?v=20260927-2135"></script>
 <script type="module" src="/faculty-content-admin.js"></script>
 <script type="module" src="/communication-speech.js"></script>
