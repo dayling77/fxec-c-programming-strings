@@ -41,10 +41,10 @@ function render(){
   const loadQuestionsButton=root.querySelector('#caLoadQuestions');
   if(loadQuestionsButton)loadQuestionsButton.addEventListener('click',async()=>{
     loadQuestionsButton.disabled=true;
-    loadQuestionsButton.textContent=selectedTrack==='c-programming'?'Generating correct 10 × 50 bank…':'Loading…';
+    loadQuestionsButton.textContent=selectedTrack==='c-programming'?'Loading prepared 10 × 50 bank…':'Loading…';
     try{
       if(selectedTrack==='c-programming'){
-        setStatus('Generating and validating the correct mixed-format C bank. All 10 modules remain DRAFT until review. This can take several minutes.','success');
+        setStatus('Loading the prepared, validated 500-question C bank. No questions are generated at runtime. All 10 modules remain DRAFT until review.','success');
         await call('loadPreparedCompetencyAssessmentProgram')({trackId:'c-programming'});
       }
       await load(activeHostId,selectedTrack,selectedDay);
@@ -106,7 +106,7 @@ function renderCCompositionSummary(questions){
  const total=(questions||[]).length;
  const allExpected=Object.entries(target).every(([k,v])=>counts[k]===v);
  const allMcq=total>0 && counts.mcq===total;
- return '<div class="caCompositionBox '+(allExpected?'isComplete':'isIncomplete')+'"><div><strong>C Assessment Composition</strong><span>'+total+' / 50 master questions currently loaded</span></div><div class="caCompositionGrid">'+Object.entries(target).map(([k,v])=>'<span class="'+(counts[k]===v?'ok':'missing')+'"><b>'+Number(counts[k]||0)+' / '+v+'</b> '+labels[k]+'</span>').join('')+'</div>'+(allMcq?'<div class="caCompositionWarning">⚠ This is the old MCQ-only bank. Do not publish it. Use <b>Load / Generate 10 × 50 Questions</b> to create the new mixed-format C bank.</div>':'')+'</div>';
+ return '<div class="caCompositionBox '+(allExpected?'isComplete':'isIncomplete')+'"><div><strong>C Assessment Composition</strong><span>'+total+' / 50 master questions currently loaded</span></div><div class="caCompositionGrid">'+Object.entries(target).map(([k,v])=>'<span class="'+(counts[k]===v?'ok':'missing')+'"><b>'+Number(counts[k]||0)+' / '+v+'</b> '+labels[k]+'</span>').join('')+'</div>'+(allMcq?'<div class="caCompositionWarning">⚠ This is the old MCQ-only bank. Do not publish it. Use <b>Load Questions</b> to load the prepared mixed-format C bank.</div>':'')+'</div>';
 }
 
 function renderQuestion(q,i){
