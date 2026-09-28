@@ -41,9 +41,16 @@ function render(){
   const loadQuestionsButton=root.querySelector('#caLoadQuestions');
   if(loadQuestionsButton)loadQuestionsButton.addEventListener('click',async()=>{
     loadQuestionsButton.disabled=true;
-    loadQuestionsButton.textContent='Loading…';
-    try{await load(activeHostId,selectedTrack,selectedDay);}
-    finally{
+    loadQuestionsButton.textContent=selectedTrack==='c-programming'?'Generating correct 10 × 50 bank…':'Loading…';
+    try{
+      if(selectedTrack==='c-programming'){
+        setStatus('Generating and validating the correct mixed-format C bank. All 10 modules remain DRAFT until review. This can take several minutes.','success');
+        await call('loadPreparedCompetencyAssessmentProgram')({trackId:'c-programming'});
+      }
+      await load(activeHostId,selectedTrack,selectedDay);
+    }catch(e){
+      setStatus(e?.message||String(e),'error');
+    }finally{
       const b=host()?.querySelector('#caLoadQuestions');
       if(b){b.disabled=false;b.textContent='Load Questions';}
     }
