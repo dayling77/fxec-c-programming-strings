@@ -980,8 +980,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -1968,8 +1967,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -2956,8 +2954,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -3944,8 +3941,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -4932,8 +4928,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -5920,8 +5915,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -6908,8 +6902,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -7896,8 +7889,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -8884,8 +8876,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
@@ -9872,8 +9863,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
       "Overwrite the only pointer before checking the result.",
       "Call free before realloc.",
-      "Assume realloc always succeeds.",
-      "Write beyond the old allocation first."
+      "Assume realloc always succeeds."
     ],
     "answer": 0,
     "explanation": "Use realloc carefully, preserve the original pointer until success is known, and update the size after success.",
