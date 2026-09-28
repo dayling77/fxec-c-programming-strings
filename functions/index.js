@@ -2080,9 +2080,13 @@ export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},
       const questionSnap=await poolRef.collection('questions').get();
       if(!questionSnap.empty){
         const poolQuestions=questionSnap.docs.map(d=>d.data());
-        const isPrepared=String(pool.source||'').toLowerCase()==='ai-validated-mixed-format'
+        // C Programming has a separately prepared 50-question master pool.
+        // The prepared subcollection is authoritative; do not let the legacy
+        // competencyAssessmentTasks MCQ draft mask it.
+        const isPrepared=(trackId==='c-programming' && poolQuestions.length===50)
+          || String(pool.source||'').toLowerCase()==='ai-validated-mixed-format'
           || poolQuestions.some(q=>String(q.source||'').toLowerCase()==='ai-validated-mixed-format')
-          || (trackId==='c-programming' && poolQuestions.some(q=>String(q.activityType||'')!=='mcq'));
+          || poolQuestions.some(q=>String(q.activityType||'')!=='mcq');
         if(isPrepared){
           item.questions=poolQuestions;
           item.questionCount=poolQuestions.length;
