@@ -1483,26 +1483,82 @@ async function azurePronunciationAssessment(wavBytes, referenceText){
  return {transcript:json.Display||json.ITN||'',pronunciationScore:Math.round(pa.PronScore??pa.AccuracyScore??0),accuracyScore:Math.round(pa.AccuracyScore??0),fluencyScore:Math.round(pa.FluencyScore??0),completenessScore:Math.round(pa.CompletenessScore??0),prosodyScore:pa.ProsodyScore==null?null:Math.round(pa.ProsodyScore),words};
 }
 
-export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async request => {
- const a=requireAuth(request); const taskType=cleanText(request.data?.taskType,40); const target=cleanText(request.data?.target,1000);
- const audioBase64=String(request.data?.audioBase64||''); const mimeType=cleanText(request.data?.mimeType||'audio/wav',80);
- if(!COMMUNICATION_TASKS[taskType] || !target || !audioBase64) throw new HttpsError('invalid-argument','Task type, target and recording are required.');
- const bytes=Buffer.from(audioBase64,'base64'); if(!bytes.length || bytes.length>SPEECH_CONFIG.maxAudioBytes) throw new HttpsError('invalid-argument','Audio file is missing or too large.');
- let result;
- if(taskType==='pronunciation'){
-   if(!mimeType.includes('wav')) throw new HttpsError('invalid-argument','Pronunciation assessment requires 16 kHz WAV audio.');
-   result=await azurePronunciationAssessment(bytes,target);
- } else {
-   result=await azurePronunciationAssessment(bytes,target);
-   if(taskType==='wordUsage') { const usage=scoreWordUsage(target,result.transcript); result={...result,...usage}; }
+async function azureSpeechToText(wavBytes){
+ const key=AZURE_SPEECH_KEY.value(), region=AZURE_SPEECH_REGION.value();
+ if(!key) throw new HttpsError('failed-precondition','Speech assessment is not configured. Set AZURE_SPEECH_KEY.');
+ const url='https://'+region+'.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US&format=detailed';
+ const r=await fetch(url,{method:'POST',headers:{
+   'Ocp-Apim-Subscription-Key':key,
+   'Content-Type':'audio/wav; codecs=audio/pcm; samplerate=16000',
+   'Accept':'application/json'
+ },body:wavBytes});
+ const body=await r.json().catch(()=>({}));
+ if(!r.ok) throw new HttpsError('internal','Speech recognition failed.');
+ const json=body.NBest?.[0] || body;
+ return {transcript:json.Display||json.ITN||''};
+}
+async function scoreIntegratedSpeaking(task,target,transcript){
+ const prompt='You are evaluating a first-year engineering student\'s spoken response from its transcript. Use a CEFR-informed B1→B2 classroom rubric, not an IELTS/TOEFL band score. Assess only the transcript content; do not infer pronunciation from text. Return JSON only with score (0-100), relevance (0-25), organisation (0-25), vocabulary (0-25), grammar (0-25), and feedback (max 240 characters). The task was: '+target+'\nStudent transcript: '+transcript;
+ try{
+   const r=await generateJson(prompt);
+   const score=Math.max(0,Math.min(100,Math.round(Number(r.score)||0)));
+   return {score,relevance:Number(r.relevance)||0,organisation:Number(r.organisation)||0,vocabulary:Number(r.vocabulary)||0,grammar:Number(r.grammar)||0,feedback:String(r.feedback||'Address the task directly and organise the response clearly.').slice(0,240)};
+ }catch{
+   const words=normalizeWords(transcript).length;
+   const score=Math.min(70,Math.max(0,words*4));
+   return {score,relevance:score,organisation:0,vocabulary:0,grammar:0,feedback:'Your response was transcribed. Add specific supporting detail and a clear conclusion, then try again.'};
  }
- const score=taskType==='wordUsage'?result.score:result.pronunciationScore;
- const xp=score>=80?COMMUNICATION_TASKS[taskType].xp:score>=60?Math.round(COMMUNICATION_TASKS[taskType].xp*.5):0;
- await db.collection('communicationSpeechAttempts').add({uid:a.uid,taskType,target,transcript:result.transcript,score,xp,pronunciation:taskType==='pronunciation'?{accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words}:null,createdAt:FieldValue.serverTimestamp()});
- if(xp){const ref=db.collection('competencyProgress').doc(a.uid);await db.runTransaction(async tx=>{const s=await tx.get(ref),d=s.exists?s.data():{xp:0,badges:[],tracks:{}};const next=(d.xp||0)+xp;const tracks={...(d.tracks||{})};const cur=tracks.communication||{xp:0,progress:0};tracks.communication={...cur,xp:(cur.xp||0)+xp,progress:Math.min(100,Math.round(((cur.xp||0)+xp)))};tx.set(ref,{...d,xp:next,level:Math.floor(next/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});});}
- return {taskType,target,transcript:result.transcript,score,xp,accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words||[],feedback:score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the words marked for improvement and practise again.':'Keep practising. Record again with clear, steady speech.'};
-});
+}
 
+export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async request => {
+ const a=requireAuth(request);
+ const taskType=cleanText(request.data?.taskType,40);
+ const target=cleanText(request.data?.target,1000);
+ const audioBase64=String(request.data?.audioBase64||'');
+ const mimeType=cleanText(request.data?.mimeType||'audio/wav',80);
+ if(!COMMUNICATION_TASKS[taskType] || !target || !audioBase64) throw new HttpsError('invalid-argument','Task type, target and recording are required.');
+ const bytes=Buffer.from(audioBase64,'base64');
+ if(!bytes.length || bytes.length>SPEECH_CONFIG.maxAudioBytes) throw new HttpsError('invalid-argument','Audio file is missing or too large.');
+ if(!mimeType.includes('wav')) throw new HttpsError('invalid-argument','Communication assessment requires 16 kHz WAV audio.');
+
+ let result={};
+ if(taskType==='pronunciation'){
+   result=await azurePronunciationAssessment(bytes,target);
+   result.score=result.pronunciationScore;
+ }else{
+   result=await azureSpeechToText(bytes);
+   if(taskType==='wordUsage'){
+     const usage=scoreWordUsage(target,result.transcript);
+     result={...result,...usage,score:usage.score,feedback:usage.score>=80?'Good use of the target word in a complete sentence.':usage.score>=60?'The target word was recognised. Expand the sentence and make the meaning clearer.':'Use the target word in a complete sentence and record again.'};
+   }else{
+     const spoken=await scoreIntegratedSpeaking(taskType,target,result.transcript);
+     result={...result,...spoken};
+   }
+ }
+ const score=Math.max(0,Math.min(100,Math.round(Number(result.score)||0)));
+ const xp=score>=80?COMMUNICATION_TASKS[taskType].xp:score>=60?Math.round(COMMUNICATION_TASKS[taskType].xp*.5):0;
+ await db.collection('communicationSpeechAttempts').add({
+   uid:a.uid,taskType,target,transcript:result.transcript||'',score,xp,
+   pronunciation:taskType==='pronunciation'?{accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words}:null,
+   rubric:taskType==='listeningSpeaking'?{relevance:result.relevance,organisation:result.organisation,vocabulary:result.vocabulary,grammar:result.grammar}:null,
+   createdAt:FieldValue.serverTimestamp()
+ });
+ if(xp){
+   const ref=db.collection('competencyProgress').doc(a.uid);
+   await db.runTransaction(async tx=>{
+     const s=await tx.get(ref),d=s.exists?s.data():{xp:0,badges:[],tracks:{}};
+     const next=(d.xp||0)+xp; const tracks={...(d.tracks||{})}; const cur=tracks.communication||{xp:0,progress:0};
+     tracks.communication={...cur,xp:(cur.xp||0)+xp,progress:Math.min(100,Math.round(((cur.xp||0)+xp)))};
+     tx.set(ref,{...d,xp:next,level:Math.floor(next/100)+1,tracks,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+   });
+ }
+ return {
+   taskType,target,transcript:result.transcript||'',score,xp,
+   accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,
+   relevance:result.relevance,organisation:result.organisation,vocabulary:result.vocabulary,grammar:result.grammar,
+   words:result.words||[],feedback:result.feedback||(score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the areas marked for improvement.':'Keep practising and record again with clearer, more complete speech.')
+ };
+});
 
 // Reusable competency activity engine. Answer keys remain server-side.
 const COMPETENCY_ACTIVITY_BANK = Object.freeze({
