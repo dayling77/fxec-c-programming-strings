@@ -721,3 +721,34 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 
 /* Legacy C master bank is retained in Firestore but never exposed as an editable/publishable assessment. */
 .caLegacyBlocked{margin:22px 0;padding:24px;border:1px solid rgba(180,70,70,.35);border-radius:18px;background:rgba(180,70,70,.06);display:grid;gap:10px}.caLegacyBlocked h3{margin:0}.caLegacyBlocked p{margin:0;line-height:1.65}.caLegacyRule{display:grid;gap:5px;padding:14px 16px;border-radius:12px;background:rgba(255,255,255,.65);border:1px solid rgba(0,0,0,.08)}.caLegacyRule span{line-height:1.6;font-size:.92rem}
+
+
+/* Communication module audio practice */
+.communicationAudioLab{margin:24px 0;padding:24px;border:1px solid #cbd5e1;border-radius:18px;background:#f8fafc}
+.communicationAudioHead{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.communicationAudioHead h4{margin:5px 0 8px;font-size:1.25rem;color:#102a43}
+.communicationAudioHead p{margin:0;max-width:820px;color:#52606d;line-height:1.55}
+.communicationAudioTaskGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}
+.communicationAudioTask{display:flex;align-items:center;gap:10px;text-align:left;padding:13px 14px;border:1px solid #cbd5e1;border-radius:12px;background:#fff;color:#102a43;cursor:pointer}
+.communicationAudioTask.active{background:#102a43;color:#fff;border-color:#102a43}
+.communicationAudioTask span{font-size:1.2rem}
+.communicationAudioPrompt{padding:18px;border-radius:14px;background:#fff;border:1px solid #d9e2ec}
+.communicationAudioPrompt strong{display:block;margin:7px 0;font-size:1.08rem;line-height:1.55;color:#102a43}
+.communicationAudioPrompt p{margin:0;color:#52606d}
+.communicationRecorder{margin-top:16px;padding:18px;border-radius:14px;background:#fff;border:1px solid #d9e2ec}
+.communicationTimer{font-size:1.6rem;font-weight:800;color:#102a43;margin:6px 0 14px}
+.communicationRecorderActions{display:flex;flex-wrap:wrap;gap:8px}
+.communicationRecorderActions button{padding:10px 14px;border-radius:10px}
+.communicationSpeechResult{margin-top:14px}
+.speechScoreCard{padding:16px;border-radius:12px;background:#f0fdf4;border:1px solid #bbf7d0}
+.speechScoreMetrics{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:8px}
+.speechScoreMetrics strong{font-size:1.35rem;color:#166534}
+.speechScoreMetrics span{padding:5px 9px;border-radius:999px;background:#fff;border:1px solid #d9e2ec;color:#334e68}
+.speechAssessLoading,.speechAssessError{padding:12px;border-radius:10px;background:#fff;border:1px solid #d9e2ec;color:#334e68}
+.speechAssessError{border-color:#fecaca;color:#991b1b}
+@media(max-width:720px){
+ .communicationAudioHead{flex-direction:column}
+ .communicationAudioTaskGrid{grid-template-columns:1fr}
+ .communicationRecorderActions{flex-direction:column}
+ .communicationRecorderActions button{width:100%}
+}
