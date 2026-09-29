@@ -17,6 +17,51 @@ const TRACKS=[['communication','Communication'],['aptitude','Aptitude'],['core-e
 const MODULES={communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],aptitude:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude'],'core-engineering':['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],'problem-solving':['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge'],analytical:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']};
 let programs=[],selectedTrack='communication',selectedDay=1,viewerRole='admin',activeHostId='competencyAssessmentAdmin';
 const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function formatCCode(source){
+  const s=String(source??'').replace(/\\r\\n?/g,'\\n').trim();
+  if(!s)return '';
+  let out='',line='',indent=0,paren=0,inString=false,inChar=false,inLineComment=false,inBlockComment=false,escape=false;
+  const pushLine=()=>{const t=line.trim();if(t)out+='  '.repeat(Math.max(0,indent))+t+'\\n';line='';};
+  for(let i=0;i<s.length;i++){
+    const ch=s[i],nx=s[i+1]||'';
+    if(inLineComment){line+=ch;if(ch==='\\n'){pushLine();inLineComment=false;}continue;}
+    if(inBlockComment){line+=ch;if(ch==='*'&&nx==='/'){line+='/';i++;inBlockComment=false;}continue;}
+    if(inString){line+=ch;if(escape){escape=false;}else if(ch==='\\\\'){escape=true;}else if(ch==='"'){inString=false;}continue;}
+    if(inChar){line+=ch;if(escape){escape=false;}else if(ch==='\\\\'){escape=true;}else if(ch==="'"){inChar=false;}continue;}
+    if(ch==='/'&&nx==='/'){line+=ch+nx;i++;inLineComment=true;continue;}
+    if(ch==='/'&&nx==='*'){line+=ch+nx;i++;inBlockComment=true;continue;}
+    if(ch==='"'){line+=ch;inString=true;continue;}
+    if(ch==="'"){line+=ch;inChar=true;continue;}
+    if(ch==='('){paren++;line+=ch;continue;}
+    if(ch===')'){paren=Math.max(0,paren-1);line+=ch;continue;}
+    if(ch==='{'){
+      line=line.trimEnd()+' {';
+      pushLine();
+      indent++;
+      continue;
+    }
+    if(ch==='}'){
+      if(line.trim())pushLine();
+      indent=Math.max(0,indent-1);
+      line='}';
+      const rest=s.slice(i+1).replace(/^\\s+/,'');
+      if(rest.startsWith('else')||rest.startsWith('while')||rest.startsWith(';')||rest.startsWith(',')){
+        continue;
+      }
+      pushLine();
+      continue;
+    }
+    if(ch===';'){
+      line+=ch;
+      if(paren===0)pushLine();
+      continue;
+    }
+    if(ch==='\\n'){pushLine();continue;}
+    line+=ch;
+  }
+  if(line.trim())pushLine();
+  return out.trim();
+}
 function host(){return document.getElementById(activeHostId)||document.getElementById('competencyAssessmentAdmin');}
 function task(track,day){return programs.find(x=>x.trackId===track&&Number(x.day)===day);}
 async function fetchPrograms(){
@@ -122,7 +167,7 @@ function renderQuestion(q,i){
    h+='<div class="caOptions">'+(q.options||[]).map((o,j)=>'<label>Option '+String.fromCharCode(65+j)+'<input class="caOpt" value="'+esc(o)+'"></label>').join('')+'</div>';
  }
  h+='<div class="caQuestionMeta"><label>Scoring Type<select class="caType"><option value="mcq" '+(q.type==='mcq'?'selected':'')+'>MCQ</option><option value="multipleCorrect" '+(q.type==='multipleCorrect'?'selected':'')+'>Multiple Correct</option><option value="scenario" '+(q.type==='scenario'?'selected':'')+'>Scenario</option></select></label><label>Activity Type<select class="caActivityType"><option value="mcq">MCQ</option><option value="multiple-correct">Multiple Correct</option><option value="match">Match</option><option value="code-observation">Code Observation</option><option value="output-prediction">Output Prediction</option><option value="bug-identification">Bug Identification</option><option value="missing-code">Missing Code</option><option value="coding-challenge" '+(coding?'selected':'')+'>Coding Challenge</option><option value="diagram-interpretation">Diagram Interpretation</option><option value="scenario-analysis">Scenario Analysis</option><option value="listening">Listening</option><option value="engineering-decision">Engineering Decision</option></select></label><label>Correct index(es)<input class="caAnswer" value="'+(coding?'':esc(Array.isArray(q.answer)?q.answer.join(','):q.answer))+'" '+(coding?'disabled':'')+'></label><label>Time (sec)<input class="caTime" type="number" min="20" value="'+Number(q.timeLimitSeconds||60)+'"></label></div>';
- if(!coding) h+='<label>Code / activity material<textarea class="caCode">'+esc(q.code||'')+'</textarea></label><label>Audio text (optional)<textarea class="caAudioText">'+esc(q.audioText||'')+'</textarea></label>';
+ if(!coding && String(q.code||'').trim()) h+='<label>Code / activity material<textarea class="caCode" spellcheck="false">'+esc(formatCCode(q.code||''))+'</textarea></label>';\n if(!coding && q.activityType==='listening') h+='<label>Audio text<textarea class="caAudioText">'+esc(q.audioText||'')+'</textarea></label>';
  h+='<label>Explanation<textarea class="caExplanation">'+esc(q.explanation||'')+'</textarea></label></div></article>';return h;
 }
 function readQuestions(){
