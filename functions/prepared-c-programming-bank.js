@@ -437,7 +437,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -513,7 +513,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -532,7 +532,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -646,7 +646,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -665,7 +665,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -684,7 +684,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -703,7 +703,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -722,7 +722,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -741,7 +741,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -760,7 +760,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -779,7 +779,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -911,7 +911,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -1424,7 +1424,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1500,7 +1500,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1519,7 +1519,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1633,7 +1633,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1652,7 +1652,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1671,7 +1671,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1690,7 +1690,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1709,7 +1709,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -1728,7 +1728,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -1747,7 +1747,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -1766,7 +1766,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -1898,7 +1898,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -2411,7 +2411,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2487,7 +2487,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2506,7 +2506,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2620,7 +2620,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2639,7 +2639,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2658,7 +2658,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2677,7 +2677,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2696,7 +2696,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -2715,7 +2715,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -2734,7 +2734,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -2753,7 +2753,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -2885,7 +2885,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -3398,7 +3398,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3474,7 +3474,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3493,7 +3493,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3607,7 +3607,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3626,7 +3626,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3645,7 +3645,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3664,7 +3664,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3683,7 +3683,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -3702,7 +3702,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -3721,7 +3721,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -3740,7 +3740,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -3872,7 +3872,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -4385,7 +4385,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4461,7 +4461,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4480,7 +4480,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4594,7 +4594,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4613,7 +4613,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4632,7 +4632,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4651,7 +4651,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4670,7 +4670,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -4689,7 +4689,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -4708,7 +4708,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -4727,7 +4727,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -4859,7 +4859,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -5372,7 +5372,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5448,7 +5448,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5467,7 +5467,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5581,7 +5581,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5600,7 +5600,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5619,7 +5619,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5638,7 +5638,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5657,7 +5657,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -5676,7 +5676,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -5695,7 +5695,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -5714,7 +5714,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -5846,7 +5846,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -6359,7 +6359,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6435,7 +6435,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6454,7 +6454,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6568,7 +6568,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6587,7 +6587,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6606,7 +6606,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6625,7 +6625,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6644,7 +6644,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -6663,7 +6663,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -6682,7 +6682,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -6701,7 +6701,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -6833,7 +6833,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -7346,7 +7346,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7422,7 +7422,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7441,7 +7441,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7555,7 +7555,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7574,7 +7574,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7593,7 +7593,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7612,7 +7612,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7631,7 +7631,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -7650,7 +7650,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -7669,7 +7669,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -7688,7 +7688,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -7820,7 +7820,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -8333,7 +8333,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8409,7 +8409,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8428,7 +8428,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8542,7 +8542,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8561,7 +8561,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8580,7 +8580,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8599,7 +8599,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8618,7 +8618,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -8637,7 +8637,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -8656,7 +8656,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -8675,7 +8675,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -8807,7 +8807,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
@@ -9320,7 +9320,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use a[3] as the first element."
     ],
     "answer": 0,
-    "explanation": "Use i < 3 as the loop condition.",
+    "explanation": "Use i < 3 as the loop condition. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9396,7 +9396,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use p=NULL after allocation."
     ],
     "answer": 0,
-    "explanation": "Check p against NULL before dereferencing it.",
+    "explanation": "Check p against NULL before dereferencing it. This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9415,7 +9415,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Use &add(2)."
     ],
     "answer": 0,
-    "explanation": "Pass both required arguments: add(2,3).",
+    "explanation": "Pass both required arguments: add(2,3). This debugging item checks whether the student can identify the defect in the C code and apply the safe correction rather than merely recall a rule.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9529,7 +9529,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "7"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 6.",
+    "explanation": "Tracing each statement gives 6. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9548,7 +9548,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 1.",
+    "explanation": "Tracing each statement gives 1. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9567,7 +9567,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "3"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 5.",
+    "explanation": "Tracing each statement gives 5. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9586,7 +9586,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "8"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 7.",
+    "explanation": "Tracing each statement gives 7. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9605,7 +9605,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "0"
     ],
     "answer": 0,
-    "explanation": "Tracing each statement gives 3.",
+    "explanation": "Tracing each statement gives 3. This trace item checks whether the student can follow the changing program state step by step and determine the final result from the given C code.",
     "timeLimitSeconds": 75,
     "reviewed": true
   },
@@ -9624,7 +9624,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Print the pointer as a string."
     ],
     "answer": 0,
-    "explanation": "Check the allocation result for NULL before use.",
+    "explanation": "Check the allocation result for NULL before use. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -9643,7 +9643,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "A space character."
     ],
     "answer": 0,
-    "explanation": "The '\\0' character.",
+    "explanation": "The '\\0' character. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -9662,7 +9662,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "The program's output file."
     ],
     "answer": 0,
-    "explanation": "The return type and parameter types.",
+    "explanation": "The return type and parameter types. This listening item checks whether the student can extract the key technical instruction from the spoken C statement and connect it to safe C programming practice.",
     "timeLimitSeconds": 60,
     "reviewed": true
   },
@@ -9794,7 +9794,7 @@ export const PREPARED_C_PROGRAMMING_QUESTION_BANK = [
       "Start at n and access a[n]."
     ],
     "answer": 0,
-    "explanation": "Use indexes from 0 through n-1.",
+    "explanation": "Use indexes from 0 through n-1. This scenario item checks whether the student can apply the C programming principle to a realistic engineering situation and select the technically appropriate action.",
     "timeLimitSeconds": 90,
     "reviewed": true
   },
