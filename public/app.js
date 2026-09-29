@@ -1093,9 +1093,15 @@ onAuthStateChanged(auth, async user => {
   show('admin', isAdminUser || isFacultyUser);
   show('adminBootstrap', isConfiguredAdminEmail && token.claims.admin !== true);
   if(isAdminUser){
-    setTab('admin');loadAdmin();setTimeout(()=>window.FXECCompetencyAssessmentAdmin?.load?.(),0);
+    setTab('admin');
+    document.getElementById('student')?.setAttribute('hidden','hidden');
+    document.getElementById('firstYearCompetencyPanel')?.setAttribute('hidden','hidden');
+    loadAdmin();
+    setTimeout(()=>window.FXECCompetencyAssessmentAdmin?.load?.(),0);
   }else if(isFacultyUser){
     setTab('admin');
+    document.getElementById('student')?.setAttribute('hidden','hidden');
+    document.getElementById('firstYearCompetencyPanel')?.setAttribute('hidden','hidden');
     document.querySelectorAll('#admin > .adminCard').forEach(x=>{x.hidden=x.id!=='competencyAssessmentAdminCard';});
     document.querySelector('#admin .adminHero')?.setAttribute('hidden','hidden');
     document.querySelector('#admin .adminStatGrid')?.setAttribute('hidden','hidden');
