@@ -18,16 +18,16 @@ const MODULES={communication:['Grammar & Usage','Vocabulary & Word Usage','Readi
 let programs=[],selectedTrack='communication',selectedDay=1,viewerRole='admin',activeHostId='competencyAssessmentAdmin';
 const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function formatCCode(source){
-  const s=String(source??'').replace(/\\r\\n?/g,'\\n').trim();
+  const s=String(source??'').replace(/\r\n?/g,'\n').trim();
   if(!s)return '';
   let out='',line='',indent=0,paren=0,inString=false,inChar=false,inLineComment=false,inBlockComment=false,escape=false;
-  const pushLine=()=>{const t=line.trim();if(t)out+='  '.repeat(Math.max(0,indent))+t+'\\n';line='';};
+  const pushLine=()=>{const t=line.trim();if(t)out+='  '.repeat(Math.max(0,indent))+t+'\n';line='';};
   for(let i=0;i<s.length;i++){
     const ch=s[i],nx=s[i+1]||'';
-    if(inLineComment){line+=ch;if(ch==='\\n'){pushLine();inLineComment=false;}continue;}
+    if(inLineComment){line+=ch;if(ch==='\n'){pushLine();inLineComment=false;}continue;}
     if(inBlockComment){line+=ch;if(ch==='*'&&nx==='/'){line+='/';i++;inBlockComment=false;}continue;}
-    if(inString){line+=ch;if(escape){escape=false;}else if(ch==='\\\\'){escape=true;}else if(ch==='"'){inString=false;}continue;}
-    if(inChar){line+=ch;if(escape){escape=false;}else if(ch==='\\\\'){escape=true;}else if(ch==="'"){inChar=false;}continue;}
+    if(inString){line+=ch;if(escape){escape=false;}else if(ch==='\\'){escape=true;}else if(ch==='"'){inString=false;}continue;}
+    if(inChar){line+=ch;if(escape){escape=false;}else if(ch==='\\'){escape=true;}else if(ch==="'"){inChar=false;}continue;}
     if(ch==='/'&&nx==='/'){line+=ch+nx;i++;inLineComment=true;continue;}
     if(ch==='/'&&nx==='*'){line+=ch+nx;i++;inBlockComment=true;continue;}
     if(ch==='"'){line+=ch;inString=true;continue;}
@@ -44,10 +44,8 @@ function formatCCode(source){
       if(line.trim())pushLine();
       indent=Math.max(0,indent-1);
       line='}';
-      const rest=s.slice(i+1).replace(/^\\s+/,'');
-      if(rest.startsWith('else')||rest.startsWith('while')||rest.startsWith(';')||rest.startsWith(',')){
-        continue;
-      }
+      const rest=s.slice(i+1).replace(/^\s+/,'');
+      if(rest.startsWith('else')||rest.startsWith('while')||rest.startsWith(';')||rest.startsWith(','))continue;
       pushLine();
       continue;
     }
@@ -56,7 +54,7 @@ function formatCCode(source){
       if(paren===0)pushLine();
       continue;
     }
-    if(ch==='\\n'){pushLine();continue;}
+    if(ch==='\n'){pushLine();continue;}
     line+=ch;
   }
   if(line.trim())pushLine();
