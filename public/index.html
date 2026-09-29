@@ -184,7 +184,7 @@ int main(void) {
 window.FXECCompetencyAssessmentAdmin=window.FXECCompetencyAssessmentAdmin||{};
 const fxecAdminFallbackLoader=async function(...args){
   try{
-    await import('/competency-assessment-admin-v3.js?v=20260928-2800');
+    await import('/competency-assessment-admin-v3.js?v=20260929-2900');
     const loader=window.FXECCompetencyAssessmentAdmin?.load;
     if(typeof loader!=='function'||loader===fxecAdminFallbackLoader) throw new Error('The competency administration module did not initialize.');
     return loader(...args);
