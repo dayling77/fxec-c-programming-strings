@@ -497,8 +497,9 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 /* Full six-competency modular learning centre */
 .competencyPortal{margin-top:18px}
 .competencyHero{display:flex;justify-content:space-between;gap:24px;padding:28px;background:linear-gradient(135deg,#f8fbff,#eef5ff);border:1px solid #dbe7f6;border-radius:20px}
-.competencyHero h2{margin:5px 0 8px;color:#102a43;font-size:28px;letter-spacing:-.03em}
-.competencyHero p{max-width:760px;margin:0;color:#64748b;line-height:1.6;font-size:13px}
+.competencyHero h2{margin:5px 0 8px;color:#fff;font-size:28px;letter-spacing:-.03em}
+.competencyHero p{max-width:760px;margin:0;color:#fff;line-height:1.6;font-size:13px}
+.competencyHero>.sectionEyebrow,.competencyHero .sectionEyebrow{color:#fff}
 .competencyHeroStats{display:grid;grid-template-columns:repeat(3,95px);gap:8px;flex-shrink:0}
 .competencyHeroStats div{background:#fff;border:1px solid #dbe4ef;border-radius:13px;padding:12px;text-align:center}
 .competencyHeroStats strong{display:block;font-size:24px;color:#2563eb}.competencyHeroStats span{font-size:9px;font-weight:800;color:#64748b}
