@@ -4,6 +4,7 @@ import { C_CODING_CHALLENGES } from './c-programming-coding-bank.js';
 import { C_COMPETITIVE_META_BY_ID } from './c-competitive-coding-meta.js';
 import { COMMUNICATION_MODULES } from './communication-curriculum.js';
 import { renderCommunicationAudioLab, wireCommunicationAudioLab } from './communication-audio-lab.js';
+import { FIRST_YEAR_MODULE_CONTENT } from './first-year-module-content.js';
 
 const fxecApp=getApps().length?getApp():initializeApp(window.FXEC_FIREBASE_CONFIG);
 const functions=getFunctions(fxecApp,'us-central1');
@@ -394,7 +395,7 @@ const GENERIC_MODULE_BLUEPRINTS = {
 };
 function genericModule(title,trackTitle,no){
  const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
- const b=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):((GENERIC_MODULE_BLUEPRINTS[trackKey]||[])[no-1]||{});
+ const b=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):((FIRST_YEAR_MODULE_CONTENT[trackKey]?.[no-1])||((GENERIC_MODULE_BLUEPRINTS[trackKey]||[])[no-1]||{}));
  const topics=b.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
  const focus=b.focus||'Build the core skill step by step, with repeated practice before moving to application.';
  const materials=[
