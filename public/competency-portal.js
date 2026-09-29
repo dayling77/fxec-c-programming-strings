@@ -2,6 +2,8 @@ import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/
 import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
 import { C_CODING_CHALLENGES } from './c-programming-coding-bank.js';
 import { C_COMPETITIVE_META_BY_ID } from './c-competitive-coding-meta.js';
+import { COMMUNICATION_MODULES } from './communication-curriculum.js';
+import { renderCommunicationAudioLab, wireCommunicationAudioLab } from './communication-audio-lab.js';
 
 const fxecApp=getApps().length?getApp():initializeApp(window.FXEC_FIREBASE_CONFIG);
 const functions=getFunctions(fxecApp,'us-central1');
@@ -323,6 +325,7 @@ function openModule(root,trackId,moduleNo,programme){
  ws.querySelectorAll('.checkAnswer').forEach(b=>b.onclick=()=>checkPracticeAnswer(b));
  ws.querySelectorAll('.materialToggle').forEach(b=>b.onclick=()=>toggleMaterial(b));
  wirePracticeTasks(ws);
+ wireCommunicationAudioLab(ws);
  loadCompetencyLeaderboard(ws,trackId);
  ws.scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -391,7 +394,7 @@ const GENERIC_MODULE_BLUEPRINTS = {
 };
 function genericModule(title,trackTitle,no){
  const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
- const b=(GENERIC_MODULE_BLUEPRINTS[trackKey]||[])[no-1]||{};
+ const b=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):((GENERIC_MODULE_BLUEPRINTS[trackKey]||[])[no-1]||{});
  const topics=b.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
  const focus=b.focus||'Build the core skill step by step, with repeated practice before moving to application.';
  const materials=[
@@ -406,7 +409,7 @@ function genericModule(title,trackTitle,no){
  return {id:no,title,scope:focus,topics,materials,lessons,
   drills:['Concept recognition — identify the principle used','Trace and explain — follow the example step by step','Guided completion — fill the missing reasoning step','Error finding — identify and correct the common mistake','Transfer challenge — apply the idea to a new situation'],
   practice:['Level 1 — guided concept and vocabulary check','Level 2 — worked example with one missing step','Level 3 — independent application to a short scenario','Level 4 — mixed reasoning and error-correction practice','Level 5 — timed first-year engineering challenge'],
-  example:b.example||'Apply '+title+' to a realistic engineering or professional situation.',audio:!!b.audio,
+  example:b.example||'Apply '+title+' to a realistic engineering or professional situation.',audio:!!b.audio,speechTasks:b.speechTasks||[],
   challenge:'Complete an applied '+title+' task: define the situation, use the module method, test your reasoning, identify one limitation and explain your final answer.',
   assessment:'Module mastery assessment: concept recognition, worked-example reasoning, application, error detection and one transfer question based on '+title+'.'};
 }
@@ -657,6 +660,7 @@ function openCodingLab(ws,{title,prompt,starter,metaId=''}){
 
 function moduleView(track,data,no,programme){
  const assessmentCount=track.id==='c-programming'?15:10;
+ const communicationAudio=track.id==='communication'&&data.audio?renderCommunicationAudioLab(data.speechTasks||[],data.title+' — Speaking Practice'):'';
  const topicHtml=(data.topics||[]).map(x=>'<li>'+esc(x)+'</li>').join('');
  let materialHtml='';
  if(Array.isArray(data.lessons)&&data.lessons.length){
@@ -680,7 +684,7 @@ function moduleView(track,data,no,programme){
  '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
  '<div class="moduleFlowBanner"><strong>MODULE LEARNING FLOW</strong><span>01 Topic</span><i>→</i><span>02 Materials</span><i>→</i><span>03 Drills</span><i>→</i><span>04 Practice</span><i>→</i><span>05 Challenge</span><i>→</i><span>06 Final Assessment · '+assessmentCount+' Questions</span></div>'+
  '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · MODULE TOPIC</span><h4>What you will learn</h4><p class="moduleScopeText">'+esc(data.scope)+'</p><ul class="scopeList">'+topicHtml+'</ul></section>'+
- '<section class="learningSection"><span class="sectionEyebrow">02 · MATERIALS</span><h4>Study Materials</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it → complete the micro-check.</p>'+materialHtml+'</section>'+
+ '<section class="learningSection"><span class="sectionEyebrow">02 · MATERIALS</span><h4>Study Materials</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it → complete the micro-check.</p>'+materialHtml+'</section>'+' + communicationAudio +
  '<section class="learningSection"><span class="sectionEyebrow">03 · GUIDED DRILLS</span><h4>Practise like a game</h4><p>Complete the guided missions here. ⭐ Stars belong to drills only.</p><div class="drillGrid">'+drillHtml+'</div></section>'+
  '<section class="learningSection"><span class="sectionEyebrow">04 · PRACTICE</span><h4>Practice Ladder · Levels 1–5</h4><p>Build independence step by step. Practice progress is separate from Drill Stars.</p><div class="practiceLadder">'+practiceHtml+'</div>'+codingHtml+'</section>'+
  '<section class="learningSection challengeSection"><span class="sectionEyebrow">05 · CHALLENGE</span><h4>Apply what you have learned</h4><div class="challengeBox"><p>'+esc(data.challenge)+'</p><ul><li>Write the solution in the editor.</li><li>Run normal, boundary and unusual inputs.</li><li>Fix compiler and logic errors.</li><li>Review before moving to the final assessment.</li></ul></div></section>'+
