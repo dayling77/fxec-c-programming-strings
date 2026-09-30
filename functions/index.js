@@ -2246,15 +2246,32 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   return {success:true,trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(15,questions.length),status:'draft'};
 });
 
+export const verifyCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const day=Number(request.data?.day);
+  const verifier=await requireCompetencyAssessmentManager(request,trackId,day);
+  const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+  const snap=await ref.get();
+  if(!snap.exists) throw new HttpsError('not-found','Assessment module has not been created.');
+  const d=snap.data();
+  validateCompetencyQuestions(d.questions,trackId);
+  if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before verification.');
+  await ref.update({status:'verified',isPublished:false,verifiedBy:verifier.uid,verifiedByEmail:verifier.token.email||'',verifiedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
+  await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'verified',verifiedBy:verifier.uid,verifiedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await db.collection('adminActions').add({action:'verifyCompetencyAssessmentDay',trackId,day,verifierUid:verifier.uid,verifierEmail:verifier.token.email||'',createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,day,status:'verified'};
+});
+
 export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async request=>{
   const trackId=competencyTrackOrThrow(request.data?.trackId);
   const day=Number(request.data?.day);
-  const adminUser=await requireCompetencyAssessmentManager(request,trackId,day);
+  const adminUser=requireAdmin(request);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
   const snap=await ref.get();
   if(!snap.exists) throw new HttpsError('not-found','Assessment day has not been created.');
   const d=snap.data();
   validateCompetencyQuestions(d.questions,trackId);
+  if(d.status!=='verified') throw new HttpsError('failed-precondition','Faculty verification is required before admin approval and publishing.');
   if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before approval/publishing.');
   await ref.update({status:'published',isPublished:true,approvedBy:adminUser.uid,approvedByEmail:adminUser.token.email||'',approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
   await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'published',approvedBy:adminUser.uid,approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
