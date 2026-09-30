@@ -216,16 +216,16 @@ const C_MODULES=[
   drills:['Predict bitwise results','Trace macros and constants','Read unfamiliar functions','Identify unsafe assumptions','Choose the correct debugging strategy'],
   practice:['Level 1 — advanced syntax recognition','Level 2 — trace unfamiliar code','Level 3 — bitwise drills','Level 4 — integrated debugging','Level 5 — timed advanced-code challenge'],
   challenge:'Analyse and improve a partially working C program: identify defects, explain them, fix them and add one useful feature.',
-  assessment:'20-question cumulative mastery check combining concepts, output prediction, debugging and applied reasoning.'}
+  assessment:'15-question cumulative mastery check combining concepts, output prediction, debugging and applied reasoning.'}
 ];
 
 const TRACKS=[
  {id:'communication',title:'Communication',icon:'💬',description:'Build accurate, confident and professional communication skills.',modules:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication']},
- {id:'aptitude',title:'Aptitude',icon:'🧮',description:'Develop quantitative, logical and data-driven problem-solving ability.',modules:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude']},
- {id:'core-engineering',title:'Core Engineering',icon:'⚙️',description:'Choose your engineering programme and build programme-specific core competency.',modules:['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],programmeWise:true},
+ {id:'aptitude',title:'Aptitude',icon:'🧮',description:'Develop quantitative, logical and data-driven problem-solving ability.',modules:['Number Sense & Estimation','Algebraic Reasoning','Sequences & Patterns','Ratio, Proportion & Variation','Data Interpretation','Logical Reasoning','Quantitative Word Problems','Probability & Uncertainty Basics','Geometry & Spatial Reasoning','Quantitative Decision Making']},
+ {id:'core-engineering',title:'Core Engineering',icon:'⚙️',description:'Build a common first-year engineering foundation in measurement, materials, systems, design, safety and documentation.',modules:['Engineering Measurement','Engineering Materials','Basic Electrical Systems','Mechanical Systems & Motion','Thermal Engineering Basics','Digital Systems & Logic','Engineering Design Process','Sustainability in Engineering','Engineering Safety & Risk','Engineering Tools & Documentation']},
  {id:'c-programming',title:'C Programming',icon:'💻',description:'Progress from C fundamentals to structured programming, memory and advanced problem solving.',modules:C_PROGRAMMING},
- {id:'problem-solving',title:'Problem Solving',icon:'🧩',description:'Learn to decompose unfamiliar problems and develop systematic solutions.',modules:['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge']},
- {id:'analytical',title:'Analytical Skills',icon:'🎧',description:'Read, listen, interpret evidence and make reasoned analytical decisions.',modules:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']}
+ {id:'problem-solving',title:'Problem Solving',icon:'🧩',description:'Learn to define, decompose, model, test, debug and optimise unfamiliar problems systematically.',modules:['Problem Definition','Decomposition','Abstraction','Algorithms & Procedures','Pattern Recognition','Root-Cause Analysis','Constraint-Based Solutions','Iteration & Debugging','Solution Evaluation','Engineering Challenge Strategy']},
+ {id:'analytical',title:'Analytical Skills',icon:'🎧',description:'Read, listen, interpret evidence and make reasoned analytical decisions.',modules:['Observation & Evidence','Data Quality','Trends & Relationships','Inference & Hypothesis','Critical Reading of Technical Information','Graphs & Visual Analytics','Decision Analysis','Ethics & Engineering Judgement','Systems Thinking','Integrated Analytical Reasoning']}
 ];
 
 function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
@@ -393,26 +393,74 @@ const GENERIC_MODULE_BLUEPRINTS = {
  {focus:'Integrate reading, listening, data interpretation and reasoning into a defensible conclusion.',topics:['Multi-source synthesis','Evidence matrix','Conflicting information','Conclusion','Recommendation'],example:'Combine a memo, chart and spoken update into a five-point evidence brief with one uncertainty.',audio:true}
  ]
 };
+function buildGenericActivities(trackKey,moduleNo,title,b){
+ const topics=(b.topics||[]).slice(0,5);
+ const distractors=(b.topics||[]).slice(0,5);
+ const safeTopics=topics.length?topics:[title+' concepts'];
+ const makeQuestion=(i,kind)=>{
+   const topic=safeTopics[i%safeTopics.length];
+   const answerIndex=[0,1,2,3,0][i%5];
+   const correct=[
+     'Use '+topic+' as the primary concept being tested in this module.',
+     'The appropriate focus is '+topic+', applied within the stated module context.',
+     'The evidence or action should be evaluated through '+topic+'.',
+     'A sound solution keeps '+topic+' explicit before moving to the next step.',
+     'The best response is the one that directly addresses '+topic+' and the stated constraint.'
+   ][i%5];
+   const wrong=[
+     'Ignore the module context and choose an unrelated technique.',
+     'Replace the stated evidence with an unsupported assumption.',
+     'Skip verification and accept the first plausible result.',
+     'Treat a different competency as the required method.'
+   ];
+   const opts=[]; for(let j=0;j<4;j++) opts.push(j===answerIndex?correct:wrong[(j+i)%wrong.length]);
+   return {id:trackKey+'-D'+moduleNo+'-DR'+(i+1),category:kind,prompt:
+     i===0?'Which statement best captures the central learning focus of '+title+'?':
+     i===1?'Which approach is most appropriate when applying '+topic+' in '+title+'?':
+     i===2?'Which action provides the strongest evidence that you understand '+topic+'?':
+     i===3?'Which common mistake should be avoided when working with '+title+'?':
+     'Which response best transfers '+topic+' to a new first-year engineering situation?',
+     options:opts,answer:answerIndex,
+     explanation:'The key is tied to '+topic+' and keeps the task within '+title+'. The other choices introduce unsupported assumptions, skip verification, or leave the module scope.',
+     audio:i===4 && !!b.audio};
+ };
+ const drills=Array.from({length:5},(_,i)=>makeQuestion(i,['Concept Check','Application Choice','Evidence Check','Error Diagnosis','Transfer Challenge'][i]));
+ const practice=drills.map((q,i)=>({
+   title:['Level 1 · Concept Foundation','Level 2 · Guided Application','Level 3 · Independent Reasoning','Level 4 · Error Analysis','Level 5 · Transfer Challenge'][i],
+   kind:'mcq',prompt:q.prompt,options:q.options,answer:q.answer,hint:q.explanation,
+   explanation:q.explanation
+ }));
+ return {drills,practice};
+}
+
 function genericModule(title,trackTitle,no){
  const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
- const b=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):((FIRST_YEAR_MODULE_CONTENT[trackKey]?.[no-1])||((GENERIC_MODULE_BLUEPRINTS[trackKey]||[])[no-1]||{}));
- const topics=b.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
- const focus=b.focus||'Build the core skill step by step, with repeated practice before moving to application.';
+ const source=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):(FIRST_YEAR_MODULE_CONTENT[trackKey]?.[no-1]||{});
+ const canonicalTitle=source.title||title;
+ const topics=source.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
+ const focus=source.focus||'Build the core skill step by step, with repeated practice before moving to application.';
+ const activities=buildGenericActivities(trackKey,no,canonicalTitle,source);
  const materials=[
-  'Concept map: '+title+' — '+focus,
-  'Worked example: '+(b.example||'Apply the concept to a realistic first-year engineering situation.'),
+  'Concept map: '+canonicalTitle+' — '+focus,
+  'Worked example: '+(source.example||'Apply the concept to a realistic first-year engineering situation.'),
   'Quick-reference: key terms, steps, checks and common mistakes',
   'Practice guide: move from guided attempt to independent application',
-  b.audio?'Listening task: listen first, note the evidence, then answer without seeing the hidden prompt':'Explain-it-aloud task: close the notes and explain the core idea in your own words'
+  source.audio?'Listening task: listen first, note the evidence, then answer without seeing the hidden prompt':'Explain-it-aloud task: close the notes and explain the core idea in your own words'
  ];
- const lessonTopics=topics;
- const lessons=lessonTopics.map((topic,i)=>({level:i===0?'Foundation':i===1?'Core':'Applied',title:topic+' — learn, trace and apply',teach:'Understand '+topic+' as part of '+title+'. Identify the key terms, the decision or process involved, and the condition that tells you whether your answer is correct.',example:i===0?(b.example||'Apply '+topic+' to a realistic first-year engineering situation.'):i===1?'Work through '+topic+' step by step, recording the evidence or intermediate result before deciding.':'Apply '+topic+' to a new situation, test one edge case and explain one possible error.',code:'/* '+topic+' */\\n/* Read the concept, trace the example, then complete the related task. */',check:'Can you explain '+topic+' without looking at the notes?'}));
- return {id:no,title,scope:focus,topics,materials,lessons,
-  drills:['Concept recognition — identify the principle used','Trace and explain — follow the example step by step','Guided completion — fill the missing reasoning step','Error finding — identify and correct the common mistake','Transfer challenge — apply the idea to a new situation'],
-  practice:['Level 1 — guided concept and vocabulary check','Level 2 — worked example with one missing step','Level 3 — independent application to a short scenario','Level 4 — mixed reasoning and error-correction practice','Level 5 — timed first-year engineering challenge'],
-  example:b.example||'Apply '+title+' to a realistic engineering or professional situation.',audio:!!b.audio,speechTasks:b.speechTasks||[],
-  challenge:'Complete an applied '+title+' task: define the situation, use the module method, test your reasoning, identify one limitation and explain your final answer.',
-  assessment:'Module mastery assessment: concept recognition, worked-example reasoning, application, error detection and one transfer question based on '+title+'.'};
+ const lessons=topics.map((topic,i)=>({
+   level:i===0?'Foundation':i===1?'Core':'Applied',
+   title:topic+' — learn, trace and apply',
+   teach:'Understand '+topic+' as part of '+canonicalTitle+'. Identify the key terms, the decision or process involved, and the condition that tells you whether your answer is correct.',
+   example:i===0?(source.example||'Apply '+topic+' to a realistic first-year engineering situation.'):i===1?'Work through '+topic+' step by step, recording the evidence or intermediate result before deciding.':'Apply '+topic+' to a new situation, test one edge case and explain one possible error.',
+   code:'/* '+topic+' */\n/* Read the concept, trace the example, then complete the related task. */',
+   check:'Can you explain '+topic+' without looking at the notes?'
+ }));
+ return {id:no,title:canonicalTitle,scope:focus,topics,materials,lessons,
+  drills:activities.drills,practiceTasks:activities.practice,example:source.example||'Apply '+canonicalTitle+' to a realistic engineering or professional situation.',
+  audio:!!source.audio,speechTasks:source.speechTasks||[],
+  challenge:'Complete an applied '+canonicalTitle+' task using the module method. State the situation, identify the relevant evidence, apply the method, test one boundary or alternative case, identify one limitation and justify your final answer.',
+  assessment:'Module mastery assessment for '+canonicalTitle+': concept recognition, application, evidence-based reasoning, error detection and transfer. The formal master pool is kept separate from Guided Drills and Practice.'
+ };
 }
 
 const C_MODULE_ENRICHMENT={
@@ -527,26 +575,34 @@ function renderDrillOption(value,index,audio){
  return '<button data-answer="'+index+'" class="'+(isCodeLike(value)?'drillCodeOption':'')+'"><span class="drillOptionLetter">'+label+'.</span>'+(isCodeLike(value)?'<pre>'+esc(decodeCode(value))+'</pre>':'<span>'+esc(value)+'</span>')+'</button>';
 }
 function showDrill(button){
- const card=button.closest('.drillCard'),title=card.dataset.module||'C Fundamentals';
+ const card=button.closest('.drillCard'),title=card.dataset.module||'C Fundamentals',trackId=card.dataset.track||'c-programming';
  const old=card.querySelector('.drillInteractive');if(old){old.remove();button.textContent='Start Drill';return;}
- const chosen=chooseDrill(title),q=chosen.q,box=document.createElement('div');box.className='drillInteractive';
- const audioQ=q[5]==='audio-question',audioOptions=q[5]==='audio-options';
+ let q,chosenId;
+ if(trackId==='c-programming'){
+   const chosen=chooseDrill(title);q={category:chosen.q[0],prompt:chosen.q[1],options:chosen.q[2],answer:chosen.q[3],explanation:chosen.q[4],audio:chosen.q[5]==='audio-question'||chosen.q[5]==='audio-options'};chosenId=chosen.id;
+ }else{
+   const moduleNo=Number(card.dataset.moduleNo||1);
+   const data=genericModule(title,TRACKS.find(t=>t.id===trackId)?.title||trackId,moduleNo);
+   q=data.drills[Math.floor(Math.random()*data.drills.length)];chosenId=q.id;
+ }
+ const box=document.createElement('div');box.className='drillInteractive';
+ const audioQ=!!q.audio;
  box.innerHTML='<div class="drillGameHeader"><b>🎯 DRILL MISSION</b><span>+1 ★ for an attempt</span></div>'+
-   '<h6>'+esc(q[0])+'</h6>'+
-   '<div class="drillQuestion '+(audioQ?'audioOnlyQuestion':'')+'">'+(audioQ?'<button class="playAudioQuestion">🔊 Play Question</button><small>Listen once or replay if needed.</small>':'<p>'+esc(q[1])+'</p>')+'</div>'+
-   (audioOptions?'<div class="drillAudioStage"><strong>OPTION A</strong><span>Preparing audio…</span></div><div class="drillAudioStatus">Options will play one at a time for about 3 seconds.</div>':'')+
-   '<div class="drillOptions '+(audioOptions?'audioChoiceOptions':'')+'">'+q[2].map((o,i)=>renderDrillOption(o,i,audioOptions)).join('')+'</div>'+
-   '<div class="drillFeedback"></div>';
+   '<h6>'+esc(q.category||'Guided Drill')+'</h6>'+
+   '<div class="drillQuestion '+(audioQ?'audioOnlyQuestion':'')+'">'+(audioQ?'<button class="playAudioQuestion">🔊 Play Question</button><small>Listen once or replay if needed.</small>':'<p>'+esc(q.prompt)+'</p>')+'</div>'+
+   '<div class="drillOptions">'+q.options.map((o,i)=>renderDrillOption(o,i,false)).join('')+'</div><div class="drillFeedback"></div>';
  card.appendChild(box);button.textContent='Close Drill';
- if(audioQ)box.querySelector('.playAudioQuestion').onclick=()=>speak(q[1]);
- if(audioOptions)startAudioSequence(box,q[2]);
+ if(audioQ)box.querySelector('.playAudioQuestion').onclick=()=>speak(q.prompt);
  box.querySelectorAll('[data-answer]').forEach(b=>b.onclick=()=>{
    const st=drillState(title).data;
    if(!st.completed)st.completed=[];
-   if(!box.dataset.rewarded){st.stars=Number(st.stars||0)+1;st.completed.push(chosen.id);st.bonusPoints=Math.min(5,Number(st.stars)*.05);saveDrillState(title,st);box.dataset.rewarded='1';call('recordCompetencyDrillAttempt')({trackId:'c-programming',moduleId:title,drillId:chosen.id}).then(()=>loadCompetencyLeaderboard(card.closest('.moduleLearningWorkspace'),'c-programming')).catch(()=>{});}
-   const ok=Number(b.dataset.answer)===q[3],fb=box.querySelector('.drillFeedback');
+   if(!box.dataset.rewarded){
+     st.stars=Number(st.stars||0)+1;st.completed.push(chosenId);st.bonusPoints=Math.min(5,Number(st.stars)*.05);saveDrillState(title,st);box.dataset.rewarded='1';
+     call('recordCompetencyDrillAttempt')({trackId,moduleId:title,drillId:chosenId}).then(()=>loadCompetencyLeaderboard(card.closest('.moduleLearningWorkspace'),trackId)).catch(()=>{});
+   }
+   const ok=Number(b.dataset.answer)===Number(q.answer),fb=box.querySelector('.drillFeedback');
    fb.className='drillFeedback '+(ok?'correct':'review');
-   fb.innerHTML=(ok?'⭐ Correct! Drill Star earned. ':'↻ Keep practising. A Star is awarded for completing the attempt. ')+'<b>'+esc(q[4])+'</b><br><span>Stars: '+st.stars+' · Bonus: '+Number(st.bonusPoints||0).toFixed(2)+' / 5</span>';
+   fb.innerHTML=(ok?'⭐ Correct! Drill Star earned. ':'↻ Keep practising. A Star is awarded for completing the attempt. ')+'<b>'+esc(q.explanation||'Review the module notes and trace the example.')+'</b><br><span>Stars: '+st.stars+' · Bonus: '+Number(st.bonusPoints||0).toFixed(2)+' / 5</span>';
    if(ok)box.querySelectorAll('[data-answer]').forEach(x=>x.disabled=true);
  });
 }
@@ -671,8 +727,8 @@ function moduleView(track,data,no,programme){
  }
  if(data.example) materialHtml+='<article class="studyLesson moduleExampleLesson"><div class="studyLessonHead"><span>WORKED EXAMPLE</span><strong>See the skill in context</strong></div><p class="studyTeach">'+esc(data.example)+'</p>'+(data.audio?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(data.example)+'">🔊 Listen to Example</button>':'')+'<div class="microCheck"><b>Explain it yourself</b><span>Close the notes and explain the example, the decision and one possible mistake.</span></div></article>';
 
- const drillHtml=(data.drills||[]).map((x,i)=>'<article class="drillCard" data-module="'+esc(data.title)+'"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(x)+'</h5><p>Game-style practice. Solve the mission, earn a Star for the attempt and keep building your streak. Drill Stars belong here and do not replace the formal assessment.</p></div><button class="drillReveal">Start Drill</button></article>').join('')+renderDrillReward(data.title);
- const practiceHtml=data.title==='C Fundamentals'?'<div class="practiceTaskGrid">'+practicePoolForStudent(data.title).map((idx,i)=>renderPracticeTask(C_FUNDAMENTALS_PRACTICE_POOL[idx]||C_FUNDAMENTALS_PRACTICE[i],i)).join('')+'</div>':(data.practice||[]).map((x,i)=>'<details class="practiceTask"><summary><span class="practiceTaskSummary"><span>PRACTICE LEVEL '+String(i+1)+'</span><strong>'+esc(x.replace(/^Level \\d+ — /,''))+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><p>'+esc(practiceInstruction(data.title,i))+'</p><button class="checkAnswer" data-question="'+esc(x)+'" data-answer="'+esc(practiceInstruction(data.title,i))+'">Open Practice</button></div></details>').join('');
+ const drillHtml=(data.drills||[]).map((x,i)=>'<article class="drillCard" data-track="'+esc(track.id)+'" data-module-no="'+no+'" data-module="'+esc(data.title)+'"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(typeof x==='string'?x:x.category)+'</h5><p>'+esc(typeof x==='string'?'Guided mission: solve the task, explain your reasoning and earn a Star for the attempt.':x.prompt)+'</p></div><button class="drillReveal">Start Drill</button></article>').join('')+renderDrillReward(data.title);
+ const practiceHtml=data.title==='C Fundamentals'?'<div class="practiceTaskGrid">'+practicePoolForStudent(data.title).map((idx,i)=>renderPracticeTask(C_FUNDAMENTALS_PRACTICE_POOL[idx]||C_FUNDAMENTALS_PRACTICE[i],i)).join('')+'</div>':'<div class="practiceTaskGrid">'+(data.practiceTasks||[]).map((x,i)=>renderPracticeTask(x,i)).join('')+'</div>';
 
  const legacyCoding=track.id==='c-programming'?C_CODING_CHALLENGES.filter(x=>x.module===data.title):[];
  const competitiveCoding=track.id==='c-programming'?Object.values(C_COMPETITIVE_META_BY_ID).filter(x=>x.module===data.title):[];
