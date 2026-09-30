@@ -234,7 +234,7 @@ function progressMap(data){return data?.tracks||{};}
 function renderPortal(root){
  root.innerHTML='<div class="competencyPortal">'+
   '<div class="competencyHero"><div><span class="sectionEyebrow">FXEC · FIRST-YEAR ENGINEERING</span><h2>Reward Points Portal</h2><p>One complete learning system across six competencies. Every module is designed for mastery: <b>Concept → Example → Guided Drill → Practice → Knowledge Check → Challenge → Assess → XP</b>.</p></div>'+
-  '<div class="competencyHeroStats"><div><strong>6</strong><span>Competencies</span></div><div><strong>60</strong><span>Learning Modules</span></div><div><strong>60</strong><span>Module Assessments</span></div></div><small class="portalBuildStamp">PORTAL BUILD 2026.09.27 · MODULE FLOW</small></div>'+
+  '<div class="competencyHeroStats"><div><strong>6</strong><span>Competencies</span></div><div><strong>60</strong><span>Learning Modules</span></div><div><strong>60</strong><span>Module Assessments</span></div></div><small class="portalBuildStamp">PORTAL BUILD 2026.09.30 · FINAL QA · MODULE FLOW</small></div>'+
   '<div class="competencyFlowLarge"><span>CONCEPT</span><i>→</i><span>EXAMPLE</span><i>→</i><span>GUIDED DRILL</span><i>→</i><span>PRACTISE</span><i>→</i><span>CHECK</span><i>→</i><span>CHALLENGE</span><i>→</i><span>ASSESS</span></div>'+
   '<div class="competencyTrackGrid" id="competencyTrackGrid"></div><section class="dashboardLeaderboardSection"><div class="moduleSectionHeading"><div><span class="sectionEyebrow">STUDENT PERFORMANCE</span><h4>🏆 Top Performers Across Competencies</h4><p>Recognise sustained learning, assessment performance and practice rewards.</p></div></div><div class="dashboardLeaderboardGrid" id="dashboardLeaderboardGrid"><div class="leaderboardLoading">Loading top performers…</div></div></section><div id="competencyWorkspace"></div></div>';
  const grid=root.querySelector('#competencyTrackGrid');
@@ -822,4 +822,4 @@ document.addEventListener('click',async e=>{
 });
 
 export {renderPortal as renderCompetencyPortal,TRACKS,PROGRAMMES,C_MODULES};
-window.FXECCompetencyPortal={buildStamp:'2026.09.27.1930',renderCompetencyPortal:renderPortal,TRACKS,PROGRAMMES,C_MODULES,openTrack:(trackId)=>{const root=document.getElementById('firstYearCompetencyRoot');if(root)openTrack(root,trackId);}};
+window.FXECCompetencyPortal={buildStamp:'2026.09.30.0635',renderCompetencyPortal:renderPortal,TRACKS,PROGRAMMES,C_MODULES,openTrack:(trackId)=>{const root=document.getElementById('firstYearCompetencyRoot');if(root)openTrack(root,trackId);}};
