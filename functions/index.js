@@ -1721,7 +1721,6 @@ function competencyQuestionValidation(questions, trackId='') {
       if(activity==='listening' && !cleanText(q.audioText,20)) errors.push('Q'+n+': listening question requires audioText.');
     }
     if(!cleanText(q.explanation,50)) errors.push('Q'+n+': missing explanation.');
-    if(q.activityType==='listening' && cleanText(q.audioText,20).toLowerCase()===cleanText(q.prompt,20).toLowerCase()) errors.push('Q'+n+': audioText must contain a genuine spoken task, not a blank/duplicate prompt.');
     if(!Number.isFinite(Number(q.timeLimitSeconds)) || Number(q.timeLimitSeconds)<20) errors.push('Q'+n+': invalid time limit.');
   });
   const expectedTypes=trackId==='c-programming'?COMPETENCY_ASSESSMENT_BLUEPRINT.cTypes:COMPETENCY_ASSESSMENT_BLUEPRINT.genericTypes;
