@@ -428,7 +428,9 @@ function buildGenericActivities(trackKey,moduleNo,title,b){
  const practice=drills.map((q,i)=>({
    title:['Level 1 · Concept Foundation','Level 2 · Guided Application','Level 3 · Independent Reasoning','Level 4 · Error Analysis','Level 5 · Transfer Challenge'][i],
    kind:'mcq',prompt:q.prompt,options:q.options,answer:q.answer,hint:q.explanation,
-   explanation:q.explanation
+   explanation:q.explanation,
+   activityType:(i===4 && !!b.audio)?'listening':'mcq',
+   audioText:(i===4 && !!b.audio)?q.prompt:''
  }));
  return {drills,practice};
 }
@@ -632,7 +634,7 @@ function practicePoolForStudent(title){
 }
 function renderPracticeTask(task,i){
  const p=task,answer=Number.isInteger(p.answer)?p.answer:'';
- const practiceAudio=String(p.activityType||p.mode||'').toLowerCase().includes('audio')||String(p.activityType||'').toLowerCase()==='listening'; const common='<details class="practiceTask" data-answer="'+answer+'"><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><div class="practicePromptBar '+(practiceAudio?'audioPracticePrompt':'')+'"><p>'+(practiceAudio?'🔊 Question available by audio':esc(p.prompt))+'</p><button type="button" class="practicePlayQuestion" data-speech="'+esc(p.prompt)+'">🔊 Listen</button></div>';
+ const practiceAudio=String(p.activityType||p.mode||'').toLowerCase().includes('audio')||String(p.activityType||'').toLowerCase()==='listening'; const common='<details class="practiceTask" data-answer="'+answer+'" data-explanation="'+esc(p.explanation||p.hint||'')+'"><summary><span class="practiceTaskSummary"><span>LEVEL '+(Math.floor(i/2)+1)+' · TASK '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(p.title)+'</strong><em>Open task ▾</em></span></summary><div class="practiceTaskBody"><div class="practicePromptBar '+(practiceAudio?'audioPracticePrompt':'')+'"><p>'+(practiceAudio?'🔊 Question available by audio':esc(p.prompt))+'</p><button type="button" class="practicePlayQuestion" data-speech="'+esc(p.prompt)+'">🔊 Listen</button></div>';
  if(p.kind==='coding'||p.kind==='bug'){
   const starter=p.starter||p.code||'';
   return common+lineNumberedEditor(starter,'practiceCode'+i)+(p.tests?'<div class="practiceTests"><b>Test cases</b>'+p.tests.map(t=>'<span>Input: '+esc(t[0])+' → Expected: '+esc(t[1])+'</span>').join('')+'</div>':'')+'<label class="practiceInputLabel">Input for your run <input class="practiceInput" placeholder="e.g. 7 5"></label><div class="practiceTaskActions"><button class="runCodeButton">▶ Run C Code</button><button class="revealHintButton">Hint</button></div><div class="practiceRunOutput">Your output will appear here.</div><div class="practiceFeedback" hidden></div></div></details>';
@@ -656,7 +658,7 @@ function wirePracticeTasks(ws){
  });
  ws.querySelectorAll('.practiceTask .practiceOptions button').forEach(b=>b.onclick=()=>{
    const task=b.closest('.practiceTask'),idx=[...task.querySelectorAll('[data-choice]')].indexOf(b),answer=Number(task.dataset.answer);
-   const ok=idx===answer;const f=task.querySelector('.practiceFeedback');f.className='practiceFeedback '+(ok?'correct':'review');f.hidden=false;f.textContent=ok?'✓ Correct. Now explain why.':'↻ Review the code and try again.';
+   const ok=idx===answer;const f=task.querySelector('.practiceFeedback');f.className='practiceFeedback '+(ok?'correct':'review');f.hidden=false;f.innerHTML=ok?'✓ Correct.<br><small>'+esc(task.dataset.explanation||'Now explain why the answer is correct.')+'</small>':'↻ Review the task, revisit the relevant material and try again.';
    if(ok)task.querySelectorAll('[data-choice]').forEach(x=>x.disabled=true);
  });
 }
