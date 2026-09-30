@@ -1637,11 +1637,11 @@ const COMPETENCY_ASSESSMENT_TRACKS = Object.freeze({
 });
 const COMPETENCY_MODULE_TITLES = Object.freeze({
   communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],
-  aptitude:['Number Systems & Arithmetic','Percentages, Ratios & Averages','Profit, Loss & Interest','Time, Work & Speed','Algebra & Equations','Logical Reasoning','Data Interpretation','Numerical Reasoning','Verbal Reasoning','Integrated Aptitude'],
-  'core-engineering':['Engineering Fundamentals','Measurements & Units','Engineering Materials','Basic Systems & Components','Diagrams & Schematics','Tools & Instrumentation','Digital / Computational Thinking','Engineering Analysis','Engineering Decisions','Integrated Programme Challenge'],
+  aptitude:['Number Sense & Estimation','Algebraic Reasoning','Sequences & Patterns','Ratio, Proportion & Variation','Data Interpretation','Logical Reasoning','Quantitative Word Problems','Probability & Uncertainty Basics','Geometry & Spatial Reasoning','Quantitative Decision Making'],
+  'core-engineering':['Engineering Measurement','Engineering Materials','Basic Electrical Systems','Mechanical Systems & Motion','Thermal Engineering Basics','Digital Systems & Logic','Engineering Design Process','Sustainability in Engineering','Engineering Safety & Risk','Engineering Tools & Documentation'],
   'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],
-  'problem-solving':['Problem Definition','Decomposition','Pattern Recognition','Abstraction','Algorithm Design','Pseudocode','Data & State Thinking','Debugging','Complexity & Optimisation','Integrated Problem Challenge'],
-  analytical:['Information Extraction','Reading for Meaning','Listening for Meaning','Inference','Data Interpretation','Evidence & Claims','Comparison & Classification','Critical Reasoning','Decision Analysis','Integrated Analytical Challenge']
+  'problem-solving':['Problem Definition','Decomposition','Abstraction','Algorithms & Procedures','Pattern Recognition','Root-Cause Analysis','Constraint-Based Solutions','Iteration & Debugging','Solution Evaluation','Engineering Challenge Strategy'],
+  analytical:['Observation & Evidence','Data Quality','Trends & Relationships','Inference & Hypothesis','Critical Reading of Technical Information','Graphs & Visual Analytics','Decision Analysis','Ethics & Engineering Judgement','Systems Thinking','Integrated Analytical Reasoning']
 });
 function competencyModuleTitle(trackId,day){
   return COMPETENCY_MODULE_TITLES[trackId]?.[Number(day)-1] || COMPETENCY_ASSESSMENT_TRACKS[trackId]?.defaultTopics?.[Number(day)-1] || ('Module '+day);
