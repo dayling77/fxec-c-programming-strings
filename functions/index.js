@@ -2097,7 +2097,7 @@ function starterCompetencyQuestions(trackId,day){
       activityType:'mcq',
       difficulty,
       topic,
-      prompt:template+' Focus area: '+anchor+'.',
+      prompt:template+' Focus area: '+anchor+'. Application variant '+String(i+1)+': consider a new first-year engineering situation.',
       options,
       answer:answerIndex,
       explanation:'The correct response keeps the learner focused on '+topic+', uses the relevant evidence or method, and avoids unsupported assumptions.',
