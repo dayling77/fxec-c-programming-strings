@@ -1630,7 +1630,7 @@ export const evaluateCompetencyActivity = onCall({cors:CALLABLE_CORS}, async req
 const COMPETENCY_ASSESSMENT_TRACKS = Object.freeze({
   communication: {title:'Communication', defaultTopics:['Grammar & Usage','Vocabulary','Professional Communication','Presentation','Group Discussion']},
   aptitude: {title:'Aptitude', defaultTopics:['Quantitative Aptitude','Logical Reasoning','Data Interpretation','Numerical Reasoning','Integrated Aptitude']},
-  'core-engineering': {title:'Core Engineering', defaultTopics:['Engineering Fundamentals','Measurements','Materials','Circuits','Digital Prototyping']},
+  'core-engineering': {title:'Core Engineering', defaultTopics:['Engineering Measurement','Engineering Materials','Basic Electrical Systems','Mechanical Systems & Motion','Thermal Engineering Basics','Digital Systems & Logic','Engineering Design Process','Sustainability in Engineering','Engineering Safety & Risk','Engineering Tools & Documentation']},
   'c-programming': {title:'C Programming', defaultTopics:['C Fundamentals','Control Flow','Arrays & Functions','Strings','Problem Solving']},
   'problem-solving': {title:'Problem Solving', defaultTopics:['Decomposition','Pattern Recognition','Algorithms','Debugging','Decision Making']},
   analytical: {title:'Analytical Skills', defaultTopics:['Reading Comprehension','Listening','Inference','Critical Analysis','Evidence Based Reasoning']}
