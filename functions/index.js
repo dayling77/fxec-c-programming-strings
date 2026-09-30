@@ -2063,18 +2063,50 @@ export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
 function starterCompetencyQuestions(trackId,day){
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
   const topic=competencyModuleTitle(trackId,day);
-  return Array.from({length:50},(_,i)=>({
-    id:trackId+'-D'+day+'-Q'+String(i+1).padStart(2,'0'),
-    type:i<30?'mcq':i<40?'multipleCorrect':'scenario',
-    difficulty:i<15?'easy':i<35?'moderate':'tough',
-    topic,
-    prompt:'Starter question '+(i+1)+' for '+meta.title+' — '+topic+'. Edit this question before approval.',
-    options:['Option A','Option B','Option C','Option D'],
-    answer:i<30?[0,1]:0,
-    explanation:'Starter content. Administrator must replace this with a reviewed question before publishing.',
-    timeLimitSeconds:60,
-    reviewed:false
-  }));
+  const source=String(COMPETENCY_SOURCE_MAPS[trackId]||'').split(';').map(x=>x.trim()).filter(Boolean);
+  const anchors=source.length?source:[topic];
+  const templates=[
+    ['Which statement best explains the role of '+topic+' in first-year engineering learning?',0],
+    ['Which approach is most appropriate when applying '+topic+' to a realistic engineering task?',1],
+    ['A student gives an answer involving '+topic+'. Which evidence would make the answer most defensible?',2],
+    ['Which common error should a learner avoid when working with '+topic+'?',3],
+    ['Which response shows effective transfer of '+topic+' to a new situation?',0]
+  ];
+  const questions=[];
+  for(let i=0;i<50;i++){
+    const difficulty=i<15?'easy':i<35?'moderate':'tough';
+    const [template,answerIndex]=templates[i%templates.length];
+    const anchor=anchors[i%anchors.length];
+    const correct=[
+      'It applies the relevant concept accurately and connects it to the stated task.',
+      'It identifies the relevant principle first, then applies it while checking the result.',
+      'It uses observable evidence, a clear method and a conclusion that follows from the evidence.',
+      'It replaces unsupported assumptions with explicit conditions, checks and appropriate terminology.',
+      'It adapts the same underlying principle to the new context without changing its meaning.'
+    ][i%5];
+    const distractors=[
+      'It relies mainly on a guess without checking the stated conditions.',
+      'It uses an unrelated concept simply because it appears familiar.',
+      'It skips the evidence or intermediate reasoning and reports an unsupported conclusion.'
+    ];
+    const options=[];
+    for(let j=0;j<4;j++) options.push(j===answerIndex?correct:distractors[(j+i)%distractors.length]);
+    questions.push({
+      id:trackId+'-D'+day+'-Q'+String(i+1).padStart(2,'0'),
+      type:'mcq',
+      activityType:'mcq',
+      difficulty,
+      topic,
+      prompt:template+' Focus area: '+anchor+'.',
+      options,
+      answer:answerIndex,
+      explanation:'The correct response keeps the learner focused on '+topic+', uses the relevant evidence or method, and avoids unsupported assumptions.',
+      timeLimitSeconds:60,
+      reviewed:false,
+      source:'module-specific-draft'
+    });
+  }
+  return questions;
 }
 
 export const createCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS},async request=>{
