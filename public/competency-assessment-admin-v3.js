@@ -138,7 +138,17 @@ function renderEditor(t){
  h+='<div class="caFacultyAssign"><div><span class="sectionEyebrow">VERIFICATION WORKFLOW</span><strong>Faculty verifier</strong><p>'+(t.facultyEmail?'Assigned to '+esc(t.facultyName||t.facultyEmail):'No faculty verifier assigned. Admin can review directly.')+'</p></div>'+(viewerRole==='admin'?'<div class="caFacultyControls"><input id="caFacultyEmail" type="email" placeholder="faculty@francisxavier.ac.in" value="'+esc(t.facultyEmail||'')+'"><button id="caAssignFaculty" class="secondary">Assign Faculty</button></div>':'<span class="practiceBadge">Assigned Faculty</span>')+'</div>';
  const cSummary=selectedTrack==='c-programming'?renderCCompositionSummary(t.questions||[]):'';
  h+='<div class="caQuestionHead"><h4>Question Review & Assignment</h4><span>AI-generated questions are structurally validated and independently audited twice. Faculty/admin must still review before publishing.</span></div>'+cSummary+'<div id="caQuestions">'+(t.questions||[]).map((q,i)=>renderQuestion(q,i)).join('')+'</div>';
- h+='<div class="caActions"><button id="caSave">Save Draft</button><button id="caApprove" class="primaryButton" '+(t.isPublished?'disabled':'')+'>'+(t.isPublished?'✓ Published':'Approve & Publish Module '+t.day)+'</button></div><div id="caStatus"></div></div>';
+ const verified=t.status==='verified';
+ const published=t.isPublished===true;
+ let workflowButtons='<button id="caSave">Save Draft</button>';
+ if(viewerRole==='admin'){
+   workflowButtons+='<button id="caVerify" class="secondary" '+(published?'disabled':'')+'>'+(verified?'✓ Verified':'Verify Module '+t.day)+'</button>';
+   workflowButtons+='<button id="caApprove" class="primaryButton" '+(!verified||published?'disabled':'')+'>'+(published?'✓ Published':verified?'Approve & Publish Module '+t.day:'Waiting for Faculty Verification')+'</button>';
+ }else{
+   workflowButtons+='<button id="caVerify" class="primaryButton" '+(published?'disabled':'')+'>'+(verified?'✓ Verified':'Verify Module '+t.day)+'</button>';
+ }
+ h+='<div class="caWorkflowStatus"><strong>Workflow:</strong> '+(published?'PUBLISHED — students can access during the scheduled window.':verified?'VERIFIED — awaiting Admin approval & publication.':'DRAFT — requires review and verification.')+'</div>';
+ h+='<div class="caActions">'+workflowButtons+'</div><div id="caStatus"></div></div>';
  return h;
 }
 function renderCCompositionSummary(questions){
@@ -181,8 +191,10 @@ function readQuestions(){
 function wireEditor(){
  const saveButton=host().querySelector('#caSave');
  const approveButton=host().querySelector('#caApprove');
+ const verifyButton=host().querySelector('#caVerify');
  if(saveButton)saveButton.addEventListener('click',()=>save(false));
  if(approveButton)approveButton.addEventListener('click',()=>save(true));
+ if(verifyButton)verifyButton.addEventListener('click',()=>verify());
  const assign=host().querySelector('#caAssignFaculty');
  if(assign)assign.addEventListener('click',async()=>{
    const email=host().querySelector('#caFacultyEmail').value.trim();
@@ -190,6 +202,21 @@ function wireEditor(){
    try{assign.disabled=true;setStatus('Assigning faculty verifier…','saving');await call('assignCompetencyAssessmentFaculty')({trackId:selectedTrack,day:selectedDay,facultyEmail:email});await load();setStatus('✓ Faculty verifier assigned.','success');}
    catch(e){assign.disabled=false;setStatus(e.message||String(e));}
  });
+}
+async function verify(){
+ const date=host().querySelector('#caDate').value;
+ const openValue=host().querySelector('#caOpen').value;
+ const closeValue=host().querySelector('#caClose').value;
+ if(!date||!openValue||!closeValue){setStatus('Set the assessment date, opening time and closing time before verification.');return;}
+ if(!confirm('Verify this module? You confirm that the questions, answers, explanations, learning alignment and assessment schedule have been reviewed.'))return;
+ try{
+   const btn=host().querySelector('#caVerify'); if(btn)btn.disabled=true;
+   setStatus('Verifying module…','saving');
+   await call('saveCompetencyAssessmentDay')({trackId:selectedTrack,day:selectedDay,title:host().querySelector('#caTitle').value.trim(),topic:host().querySelector('#caTopic').value.trim(),date,openAt:new Date(openValue).toISOString(),closeAt:new Date(closeValue).toISOString(),questions:readQuestions()});
+   await call('verifyCompetencyAssessmentDay')({trackId:selectedTrack,day:selectedDay});
+   await load();
+   setStatus('✓ Module verified. Admin approval is now available.','success');
+ }catch(e){if(host().querySelector('#caVerify'))host().querySelector('#caVerify').disabled=false;setStatus(e.message||String(e));}
 }
 async function save(approve){
  const date=host().querySelector('#caDate').value;
