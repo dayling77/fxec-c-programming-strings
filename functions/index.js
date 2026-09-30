@@ -2124,6 +2124,12 @@ export const getAdminCompetencyAssessmentPrograms = onCall({cors:CALLABLE_CORS},
     const snap=await db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day).get();
     if(!snap.exists) return {items:[],role:admin?'admin':'student'};
     const item={id:snap.id,...snap.data()};
+    const canonicalTitle=competencyModuleTitle(trackId,day);
+    const canonicalTaskTitle=COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+canonicalTitle;
+    const staleTitle=String(item.title||'') && String(item.title||'')!==canonicalTaskTitle;
+    if(staleTitle){
+      return {items:[{id:snap.id,trackId,day,title:canonicalTaskTitle,topic:canonicalTitle,status:'stale-content',isPublished:false,questionCount:0,staleContent:true}],role:admin?'admin':'faculty'};
+    }
     if(!admin&&String(item.facultyEmail||'').toLowerCase()!==email) return {items:[],role:'student'};
 
     // Prefer the prepared question-pool subcollection for the selected module.
@@ -2231,6 +2237,9 @@ export const getStudentCompetencyAssessments = onCall({cors:CALLABLE_CORS},async
     const now=new Date(),items=[];
     for(const d of snap.docs){
       const x=d.data(),open=asJsDate(x.openAt),close=asJsDate(x.closeAt);
+      const canonicalTitle=competencyModuleTitle(String(x.trackId||''),Number(x.day||0));
+      const canonicalTaskTitle=COMPETENCY_ASSESSMENT_TRACKS[x.trackId]?.title+' — Module '+Number(x.day||0)+' · '+canonicalTitle;
+      if(!COMPETENCY_ASSESSMENT_TRACKS[x.trackId] || String(x.title||'')!==canonicalTaskTitle) continue;
       if(!open||!close) continue;
       const status=now>=open&&now<close?'open':now<open?'scheduled':'closed';
       if(status==='closed') continue;
@@ -2259,7 +2268,11 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     if(!taskId) throw new HttpsError('invalid-argument','Assessment module is required.');
     const taskSnap=await db.collection('competencyAssessmentTasks').doc(taskId).get();
     if(!taskSnap.exists||taskSnap.data().isPublished!==true) throw new HttpsError('failed-precondition','This assessment is not published.');
-    const task=taskSnap.data(),open=asJsDate(task.openAt),close=asJsDate(task.closeAt);
+    const task=taskSnap.data();
+    const canonicalTitle=competencyModuleTitle(String(task.trackId||''),Number(task.day||0));
+    const canonicalTaskTitle=COMPETENCY_ASSESSMENT_TRACKS[task.trackId]?.title+' — Module '+Number(task.day||0)+' · '+canonicalTitle;
+    if(!COMPETENCY_ASSESSMENT_TRACKS[task.trackId] || String(task.title||'')!==canonicalTaskTitle) throw new HttpsError('failed-precondition','This assessment uses an older curriculum version. Regenerate and approve the current module question bank before opening it.');
+    const open=asJsDate(task.openAt),close=asJsDate(task.closeAt);
     if(!open||!close) throw new HttpsError('failed-precondition','This assessment has an invalid opening or closing time.');
     const now=new Date();
     if(now<open||now>=close) throw new HttpsError('failed-precondition','This assessment is not currently open.');
