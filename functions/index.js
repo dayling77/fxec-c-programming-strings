@@ -1681,13 +1681,16 @@ const COMPETENCY_SOURCE_MAPS = Object.freeze({
 function competencyQuestionValidation(questions, trackId='') {
   const errors = [];
   if (!Array.isArray(questions) || questions.length !== COMPETENCY_ASSESSMENT_BLUEPRINT.questionsPerDay) return {ok:false, errors:['Exactly 50 questions are required.']};
-  const ids = new Set(), counts = {mcq:0, multipleCorrect:0, scenario:0}, diffs = {easy:0, moderate:0, tough:0};
+  const ids = new Set(), prompts = new Set(), counts = {mcq:0, multipleCorrect:0, scenario:0}, diffs = {easy:0, moderate:0, tough:0};
   const activityCounts = {};
   questions.forEach((q,i)=>{
     const n=i+1;
     if(!q || typeof q!=='object') { errors.push('Q'+n+': invalid object.'); return; }
     if(!q.id || ids.has(String(q.id))) errors.push('Q'+n+': missing or duplicate id.');
     ids.add(String(q.id));
+    const promptKey=cleanText(q.prompt,5000).toLowerCase().replace(/\s+/g,' ');
+    if(promptKey && prompts.has(promptKey)) errors.push('Q'+n+': duplicate question prompt.');
+    if(promptKey) prompts.add(promptKey);
     if(!['mcq','multipleCorrect','scenario'].includes(q.type)) errors.push('Q'+n+': invalid type.'); else counts[q.type]++;
     if(!['easy','moderate','tough'].includes(q.difficulty)) errors.push('Q'+n+': invalid difficulty.'); else diffs[q.difficulty]++;
     const activity=String(q.activityType||'mcq');
@@ -1698,6 +1701,10 @@ function competencyQuestionValidation(questions, trackId='') {
       if(q.type!=='scenario') errors.push('Q'+n+': coding challenge must use scenario scoring type.');
       if(!cleanText(q.starter,20000)) errors.push('Q'+n+': coding starter missing.');
       if(!Array.isArray(q.codingTests)||q.codingTests.length<5) errors.push('Q'+n+': at least 5 hidden coding tests required.');
+      else {
+        const testKeys=q.codingTests.map(t=>JSON.stringify([String(t?.[0]??''),String(t?.[1]??'') ]));
+        if(new Set(testKeys).size!==testKeys.length) errors.push('Q'+n+': duplicate coding test cases.');
+      }
       if(!cleanText(q.sampleInput,5000)||!cleanText(q.sampleOutput,5000)) errors.push('Q'+n+': coding sample missing.');
     }else{
       if(!Array.isArray(q.options) || q.options.length!==4) errors.push('Q'+n+': exactly 4 options required.');
@@ -1714,6 +1721,7 @@ function competencyQuestionValidation(questions, trackId='') {
       if(activity==='listening' && !cleanText(q.audioText,20)) errors.push('Q'+n+': listening question requires audioText.');
     }
     if(!cleanText(q.explanation,50)) errors.push('Q'+n+': missing explanation.');
+    if(q.activityType==='listening' && cleanText(q.audioText,20).toLowerCase()===cleanText(q.prompt,20).toLowerCase()) errors.push('Q'+n+': audioText must contain a genuine spoken task, not a blank/duplicate prompt.');
     if(!Number.isFinite(Number(q.timeLimitSeconds)) || Number(q.timeLimitSeconds)<20) errors.push('Q'+n+': invalid time limit.');
   });
   const expectedTypes=trackId==='c-programming'?COMPETENCY_ASSESSMENT_BLUEPRINT.cTypes:COMPETENCY_ASSESSMENT_BLUEPRINT.genericTypes;
