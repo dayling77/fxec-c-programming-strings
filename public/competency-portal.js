@@ -394,77 +394,99 @@ const GENERIC_MODULE_BLUEPRINTS = {
  ]
 };
 function buildGenericActivities(trackKey,moduleNo,title,b){
- const topics=(b.topics||[]).slice(0,5);
- const distractors=(b.topics||[]).slice(0,5);
- const safeTopics=topics.length?topics:[title+' concepts'];
- const makeQuestion=(i,kind)=>{
-   const topic=safeTopics[i%safeTopics.length];
-   const answerIndex=[0,1,2,3,0][i%5];
-   const correct=[
-     'Use '+topic+' as the primary concept being tested in this module.',
-     'The appropriate focus is '+topic+', applied within the stated module context.',
-     'The evidence or action should be evaluated through '+topic+'.',
-     'A sound solution keeps '+topic+' explicit before moving to the next step.',
-     'The best response is the one that directly addresses '+topic+' and the stated constraint.'
-   ][i%5];
-   const wrong=[
-     'Ignore the module context and choose an unrelated technique.',
-     'Replace the stated evidence with an unsupported assumption.',
-     'Skip verification and accept the first plausible result.',
-     'Treat a different competency as the required method.'
-   ];
-   const opts=[]; for(let j=0;j<4;j++) opts.push(j===answerIndex?correct:wrong[(j+i)%wrong.length]);
-   return {id:trackKey+'-D'+moduleNo+'-DR'+(i+1),category:kind,prompt:
-     i===0?'Which statement best captures the central learning focus of '+title+'?':
-     i===1?'Which approach is most appropriate when applying '+topic+' in '+title+'?':
-     i===2?'Which action provides the strongest evidence that you understand '+topic+'?':
-     i===3?'Which common mistake should be avoided when working with '+title+'?':
-     'Which response best transfers '+topic+' to a new first-year engineering situation?',
-     options:opts,answer:answerIndex,
-     explanation:'The key is tied to '+topic+' and keeps the task within '+title+'. The other choices introduce unsupported assumptions, skip verification, or leave the module scope.',
-     audio:i===4 && !!b.audio};
+ const topics=Array.isArray(b.topics)?b.topics.filter(Boolean):[];
+ const focus=String(b.focus||'Build the skill through understanding, guided practice and transfer.');
+ const example=String(b.example||'Apply the skill to a realistic first-year engineering situation.');
+ const t=(n)=>topics[n%Math.max(1,topics.length)]||title;
+ const drills=[
+  {category:'Understand',prompt:'After studying '+title+', which statement best explains the purpose of the skill?',options:[
+    focus,
+    'Use the skill only when the answer is already known.',
+    'Memorise isolated facts without applying them.',
+    'Skip the stated context and select the fastest-looking option.'
+  ],answer:0,explanation:'The module focus defines the capability the learner is expected to develop. The other choices remove the application and reasoning that make the competency meaningful.'},
+  {category:'Guided Application',prompt:'In the module example — '+example+' — which concept should the learner deliberately apply first?',options:[
+    t(0),
+    'An unrelated topic from a different competency',
+    'A result chosen before examining the evidence',
+    'A shortcut that ignores the stated conditions'
+  ],answer:0,explanation:'The first guided step should use the concept taught in this module. Learners should identify the relevant principle before calculating, deciding or acting.'},
+  {category:'Reasoning Check',prompt:'A student reaches an answer while working on '+title+'. What is the strongest next action before accepting it?',options:[
+    'Check the result against the stated evidence, conditions or success criterion.',
+    'Accept the first plausible answer without checking.',
+    'Change several assumptions at once.',
+    'Ignore units, constraints or context if the answer looks reasonable.'
+  ],answer:0,explanation:'Verification closes the learning loop. A defensible answer is checked against the conditions, evidence or success criterion taught in the module.'},
+  {category:'Error Diagnosis',prompt:'Which mistake would most directly show that the student has not yet understood '+t(1)+'?',options:[
+    'Applying a rule without checking whether the situation satisfies its conditions.',
+    'Explaining the reasoning and identifying the evidence used.',
+    'Testing the answer with a relevant boundary or alternative case.',
+    'Comparing the result with the success criterion.'
+  ],answer:0,explanation:'A common transfer error is applying a method outside its conditions. Understanding includes knowing when a method is valid, not merely remembering its name.'},
+  {category:'Transfer',prompt:'You encounter a new first-year engineering situation that is different from the worked example. What should you do?',options:[
+    'Identify the relevant idea from '+title+', map the new situation to it, solve or act, then verify the result.',
+    'Copy the worked example unchanged even if the conditions differ.',
+    'Ignore the new information and use a memorised answer.',
+    'Choose a method from another module without checking the requirement.'
+  ],answer:0,explanation:'Transfer means recognising the underlying principle in a new context, adapting it to the new conditions and verifying the outcome. This is the final step of the learning progression.'}
+ ];
+ return {
+  drills:drills.map((q,i)=>({...q,id:trackKey+'-D'+moduleNo+'-DR'+(i+1),audio:(i===1||i===4)&&!!b.audio,audioText:(i===1||i===4)&&!!b.audio?q.prompt:''})),
+  practice:drills.map((q,i)=>({
+    id:trackKey+'-D'+moduleNo+'-PR'+(i+1),
+    title:['Level 1 · Understand','Level 2 · Guided Application','Level 3 · Verify','Level 4 · Diagnose','Level 5 · Transfer'][i],
+    kind:'mcq',prompt:q.prompt,options:q.options,answer:q.answer,hint:q.explanation,
+    explanation:q.explanation,activityType:(i===1||i===4)&&!!b.audio?'listening':'mcq',
+    audioText:(i===1||i===4)&&!!b.audio?q.prompt:''
+  }))
  };
- const drills=Array.from({length:5},(_,i)=>makeQuestion(i,['Concept Check','Application Choice','Evidence Check','Error Diagnosis','Transfer Challenge'][i]));
- const practice=drills.map((q,i)=>({
-   title:['Level 1 · Concept Foundation','Level 2 · Guided Application','Level 3 · Independent Reasoning','Level 4 · Error Analysis','Level 5 · Transfer Challenge'][i],
-   kind:'mcq',prompt:q.prompt,options:q.options,answer:q.answer,hint:q.explanation,
-   explanation:q.explanation,
-   activityType:(i===4 && !!b.audio)?'listening':'mcq',
-   audioText:(i===4 && !!b.audio)?q.prompt:''
- }));
- return {drills,practice};
 }
-
 function genericModule(title,trackTitle,no){
  const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
  const source=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):(FIRST_YEAR_MODULE_CONTENT[trackKey]?.[no-1]||{});
  const canonicalTitle=source.title||title;
  const topics=source.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
  const focus=source.focus||'Build the core skill step by step, with repeated practice before moving to application.';
+ const example=source.example||'Apply '+canonicalTitle+' to a realistic first-year engineering situation.';
  const activities=buildGenericActivities(trackKey,no,canonicalTitle,source);
- const materials=[
-  'Concept map: '+canonicalTitle+' — '+focus,
-  'Worked example: '+(source.example||'Apply the concept to a realistic first-year engineering situation.'),
-  'Quick-reference: key terms, steps, checks and common mistakes',
-  'Practice guide: move from guided attempt to independent application',
-  source.audio?'Listening task: listen first, note the evidence, then answer without seeing the hidden prompt':'Explain-it-aloud task: close the notes and explain the core idea in your own words'
+ const outcomes=[
+   'Explain the core idea of '+canonicalTitle+' in your own words.',
+   'Apply the method to a guided example before working independently.',
+   'Identify an error, limitation or condition that affects the result.',
+   'Verify an answer using evidence, constraints or a success criterion.',
+   'Transfer the skill to a new first-year engineering situation.'
  ];
  const lessons=topics.map((topic,i)=>({
-   level:i===0?'Foundation':i===1?'Core':'Applied',
-   title:topic+' — learn, trace and apply',
-   teach:'Understand '+topic+' as part of '+canonicalTitle+'. Identify the key terms, the decision or process involved, and the condition that tells you whether your answer is correct.',
-   example:i===0?(source.example||'Apply '+topic+' to a realistic first-year engineering situation.'):i===1?'Work through '+topic+' step by step, recording the evidence or intermediate result before deciding.':'Apply '+topic+' to a new situation, test one edge case and explain one possible error.',
-   code:'/* '+topic+' */\n/* Read the concept, trace the example, then complete the related task. */',
-   check:'Can you explain '+topic+' without looking at the notes?'
+   level:i<2?'Foundation':i<4?'Application':'Transfer',
+   title:topic,
+   teach:i===0
+     ?'Learn the concept before attempting the drill. '+focus+' The key question is: what is the concept, when is it valid, and what evidence shows that it has been applied correctly?'
+     :i===1
+     ?'Work through the module example step by step. '+example+' Record the important intermediate reasoning instead of jumping directly to the answer.'
+     :i===2
+     ?'Apply '+topic+' to a related situation. Compare the new conditions with the worked example and identify what must change.'
+     :i===3
+     ?'Test your reasoning. Look for a boundary case, alternative explanation, limitation or failure condition before accepting the result.'
+     :'Transfer '+topic+' to an unfamiliar first-year engineering context and explain why your chosen method remains appropriate.',
+   example:i===0?example:i===1?'Start with the worked example, identify the relevant '+topic+', then explain each decision before continuing.':'Create a new example using '+topic+' and state the evidence that would confirm your answer.',
+   code:'',
+   check:'Can you explain '+topic+', apply it without the notes, and state how you would verify the result?'
  }));
- return {id:no,title:canonicalTitle,scope:focus,topics,materials,lessons,
-  drills:activities.drills,practiceTasks:activities.practice,example:source.example||'Apply '+canonicalTitle+' to a realistic engineering or professional situation.',
+ const materials=[
+   {title:'Core concept',body:focus},
+   {title:'Worked example',body:example},
+   {title:'How to think through it',body:'1. Identify the requirement. 2. Select the relevant concept. 3. Work through the evidence or intermediate steps. 4. Check the result. 5. Explain the decision.'},
+   {title:'Common mistakes',body:'Do not memorise the answer. Check conditions, units or evidence, distinguish assumptions from facts, and test the result before accepting it.'},
+   {title:'Mastery check',body:'Close the material and explain the skill aloud or in writing. Then complete the Guided Drills without looking back at the worked example.'}
+ ];
+ return {
+  id:no,title:canonicalTitle,scope:focus,topics,learningOutcomes:outcomes,materials,lessons,
+  drills:activities.drills,practiceTasks:activities.practice,example,
   audio:!!source.audio,speechTasks:source.speechTasks||[],
-  challenge:'Complete an applied '+canonicalTitle+' task using the module method. State the situation, identify the relevant evidence, apply the method, test one boundary or alternative case, identify one limitation and justify your final answer.',
-  assessment:'Module mastery assessment for '+canonicalTitle+': concept recognition, application, evidence-based reasoning, error detection and transfer. The formal master pool is kept separate from Guided Drills and Practice.'
+  challenge:'Transfer challenge: solve a new '+canonicalTitle+' situation without copying the worked example. State the requirement, identify the relevant concept, show the important reasoning, test one boundary or alternative, and justify the final result.',
+  assessment:'The formal assessment measures the same learning outcomes in new contexts. It is intentionally separate from the Guided Drills so that success demonstrates transfer rather than memorisation.'
  };
 }
-
 const C_MODULE_ENRICHMENT={
   1:{lessons:[
    {level:'Foundation',title:'From problem statement to C program',teach:'Start with the requirement, identify inputs, processing and outputs, then map each step to C syntax. Keep identifiers meaningful and compile after small changes.',example:'For a marks-total problem, identify three integer inputs, add them, and print the total before writing the complete program.',code:'#include <stdio.h>\\nint main(void){\\n int a,b;\\n scanf("%d%d",&a,&b);\\n printf("%d",a+b);\\n return 0;\\n}',check:'What are the input, process and output in this program?'},
