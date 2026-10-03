@@ -1510,12 +1510,52 @@ async function scoreIntegratedSpeaking(task,target,transcript){
  }
 }
 
+
+function estimateWavIntonation(wavBytes){
+  try{
+    if(!Buffer.isBuffer(wavBytes)||wavBytes.length<44) return {direction:'unknown',matchScore:null};
+    const channels=wavBytes.readUInt16LE(22),sampleRate=wavBytes.readUInt32LE(24),bits=wavBytes.readUInt16LE(34);
+    if(channels!==1||bits!==16) return {direction:'unknown',matchScore:null};
+    let dataOffset=12,dataSize=0;
+    while(dataOffset+8<=wavBytes.length){
+      const id=wavBytes.toString('ascii',dataOffset,dataOffset+4),size=wavBytes.readUInt32LE(dataOffset+4);
+      if(id==='data'){dataOffset+=8;dataSize=Math.min(size,wavBytes.length-dataOffset);break;}
+      dataOffset+=8+size+(size%2);
+    }
+    if(!dataSize) return {direction:'unknown',matchScore:null};
+    const pcm=new Int16Array(dataSize/2);
+    for(let i=0;i<pcm.length;i++) pcm[i]=wavBytes.readInt16LE(dataOffset+i*2);
+    const frame=Math.max(240,Math.round(sampleRate*0.03)), step=Math.max(120,Math.round(sampleRate*0.015)), f0=[];
+    for(let start=0;start+frame<=pcm.length;start+=step){
+      let energy=0; for(let i=0;i<frame;i++){const x=pcm[start+i]/32768;energy+=x*x;}
+      if(energy<0.00005) continue;
+      let bestLag=0,best=-1;
+      const minLag=Math.max(1,Math.floor(sampleRate/300)),maxLag=Math.min(Math.floor(sampleRate/70),frame-2);
+      for(let lag=minLag;lag<=maxLag;lag++){
+        let sum=0,e1=0,e2=0;
+        for(let i=0;i<frame-lag;i++){const a=pcm[start+i],b=pcm[start+i+lag];sum+=a*b;e1+=a*a;e2+=b*b;}
+        const corr=sum/Math.sqrt((e1||1)*(e2||1));
+        if(corr>best){best=corr;bestLag=lag;}
+      }
+      if(best>0.45&&bestLag) f0.push(sampleRate/bestLag);
+    }
+    if(f0.length<4) return {direction:'unknown',matchScore:null};
+    const sorted=[...f0].sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)];
+    const q=n=>f0.slice(Math.floor(f0.length*n[0]),Math.max(Math.floor(f0.length*n[1]),Math.floor(f0.length*n[0])+1));
+    const med=a=>{const z=a.filter(Number.isFinite).sort((x,y)=>x-y);return z.length?z[Math.floor(z.length/2)]:median;};
+    const start=med(q([0,0.35])),finish=med(q([0.65,1])),ratio=(finish-start)/Math.max(1,start);
+    const direction=ratio>0.08?'rising':ratio<-0.08?'falling':'flat';
+    return {direction,matchScore:Math.round(Math.max(0,Math.min(100,50+Math.abs(ratio)*500)))};
+  }catch(e){return {direction:'unknown',matchScore:null};}
+}
+
 export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async request => {
  const a=requireAuth(request);
  const taskType=cleanText(request.data?.taskType,40);
  const target=cleanText(request.data?.target,1000);
  const audioBase64=String(request.data?.audioBase64||'');
  const mimeType=cleanText(request.data?.mimeType||'audio/wav',80);
+ const intonationTarget=cleanText(request.data?.intonation||'',20).toLowerCase();
  if(!COMMUNICATION_TASKS[taskType] || !target || !audioBase64) throw new HttpsError('invalid-argument','Task type, target and recording are required.');
  const bytes=Buffer.from(audioBase64,'base64');
  if(!bytes.length || bytes.length>SPEECH_CONFIG.maxAudioBytes) throw new HttpsError('invalid-argument','Audio file is missing or too large.');
@@ -1529,6 +1569,7 @@ export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async r
  await recordingFile.save(bytes,{contentType:'audio/wav',metadata:{metadata:{uid:a.uid,taskType,target}}});
 
  let result={};
+ const intonation=estimateWavIntonation(bytes);
  if(taskType==='pronunciation'){
    result=await azurePronunciationAssessment(bytes,target);
    result.score=result.pronunciationScore;
@@ -1545,7 +1586,7 @@ export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async r
  const score=Math.max(0,Math.min(100,Math.round(Number(result.score)||0)));
  const xp=score>=80?COMMUNICATION_TASKS[taskType].xp:score>=60?Math.round(COMMUNICATION_TASKS[taskType].xp*.5):0;
  await db.collection('communicationSpeechAttempts').add({
-   uid:a.uid,taskType,target,transcript:result.transcript||'',score,xp,recordingPath,
+   uid:a.uid,taskType,target,transcript:result.transcript||'',score,xp,recordingPath,intonationTarget,detectedIntonation:intonation.direction,intonationMatchScore:intonation.matchScore,
    pronunciation:taskType==='pronunciation'?{accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words}:null,
    rubric:taskType==='listeningSpeaking'?{relevance:result.relevance,organisation:result.organisation,vocabulary:result.vocabulary,grammar:result.grammar}:null,
    createdAt:FieldValue.serverTimestamp()
@@ -1563,7 +1604,7 @@ export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async r
    taskType,target,transcript:result.transcript||'',score,xp,
    accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,
    relevance:result.relevance,organisation:result.organisation,vocabulary:result.vocabulary,grammar:result.grammar,
-   words:result.words||[],feedback:result.feedback||(score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the areas marked for improvement.':'Keep practising and record again with clearer, more complete speech.')
+   words:result.words||[],intonationTarget,detectedIntonation:intonation.direction,intonationMatchScore:intonation.matchScore,feedback:result.feedback||(score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the areas marked for improvement.':'Keep practising and record again with clearer, more complete speech.')
  };
 });
 
@@ -1585,7 +1626,7 @@ export const getCommunicationSpeechAttempts = onCall({cors:CALLABLE_CORS},async 
        recordingUrl=url;
      }catch(e){ logger.warn('Could not sign communication recording',e); }
    }
-   items.push({id:doc.id,uid:d.uid,taskType:d.taskType,target:d.target,transcript:d.transcript||'',score:Number(d.score||0),xp:Number(d.xp||0),pronunciation:d.pronunciation||null,rubric:d.rubric||null,recordingUrl,createdAt:d.createdAt?.toDate?.()?.toISOString?.()||null});
+   items.push({id:doc.id,uid:d.uid,taskType:d.taskType,target:d.target,transcript:d.transcript||'',score:Number(d.score||0),xp:Number(d.xp||0),pronunciation:d.pronunciation||null,rubric:d.rubric||null,intonationTarget:d.intonationTarget||'',detectedIntonation:d.detectedIntonation||'unknown',intonationMatchScore:d.intonationMatchScore??null,recordingUrl,createdAt:d.createdAt?.toDate?.()?.toISOString?.()||null});
  }
  return {items};
 });
