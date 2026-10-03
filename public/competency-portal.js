@@ -559,6 +559,33 @@ const C_MODULE_ENRICHMENT={
  ]}
 };
 Object.keys(C_MODULE_ENRICHMENT).forEach(k=>Object.assign(C_MODULES[Number(k)-1],C_MODULE_ENRICHMENT[k]));
+
+function normaliseCModules(){
+ C_MODULES.forEach((m,i)=>{
+   const n=i+1,prefix='c-programming-D'+n+'-';
+   const oldMaterials=Array.isArray(m.materials)?m.materials:[];
+   const oldDrills=Array.isArray(m.drills)?m.drills:[];
+   const oldPractice=Array.isArray(m.practice)?m.practice:[];
+   m.learningOutcomeMap=[
+     {id:prefix+'LO1',text:'Explain the core '+m.title+' concepts and terminology.'},
+     {id:prefix+'LO2',text:'Apply '+m.title+' techniques in a guided C example.'},
+     {id:prefix+'LO3',text:'Trace, diagnose or correct a C implementation involving '+m.title+'.'},
+     {id:prefix+'LO4',text:'Verify a C solution using tests, constraints and expected behaviour.'},
+     {id:prefix+'LO5',text:'Transfer '+m.title+' knowledge to a new engineering programming task.'}
+   ];
+   m.learningOutcomes=m.learningOutcomeMap.map(x=>x.text);
+   m.materials=oldMaterials.slice(0,5).map((x,j)=>({id:prefix+'MAT'+(j+1),title:'Material '+(j+1),body:String(x)}));
+   while(m.materials.length<5) m.materials.push({id:prefix+'MAT'+(m.materials.length+1),title:'Material '+(m.materials.length+1),body:'Review the worked examples and notes for '+m.title+', then reproduce the method without looking at the answer.'});
+   m.drills=oldDrills.slice(0,5).map((x,j)=>({id:prefix+'DR'+(j+1),category:'Guided Drill '+(j+1),prompt:String(x),learningOutcomeId:prefix+'LO'+(j+1),materialId:prefix+'MAT'+(j+1),ladderLevel:Math.min(5,j+1),explanation:'Use the linked material first, then explain why the chosen C construct or reasoning step works.'}));
+   while(m.drills.length<5) m.drills.push({id:prefix+'DR'+(m.drills.length+1),category:'Guided Drill '+(m.drills.length+1),prompt:'Apply '+m.title+' to a new small C example and explain each step.',learningOutcomeId:prefix+'LO'+(m.drills.length+1),materialId:prefix+'MAT'+(m.drills.length+1),ladderLevel:m.drills.length+1,explanation:'The drill reinforces the corresponding material before independent practice.'});
+   m.practiceTasks=oldPractice.slice(0,5).map((x,j)=>({id:prefix+'PR'+(j+1),title:String(x),kind:'mcq',prompt:'Complete this '+m.title+' practice level by explaining the method, applying it to a new case and checking the result.',options:['Use the linked method and verify the result','Copy the worked answer without checking','Ignore the stated conditions','Choose a random C construct'],answer:0,hint:'Revisit the linked material and Guided Drill before retrying.',explanation:'Practice should progress from understanding to application, verification, diagnosis and transfer.',ladderLevel:j+1,learningOutcomeId:prefix+'LO'+(j+1),materialId:prefix+'MAT'+(j+1),guidedDrillId:prefix+'DR'+(j+1)}));
+   m.practiceTasks.push(...Array.from({length:Math.max(0,5-m.practiceTasks.length)},(_,j)=>({id:prefix+'PR'+(m.practiceTasks.length+j+1),title:'Level '+(m.practiceTasks.length+j+1)+' · Transfer',kind:'mcq',prompt:'Apply '+m.title+' in a new C situation and verify your result.',options:['Adapt the method and test it','Copy the example unchanged','Skip testing','Ignore constraints'],answer:0,hint:'Change one condition, solve, then test.',explanation:'The highest practice levels require independent transfer and verification.',ladderLevel:m.practiceTasks.length+j+1,learningOutcomeId:prefix+'LO'+(m.practiceTasks.length+j+1),materialId:prefix+'MAT'+(m.practiceTasks.length+j+1),guidedDrillId:prefix+'DR'+(m.practiceTasks.length+j+1)})));
+   m.scope=m.scope||'Build '+m.title+' capability through taught concepts, guided practice, verification and transfer.';
+   m.challenge=m.challenge||'Apply '+m.title+' to a new C programming problem, test normal and boundary cases, and explain the design.';
+   m.assessment=m.assessment||'The final assessment measures the same taught outcomes in new contexts.';
+ });
+}
+normaliseCModules();
 function decodeCode(value){return String(value??'').replace(/\\n/g,'\n');}
 function drillState(title){
  const key='fxecDrillState:'+String(title||'module').replace(/[^a-z0-9]+/gi,'-').toLowerCase();
