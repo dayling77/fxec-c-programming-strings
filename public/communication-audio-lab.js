@@ -106,6 +106,7 @@ export function wireCommunicationAudioLab(root){
           d.fluencyScore!=null?'<span>Fluency '+Number(d.fluencyScore)+'</span>':'',
           d.completenessScore!=null?'<span>Completeness '+Number(d.completenessScore)+'</span>':'',
           d.prosodyScore!=null?'<span>Prosody '+Number(d.prosodyScore)+'</span>':'',
+          d.intonationTarget?'<span>Target '+esc(d.intonationTarget)+' · detected '+esc(d.detectedIntonation||'unknown')+(d.intonationMatchScore!=null?' ('+Number(d.intonationMatchScore)+'/100)':'')+'</span>':'',
           d.xp?'<span>+'+Number(d.xp)+' XP</span>':''
         ].join('');
         result.innerHTML='<div class="speechScoreCard"><div class="speechScoreMetrics">'+metrics+'</div><p><b>Recognised speech:</b> '+esc(d.transcript||'(not recognised)')+'</p><p>'+esc(d.feedback||'Assessment complete.')+'</p></div>';
