@@ -1902,6 +1902,7 @@ export const processCompetencyGenerationJob = onDocumentCreated(
     const day=Number(job.day||0);
     const runId=String(job.runId||'');
     const runRef=runId?db.collection('competencyGenerationRuns').doc(runId):null;
+    const runKey=trackId+'_D'+day;
     try{
       const questions=await generateHighStandardCompetencyDay(trackId,day);
       if(!Array.isArray(questions)||questions.length!==50) throw new Error('Generated module did not contain exactly 50 questions.');
@@ -1940,12 +1941,12 @@ export const processCompetencyGenerationJob = onDocumentCreated(
           const completed=Number(run.completed||0)+1;
           const finished=Number(run.finished||0)+1;
           const patch={
-            ['modules.'+day]:'completed',
+            ['modules.'+runKey]:'completed',
             completed,
             finished,
             updatedAt:FieldValue.serverTimestamp()
           };
-          if(finished>=10){
+          if(finished>=Number(run.totalModules||10)){
             patch.status=Object.keys(run.errors||{}).length?'completed-with-errors':'completed';
             patch.completedAt=FieldValue.serverTimestamp();
           }
@@ -1963,12 +1964,12 @@ export const processCompetencyGenerationJob = onDocumentCreated(
           const run=snap.data()||{};
           const finished=Number(run.finished||0)+1;
           const patch={
-            ['modules.'+day]:'failed',
-            ['errors.'+day]:message,
+            ['modules.'+runKey]:'failed',
+            ['errors.'+runKey]:message,
             finished,
             updatedAt:FieldValue.serverTimestamp()
           };
-          if(finished>=10){
+          if(finished>=Number(run.totalModules||10)){
             patch.status='completed-with-errors';
             patch.completedAt=FieldValue.serverTimestamp();
           }
@@ -1999,6 +2000,33 @@ export const startCompetencyAssessmentGeneration = onCall(
     }
     await batch.commit();
     return {success:true,runId,trackId,totalModules:10,message:'Generation started. Ten module jobs are running independently; the page can be refreshed without losing progress.'};
+  }
+);
+
+export const startCompetencyMasterBankGeneration = onCall(
+  {cors:CALLABLE_CORS},
+  async request=>{
+    const adminUser=requireAdmin(request);
+    const tracks=Object.keys(COMPETENCY_ASSESSMENT_TRACKS);
+    const runId='MASTER_'+Date.now()+'_'+randomUUID().slice(0,8);
+    const modules={};
+    for(const trackId of tracks) for(let day=1;day<=10;day++) modules[trackId+'_D'+day]='queued';
+    const totalModules=tracks.length*10;
+    await db.collection('competencyGenerationRuns').doc(runId).set({
+      runId,kind:'master-bank',status:'running',totalModules,completed:0,finished:0,
+      modules,errors:{},trackIds:tracks,
+      startedAt:FieldValue.serverTimestamp(),startedBy:adminUser.uid
+    });
+    const batch=db.batch();
+    for(const trackId of tracks) for(let day=1;day<=10;day++){
+      const jobRef=db.collection('competencyGenerationJobs').doc(runId+'_'+trackId+'_D'+day);
+      batch.set(jobRef,{runId,trackId,day,adminUid:adminUser.uid,status:'queued',createdAt:FieldValue.serverTimestamp(),kind:'master-bank'});
+    }
+    await batch.commit();
+    return {
+      success:true,runId,kind:'master-bank',totalTracks:tracks.length,totalModules,
+      message:'Master bank generation started: 6 tracks × 10 modules × 50 questions = 3,000 validated questions.'
+    };
   }
 );
 
