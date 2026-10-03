@@ -432,13 +432,28 @@ function buildGenericActivities(trackKey,moduleNo,title,b){
  ];
  return {
   drills:drills.map((q,i)=>({...q,id:trackKey+'-D'+moduleNo+'-DR'+(i+1),audio:(i===1||i===4)&&!!b.audio,audioText:(i===1||i===4)&&!!b.audio?q.prompt:''})),
-  practice:drills.map((q,i)=>({
-    id:trackKey+'-D'+moduleNo+'-PR'+(i+1),
-    title:['Level 1 · Understand','Level 2 · Guided Application','Level 3 · Verify','Level 4 · Diagnose','Level 5 · Transfer'][i],
-    kind:'mcq',prompt:q.prompt,options:q.options,answer:q.answer,hint:q.explanation,
-    explanation:q.explanation,activityType:(i===1||i===4)&&!!b.audio?'listening':'mcq',
-    audioText:(i===1||i===4)&&!!b.audio?q.prompt:''
-  }))
+  practice:[
+   {id:trackKey+'-D'+moduleNo+'-PR1',title:'Level 1 · Reconstruct the idea',kind:'mcq',
+    prompt:'Without looking back at the notes, which explanation would you give to another student about '+title+'?',
+    options:[focus,'It is mainly a collection of facts to memorise.','It is solved by ignoring the context.','It has no need for verification.'],answer:0,
+    hint:'Reconstruct the central idea in your own words before moving to application.',explanation:'Level 1 checks whether the learner can reconstruct the concept, not merely recognise a familiar phrase.'},
+   {id:trackKey+'-D'+moduleNo+'-PR2',title:'Level 2 · Apply to a new case',kind:'mcq',
+    prompt:'A new situation differs from the worked example. What should you compare before choosing a method?',
+    options:['The requirement, conditions and relevant evidence','Only the numerical values','Only the wording of the example','The answer remembered from the drill'],answer:0,
+    hint:'Identify what is the same and what has changed.',explanation:'Application requires mapping the new situation to the underlying concept and checking the conditions under which it is valid.'},
+   {id:trackKey+'-D'+moduleNo+'-PR3',title:'Level 3 · Verify the result',kind:'mcq',
+    prompt:'You have produced an answer for '+title+'. Which verification step is most useful?',
+    options:['Check it against the stated constraints, evidence or success criterion','Submit it immediately','Change the method without checking','Assume the first result is correct'],answer:0,
+    hint:'Use an independent check rather than repeating the same assumption.',explanation:'Verification turns a plausible answer into a defensible one by comparing it with the conditions and evidence.'},
+   {id:trackKey+'-D'+moduleNo+'-PR4',title:'Level 4 · Diagnose a failure',kind:'mcq',
+    prompt:'Your solution works for the worked example but fails on a new case. What should you do first?',
+    options:['Reproduce the failure with a small controlled case and identify which assumption breaks','Rewrite everything immediately','Ignore the failed case','Change several variables at once'],answer:0,
+    hint:'Isolate the smallest condition that separates the successful and failed cases.',explanation:'Diagnosis requires controlled comparison so that the learner can identify the cause rather than guessing.'},
+   {id:trackKey+'-D'+moduleNo+'-PR5',title:'Level 5 · Transfer challenge',kind:'mcq',
+    prompt:'Which response demonstrates independent mastery of '+title+'?',
+    options:['Adapt the underlying method to a genuinely new situation, justify the decisions and verify the result','Repeat the worked example word for word','Choose an answer without explaining it','Use a memorised shortcut even when conditions differ'],answer:0,
+    hint:'Transfer is demonstrated when the method survives a change of context.',explanation:'The highest level requires adaptation, justification and verification in a new situation rather than recall.'}
+  ].map((q,i)=>({...q,activityType:(i===1||i===4)&&!!b.audio?'listening':'mcq',audioText:(i===1||i===4)&&!!b.audio?q.prompt:''}))
  };
 }
 function genericModule(title,trackTitle,no){
@@ -764,7 +779,7 @@ function moduleView(track,data,no,programme){
  return '<section class="moduleLearningWorkspace">'+
  '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
  '<div class="moduleFlowBanner"><strong>MODULE LEARNING FLOW</strong><span>01 Topic</span><i>→</i><span>02 Materials</span><i>→</i><span>03 Drills</span><i>→</i><span>04 Practice</span><i>→</i><span>05 Challenge</span><i>→</i><span>06 Final Assessment · '+assessmentCount+' Questions</span></div>'+
- '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · MODULE TOPIC</span><h4>What you will learn</h4><p class="moduleScopeText">'+esc(data.scope)+'</p><ul class="scopeList">'+topicHtml+'</ul></section>'+
+ '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · MODULE TOPIC</span><h4>What you will learn</h4><p class="moduleScopeText">'+esc(data.scope)+'</p><ul class="scopeList">'+topicHtml+'</ul><div class="learningOutcomes"><b>By the end of this module, you should be able to:</b><ol>'+(data.learningOutcomes||[]).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div></section>'+
  '<section class="learningSection"><span class="sectionEyebrow">02 · MATERIALS</span><h4>Study Materials</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it → complete the micro-check.</p>'+materialHtml+'</section>'+communicationAudio+
  '<section class="learningSection"><span class="sectionEyebrow">03 · GUIDED DRILLS</span><h4>Practise like a game</h4><p>Complete the guided missions here. ⭐ Stars belong to drills only.</p><div class="drillGrid">'+drillHtml+'</div></section>'+
  '<section class="learningSection"><span class="sectionEyebrow">04 · PRACTICE</span><h4>Practice Ladder · Levels 1–5</h4><p>Build independence step by step. Practice progress is separate from Drill Stars.</p><div class="practiceLadder">'+practiceHtml+'</div>'+codingHtml+'</section>'+
