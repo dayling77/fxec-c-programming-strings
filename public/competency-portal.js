@@ -5,6 +5,7 @@ import { C_COMPETITIVE_META_BY_ID } from './c-competitive-coding-meta.js';
 import { COMMUNICATION_MODULES } from './communication-curriculum.js';
 import { renderCommunicationAudioLab, wireCommunicationAudioLab } from './communication-audio-lab.js';
 import { FIRST_YEAR_MODULE_CONTENT } from './first-year-module-content.js';
+import { COMMUNICATION_LEARNING_CONTENT } from './communication-learning-content.js';
 
 const fxecApp=getApps().length?getApp():initializeApp(window.FXEC_FIREBASE_CONFIG);
 const functions=getFunctions(fxecApp,'us-central1');
@@ -407,12 +408,13 @@ function buildGenericActivities(trackKey,moduleNo,title,b){
 
 function genericModule(title,trackTitle,no){
  const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
- const source=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):(GENERIC_MODULE_BLUEPRINTS[trackKey]?.[no-1]||{});
- const canonicalTitle=source.title||title;
- const topics=source.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
- const focus=source.focus||'Build the core skill step by step, with repeated practice before moving to application.';
- const example=source.example||'Apply '+canonicalTitle+' to a realistic first-year engineering situation.';
- const activities=buildGenericActivities(trackKey,no,canonicalTitle,source);
+ const catalogue=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):(FIRST_YEAR_MODULE_CONTENT[trackKey]?.[no-1]||GENERIC_MODULE_BLUEPRINTS[trackKey]?.[no-1]||{});
+ const custom=trackKey==='communication'?(COMMUNICATION_LEARNING_CONTENT[no-1]||{}):{};
+ const canonicalTitle=catalogue.title||title;
+ const topics=catalogue.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
+ const focus=catalogue.focus||'Build the core skill step by step, with repeated practice before moving to application.';
+ const example=catalogue.example||'Apply '+canonicalTitle+' to a realistic first-year engineering situation.';
+ const activities=buildGenericActivities(trackKey,no,canonicalTitle,catalogue);
  const modulePrefix=trackKey+'-D'+no+'-';
  const outcomes=[
    {id:modulePrefix+'LO1',text:'Explain the core idea of '+canonicalTitle+' in your own words.'},
@@ -421,7 +423,7 @@ function genericModule(title,trackTitle,no){
    {id:modulePrefix+'LO4',text:'Verify an answer using evidence, constraints or a success criterion.'},
    {id:modulePrefix+'LO5',text:'Transfer the skill to a new first-year engineering situation.'}
  ];
- const lessons=topics.map((topic,i)=>({
+ const fallbackLessons=topics.map((topic,i)=>({
    level:i<2?'Foundation':i<4?'Application':'Transfer',
    title:topic,
    teach:i===0
@@ -437,21 +439,23 @@ function genericModule(title,trackTitle,no){
    code:'',
    check:'Can you explain '+topic+', apply it without the notes, and state how you would verify the result?'
  }));
- const materials=[
+ const lessons=(custom.lessons||fallbackLessons).map((x,i)=>({...x,level:x.level||'Application'}));
+ const drills=(custom.drills||activities.drills).map((x,i)=>({...x,id:x.id||modulePrefix+'DR'+(i+1),learningOutcomeId:x.learningOutcomeId||modulePrefix+'LO'+(i+1),materialId:x.materialId||modulePrefix+'MAT'+(i+1),guidedDrillId:x.guidedDrillId||modulePrefix+'DR'+(i+1),ladderLevel:x.ladderLevel||i+1}));
+ const practiceTasks=(custom.practice||activities.practice).map((x,i)=>({...x,id:x.id||modulePrefix+'PR'+(i+1),ladderLevel:x.ladderLevel||i+1,learningOutcomeId:x.learningOutcomeId||modulePrefix+'LO'+(i+1),materialId:x.materialId||modulePrefix+'MAT'+(i+1),guidedDrillId:x.guidedDrillId||modulePrefix+'DR'+(i+1)}));
+ const materials=custom.materials||[
    {id:modulePrefix+'MAT1',title:'Core concept — what it is and why it matters',body:focus+' Start by defining the skill in your own words. In first-year engineering, use it when the stated task requires this kind of reasoning. Before calculating or deciding, ask: What is the requirement? What information is relevant? What conditions make the method valid?'},
    {id:modulePrefix+'MAT2',title:'Key ideas — the five parts of the skill',body:topics.map((x,i)=>(i+1)+'. '+x+': identify what this part means, what evidence would show that you have applied it correctly, and how it connects to the other parts of the module.').join(' ' )},
-   {id:modulePrefix+'MAT3',title:'Worked example — think before you answer',body:'Worked example: '+example+' Method: (1) state the requirement, (2) identify the relevant '+topics[0]||canonicalTitle+', (3) apply the appropriate reasoning step by step, (4) check the result against the context, and (5) explain why the result is defensible.'},
+   {id:modulePrefix+'MAT3',title:'Worked example — think before you answer',body:'Worked example: '+example+' Method: (1) state the requirement, (2) identify the relevant '+topics[0]+', (3) apply the appropriate reasoning step by step, (4) check the result against the context, and (5) explain why the result is defensible.'},
    {id:modulePrefix+'MAT4',title:'Common errors — diagnose before changing the method',body:'Typical failure pattern: applying a familiar rule without checking its conditions. To diagnose an error, reproduce the case, identify the exact step where the reasoning changes, compare the successful and failed cases, then change one assumption or step at a time. Check units, evidence, constraints and boundary cases where relevant.'},
    {id:modulePrefix+'MAT5',title:'Mastery check — explain, apply, verify, transfer',body:'Close the notes. Explain '+canonicalTitle+' in 30 seconds, solve a new example, verify the result independently, then describe one situation where the method would not be appropriate. Only after this check should you attempt the Guided Drills and Practice Ladder.'}
  ];
  return {
-  id:no,title:canonicalTitle,scope:focus,topics,
-  learningOutcomes:outcomes.map(x=>x.text),learningOutcomeMap:outcomes,
+  id:no,title:canonicalTitle,scope:custom.scope||focus,topics,
+  learningOutcomes:custom.learningOutcomes||outcomes.map(x=>x.text),learningOutcomeMap:outcomes,
   materials,lessons,
-  drills:activities.drills.map((x,i)=>({...x,id:x.id||modulePrefix+'DR'+(i+1),learningOutcomeId:modulePrefix+'LO'+(i+1),materialId:modulePrefix+'MAT'+(i+1)})),
-  practiceTasks:activities.practice.map((x,i)=>({...x,id:x.id||modulePrefix+'PR'+(i+1),ladderLevel:i+1,learningOutcomeId:modulePrefix+'LO'+(i+1),materialId:modulePrefix+'MAT'+(i+1),guidedDrillId:modulePrefix+'DR'+(i+1)})),example,
-  audio:!!source.audio,speechTasks:source.speechTasks||[],
-  challenge:'Transfer challenge: solve a new '+canonicalTitle+' situation without copying the worked example. State the requirement, identify the relevant concept, show the important reasoning, test one boundary or alternative, and justify the final result.',
+  drills,practiceTasks,example,
+  audio:!!catalogue.audio,speechTasks:catalogue.speechTasks||[],
+  challenge:custom.challenge||'Transfer challenge: solve a new '+canonicalTitle+' situation without copying the worked example. State the requirement, identify the relevant concept, show the important reasoning, test one boundary or alternative, and justify the final result.',
   assessment:'The formal assessment measures the same learning outcomes in new contexts. It is intentionally separate from the Guided Drills so that success demonstrates transfer rather than memorisation.'
  };
 }
