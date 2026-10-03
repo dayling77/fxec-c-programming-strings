@@ -6,15 +6,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 01: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -24,15 +24,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -42,15 +42,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -60,15 +60,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 04: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -78,15 +78,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -96,15 +96,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 06: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -114,15 +114,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -132,15 +132,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -150,15 +150,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 09: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -168,15 +168,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -186,15 +186,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 11: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -204,15 +204,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -222,15 +222,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -240,15 +240,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 14: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -258,15 +258,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -276,15 +276,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 16: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -294,15 +294,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -312,15 +312,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -330,15 +330,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 19: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -348,15 +348,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -366,15 +366,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 21: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -384,15 +384,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -402,15 +402,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -420,15 +420,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 24: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -438,15 +438,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -456,15 +456,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 26: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -474,15 +474,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -492,15 +492,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -510,15 +510,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 29: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -528,15 +528,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -546,15 +546,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 31: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -564,15 +564,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -582,15 +582,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -600,15 +600,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 34: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -618,15 +618,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -636,15 +636,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 36: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -654,15 +654,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -672,15 +672,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -690,15 +690,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 39: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -708,15 +708,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -726,15 +726,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 41: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -744,15 +744,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -762,15 +762,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -780,15 +780,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 44: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -798,15 +798,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -816,15 +816,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "An engineering student is reviewing a Number Sense & Estimation task. Which action should be taken first to apply engineering estimation effectively?",
+    "prompt": "Case 46: During a Number Sense & Estimation task, a student must choose an approach before proceeding. Which choice best applies engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "Choose the option with the largest numerical value without checking context",
+      "check units and order of magnitude before accepting a result",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check order of magnitude before trusting a result establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering estimation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -834,15 +834,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "A team obtains an unexpected result while working on Number Sense & Estimation. Which response is most consistent with engineering estimation?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Number Sense & Estimation. What response best reflects engineering estimation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering estimation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -852,15 +852,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "Which statement would be the most defensible conclusion about engineering estimation in an engineering report on Number Sense & Estimation?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Number Sense & Estimation when applying engineering estimation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -870,15 +870,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "A first-year engineering team must make a decision involving Number Sense & Estimation. Which choice best reflects engineering estimation?",
+    "prompt": "Case 49: An engineering student must make a decision involving Number Sense & Estimation. Which decision rule best represents engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
+      "check units and order of magnitude before accepting a result",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering estimation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering estimation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -888,15 +888,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Number Sense & Estimation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering estimation when working on Module 1 (Number Sense & Estimation)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Number Sense & Estimation exercise. Which action most directly demonstrates sound engineering estimation?",
     "options": [
-      "check order of magnitude before trusting a result",
-      "increase precision without checking units",
-      "ignore scale",
-      "round every input to zero"
+      "check units and order of magnitude before accepting a result",
+      "increase decimal places without checking scale",
+      "ignore units",
+      "treat every measurement as exact"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering estimation and supports defensible engineering work.",
+    "explanation": "The first option applies engineering estimation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -906,15 +906,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 01: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -924,15 +924,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -942,15 +942,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -960,15 +960,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 04: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -978,15 +978,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -996,15 +996,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 06: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1014,15 +1014,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1032,15 +1032,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1050,15 +1050,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 09: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1068,15 +1068,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1086,15 +1086,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 11: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1104,15 +1104,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1122,15 +1122,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1140,15 +1140,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 14: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1158,15 +1158,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1176,15 +1176,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 16: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1194,15 +1194,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1212,15 +1212,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1230,15 +1230,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 19: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1248,15 +1248,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1266,15 +1266,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 21: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1284,15 +1284,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1302,15 +1302,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1320,15 +1320,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 24: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1338,15 +1338,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1356,15 +1356,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 26: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1374,15 +1374,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1392,15 +1392,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1410,15 +1410,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 29: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1428,15 +1428,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1446,15 +1446,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 31: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1464,15 +1464,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1482,15 +1482,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1500,15 +1500,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 34: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1518,15 +1518,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1536,15 +1536,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 36: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1554,15 +1554,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1572,15 +1572,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1590,15 +1590,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 39: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1608,15 +1608,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1626,15 +1626,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 41: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1644,15 +1644,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1662,15 +1662,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1680,15 +1680,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 44: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1698,15 +1698,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1716,15 +1716,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "An engineering student is reviewing a Algebraic Reasoning task. Which action should be taken first to apply linear relation effectively?",
+    "prompt": "Case 46: During a Algebraic Reasoning task, a student must choose an approach before proceeding. Which choice best applies linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "Choose the option with the largest numerical value without checking context",
+      "apply equivalent operations to isolate the unknown",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with isolate the unknown using equivalent operations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on linear equations, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1734,15 +1734,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Algebraic Reasoning. Which response is most consistent with linear relation?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Algebraic Reasoning. What response best reflects linear equations?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to linear equations.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1752,15 +1752,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about linear relation in an engineering report on Algebraic Reasoning?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Algebraic Reasoning when applying linear equations?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1770,15 +1770,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Algebraic Reasoning. Which choice best reflects linear relation?",
+    "prompt": "Case 49: An engineering student must make a decision involving Algebraic Reasoning. Which decision rule best represents linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
+      "apply equivalent operations to isolate the unknown",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies linear relation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of linear equations.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1788,15 +1788,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algebraic Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound linear relation when working on Module 2 (Algebraic Reasoning)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Algebraic Reasoning exercise. Which action most directly demonstrates sound linear equations?",
     "options": [
-      "isolate the unknown using equivalent operations",
-      "change signs arbitrarily",
-      "divide by a variable without considering zero",
-      "combine unlike terms"
+      "apply equivalent operations to isolate the unknown",
+      "change one side without changing the other",
+      "combine unlike terms",
+      "divide by a variable without considering zero"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of linear relation and supports defensible engineering work.",
+    "explanation": "The first option applies linear equations directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1806,15 +1806,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 01: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1824,15 +1824,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1842,15 +1842,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1860,15 +1860,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 04: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1878,15 +1878,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1896,15 +1896,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 06: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1914,15 +1914,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1932,15 +1932,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1950,15 +1950,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 09: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1968,15 +1968,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1986,15 +1986,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 11: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2004,15 +2004,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2022,15 +2022,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2040,15 +2040,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 14: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2058,15 +2058,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2076,15 +2076,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 16: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2094,15 +2094,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2112,15 +2112,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2130,15 +2130,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 19: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2148,15 +2148,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2166,15 +2166,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 21: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2184,15 +2184,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2202,15 +2202,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2220,15 +2220,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 24: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2238,15 +2238,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2256,15 +2256,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 26: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2274,15 +2274,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2292,15 +2292,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2310,15 +2310,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 29: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2328,15 +2328,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2346,15 +2346,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 31: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2364,15 +2364,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2382,15 +2382,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2400,15 +2400,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 34: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2418,15 +2418,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2436,15 +2436,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 36: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2454,15 +2454,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2472,15 +2472,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2490,15 +2490,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 39: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2508,15 +2508,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2526,15 +2526,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 41: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2544,15 +2544,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2562,15 +2562,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2580,15 +2580,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 44: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2598,15 +2598,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2616,15 +2616,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "An engineering student is reviewing a Sequences & Patterns task. Which action should be taken first to apply sequence reasoning effectively?",
+    "prompt": "Case 46: During a Sequences & Patterns task, a student must choose an approach before proceeding. Which choice best applies sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "Choose the option with the largest numerical value without checking context",
+      "identify a rule and test it against several terms",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the rule generating successive terms establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sequence reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2634,15 +2634,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "A team obtains an unexpected result while working on Sequences & Patterns. Which response is most consistent with sequence reasoning?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Sequences & Patterns. What response best reflects sequence reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sequence reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2652,15 +2652,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "Which statement would be the most defensible conclusion about sequence reasoning in an engineering report on Sequences & Patterns?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Sequences & Patterns when applying sequence reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2670,15 +2670,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "A first-year engineering team must make a decision involving Sequences & Patterns. Which choice best reflects sequence reasoning?",
+    "prompt": "Case 49: An engineering student must make a decision involving Sequences & Patterns. Which decision rule best represents sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
+      "identify a rule and test it against several terms",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sequence reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sequence reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2688,15 +2688,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sequences & Patterns",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sequence reasoning when working on Module 3 (Sequences & Patterns)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Sequences & Patterns exercise. Which action most directly demonstrates sound sequence reasoning?",
     "options": [
-      "identify the rule generating successive terms",
-      "assume every sequence is arithmetic",
-      "use only the first two terms",
-      "ignore repeated differences"
+      "identify a rule and test it against several terms",
+      "assume every sequence has constant difference",
+      "use only two terms as proof",
+      "ignore a contradictory term"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sequence reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies sequence reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2706,15 +2706,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 01: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2724,15 +2724,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2742,15 +2742,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2760,15 +2760,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 04: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2778,15 +2778,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2796,15 +2796,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 06: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2814,15 +2814,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2832,15 +2832,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2850,15 +2850,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 09: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2868,15 +2868,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2886,15 +2886,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 11: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2904,15 +2904,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2922,15 +2922,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2940,15 +2940,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 14: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2958,15 +2958,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2976,15 +2976,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 16: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2994,15 +2994,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3012,15 +3012,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3030,15 +3030,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 19: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3048,15 +3048,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3066,15 +3066,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 21: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3084,15 +3084,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3102,15 +3102,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3120,15 +3120,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 24: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3138,15 +3138,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3156,15 +3156,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 26: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3174,15 +3174,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3192,15 +3192,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3210,15 +3210,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 29: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3228,15 +3228,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3246,15 +3246,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 31: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3264,15 +3264,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3282,15 +3282,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3300,15 +3300,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 34: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3318,15 +3318,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3336,15 +3336,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 36: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3354,15 +3354,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3372,15 +3372,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3390,15 +3390,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 39: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3408,15 +3408,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3426,15 +3426,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 41: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3444,15 +3444,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3462,15 +3462,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3480,15 +3480,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 44: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3498,15 +3498,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3516,15 +3516,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "An engineering student is reviewing a Ratio, Proportion & Variation task. Which action should be taken first to apply proportional reasoning effectively?",
+    "prompt": "Case 46: During a Ratio, Proportion & Variation task, a student must choose an approach before proceeding. Which choice best applies proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
-      "Choose the option with the largest numerical value without checking context",
+      "preserve the defined ratio when quantities scale",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with keep the ratio consistent when scaling quantities establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on proportional reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3534,15 +3534,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A team obtains an unexpected result while working on Ratio, Proportion & Variation. Which response is most consistent with proportional reasoning?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Ratio, Proportion & Variation. What response best reflects proportional reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to proportional reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3552,15 +3552,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "Which statement would be the most defensible conclusion about proportional reasoning in an engineering report on Ratio, Proportion & Variation?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Ratio, Proportion & Variation when applying proportional reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3570,15 +3570,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "A first-year engineering team must make a decision involving Ratio, Proportion & Variation. Which choice best reflects proportional reasoning?",
+    "prompt": "Case 49: An engineering student must make a decision involving Ratio, Proportion & Variation. Which decision rule best represents proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies proportional reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of proportional reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3588,15 +3588,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ratio, Proportion & Variation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound proportional reasoning when working on Module 4 (Ratio, Proportion & Variation)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Ratio, Proportion & Variation exercise. Which action most directly demonstrates sound proportional reasoning?",
     "options": [
-      "keep the ratio consistent when scaling quantities",
+      "preserve the defined ratio when quantities scale",
       "add the same amount to unrelated ratios",
-      "invert one quantity arbitrarily",
-      "ignore units"
+      "invert only one quantity",
+      "ignore units during scaling"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of proportional reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies proportional reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3606,15 +3606,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 01: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3624,15 +3624,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3642,15 +3642,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3660,15 +3660,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 04: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3678,15 +3678,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3696,15 +3696,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 06: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3714,15 +3714,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3732,15 +3732,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3750,15 +3750,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 09: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3768,15 +3768,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3786,15 +3786,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 11: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3804,15 +3804,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3822,15 +3822,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3840,15 +3840,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 14: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3858,15 +3858,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3876,15 +3876,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 16: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3894,15 +3894,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3912,15 +3912,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3930,15 +3930,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 19: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3948,15 +3948,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3966,15 +3966,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 21: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3984,15 +3984,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4002,15 +4002,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4020,15 +4020,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 24: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4038,15 +4038,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4056,15 +4056,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 26: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4074,15 +4074,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4092,15 +4092,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4110,15 +4110,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 29: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4128,15 +4128,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4146,15 +4146,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 31: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4164,15 +4164,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4182,15 +4182,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4200,15 +4200,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 34: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4218,15 +4218,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4236,15 +4236,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 36: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4254,15 +4254,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4272,15 +4272,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4290,15 +4290,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 39: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4308,15 +4308,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4326,15 +4326,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 41: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4344,15 +4344,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4362,15 +4362,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4380,15 +4380,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 44: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4398,15 +4398,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4416,15 +4416,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "An engineering student is reviewing a Data Interpretation task. Which action should be taken first to apply data interpretation effectively?",
+    "prompt": "Case 46: During a Data Interpretation task, a student must choose an approach before proceeding. Which choice best applies data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "Choose the option with the largest numerical value without checking context",
+      "read labels, units, scale and denominators before comparing values",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare values using the same scale and units establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data interpretation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4434,15 +4434,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "A team obtains an unexpected result while working on Data Interpretation. Which response is most consistent with data interpretation?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Data Interpretation. What response best reflects data interpretation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data interpretation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4452,15 +4452,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "Which statement would be the most defensible conclusion about data interpretation in an engineering report on Data Interpretation?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Data Interpretation when applying data interpretation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4470,15 +4470,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "A first-year engineering team must make a decision involving Data Interpretation. Which choice best reflects data interpretation?",
+    "prompt": "Case 49: An engineering student must make a decision involving Data Interpretation. Which decision rule best represents data interpretation?",
     "options": [
-      "compare values using the same scale and units",
+      "read labels, units, scale and denominators before comparing values",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data interpretation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data interpretation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4488,15 +4488,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Interpretation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data interpretation when working on Module 5 (Data Interpretation)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Data Interpretation exercise. Which action most directly demonstrates sound data interpretation?",
     "options": [
-      "compare values using the same scale and units",
-      "compare visual heights only",
-      "ignore the axis labels",
-      "mix percentages and counts"
+      "read labels, units, scale and denominators before comparing values",
+      "compare bar heights without axes",
+      "mix percentages with counts",
+      "ignore the time interval"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data interpretation and supports defensible engineering work.",
+    "explanation": "The first option applies data interpretation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4506,15 +4506,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 01: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4524,15 +4524,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4542,15 +4542,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4560,15 +4560,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 04: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4578,15 +4578,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4596,15 +4596,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 06: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4614,15 +4614,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4632,15 +4632,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4650,15 +4650,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 09: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4668,15 +4668,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4686,15 +4686,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 11: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4704,15 +4704,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4722,15 +4722,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4740,15 +4740,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 14: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4758,15 +4758,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4776,15 +4776,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 16: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4794,15 +4794,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4812,15 +4812,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4830,15 +4830,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 19: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4848,15 +4848,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4866,15 +4866,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 21: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4884,15 +4884,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4902,15 +4902,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4920,15 +4920,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 24: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4938,15 +4938,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4956,15 +4956,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 26: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4974,15 +4974,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4992,15 +4992,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5010,15 +5010,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 29: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5028,15 +5028,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5046,15 +5046,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 31: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5064,15 +5064,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5082,15 +5082,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5100,15 +5100,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 34: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5118,15 +5118,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5136,15 +5136,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 36: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5154,15 +5154,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5172,15 +5172,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5190,15 +5190,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 39: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5208,15 +5208,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5226,15 +5226,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 41: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5244,15 +5244,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5262,15 +5262,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5280,15 +5280,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 44: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5298,15 +5298,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5316,15 +5316,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "An engineering student is reviewing a Logical Reasoning task. Which action should be taken first to apply logical inference effectively?",
+    "prompt": "Case 46: During a Logical Reasoning task, a student must choose an approach before proceeding. Which choice best applies logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
-      "Choose the option with the largest numerical value without checking context",
+      "derive only conclusions supported by the stated premises",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with derive only what follows from the stated premises establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on logical inference, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5334,15 +5334,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Logical Reasoning. Which response is most consistent with logical inference?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Logical Reasoning. What response best reflects logical inference?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to logical inference.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5352,15 +5352,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about logical inference in an engineering report on Logical Reasoning?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Logical Reasoning when applying logical inference?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5370,15 +5370,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Logical Reasoning. Which choice best reflects logical inference?",
+    "prompt": "Case 49: An engineering student must make a decision involving Logical Reasoning. Which decision rule best represents logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies logical inference while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of logical inference.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5388,15 +5388,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Logical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound logical inference when working on Module 6 (Logical Reasoning)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Logical Reasoning exercise. Which action most directly demonstrates sound logical inference?",
     "options": [
-      "derive only what follows from the stated premises",
+      "derive only conclusions supported by the stated premises",
       "add an unstated premise",
       "treat possibility as certainty",
-      "reverse every implication"
+      "reverse an implication automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of logical inference and supports defensible engineering work.",
+    "explanation": "The first option applies logical inference directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5406,15 +5406,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 01: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5424,15 +5424,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5442,15 +5442,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5460,15 +5460,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 04: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5478,15 +5478,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5496,15 +5496,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 06: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5514,15 +5514,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5532,15 +5532,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5550,15 +5550,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 09: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5568,15 +5568,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5586,15 +5586,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 11: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5604,15 +5604,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5622,15 +5622,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5640,15 +5640,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 14: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5658,15 +5658,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5676,15 +5676,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 16: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5694,15 +5694,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5712,15 +5712,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5730,15 +5730,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 19: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5748,15 +5748,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5766,15 +5766,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 21: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5784,15 +5784,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5802,15 +5802,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5820,15 +5820,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 24: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5838,15 +5838,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5856,15 +5856,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 26: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5874,15 +5874,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5892,15 +5892,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5910,15 +5910,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 29: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5928,15 +5928,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5946,15 +5946,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 31: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5964,15 +5964,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5982,15 +5982,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6000,15 +6000,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 34: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6018,15 +6018,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6036,15 +6036,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 36: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6054,15 +6054,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6072,15 +6072,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6090,15 +6090,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 39: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6108,15 +6108,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6126,15 +6126,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 41: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6144,15 +6144,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6162,15 +6162,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6180,15 +6180,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 44: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6198,15 +6198,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6216,15 +6216,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "An engineering student is reviewing a Quantitative Word Problems task. Which action should be taken first to apply word-problem modelling effectively?",
+    "prompt": "Case 46: During a Quantitative Word Problems task, a student must choose an approach before proceeding. Which choice best applies word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "Choose the option with the largest numerical value without checking context",
+      "define variables, constraints and relationships before calculating",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define variables and translate conditions into equations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on word-problem modelling, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6234,15 +6234,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Word Problems. Which response is most consistent with word-problem modelling?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Quantitative Word Problems. What response best reflects word-problem modelling?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to word-problem modelling.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6252,15 +6252,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "Which statement would be the most defensible conclusion about word-problem modelling in an engineering report on Quantitative Word Problems?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Word Problems when applying word-problem modelling?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6270,15 +6270,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Word Problems. Which choice best reflects word-problem modelling?",
+    "prompt": "Case 49: An engineering student must make a decision involving Quantitative Word Problems. Which decision rule best represents word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
+      "define variables, constraints and relationships before calculating",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies word-problem modelling while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of word-problem modelling.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6288,15 +6288,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Word Problems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound word-problem modelling when working on Module 7 (Quantitative Word Problems)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Quantitative Word Problems exercise. Which action most directly demonstrates sound word-problem modelling?",
     "options": [
-      "define variables and translate conditions into equations",
-      "calculate before defining quantities",
-      "ignore constraints",
-      "use every number regardless of relevance"
+      "define variables, constraints and relationships before calculating",
+      "use every number regardless of relevance",
+      "calculate before identifying quantities",
+      "ignore limiting conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of word-problem modelling and supports defensible engineering work.",
+    "explanation": "The first option applies word-problem modelling directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6306,15 +6306,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 01: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6324,15 +6324,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6342,15 +6342,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6360,15 +6360,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 04: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6378,15 +6378,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6396,15 +6396,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 06: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6414,15 +6414,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6432,15 +6432,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6450,15 +6450,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 09: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6468,15 +6468,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6486,15 +6486,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 11: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6504,15 +6504,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6522,15 +6522,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6540,15 +6540,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 14: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6558,15 +6558,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6576,15 +6576,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 16: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6594,15 +6594,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6612,15 +6612,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6630,15 +6630,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 19: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6648,15 +6648,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6666,15 +6666,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 21: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6684,15 +6684,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6702,15 +6702,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6720,15 +6720,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 24: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6738,15 +6738,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6756,15 +6756,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 26: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6774,15 +6774,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6792,15 +6792,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6810,15 +6810,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 29: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6828,15 +6828,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6846,15 +6846,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 31: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6864,15 +6864,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6882,15 +6882,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6900,15 +6900,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 34: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6918,15 +6918,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6936,15 +6936,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 36: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6954,15 +6954,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6972,15 +6972,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6990,15 +6990,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 39: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7008,15 +7008,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7026,15 +7026,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 41: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7044,15 +7044,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7062,15 +7062,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7080,15 +7080,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 44: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7098,15 +7098,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7116,15 +7116,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "An engineering student is reviewing a Probability & Uncertainty Basics task. Which action should be taken first to apply probability effectively?",
+    "prompt": "Case 46: During a Probability & Uncertainty Basics task, a student must choose an approach before proceeding. Which choice best applies probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "Choose the option with the largest numerical value without checking context",
+      "define the sample space and count favourable outcomes consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with count favourable outcomes relative to the defined sample space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on probability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7134,15 +7134,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A team obtains an unexpected result while working on Probability & Uncertainty Basics. Which response is most consistent with probability?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Probability & Uncertainty Basics. What response best reflects probability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to probability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7152,15 +7152,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "Which statement would be the most defensible conclusion about probability in an engineering report on Probability & Uncertainty Basics?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Probability & Uncertainty Basics when applying probability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7170,15 +7170,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "A first-year engineering team must make a decision involving Probability & Uncertainty Basics. Which choice best reflects probability?",
+    "prompt": "Case 49: An engineering student must make a decision involving Probability & Uncertainty Basics. Which decision rule best represents probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
+      "define the sample space and count favourable outcomes consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies probability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of probability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7188,15 +7188,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Probability & Uncertainty Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound probability when working on Module 8 (Probability & Uncertainty Basics)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Probability & Uncertainty Basics exercise. Which action most directly demonstrates sound probability?",
     "options": [
-      "count favourable outcomes relative to the defined sample space",
-      "divide by any convenient number",
-      "assume independent events automatically",
-      "treat probability as a percentage without conversion"
+      "define the sample space and count favourable outcomes consistently",
+      "divide by a convenient number",
+      "assume independence without evidence",
+      "confuse probability with frequency"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of probability and supports defensible engineering work.",
+    "explanation": "The first option applies probability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7206,15 +7206,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 01: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7224,15 +7224,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7242,15 +7242,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7260,15 +7260,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 04: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7278,15 +7278,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7296,15 +7296,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 06: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7314,15 +7314,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7332,15 +7332,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7350,15 +7350,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 09: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7368,15 +7368,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7386,15 +7386,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 11: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7404,15 +7404,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7422,15 +7422,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7440,15 +7440,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 14: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7458,15 +7458,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7476,15 +7476,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 16: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7494,15 +7494,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7512,15 +7512,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7530,15 +7530,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 19: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7548,15 +7548,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7566,15 +7566,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 21: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7584,15 +7584,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7602,15 +7602,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7620,15 +7620,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 24: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7638,15 +7638,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7656,15 +7656,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 26: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7674,15 +7674,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7692,15 +7692,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7710,15 +7710,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 29: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7728,15 +7728,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7746,15 +7746,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 31: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7764,15 +7764,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7782,15 +7782,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7800,15 +7800,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 34: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7818,15 +7818,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7836,15 +7836,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 36: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7854,15 +7854,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7872,15 +7872,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7890,15 +7890,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 39: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7908,15 +7908,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7926,15 +7926,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 41: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7944,15 +7944,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7962,15 +7962,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7980,15 +7980,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 44: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7998,15 +7998,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8016,15 +8016,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "An engineering student is reviewing a Geometry & Spatial Reasoning task. Which action should be taken first to apply geometry effectively?",
+    "prompt": "Case 46: During a Geometry & Spatial Reasoning task, a student must choose an approach before proceeding. Which choice best applies geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "Choose the option with the largest numerical value without checking context",
+      "identify dimensions and select a formula matching the geometry",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify the relevant dimensions and geometric relationship establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on geometry, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8034,15 +8034,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Geometry & Spatial Reasoning. Which response is most consistent with geometry?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Geometry & Spatial Reasoning. What response best reflects geometry?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to geometry.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8052,15 +8052,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about geometry in an engineering report on Geometry & Spatial Reasoning?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Geometry & Spatial Reasoning when applying geometry?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8070,15 +8070,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Geometry & Spatial Reasoning. Which choice best reflects geometry?",
+    "prompt": "Case 49: An engineering student must make a decision involving Geometry & Spatial Reasoning. Which decision rule best represents geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
+      "identify dimensions and select a formula matching the geometry",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies geometry while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of geometry.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8088,15 +8088,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Geometry & Spatial Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound geometry when working on Module 9 (Geometry & Spatial Reasoning)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Geometry & Spatial Reasoning exercise. Which action most directly demonstrates sound geometry?",
     "options": [
-      "identify the relevant dimensions and geometric relationship",
-      "use a familiar formula without checking shape",
-      "ignore units",
-      "measure a diagram visually"
+      "identify dimensions and select a formula matching the geometry",
+      "use a memorised formula for a different shape",
+      "estimate from the drawing",
+      "ignore dimensional units"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of geometry and supports defensible engineering work.",
+    "explanation": "The first option applies geometry directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8106,15 +8106,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 01: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8124,15 +8124,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8142,15 +8142,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8160,15 +8160,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 04: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8178,15 +8178,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8196,15 +8196,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 06: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8214,15 +8214,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8232,15 +8232,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8250,15 +8250,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 09: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8268,15 +8268,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8286,15 +8286,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 11: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8304,15 +8304,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8322,15 +8322,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8340,15 +8340,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 14: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8358,15 +8358,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8376,15 +8376,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 16: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8394,15 +8394,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8412,15 +8412,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8430,15 +8430,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 19: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8448,15 +8448,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8466,15 +8466,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 21: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8484,15 +8484,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8502,15 +8502,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8520,15 +8520,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 24: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8538,15 +8538,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8556,15 +8556,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 26: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8574,15 +8574,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8592,15 +8592,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8610,15 +8610,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 29: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8628,15 +8628,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8646,15 +8646,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 31: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8664,15 +8664,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8682,15 +8682,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8700,15 +8700,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 34: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8718,15 +8718,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8736,15 +8736,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 36: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8754,15 +8754,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8772,15 +8772,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8790,15 +8790,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 39: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8808,15 +8808,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8826,15 +8826,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 41: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8844,15 +8844,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8862,15 +8862,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8880,15 +8880,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 44: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8898,15 +8898,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8916,15 +8916,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "An engineering student is reviewing a Quantitative Decision Making task. Which action should be taken first to apply quantitative decision making effectively?",
+    "prompt": "Case 46: During a Quantitative Decision Making task, a student must choose an approach before proceeding. Which choice best applies quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare alternatives using stated criteria and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on quantitative decisions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8934,15 +8934,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "A team obtains an unexpected result while working on Quantitative Decision Making. Which response is most consistent with quantitative decision making?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Quantitative Decision Making. What response best reflects quantitative decisions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to quantitative decisions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8952,15 +8952,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "Which statement would be the most defensible conclusion about quantitative decision making in an engineering report on Quantitative Decision Making?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Quantitative Decision Making when applying quantitative decisions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8970,15 +8970,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "A first-year engineering team must make a decision involving Quantitative Decision Making. Which choice best reflects quantitative decision making?",
+    "prompt": "Case 49: An engineering student must make a decision involving Quantitative Decision Making. Which decision rule best represents quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies quantitative decision making while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of quantitative decisions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8988,15 +8988,15 @@ export const PREPARED_APTITUDE_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Quantitative Decision Making",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound quantitative decision making when working on Module 10 (Quantitative Decision Making)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Quantitative Decision Making exercise. Which action most directly demonstrates sound quantitative decisions?",
     "options": [
-      "compare alternatives using stated criteria and constraints",
+      "compare alternatives against explicit criteria, constraints and trade-offs",
       "choose the largest number automatically",
-      "ignore trade-offs",
+      "ignore uncertainty",
       "use an unstated preference"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of quantitative decision making and supports defensible engineering work.",
+    "explanation": "The first option applies quantitative decisions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   }

@@ -6,15 +6,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 01: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -24,15 +24,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -42,15 +42,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -60,15 +60,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 04: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -78,15 +78,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -96,15 +96,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 06: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -114,15 +114,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -132,15 +132,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -150,15 +150,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 09: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -168,15 +168,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -186,15 +186,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 11: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -204,15 +204,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -222,15 +222,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -240,15 +240,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 14: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -258,15 +258,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -276,15 +276,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 16: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -294,15 +294,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -312,15 +312,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -330,15 +330,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 19: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -348,15 +348,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -366,15 +366,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 21: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -384,15 +384,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -402,15 +402,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -420,15 +420,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 24: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -438,15 +438,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -456,15 +456,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 26: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -474,15 +474,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -492,15 +492,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -510,15 +510,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 29: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -528,15 +528,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -546,15 +546,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 31: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -564,15 +564,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -582,15 +582,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -600,15 +600,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 34: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -618,15 +618,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -636,15 +636,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 36: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -654,15 +654,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -672,15 +672,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -690,15 +690,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 39: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -708,15 +708,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -726,15 +726,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 41: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -744,15 +744,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -762,15 +762,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -780,15 +780,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 44: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -798,15 +798,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -816,15 +816,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "An engineering student is reviewing a Problem Definition task. Which action should be taken first to apply problem definition effectively?",
+    "prompt": "Case 46: During a Problem Definition task, a student must choose an approach before proceeding. Which choice best applies problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "Choose the option with the largest numerical value without checking context",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state inputs, outputs, constraints and success criteria establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on problem definition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -834,15 +834,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "A team obtains an unexpected result while working on Problem Definition. Which response is most consistent with problem definition?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Problem Definition. What response best reflects problem definition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "jump directly to a solution",
-      "list only symptoms",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to problem definition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -852,15 +852,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "Which statement would be the most defensible conclusion about problem definition in an engineering report on Problem Definition?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Problem Definition when applying problem definition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "jump directly to a solution",
-      "list only symptoms",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -870,15 +870,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "A first-year engineering team must make a decision involving Problem Definition. Which choice best reflects problem definition?",
+    "prompt": "Case 49: An engineering student must make a decision involving Problem Definition. Which decision rule best represents problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
+      "state inputs, outputs, constraints and measurable success criteria",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies problem definition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of problem definition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -888,15 +888,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Problem Definition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound problem definition when working on Module 1 (Problem Definition)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Problem Definition exercise. Which action most directly demonstrates sound problem definition?",
     "options": [
-      "state inputs, outputs, constraints and success criteria",
-      "jump directly to a solution",
-      "list only symptoms",
+      "state inputs, outputs, constraints and measurable success criteria",
+      "jump directly to implementation",
+      "list symptoms only",
       "omit constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of problem definition and supports defensible engineering work.",
+    "explanation": "The first option applies problem definition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -906,15 +906,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 01: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -924,15 +924,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -942,15 +942,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -960,15 +960,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 04: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -978,15 +978,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -996,15 +996,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 06: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1014,15 +1014,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1032,15 +1032,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1050,15 +1050,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 09: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1068,15 +1068,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1086,15 +1086,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 11: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1104,15 +1104,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1122,15 +1122,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1140,15 +1140,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 14: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1158,15 +1158,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1176,15 +1176,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 16: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1194,15 +1194,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1212,15 +1212,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1230,15 +1230,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 19: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1248,15 +1248,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1266,15 +1266,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 21: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1284,15 +1284,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1302,15 +1302,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1320,15 +1320,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 24: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1338,15 +1338,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1356,15 +1356,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 26: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1374,15 +1374,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1392,15 +1392,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1410,15 +1410,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 29: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1428,15 +1428,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1446,15 +1446,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 31: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1464,15 +1464,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1482,15 +1482,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1500,15 +1500,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 34: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1518,15 +1518,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1536,15 +1536,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 36: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1554,15 +1554,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1572,15 +1572,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1590,15 +1590,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 39: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1608,15 +1608,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1626,15 +1626,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 41: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1644,15 +1644,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1662,15 +1662,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1680,15 +1680,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 44: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1698,15 +1698,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1716,15 +1716,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "An engineering student is reviewing a Decomposition task. Which action should be taken first to apply decomposition effectively?",
+    "prompt": "Case 46: During a Decomposition task, a student must choose an approach before proceeding. Which choice best applies decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
-      "Choose the option with the largest numerical value without checking context",
+      "divide a complex task into coherent subproblems with clear interfaces",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with split a complex task into manageable subproblems establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decomposition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1734,15 +1734,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "A team obtains an unexpected result while working on Decomposition. Which response is most consistent with decomposition?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Decomposition. What response best reflects decomposition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decomposition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1752,15 +1752,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "Which statement would be the most defensible conclusion about decomposition in an engineering report on Decomposition?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Decomposition when applying decomposition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1770,15 +1770,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "A first-year engineering team must make a decision involving Decomposition. Which choice best reflects decomposition?",
+    "prompt": "Case 49: An engineering student must make a decision involving Decomposition. Which decision rule best represents decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decomposition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decomposition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1788,15 +1788,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decomposition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decomposition when working on Module 2 (Decomposition)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Decomposition exercise. Which action most directly demonstrates sound decomposition?",
     "options": [
-      "split a complex task into manageable subproblems",
+      "divide a complex task into coherent subproblems with clear interfaces",
       "duplicate the whole problem",
       "remove dependencies blindly",
-      "avoid interfaces"
+      "avoid defining interfaces"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decomposition and supports defensible engineering work.",
+    "explanation": "The first option applies decomposition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1806,15 +1806,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 01: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1824,15 +1824,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1842,15 +1842,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1860,15 +1860,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 04: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1878,15 +1878,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1896,15 +1896,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 06: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1914,15 +1914,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1932,15 +1932,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1950,15 +1950,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 09: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1968,15 +1968,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1986,15 +1986,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 11: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2004,15 +2004,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2022,15 +2022,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2040,15 +2040,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 14: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2058,15 +2058,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2076,15 +2076,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 16: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2094,15 +2094,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2112,15 +2112,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2130,15 +2130,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 19: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2148,15 +2148,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2166,15 +2166,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 21: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2184,15 +2184,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2202,15 +2202,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2220,15 +2220,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 24: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2238,15 +2238,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2256,15 +2256,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 26: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2274,15 +2274,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2292,15 +2292,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2310,15 +2310,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 29: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2328,15 +2328,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2346,15 +2346,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 31: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2364,15 +2364,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2382,15 +2382,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2400,15 +2400,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 34: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2418,15 +2418,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2436,15 +2436,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 36: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2454,15 +2454,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2472,15 +2472,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2490,15 +2490,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 39: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2508,15 +2508,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2526,15 +2526,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 41: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2544,15 +2544,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2562,15 +2562,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2580,15 +2580,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 44: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2598,15 +2598,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2616,15 +2616,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "An engineering student is reviewing a Abstraction task. Which action should be taken first to apply abstraction effectively?",
+    "prompt": "Case 46: During a Abstraction task, a student must choose an approach before proceeding. Which choice best applies abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
-      "Choose the option with the largest numerical value without checking context",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with retain details relevant to the decision and hide irrelevant detail establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on abstraction, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2634,15 +2634,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "A team obtains an unexpected result while working on Abstraction. Which response is most consistent with abstraction?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Abstraction. What response best reflects abstraction?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to abstraction.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2652,15 +2652,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "Which statement would be the most defensible conclusion about abstraction in an engineering report on Abstraction?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Abstraction when applying abstraction?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2670,15 +2670,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "A first-year engineering team must make a decision involving Abstraction. Which choice best reflects abstraction?",
+    "prompt": "Case 49: An engineering student must make a decision involving Abstraction. Which decision rule best represents abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies abstraction while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of abstraction.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2688,15 +2688,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Abstraction",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound abstraction when working on Module 3 (Abstraction)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Abstraction exercise. Which action most directly demonstrates sound abstraction?",
     "options": [
-      "retain details relevant to the decision and hide irrelevant detail",
+      "retain information relevant to the decision while hiding irrelevant implementation detail",
       "include every implementation detail",
-      "remove all constraints",
-      "ignore system boundaries"
+      "remove all system boundaries",
+      "ignore the level of detail required"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of abstraction and supports defensible engineering work.",
+    "explanation": "The first option applies abstraction directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2706,15 +2706,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 01: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2724,7 +2724,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -2732,7 +2732,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2742,15 +2742,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2760,15 +2760,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 04: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2778,15 +2778,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2796,15 +2796,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 06: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2814,7 +2814,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -2822,7 +2822,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2832,15 +2832,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2850,15 +2850,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 09: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2868,15 +2868,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2886,15 +2886,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 11: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2904,7 +2904,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -2912,7 +2912,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2922,15 +2922,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2940,15 +2940,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 14: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2958,15 +2958,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2976,15 +2976,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 16: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2994,7 +2994,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -3002,7 +3002,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3012,15 +3012,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3030,15 +3030,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 19: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3048,15 +3048,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3066,15 +3066,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 21: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3084,7 +3084,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -3092,7 +3092,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3102,15 +3102,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3120,15 +3120,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 24: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3138,15 +3138,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3156,15 +3156,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 26: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3174,7 +3174,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -3182,7 +3182,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3192,15 +3192,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3210,15 +3210,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 29: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3228,15 +3228,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3246,15 +3246,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 31: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3264,7 +3264,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -3272,7 +3272,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3282,15 +3282,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3300,15 +3300,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 34: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3318,15 +3318,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3336,15 +3336,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 36: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3354,7 +3354,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -3362,7 +3362,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3372,15 +3372,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3390,15 +3390,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 39: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3408,15 +3408,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3426,15 +3426,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 41: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3444,7 +3444,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -3452,7 +3452,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3462,15 +3462,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3480,15 +3480,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 44: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3498,15 +3498,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3516,15 +3516,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "An engineering student is reviewing a Algorithms & Procedures task. Which action should be taken first to apply algorithm design effectively?",
+    "prompt": "Case 46: During a Algorithms & Procedures task, a student must choose an approach before proceeding. Which choice best applies algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
-      "Choose the option with the largest numerical value without checking context",
+      "define finite, ordered and testable steps from input to output",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with define ordered steps that transform inputs into outputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on algorithm design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3534,7 +3534,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "A team obtains an unexpected result while working on Algorithms & Procedures. Which response is most consistent with algorithm design?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Algorithms & Procedures. What response best reflects algorithm design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use ambiguous steps",
@@ -3542,7 +3542,7 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to algorithm design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3552,15 +3552,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "Which statement would be the most defensible conclusion about algorithm design in an engineering report on Algorithms & Procedures?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Algorithms & Procedures when applying algorithm design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3570,15 +3570,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "A first-year engineering team must make a decision involving Algorithms & Procedures. Which choice best reflects algorithm design?",
+    "prompt": "Case 49: An engineering student must make a decision involving Algorithms & Procedures. Which decision rule best represents algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies algorithm design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of algorithm design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3588,15 +3588,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Algorithms & Procedures",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound algorithm design when working on Module 4 (Algorithms & Procedures)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Algorithms & Procedures exercise. Which action most directly demonstrates sound algorithm design?",
     "options": [
-      "define ordered steps that transform inputs into outputs",
+      "define finite, ordered and testable steps from input to output",
       "use ambiguous steps",
       "depend on intuition only",
       "omit termination conditions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of algorithm design and supports defensible engineering work.",
+    "explanation": "The first option applies algorithm design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3606,15 +3606,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 01: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3624,15 +3624,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3642,15 +3642,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3660,15 +3660,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 04: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3678,15 +3678,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3696,15 +3696,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 06: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3714,15 +3714,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3732,15 +3732,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3750,15 +3750,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 09: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3768,15 +3768,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3786,15 +3786,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 11: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3804,15 +3804,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3822,15 +3822,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3840,15 +3840,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 14: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3858,15 +3858,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3876,15 +3876,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 16: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3894,15 +3894,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3912,15 +3912,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3930,15 +3930,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 19: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3948,15 +3948,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3966,15 +3966,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 21: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3984,15 +3984,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4002,15 +4002,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4020,15 +4020,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 24: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4038,15 +4038,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4056,15 +4056,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 26: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4074,15 +4074,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4092,15 +4092,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4110,15 +4110,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 29: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4128,15 +4128,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4146,15 +4146,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 31: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4164,15 +4164,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4182,15 +4182,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4200,15 +4200,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 34: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4218,15 +4218,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4236,15 +4236,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 36: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4254,15 +4254,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4272,15 +4272,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4290,15 +4290,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 39: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4308,15 +4308,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4326,15 +4326,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 41: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4344,15 +4344,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4362,15 +4362,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4380,15 +4380,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 44: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4398,15 +4398,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4416,15 +4416,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "An engineering student is reviewing a Pattern Recognition task. Which action should be taken first to apply pattern recognition effectively?",
+    "prompt": "Case 46: During a Pattern Recognition task, a student must choose an approach before proceeding. Which choice best applies pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "Choose the option with the largest numerical value without checking context",
+      "test repeated relationships against multiple observations and counterexamples",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare repeated relationships while checking counterexamples establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on pattern recognition, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4434,15 +4434,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "A team obtains an unexpected result while working on Pattern Recognition. Which response is most consistent with pattern recognition?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Pattern Recognition. What response best reflects pattern recognition?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume one example proves a pattern",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to pattern recognition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4452,15 +4452,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "Which statement would be the most defensible conclusion about pattern recognition in an engineering report on Pattern Recognition?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Pattern Recognition when applying pattern recognition?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume one example proves a pattern",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4470,15 +4470,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "A first-year engineering team must make a decision involving Pattern Recognition. Which choice best reflects pattern recognition?",
+    "prompt": "Case 49: An engineering student must make a decision involving Pattern Recognition. Which decision rule best represents pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
+      "test repeated relationships against multiple observations and counterexamples",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies pattern recognition while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of pattern recognition.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4488,15 +4488,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Pattern Recognition",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound pattern recognition when working on Module 5 (Pattern Recognition)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Pattern Recognition exercise. Which action most directly demonstrates sound pattern recognition?",
     "options": [
-      "compare repeated relationships while checking counterexamples",
-      "assume one example proves a pattern",
+      "test repeated relationships against multiple observations and counterexamples",
+      "assume one example proves a rule",
       "ignore exceptions",
       "fit the pattern after seeing the answer"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of pattern recognition and supports defensible engineering work.",
+    "explanation": "The first option applies pattern recognition directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4506,15 +4506,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 01: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4524,15 +4524,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4542,15 +4542,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4560,15 +4560,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 04: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4578,15 +4578,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4596,15 +4596,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 06: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4614,15 +4614,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4632,15 +4632,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4650,15 +4650,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 09: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4668,15 +4668,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4686,15 +4686,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 11: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4704,15 +4704,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4722,15 +4722,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4740,15 +4740,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 14: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4758,15 +4758,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4776,15 +4776,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 16: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4794,15 +4794,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4812,15 +4812,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4830,15 +4830,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 19: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4848,15 +4848,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4866,15 +4866,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 21: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4884,15 +4884,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4902,15 +4902,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4920,15 +4920,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 24: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4938,15 +4938,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4956,15 +4956,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 26: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4974,15 +4974,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4992,15 +4992,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5010,15 +5010,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 29: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5028,15 +5028,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5046,15 +5046,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 31: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5064,15 +5064,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5082,15 +5082,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5100,15 +5100,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 34: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5118,15 +5118,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5136,15 +5136,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 36: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5154,15 +5154,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5172,15 +5172,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5190,15 +5190,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 39: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5208,15 +5208,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5226,15 +5226,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 41: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5244,15 +5244,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5262,15 +5262,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5280,15 +5280,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 44: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5298,15 +5298,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5316,15 +5316,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "An engineering student is reviewing a Root-Cause Analysis task. Which action should be taken first to apply root-cause analysis effectively?",
+    "prompt": "Case 46: During a Root-Cause Analysis task, a student must choose an approach before proceeding. Which choice best applies root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
-      "Choose the option with the largest numerical value without checking context",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with test causal hypotheses against evidence establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on root-cause analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5334,15 +5334,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "A team obtains an unexpected result while working on Root-Cause Analysis. Which response is most consistent with root-cause analysis?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Root-Cause Analysis. What response best reflects root-cause analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to root-cause analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5352,15 +5352,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about root-cause analysis in an engineering report on Root-Cause Analysis?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Root-Cause Analysis when applying root-cause analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5370,15 +5370,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Root-Cause Analysis. Which choice best reflects root-cause analysis?",
+    "prompt": "Case 49: An engineering student must make a decision involving Root-Cause Analysis. Which decision rule best represents root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies root-cause analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of root-cause analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5388,15 +5388,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Root-Cause Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound root-cause analysis when working on Module 6 (Root-Cause Analysis)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Root-Cause Analysis exercise. Which action most directly demonstrates sound root-cause analysis?",
     "options": [
-      "test causal hypotheses against evidence",
+      "test causal hypotheses against evidence and distinguish symptoms from causes",
       "stop at the first symptom",
       "assign blame without evidence",
-      "change many variables simultaneously"
+      "change many variables without isolation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of root-cause analysis and supports defensible engineering work.",
+    "explanation": "The first option applies root-cause analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5406,15 +5406,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 01: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5424,15 +5424,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5442,15 +5442,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5460,15 +5460,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 04: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5478,15 +5478,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5496,15 +5496,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 06: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5514,15 +5514,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5532,15 +5532,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5550,15 +5550,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 09: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5568,15 +5568,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5586,15 +5586,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 11: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5604,15 +5604,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5622,15 +5622,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5640,15 +5640,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 14: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5658,15 +5658,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5676,15 +5676,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 16: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5694,15 +5694,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5712,15 +5712,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5730,15 +5730,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 19: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5748,15 +5748,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5766,15 +5766,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 21: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5784,15 +5784,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5802,15 +5802,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5820,15 +5820,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 24: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5838,15 +5838,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5856,15 +5856,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 26: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5874,15 +5874,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5892,15 +5892,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5910,15 +5910,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 29: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5928,15 +5928,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5946,15 +5946,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 31: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5964,15 +5964,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5982,15 +5982,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6000,15 +6000,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 34: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6018,15 +6018,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6036,15 +6036,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 36: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6054,15 +6054,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6072,15 +6072,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6090,15 +6090,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 39: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6108,15 +6108,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6126,15 +6126,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 41: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6144,15 +6144,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6162,15 +6162,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6180,15 +6180,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 44: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6198,15 +6198,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6216,15 +6216,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "An engineering student is reviewing a Constraint-Based Solutions task. Which action should be taken first to apply constraints effectively?",
+    "prompt": "Case 46: During a Constraint-Based Solutions task, a student must choose an approach before proceeding. Which choice best applies constraints?",
     "options": [
-      "treat limits as part of the solution space",
-      "Choose the option with the largest numerical value without checking context",
+      "treat limits as part of the feasible solution space",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with treat limits as part of the solution space establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on constraints, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6234,15 +6234,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A team obtains an unexpected result while working on Constraint-Based Solutions. Which response is most consistent with constraints?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Constraint-Based Solutions. What response best reflects constraints?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to constraints.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6252,15 +6252,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "Which statement would be the most defensible conclusion about constraints in an engineering report on Constraint-Based Solutions?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Constraint-Based Solutions when applying constraints?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6270,15 +6270,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "A first-year engineering team must make a decision involving Constraint-Based Solutions. Which choice best reflects constraints?",
+    "prompt": "Case 49: An engineering student must make a decision involving Constraint-Based Solutions. Which decision rule best represents constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies constraints while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of constraints.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6288,15 +6288,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Constraint-Based Solutions",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound constraints when working on Module 7 (Constraint-Based Solutions)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Constraint-Based Solutions exercise. Which action most directly demonstrates sound constraints?",
     "options": [
-      "treat limits as part of the solution space",
+      "treat limits as part of the feasible solution space",
       "ignore constraints until the end",
-      "remove constraints arbitrarily",
+      "remove constraints without authority",
       "optimise an impossible design"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of constraints and supports defensible engineering work.",
+    "explanation": "The first option applies constraints directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6306,15 +6306,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 01: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6324,15 +6324,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6342,15 +6342,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6360,15 +6360,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 04: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6378,15 +6378,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6396,15 +6396,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 06: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6414,15 +6414,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6432,15 +6432,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6450,15 +6450,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 09: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6468,15 +6468,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6486,15 +6486,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 11: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6504,15 +6504,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6522,15 +6522,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6540,15 +6540,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 14: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6558,15 +6558,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6576,15 +6576,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 16: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6594,15 +6594,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6612,15 +6612,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6630,15 +6630,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 19: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6648,15 +6648,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6666,15 +6666,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 21: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6684,15 +6684,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6702,15 +6702,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6720,15 +6720,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 24: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6738,15 +6738,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6756,15 +6756,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 26: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6774,15 +6774,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6792,15 +6792,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6810,15 +6810,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 29: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6828,15 +6828,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6846,15 +6846,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 31: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6864,15 +6864,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6882,15 +6882,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6900,15 +6900,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 34: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6918,15 +6918,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6936,15 +6936,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 36: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6954,15 +6954,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6972,15 +6972,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6990,15 +6990,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 39: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7008,15 +7008,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7026,15 +7026,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 41: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7044,15 +7044,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7062,15 +7062,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7080,15 +7080,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 44: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7098,15 +7098,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7116,15 +7116,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "An engineering student is reviewing a Iteration & Debugging task. Which action should be taken first to apply debugging effectively?",
+    "prompt": "Case 46: During a Iteration & Debugging task, a student must choose an approach before proceeding. Which choice best applies debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
-      "Choose the option with the largest numerical value without checking context",
+      "reproduce, isolate, hypothesise, test and verify the fix",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with reproduce, isolate, hypothesize, test and verify establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on debugging, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7134,15 +7134,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "A team obtains an unexpected result while working on Iteration & Debugging. Which response is most consistent with debugging?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Iteration & Debugging. What response best reflects debugging?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to debugging.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7152,15 +7152,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "Which statement would be the most defensible conclusion about debugging in an engineering report on Iteration & Debugging?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Iteration & Debugging when applying debugging?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7170,15 +7170,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "A first-year engineering team must make a decision involving Iteration & Debugging. Which choice best reflects debugging?",
+    "prompt": "Case 49: An engineering student must make a decision involving Iteration & Debugging. Which decision rule best represents debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies debugging while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of debugging.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7188,15 +7188,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Iteration & Debugging",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound debugging when working on Module 8 (Iteration & Debugging)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Iteration & Debugging exercise. Which action most directly demonstrates sound debugging?",
     "options": [
-      "reproduce, isolate, hypothesize, test and verify",
+      "reproduce, isolate, hypothesise, test and verify the fix",
       "change code randomly",
       "fix symptoms only",
-      "skip verification"
+      "skip regression testing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of debugging and supports defensible engineering work.",
+    "explanation": "The first option applies debugging directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7206,15 +7206,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 01: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7224,15 +7224,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7242,15 +7242,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7260,15 +7260,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 04: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7278,15 +7278,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7296,15 +7296,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 06: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7314,15 +7314,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7332,15 +7332,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7350,15 +7350,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 09: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7368,15 +7368,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7386,15 +7386,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 11: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7404,15 +7404,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7422,15 +7422,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7440,15 +7440,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 14: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7458,15 +7458,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7476,15 +7476,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 16: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7494,15 +7494,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7512,15 +7512,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7530,15 +7530,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 19: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7548,15 +7548,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7566,15 +7566,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 21: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7584,15 +7584,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7602,15 +7602,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7620,15 +7620,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 24: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7638,15 +7638,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7656,15 +7656,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 26: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7674,15 +7674,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7692,15 +7692,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7710,15 +7710,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 29: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7728,15 +7728,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7746,15 +7746,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 31: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7764,15 +7764,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7782,15 +7782,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7800,15 +7800,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 34: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7818,15 +7818,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7836,15 +7836,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 36: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7854,15 +7854,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7872,15 +7872,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7890,15 +7890,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 39: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7908,15 +7908,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7926,15 +7926,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 41: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7944,15 +7944,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7962,15 +7962,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7980,15 +7980,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 44: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7998,15 +7998,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8016,15 +8016,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "An engineering student is reviewing a Solution Evaluation task. Which action should be taken first to apply solution evaluation effectively?",
+    "prompt": "Case 46: During a Solution Evaluation task, a student must choose an approach before proceeding. Which choice best applies solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "compare results with explicit requirements, risks and failure modes",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with compare performance against explicit requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on solution evaluation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8034,15 +8034,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "A team obtains an unexpected result while working on Solution Evaluation. Which response is most consistent with solution evaluation?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Solution Evaluation. What response best reflects solution evaluation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to solution evaluation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8052,15 +8052,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "Which statement would be the most defensible conclusion about solution evaluation in an engineering report on Solution Evaluation?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Solution Evaluation when applying solution evaluation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8070,15 +8070,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "A first-year engineering team must make a decision involving Solution Evaluation. Which choice best reflects solution evaluation?",
+    "prompt": "Case 49: An engineering student must make a decision involving Solution Evaluation. Which decision rule best represents solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies solution evaluation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of solution evaluation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8088,15 +8088,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Solution Evaluation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound solution evaluation when working on Module 9 (Solution Evaluation)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Solution Evaluation exercise. Which action most directly demonstrates sound solution evaluation?",
     "options": [
-      "compare performance against explicit requirements",
+      "compare results with explicit requirements, risks and failure modes",
       "declare success without criteria",
-      "use only one anecdotal test",
-      "ignore failure modes"
+      "use one anecdote as proof",
+      "ignore unacceptable outcomes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of solution evaluation and supports defensible engineering work.",
+    "explanation": "The first option applies solution evaluation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8106,15 +8106,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 01: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8124,15 +8124,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8142,15 +8142,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8160,15 +8160,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 04: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8178,15 +8178,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8196,15 +8196,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 06: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8214,15 +8214,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8232,15 +8232,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8250,15 +8250,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 09: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8268,15 +8268,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8286,15 +8286,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 11: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8304,15 +8304,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8322,15 +8322,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8340,15 +8340,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 14: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8358,15 +8358,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8376,15 +8376,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 16: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8394,15 +8394,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8412,15 +8412,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8430,15 +8430,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 19: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8448,15 +8448,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8466,15 +8466,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 21: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8484,15 +8484,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8502,15 +8502,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8520,15 +8520,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 24: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8538,15 +8538,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8556,15 +8556,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 26: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8574,15 +8574,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8592,15 +8592,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8610,15 +8610,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 29: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8628,15 +8628,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8646,15 +8646,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 31: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8664,15 +8664,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8682,15 +8682,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8700,15 +8700,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 34: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8718,15 +8718,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8736,15 +8736,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 36: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8754,15 +8754,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8772,15 +8772,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8790,15 +8790,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 39: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8808,15 +8808,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8826,15 +8826,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 41: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8844,15 +8844,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8862,15 +8862,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8880,15 +8880,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 44: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8898,15 +8898,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8916,15 +8916,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "An engineering student is reviewing a Engineering Challenge Strategy task. Which action should be taken first to apply engineering challenge strategy effectively?",
+    "prompt": "Case 46: During a Engineering Challenge Strategy task, a student must choose an approach before proceeding. Which choice best applies engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
-      "Choose the option with the largest numerical value without checking context",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clarify requirements, prioritise risks and iterate establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering challenge strategy, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8934,15 +8934,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A team obtains an unexpected result while working on Engineering Challenge Strategy. Which response is most consistent with engineering challenge strategy?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Engineering Challenge Strategy. What response best reflects engineering challenge strategy?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering challenge strategy.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8952,15 +8952,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "Which statement would be the most defensible conclusion about engineering challenge strategy in an engineering report on Engineering Challenge Strategy?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Challenge Strategy when applying engineering challenge strategy?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8970,15 +8970,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Challenge Strategy. Which choice best reflects engineering challenge strategy?",
+    "prompt": "Case 49: An engineering student must make a decision involving Engineering Challenge Strategy. Which decision rule best represents engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering challenge strategy while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering challenge strategy.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8988,15 +8988,15 @@ export const PREPARED_PROBLEM_SOLVING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Challenge Strategy",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering challenge strategy when working on Module 10 (Engineering Challenge Strategy)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Engineering Challenge Strategy exercise. Which action most directly demonstrates sound engineering challenge strategy?",
     "options": [
-      "clarify requirements, prioritise risks and iterate",
+      "clarify requirements, prioritise risks, prototype and iterate using evidence",
       "build everything immediately",
-      "avoid prototypes",
-      "ignore test evidence"
+      "avoid testing until the end",
+      "ignore stakeholder constraints"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering challenge strategy and supports defensible engineering work.",
+    "explanation": "The first option applies engineering challenge strategy directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   }

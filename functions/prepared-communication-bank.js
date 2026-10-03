@@ -6,15 +6,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 01: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -24,15 +24,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -42,15 +42,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -60,15 +60,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 04: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -78,15 +78,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -96,15 +96,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 06: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -114,15 +114,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -132,15 +132,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -150,15 +150,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 09: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -168,15 +168,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -186,15 +186,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 11: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -204,15 +204,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -222,15 +222,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -240,15 +240,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 14: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -258,15 +258,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -276,15 +276,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 16: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -294,15 +294,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -312,15 +312,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -330,15 +330,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 19: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -348,15 +348,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -366,15 +366,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 21: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -384,15 +384,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -402,15 +402,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -420,15 +420,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 24: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -438,15 +438,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -456,15 +456,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 26: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -474,15 +474,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -492,15 +492,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -510,15 +510,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 29: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -528,15 +528,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -546,15 +546,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 31: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -564,15 +564,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -582,15 +582,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -600,15 +600,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 34: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -618,15 +618,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -636,15 +636,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 36: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -654,15 +654,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -672,15 +672,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -690,15 +690,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 39: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -708,15 +708,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -726,15 +726,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 41: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -744,15 +744,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -762,15 +762,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -780,15 +780,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 44: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -798,15 +798,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -816,15 +816,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "An engineering student is reviewing a Grammar & Usage task. Which action should be taken first to apply subject–verb agreement effectively?",
+    "prompt": "Case 46: During a Grammar & Usage task, a student must choose an approach before proceeding. Which choice best applies subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "Choose the option with the largest numerical value without checking context",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with the measured values are establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on subject–verb agreement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -834,15 +834,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "A team obtains an unexpected result while working on Grammar & Usage. Which response is most consistent with subject–verb agreement?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Grammar & Usage. What response best reflects subject–verb agreement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to subject–verb agreement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -852,15 +852,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "Which statement would be the most defensible conclusion about subject–verb agreement in an engineering report on Grammar & Usage?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Grammar & Usage when applying subject–verb agreement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -870,15 +870,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "A first-year engineering team must make a decision involving Grammar & Usage. Which choice best reflects subject–verb agreement?",
+    "prompt": "Case 49: An engineering student must make a decision involving Grammar & Usage. Which decision rule best represents subject–verb agreement?",
     "options": [
-      "the measured values are",
+      "match the verb to the grammatical subject, even when intervening phrases occur",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies subject–verb agreement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of subject–verb agreement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -888,15 +888,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Grammar & Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound subject–verb agreement when working on Module 1 (Grammar & Usage)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Grammar & Usage exercise. Which action most directly demonstrates sound subject–verb agreement?",
     "options": [
-      "the measured values are",
-      "the measured values is",
-      "the measured value are",
-      "the measured values be"
+      "match the verb to the grammatical subject, even when intervening phrases occur",
+      "choose a verb based on the nearest noun",
+      "ignore the subject number",
+      "use a plural verb after every prepositional phrase"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of subject–verb agreement and supports defensible engineering work.",
+    "explanation": "The first option applies subject–verb agreement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -906,15 +906,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 01: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -924,15 +924,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -942,15 +942,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -960,15 +960,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 04: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -978,15 +978,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -996,15 +996,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 06: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1014,15 +1014,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1032,15 +1032,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1050,15 +1050,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 09: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1068,15 +1068,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1086,15 +1086,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 11: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1104,15 +1104,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1122,15 +1122,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1140,15 +1140,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 14: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1158,15 +1158,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1176,15 +1176,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 16: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1194,15 +1194,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1212,15 +1212,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1230,15 +1230,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 19: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1248,15 +1248,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1266,15 +1266,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 21: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1284,15 +1284,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1302,15 +1302,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1320,15 +1320,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 24: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1338,15 +1338,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1356,15 +1356,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 26: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1374,15 +1374,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1392,15 +1392,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1410,15 +1410,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 29: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1428,15 +1428,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1446,15 +1446,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 31: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1464,15 +1464,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1482,15 +1482,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1500,15 +1500,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 34: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1518,15 +1518,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1536,15 +1536,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 36: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1554,15 +1554,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1572,15 +1572,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1590,15 +1590,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 39: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1608,15 +1608,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1626,15 +1626,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 41: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1644,15 +1644,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1662,15 +1662,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1680,15 +1680,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 44: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1698,15 +1698,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1716,15 +1716,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "An engineering student is reviewing a Vocabulary & Word Usage task. Which action should be taken first to apply concise technical writing effectively?",
+    "prompt": "Case 46: During a Vocabulary & Word Usage task, a student must choose an approach before proceeding. Which choice best applies concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "Choose the option with the largest numerical value without checking context",
+      "remove redundant wording while preserving technical meaning",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with remove redundant wording establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on concise technical writing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1734,15 +1734,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A team obtains an unexpected result while working on Vocabulary & Word Usage. Which response is most consistent with concise technical writing?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Vocabulary & Word Usage. What response best reflects concise technical writing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to concise technical writing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1752,15 +1752,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "Which statement would be the most defensible conclusion about concise technical writing in an engineering report on Vocabulary & Word Usage?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Vocabulary & Word Usage when applying concise technical writing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1770,15 +1770,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "A first-year engineering team must make a decision involving Vocabulary & Word Usage. Which choice best reflects concise technical writing?",
+    "prompt": "Case 49: An engineering student must make a decision involving Vocabulary & Word Usage. Which decision rule best represents concise technical writing?",
     "options": [
-      "remove redundant wording",
+      "remove redundant wording while preserving technical meaning",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies concise technical writing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of concise technical writing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1788,15 +1788,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Vocabulary & Word Usage",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound concise technical writing when working on Module 2 (Vocabulary & Word Usage)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Vocabulary & Word Usage exercise. Which action most directly demonstrates sound concise technical writing?",
     "options": [
-      "remove redundant wording",
-      "add more adjectives",
-      "repeat the conclusion",
-      "replace facts with opinions"
+      "remove redundant wording while preserving technical meaning",
+      "add repeated explanations",
+      "replace precise terms with vague phrases",
+      "increase sentence length without adding information"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of concise technical writing and supports defensible engineering work.",
+    "explanation": "The first option applies concise technical writing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1806,15 +1806,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 01: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1824,15 +1824,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1842,15 +1842,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1860,15 +1860,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 04: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1878,15 +1878,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1896,15 +1896,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 06: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1914,15 +1914,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1932,15 +1932,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1950,15 +1950,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 09: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1968,15 +1968,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1986,15 +1986,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 11: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2004,15 +2004,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2022,15 +2022,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2040,15 +2040,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 14: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2058,15 +2058,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2076,15 +2076,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 16: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2094,15 +2094,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2112,15 +2112,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2130,15 +2130,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 19: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2148,15 +2148,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2166,15 +2166,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 21: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2184,15 +2184,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2202,15 +2202,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2220,15 +2220,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 24: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2238,15 +2238,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2256,15 +2256,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 26: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2274,15 +2274,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2292,15 +2292,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2310,15 +2310,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 29: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2328,15 +2328,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2346,15 +2346,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 31: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2364,15 +2364,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2382,15 +2382,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2400,15 +2400,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 34: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2418,15 +2418,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2436,15 +2436,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 36: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2454,15 +2454,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2472,15 +2472,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2490,15 +2490,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 39: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2508,15 +2508,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2526,15 +2526,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 41: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2544,15 +2544,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2562,15 +2562,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2580,15 +2580,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 44: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2598,15 +2598,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2616,15 +2616,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "An engineering student is reviewing a Reading Comprehension task. Which action should be taken first to apply professional tone effectively?",
+    "prompt": "Case 46: During a Reading Comprehension task, a student must choose an approach before proceeding. Which choice best applies professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "Choose the option with the largest numerical value without checking context",
+      "state the issue, evidence and requested action respectfully",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state the issue and requested action clearly establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional tone, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2634,15 +2634,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "A team obtains an unexpected result while working on Reading Comprehension. Which response is most consistent with professional tone?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Reading Comprehension. What response best reflects professional tone?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional tone.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2652,15 +2652,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "Which statement would be the most defensible conclusion about professional tone in an engineering report on Reading Comprehension?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Reading Comprehension when applying professional tone?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2670,15 +2670,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "A first-year engineering team must make a decision involving Reading Comprehension. Which choice best reflects professional tone?",
+    "prompt": "Case 49: An engineering student must make a decision involving Reading Comprehension. Which decision rule best represents professional tone?",
     "options": [
-      "state the issue and requested action clearly",
+      "state the issue, evidence and requested action respectfully",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional tone while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional tone.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2688,15 +2688,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Reading Comprehension",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional tone when working on Module 3 (Reading Comprehension)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Reading Comprehension exercise. Which action most directly demonstrates sound professional tone?",
     "options": [
-      "state the issue and requested action clearly",
-      "use sarcasm",
-      "use unexplained slang",
-      "assign blame before evidence"
+      "state the issue, evidence and requested action respectfully",
+      "use sarcasm to emphasise urgency",
+      "assign blame before checking evidence",
+      "use informal slang in a formal report"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional tone and supports defensible engineering work.",
+    "explanation": "The first option applies professional tone directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2706,15 +2706,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 01: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2724,15 +2724,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2742,15 +2742,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2760,15 +2760,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 04: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2778,15 +2778,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2796,15 +2796,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 06: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2814,15 +2814,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2832,15 +2832,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2850,15 +2850,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 09: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2868,15 +2868,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2886,15 +2886,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 11: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2904,15 +2904,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2922,15 +2922,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2940,15 +2940,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 14: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2958,15 +2958,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2976,15 +2976,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 16: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2994,15 +2994,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3012,15 +3012,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3030,15 +3030,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 19: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3048,15 +3048,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3066,15 +3066,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 21: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3084,15 +3084,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3102,15 +3102,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3120,15 +3120,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 24: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3138,15 +3138,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3156,15 +3156,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 26: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3174,15 +3174,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3192,15 +3192,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3210,15 +3210,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 29: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3228,15 +3228,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3246,15 +3246,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 31: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3264,15 +3264,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3282,15 +3282,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3300,15 +3300,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 34: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3318,15 +3318,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3336,15 +3336,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 36: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3354,15 +3354,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3372,15 +3372,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3390,15 +3390,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 39: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3408,15 +3408,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3426,15 +3426,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 41: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3444,15 +3444,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3462,15 +3462,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3480,15 +3480,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 44: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3498,15 +3498,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3516,15 +3516,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "An engineering student is reviewing a Listening Skills task. Which action should be taken first to apply technical vocabulary effectively?",
+    "prompt": "Case 46: During a Listening Skills task, a student must choose an approach before proceeding. Which choice best applies technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "Choose the option with the largest numerical value without checking context",
+      "select terminology whose meaning fits the engineering context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with choose a term whose meaning fits the engineering context establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical vocabulary, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3534,15 +3534,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "A team obtains an unexpected result while working on Listening Skills. Which response is most consistent with technical vocabulary?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Listening Skills. What response best reflects technical vocabulary?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical vocabulary.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3552,15 +3552,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "Which statement would be the most defensible conclusion about technical vocabulary in an engineering report on Listening Skills?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Listening Skills when applying technical vocabulary?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3570,15 +3570,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "A first-year engineering team must make a decision involving Listening Skills. Which choice best reflects technical vocabulary?",
+    "prompt": "Case 49: An engineering student must make a decision involving Listening Skills. Which decision rule best represents technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
+      "select terminology whose meaning fits the engineering context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical vocabulary while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical vocabulary.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3588,15 +3588,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Listening Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical vocabulary when working on Module 4 (Listening Skills)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Listening Skills exercise. Which action most directly demonstrates sound technical vocabulary?",
     "options": [
-      "choose a term whose meaning fits the engineering context",
-      "choose the longest word",
-      "use an unrelated technical term",
-      "translate every word literally"
+      "select terminology whose meaning fits the engineering context",
+      "choose the longest technical word",
+      "use a familiar word with a different technical meaning",
+      "replace every technical term with an abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical vocabulary and supports defensible engineering work.",
+    "explanation": "The first option applies technical vocabulary directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3606,15 +3606,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 01: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3624,15 +3624,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3642,15 +3642,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3660,15 +3660,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 04: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3678,15 +3678,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3696,15 +3696,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 06: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3714,15 +3714,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3732,15 +3732,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3750,15 +3750,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 09: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3768,15 +3768,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3786,15 +3786,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 11: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3804,15 +3804,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3822,15 +3822,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3840,15 +3840,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 14: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3858,15 +3858,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3876,15 +3876,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 16: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3894,15 +3894,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3912,15 +3912,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3930,15 +3930,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 19: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3948,15 +3948,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3966,15 +3966,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 21: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3984,15 +3984,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4002,15 +4002,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4020,15 +4020,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 24: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4038,15 +4038,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4056,15 +4056,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 26: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4074,15 +4074,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4092,15 +4092,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4110,15 +4110,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 29: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4128,15 +4128,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4146,15 +4146,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 31: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4164,15 +4164,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4182,15 +4182,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4200,15 +4200,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 34: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4218,15 +4218,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4236,15 +4236,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 36: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4254,15 +4254,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4272,15 +4272,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4290,15 +4290,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 39: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4308,15 +4308,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4326,15 +4326,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 41: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4344,15 +4344,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4362,15 +4362,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4380,15 +4380,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 44: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4398,15 +4398,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4416,15 +4416,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "An engineering student is reviewing a Speaking Skills task. Which action should be taken first to apply evidence in communication effectively?",
+    "prompt": "Case 46: During a Speaking Skills task, a student must choose an approach before proceeding. Which choice best applies evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "Choose the option with the largest numerical value without checking context",
+      "connect a claim to relevant observations or measured data",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with support a claim with relevant data or observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence in communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4434,15 +4434,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "A team obtains an unexpected result while working on Speaking Skills. Which response is most consistent with evidence in communication?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Speaking Skills. What response best reflects evidence in communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "increase font size",
-      "repeat the claim",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence in communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4452,15 +4452,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in communication in an engineering report on Speaking Skills?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Speaking Skills when applying evidence in communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "increase font size",
-      "repeat the claim",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4470,15 +4470,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "A first-year engineering team must make a decision involving Speaking Skills. Which choice best reflects evidence in communication?",
+    "prompt": "Case 49: An engineering student must make a decision involving Speaking Skills. Which decision rule best represents evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
+      "connect a claim to relevant observations or measured data",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence in communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence in communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4488,15 +4488,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Speaking Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence in communication when working on Module 5 (Speaking Skills)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Speaking Skills exercise. Which action most directly demonstrates sound evidence in communication?",
     "options": [
-      "support a claim with relevant data or observations",
-      "increase font size",
-      "repeat the claim",
+      "connect a claim to relevant observations or measured data",
+      "repeat the claim more often",
+      "use popularity as evidence",
       "add emotional language"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence in communication and supports defensible engineering work.",
+    "explanation": "The first option applies evidence in communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4506,15 +4506,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 01: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4524,15 +4524,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4542,15 +4542,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4560,15 +4560,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 04: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4578,15 +4578,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4596,15 +4596,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 06: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4614,15 +4614,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4632,15 +4632,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4650,15 +4650,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 09: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4668,15 +4668,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4686,15 +4686,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 11: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4704,15 +4704,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4722,15 +4722,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4740,15 +4740,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 14: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4758,15 +4758,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4776,15 +4776,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 16: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4794,15 +4794,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4812,15 +4812,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4830,15 +4830,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 19: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4848,15 +4848,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4866,15 +4866,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 21: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4884,15 +4884,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4902,15 +4902,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4920,15 +4920,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 24: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4938,15 +4938,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4956,15 +4956,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 26: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4974,15 +4974,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4992,15 +4992,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5010,15 +5010,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 29: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5028,15 +5028,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5046,15 +5046,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 31: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5064,15 +5064,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5082,15 +5082,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5100,15 +5100,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 34: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5118,15 +5118,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5136,15 +5136,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 36: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5154,15 +5154,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5172,15 +5172,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5190,15 +5190,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 39: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5208,15 +5208,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5226,15 +5226,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 41: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5244,15 +5244,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5262,15 +5262,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5280,15 +5280,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 44: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5298,15 +5298,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5316,15 +5316,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "An engineering student is reviewing a Professional Communication task. Which action should be taken first to apply audience awareness effectively?",
+    "prompt": "Case 46: During a Professional Communication task, a student must choose an approach before proceeding. Which choice best applies audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "Choose the option with the largest numerical value without checking context",
+      "adjust terminology, detail and examples to the intended audience",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with adapt terminology and detail to the audience establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on audience awareness, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5334,15 +5334,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "A team obtains an unexpected result while working on Professional Communication. Which response is most consistent with audience awareness?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Professional Communication. What response best reflects audience awareness?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to audience awareness.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5352,15 +5352,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "Which statement would be the most defensible conclusion about audience awareness in an engineering report on Professional Communication?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Professional Communication when applying audience awareness?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5370,15 +5370,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "A first-year engineering team must make a decision involving Professional Communication. Which choice best reflects audience awareness?",
+    "prompt": "Case 49: An engineering student must make a decision involving Professional Communication. Which decision rule best represents audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
+      "adjust terminology, detail and examples to the intended audience",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies audience awareness while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of audience awareness.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5388,15 +5388,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Professional Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound audience awareness when working on Module 6 (Professional Communication)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Professional Communication exercise. Which action most directly demonstrates sound audience awareness?",
     "options": [
-      "adapt terminology and detail to the audience",
-      "use identical detail for every audience",
-      "avoid defining specialist terms",
-      "omit the purpose"
+      "adjust terminology, detail and examples to the intended audience",
+      "use identical technical detail for everyone",
+      "remove all technical terms from expert communication",
+      "assume the audience knows every abbreviation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of audience awareness and supports defensible engineering work.",
+    "explanation": "The first option applies audience awareness directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5406,15 +5406,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 01: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5424,15 +5424,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5442,15 +5442,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5460,15 +5460,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 04: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5478,15 +5478,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5496,15 +5496,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 06: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5514,15 +5514,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5532,15 +5532,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5550,15 +5550,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 09: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5568,15 +5568,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5586,15 +5586,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 11: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5604,15 +5604,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5622,15 +5622,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5640,15 +5640,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 14: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5658,15 +5658,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5676,15 +5676,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 16: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5694,15 +5694,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5712,15 +5712,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5730,15 +5730,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 19: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5748,15 +5748,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5766,15 +5766,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 21: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5784,15 +5784,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5802,15 +5802,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5820,15 +5820,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 24: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5838,15 +5838,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5856,15 +5856,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 26: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5874,15 +5874,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5892,15 +5892,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5910,15 +5910,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 29: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5928,15 +5928,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5946,15 +5946,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 31: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5964,15 +5964,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5982,15 +5982,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6000,15 +6000,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 34: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6018,15 +6018,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6036,15 +6036,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 36: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6054,15 +6054,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6072,15 +6072,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6090,15 +6090,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 39: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6108,15 +6108,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6126,15 +6126,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 41: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6144,15 +6144,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6162,15 +6162,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6180,15 +6180,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 44: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6198,15 +6198,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6216,15 +6216,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "An engineering student is reviewing a Presentation Skills task. Which action should be taken first to apply meeting communication effectively?",
+    "prompt": "Case 46: During a Presentation Skills task, a student must choose an approach before proceeding. Which choice best applies meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
-      "Choose the option with the largest numerical value without checking context",
+      "record decisions, owners, actions and deadlines",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with confirm decisions, owners and deadlines establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on meeting communication, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6234,15 +6234,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "A team obtains an unexpected result while working on Presentation Skills. Which response is most consistent with meeting communication?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Presentation Skills. What response best reflects meeting communication?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to meeting communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6252,15 +6252,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "Which statement would be the most defensible conclusion about meeting communication in an engineering report on Presentation Skills?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Presentation Skills when applying meeting communication?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6270,15 +6270,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "A first-year engineering team must make a decision involving Presentation Skills. Which choice best reflects meeting communication?",
+    "prompt": "Case 49: An engineering student must make a decision involving Presentation Skills. Which decision rule best represents meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies meeting communication while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of meeting communication.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6288,15 +6288,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Presentation Skills",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound meeting communication when working on Module 7 (Presentation Skills)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Presentation Skills exercise. Which action most directly demonstrates sound meeting communication?",
     "options": [
-      "confirm decisions, owners and deadlines",
+      "record decisions, owners, actions and deadlines",
       "record only informal comments",
       "avoid assigning ownership",
-      "end without summarizing"
+      "end without confirming decisions"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of meeting communication and supports defensible engineering work.",
+    "explanation": "The first option applies meeting communication directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6306,15 +6306,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 01: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6324,15 +6324,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6342,15 +6342,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6360,15 +6360,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 04: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6378,15 +6378,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6396,15 +6396,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 06: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6414,15 +6414,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6432,15 +6432,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6450,15 +6450,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 09: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6468,15 +6468,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6486,15 +6486,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 11: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6504,15 +6504,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6522,15 +6522,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6540,15 +6540,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 14: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6558,15 +6558,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6576,15 +6576,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 16: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6594,15 +6594,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6612,15 +6612,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6630,15 +6630,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 19: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6648,15 +6648,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6666,15 +6666,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 21: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6684,15 +6684,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6702,15 +6702,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6720,15 +6720,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 24: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6738,15 +6738,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6756,15 +6756,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 26: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6774,15 +6774,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6792,15 +6792,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6810,15 +6810,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 29: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6828,15 +6828,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6846,15 +6846,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 31: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6864,15 +6864,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6882,15 +6882,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6900,15 +6900,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 34: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6918,15 +6918,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6936,15 +6936,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 36: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6954,15 +6954,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6972,15 +6972,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6990,15 +6990,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 39: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7008,15 +7008,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7026,15 +7026,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 41: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7044,15 +7044,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7062,15 +7062,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7080,15 +7080,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 44: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7098,15 +7098,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7116,15 +7116,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "An engineering student is reviewing a Group Discussion task. Which action should be taken first to apply presentation structure effectively?",
+    "prompt": "Case 46: During a Group Discussion task, a student must choose an approach before proceeding. Which choice best applies presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "Choose the option with the largest numerical value without checking context",
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with purpose, key evidence, interpretation, conclusion establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on presentation structure, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7134,15 +7134,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "A team obtains an unexpected result while working on Group Discussion. Which response is most consistent with presentation structure?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Group Discussion. What response best reflects presentation structure?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to presentation structure.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7152,15 +7152,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "Which statement would be the most defensible conclusion about presentation structure in an engineering report on Group Discussion?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Group Discussion when applying presentation structure?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7170,15 +7170,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "A first-year engineering team must make a decision involving Group Discussion. Which choice best reflects presentation structure?",
+    "prompt": "Case 49: An engineering student must make a decision involving Group Discussion. Which decision rule best represents presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
+      "organise purpose, evidence, interpretation and conclusion coherently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies presentation structure while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of presentation structure.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7188,15 +7188,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Group Discussion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound presentation structure when working on Module 8 (Group Discussion)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Group Discussion exercise. Which action most directly demonstrates sound presentation structure?",
     "options": [
-      "purpose, key evidence, interpretation, conclusion",
-      "random facts only",
-      "conclusion before context with no evidence",
-      "slides without a central message"
+      "organise purpose, evidence, interpretation and conclusion coherently",
+      "place unrelated facts on each slide",
+      "use slides as a script with no structure",
+      "omit the conclusion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of presentation structure and supports defensible engineering work.",
+    "explanation": "The first option applies presentation structure directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7206,15 +7206,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 01: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7224,15 +7224,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7242,15 +7242,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7260,15 +7260,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 04: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7278,15 +7278,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7296,15 +7296,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 06: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7314,15 +7314,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7332,15 +7332,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7350,15 +7350,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 09: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7368,15 +7368,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7386,15 +7386,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 11: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7404,15 +7404,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7422,15 +7422,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7440,15 +7440,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 14: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7458,15 +7458,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7476,15 +7476,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 16: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7494,15 +7494,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7512,15 +7512,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7530,15 +7530,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 19: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7548,15 +7548,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7566,15 +7566,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 21: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7584,15 +7584,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7602,15 +7602,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7620,15 +7620,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 24: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7638,15 +7638,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7656,15 +7656,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 26: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7674,15 +7674,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7692,15 +7692,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7710,15 +7710,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 29: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7728,15 +7728,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7746,15 +7746,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 31: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7764,15 +7764,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7782,15 +7782,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7800,15 +7800,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 34: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7818,15 +7818,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7836,15 +7836,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 36: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7854,15 +7854,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7872,15 +7872,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7890,15 +7890,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 39: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7908,15 +7908,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7926,15 +7926,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 41: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7944,15 +7944,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7962,15 +7962,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7980,15 +7980,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 44: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7998,15 +7998,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8016,15 +8016,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "An engineering student is reviewing a Workplace Writing task. Which action should be taken first to apply listening for instructions effectively?",
+    "prompt": "Case 46: During a Workplace Writing task, a student must choose an approach before proceeding. Which choice best applies listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "Choose the option with the largest numerical value without checking context",
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify action, constraints and deadline establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on listening for instructions, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8034,15 +8034,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "A team obtains an unexpected result while working on Workplace Writing. Which response is most consistent with listening for instructions?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Workplace Writing. What response best reflects listening for instructions?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to listening for instructions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8052,15 +8052,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "Which statement would be the most defensible conclusion about listening for instructions in an engineering report on Workplace Writing?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Workplace Writing when applying listening for instructions?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8070,15 +8070,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "A first-year engineering team must make a decision involving Workplace Writing. Which choice best reflects listening for instructions?",
+    "prompt": "Case 49: An engineering student must make a decision involving Workplace Writing. Which decision rule best represents listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
+      "identify actions, constraints, sequence and deadlines from spoken information",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies listening for instructions while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of listening for instructions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8088,15 +8088,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Workplace Writing",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound listening for instructions when working on Module 9 (Workplace Writing)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Workplace Writing exercise. Which action most directly demonstrates sound listening for instructions?",
     "options": [
-      "identify action, constraints and deadline",
-      "focus only on one keyword",
-      "infer unrelated requirements",
-      "ignore qualifiers"
+      "identify actions, constraints, sequence and deadlines from spoken information",
+      "focus on one keyword only",
+      "infer requirements not stated",
+      "ignore qualifiers such as must or by"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of listening for instructions and supports defensible engineering work.",
+    "explanation": "The first option applies listening for instructions directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8106,15 +8106,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 01: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8124,15 +8124,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8142,15 +8142,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8160,15 +8160,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 04: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8178,15 +8178,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8196,15 +8196,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 06: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8214,15 +8214,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8232,15 +8232,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8250,15 +8250,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 09: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8268,15 +8268,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8286,15 +8286,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 11: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8304,15 +8304,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8322,15 +8322,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8340,15 +8340,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 14: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8358,15 +8358,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8376,15 +8376,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 16: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8394,15 +8394,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8412,15 +8412,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8430,15 +8430,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 19: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8448,15 +8448,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8466,15 +8466,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 21: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8484,15 +8484,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8502,15 +8502,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8520,15 +8520,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 24: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8538,15 +8538,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8556,15 +8556,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 26: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8574,15 +8574,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8592,15 +8592,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8610,15 +8610,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 29: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8628,15 +8628,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8646,15 +8646,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 31: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8664,15 +8664,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8682,15 +8682,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8700,15 +8700,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 34: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8718,15 +8718,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8736,15 +8736,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 36: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8754,15 +8754,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8772,15 +8772,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8790,15 +8790,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 39: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8808,15 +8808,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8826,15 +8826,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 41: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8844,15 +8844,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8862,15 +8862,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8880,15 +8880,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 44: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8898,15 +8898,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8916,15 +8916,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "An engineering student is reviewing a Integrated Communication task. Which action should be taken first to apply professional email effectively?",
+    "prompt": "Case 46: During a Integrated Communication task, a student must choose an approach before proceeding. Which choice best applies professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "Choose the option with the largest numerical value without checking context",
+      "use a specific subject, concise context, requested action and courteous close",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with clear subject, context, action requested and courteous close establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on professional email, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8934,15 +8934,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "A team obtains an unexpected result while working on Integrated Communication. Which response is most consistent with professional email?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Integrated Communication. What response best reflects professional email?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to professional email.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8952,15 +8952,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "Which statement would be the most defensible conclusion about professional email in an engineering report on Integrated Communication?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Communication when applying professional email?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8970,15 +8970,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Communication. Which choice best reflects professional email?",
+    "prompt": "Case 49: An engineering student must make a decision involving Integrated Communication. Which decision rule best represents professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
+      "use a specific subject, concise context, requested action and courteous close",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies professional email while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of professional email.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8988,15 +8988,15 @@ export const PREPARED_COMMUNICATION_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Communication",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound professional email when working on Module 10 (Integrated Communication)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Integrated Communication exercise. Which action most directly demonstrates sound professional email?",
     "options": [
-      "clear subject, context, action requested and courteous close",
-      "all caps and no context",
-      "multiple unrelated requests",
-      "informal abbreviations throughout"
+      "use a specific subject, concise context, requested action and courteous close",
+      "write the entire message in capitals",
+      "combine unrelated requests without structure",
+      "use texting abbreviations"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of professional email and supports defensible engineering work.",
+    "explanation": "The first option applies professional email directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   }

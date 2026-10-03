@@ -6,15 +6,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 01: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -24,15 +24,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -42,15 +42,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -60,15 +60,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 04: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -78,15 +78,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -96,15 +96,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 06: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -114,15 +114,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -132,15 +132,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -150,15 +150,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 09: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -168,15 +168,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -186,15 +186,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 11: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -204,15 +204,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -222,15 +222,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -240,15 +240,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 14: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -258,15 +258,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -276,15 +276,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 16: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -294,15 +294,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -312,15 +312,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -330,15 +330,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 19: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -348,15 +348,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -366,15 +366,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 21: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -384,15 +384,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -402,15 +402,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -420,15 +420,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 24: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -438,15 +438,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -456,15 +456,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 26: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -474,15 +474,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -492,15 +492,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -510,15 +510,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 29: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -528,15 +528,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -546,15 +546,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 31: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -564,15 +564,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -582,15 +582,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -600,15 +600,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 34: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -618,15 +618,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -636,15 +636,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 36: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -654,15 +654,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -672,15 +672,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -690,15 +690,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 39: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -708,15 +708,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -726,15 +726,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 41: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -744,15 +744,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -762,15 +762,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -780,15 +780,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 44: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -798,15 +798,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -816,15 +816,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "An engineering student is reviewing a Engineering Measurement task. Which action should be taken first to apply measurement effectively?",
+    "prompt": "Case 46: During a Engineering Measurement task, a student must choose an approach before proceeding. Which choice best applies measurement?",
     "options": [
-      "report a value with appropriate units and precision",
-      "Choose the option with the largest numerical value without checking context",
+      "report a measured quantity with appropriate units, precision and uncertainty",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with report a value with appropriate units and precision establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on measurement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -834,15 +834,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "A team obtains an unexpected result while working on Engineering Measurement. Which response is most consistent with measurement?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Engineering Measurement. What response best reflects measurement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to measurement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -852,15 +852,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "Which statement would be the most defensible conclusion about measurement in an engineering report on Engineering Measurement?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Measurement when applying measurement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -870,15 +870,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Measurement. Which choice best reflects measurement?",
+    "prompt": "Case 49: An engineering student must make a decision involving Engineering Measurement. Which decision rule best represents measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies measurement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of measurement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -888,15 +888,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Measurement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound measurement when working on Module 1 (Engineering Measurement)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Engineering Measurement exercise. Which action most directly demonstrates sound measurement?",
     "options": [
-      "report a value with appropriate units and precision",
+      "report a measured quantity with appropriate units, precision and uncertainty",
       "omit units",
-      "report unsupported digits",
+      "report unsupported significant digits",
       "change units without conversion"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of measurement and supports defensible engineering work.",
+    "explanation": "The first option applies measurement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -906,15 +906,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 01: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -924,15 +924,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -942,15 +942,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -960,15 +960,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 04: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -978,15 +978,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -996,15 +996,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 06: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1014,15 +1014,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1032,15 +1032,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1050,15 +1050,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 09: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1068,15 +1068,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1086,15 +1086,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 11: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1104,15 +1104,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1122,15 +1122,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1140,15 +1140,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 14: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1158,15 +1158,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1176,15 +1176,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 16: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1194,15 +1194,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1212,15 +1212,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1230,15 +1230,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 19: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1248,15 +1248,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1266,15 +1266,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 21: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1284,15 +1284,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1302,15 +1302,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1320,15 +1320,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 24: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1338,15 +1338,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1356,15 +1356,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 26: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1374,15 +1374,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1392,15 +1392,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1410,15 +1410,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 29: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1428,15 +1428,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1446,15 +1446,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 31: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1464,15 +1464,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1482,15 +1482,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1500,15 +1500,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 34: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1518,15 +1518,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1536,15 +1536,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 36: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1554,15 +1554,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1572,15 +1572,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1590,15 +1590,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 39: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1608,15 +1608,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1626,15 +1626,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 41: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1644,15 +1644,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1662,15 +1662,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1680,15 +1680,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 44: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1698,15 +1698,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1716,15 +1716,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "An engineering student is reviewing a Engineering Materials task. Which action should be taken first to apply materials selection effectively?",
+    "prompt": "Case 46: During a Engineering Materials task, a student must choose an approach before proceeding. Which choice best applies materials selection?",
     "options": [
-      "match properties to service requirements",
-      "Choose the option with the largest numerical value without checking context",
+      "match material properties to service conditions and constraints",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with match properties to service requirements establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on materials selection, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1734,15 +1734,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "A team obtains an unexpected result while working on Engineering Materials. Which response is most consistent with materials selection?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Engineering Materials. What response best reflects materials selection?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "choose by appearance alone",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to materials selection.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1752,15 +1752,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "Which statement would be the most defensible conclusion about materials selection in an engineering report on Engineering Materials?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Materials when applying materials selection?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "choose by appearance alone",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1770,15 +1770,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Materials. Which choice best reflects materials selection?",
+    "prompt": "Case 49: An engineering student must make a decision involving Engineering Materials. Which decision rule best represents materials selection?",
     "options": [
-      "match properties to service requirements",
+      "match material properties to service conditions and constraints",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies materials selection while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of materials selection.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1788,15 +1788,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Materials",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound materials selection when working on Module 2 (Engineering Materials)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Engineering Materials exercise. Which action most directly demonstrates sound materials selection?",
     "options": [
-      "match properties to service requirements",
-      "choose by appearance alone",
+      "match material properties to service conditions and constraints",
+      "choose by appearance",
       "ignore temperature",
-      "ignore loading conditions"
+      "ignore loading environment"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of materials selection and supports defensible engineering work.",
+    "explanation": "The first option applies materials selection directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1806,15 +1806,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 01: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1824,15 +1824,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1842,15 +1842,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1860,15 +1860,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 04: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1878,15 +1878,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1896,15 +1896,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 06: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1914,15 +1914,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1932,15 +1932,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1950,15 +1950,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 09: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1968,15 +1968,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1986,15 +1986,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 11: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2004,15 +2004,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2022,15 +2022,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2040,15 +2040,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 14: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2058,15 +2058,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2076,15 +2076,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 16: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2094,15 +2094,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2112,15 +2112,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2130,15 +2130,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 19: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2148,15 +2148,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2166,15 +2166,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 21: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2184,15 +2184,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2202,15 +2202,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2220,15 +2220,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 24: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2238,15 +2238,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2256,15 +2256,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 26: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2274,15 +2274,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2292,15 +2292,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2310,15 +2310,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 29: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2328,15 +2328,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2346,15 +2346,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 31: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2364,15 +2364,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2382,15 +2382,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2400,15 +2400,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 34: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2418,15 +2418,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2436,15 +2436,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 36: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2454,15 +2454,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2472,15 +2472,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2490,15 +2490,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 39: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2508,15 +2508,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2526,15 +2526,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 41: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2544,15 +2544,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2562,15 +2562,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2580,15 +2580,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 44: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2598,15 +2598,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2616,15 +2616,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "An engineering student is reviewing a Basic Electrical Systems task. Which action should be taken first to apply electrical circuits effectively?",
+    "prompt": "Case 46: During a Basic Electrical Systems task, a student must choose an approach before proceeding. Which choice best applies electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "apply circuit laws consistently with units and polarity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with apply ohm’s law and circuit relationships consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on electrical circuits, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2634,15 +2634,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "A team obtains an unexpected result while working on Basic Electrical Systems. Which response is most consistent with electrical circuits?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Basic Electrical Systems. What response best reflects electrical circuits?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to electrical circuits.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2652,15 +2652,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "Which statement would be the most defensible conclusion about electrical circuits in an engineering report on Basic Electrical Systems?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Basic Electrical Systems when applying electrical circuits?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2670,15 +2670,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "A first-year engineering team must make a decision involving Basic Electrical Systems. Which choice best reflects electrical circuits?",
+    "prompt": "Case 49: An engineering student must make a decision involving Basic Electrical Systems. Which decision rule best represents electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies electrical circuits while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of electrical circuits.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2688,15 +2688,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Basic Electrical Systems",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound electrical circuits when working on Module 3 (Basic Electrical Systems)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Basic Electrical Systems exercise. Which action most directly demonstrates sound electrical circuits?",
     "options": [
-      "apply Ohm’s law and circuit relationships consistently",
+      "apply circuit laws consistently with units and polarity",
       "add parallel resistances directly",
-      "ignore polarity in every case",
-      "mix voltage and current units"
+      "mix current and voltage units",
+      "ignore circuit topology"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of electrical circuits and supports defensible engineering work.",
+    "explanation": "The first option applies electrical circuits directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2706,15 +2706,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 01: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2724,15 +2724,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2742,15 +2742,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2760,15 +2760,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 04: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2778,15 +2778,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2796,15 +2796,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 06: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2814,15 +2814,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2832,15 +2832,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2850,15 +2850,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 09: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2868,15 +2868,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2886,15 +2886,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 11: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2904,15 +2904,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2922,15 +2922,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2940,15 +2940,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 14: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2958,15 +2958,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2976,15 +2976,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 16: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2994,15 +2994,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3012,15 +3012,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3030,15 +3030,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 19: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3048,15 +3048,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3066,15 +3066,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 21: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3084,15 +3084,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3102,15 +3102,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3120,15 +3120,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 24: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3138,15 +3138,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3156,15 +3156,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 26: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3174,15 +3174,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3192,15 +3192,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3210,15 +3210,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 29: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3228,15 +3228,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3246,15 +3246,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 31: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3264,15 +3264,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3282,15 +3282,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3300,15 +3300,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 34: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3318,15 +3318,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3336,15 +3336,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 36: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3354,15 +3354,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3372,15 +3372,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3390,15 +3390,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 39: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3408,15 +3408,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3426,15 +3426,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 41: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3444,15 +3444,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3462,15 +3462,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3480,15 +3480,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 44: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3498,15 +3498,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3516,15 +3516,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "An engineering student is reviewing a Mechanical Systems & Motion task. Which action should be taken first to apply mechanical motion effectively?",
+    "prompt": "Case 46: During a Mechanical Systems & Motion task, a student must choose an approach before proceeding. Which choice best applies mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "Choose the option with the largest numerical value without checking context",
+      "relate displacement, velocity, acceleration and time consistently",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with relate displacement, velocity and acceleration consistently establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on mechanical motion, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3534,15 +3534,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A team obtains an unexpected result while working on Mechanical Systems & Motion. Which response is most consistent with mechanical motion?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Mechanical Systems & Motion. What response best reflects mechanical motion?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to mechanical motion.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3552,15 +3552,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "Which statement would be the most defensible conclusion about mechanical motion in an engineering report on Mechanical Systems & Motion?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Mechanical Systems & Motion when applying mechanical motion?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3570,15 +3570,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "A first-year engineering team must make a decision involving Mechanical Systems & Motion. Which choice best reflects mechanical motion?",
+    "prompt": "Case 49: An engineering student must make a decision involving Mechanical Systems & Motion. Which decision rule best represents mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
+      "relate displacement, velocity, acceleration and time consistently",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies mechanical motion while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of mechanical motion.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3588,15 +3588,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Mechanical Systems & Motion",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound mechanical motion when working on Module 4 (Mechanical Systems & Motion)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Mechanical Systems & Motion exercise. Which action most directly demonstrates sound mechanical motion?",
     "options": [
-      "relate displacement, velocity and acceleration consistently",
-      "confuse distance with acceleration",
-      "ignore time",
-      "treat velocity as always positive"
+      "relate displacement, velocity, acceleration and time consistently",
+      "treat velocity as distance",
+      "ignore direction where it matters",
+      "confuse acceleration with speed"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of mechanical motion and supports defensible engineering work.",
+    "explanation": "The first option applies mechanical motion directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3606,15 +3606,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 01: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3624,15 +3624,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3642,15 +3642,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3660,15 +3660,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 04: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3678,15 +3678,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3696,15 +3696,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 06: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3714,15 +3714,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3732,15 +3732,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3750,15 +3750,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 09: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3768,15 +3768,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3786,15 +3786,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 11: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3804,15 +3804,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3822,15 +3822,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3840,15 +3840,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 14: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3858,15 +3858,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3876,15 +3876,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 16: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3894,15 +3894,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3912,15 +3912,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3930,15 +3930,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 19: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3948,15 +3948,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3966,15 +3966,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 21: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3984,15 +3984,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4002,15 +4002,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4020,15 +4020,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 24: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4038,15 +4038,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4056,15 +4056,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 26: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4074,15 +4074,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4092,15 +4092,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4110,15 +4110,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 29: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4128,15 +4128,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4146,15 +4146,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 31: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4164,15 +4164,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4182,15 +4182,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4200,15 +4200,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 34: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4218,15 +4218,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4236,15 +4236,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 36: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4254,15 +4254,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4272,15 +4272,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4290,15 +4290,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 39: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4308,15 +4308,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4326,15 +4326,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 41: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4344,15 +4344,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4362,15 +4362,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4380,15 +4380,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 44: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4398,15 +4398,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4416,15 +4416,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "An engineering student is reviewing a Thermal Engineering Basics task. Which action should be taken first to apply thermal systems effectively?",
+    "prompt": "Case 46: During a Thermal Engineering Basics task, a student must choose an approach before proceeding. Which choice best applies thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "Choose the option with the largest numerical value without checking context",
+      "distinguish temperature from heat transfer and energy",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish heat transfer from temperature establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on thermal systems, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4434,15 +4434,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A team obtains an unexpected result while working on Thermal Engineering Basics. Which response is most consistent with thermal systems?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Thermal Engineering Basics. What response best reflects thermal systems?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "assume temperature is energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to thermal systems.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4452,15 +4452,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "Which statement would be the most defensible conclusion about thermal systems in an engineering report on Thermal Engineering Basics?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Thermal Engineering Basics when applying thermal systems?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "assume temperature is energy",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4470,15 +4470,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "A first-year engineering team must make a decision involving Thermal Engineering Basics. Which choice best reflects thermal systems?",
+    "prompt": "Case 49: An engineering student must make a decision involving Thermal Engineering Basics. Which decision rule best represents thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
+      "distinguish temperature from heat transfer and energy",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies thermal systems while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of thermal systems.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4488,15 +4488,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Thermal Engineering Basics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound thermal systems when working on Module 5 (Thermal Engineering Basics)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Thermal Engineering Basics exercise. Which action most directly demonstrates sound thermal systems?",
     "options": [
-      "distinguish heat transfer from temperature",
-      "assume temperature is energy",
+      "distinguish temperature from heat transfer and energy",
+      "treat temperature as an amount of heat",
       "ignore boundary conditions",
-      "equate heat and temperature numerically"
+      "assume heat always flows from a lower temperature"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of thermal systems and supports defensible engineering work.",
+    "explanation": "The first option applies thermal systems directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4506,15 +4506,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 01: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4524,15 +4524,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4542,15 +4542,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4560,15 +4560,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 04: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4578,15 +4578,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4596,15 +4596,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 06: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4614,15 +4614,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4632,15 +4632,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4650,15 +4650,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 09: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4668,15 +4668,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4686,15 +4686,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 11: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4704,15 +4704,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4722,15 +4722,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4740,15 +4740,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 14: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4758,15 +4758,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4776,15 +4776,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 16: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4794,15 +4794,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4812,15 +4812,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4830,15 +4830,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 19: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4848,15 +4848,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4866,15 +4866,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 21: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4884,15 +4884,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4902,15 +4902,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4920,15 +4920,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 24: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4938,15 +4938,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4956,15 +4956,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 26: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4974,15 +4974,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4992,15 +4992,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5010,15 +5010,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 29: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5028,15 +5028,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5046,15 +5046,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 31: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5064,15 +5064,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5082,15 +5082,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5100,15 +5100,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 34: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5118,15 +5118,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5136,15 +5136,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 36: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5154,15 +5154,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5172,15 +5172,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5190,15 +5190,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 39: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5208,15 +5208,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5226,15 +5226,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 41: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5244,15 +5244,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5262,15 +5262,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5280,15 +5280,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 44: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5298,15 +5298,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5316,15 +5316,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "An engineering student is reviewing a Digital Systems & Logic task. Which action should be taken first to apply digital logic effectively?",
+    "prompt": "Case 46: During a Digital Systems & Logic task, a student must choose an approach before proceeding. Which choice best applies digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate boolean relationships from the defined inputs establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on digital logic, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5334,15 +5334,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "A team obtains an unexpected result while working on Digital Systems & Logic. Which response is most consistent with digital logic?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Digital Systems & Logic. What response best reflects digital logic?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "guess from gate appearance",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to digital logic.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5352,15 +5352,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "Which statement would be the most defensible conclusion about digital logic in an engineering report on Digital Systems & Logic?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Digital Systems & Logic when applying digital logic?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "guess from gate appearance",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5370,15 +5370,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "A first-year engineering team must make a decision involving Digital Systems & Logic. Which choice best reflects digital logic?",
+    "prompt": "Case 49: An engineering student must make a decision involving Digital Systems & Logic. Which decision rule best represents digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
+      "evaluate Boolean output from the stated gate structure and inputs",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies digital logic while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of digital logic.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5388,15 +5388,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Digital Systems & Logic",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound digital logic when working on Module 6 (Digital Systems & Logic)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Digital Systems & Logic exercise. Which action most directly demonstrates sound digital logic?",
     "options": [
-      "evaluate Boolean relationships from the defined inputs",
-      "guess from gate appearance",
+      "evaluate Boolean output from the stated gate structure and inputs",
+      "guess from gate shape",
       "ignore input states",
-      "treat every gate as OR"
+      "assume every gate behaves as OR"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of digital logic and supports defensible engineering work.",
+    "explanation": "The first option applies digital logic directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5406,15 +5406,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 01: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5424,15 +5424,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5442,15 +5442,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5460,15 +5460,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 04: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5478,15 +5478,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5496,15 +5496,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 06: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5514,15 +5514,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5532,15 +5532,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5550,15 +5550,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 09: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5568,15 +5568,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5586,15 +5586,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 11: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5604,15 +5604,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5622,15 +5622,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5640,15 +5640,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 14: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5658,15 +5658,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5676,15 +5676,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 16: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5694,15 +5694,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5712,15 +5712,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5730,15 +5730,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 19: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5748,15 +5748,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5766,15 +5766,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 21: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5784,15 +5784,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5802,15 +5802,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5820,15 +5820,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 24: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5838,15 +5838,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5856,15 +5856,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 26: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5874,15 +5874,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5892,15 +5892,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5910,15 +5910,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 29: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5928,15 +5928,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5946,15 +5946,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 31: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5964,15 +5964,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5982,15 +5982,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6000,15 +6000,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 34: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6018,15 +6018,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6036,15 +6036,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 36: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6054,15 +6054,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6072,15 +6072,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6090,15 +6090,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 39: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6108,15 +6108,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6126,15 +6126,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 41: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6144,15 +6144,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6162,15 +6162,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6180,15 +6180,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 44: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6198,15 +6198,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6216,15 +6216,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "An engineering student is reviewing a Engineering Design Process task. Which action should be taken first to apply engineering design effectively?",
+    "prompt": "Case 46: During a Engineering Design Process task, a student must choose an approach before proceeding. Which choice best applies engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "Choose the option with the largest numerical value without checking context",
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with translate needs into measurable requirements and constraints establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering design, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6234,15 +6234,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "A team obtains an unexpected result while working on Engineering Design Process. Which response is most consistent with engineering design?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Engineering Design Process. What response best reflects engineering design?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6252,15 +6252,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "Which statement would be the most defensible conclusion about engineering design in an engineering report on Engineering Design Process?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Design Process when applying engineering design?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6270,15 +6270,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Design Process. Which choice best reflects engineering design?",
+    "prompt": "Case 49: An engineering student must make a decision involving Engineering Design Process. Which decision rule best represents engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
+      "translate needs into measurable requirements and constraints before selecting solutions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering design while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering design.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6288,15 +6288,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Design Process",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering design when working on Module 7 (Engineering Design Process)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Engineering Design Process exercise. Which action most directly demonstrates sound engineering design?",
     "options": [
-      "translate needs into measurable requirements and constraints",
-      "select a solution before defining requirements",
-      "ignore constraints",
-      "optimize one metric only"
+      "translate needs into measurable requirements and constraints before selecting solutions",
+      "choose a product immediately",
+      "optimise one metric only",
+      "ignore verification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering design and supports defensible engineering work.",
+    "explanation": "The first option applies engineering design directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6306,15 +6306,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 01: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6324,15 +6324,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6342,15 +6342,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6360,15 +6360,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 04: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6378,15 +6378,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6396,15 +6396,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 06: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6414,15 +6414,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6432,15 +6432,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6450,15 +6450,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 09: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6468,15 +6468,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6486,15 +6486,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 11: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6504,15 +6504,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6522,15 +6522,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6540,15 +6540,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 14: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6558,15 +6558,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6576,15 +6576,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 16: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6594,15 +6594,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6612,15 +6612,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6630,15 +6630,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 19: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6648,15 +6648,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6666,15 +6666,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 21: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6684,15 +6684,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6702,15 +6702,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6720,15 +6720,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 24: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6738,15 +6738,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6756,15 +6756,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 26: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6774,15 +6774,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6792,15 +6792,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6810,15 +6810,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 29: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6828,15 +6828,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6846,15 +6846,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 31: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6864,15 +6864,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6882,15 +6882,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6900,15 +6900,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 34: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6918,15 +6918,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6936,15 +6936,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 36: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6954,15 +6954,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6972,15 +6972,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6990,15 +6990,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 39: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7008,15 +7008,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7026,15 +7026,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 41: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7044,15 +7044,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7062,15 +7062,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7080,15 +7080,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 44: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7098,15 +7098,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7116,15 +7116,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "An engineering student is reviewing a Sustainability in Engineering task. Which action should be taken first to apply sustainability effectively?",
+    "prompt": "Case 46: During a Sustainability in Engineering task, a student must choose an approach before proceeding. Which choice best applies sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
-      "Choose the option with the largest numerical value without checking context",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider life-cycle impacts and resource use establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on sustainability, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7134,15 +7134,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "A team obtains an unexpected result while working on Sustainability in Engineering. Which response is most consistent with sustainability?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Sustainability in Engineering. What response best reflects sustainability?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to sustainability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7152,15 +7152,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "Which statement would be the most defensible conclusion about sustainability in an engineering report on Sustainability in Engineering?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Sustainability in Engineering when applying sustainability?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7170,15 +7170,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "A first-year engineering team must make a decision involving Sustainability in Engineering. Which choice best reflects sustainability?",
+    "prompt": "Case 49: An engineering student must make a decision involving Sustainability in Engineering. Which decision rule best represents sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies sustainability while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of sustainability.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7188,15 +7188,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Sustainability in Engineering",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound sustainability when working on Module 8 (Sustainability in Engineering)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Sustainability in Engineering exercise. Which action most directly demonstrates sound sustainability?",
     "options": [
-      "consider life-cycle impacts and resource use",
+      "consider energy, materials, life-cycle impacts and end-of-life effects",
       "consider purchase price only",
-      "ignore end-of-life",
-      "ignore energy consumption"
+      "ignore disposal",
+      "ignore operating energy"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of sustainability and supports defensible engineering work.",
+    "explanation": "The first option applies sustainability directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7206,15 +7206,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 01: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7224,15 +7224,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7242,15 +7242,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7260,15 +7260,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 04: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7278,15 +7278,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7296,15 +7296,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 06: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7314,15 +7314,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7332,15 +7332,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7350,15 +7350,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 09: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7368,15 +7368,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7386,15 +7386,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 11: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7404,15 +7404,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7422,15 +7422,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7440,15 +7440,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 14: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7458,15 +7458,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7476,15 +7476,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 16: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7494,15 +7494,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7512,15 +7512,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7530,15 +7530,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 19: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7548,15 +7548,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7566,15 +7566,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 21: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7584,15 +7584,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7602,15 +7602,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7620,15 +7620,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 24: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7638,15 +7638,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7656,15 +7656,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 26: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7674,15 +7674,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7692,15 +7692,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7710,15 +7710,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 29: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7728,15 +7728,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7746,15 +7746,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 31: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7764,15 +7764,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7782,15 +7782,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7800,15 +7800,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 34: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7818,15 +7818,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7836,15 +7836,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 36: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7854,15 +7854,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7872,15 +7872,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7890,15 +7890,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 39: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7908,15 +7908,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7926,15 +7926,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 41: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7944,15 +7944,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7962,15 +7962,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7980,15 +7980,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 44: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7998,15 +7998,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8016,15 +8016,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "An engineering student is reviewing a Engineering Safety & Risk task. Which action should be taken first to apply engineering safety effectively?",
+    "prompt": "Case 46: During a Engineering Safety & Risk task, a student must choose an approach before proceeding. Which choice best applies engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
-      "Choose the option with the largest numerical value without checking context",
+      "identify hazards, assess risk and apply appropriate controls",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with identify hazards, consequences and controls establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering safety, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8034,15 +8034,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A team obtains an unexpected result while working on Engineering Safety & Risk. Which response is most consistent with engineering safety?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Engineering Safety & Risk. What response best reflects engineering safety?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering safety.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8052,15 +8052,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "Which statement would be the most defensible conclusion about engineering safety in an engineering report on Engineering Safety & Risk?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Safety & Risk when applying engineering safety?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8070,15 +8070,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Safety & Risk. Which choice best reflects engineering safety?",
+    "prompt": "Case 49: An engineering student must make a decision involving Engineering Safety & Risk. Which decision rule best represents engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering safety while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering safety.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8088,15 +8088,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Safety & Risk",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering safety when working on Module 9 (Engineering Safety & Risk)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Engineering Safety & Risk exercise. Which action most directly demonstrates sound engineering safety?",
     "options": [
-      "identify hazards, consequences and controls",
+      "identify hazards, assess risk and apply appropriate controls",
       "wait for an accident",
-      "remove warnings",
-      "assume PPE eliminates all hazards"
+      "assume PPE removes every hazard",
+      "remove warnings to simplify operation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering safety and supports defensible engineering work.",
+    "explanation": "The first option applies engineering safety directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8106,15 +8106,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 01: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8124,15 +8124,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8142,15 +8142,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8160,7 +8160,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 04: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8168,7 +8168,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8178,15 +8178,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8196,15 +8196,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 06: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8214,15 +8214,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8232,15 +8232,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8250,7 +8250,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 09: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8258,7 +8258,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8268,15 +8268,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8286,15 +8286,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 11: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8304,15 +8304,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8322,15 +8322,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8340,7 +8340,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 14: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8348,7 +8348,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8358,15 +8358,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8376,15 +8376,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 16: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8394,15 +8394,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8412,15 +8412,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8430,7 +8430,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 19: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8438,7 +8438,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8448,15 +8448,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8466,15 +8466,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 21: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8484,15 +8484,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8502,15 +8502,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8520,7 +8520,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 24: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8528,7 +8528,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8538,15 +8538,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8556,15 +8556,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 26: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8574,15 +8574,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8592,15 +8592,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8610,7 +8610,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 29: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8618,7 +8618,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8628,15 +8628,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8646,15 +8646,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 31: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8664,15 +8664,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8682,15 +8682,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8700,7 +8700,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 34: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8708,7 +8708,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8718,15 +8718,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8736,15 +8736,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 36: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8754,15 +8754,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8772,15 +8772,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8790,7 +8790,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 39: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8798,7 +8798,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8808,15 +8808,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8826,15 +8826,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 41: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8844,15 +8844,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8862,15 +8862,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8880,7 +8880,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 44: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8888,7 +8888,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8898,15 +8898,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8916,15 +8916,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "An engineering student is reviewing a Engineering Tools & Documentation task. Which action should be taken first to apply technical documentation effectively?",
+    "prompt": "Case 46: During a Engineering Tools & Documentation task, a student must choose an approach before proceeding. Which choice best applies technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make assumptions, units, revisions and evidence traceable establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on technical documentation, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8934,15 +8934,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A team obtains an unexpected result while working on Engineering Tools & Documentation. Which response is most consistent with technical documentation?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Engineering Tools & Documentation. What response best reflects technical documentation?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to technical documentation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8952,15 +8952,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "Which statement would be the most defensible conclusion about technical documentation in an engineering report on Engineering Tools & Documentation?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Engineering Tools & Documentation when applying technical documentation?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8970,7 +8970,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "A first-year engineering team must make a decision involving Engineering Tools & Documentation. Which choice best reflects technical documentation?",
+    "prompt": "Case 49: An engineering student must make a decision involving Engineering Tools & Documentation. Which decision rule best represents technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "Select the fastest option regardless of requirements",
@@ -8978,7 +8978,7 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies technical documentation while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of technical documentation.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8988,15 +8988,15 @@ export const PREPARED_CORE_ENGINEERING_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Engineering Tools & Documentation",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound technical documentation when working on Module 10 (Engineering Tools & Documentation)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Engineering Tools & Documentation exercise. Which action most directly demonstrates sound technical documentation?",
     "options": [
       "make assumptions, units, revisions and evidence traceable",
       "hide assumptions",
-      "omit revision status",
-      "use ambiguous labels"
+      "omit revision identifiers",
+      "use ambiguous component labels"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of technical documentation and supports defensible engineering work.",
+    "explanation": "The first option applies technical documentation directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   }

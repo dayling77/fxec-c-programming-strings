@@ -6,15 +6,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 01: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -24,7 +24,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -32,7 +32,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -42,15 +42,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -60,15 +60,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 04: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -78,15 +78,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -96,15 +96,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 06: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -114,7 +114,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -122,7 +122,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -132,15 +132,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -150,15 +150,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 09: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -168,15 +168,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -186,15 +186,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 11: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -204,7 +204,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -212,7 +212,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -222,15 +222,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -240,15 +240,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 14: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -258,15 +258,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -276,15 +276,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 16: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -294,7 +294,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -302,7 +302,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -312,15 +312,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -330,15 +330,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 19: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -348,15 +348,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -366,15 +366,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 21: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -384,7 +384,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -392,7 +392,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -402,15 +402,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -420,15 +420,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 24: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -438,15 +438,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -456,15 +456,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 26: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -474,7 +474,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -482,7 +482,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -492,15 +492,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -510,15 +510,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 29: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -528,15 +528,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -546,15 +546,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 31: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -564,7 +564,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -572,7 +572,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -582,15 +582,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -600,15 +600,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 34: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -618,15 +618,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -636,15 +636,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 36: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -654,7 +654,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -662,7 +662,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -672,15 +672,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -690,15 +690,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 39: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -708,15 +708,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -726,15 +726,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 41: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -744,7 +744,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -752,7 +752,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -762,15 +762,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -780,15 +780,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 44: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -798,15 +798,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -816,15 +816,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "An engineering student is reviewing a Observation & Evidence task. Which action should be taken first to apply evidence effectively?",
+    "prompt": "Case 46: During a Observation & Evidence task, a student must choose an approach before proceeding. Which choice best applies evidence?",
     "options": [
-      "use observations that directly bear on the claim",
-      "Choose the option with the largest numerical value without checking context",
+      "use observations that directly bear on the claim and can be independently checked",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with use observations that directly bear on the claim establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on evidence, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -834,7 +834,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "A team obtains an unexpected result while working on Observation & Evidence. Which response is most consistent with evidence?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Observation & Evidence. What response best reflects evidence?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use popularity as evidence",
@@ -842,7 +842,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to evidence.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -852,15 +852,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "Which statement would be the most defensible conclusion about evidence in an engineering report on Observation & Evidence?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Observation & Evidence when applying evidence?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -870,15 +870,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "A first-year engineering team must make a decision involving Observation & Evidence. Which choice best reflects evidence?",
+    "prompt": "Case 49: An engineering student must make a decision involving Observation & Evidence. Which decision rule best represents evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies evidence while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of evidence.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -888,15 +888,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Observation & Evidence",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound evidence when working on Module 1 (Observation & Evidence)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Observation & Evidence exercise. Which action most directly demonstrates sound evidence?",
     "options": [
-      "use observations that directly bear on the claim",
+      "use observations that directly bear on the claim and can be independently checked",
       "use popularity as evidence",
       "use unrelated facts",
       "use an unsupported assumption"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of evidence and supports defensible engineering work.",
+    "explanation": "The first option applies evidence directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -906,15 +906,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 01: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -924,7 +924,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -932,7 +932,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -942,15 +942,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -960,15 +960,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 04: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -978,15 +978,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -996,15 +996,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 06: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1014,7 +1014,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1022,7 +1022,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1032,15 +1032,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1050,15 +1050,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 09: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1068,15 +1068,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1086,15 +1086,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 11: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1104,7 +1104,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1112,7 +1112,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1122,15 +1122,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1140,15 +1140,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 14: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1158,15 +1158,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1176,15 +1176,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 16: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1194,7 +1194,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1202,7 +1202,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1212,15 +1212,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1230,15 +1230,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 19: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1248,15 +1248,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1266,15 +1266,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 21: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1284,7 +1284,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1292,7 +1292,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1302,15 +1302,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1320,15 +1320,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 24: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1338,15 +1338,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1356,15 +1356,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 26: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1374,7 +1374,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1382,7 +1382,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1392,15 +1392,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1410,15 +1410,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 29: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1428,15 +1428,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1446,15 +1446,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 31: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1464,7 +1464,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1472,7 +1472,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1482,15 +1482,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1500,15 +1500,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 34: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1518,15 +1518,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -1536,15 +1536,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 36: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1554,7 +1554,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1562,7 +1562,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1572,15 +1572,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1590,15 +1590,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 39: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1608,15 +1608,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1626,15 +1626,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 41: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1644,7 +1644,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1652,7 +1652,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1662,15 +1662,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1680,15 +1680,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 44: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1698,15 +1698,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1716,15 +1716,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "An engineering student is reviewing a Data Quality task. Which action should be taken first to apply data quality effectively?",
+    "prompt": "Case 46: During a Data Quality task, a student must choose an approach before proceeding. Which choice best applies data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
-      "Choose the option with the largest numerical value without checking context",
+      "check accuracy, completeness, consistency, provenance and collection method",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with check completeness, consistency, accuracy and provenance establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on data quality, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1734,7 +1734,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "A team obtains an unexpected result while working on Data Quality. Which response is most consistent with data quality?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Data Quality. What response best reflects data quality?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "accept every value equally",
@@ -1742,7 +1742,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to data quality.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1752,15 +1752,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "Which statement would be the most defensible conclusion about data quality in an engineering report on Data Quality?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Data Quality when applying data quality?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1770,15 +1770,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "A first-year engineering team must make a decision involving Data Quality. Which choice best reflects data quality?",
+    "prompt": "Case 49: An engineering student must make a decision involving Data Quality. Which decision rule best represents data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies data quality while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of data quality.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1788,15 +1788,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Data Quality",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound data quality when working on Module 2 (Data Quality)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Data Quality exercise. Which action most directly demonstrates sound data quality?",
     "options": [
-      "check completeness, consistency, accuracy and provenance",
+      "check accuracy, completeness, consistency, provenance and collection method",
       "accept every value equally",
       "ignore missing data",
       "remove inconvenient values without justification"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of data quality and supports defensible engineering work.",
+    "explanation": "The first option applies data quality directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -1806,15 +1806,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 01: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1824,15 +1824,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1842,15 +1842,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1860,15 +1860,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 04: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1878,15 +1878,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1896,15 +1896,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 06: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1914,15 +1914,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1932,15 +1932,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1950,15 +1950,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 09: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1968,15 +1968,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -1986,15 +1986,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 11: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2004,15 +2004,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2022,15 +2022,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2040,15 +2040,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 14: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2058,15 +2058,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2076,15 +2076,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 16: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2094,15 +2094,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2112,15 +2112,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2130,15 +2130,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 19: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2148,15 +2148,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2166,15 +2166,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 21: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2184,15 +2184,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2202,15 +2202,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2220,15 +2220,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 24: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2238,15 +2238,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2256,15 +2256,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 26: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2274,15 +2274,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2292,15 +2292,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2310,15 +2310,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 29: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2328,15 +2328,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2346,15 +2346,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 31: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2364,15 +2364,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2382,15 +2382,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2400,15 +2400,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 34: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2418,15 +2418,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2436,15 +2436,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 36: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2454,15 +2454,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2472,15 +2472,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2490,15 +2490,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 39: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2508,15 +2508,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2526,15 +2526,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 41: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2544,15 +2544,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2562,15 +2562,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2580,15 +2580,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 44: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2598,15 +2598,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2616,15 +2616,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "An engineering student is reviewing a Trends & Relationships task. Which action should be taken first to apply trend analysis effectively?",
+    "prompt": "Case 46: During a Trends & Relationships task, a student must choose an approach before proceeding. Which choice best applies trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
-      "Choose the option with the largest numerical value without checking context",
+      "compare multiple observations while considering scale, variability and context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with separate trend from random variation using multiple observations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on trend analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2634,15 +2634,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "A team obtains an unexpected result while working on Trends & Relationships. Which response is most consistent with trend analysis?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Trends & Relationships. What response best reflects trend analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to trend analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2652,15 +2652,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "Which statement would be the most defensible conclusion about trend analysis in an engineering report on Trends & Relationships?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Trends & Relationships when applying trend analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2670,15 +2670,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "A first-year engineering team must make a decision involving Trends & Relationships. Which choice best reflects trend analysis?",
+    "prompt": "Case 49: An engineering student must make a decision involving Trends & Relationships. Which decision rule best represents trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies trend analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of trend analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2688,15 +2688,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Trends & Relationships",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound trend analysis when working on Module 3 (Trends & Relationships)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Trends & Relationships exercise. Which action most directly demonstrates sound trend analysis?",
     "options": [
-      "separate trend from random variation using multiple observations",
+      "compare multiple observations while considering scale, variability and context",
       "infer a trend from one point",
-      "ignore scale",
-      "confuse correlation with certainty"
+      "ignore the axis scale",
+      "treat correlation as proof of causation"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of trend analysis and supports defensible engineering work.",
+    "explanation": "The first option applies trend analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -2706,15 +2706,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 01: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2724,7 +2724,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -2732,7 +2732,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2742,15 +2742,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2760,7 +2760,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 04: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -2768,7 +2768,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2778,7 +2778,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -2786,7 +2786,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2796,15 +2796,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 06: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2814,7 +2814,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -2822,7 +2822,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2832,15 +2832,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2850,7 +2850,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 09: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -2858,7 +2858,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2868,7 +2868,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -2876,7 +2876,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2886,15 +2886,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 11: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2904,7 +2904,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -2912,7 +2912,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2922,15 +2922,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2940,7 +2940,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 14: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -2948,7 +2948,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2958,7 +2958,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -2966,7 +2966,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -2976,15 +2976,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 16: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -2994,7 +2994,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -3002,7 +3002,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3012,15 +3012,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3030,7 +3030,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 19: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -3038,7 +3038,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3048,7 +3048,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -3056,7 +3056,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3066,15 +3066,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 21: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3084,7 +3084,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -3092,7 +3092,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3102,15 +3102,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3120,7 +3120,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 24: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -3128,7 +3128,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3138,7 +3138,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -3146,7 +3146,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3156,15 +3156,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 26: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3174,7 +3174,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -3182,7 +3182,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3192,15 +3192,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3210,7 +3210,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 29: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -3218,7 +3218,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3228,7 +3228,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -3236,7 +3236,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3246,15 +3246,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 31: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3264,7 +3264,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -3272,7 +3272,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3282,15 +3282,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3300,7 +3300,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 34: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -3308,7 +3308,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3318,7 +3318,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -3326,7 +3326,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3336,15 +3336,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 36: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3354,7 +3354,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -3362,7 +3362,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3372,15 +3372,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3390,7 +3390,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 39: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -3398,7 +3398,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3408,7 +3408,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -3416,7 +3416,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3426,15 +3426,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 41: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3444,7 +3444,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -3452,7 +3452,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3462,15 +3462,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3480,7 +3480,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 44: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -3488,7 +3488,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3498,7 +3498,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -3506,7 +3506,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3516,15 +3516,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "An engineering student is reviewing a Inference & Hypothesis task. Which action should be taken first to apply hypothesis testing effectively?",
+    "prompt": "Case 46: During a Inference & Hypothesis task, a student must choose an approach before proceeding. Which choice best applies hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with state a testable explanation and identify evidence that could disconfirm it establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on hypothesis testing, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3534,7 +3534,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "A team obtains an unexpected result while working on Inference & Hypothesis. Which response is most consistent with hypothesis testing?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Inference & Hypothesis. What response best reflects hypothesis testing?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "make an unfalsifiable claim",
@@ -3542,7 +3542,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to hypothesis testing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3552,15 +3552,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "Which statement would be the most defensible conclusion about hypothesis testing in an engineering report on Inference & Hypothesis?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Inference & Hypothesis when applying hypothesis testing?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "make an unfalsifiable claim",
       "collect only supporting evidence",
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3570,7 +3570,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "A first-year engineering team must make a decision involving Inference & Hypothesis. Which choice best reflects hypothesis testing?",
+    "prompt": "Case 49: An engineering student must make a decision involving Inference & Hypothesis. Which decision rule best represents hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "Select the fastest option regardless of requirements",
@@ -3578,7 +3578,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies hypothesis testing while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of hypothesis testing.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3588,7 +3588,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Inference & Hypothesis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound hypothesis testing when working on Module 4 (Inference & Hypothesis)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Inference & Hypothesis exercise. Which action most directly demonstrates sound hypothesis testing?",
     "options": [
       "state a testable explanation and identify evidence that could disconfirm it",
       "make an unfalsifiable claim",
@@ -3596,7 +3596,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "change the hypothesis after every result"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of hypothesis testing and supports defensible engineering work.",
+    "explanation": "The first option applies hypothesis testing directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -3606,15 +3606,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 01: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3624,15 +3624,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3642,15 +3642,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3660,15 +3660,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 04: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3678,15 +3678,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3696,15 +3696,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 06: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3714,15 +3714,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3732,15 +3732,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3750,15 +3750,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 09: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3768,15 +3768,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3786,15 +3786,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 11: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3804,15 +3804,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3822,15 +3822,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3840,15 +3840,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 14: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3858,15 +3858,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -3876,15 +3876,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 16: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3894,15 +3894,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3912,15 +3912,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3930,15 +3930,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 19: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3948,15 +3948,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3966,15 +3966,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 21: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -3984,15 +3984,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4002,15 +4002,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4020,15 +4020,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 24: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4038,15 +4038,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4056,15 +4056,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 26: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4074,15 +4074,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4092,15 +4092,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4110,15 +4110,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 29: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4128,15 +4128,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4146,15 +4146,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 31: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4164,15 +4164,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4182,15 +4182,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4200,15 +4200,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 34: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4218,15 +4218,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4236,15 +4236,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 36: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4254,15 +4254,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4272,15 +4272,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4290,15 +4290,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 39: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4308,15 +4308,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4326,15 +4326,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 41: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4344,15 +4344,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4362,15 +4362,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4380,15 +4380,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 44: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4398,15 +4398,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4416,15 +4416,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "An engineering student is reviewing a Critical Reading of Technical Information task. Which action should be taken first to apply critical technical reading effectively?",
+    "prompt": "Case 46: During a Critical Reading of Technical Information task, a student must choose an approach before proceeding. Which choice best applies critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "Choose the option with the largest numerical value without checking context",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with distinguish claims, evidence, assumptions and limitations establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on critical technical reading, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4434,15 +4434,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A team obtains an unexpected result while working on Critical Reading of Technical Information. Which response is most consistent with critical technical reading?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Critical Reading of Technical Information. What response best reflects critical technical reading?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
-      "treat every sentence as fact",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to critical technical reading.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4452,15 +4452,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "Which statement would be the most defensible conclusion about critical technical reading in an engineering report on Critical Reading of Technical Information?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Critical Reading of Technical Information when applying critical technical reading?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
-      "treat every sentence as fact",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4470,15 +4470,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "A first-year engineering team must make a decision involving Critical Reading of Technical Information. Which choice best reflects critical technical reading?",
+    "prompt": "Case 49: An engineering student must make a decision involving Critical Reading of Technical Information. Which decision rule best represents critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
+      "separate claims, evidence, assumptions, limitations and conclusions",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies critical technical reading while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of critical technical reading.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4488,15 +4488,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Critical Reading of Technical Information",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound critical technical reading when working on Module 5 (Critical Reading of Technical Information)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Critical Reading of Technical Information exercise. Which action most directly demonstrates sound critical technical reading?",
     "options": [
-      "distinguish claims, evidence, assumptions and limitations",
-      "treat every sentence as fact",
+      "separate claims, evidence, assumptions, limitations and conclusions",
+      "treat every statement as proven",
       "ignore qualifiers",
-      "use the conclusion as evidence"
+      "use a conclusion as its own evidence"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of critical technical reading and supports defensible engineering work.",
+    "explanation": "The first option applies critical technical reading directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -4506,15 +4506,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 01: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4524,15 +4524,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4542,15 +4542,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4560,15 +4560,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 04: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4578,15 +4578,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4596,15 +4596,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 06: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4614,15 +4614,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4632,15 +4632,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4650,15 +4650,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 09: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4668,15 +4668,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4686,15 +4686,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 11: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4704,15 +4704,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4722,15 +4722,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4740,15 +4740,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 14: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4758,15 +4758,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -4776,15 +4776,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 16: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4794,15 +4794,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4812,15 +4812,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4830,15 +4830,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 19: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4848,15 +4848,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4866,15 +4866,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 21: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4884,15 +4884,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4902,15 +4902,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4920,15 +4920,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 24: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4938,15 +4938,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4956,15 +4956,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 26: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4974,15 +4974,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -4992,15 +4992,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5010,15 +5010,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 29: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5028,15 +5028,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5046,15 +5046,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 31: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5064,15 +5064,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5082,15 +5082,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5100,15 +5100,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 34: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5118,15 +5118,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5136,15 +5136,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 36: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5154,15 +5154,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5172,15 +5172,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5190,15 +5190,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 39: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5208,15 +5208,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5226,15 +5226,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 41: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5244,15 +5244,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5262,15 +5262,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5280,15 +5280,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 44: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5298,15 +5298,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5316,15 +5316,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "An engineering student is reviewing a Graphs & Visual Analytics task. Which action should be taken first to apply graphs effectively?",
+    "prompt": "Case 46: During a Graphs & Visual Analytics task, a student must choose an approach before proceeding. Which choice best applies graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
-      "Choose the option with the largest numerical value without checking context",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with inspect axes, units, scale and legend before interpretation establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on graphs, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5334,15 +5334,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A team obtains an unexpected result while working on Graphs & Visual Analytics. Which response is most consistent with graphs?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Graphs & Visual Analytics. What response best reflects graphs?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to graphs.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5352,15 +5352,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "Which statement would be the most defensible conclusion about graphs in an engineering report on Graphs & Visual Analytics?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Graphs & Visual Analytics when applying graphs?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5370,15 +5370,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "A first-year engineering team must make a decision involving Graphs & Visual Analytics. Which choice best reflects graphs?",
+    "prompt": "Case 49: An engineering student must make a decision involving Graphs & Visual Analytics. Which decision rule best represents graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies graphs while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of graphs.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5388,15 +5388,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Graphs & Visual Analytics",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound graphs when working on Module 6 (Graphs & Visual Analytics)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Graphs & Visual Analytics exercise. Which action most directly demonstrates sound graphs?",
     "options": [
-      "inspect axes, units, scale and legend before interpretation",
+      "inspect axes, units, scale, legend and time interval before interpreting patterns",
       "read only the tallest bar",
-      "ignore zero point",
+      "ignore the zero point",
       "compare incompatible axes"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of graphs and supports defensible engineering work.",
+    "explanation": "The first option applies graphs directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -5406,15 +5406,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 01: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5424,15 +5424,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5442,15 +5442,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5460,15 +5460,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 04: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5478,15 +5478,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5496,15 +5496,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 06: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5514,15 +5514,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5532,15 +5532,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5550,15 +5550,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 09: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5568,15 +5568,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5586,15 +5586,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 11: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5604,15 +5604,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5622,15 +5622,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5640,15 +5640,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 14: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5658,15 +5658,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -5676,15 +5676,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 16: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5694,15 +5694,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5712,15 +5712,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5730,15 +5730,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 19: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5748,15 +5748,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5766,15 +5766,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 21: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5784,15 +5784,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5802,15 +5802,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5820,15 +5820,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 24: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5838,15 +5838,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5856,15 +5856,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 26: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5874,15 +5874,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5892,15 +5892,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5910,15 +5910,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 29: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5928,15 +5928,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5946,15 +5946,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 31: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5964,15 +5964,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -5982,15 +5982,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6000,15 +6000,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 34: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6018,15 +6018,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6036,15 +6036,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 36: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6054,15 +6054,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6072,15 +6072,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6090,15 +6090,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 39: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6108,15 +6108,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6126,15 +6126,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 41: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6144,15 +6144,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6162,15 +6162,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6180,15 +6180,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 44: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6198,15 +6198,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6216,15 +6216,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "An engineering student is reviewing a Decision Analysis task. Which action should be taken first to apply decision analysis effectively?",
+    "prompt": "Case 46: During a Decision Analysis task, a student must choose an approach before proceeding. Which choice best applies decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with evaluate alternatives against criteria, uncertainty and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on decision analysis, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6234,15 +6234,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "A team obtains an unexpected result while working on Decision Analysis. Which response is most consistent with decision analysis?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Decision Analysis. What response best reflects decision analysis?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to decision analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6252,15 +6252,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "Which statement would be the most defensible conclusion about decision analysis in an engineering report on Decision Analysis?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Decision Analysis when applying decision analysis?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6270,15 +6270,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "A first-year engineering team must make a decision involving Decision Analysis. Which choice best reflects decision analysis?",
+    "prompt": "Case 49: An engineering student must make a decision involving Decision Analysis. Which decision rule best represents decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies decision analysis while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of decision analysis.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6288,15 +6288,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Decision Analysis",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound decision analysis when working on Module 7 (Decision Analysis)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Decision Analysis exercise. Which action most directly demonstrates sound decision analysis?",
     "options": [
-      "evaluate alternatives against criteria, uncertainty and consequences",
+      "evaluate alternatives against criteria, uncertainty, consequences and sensitivity",
       "choose by intuition only",
       "ignore uncertainty",
-      "optimise a single metric automatically"
+      "optimise one metric automatically"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of decision analysis and supports defensible engineering work.",
+    "explanation": "The first option applies decision analysis directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6306,15 +6306,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 01: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6324,7 +6324,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6332,7 +6332,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6342,15 +6342,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6360,15 +6360,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 04: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6378,15 +6378,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6396,15 +6396,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 06: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6414,7 +6414,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6422,7 +6422,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6432,15 +6432,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6450,15 +6450,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 09: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6468,15 +6468,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6486,15 +6486,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 11: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6504,7 +6504,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6512,7 +6512,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6522,15 +6522,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6540,15 +6540,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 14: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6558,15 +6558,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -6576,15 +6576,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 16: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6594,7 +6594,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6602,7 +6602,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6612,15 +6612,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6630,15 +6630,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 19: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6648,15 +6648,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6666,15 +6666,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 21: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6684,7 +6684,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6692,7 +6692,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6702,15 +6702,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6720,15 +6720,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 24: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6738,15 +6738,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6756,15 +6756,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 26: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6774,7 +6774,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6782,7 +6782,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6792,15 +6792,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6810,15 +6810,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 29: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6828,15 +6828,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6846,15 +6846,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 31: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6864,7 +6864,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6872,7 +6872,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6882,15 +6882,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6900,15 +6900,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 34: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6918,15 +6918,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -6936,15 +6936,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 36: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6954,7 +6954,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -6962,7 +6962,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6972,15 +6972,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -6990,15 +6990,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 39: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7008,15 +7008,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7026,15 +7026,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 41: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7044,7 +7044,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -7052,7 +7052,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7062,15 +7062,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7080,15 +7080,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 44: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7098,15 +7098,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7116,15 +7116,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "An engineering student is reviewing a Ethics & Engineering Judgement task. Which action should be taken first to apply engineering judgement effectively?",
+    "prompt": "Case 46: During a Ethics & Engineering Judgement task, a student must choose an approach before proceeding. Which choice best applies engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
-      "Choose the option with the largest numerical value without checking context",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with make decisions transparently using evidence, constraints and consequences establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on engineering judgement, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7134,7 +7134,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A team obtains an unexpected result while working on Ethics & Engineering Judgement. Which response is most consistent with engineering judgement?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Ethics & Engineering Judgement. What response best reflects engineering judgement?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "hide uncertainty",
@@ -7142,7 +7142,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to engineering judgement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7152,15 +7152,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "Which statement would be the most defensible conclusion about engineering judgement in an engineering report on Ethics & Engineering Judgement?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Ethics & Engineering Judgement when applying engineering judgement?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7170,15 +7170,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "A first-year engineering team must make a decision involving Ethics & Engineering Judgement. Which choice best reflects engineering judgement?",
+    "prompt": "Case 49: An engineering student must make a decision involving Ethics & Engineering Judgement. Which decision rule best represents engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies engineering judgement while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of engineering judgement.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7188,15 +7188,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Ethics & Engineering Judgement",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound engineering judgement when working on Module 8 (Ethics & Engineering Judgement)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Ethics & Engineering Judgement exercise. Which action most directly demonstrates sound engineering judgement?",
     "options": [
-      "make decisions transparently using evidence, constraints and consequences",
+      "make transparent decisions using evidence, assumptions, constraints and consequences",
       "hide uncertainty",
       "ignore affected stakeholders",
       "treat assumptions as measurements"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of engineering judgement and supports defensible engineering work.",
+    "explanation": "The first option applies engineering judgement directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7206,15 +7206,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 01: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7224,7 +7224,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7232,7 +7232,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7242,15 +7242,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7260,15 +7260,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 04: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7278,15 +7278,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7296,15 +7296,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 06: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7314,7 +7314,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7322,7 +7322,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7332,15 +7332,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7350,15 +7350,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 09: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7368,15 +7368,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7386,15 +7386,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 11: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7404,7 +7404,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7412,7 +7412,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7422,15 +7422,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7440,15 +7440,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 14: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7458,15 +7458,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -7476,15 +7476,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 16: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7494,7 +7494,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7502,7 +7502,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7512,15 +7512,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7530,15 +7530,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 19: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7548,15 +7548,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7566,15 +7566,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 21: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7584,7 +7584,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7592,7 +7592,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7602,15 +7602,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7620,15 +7620,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 24: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7638,15 +7638,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7656,15 +7656,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 26: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7674,7 +7674,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7682,7 +7682,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7692,15 +7692,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7710,15 +7710,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 29: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7728,15 +7728,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7746,15 +7746,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 31: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7764,7 +7764,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7772,7 +7772,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7782,15 +7782,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7800,15 +7800,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 34: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7818,15 +7818,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -7836,15 +7836,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 36: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7854,7 +7854,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7862,7 +7862,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7872,15 +7872,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7890,15 +7890,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 39: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7908,15 +7908,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7926,15 +7926,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 41: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7944,7 +7944,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -7952,7 +7952,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7962,15 +7962,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7980,15 +7980,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 44: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -7998,15 +7998,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8016,15 +8016,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "An engineering student is reviewing a Systems Thinking task. Which action should be taken first to apply systems thinking effectively?",
+    "prompt": "Case 46: During a Systems Thinking task, a student must choose an approach before proceeding. Which choice best applies systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
-      "Choose the option with the largest numerical value without checking context",
+      "consider interactions, feedback, dependencies and unintended effects",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with consider interactions, feedback and unintended effects establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on systems thinking, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8034,7 +8034,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "A team obtains an unexpected result while working on Systems Thinking. Which response is most consistent with systems thinking?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Systems Thinking. What response best reflects systems thinking?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "analyse one component in isolation",
@@ -8042,7 +8042,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to systems thinking.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8052,15 +8052,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "Which statement would be the most defensible conclusion about systems thinking in an engineering report on Systems Thinking?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Systems Thinking when applying systems thinking?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8070,15 +8070,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "A first-year engineering team must make a decision involving Systems Thinking. Which choice best reflects systems thinking?",
+    "prompt": "Case 49: An engineering student must make a decision involving Systems Thinking. Which decision rule best represents systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "Select the fastest option regardless of requirements",
       "Use an unstated criterion to justify the preferred option",
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies systems thinking while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of systems thinking.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8088,15 +8088,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Systems Thinking",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound systems thinking when working on Module 9 (Systems Thinking)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Systems Thinking exercise. Which action most directly demonstrates sound systems thinking?",
     "options": [
-      "consider interactions, feedback and unintended effects",
+      "consider interactions, feedback, dependencies and unintended effects",
       "analyse one component in isolation",
       "ignore dependencies",
       "assume local improvement is global improvement"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of systems thinking and supports defensible engineering work.",
+    "explanation": "The first option applies systems thinking directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8106,15 +8106,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 01: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8124,7 +8124,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 02: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8132,7 +8132,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8142,15 +8142,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 03: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8160,7 +8160,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 04: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8168,7 +8168,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8178,7 +8178,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 05: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8186,7 +8186,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8196,15 +8196,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 06: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8214,7 +8214,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 07: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8222,7 +8222,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8232,15 +8232,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 08: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8250,7 +8250,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 09: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8258,7 +8258,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8268,7 +8268,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 10: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8276,7 +8276,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8286,15 +8286,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 11: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8304,7 +8304,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 12: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8312,7 +8312,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8322,15 +8322,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 13: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8340,7 +8340,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 14: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8348,7 +8348,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8358,7 +8358,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "easy",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 15: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8366,7 +8366,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 45,
     "prepared": true
   },
@@ -8376,15 +8376,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 16: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8394,7 +8394,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 17: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8402,7 +8402,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8412,15 +8412,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 18: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8430,7 +8430,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 19: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8438,7 +8438,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8448,7 +8448,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 20: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8456,7 +8456,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8466,15 +8466,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 21: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8484,7 +8484,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 22: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8492,7 +8492,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8502,15 +8502,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 23: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8520,7 +8520,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 24: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8528,7 +8528,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8538,7 +8538,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 25: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8546,7 +8546,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8556,15 +8556,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 26: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8574,7 +8574,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 27: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8582,7 +8582,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8592,15 +8592,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 28: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8610,7 +8610,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 29: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8618,7 +8618,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8628,7 +8628,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 30: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8636,7 +8636,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8646,15 +8646,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 31: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8664,7 +8664,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 32: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8672,7 +8672,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8682,15 +8682,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 33: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8700,7 +8700,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 34: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8708,7 +8708,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8718,7 +8718,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "moderate",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 35: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8726,7 +8726,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 60,
     "prepared": true
   },
@@ -8736,15 +8736,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 36: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8754,7 +8754,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 37: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8762,7 +8762,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8772,15 +8772,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 38: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8790,7 +8790,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 39: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8798,7 +8798,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8808,7 +8808,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 40: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8816,7 +8816,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8826,15 +8826,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 41: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8844,7 +8844,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 42: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8852,7 +8852,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8862,15 +8862,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 43: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8880,7 +8880,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 44: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8888,7 +8888,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8898,7 +8898,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 45: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8906,7 +8906,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8916,15 +8916,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "An engineering student is reviewing a Integrated Analytical Reasoning task. Which action should be taken first to apply integrated reasoning effectively?",
+    "prompt": "Case 46: During a Integrated Analytical Reasoning task, a student must choose an approach before proceeding. Which choice best applies integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
-      "Choose the option with the largest numerical value without checking context",
+      "Select the largest numerical value without checking context",
       "Ignore the stated constraints and proceed",
       "Replace evidence with an assumption"
     ],
     "answer": 0,
-    "explanation": "Starting with combine evidence, models, constraints and uncertainty before concluding establishes a defensible basis for the task.",
+    "explanation": "The first option establishes a defensible process based on integrated reasoning, whereas the alternatives omit important reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8934,7 +8934,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A team obtains an unexpected result while working on Integrated Analytical Reasoning. Which response is most consistent with integrated reasoning?",
+    "prompt": "Case 47: A laboratory or project team obtains an unexpected result related to Integrated Analytical Reasoning. What response best reflects integrated reasoning?",
     "options": [
       "Investigate the evidence and test the most relevant explanation",
       "use one fact only",
@@ -8942,7 +8942,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "A disciplined investigation connects the result to evidence instead of relying on an unsupported assumption.",
+    "explanation": "A disciplined response investigates evidence before accepting an explanation, which is central to integrated reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8952,15 +8952,15 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "Which statement would be the most defensible conclusion about integrated reasoning in an engineering report on Integrated Analytical Reasoning?",
+    "prompt": "Case 48: Which statement would be the strongest conclusion in a first-year engineering report about Integrated Analytical Reasoning when applying integrated reasoning?",
     "options": [
-      "The conclusion should be supported by relevant evidence and clearly stated assumptions",
+      "The conclusion should be traceable to relevant evidence and clearly stated assumptions",
       "use one fact only",
       "skip assumptions",
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "Engineering conclusions should be traceable to evidence and explicit assumptions.",
+    "explanation": "Engineering conclusions should be supported by evidence and transparent assumptions.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8970,7 +8970,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "A first-year engineering team must make a decision involving Integrated Analytical Reasoning. Which choice best reflects integrated reasoning?",
+    "prompt": "Case 49: An engineering student must make a decision involving Integrated Analytical Reasoning. Which decision rule best represents integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "Select the fastest option regardless of requirements",
@@ -8978,7 +8978,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "Ignore uncertainty because the decision is preliminary"
     ],
     "answer": 0,
-    "explanation": "The recommended approach applies integrated reasoning while preserving transparent engineering reasoning.",
+    "explanation": "The first option reflects transparent, evidence-based application of integrated reasoning.",
     "timeLimitSeconds": 90,
     "prepared": true
   },
@@ -8988,7 +8988,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
     "activityType": "mcq",
     "difficulty": "tough",
     "topic": "Integrated Analytical Reasoning",
-    "prompt": "In a first-year engineering context, which practice best demonstrates sound integrated reasoning when working on Module 10 (Integrated Analytical Reasoning)?",
+    "prompt": "Case 50: A first-year engineering team is preparing a Integrated Analytical Reasoning exercise. Which action most directly demonstrates sound integrated reasoning?",
     "options": [
       "combine evidence, models, constraints and uncertainty before concluding",
       "use one fact only",
@@ -8996,7 +8996,7 @@ export const PREPARED_ANALYTICAL_QUESTION_BANK = [
       "conclude before analysing"
     ],
     "answer": 0,
-    "explanation": "The first option follows the stated principle of integrated reasoning and supports defensible engineering work.",
+    "explanation": "The first option applies integrated reasoning directly and is therefore the most defensible engineering practice.",
     "timeLimitSeconds": 90,
     "prepared": true
   }
