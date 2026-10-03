@@ -789,6 +789,23 @@ function moduleView(track,data,no,programme){
 function materialGuide(resource,title){return 'Study this topic in three passes. First understand the idea. Second trace the worked example line by line. Third close the notes and reproduce the idea yourself. Then complete a related drill and explain the reasoning aloud. Resource: '+resource+'.';}
 function checkPracticeAnswer(button){const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model approach:</b> '+esc(button.dataset.answer)+'</p>';button.parentElement.appendChild(box);button.textContent='Review Prompt';}
 
+async function loadCommunicationSpeechReview(mount){
+ if(!mount)return;
+ const box=document.createElement('section');box.className='communicationSpeechReview';
+ box.innerHTML='<div class="moduleSectionHeading"><div><span class="sectionEyebrow">FACULTY / ADMIN · SPEAKING REVIEW</span><h4>Student Recordings</h4><p>Review the original recording, recognised text and speech scores. Recordings are private to authorised reviewers.</p></div><button type="button" class="secondary" data-load-speech>Load Recordings</button></div><div data-speech-list class="speechReviewList"></div>';
+ mount.appendChild(box);
+ box.querySelector('[data-load-speech]').onclick=async()=>{
+  const list=box.querySelector('[data-speech-list]');list.innerHTML='<p>Loading recordings…</p>';
+  try{
+   const r=await call('getCommunicationSpeechAttempts')({limit:50});
+   const items=r.data?.items||[];
+   list.innerHTML=items.length?items.map(x=>{
+    const p=x.pronunciation||{},rb=x.rubric||{};
+    return '<article class="speechReviewCard"><div class="speechReviewMeta"><strong>'+esc(x.taskType)+'</strong><span>'+esc(x.uid)+'</span><span>'+Number(x.score||0)+'/100</span></div><p><b>Target:</b> '+esc(x.target)+'</p><p><b>Recognised speech:</b> '+esc(x.transcript||'(not recognised)')+'</p>'+(x.recordingUrl?'<audio controls preload="none" src="'+esc(x.recordingUrl)+'"></audio>':'<p>No recording URL available.</p>')+'<div class="speechReviewScores">'+(p.accuracyScore!=null?'<span>Accuracy '+p.accuracyScore+'</span>':'')+(p.fluencyScore!=null?'<span>Fluency '+p.fluencyScore+'</span>':'')+(p.completenessScore!=null?'<span>Completeness '+p.completenessScore+'</span>':'')+(p.prosodyScore!=null?'<span>Prosody '+p.prosodyScore+'</span>':'')+(rb.relevance!=null?'<span>Relevance '+rb.relevance+'</span>':'')+(rb.organisation!=null?'<span>Organisation '+rb.organisation+'</span>':'')+'</div></article>';
+   }).join(''):'<p>No speaking recordings have been submitted yet.</p>';
+  }catch(e){list.innerHTML='<p>Could not load speaking recordings: '+esc(e.message||String(e))+'</p>';}
+ };
+}
 async function launchModuleAssessment(trackId,moduleNo,workspace=null){
  const taskId=String(trackId)+'_D'+String(moduleNo);
  const mount=workspace?.querySelector('#moduleAssessmentMount')||document.getElementById('competencyAssessmentLaunch');
@@ -806,6 +823,7 @@ async function launchModuleAssessment(trackId,moduleNo,workspace=null){
      }
      mount.innerHTML='<div id="moduleAssessmentAdminMount"></div>';
      await window.FXECCompetencyAssessmentAdmin.load('moduleAssessmentAdminMount',trackId,moduleNo);
+     if(trackId==='communication') await loadCommunicationSpeechReview(mount);
      return;
    }
    if(role==='student'){
