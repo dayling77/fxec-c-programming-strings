@@ -407,7 +407,7 @@ function buildGenericActivities(trackKey,moduleNo,title,b){
 
 function genericModule(title,trackTitle,no){
  const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
- const source=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):(FIRST_YEAR_MODULE_CONTENT[trackKey]?.[no-1]||{});
+ const source=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):(GENERIC_MODULE_BLUEPRINTS[trackKey]?.[no-1]||{});
  const canonicalTitle=source.title||title;
  const topics=source.topics||['Core concepts and terminology','Worked examples','Common errors','Application patterns','Review and mastery'];
  const focus=source.focus||'Build the core skill step by step, with repeated practice before moving to application.';
