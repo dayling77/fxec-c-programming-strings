@@ -74,7 +74,7 @@ export function wireCommunicationAudioLab(root){
       const t=tasks[current];
       typeEl.textContent=t.label||t.type;
       targetEl.textContent=t.target||'';
-      instructionEl.textContent=t.type==='pronunciation'?'Read the sentence aloud exactly as shown, with natural rhythm.':t.type==='wordUsage'?'Say a complete sentence that uses the target word naturally.':'Respond to the speaking task clearly, with a beginning, supporting idea and conclusion.';
+      instructionEl.textContent=t.intonation==='rising'?'Read the target phrase with a clearly rising intonation at the end, as in a genuine question.':t.intonation==='falling'?'Read the target sentence with a clear falling intonation at the end, as in a completed statement.':t.type==='pronunciation'?'Read the sentence aloud exactly as shown, with natural rhythm.':t.type==='wordUsage'?'Say a complete sentence that uses the target word naturally.':'Respond to the speaking task clearly, with a beginning, supporting idea and conclusion.';
       lab.querySelectorAll('.communicationAudioTask').forEach((b,i)=>b.classList.toggle('active',i===current));
       recorded=null;audio.hidden=true;play.disabled=true;assessBtn.disabled=true;result.innerHTML='';
     };
@@ -98,7 +98,7 @@ export function wireCommunicationAudioLab(root){
       assessBtn.disabled=true;result.innerHTML='<div class="speechAssessLoading">Converting recording and assessing your response…</div>';
       try{
         const wav=await blobTo16kWav(recorded),audioBase64=await blobToBase64(wav),t=tasks[current];
-        const r=await assess({taskType:t.type,target:t.target,audioBase64,mimeType:'audio/wav'});
+        const r=await assess({taskType:t.type,target:t.target,intonation:t.intonation||'',audioBase64,mimeType:'audio/wav'});
         const d=r.data||{};
         const metrics=[
           d.score!=null?'<strong>'+Number(d.score)+'/100</strong> overall':'',
