@@ -1521,6 +1521,13 @@ export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async r
  if(!bytes.length || bytes.length>SPEECH_CONFIG.maxAudioBytes) throw new HttpsError('invalid-argument','Audio file is missing or too large.');
  if(!mimeType.includes('wav')) throw new HttpsError('invalid-argument','Communication assessment requires 16 kHz WAV audio.');
 
+ // Keep the original student recording so faculty/admin can review the actual
+ // speech alongside the transcript and scores. The signed URL is generated
+ // only for authorised faculty/admin viewers.
+ const recordingPath='communication-recordings/'+a.uid+'/'+Date.now()+'-'+randomUUID()+'.wav';
+ const recordingFile=bucket.file(recordingPath);
+ await recordingFile.save(bytes,{contentType:'audio/wav',metadata:{metadata:{uid:a.uid,taskType,target}}});
+
  let result={};
  if(taskType==='pronunciation'){
    result=await azurePronunciationAssessment(bytes,target);
@@ -1538,7 +1545,7 @@ export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async r
  const score=Math.max(0,Math.min(100,Math.round(Number(result.score)||0)));
  const xp=score>=80?COMMUNICATION_TASKS[taskType].xp:score>=60?Math.round(COMMUNICATION_TASKS[taskType].xp*.5):0;
  await db.collection('communicationSpeechAttempts').add({
-   uid:a.uid,taskType,target,transcript:result.transcript||'',score,xp,
+   uid:a.uid,taskType,target,transcript:result.transcript||'',score,xp,recordingPath,
    pronunciation:taskType==='pronunciation'?{accuracyScore:result.accuracyScore,fluencyScore:result.fluencyScore,completenessScore:result.completenessScore,prosodyScore:result.prosodyScore,words:result.words}:null,
    rubric:taskType==='listeningSpeaking'?{relevance:result.relevance,organisation:result.organisation,vocabulary:result.vocabulary,grammar:result.grammar}:null,
    createdAt:FieldValue.serverTimestamp()
@@ -1558,6 +1565,29 @@ export const assessCommunicationSpeech = onCall({ cors: CALLABLE_CORS }, async r
    relevance:result.relevance,organisation:result.organisation,vocabulary:result.vocabulary,grammar:result.grammar,
    words:result.words||[],feedback:result.feedback||(score>=80?'Strong performance.':score>=60?'Good attempt. Focus on the areas marked for improvement.':'Keep practising and record again with clearer, more complete speech.')
  };
+});
+
+export const getCommunicationSpeechAttempts = onCall({cors:CALLABLE_CORS},async request=>{
+ const a=requireAuth(request);
+ if(!isAdminAuth(a)) throw new HttpsError('permission-denied','Admin access required.');
+ const limit=Math.min(100,Math.max(1,Number(request.data?.limit||50)));
+ const taskType=cleanText(request.data?.taskType||'',40);
+ let q=db.collection('communicationSpeechAttempts').orderBy('createdAt','desc').limit(limit);
+ if(taskType) q=q.where('taskType','==',taskType);
+ const snap=await q.get();
+ const items=[];
+ for(const doc of snap.docs){
+   const d=doc.data();
+   let recordingUrl='';
+   if(d.recordingPath){
+     try{
+       const [url]=await bucket.file(d.recordingPath).getSignedUrl({version:'v4',action:'read',expires:Date.now()+60*60*1000});
+       recordingUrl=url;
+     }catch(e){ logger.warn('Could not sign communication recording',e); }
+   }
+   items.push({id:doc.id,uid:d.uid,taskType:d.taskType,target:d.target,transcript:d.transcript||'',score:Number(d.score||0),xp:Number(d.xp||0),pronunciation:d.pronunciation||null,rubric:d.rubric||null,recordingUrl,createdAt:d.createdAt?.toDate?.()?.toISOString?.()||null});
+ }
+ return {items};
 });
 
 // Reusable competency activity engine. Answer keys remain server-side.
