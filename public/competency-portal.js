@@ -464,12 +464,13 @@ function genericModule(title,trackTitle,no){
  const focus=source.focus||'Build the core skill step by step, with repeated practice before moving to application.';
  const example=source.example||'Apply '+canonicalTitle+' to a realistic first-year engineering situation.';
  const activities=buildGenericActivities(trackKey,no,canonicalTitle,source);
+ const modulePrefix=trackKey+'-D'+no+'-';
  const outcomes=[
-   'Explain the core idea of '+canonicalTitle+' in your own words.',
-   'Apply the method to a guided example before working independently.',
-   'Identify an error, limitation or condition that affects the result.',
-   'Verify an answer using evidence, constraints or a success criterion.',
-   'Transfer the skill to a new first-year engineering situation.'
+   {id:modulePrefix+'LO1',text:'Explain the core idea of '+canonicalTitle+' in your own words.'},
+   {id:modulePrefix+'LO2',text:'Apply the method to a guided example before working independently.'},
+   {id:modulePrefix+'LO3',text:'Identify an error, limitation or condition that affects the result.'},
+   {id:modulePrefix+'LO4',text:'Verify an answer using evidence, constraints or a success criterion.'},
+   {id:modulePrefix+'LO5',text:'Transfer the skill to a new first-year engineering situation.'}
  ];
  const lessons=topics.map((topic,i)=>({
    level:i<2?'Foundation':i<4?'Application':'Transfer',
@@ -488,15 +489,18 @@ function genericModule(title,trackTitle,no){
    check:'Can you explain '+topic+', apply it without the notes, and state how you would verify the result?'
  }));
  const materials=[
-   {title:'Core concept',body:focus},
-   {title:'Worked example',body:example},
-   {title:'How to think through it',body:'1. Identify the requirement. 2. Select the relevant concept. 3. Work through the evidence or intermediate steps. 4. Check the result. 5. Explain the decision.'},
-   {title:'Common mistakes',body:'Do not memorise the answer. Check conditions, units or evidence, distinguish assumptions from facts, and test the result before accepting it.'},
-   {title:'Mastery check',body:'Close the material and explain the skill aloud or in writing. Then complete the Guided Drills without looking back at the worked example.'}
+   {id:modulePrefix+'MAT1',title:'Core concept',body:focus},
+   {id:modulePrefix+'MAT2',title:'Worked example',body:example},
+   {id:modulePrefix+'MAT3',title:'How to think through it',body:'1. Identify the requirement. 2. Select the relevant concept. 3. Work through the evidence or intermediate steps. 4. Check the result. 5. Explain the decision.'},
+   {id:modulePrefix+'MAT4',title:'Common mistakes',body:'Do not memorise the answer. Check conditions, units or evidence, distinguish assumptions from facts, and test the result before accepting it.'},
+   {id:modulePrefix+'MAT5',title:'Mastery check',body:'Close the material and explain the skill aloud or in writing. Then complete the Guided Drills without looking back at the worked example.'}
  ];
  return {
-  id:no,title:canonicalTitle,scope:focus,topics,learningOutcomes:outcomes,materials,lessons,
-  drills:activities.drills,practiceTasks:activities.practice,example,
+  id:no,title:canonicalTitle,scope:focus,topics,
+  learningOutcomes:outcomes.map(x=>x.text),learningOutcomeMap:outcomes,
+  materials,lessons,
+  drills:activities.drills.map((x,i)=>({...x,id:x.id||modulePrefix+'DR'+(i+1),learningOutcomeId:modulePrefix+'LO'+(i+1),materialId:modulePrefix+'MAT'+(i+1)})),
+  practiceTasks:activities.practice.map((x,i)=>({...x,id:x.id||modulePrefix+'PR'+(i+1),ladderLevel:i+1,learningOutcomeId:modulePrefix+'LO'+(i+1),materialId:modulePrefix+'MAT'+(i+1),guidedDrillId:modulePrefix+'DR'+(i+1)})),example,
   audio:!!source.audio,speechTasks:source.speechTasks||[],
   challenge:'Transfer challenge: solve a new '+canonicalTitle+' situation without copying the worked example. State the requirement, identify the relevant concept, show the important reasoning, test one boundary or alternative, and justify the final result.',
   assessment:'The formal assessment measures the same learning outcomes in new contexts. It is intentionally separate from the Guided Drills so that success demonstrates transfer rather than memorisation.'
