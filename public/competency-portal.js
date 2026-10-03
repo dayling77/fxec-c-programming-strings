@@ -385,65 +385,26 @@ function buildGenericActivities(trackKey,moduleNo,title,b){
  const topics=Array.isArray(b.topics)?b.topics.filter(Boolean):[];
  const focus=String(b.focus||'Build the skill through understanding, guided practice and transfer.');
  const example=String(b.example||'Apply the skill to a realistic first-year engineering situation.');
- const t=(n)=>topics[n%Math.max(1,topics.length)]||title;
+ const prefix=trackKey+'-D'+moduleNo+'-';
  const drills=[
-  {category:'Understand',prompt:'After studying '+title+', which statement best explains the purpose of the skill?',options:[
-    focus,
-    'Use the skill only when the answer is already known.',
-    'Memorise isolated facts without applying them.',
-    'Skip the stated context and select the fastest-looking option.'
-  ],answer:0,explanation:'The module focus defines the capability the learner is expected to develop. The other choices remove the application and reasoning that make the competency meaningful.'},
-  {category:'Guided Application',prompt:'In the module example — '+example+' — which concept should the learner deliberately apply first?',options:[
-    t(0),
-    'An unrelated topic from a different competency',
-    'A result chosen before examining the evidence',
-    'A shortcut that ignores the stated conditions'
-  ],answer:0,explanation:'The first guided step should use the concept taught in this module. Learners should identify the relevant principle before calculating, deciding or acting.'},
-  {category:'Reasoning Check',prompt:'A student reaches an answer while working on '+title+'. What is the strongest next action before accepting it?',options:[
-    'Check the result against the stated evidence, conditions or success criterion.',
-    'Accept the first plausible answer without checking.',
-    'Change several assumptions at once.',
-    'Ignore units, constraints or context if the answer looks reasonable.'
-  ],answer:0,explanation:'Verification closes the learning loop. A defensible answer is checked against the conditions, evidence or success criterion taught in the module.'},
-  {category:'Error Diagnosis',prompt:'Which mistake would most directly show that the student has not yet understood '+t(1)+'?',options:[
-    'Applying a rule without checking whether the situation satisfies its conditions.',
-    'Explaining the reasoning and identifying the evidence used.',
-    'Testing the answer with a relevant boundary or alternative case.',
-    'Comparing the result with the success criterion.'
-  ],answer:0,explanation:'A common transfer error is applying a method outside its conditions. Understanding includes knowing when a method is valid, not merely remembering its name.'},
-  {category:'Transfer',prompt:'You encounter a new first-year engineering situation that is different from the worked example. What should you do?',options:[
-    'Identify the relevant idea from '+title+', map the new situation to it, solve or act, then verify the result.',
-    'Copy the worked example unchanged even if the conditions differ.',
-    'Ignore the new information and use a memorised answer.',
-    'Choose a method from another module without checking the requirement.'
-  ],answer:0,explanation:'Transfer means recognising the underlying principle in a new context, adapting it to the new conditions and verifying the outcome. This is the final step of the learning progression.'}
+  {category:'1 · Understand',prompt:'Teach '+topics[0]+': which statement best captures the idea a learner must understand before applying it?',options:[topics[0]+' as a skill used to interpret the stated problem and evidence.', 'A fact to memorise without context.','A shortcut that removes the need to inspect conditions.','A rule that is valid regardless of the situation.'],answer:0,explanation:'The first drill establishes the meaning and conditions of the first taught concept before application.'},
+  {category:'2 · Guided Application',prompt:'Apply '+topics[1]+'. In this module example — '+example+' — which action should happen first?',options:['Identify the relevant quantities, conditions or evidence before choosing the method.','Choose an answer before reading the conditions.','Copy a previous answer even when the inputs differ.','Ignore units, constraints or definitions.'],answer:0,explanation:'Application begins by mapping the real situation to the concept taught in the material.'},
+  {category:'3 · Analyse / Verify',prompt:'A learner has applied '+topics[2]+'. Which check would provide the strongest evidence that the result is defensible?',options:['Test the result against the stated conditions, evidence, units or success criterion.','Accept it because the method looked familiar.','Change several assumptions simultaneously.','Use only the first intermediate value.'],answer:0,explanation:'Verification must use an independent check connected to the actual requirement and evidence.'},
+  {category:'4 · Diagnose',prompt:'A solution using '+topics[3]+' works for one case but fails for another. What should the learner do first?',options:['Reproduce the failure with a small controlled case and identify the changed condition.','Rewrite the entire solution immediately.','Ignore the failed case.','Change several variables at once.'],answer:0,explanation:'Controlled comparison isolates the condition responsible for the failure instead of encouraging guessing.'},
+  {category:'5 · Transfer',prompt:'A new engineering situation depends on '+topics[4]+'. Which response demonstrates transfer?',options:['Adapt the underlying concept to the new conditions, justify the choice and verify the result.','Copy the worked example unchanged.','Use a memorised answer without checking the context.','Choose the fastest-looking method without identifying the requirement.'],answer:0,explanation:'Transfer means recognising the underlying principle, adapting it to new conditions and checking the outcome.'}
  ];
  return {
-  drills:drills.map((q,i)=>({...q,id:trackKey+'-D'+moduleNo+'-DR'+(i+1),audio:(i===1||i===4)&&!!b.audio,audioText:(i===1||i===4)&&!!b.audio?q.prompt:''})),
+  drills:drills.map((q,i)=>({...q,id:prefix+'DR'+(i+1),learningOutcomeId:prefix+'LO'+(i+1),materialId:prefix+'MAT'+(i+1),ladderLevel:i+1,audio:(i===1||i===4)&&!!b.audio,audioText:(i===1||i===4)&&!!b.audio?q.prompt:''})),
   practice:[
-   {id:trackKey+'-D'+moduleNo+'-PR1',title:'Level 1 · Reconstruct the idea',kind:'mcq',
-    prompt:'Without looking back at the notes, which explanation would you give to another student about '+title+'?',
-    options:[focus,'It is mainly a collection of facts to memorise.','It is solved by ignoring the context.','It has no need for verification.'],answer:0,
-    hint:'Reconstruct the central idea in your own words before moving to application.',explanation:'Level 1 checks whether the learner can reconstruct the concept, not merely recognise a familiar phrase.'},
-   {id:trackKey+'-D'+moduleNo+'-PR2',title:'Level 2 · Apply to a new case',kind:'mcq',
-    prompt:'A new situation differs from the worked example. What should you compare before choosing a method?',
-    options:['The requirement, conditions and relevant evidence','Only the numerical values','Only the wording of the example','The answer remembered from the drill'],answer:0,
-    hint:'Identify what is the same and what has changed.',explanation:'Application requires mapping the new situation to the underlying concept and checking the conditions under which it is valid.'},
-   {id:trackKey+'-D'+moduleNo+'-PR3',title:'Level 3 · Verify the result',kind:'mcq',
-    prompt:'You have produced an answer for '+title+'. Which verification step is most useful?',
-    options:['Check it against the stated constraints, evidence or success criterion','Submit it immediately','Change the method without checking','Assume the first result is correct'],answer:0,
-    hint:'Use an independent check rather than repeating the same assumption.',explanation:'Verification turns a plausible answer into a defensible one by comparing it with the conditions and evidence.'},
-   {id:trackKey+'-D'+moduleNo+'-PR4',title:'Level 4 · Diagnose a failure',kind:'mcq',
-    prompt:'Your solution works for the worked example but fails on a new case. What should you do first?',
-    options:['Reproduce the failure with a small controlled case and identify which assumption breaks','Rewrite everything immediately','Ignore the failed case','Change several variables at once'],answer:0,
-    hint:'Isolate the smallest condition that separates the successful and failed cases.',explanation:'Diagnosis requires controlled comparison so that the learner can identify the cause rather than guessing.'},
-   {id:trackKey+'-D'+moduleNo+'-PR5',title:'Level 5 · Transfer challenge',kind:'mcq',
-    prompt:'Which response demonstrates independent mastery of '+title+'?',
-    options:['Adapt the underlying method to a genuinely new situation, justify the decisions and verify the result','Repeat the worked example word for word','Choose an answer without explaining it','Use a memorised shortcut even when conditions differ'],answer:0,
-    hint:'Transfer is demonstrated when the method survives a change of context.',explanation:'The highest level requires adaptation, justification and verification in a new situation rather than recall.'}
-  ].map((q,i)=>({...q,activityType:(i===1||i===4)&&!!b.audio?'listening':'mcq',audioText:(i===1||i===4)&&!!b.audio?q.prompt:''}))
+   {id:prefix+'PR1',title:'Level 1 · Recognise and explain',kind:'mcq',prompt:'Without looking at the notes, explain '+topics[0]+' in one or two sentences and identify when it is relevant.',options:['State its meaning and the condition/context in which it applies.','Give a memorised answer without context.','Skip the definition and calculate immediately.','Use an unrelated module.'],answer:0,hint:'Start with meaning, purpose and conditions.',explanation:'Level 1 checks conceptual understanding before independent application.'},
+   {id:prefix+'PR2',title:'Level 2 · Apply',kind:'mcq',prompt:'Apply '+topics[1]+' to a new case. What should you identify before solving?',options:['The requirement, relevant information and conditions.','Only the final number.','Only the wording of the worked example.','A memorised option.'],answer:0,hint:'Separate relevant from irrelevant information.',explanation:'Application requires mapping the new case to the taught method.'},
+   {id:prefix+'PR3',title:'Level 3 · Analyse and verify',kind:'mcq',prompt:'After applying '+topics[2]+', which independent check is most useful?',options:['Compare the result with evidence, constraints, units, boundaries or a success criterion.','Repeat the same calculation without checking assumptions.','Change the answer until it looks reasonable.','Ignore contradictory evidence.'],answer:0,hint:'Use evidence outside the original assumption.',explanation:'Verification tests whether the reasoning survives an independent check.'},
+   {id:prefix+'PR4',title:'Level 4 · Diagnose',kind:'mcq',prompt:'A result fails because of '+topics[3]+'. What is the strongest diagnostic approach?',options:['Reproduce the failure, isolate the changed condition, form a hypothesis and test one change.','Rewrite everything without testing.','Ignore the failure because another case worked.','Change multiple causes at the same time.'],answer:0,hint:'Control the investigation.',explanation:'Diagnosis requires evidence-based isolation of the cause.'},
+   {id:prefix+'PR5',title:'Level 5 · Solve and transfer',kind:'mcq',prompt:'How should you use '+topics[4]+' in an unfamiliar engineering problem?',options:['Adapt the taught method, explain the decision, test an edge or alternative case and justify the result.','Copy the worked example unchanged.','Use a shortcut without checking constraints.','Select an answer before analysing the problem.'],answer:0,hint:'Transfer requires adaptation plus verification.',explanation:'The highest level demonstrates independent application in a changed context.'}
+  ].map((q,i)=>({...q,ladderLevel:i+1,learningOutcomeId:prefix+'LO'+(i+1),materialId:prefix+'MAT'+(i+1),guidedDrillId:prefix+'DR'+(i+1),activityType:(i===1||i===4)&&!!b.audio?'listening':'mcq',audioText:(i===1||i===4)&&!!b.audio?q.prompt:''}))
  };
 }
+
 function genericModule(title,trackTitle,no){
  const trackKey=({Communication:'communication',Aptitude:'aptitude','Core Engineering':'core-engineering','Problem Solving':'problem-solving','Analytical Skills':'analytical'})[trackTitle]||'';
  const source=trackKey==='communication'?(COMMUNICATION_MODULES[no-1]||{}):(FIRST_YEAR_MODULE_CONTENT[trackKey]?.[no-1]||{});
