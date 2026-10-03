@@ -1683,8 +1683,8 @@ function competencyTrackOrThrow(trackId){
   if(!Object.prototype.hasOwnProperty.call(COMPETENCY_ASSESSMENT_TRACKS,id)) throw new HttpsError('invalid-argument','Unknown competency track.');
   return id;
 }
-function validateCompetencyQuestions(questions, trackId=''){
-  const basic=competencyQuestionValidation(questions, trackId);
+function validateCompetencyQuestions(questions, trackId='', day=0){
+  const basic=competencyQuestionValidation(questions, trackId, day);
   if(!basic.ok) throw new HttpsError('invalid-argument','Question validation failed: '+basic.errors.slice(0,8).join(' '));
   return questions.map(q=>({...q,id:String(q.id)}));
 }
@@ -1823,7 +1823,7 @@ async function generateHighStandardCompetencyDay(trackId, day) {
   // path exhausting the 9-minute Gen2 event limit.
   for(let attempt=1; attempt<=2; attempt++){
     const generated=(await generateJson(competencyGenerationPrompt(trackId,day))).questions;
-    const structural=competencyQuestionValidation(generated,trackId);
+    const structural=competencyQuestionValidation(generated,trackId,day);
     if(!structural.ok){ lastIssues=structural.errors; continue; }
     const [audit1,audit2]=await Promise.all([
       auditCompetencyQuestions(trackId,day,generated,1),
@@ -2020,7 +2020,7 @@ export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
   for(let day=1;day<=10;day++){
     const questions=all.filter(q=>String(q.id).startsWith('CMP'+String(day).padStart(2,'0')+'-D'+day+'-'));
     if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared Module '+day+' must contain exactly 50 questions.');
-    const validation=competencyQuestionValidation(questions.map(q=>({...q})),trackId);
+    const validation=competencyQuestionValidation(questions.map(q=>({...q})),trackId,day);
     if(!validation.ok) throw new HttpsError('failed-precondition','Prepared Module '+day+' failed validation: '+validation.errors.slice(0,12).join(' | '));
     const counts={};
     questions.forEach(q=>{const k=String(q.activityType||'mcq');counts[k]=(counts[k]||0)+1;});
