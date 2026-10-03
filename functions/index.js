@@ -1708,7 +1708,7 @@ const COMPETENCY_SOURCE_MAPS = Object.freeze({
   analytical: 'Analytical skills for first-year engineering: reading comprehension; extracting claims/evidence; inference; assumptions; cause/effect; comparison; data interpretation; identifying trends and anomalies; distinguishing fact from opinion; evaluating evidence; consistency; logical conclusions; error/uncertainty awareness; short technical passages, tables and simple charts; listening/reading style interpretation without cultural trivia. Questions should require reasoning rather than recall.'
 });
 
-function competencyQuestionValidation(questions, trackId='') {
+function competencyQuestionValidation(questions, trackId='', day=0) {
   const errors = [];
   if (!Array.isArray(questions) || questions.length !== COMPETENCY_ASSESSMENT_BLUEPRINT.questionsPerDay) return {ok:false, errors:['Exactly 50 questions are required.']};
   const ids = new Set(), prompts = new Set(), counts = {mcq:0, multipleCorrect:0, scenario:0}, diffs = {easy:0, moderate:0, tough:0};
@@ -1726,6 +1726,23 @@ function competencyQuestionValidation(questions, trackId='') {
     const activity=String(q.activityType||'mcq');
     activityCounts[activity]=(activityCounts[activity]||0)+1;
     if(!cleanText(q.prompt,5000)) errors.push('Q'+n+': missing prompt.');
+
+    // Every assessment item must be traceable through the same learning chain
+    // shown to students: outcome -> material -> drill -> practice ladder.
+    const lo=String(q.learningOutcomeId||'').trim();
+    const mat=String(q.materialId||'').trim();
+    const drill=String(q.guidedDrillId||'').trim();
+    const rem=String(q.remediationMaterialId||'').trim();
+    const ladder=Number(q.ladderLevel);
+    const prefix=trackId+'-D'+day+'-';
+    if(!lo || !lo.startsWith(prefix+'LO')) errors.push('Q'+n+': learningOutcomeId must use '+prefix+'LO1..LO5.');
+    if(!mat || !mat.startsWith(prefix+'MAT')) errors.push('Q'+n+': materialId must use '+prefix+'MAT1..MAT5.');
+    if(!drill || !drill.startsWith(prefix+'DR')) errors.push('Q'+n+': guidedDrillId must use '+prefix+'DR1..DR5.');
+    if(!rem || !rem.startsWith(prefix+'MAT')) errors.push('Q'+n+': remediationMaterialId must use '+prefix+'MAT1..MAT5.');
+    if(!Number.isInteger(ladder)||ladder<1||ladder>5) errors.push('Q'+n+': ladderLevel must be 1..5.');
+    if(!['LO1','LO2','LO3','LO4','LO5'].some(x=>lo.endsWith(x))) errors.push('Q'+n+': learningOutcomeId must end LO1..LO5.');
+    if(!/^.+-D\d+-MAT[1-5]$/.test(mat)||!/^.+-D\d+-DR[1-5]$/.test(drill)||!/^.+-D\d+-MAT[1-5]$/.test(rem)) errors.push('Q'+n+': invalid traceability identifier.');
+
     const isCoding=activity==='coding-challenge';
     if(isCoding){
       if(q.type!=='scenario') errors.push('Q'+n+': coding challenge must use scenario scoring type.');
@@ -1751,6 +1768,7 @@ function competencyQuestionValidation(questions, trackId='') {
       if(activity==='listening' && !cleanText(q.audioText,20)) errors.push('Q'+n+': listening question requires audioText.');
     }
     if(!cleanText(q.explanation,50)) errors.push('Q'+n+': missing explanation.');
+    if(!cleanText(q.remediationNote,30)) errors.push('Q'+n+': remediationNote must explain what to revisit after an error.');
     if(!Number.isFinite(Number(q.timeLimitSeconds)) || Number(q.timeLimitSeconds)<20) errors.push('Q'+n+': invalid time limit.');
   });
   const expectedTypes=trackId==='c-programming'?COMPETENCY_ASSESSMENT_BLUEPRINT.cTypes:COMPETENCY_ASSESSMENT_BLUEPRINT.genericTypes;
