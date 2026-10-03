@@ -489,11 +489,11 @@ function genericModule(title,trackTitle,no){
    check:'Can you explain '+topic+', apply it without the notes, and state how you would verify the result?'
  }));
  const materials=[
-   {id:modulePrefix+'MAT1',title:'Core concept',body:focus},
-   {id:modulePrefix+'MAT2',title:'Worked example',body:example},
-   {id:modulePrefix+'MAT3',title:'How to think through it',body:'1. Identify the requirement. 2. Select the relevant concept. 3. Work through the evidence or intermediate steps. 4. Check the result. 5. Explain the decision.'},
-   {id:modulePrefix+'MAT4',title:'Common mistakes',body:'Do not memorise the answer. Check conditions, units or evidence, distinguish assumptions from facts, and test the result before accepting it.'},
-   {id:modulePrefix+'MAT5',title:'Mastery check',body:'Close the material and explain the skill aloud or in writing. Then complete the Guided Drills without looking back at the worked example.'}
+   {id:modulePrefix+'MAT1',title:'Core concept — what it is and why it matters',body:focus+' Start by defining the skill in your own words. In first-year engineering, use it when the stated task requires this kind of reasoning. Before calculating or deciding, ask: What is the requirement? What information is relevant? What conditions make the method valid?'},
+   {id:modulePrefix+'MAT2',title:'Key ideas — the five parts of the skill',body:topics.map((x,i)=>(i+1)+'. '+x+': identify what this part means, what evidence would show that you have applied it correctly, and how it connects to the other parts of the module.').join(' ' )},
+   {id:modulePrefix+'MAT3',title:'Worked example — think before you answer',body:'Worked example: '+example+' Method: (1) state the requirement, (2) identify the relevant '+topics[0]||canonicalTitle+', (3) apply the appropriate reasoning step by step, (4) check the result against the context, and (5) explain why the result is defensible.'},
+   {id:modulePrefix+'MAT4',title:'Common errors — diagnose before changing the method',body:'Typical failure pattern: applying a familiar rule without checking its conditions. To diagnose an error, reproduce the case, identify the exact step where the reasoning changes, compare the successful and failed cases, then change one assumption or step at a time. Check units, evidence, constraints and boundary cases where relevant.'},
+   {id:modulePrefix+'MAT5',title:'Mastery check — explain, apply, verify, transfer',body:'Close the notes. Explain '+canonicalTitle+' in 30 seconds, solve a new example, verify the result independently, then describe one situation where the method would not be appropriate. Only after this check should you attempt the Guided Drills and Practice Ladder.'}
  ];
  return {
   id:no,title:canonicalTitle,scope:focus,topics,
