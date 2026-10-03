@@ -1789,6 +1789,8 @@ const COMPETENCY_MODULE_SCOPES = Object.freeze({
 });
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
+  const prefix=trackId+'-D'+day+'-';
+  const trace='Use ONLY these traceability IDs: learningOutcomeId '+prefix+'LO1..'+prefix+'LO5; materialId '+prefix+'MAT1..'+prefix+'MAT5; guidedDrillId '+prefix+'DR1..'+prefix+'DR5. Set remediationMaterialId to one of the five '+prefix+'MAT IDs. ladderLevel must be 1 (recognise/understand), 2 (apply), 3 (analyse/verify), 4 (diagnose), or 5 (solve/transfer). Every question must identify the exact outcome, material, drill and ladder level it builds on.';
   if(trackId==='c-programming'){
     const scopes={
       1:'problem statements, C program structure, main, statements and blocks, identifiers, variables, constants, data types, type conversion, operators, expressions, printf/scanf, compilation and debugging basics',
@@ -1802,55 +1804,9 @@ function competencyGenerationPrompt(trackId, day) {
       9:'character arrays, null terminator, string input, strlen/strcpy/strcat/strcmp, manual traversal, searching/counting, palindrome/reverse, token/word processing and string bugs',
       10:'preprocessor/macros, const/scope review, command-line arguments, introductory function pointers, bitwise operators, enumerations/user-defined types, defensive programming and reading/debugging unfamiliar code'
     }[day];
-    return `You are a senior C programming assessment designer for Francis Xavier Engineering College.
-Create Module ${day}: ${topic} for first-year engineering students.
-
-MODULE SCOPE:
-${scopes}
-
-Coding is PART OF this module assessment, never a separate module. Generate EXACTLY 50 master questions using this activity distribution:
-15 mcq/concept
-8 output-prediction
-6 bug-identification/debugging
-5 missing-code/code-completion
-5 code-observation/tracing
-3 listening/audio-based
-3 coding-challenge
-5 scenario-analysis
-TOTAL 50.
-
-Scoring types: use type "mcq" for the first six activity groups and type "scenario" for scenario-analysis and coding-challenge. Thus the exact scoring distribution is 42 mcq and 8 scenario.
-
-Quality:
-- Every question must test the module scope; do not drift into another module.
-- Output-prediction, bug-identification, missing-code and code-observation MUST include a short valid standard-C code snippet in code.
-- Missing-code must visibly contain a placeholder such as /* MISSING */.
-- Bug-identification must contain a real defect and ask the student to identify the defect/correction.
-- Output-prediction must have one deterministically correct output.
-- Code-observation must require tracing state, not merely recalling syntax.
-- Listening questions must contain audioText with the complete spoken question and four answer options.
-- Coding challenges must be genuine C programming tasks, with starter code, sampleInput, sampleOutput and at least 5 hidden codingTests. They must be appropriate to this module and independently solvable. Do not copy TCS, HackerRank, CodeChef or other provider questions.
-- Use realistic engineering, laboratory or student contexts.
-- Standard C only; no undefined behaviour or compiler-specific assumptions.
-- No all/none of the above, duplicate options or trick wording.
-- Exactly 15 easy, 20 moderate and 15 tough.
-- Every non-coding question has four distinct plausible options and one correct answer.
-- Every question has a concise explanation and a suitable time limit.
-- Return JSON only with the fields relevant to each activity.
-
-JSON shape:
-{"questions":[{"id":"D${day}-Q01","type":"mcq|scenario","activityType":"mcq|output-prediction|bug-identification|missing-code|code-observation|listening|coding-challenge|scenario-analysis","difficulty":"easy|moderate|tough","topic":"specific subtopic","prompt":"...","code":"...","options":["A","B","C","D"],"answer":0,"audioText":"...","starter":"...","sampleInput":"...","sampleOutput":"...","codingTests":[["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"]],"explanation":"...","timeLimitSeconds":60}]}`;
+    return 'You are a senior C programming assessment designer for Francis Xavier Engineering College.\\nCreate Module '+day+': '+topic+' for first-year engineering students.\\n\\nMODULE SCOPE:\\n'+scopes+'\\n\\n'+trace+'\\n\\nGenerate EXACTLY 50 master questions using this activity distribution:\\n15 mcq/concept\\n8 output-prediction\\n6 bug-identification/debugging\\n5 missing-code/code-completion\\n5 code-observation/tracing\\n3 listening/audio-based\\n3 coding-challenge\\n5 scenario-analysis\\nTOTAL 50.\\n\\nScoring types: use type "mcq" for the first six activity groups and type "scenario" for scenario-analysis and coding-challenge. Thus the exact scoring distribution is 42 mcq and 8 scenario.\\n\\nQuality:\\n- Every question must test the module scope; do not drift into another module.\\n- Output-prediction, bug-identification, missing-code and code-observation MUST include a short valid standard-C code snippet in code.\\n- Missing-code must visibly contain a placeholder such as /* MISSING */.\\n- Bug-identification must contain a real defect and ask the student to identify the defect/correction.\\n- Output-prediction must have one deterministically correct output.\\n- Code-observation must require tracing state, not merely recalling syntax.\\n- Listening questions must contain audioText with the complete spoken question and four answer options.\\n- Coding challenges must be genuine C programming tasks, with starter code, sampleInput, sampleOutput and at least 5 hidden codingTests. Do not copy external provider questions.\\n- Use realistic engineering, laboratory or student contexts.\\n- Standard C only; no undefined behaviour or compiler-specific assumptions.\\n- No all/none of the above, duplicate options or trick wording.\\n- Exactly 15 easy, 20 moderate and 15 tough.\\n- Every non-coding question has four distinct plausible options and one correct answer.\\n- Every question has a concise explanation and a remediationNote that tells the learner exactly what to revisit after an incorrect answer.\\n- The question must assess a taught skill, not introduce a new concept for the first time.\\n- Time limits: easy 30-45s, moderate 45-75s, tough 60-120s.\\n- Return JSON only.\\n\\nJSON shape:\\n{"questions":[{"id":"D'+day+'-Q01","type":"mcq|scenario","activityType":"mcq|output-prediction|bug-identification|missing-code|code-observation|listening|coding-challenge|scenario-analysis","difficulty":"easy|moderate|tough","topic":"specific subtopic","learningOutcomeId":"'+prefix+'LO1","materialId":"'+prefix+'MAT1","guidedDrillId":"'+prefix+'DR1","ladderLevel":1,"remediationMaterialId":"'+prefix+'MAT1","prompt":"...","code":"...","options":["A","B","C","D"],"answer":0,"audioText":"...","starter":"...","sampleInput":"...","sampleOutput":"...","codingTests":[["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"]],"explanation":"...","remediationNote":"Revisit ... then redo Guided Drill ...","timeLimitSeconds":45}]}';
   }
-  return `You are a senior assessment designer for Francis Xavier Engineering College.
-Create Module ${day} of a ten-module assessment programme for ${meta.title}, intended for first-year engineering students.
-
-MODULE TOPIC: ${topic}
-MODULE-SPECIFIC LEARNING SCOPE:
-${(COMPETENCY_MODULE_SCOPES[trackId]||[])[Number(day)-1]||topic}
-
-Generate EXACTLY 50 MCQ questions. Every question must use type "mcq". For communication, at least 35 questions must use activityType "listening" with a complete audioText field; students should hear the question first. Difficulty exactly 15 easy, 20 moderate, 15 tough.
-Questions must measure the stated module scope in new contexts. Do not repeat worked examples or Guided Drills. Do not use generic filler such as "which approach is most appropriate" without a concrete situation, evidence, data or decision.
-QUALITY STANDARD: University-level first-year engineering standard; test understanding, application, analysis and transfer. No trivia, trick wording, culturally dependent assumptions or obscure facts. Use authentic engineering, laboratory, classroom or professional contexts. Moderate/tough questions must require reasoning, calculation, interpretation, evidence evaluation, error diagnosis or decision-making. Each question must be traceable to the module scope and teach something through its explanation. Every question must have exactly four distinct, plausible options. Answer must be a 0-based option index or an array of 0-based indexes. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid ambiguity. Recalculate numerical answers. Code must use standard C and avoid undefined behaviour. Explanations must justify the key. Time limits: easy 30-45s, moderate 45-75s, tough 60-120s. Return JSON only as {"questions":[{"id":"D${day}-Q01","type":"mcq|multipleCorrect|scenario","activityType":"...","difficulty":"easy|moderate|tough","topic":"...","prompt":"...","code":"optional standard C code","options":["A","B","C","D"],"answer":0,"explanation":"...","timeLimitSeconds":45}]}`;
+  return 'You are a senior university assessment designer for Francis Xavier Engineering College.\\nCreate Module '+day+' of a ten-module assessment programme for '+meta.title+', intended for first-year engineering students.\\n\\nMODULE TOPIC: '+topic+'\\nMODULE-SPECIFIC LEARNING SCOPE:\\n'+((COMPETENCY_MODULE_SCOPES[trackId]||[])[Number(day)-1]||topic)+'\\n\\n'+trace+'\\n\\nGenerate EXACTLY 50 MCQ questions. Every question must use type "mcq". For communication, at least 35 questions must use activityType "listening" with a complete audioText field; students should hear the question first. Difficulty exactly 15 easy, 20 moderate, 15 tough.\\n\\nQuestions must measure the stated module scope in new contexts. Do not repeat worked examples or Guided Drills. Do not use generic filler such as "which approach is most appropriate" without a concrete situation, evidence, data or decision.\\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application, analysis and transfer. No trivia, trick wording, culturally dependent assumptions or obscure facts. Moderate/tough questions must require reasoning, calculation, interpretation, evidence evaluation, error diagnosis or decision-making. Every question must be traceable to the module\\'s five outcomes, five materials, five guided drills and one practice-ladder level. The question must assess a skill already taught in the student material. Every explanation must justify the key and every remediationNote must identify what the learner should revisit.\\nEvery question must have exactly four distinct, plausible options. Answer must be a 0-based option index. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid ambiguity. Code must use standard C and avoid undefined behaviour.\\nTime limits: easy 30-45s, moderate 45-75s, tough 60-120s.\\nReturn JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq","activityType":"mcq|listening","difficulty":"easy|moderate|tough","topic":"...","learningOutcomeId":"'+prefix+'LO1","materialId":"'+prefix+'MAT1","guidedDrillId":"'+prefix+'DR1","ladderLevel":1,"remediationMaterialId":"'+prefix+'MAT1","prompt":"...","options":["A","B","C","D"],"answer":0,"audioText":"...","explanation":"...","remediationNote":"Revisit ... then redo Guided Drill ...","timeLimitSeconds":45}]}';
 }
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
   const auditPrompt = `You are an independent senior university assessment auditor. Audit these 50 questions for ${COMPETENCY_ASSESSMENT_TRACKS[trackId].title}, Module ${day}. This is audit pass ${auditNumber}; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:
