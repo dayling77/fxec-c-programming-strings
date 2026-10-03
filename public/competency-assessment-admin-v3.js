@@ -176,7 +176,7 @@ function renderQuestion(q,i){
  }
  h+='<div class="caQuestionMeta"><label>Scoring Type<select class="caType"><option value="mcq" '+(q.type==='mcq'?'selected':'')+'>MCQ</option><option value="multipleCorrect" '+(q.type==='multipleCorrect'?'selected':'')+'>Multiple Correct</option><option value="scenario" '+(q.type==='scenario'?'selected':'')+'>Scenario</option></select></label><label>Activity Type<select class="caActivityType"><option value="mcq">MCQ</option><option value="multiple-correct">Multiple Correct</option><option value="match">Match</option><option value="code-observation">Code Observation</option><option value="output-prediction">Output Prediction</option><option value="bug-identification">Bug Identification</option><option value="missing-code">Missing Code</option><option value="coding-challenge" '+(coding?'selected':'')+'>Coding Challenge</option><option value="diagram-interpretation">Diagram Interpretation</option><option value="scenario-analysis">Scenario Analysis</option><option value="listening">Listening</option><option value="engineering-decision">Engineering Decision</option></select></label><label>Correct index(es)<input class="caAnswer" value="'+(coding?'':esc(Array.isArray(q.answer)?q.answer.join(','):q.answer))+'" '+(coding?'disabled':'')+'></label><label>Time (sec)<input class="caTime" type="number" min="20" value="'+Number(q.timeLimitSeconds||60)+'"></label></div>';
  if(!coding && String(q.code||'').trim()) h+='<label>Code / activity material<textarea class="caCode" spellcheck="false">'+esc(formatCCode(q.code||''))+'</textarea></label>';
- if(!coding && q.activityType==='listening') h+='<label>Audio text<textarea class="caAudioText">'+esc(q.audioText||'')+'</textarea></label>';
+ if(!coding && (q.activityType==='listening'||q.type==='audio'||q.activityType==='audio-options')) h+='<div class="caAudioReview"><label>Audio text<textarea class="caAudioText">'+esc(q.audioText||q.prompt||'')+'</textarea></label><button type="button" class="caPlayAudio" data-audio="'+esc(q.audioText||q.prompt||'')+'">🔊 Play Audio</button><small>Admin view: spoken content remains visible as text for verification.</small></div>';
  h+='<label>Explanation<textarea class="caExplanation">'+esc(q.explanation||'')+'</textarea></label></div></article>';return h;
 }
 function readQuestions(){
@@ -188,7 +188,16 @@ function readQuestions(){
   return {id:existing.id||selectedTrack+'-D'+selectedDay+'-Q'+(i+1),type,activityType:card.querySelector('.caActivityType')?.value||'mcq',difficulty:existing.difficulty|| (i<15?'easy':i<35?'moderate':'tough'),topic:host().querySelector('#caTopic').value.trim(),prompt:card.querySelector('.caPrompt').value.trim(),code:card.querySelector('.caCode')?.value.trim()||'',audioText:card.querySelector('.caAudioText')?.value.trim()||'',options:coding?[]:Array.from(card.querySelectorAll('.caOpt')).map(x=>x.value.trim()),answer,starter:card.querySelector('.caCodeStarter')?.value.trim()||existing.starter||'',sampleInput:card.querySelector('.caSampleInput')?.value.trim()||existing.sampleInput||'',sampleOutput:card.querySelector('.caSampleOutput')?.value.trim()||existing.sampleOutput||'',codingTests:existing.codingTests||[],explanation:card.querySelector('.caExplanation').value.trim(),timeLimitSeconds:Number(card.querySelector('.caTime').value||60),reviewed:true};
  });
 }
+function wireAudioReview(){
+ host().querySelectorAll('.caPlayAudio').forEach(btn=>btn.onclick=()=>{
+  if(!('speechSynthesis' in window)){setStatus('Browser audio playback is not supported.');return;}
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(btn.dataset.audio||'');u.lang='en-IN';u.rate=.9;u.pitch=1;
+  window.speechSynthesis.speak(u);
+ });
+}
 function wireEditor(){
+ wireAudioReview();
  const saveButton=host().querySelector('#caSave');
  const approveButton=host().querySelector('#caApprove');
  const verifyButton=host().querySelector('#caVerify');
