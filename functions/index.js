@@ -2437,6 +2437,7 @@ export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async requ
 export const loadPreparedCompetencyTrack = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
   const adminUser=requireAdmin(request);
   const trackId=competencyTrackOrThrow(request.data?.trackId);
+  throw new HttpsError('failed-precondition','Legacy prepared-static-bank-v1 is disabled. Generate the module through the validated AI workflow; only traceable, audited banks may be loaded.');
   const bankFiles={
     communication:'./prepared-communication-bank.js',
     aptitude:'./prepared-aptitude-bank.js',
