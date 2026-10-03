@@ -793,7 +793,11 @@ function moduleView(track,data,no,programme){
  if(Array.isArray(data.lessons)&&data.lessons.length){
    materialHtml=data.lessons.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join('');
  }else{
-   materialHtml=(data.materials||[]).map((x,i)=>'<div class="studyMaterial"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(x)+'</strong><button class="materialToggle" data-open="0">Teach me</button><p class="materialBody" hidden>'+esc(materialGuide(x,data.title))+'</p></div>').join('');
+   materialHtml=(data.materials||[]).map((x,i)=>{
+     const title=typeof x==='string'?x:(x.title||'Learning material '+(i+1));
+     const body=typeof x==='string'?materialGuide(x,data.title):(x.body||'');
+     return '<div class="studyMaterial" data-material-id="'+esc(x.id||'')+'"><span>RESOURCE '+String(i+1).padStart(2,'0')+'</span><strong>'+esc(title)+'</strong><button class="materialToggle" data-open="0">Teach me</button><p class="materialBody" hidden>'+esc(body)+'</p></div>';
+   }).join('');
  }
  if(data.example) materialHtml+='<article class="studyLesson moduleExampleLesson"><div class="studyLessonHead"><span>WORKED EXAMPLE</span><strong>See the skill in context</strong></div><p class="studyTeach">'+esc(data.example)+'</p>'+(data.audio?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(data.example)+'">🔊 Listen to Example</button>':'')+'<div class="microCheck"><b>Explain it yourself</b><span>Close the notes and explain the example, the decision and one possible mistake.</span></div></article>';
 
