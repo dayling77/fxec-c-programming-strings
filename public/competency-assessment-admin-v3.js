@@ -117,11 +117,11 @@ function render(){
   const loadQuestionsButton=root.querySelector('#caLoadQuestions');
   if(loadQuestionsButton)loadQuestionsButton.addEventListener('click',async()=>{
     loadQuestionsButton.disabled=true;
-    loadQuestionsButton.textContent=selectedTrack==='c-programming'?'Loading prepared 10 × 50 bank…':'Loading…';
+    loadQuestionsButton.textContent=selectedTrack==='c-programming'?'Loading Module '+selectedDay+' questions…':'Loading Module '+selectedDay+'…';
     try{
       if(selectedTrack==='c-programming'){
         setStatus('Loading the prepared, validated 500-question C bank. No questions are generated at runtime. All 10 modules remain DRAFT until review.','success');
-        await call('loadPreparedCompetencyAssessmentProgram')({trackId:'c-programming'});
+        await call('loadPreparedCompetencyAssessmentProgram')({trackId:'c-programming',day:selectedDay});
       }
       await load(activeHostId,selectedTrack,selectedDay);
     }catch(e){
