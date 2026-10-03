@@ -15,7 +15,7 @@ const call=name=>{
 };
 const TRACKS=[['communication','Communication'],['aptitude','Aptitude'],['core-engineering','Core Engineering'],['c-programming','C Programming'],['problem-solving','Problem Solving'],['analytical','Analytical Skills']];
 const MODULES={communication:['Grammar & Usage','Vocabulary & Word Usage','Reading Comprehension','Listening Skills','Speaking Skills','Professional Communication','Presentation Skills','Group Discussion','Workplace Writing','Integrated Communication'],aptitude:['Number Sense & Estimation','Algebraic Reasoning','Sequences & Patterns','Ratio, Proportion & Variation','Data Interpretation','Logical Reasoning','Quantitative Word Problems','Probability & Uncertainty Basics','Geometry & Spatial Reasoning','Quantitative Decision Making'],'core-engineering':['Engineering Measurement','Engineering Materials','Basic Electrical Systems','Mechanical Systems & Motion','Thermal Engineering Basics','Digital Systems & Logic','Engineering Design Process','Sustainability in Engineering','Engineering Safety & Risk','Engineering Tools & Documentation'],'c-programming':['C Fundamentals','Control Flow','Arrays','Functions & Modular Programming','Pointers','Structures, Unions & User-Defined Types','Dynamic Memory & Memory Management','File Handling','Strings','Advanced C'],'problem-solving':['Problem Definition','Decomposition','Abstraction','Algorithms & Procedures','Pattern Recognition','Root-Cause Analysis','Constraint-Based Solutions','Iteration & Debugging','Solution Evaluation','Engineering Challenge Strategy'],analytical:['Observation & Evidence','Data Quality','Trends & Relationships','Inference & Hypothesis','Critical Reading of Technical Information','Graphs & Visual Analytics','Decision Analysis','Ethics & Engineering Judgement','Systems Thinking','Integrated Analytical Reasoning']};
-let programs=[],selectedTrack='c-programming',selectedDay=1,viewerRole='admin',activeHostId='competencyAssessmentAdmin';
+let programs=[],selectedTrack='c-programming',selectedDay=1,viewerRole='admin',activeHostId='competencyAssessmentAdmin',masterRunId=null,masterPollTimer=null;
 const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function formatCCode(source){
   const s=String(source??'').replace(/\r\n?/g,'\n').trim();
@@ -73,7 +73,7 @@ function render(){
   const t=task(selectedTrack,selectedDay);
   let h='<div class="competencyAdminToolbar"><label>Competency <select id="caTrack">';
   h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
-  h+='</select></label>'+(viewerRole==='admin'?'<span class="practiceBadge">PREPARED MASTER BANKS</span>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caLoadQuestions" class="primaryButton">Load Questions</button><button id="caRefresh" class="secondary">Refresh Module</button></div>';
+  h+='</select></label>'+(viewerRole==='admin'?'<span class="practiceBadge">VALIDATED MASTER BANKS</span>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+(viewerRole==='admin'?'<button id="caGenerateMaster" class="primaryButton">🧠 Create 3,000-Question Master Bank</button>':'')+'<button id="caLoadQuestions" class="secondary">Load Questions</button><button id="caRefresh" class="secondary">Refresh Module</button></div>';
   h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
   h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
   h+=t?renderEditor(t):'<div class="caEmpty"><strong>Module '+selectedDay+' is not prepared yet.</strong><p>Select another module or prepare this module in the controlled bank-preparation process. Only the selected module is loaded from Firestore.</p></div>';
@@ -81,6 +81,39 @@ function render(){
   root.querySelectorAll('.caActivityType').forEach((el,i)=>{const q=t?.questions?.[i];if(q?.activityType)el.value=q.activityType;});
   const trackSelect=root.querySelector('#caTrack');
   if(trackSelect)trackSelect.addEventListener('change',e=>{selectedTrack=e.target.value;selectedDay=1;load(activeHostId,selectedTrack,selectedDay);});
+  const masterButton=root.querySelector('#caGenerateMaster');
+  if(masterButton)masterButton.addEventListener('click',async()=>{
+    if(!confirm('Create the complete master bank? This will generate 6 tracks × 10 modules × 50 questions = 3,000 questions. Each module is structurally validated and independently audited twice before being saved as DRAFT.')) return;
+    masterButton.disabled=true;
+    masterButton.textContent='Starting master bank…';
+    try{
+      const started=await call('startCompetencyMasterBankGeneration')({});
+      masterRunId=started.data?.runId||null;
+      setStatus('Master bank generation started. '+(started.data?.message||'60 module jobs are running.'),'success');
+      if(masterPollTimer)clearInterval(masterPollTimer);
+      const poll=async()=>{
+        if(!masterRunId)return;
+        try{
+          const r=await call('getCompetencyAssessmentGenerationRun')({runId:masterRunId});
+          const d=r.data||{};
+          const done=Number(d.finished||0),total=Number(d.totalModules||60);
+          const pct=Math.round(done/Math.max(1,total)*100);
+          setStatus('MASTER BANK: '+done+'/'+total+' modules completed ('+pct+'%). Each completed module contains 50 validated questions and is saved as DRAFT. Run ID: '+masterRunId,(d.status==='completed'?'success':''));
+          if(d.status==='completed'||d.status==='completed-with-errors'){
+            clearInterval(masterPollTimer);masterPollTimer=null;
+            masterButton.disabled=false;masterButton.textContent='🧠 Create 3,000-Question Master Bank';
+            await load(activeHostId,selectedTrack,selectedDay);
+          }
+        }catch(e){setStatus(e?.message||String(e),'error');}
+      };
+      await poll();
+      masterPollTimer=setInterval(poll,5000);
+    }catch(e){
+      setStatus(e?.message||String(e),'error');
+      masterButton.disabled=false;
+      masterButton.textContent='🧠 Create 3,000-Question Master Bank';
+    }
+  });
   const loadQuestionsButton=root.querySelector('#caLoadQuestions');
   if(loadQuestionsButton)loadQuestionsButton.addEventListener('click',async()=>{
     loadQuestionsButton.disabled=true;
