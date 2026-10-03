@@ -2422,3 +2422,52 @@ export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async requ
   });
   return {score:correct,total,scorePercent,passed,xp,trackId:attempt.trackId,day:attempt.day};
 });
+
+
+export const loadPreparedCompetencyTrack = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
+  const adminUser=requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const bankFiles={
+    communication:'./prepared-communication-bank.js',
+    aptitude:'./prepared-aptitude-bank.js',
+    'core-engineering':'./prepared-core-engineering-bank.js',
+    'problem-solving':'./prepared-problem-solving-bank.js',
+    analytical:'./prepared-analytical-bank.js'
+  };
+  const exportNames={
+    communication:'PREPARED_COMMUNICATION_QUESTION_BANK',
+    aptitude:'PREPARED_APTITUDE_QUESTION_BANK',
+    'core-engineering':'PREPARED_CORE_ENGINEERING_QUESTION_BANK',
+    'problem-solving':'PREPARED_PROBLEM_SOLVING_QUESTION_BANK',
+    analytical:'PREPARED_ANALYTICAL_QUESTION_BANK'
+  };
+  const mod=await import(bankFiles[trackId]);
+  const all=mod[exportNames[trackId]];
+  if(!Array.isArray(all)||all.length!==500) throw new HttpsError('failed-precondition',trackId+' prepared bank must contain exactly 500 questions.');
+  const modules=[];
+  for(let day=1;day<=10;day++){
+    const questions=all.filter(q=>String(q.id).includes('-D'+day+'-'));
+    if(questions.length!==50) throw new HttpsError('failed-precondition','Prepared '+trackId+' Module '+day+' must contain exactly 50 questions.');
+    const validation=competencyQuestionValidation(questions.map(q=>({...q})),trackId);
+    if(!validation.ok) throw new HttpsError('failed-precondition','Prepared '+trackId+' Module '+day+' failed validation: '+validation.errors.slice(0,12).join(' | '));
+    modules.push({day,questions});
+  }
+  for(const {day,questions} of modules){
+    const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+    await ref.set({
+      trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,
+      title:COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
+      topic:competencyModuleTitle(trackId,day),date:null,openAt:null,closeAt:null,
+      questions,questionCount:50,recommendedQuestionCount:10,status:'draft',isPublished:false,
+      source:'prepared-static-bank-v1',generatedBy:'prepared repository bank',loadedBy:adminUser.uid,
+      loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+    },{merge:true});
+    const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
+    await poolRef.set({trackId,day,questionCount:50,recommendedQuestionCount:10,status:'draft',source:'prepared-static-bank-v1',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    const batch=db.batch();
+    for(const q of questions) batch.set(poolRef.collection('questions').doc(String(q.id)),{...q,trackId,day,poolId:poolRef.id,source:'prepared-static-bank-v1',updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    await batch.commit();
+  }
+  await db.collection('adminActions').add({action:'loadPreparedCompetencyTrack',trackId,adminUid:adminUser.uid,modules:10,questionCount:500,source:'prepared-static-bank-v1',createdAt:FieldValue.serverTimestamp()});
+  return {success:true,trackId,totalQuestions:500,modules:10,message:'Prepared '+COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' bank loaded: 50 questions per module. All modules remain DRAFT.'};
+});
