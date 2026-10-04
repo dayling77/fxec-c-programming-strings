@@ -331,25 +331,31 @@ async function openModule(root,trackId,moduleNo,programme){
    if(Array.isArray(m.learningOutcomes)&&m.learningOutcomes.length) data.learningOutcomes=m.learningOutcomes;
    if(Array.isArray(m.materials)&&m.materials.length){
      data.materials=m.materials;
-     // The database curriculum is authoritative when it exists. Convert each
-     // stored material into the existing lesson/slider structure without
-     // changing the slider, drill, ladder or assessment architecture.
-     data.lessons=m.materials.map((item,i)=>{
-       const x=typeof item==='string'?{title:'Study Material '+(i+1),body:item}:item||{};
-       const body=String(x.html||x.body||x.content||'');
-       return {
-         id:x.id||trackId+'-D'+moduleNo+'-MAT'+(i+1),
-         level:x.level||'Foundation',
-         title:x.title||'Study Material '+(i+1),
-         html:body,
-         teach:x.teach||body,
-         example:x.example||'',
-         check:x.check||'Explain the key idea in your own words and state how you would verify it.'
-       };
-     });
+     // Database traceability is preserved, but the rich HTML lesson remains the
+     // teaching source unless the database item contains actual teaching HTML.
+     const dbLessons=m.materials.filter(x=>typeof x!=='string' && String(x?.html||x?.body||x?.content||'').trim());
+     if(dbLessons.length){
+       data.lessons=dbLessons.map((item,i)=>{
+         const x=item||{}, body=String(x.html||x.body||x.content||'');
+         return {
+           id:x.id||trackId+'-D'+moduleNo+'-MAT'+(i+1),
+           level:x.level||'Foundation',
+           title:x.title||'Study Material '+(i+1),
+           html:body,
+           teach:x.teach||body,
+           example:x.example||'',
+           check:x.check||'Explain the key idea in your own words and state how you would verify it.'
+         };
+       });
+     }
    }
-   if(Array.isArray(m.drills)&&m.drills.length) data.drills=m.drills;
-   if(Array.isArray(m.practiceLadder)&&m.practiceLadder.length) data.practiceTasks=m.practiceLadder;
+   // Database drill/ladder metadata remains available for traceability. Use the
+   // full rich teaching/drill/practice content unless the stored record contains
+   // an actual interactive prompt/task.
+   const dbDrills=Array.isArray(m.drills)?m.drills.filter(x=>x&&x.prompt&&Array.isArray(x.options)):[];
+   if(dbDrills.length) data.drills=dbDrills;
+   const dbPractice=Array.isArray(m.practiceLadder)?m.practiceLadder.filter(x=>x&&(x.prompt||x.code||x.starter)):[];
+   if(dbPractice.length) data.practiceTasks=dbPractice;
    if(m.challenge) data.challenge=m.challenge;
    if(m.assessment) data.assessment=m.assessment;
  }catch(e){ console.warn('Module learning resources unavailable; using curriculum fallback',e); }
