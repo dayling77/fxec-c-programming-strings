@@ -117,16 +117,36 @@ function render(){
   const loadQuestionsButton=root.querySelector('#caLoadQuestions');
   if(loadQuestionsButton)loadQuestionsButton.addEventListener('click',async()=>{
     loadQuestionsButton.disabled=true;
-    loadQuestionsButton.textContent=selectedTrack==='c-programming'?'Loading Module '+selectedDay+' questions…':'Loading Module '+selectedDay+'…';
+    loadQuestionsButton.textContent='Preparing Module '+selectedDay+'…';
     try{
       if(selectedTrack==='c-programming'){
         setStatus('Loading the prepared, validated C Module '+selectedDay+' bank. Only this selected module is loaded.','success');
         await call('loadPreparedCompetencyAssessmentProgram')({trackId:'c-programming',day:selectedDay});
+        await load(activeHostId,selectedTrack,selectedDay);
       }else{
-        setStatus('Generating the new validated '+selectedTrack+' Module '+selectedDay+' assessment from the current taught materials. The old question bank will not be used.','success');
-        await call('generatePreparedCompetencyModule')({trackId:selectedTrack,day:selectedDay});
+        setStatus('Starting background preparation for '+selectedTrack+' Module '+selectedDay+'. Only this selected module is being generated; the browser will not wait for the long AI operation.','success');
+        const started=await call('startCompetencyModuleGeneration')({trackId:selectedTrack,day:selectedDay});
+        const runId=started.data?.runId;
+        if(!runId) throw new Error('Module generation did not return a run ID.');
+        let finished=false;
+        for(let attempt=0;attempt<180;attempt++){
+          await new Promise(resolve=>setTimeout(resolve,3000));
+          const r=await call('getCompetencyAssessmentGenerationRun')({runId});
+          const d=r.data||{};
+          if(d.status==='completed'){
+            finished=true;
+            setStatus('Module '+selectedDay+' is ready: 50 validated master questions, 15 questions per student.','success');
+            break;
+          }
+          if(d.status==='completed-with-errors'){
+            const key=selectedTrack+'_D'+selectedDay;
+            throw new Error(d.errors?.[key]||'Module generation completed with an error.');
+          }
+          setStatus('Generating Module '+selectedDay+'… '+Number(d.finished||0)+'/1 module completed.','success');
+        }
+        if(!finished) throw new Error('Module generation is still running. Refresh this module shortly to review it.');
+        await load(activeHostId,selectedTrack,selectedDay);
       }
-      await load(activeHostId,selectedTrack,selectedDay);
     }catch(e){
       setStatus(e?.message||String(e),'error');
     }finally{
