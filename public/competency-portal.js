@@ -329,7 +329,25 @@ async function openModule(root,trackId,moduleNo,programme){
    // has not yet been stored for an older module.
    if(m.scope) data.scope=m.scope;
    if(Array.isArray(m.learningOutcomes)&&m.learningOutcomes.length) data.learningOutcomes=m.learningOutcomes;
-   if(Array.isArray(m.materials)&&m.materials.length) data.materials=m.materials;
+   if(Array.isArray(m.materials)&&m.materials.length){
+     data.materials=m.materials;
+     // The database curriculum is authoritative when it exists. Convert each
+     // stored material into the existing lesson/slider structure without
+     // changing the slider, drill, ladder or assessment architecture.
+     data.lessons=m.materials.map((item,i)=>{
+       const x=typeof item==='string'?{title:'Study Material '+(i+1),body:item}:item||{};
+       const body=String(x.html||x.body||x.content||'');
+       return {
+         id:x.id||trackId+'-D'+moduleNo+'-MAT'+(i+1),
+         level:x.level||'Foundation',
+         title:x.title||'Study Material '+(i+1),
+         html:body,
+         teach:x.teach||body,
+         example:x.example||'',
+         check:x.check||'Explain the key idea in your own words and state how you would verify it.'
+       };
+     });
+   }
    if(Array.isArray(m.drills)&&m.drills.length) data.drills=m.drills;
    if(Array.isArray(m.practiceLadder)&&m.practiceLadder.length) data.practiceTasks=m.practiceLadder;
    if(m.challenge) data.challenge=m.challenge;
