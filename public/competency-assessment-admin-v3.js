@@ -126,7 +126,15 @@ function render(){
       }else{
         setStatus('Starting background preparation for '+selectedTrack+' Module '+selectedDay+'. Only this selected module is being generated; the browser will not wait for the long AI operation.','success');
         const started=await call('generatePreparedCompetencyModule')({trackId:selectedTrack,day:selectedDay});
-        const runId=started.data?.runId;
+        const direct=started.data||{};
+        // Communication Module 1 is prepared synchronously by the selected-module
+        // loader. It returns completed=true rather than a background runId.
+        if(direct.completed===true){
+          setStatus('Module '+selectedDay+' is ready: 50 validated master questions, 15 questions per student.','success');
+          await load(activeHostId,selectedTrack,selectedDay);
+          return;
+        }
+        const runId=direct.runId;
         if(!runId) throw new Error('Module generation did not return a run ID.');
         let finished=false;
         for(let attempt=0;attempt<180;attempt++){
