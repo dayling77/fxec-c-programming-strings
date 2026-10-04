@@ -226,6 +226,28 @@ function renderAssessment(){
  };
  tick();timer=setInterval(tick,250);
 }
+function downloadCompetencyAnswerScript(result){
+ const rows=Array.isArray(result?.questionSnapshot)?result.questionSnapshot:[];
+ const submitted=new Map((Array.isArray(result?.submittedAnswers)?result.submittedAnswers:[]).map(x=>[x.questionId,x.answer]));
+ const escHtml=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+ const body=rows.map((q,i)=>{
+   const a=submitted.get(q.id);
+   const correct=answersEqual(q.answer,a);
+   return '<article><h3>Q'+(i+1)+'. '+escHtml(q.prompt||'')+'</h3><p><b>Student Answer:</b> '+escHtml(Array.isArray(a)?a.join(', '):(a===undefined?'Not answered':String(a)))+'</p><p><b>Correct Answer:</b> '+escHtml(Array.isArray(q.answer)?q.answer.join(', '):String(q.answer??''))+'</p><p><b>Result:</b> '+(correct?'Correct':'Incorrect')+'</p><p><b>Explanation:</b> '+escHtml(q.explanation||'')+'</p></article>';
+ }).join('');
+ const html='<!doctype html><html><head><meta charset="utf-8"><title>FXEC Assessment Answer Script</title><style>body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;line-height:1.55;color:#172033}header{border-bottom:2px solid #174f8a;margin-bottom:24px}article{padding:18px 0;border-bottom:1px solid #dfe5ec}h1{color:#174f8a}h3{margin-bottom:8px}p{margin:6px 0}</style></head><body><header><h1>FXEC Assessment Answer Script</h1><p>'+escHtml(result.trackId)+' — Module '+escHtml(result.day)+' · Score '+escHtml(result.scorePercent)+'%</p></header>'+body+'</body></html>';
+ const blob=new Blob([html],{type:'text/html;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='FXEC-'+String(result.trackId)+'-Module-'+String(result.day)+'-Answer-Script.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+async function prepareAnswerScriptButton(root,attemptId){
+ const b=root.querySelector('#caDownloadScript'); if(!b)return;
+ b.onclick=async()=>{
+   b.disabled=true;b.textContent='Checking availability…';
+   try{const r=await call('getCompetencyAssessmentResult')({attemptId});downloadCompetencyAnswerScript(r.data);b.textContent='✓ Download Answer Script';}
+   catch(e){b.disabled=false;b.textContent='Download Answer Script';alert(e.message||String(e));}
+ };
+}
+
 async function submit(auto=false){
   if(!current)return;
   clearInterval(timer);
@@ -242,8 +264,9 @@ async function submit(auto=false){
       '<div class="caResultStatus '+(d.passed?'passed':'notPassed')+'">'+(d.passed?'✓ PASSED':'REVIEW REQUIRED')+'</div>'+
       '<p>'+ (d.passed?'You have completed this competency assessment successfully.':'Review the learning material and use the next available assessment opportunity to strengthen the skill.')+'</p>'+
       '<div class="caResultStats"><div><strong>+'+Number(d.xp)+' XP</strong><span>XP earned</span></div><div><strong>'+Number(d.scorePercent)+'%</strong><span>Score</span></div><div><strong>'+Number(d.total)+'</strong><span>Questions</span></div></div>'+
-      '<button id="caBack">Back to Assessments</button>'+
+      '<button id="caDownloadScript">Download Answer Script</button><button id="caBack">Back to Assessments</button>'+
     '</div>';
+    prepareAnswerScriptButton(root,current.attemptId);
     root.querySelector('#caBack').onclick=load;
   }catch(e){
     root.innerHTML='<div class="caStudentEmpty error"><span class="sectionEyebrow">SUBMISSION</span><h3>Submission could not be completed</h3><p>'+esc(e.message||String(e))+'</p><button id="caRetrySubmit">Try Again</button></div>';
