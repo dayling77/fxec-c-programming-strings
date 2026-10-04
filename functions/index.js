@@ -2228,11 +2228,47 @@ export const generatePreparedCompetencyModule = onCall(
       modules:{[day]:'queued'},errors:{},
       startedAt:FieldValue.serverTimestamp(),startedBy:adminUser.uid
     });
+    // Communication Module 1 is a deterministic, already-authored 50-question bank.
+    // Save it immediately so the selected module is available without waiting for AI generation.
+    if(trackId==='communication' && day===1){
+      const questions=buildCommunicationModule1Bank();
+      if(!Array.isArray(questions)||questions.length!==50) throw new HttpsError('failed-precondition','Communication Module 1 bank must contain exactly 50 questions.');
+      const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+      const taskRef=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
+      const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
+      const batch=db.batch();
+      batch.set(taskRef,{
+        trackId,trackTitle:meta.title,day,
+        title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
+        topic:competencyModuleTitle(trackId,day),date:null,openAt:null,closeAt:null,
+        questions,questionCount:50,recommendedQuestionCount:15,
+        status:'draft',isPublished:false,source:'faculty-authored-module-bank',
+        generatedBy:'validated authored bank',loadedBy:adminUser.uid,
+        loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+      },{merge:true});
+      batch.set(poolRef,{
+        trackId,day,questionCount:50,recommendedQuestionCount:15,status:'draft',
+        source:'faculty-authored-module-bank',updatedAt:FieldValue.serverTimestamp()
+      },{merge:true});
+      for(const q of questions){
+        batch.set(poolRef.collection('questions').doc(String(q.id)),{
+          ...q,trackId,day,poolId:poolRef.id,source:'faculty-authored-module-bank',
+          updatedAt:FieldValue.serverTimestamp()
+        },{merge:true});
+      }
+      await batch.commit();
+      await db.collection('competencyGenerationRuns').doc(runId).set({
+        status:'completed',completed:1,finished:1,modules:{[day]:'completed'},
+        completedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+      },{merge:true});
+      return {success:true,runId,trackId,day,questionCount:50,recommendedQuestionCount:15,
+        completed:true,message:'Communication Module 1 is ready: 50 master questions, 15 questions per student. Only the selected module was loaded.'};
+    }
     await db.collection('competencyGenerationJobs').doc(runId+'_D'+day).set({
       runId,trackId,day,adminUid:adminUser.uid,status:'queued',createdAt:FieldValue.serverTimestamp()
     });
     return {success:true,runId,trackId,day,questionCount:50,recommendedQuestionCount:15,
-      message:'Module '+day+' generation started. Only the selected module is being prepared.'};
+      completed:false,message:'Module '+day+' generation started. Only the selected module is being prepared.'};
   }
 );
 export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_CORS, timeoutSeconds:540, memory:'1GiB'}, async request=>{
