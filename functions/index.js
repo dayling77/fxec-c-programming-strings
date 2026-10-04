@@ -2821,7 +2821,7 @@ export const submitCompetencyAssessment = onCall({cors:CALLABLE_CORS},async requ
     const boardRef=db.collection('competencyLeaderboards').doc(attempt.trackId).collection('students').doc(user.uid);
     tx.set(boardRef,{uid:user.uid,trackId:attempt.trackId,displayName:studentData.name||request.auth.token.name||'Student',displayClass:studentData.className||studentData.class||studentData.section||studentData.programme||studentData.department||'Class not set',drillStars:Number(cur.drillStars||0),drillBonusPoints,totalPoints,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   });
-  return {score:correct,total,scorePercent,passed,xp,trackId:attempt.trackId,day:attempt.day};
+  return {score:correct,total,scorePercent,passed,xp,trackId:attempt.trackId,day:attempt.day,attemptId};
 });
 
 
