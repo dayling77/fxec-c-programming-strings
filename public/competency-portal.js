@@ -520,6 +520,7 @@ const C_MODULE_ENRICHMENT={
  ]}
 };
 Object.keys(C_MODULE_ENRICHMENT).forEach(k=>Object.assign(C_MODULES[Number(k)-1],C_MODULE_ENRICHMENT[k]));
+Object.keys(RICH_HTML_MODULES['c-programming']||{}).forEach(k=>{ if(C_MODULES[Number(k)-1]) C_MODULES[Number(k)-1].lessons=RICH_HTML_MODULES['c-programming'][k]; });
 
 function normaliseCModules(){
  C_MODULES.forEach((m,i)=>{
