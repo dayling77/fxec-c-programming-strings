@@ -745,7 +745,7 @@ function openCodingLab(ws,{title,prompt,starter,metaId=''}){
 }
 
 function renderModuleVideoResources(videoLinks){
- const links=(Array.isArray(videoLinks)?videoLinks:[]).filter(v=>/^https?:\\/\\//i.test(String(v||''))).slice(0,2);
+ const links=(Array.isArray(videoLinks)?videoLinks:[]).filter(v=>/^https?:\/\//i.test(String(v||''))).slice(0,2);
  if(!links.length)return '';
  const cards=links.map((url,i)=>{
    let embed='';
