@@ -318,12 +318,23 @@ function moduleGrid(track,programme){
 async function openModule(root,trackId,moduleNo,programme){
  const track=TRACKS.find(x=>x.id===trackId); if(!track)return;
  const title=track.modules[moduleNo-1]||'Module';
- const data=trackId==='c-programming'?C_MODULES[moduleNo-1]:genericModule(title,track.title,moduleNo);
+ let data=trackId==='c-programming'?C_MODULES[moduleNo-1]:genericModule(title,track.title,moduleNo);
  let videoLinks=[];
  try{
    const r=await call('getCompetencyModuleLearningResources')({trackId,day:moduleNo});
-   videoLinks=Array.isArray(r.data?.videoLinks)?r.data.videoLinks:[];
- }catch(e){ console.warn('Module video resources unavailable',e); }
+   const m=r.data||{};
+   videoLinks=Array.isArray(m.videoLinks)?m.videoLinks:[];
+   // Database metadata is authoritative when it exists. The existing curriculum
+   // remains the fallback so the learning architecture never collapses if a field
+   // has not yet been stored for an older module.
+   if(m.scope) data.scope=m.scope;
+   if(Array.isArray(m.learningOutcomes)&&m.learningOutcomes.length) data.learningOutcomes=m.learningOutcomes;
+   if(Array.isArray(m.materials)&&m.materials.length) data.materials=m.materials;
+   if(Array.isArray(m.drills)&&m.drills.length) data.drills=m.drills;
+   if(Array.isArray(m.practiceLadder)&&m.practiceLadder.length) data.practiceTasks=m.practiceLadder;
+   if(m.challenge) data.challenge=m.challenge;
+   if(m.assessment) data.assessment=m.assessment;
+ }catch(e){ console.warn('Module learning resources unavailable; using curriculum fallback',e); }
  const ws=root.querySelector('#competencyWorkspace');
  ws.innerHTML=moduleView(track,data,moduleNo,programme,videoLinks);
  ws.querySelector('#backToModules').onclick=()=>openTrack(root,trackId);
