@@ -2643,6 +2643,20 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
   return {success:true,trackId,day,status:'published'};
 });
 
+export const exportCompetencyAssessmentScores = onCall({cors:CALLABLE_CORS},async request=>{
+  requireAdmin(request);
+  const trackId=competencyTrackOrThrow(request.data?.trackId);
+  const day=Number(request.data?.day);
+  if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
+  const snap=await db.collection('competencyAssessmentResults').where('trackId','==',trackId).where('day','==',day).get();
+  const rows=[];
+  for(const d of snap.docs){ const r=d.data(); const s=(await db.collection('students').doc(r.studentId).get()).data()||{}; rows.push({registerNumber:s.registerNumber||'',name:s.name||'',email:s.email||'',trackId,day,score:r.score||0,total:r.total||0,percent:r.scorePercent||0,passed:r.passed?'YES':'NO',completedAt:r.completedAt?.toDate?.()?.toISOString?.()||''}); }
+  rows.sort((a,b)=>String(a.registerNumber).localeCompare(String(b.registerNumber)));
+  const header=['registerNumber','name','email','trackId','day','score','total','percent','passed','completedAt'];
+  const csv=[header.join(','),...rows.map(r=>header.map(k=>'"'+String(r[k]??'').replaceAll('"','""')+'"').join(','))].join('\\n');
+  return {trackId,day,rowCount:rows.length,csv};
+});
+
 export const getCompetencyAssessmentResult = onCall({cors:CALLABLE_CORS},async request=>{
   const user=requireAuth(request);
   const attemptId=cleanText(request.data?.attemptId,120);
