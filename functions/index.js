@@ -1935,7 +1935,7 @@ ${JSON.stringify(questions)}`;
 
 function buildCommunicationModule1Bank(){
   const items=[];
-  const add=(activity,topic,prompt,options,answer,difficulty,lo,mat,drill,ladder,time)=>{
+  const add=(topic,prompt,options,answer,difficulty,lo,mat,drill,ladder,time)=>{
     items.push({
       id:'D1-Q'+String(items.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty,topic,
       learningOutcomeId:'communication-D1-LO'+lo,materialId:'communication-D1-MAT'+mat,guidedDrillId:'communication-D1-DR'+drill,
