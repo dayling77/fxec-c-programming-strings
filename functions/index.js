@@ -1907,27 +1907,57 @@ const COMPETENCY_MODULE_SCOPES = Object.freeze({
 async function attachCompetencyAssessmentAudio(trackId, day, questions){
   if(trackId!=='communication') return questions;
   const audioCount=Number(day)===4?8:5;
-  const targets=questions.map((q,i)=>({q,i})).filter(x=>x.q.activityType==='listening'||Number(x.i)%10===2).slice(0,audioCount);
-  for(const {q,i} of targets){
+  const preferred=questions.map((q,i)=>({q,i})).filter(x=>x.q.activityType==='listening'||Number(x.i)%10===2);
+  const fallback=questions.map((q,i)=>({q,i})).filter(x=>!preferred.some(p=>p.q===x.q));
+  const targets=[...preferred,...fallback].slice(0,audioCount);
+  let created=0;
+  for(const {q} of targets){
     q.activityType='listening';
     q.audioText=String(q.audioText||q.prompt||'').slice(0,3000);
     const path='audio/competency/'+trackId+'/D'+day+'/'+String(q.id)+'.mp3';
-    const [response]=await tts.synthesizeSpeech({
-      input:{text:q.audioText},
-      voice:{languageCode:CONFIG.voice.languageCode,name:CONFIG.voice.name},
-      audioConfig:{audioEncoding:'MP3'}
-    });
-    await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg'});
-    q.audioPath=path;
-    try{
-      const [signedUrl]=await bucket.file(path).getSignedUrl({
-        action:'read',
-        expires:Date.now()+1000*60*60*24*365
-      });
-      q.audioUrl=signedUrl;
-    }catch(e){
-      logger.warn('Could not sign competency audio URL',{trackId,day,questionId:q.id,error:String(e)});
+    let lastError=null;
+    for(let attempt=1;attempt<=3;attempt++){
+      try{
+        const [response]=await tts.synthesizeSpeech({
+          input:{text:q.audioText},
+          voice:{languageCode:CONFIG.voice.languageCode,name:CONFIG.voice.name},
+          audioConfig:{audioEncoding:'MP3'}
+        });
+        if(!response?.audioContent) throw new Error('Cloud Text-to-Speech returned no audio content.');
+        await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg'});
+        q.audioPath=path;
+        try{
+          const [signedUrl]=await bucket.file(path).getSignedUrl({
+            action:'read',
+            expires:Date.now()+1000*60*60*24*365
+          });
+          q.audioUrl=signedUrl;
+        }catch(e){
+          logger.warn('Could not sign competency audio URL',{trackId,day,questionId:q.id,error:String(e)});
+        }
+        created++;
+        lastError=null;
+        break;
+      }catch(e){
+        lastError=e;
+        logger.warn('Competency audio synthesis attempt failed',{
+          trackId,day,questionId:q.id,attempt,error:String(e)
+        });
+        if(attempt<3) await new Promise(resolve=>setTimeout(resolve,1500*attempt));
+      }
     }
+    if(lastError){
+      logger.error('Competency audio could not be created after retries',{
+        trackId,day,questionId:q.id,error:String(lastError)
+      });
+      delete q.audioPath;
+      delete q.audioUrl;
+    }
+  }
+  if(created<audioCount){
+    logger.warn('Communication module has fewer stored audio items than required',{
+      trackId,day,required:audioCount,created
+    });
   }
   return questions;
 }
