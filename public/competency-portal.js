@@ -776,7 +776,7 @@ function renderModuleVideoResources(videoLinks){
 }
 
 function moduleView(track,data,no,programme,videoLinks=[]){
- const assessmentCount=15;
+ const assessmentCount=track.id==='c-programming'?10:15;
  const communicationAudio=track.id==='communication'&&data.audio?renderCommunicationAudioLab(data.speechTasks||[],data.title+' — Speaking Practice'):'';
  const topicHtml=(data.topics||[]).map(x=>'<li>'+esc(x)+'</li>').join('');
  let materialHtml='';
@@ -796,7 +796,8 @@ function moduleView(track,data,no,programme,videoLinks=[]){
  if(data.example) materialHtml+='<article class="studyLesson moduleExampleLesson"><div class="studyLessonHead"><span>WORKED EXAMPLE</span><strong>See the skill in context</strong></div><p class="studyTeach">'+esc(data.example)+'</p>'+(data.audio?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(data.example)+'">🔊 Listen to Example</button>':'')+'<div class="microCheck"><b>Explain it yourself</b><span>Close the notes and explain the example, the decision and one possible mistake.</span></div></article>';
 
  const drillHtml=(data.drills||[]).map((x,i)=>'<article class="drillCard" data-track="'+esc(track.id)+'" data-module-no="'+no+'" data-module="'+esc(data.title)+'"><div><span>DRILL '+String(i+1).padStart(2,'0')+'</span><h5>'+esc(typeof x==='string'?x:x.category)+'</h5><p>'+esc(typeof x==='string'?'Guided mission: solve the task, explain your reasoning and earn a Star for the attempt.':x.prompt)+'</p></div><button class="drillReveal">Start Drill</button></article>').join('')+renderDrillReward(data.title);
- const practiceHtml=data.title==='C Fundamentals'?'<div class="practiceTaskGrid">'+practicePoolForStudent(data.title).map((idx,i)=>renderPracticeTask(C_FUNDAMENTALS_PRACTICE_POOL[idx]||C_FUNDAMENTALS_PRACTICE[i],i)).join('')+'</div>':'<div class="practiceTaskGrid">'+(data.practiceTasks||[]).map((x,i)=>renderPracticeTask(x,i)).join('')+'</div>';
+ const practiceSource=Array.isArray(data.practiceTasks)&&data.practiceTasks.length?data.practiceTasks:(Array.isArray(data.practice)?data.practice:[]);
+ const practiceHtml=data.title==='C Fundamentals'?'<div class="practiceTaskGrid">'+practicePoolForStudent(data.title).map((idx,i)=>renderPracticeTask(C_FUNDAMENTALS_PRACTICE_POOL[idx]||C_FUNDAMENTALS_PRACTICE[i],i)).join('')+'</div>':'<div class="practiceTaskGrid">'+practiceSource.map((x,i)=>renderPracticeTask(typeof x==='string'?{title:'Practice '+(i+1),kind:'mcq',prompt:x,options:[x,'Review the example','Try a related problem','Explain the rule'],answer:0,hint:'Use the module material and verify your reasoning.'}:x,i)).join('')+'</div>';
 
  const legacyCoding=track.id==='c-programming'?C_CODING_CHALLENGES.filter(x=>x.module===data.title):[];
  const competitiveCoding=track.id==='c-programming'?Object.values(C_COMPETITIVE_META_BY_ID).filter(x=>x.module===data.title):[];
