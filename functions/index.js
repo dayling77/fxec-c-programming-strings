@@ -2238,21 +2238,21 @@ export const generatePreparedCompetencyModule = onCall(
       if(questions.length<50){
         const missing=50-questions.length;
         const fallback=[
-          ['Basic word order','Choose the sentence with clear Subject → Verb → Object order.',['The engineer checked the circuit.','Checked the engineer the circuit.','The circuit the engineer checked.','The engineer the circuit checked.'],0,1,2,2,1,30],
-          ['Editing for accuracy','Choose the correctly edited sentence.',['The report contain two tables.','The report contains two tables.','The report containing two tables.','The report have two tables.'],1,1,5,5,2,30],
-          ['Subject–verb agreement','Choose the correct sentence.',['The equipment requires careful handling.','The equipment require careful handling.','The equipment are requiring handling.','The equipment have careful handling.'],0,1,3,3,2,30],
-          ['Sentence roles','In “The analyst checked the figures”, which word is the subject?',['analyst','checked','figures','the'],0,1,1,1,1,30],
-          ['Editing for accuracy','Which sentence is grammatically accurate?',['The experiment produces reliable results.','The experiment produce reliable results.','The experiment producing reliable results.','The experiment have reliable results.'],0,1,5,5,2,30]
+          {topic:'Basic word order',prompt:'Choose the sentence with clear Subject → Verb → Object order.',options:['The engineer checked the circuit.','Checked the engineer the circuit.','The circuit the engineer checked.','The engineer the circuit checked.'],answer:0,difficulty:'easy',lo:2,mat:2,drill:1,ladder:1,time:30},
+          {topic:'Editing for accuracy',prompt:'Choose the correctly edited sentence.',options:['The report contain two tables.','The report contains two tables.','The report containing two tables.','The report have two tables.'],answer:1,difficulty:'easy',lo:5,mat:5,drill:2,ladder:2,time:30},
+          {topic:'Subject–verb agreement',prompt:'Choose the correct sentence.',options:['The equipment requires careful handling.','The equipment require careful handling.','The equipment are requiring handling.','The equipment have careful handling.'],answer:0,difficulty:'easy',lo:3,mat:3,drill:2,ladder:2,time:30},
+          {topic:'Sentence roles',prompt:'In “The analyst checked the figures”, which word is the subject?',options:['analyst','checked','figures','the'],answer:0,difficulty:'easy',lo:1,mat:1,drill:1,ladder:1,time:30},
+          {topic:'Editing for accuracy',prompt:'Which sentence is grammatically accurate?',options:['The experiment produces reliable results.','The experiment produce reliable results.','The experiment producing reliable results.','The experiment have reliable results.'],answer:0,difficulty:'easy',lo:5,mat:5,drill:2,ladder:2,time:30}
         ];
         for(let i=0;i<Math.min(missing,fallback.length);i++){
           const x=fallback[i];
           questions.push({
-            id:'D1-Q'+String(questions.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty:x[4],topic:x[0],
-            learningOutcomeId:'communication-D1-LO'+x[5],materialId:'communication-D1-MAT'+x[6],guidedDrillId:'communication-D1-DR'+x[7],
-            ladderLevel:x[8],remediationMaterialId:'communication-D1-MAT'+x[6],prompt:x[1],options:x[2],answer:x[3],
+            id:'D1-Q'+String(questions.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty:x.difficulty,topic:x.topic,
+            learningOutcomeId:'communication-D1-LO'+x.lo,materialId:'communication-D1-MAT'+x.mat,guidedDrillId:'communication-D1-DR'+x.drill,
+            ladderLevel:x.ladder,remediationMaterialId:'communication-D1-MAT'+x.mat,prompt:x.prompt,options:x.options,answer:x.answer,
             explanation:'The selected sentence follows the taught grammar and usage principle for this module.',
-            remediationNote:'Revisit the related Grammar & Usage material and Guided Drill '+x[8]+' before attempting the item again.',
-            timeLimitSeconds:x[10]
+            remediationNote:'Revisit the related Grammar & Usage material and Guided Drill '+x.drill+' before attempting the item again.',
+            timeLimitSeconds:x.time
           });
         }
       }
