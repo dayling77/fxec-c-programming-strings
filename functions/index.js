@@ -2221,6 +2221,62 @@ export const generatePreparedCompetencyModule = onCall(
     const trackId=competencyTrackOrThrow(request.data?.trackId);
     const day=Number(request.data?.day);
     if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
+
+    // Selected-module preparation only. Communication Module 1 is deterministic
+    // and is written directly; no background generation is involved.
+    if(trackId==='communication' && day===1){
+      try{
+        const questions=buildCommunicationModule1Bank();
+        if(!Array.isArray(questions)||questions.length!==50){
+          throw new Error('Communication Module 1 bank contains '+(Array.isArray(questions)?questions.length:0)+' questions; exactly 50 are required.');
+        }
+        const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
+        const taskRef=db.collection('competencyAssessmentTasks').doc('communication_D1');
+        const poolRef=db.collection('competencyQuestionPools').doc('communication_D1');
+
+        await taskRef.set({
+          trackId,trackTitle:meta.title,day:1,
+          title:meta.title+' — Module 1 · '+competencyModuleTitle(trackId,1),
+          topic:competencyModuleTitle(trackId,1),
+          date:null,openAt:null,closeAt:null,
+          questions,questionCount:50,recommendedQuestionCount:15,
+          status:'draft',isPublished:false,
+          source:'faculty-authored-module-bank',
+          generatedBy:'validated authored bank',loadedBy:adminUser.uid,
+          loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
+        },{merge:true});
+
+        await poolRef.set({
+          trackId,day:1,questionCount:50,recommendedQuestionCount:15,
+          status:'draft',source:'faculty-authored-module-bank',
+          updatedAt:FieldValue.serverTimestamp()
+        },{merge:true});
+
+        const existing=await poolRef.collection('questions').get();
+        const batch=db.batch();
+        for(const doc of existing.docs){
+          batch.delete(doc.ref);
+        }
+        for(const q of questions){
+          batch.set(poolRef.collection('questions').doc(String(q.id)),{
+            ...q,trackId,day:1,poolId:poolRef.id,
+            source:'faculty-authored-module-bank',
+            updatedAt:FieldValue.serverTimestamp()
+          });
+        }
+        await batch.commit();
+
+        return {
+          success:true,completed:true,trackId,day:1,
+          questionCount:50,recommendedQuestionCount:15,
+          message:'Communication Module 1 loaded successfully: 50 master questions, 15 questions per student.'
+        };
+      }catch(e){
+        logger.error('Communication Module 1 preparation failed',{error:e?.stack||e?.message||String(e)});
+        throw new HttpsError('failed-precondition','Communication Module 1 could not be prepared: '+String(e?.message||e).slice(0,500));
+      }
+    }
+
     const runId='MODULE_'+trackId+'_D'+day+'_'+Date.now()+'_'+randomUUID().slice(0,8);
     await db.collection('competencyGenerationRuns').doc(runId).set({
       runId,trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,
@@ -2228,66 +2284,6 @@ export const generatePreparedCompetencyModule = onCall(
       modules:{[day]:'queued'},errors:{},
       startedAt:FieldValue.serverTimestamp(),startedBy:adminUser.uid
     });
-    // Communication Module 1 is a deterministic, already-authored 50-question bank.
-    // Save it immediately so the selected module is available without waiting for AI generation.
-    if(trackId==='communication' && day===1){
-      const questions=buildCommunicationModule1Bank();
-      if(!Array.isArray(questions)) throw new HttpsError('failed-precondition','Communication Module 1 bank builder did not return an array.');
-      // Defensive completion: the selected module must always resolve to exactly 50 authored items.
-      // This never uses the legacy prepared-communication-bank.js.
-      if(questions.length<50){
-        const missing=50-questions.length;
-        const fallback=[
-          {topic:'Basic word order',prompt:'Choose the sentence with clear Subject → Verb → Object order.',options:['The engineer checked the circuit.','Checked the engineer the circuit.','The circuit the engineer checked.','The engineer the circuit checked.'],answer:0,difficulty:'easy',lo:2,mat:2,drill:1,ladder:1,time:30},
-          {topic:'Editing for accuracy',prompt:'Choose the correctly edited sentence.',options:['The report contain two tables.','The report contains two tables.','The report containing two tables.','The report have two tables.'],answer:1,difficulty:'easy',lo:5,mat:5,drill:2,ladder:2,time:30},
-          {topic:'Subject–verb agreement',prompt:'Choose the correct sentence.',options:['The equipment requires careful handling.','The equipment require careful handling.','The equipment are requiring handling.','The equipment have careful handling.'],answer:0,difficulty:'easy',lo:3,mat:3,drill:2,ladder:2,time:30},
-          {topic:'Sentence roles',prompt:'In “The analyst checked the figures”, which word is the subject?',options:['analyst','checked','figures','the'],answer:0,difficulty:'easy',lo:1,mat:1,drill:1,ladder:1,time:30},
-          {topic:'Editing for accuracy',prompt:'Which sentence is grammatically accurate?',options:['The experiment produces reliable results.','The experiment produce reliable results.','The experiment producing reliable results.','The experiment have reliable results.'],answer:0,difficulty:'easy',lo:5,mat:5,drill:2,ladder:2,time:30}
-        ];
-        for(let i=0;i<Math.min(missing,fallback.length);i++){
-          const x=fallback[i];
-          questions.push({
-            id:'D1-Q'+String(questions.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty:x.difficulty,topic:x.topic,
-            learningOutcomeId:'communication-D1-LO'+x.lo,materialId:'communication-D1-MAT'+x.mat,guidedDrillId:'communication-D1-DR'+x.drill,
-            ladderLevel:x.ladder,remediationMaterialId:'communication-D1-MAT'+x.mat,prompt:x.prompt,options:x.options,answer:x.answer,
-            explanation:'The selected sentence follows the taught grammar and usage principle for this module.',
-            remediationNote:'Revisit the related Grammar & Usage material and Guided Drill '+x.drill+' before attempting the item again.',
-            timeLimitSeconds:x.time
-          });
-        }
-      }
-      if(questions.length!==50) throw new HttpsError('failed-precondition','Communication Module 1 bank resolved to '+questions.length+' questions; exactly 50 are required.');
-      const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
-      const taskRef=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-      const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
-      const batch=db.batch();
-      batch.set(taskRef,{
-        trackId,trackTitle:meta.title,day,
-        title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
-        topic:competencyModuleTitle(trackId,day),date:null,openAt:null,closeAt:null,
-        questions,questionCount:50,recommendedQuestionCount:15,
-        status:'draft',isPublished:false,source:'faculty-authored-module-bank',
-        generatedBy:'validated authored bank',loadedBy:adminUser.uid,
-        loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
-      },{merge:true});
-      batch.set(poolRef,{
-        trackId,day,questionCount:50,recommendedQuestionCount:15,status:'draft',
-        source:'faculty-authored-module-bank',updatedAt:FieldValue.serverTimestamp()
-      },{merge:true});
-      for(const q of questions){
-        batch.set(poolRef.collection('questions').doc(String(q.id)),{
-          ...q,trackId,day,poolId:poolRef.id,source:'faculty-authored-module-bank',
-          updatedAt:FieldValue.serverTimestamp()
-        },{merge:true});
-      }
-      await batch.commit();
-      await db.collection('competencyGenerationRuns').doc(runId).set({
-        status:'completed',completed:1,finished:1,modules:{[day]:'completed'},
-        completedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
-      },{merge:true});
-      return {success:true,runId,trackId,day,questionCount:50,recommendedQuestionCount:15,
-        completed:true,message:'Communication Module 1 is ready: 50 master questions, 15 questions per student. Only the selected module was loaded.'};
-    }
     await db.collection('competencyGenerationJobs').doc(runId+'_D'+day).set({
       runId,trackId,day,adminUid:adminUser.uid,status:'queued',createdAt:FieldValue.serverTimestamp()
     });
