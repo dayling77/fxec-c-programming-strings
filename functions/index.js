@@ -1957,7 +1957,6 @@ function buildCommunicationModule1Bank(){
     ['Editing for accuracy','Choose the corrected form: “The students was ready.”',['The students were ready.','The students is ready.','The students be ready.','The students has ready.'],0,1,5,5,2,30],
     ['Editing for accuracy','Choose the clearest sentence.',['The engineer the result recorded.','The result recorded the engineer.','The engineer recorded the result.','Recorded the result engineer.'],2,1,4,5,5,30]
   ];
-  // The authored easy items contain topic, prompt, options, answer, difficulty, LO, material, drill and time. Add the required easy ladder level explicitly.\n  easy.forEach(x=>add(x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],1,x[8]));
   easy.push(
     ['Basic word order','Which sentence has the clearest subject, verb and object order?',['The student completed the assignment.','Completed the student the assignment.','The assignment the student completed.','The student the assignment completed.'],0,1,2,2,1,30],
     ['Editing for accuracy','Choose the correctly edited sentence.',['The report contain three sections.','The report contains three sections.','The report containing three sections.','The report have three sections.'],1,1,5,5,2,30],
@@ -1965,6 +1964,9 @@ function buildCommunicationModule1Bank(){
     ['Sentence roles','In “The researcher analysed the results”, which word is the subject?',['researcher','analysed','results','the'],0,1,1,1,1,30],
     ['Editing for accuracy','Which sentence is grammatically accurate?',['The experiment produce reliable results.','The experiment produces reliable results.','The experiment producing reliable results.','The experiment have reliable results.'],1,1,5,5,2,30]
   );
+  // Add all 15 authored easy questions after the five extra easy items are appended.
+  // This guarantees 15 easy + 20 moderate + 15 tough = exactly 50 questions.
+  easy.forEach(x=>add(x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],1,x[8]));
   const moderate=[
     ['Sentence roles','In “After the inspection, the maintenance team replaced the damaged cable”, which phrase is the subject?',['After the inspection','the maintenance team','the damaged cable','replaced'],1,2,1,1,2,45],
     ['Sentence roles','In “The design team reviewed the drawing carefully”, what is the object of reviewed?',['The design team','reviewed','the drawing','carefully'],2,2,1,1,2,45],
