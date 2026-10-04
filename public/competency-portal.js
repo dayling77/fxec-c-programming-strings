@@ -6,6 +6,7 @@ import { COMMUNICATION_MODULES } from './communication-curriculum.js';
 import { renderCommunicationAudioLab, wireCommunicationAudioLab } from './communication-audio-lab.js';
 import { FIRST_YEAR_MODULE_CONTENT } from './first-year-module-content.js';
 import { COMMUNICATION_LEARNING_CONTENT } from './communication-learning-content.js';
+import { RICH_HTML_MODULES } from './rich-learning-content.js';
 
 const fxecApp=getApps().length?getApp():initializeApp(window.FXEC_FIREBASE_CONFIG);
 const functions=getFunctions(fxecApp,'us-central1');
@@ -445,7 +446,8 @@ function genericModule(title,trackTitle,no){
    code:'',
    check:'Can you explain '+topic+', apply it without the notes, and state how you would verify the result?'
  }));
- const lessons=(custom.lessons||fallbackLessons).map((x,i)=>({...x,level:x.level||'Application'}));
+ const richLessons=RICH_HTML_MODULES[trackKey]?.[no]||RICH_HTML_MODULES[trackKey==='c-programming'?'c-programming':trackKey]?.[no]||null;
+ const lessons=(richLessons||custom.lessons||fallbackLessons).map((x,i)=>({...x,level:x.level||'Application'}));
  const drills=(custom.drills||activities.drills).map((x,i)=>({...x,id:x.id||modulePrefix+'DR'+(i+1),learningOutcomeId:x.learningOutcomeId||modulePrefix+'LO'+(i+1),materialId:x.materialId||modulePrefix+'MAT'+(i+1),guidedDrillId:x.guidedDrillId||modulePrefix+'DR'+(i+1),ladderLevel:x.ladderLevel||i+1}));
  const practiceTasks=(custom.practice||activities.practice).map((x,i)=>({...x,id:x.id||modulePrefix+'PR'+(i+1),ladderLevel:x.ladderLevel||i+1,learningOutcomeId:x.learningOutcomeId||modulePrefix+'LO'+(i+1),materialId:x.materialId||modulePrefix+'MAT'+(i+1),guidedDrillId:x.guidedDrillId||modulePrefix+'DR'+(i+1)}));
  const materials=custom.materials||[
@@ -767,7 +769,7 @@ function moduleView(track,data,no,programme,videoLinks=[]){
  const topicHtml=(data.topics||[]).map(x=>'<li>'+esc(x)+'</li>').join('');
  let materialHtml='';
  if(Array.isArray(data.lessons)&&data.lessons.length){
-   materialHtml=data.lessons.map((lesson,i)=>'<article class="studyLesson materialSlide" data-slide="'+i+'"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level||'Application')+'</span><strong>'+esc(lesson.title||'Learning Lesson')+'</strong></div><div class="studyRichGrid"><div class="studyRichPanel"><span class="studyPanelLabel">LEARN</span><p class="studyTeach">'+esc(lesson.teach||'Study the concept carefully and connect it to the module outcome.')+'</p></div><div class="studyRichPanel"><span class="studyPanelLabel">WORKED EXAMPLE</span><p>'+esc(lesson.example||data.example||'Apply the concept to the worked example and explain each step.')+'</p>'+(track.id==='communication'?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(lesson.example||lesson.teach||'')+'">🔊 Listen to Example</button>':'')+'</div></div><div class="studyActionStrip"><div><b>CHECK YOUR UNDERSTANDING</b><span>'+esc(lesson.check||'Explain the concept, apply it to a new example and state how you would verify the result.')+'</span></div><div><b>BEFORE YOU MOVE ON</b><span>Close the notes, explain the idea in your own words, solve the example independently and identify one common mistake.</span></div></div>'+((lesson.code||'').trim()?'<details class="studyCodeDetails"><summary>View worked code / technical example</summary><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></details>':'')+'</article>').join('');
+   materialHtml=data.lessons.map((lesson,i)=>'<article class="studyLesson materialSlide" data-slide="'+i+'"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level||'Application')+'</span><strong>'+esc(lesson.title||'Learning Lesson')+'</strong></div>'+(lesson.html?'<div class="richHtmlMaterial">'+lesson.html+'</div>':'<div class="studyRichGrid"><div class="studyRichPanel"><span class="studyPanelLabel">LEARN</span><p class="studyTeach">'+esc(lesson.teach||'Study the concept carefully and connect it to the module outcome.')+'</p></div><div class="studyRichPanel"><span class="studyPanelLabel">WORKED EXAMPLE</span><p>'+esc(lesson.example||data.example||'Apply the concept to the worked example and explain each step.')+'</p>'+(track.id==='communication'?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(lesson.example||lesson.teach||'')+'">🔊 Listen to Example</button>':'')+'</div></div><div class="studyActionStrip"><div><b>CHECK YOUR UNDERSTANDING</b><span>'+esc(lesson.check||'Explain the concept, apply it to a new example and state how you would verify the result.')+'</span></div><div><b>BEFORE YOU MOVE ON</b><span>Close the notes, explain the idea in your own words, solve the example independently and identify one common mistake.</span></div></div>'+((lesson.code||'').trim()?'<details class="studyCodeDetails"><summary>View worked code / technical example</summary><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></details>':'')+'</article>').join('');
  }else{
    materialHtml=(data.materials||[]).map((x,i)=>{
      const title=typeof x==='string'?x:(x.title||'Learning material '+(i+1));
