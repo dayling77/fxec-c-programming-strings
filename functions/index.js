@@ -2408,12 +2408,13 @@ export const loadPreparedCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
   }
   const taskBatch=db.batch();
   for(const {day,questions} of modules){
+    const curriculum=competencyLearningMetadata(trackId,day);
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
     taskBatch.set(ref,{
       trackId,trackTitle:meta.title,day,
       title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
-      topic:competencyModuleTitle(trackId,day),date:null,openAt:null,closeAt:null,
-      questions,questionCount:50,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,
+      topic:competencyModuleTitle(trackId,day),...curriculum,date:null,openAt:null,closeAt:null,
+      questions,questionCount:50,recommendedQuestionCount:10,
       status:'draft',isPublished:false,source:'prepared-static-bank-v1',generatedBy:'prepared repository bank',loadedBy:adminUser.uid,
       loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
     },{merge:true});
@@ -2447,8 +2448,9 @@ export const autoGenerateCompetencyAssessmentProgram = onCall({cors:CALLABLE_COR
   const batch=db.batch(), poolWrites=[], created=[];
   for(let day=1;day<=10;day++){
     const questions=await generateHighStandardCompetencyDay(trackId,day);
+    const curriculum=competencyLearningMetadata(trackId,day);
     const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-    batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),topic:competencyModuleTitle(trackId,day),date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
+    batch.set(ref,{trackId,trackTitle:meta.title,day,title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),topic:competencyModuleTitle(trackId,day),...curriculum,date:null,openAt:null,closeAt:null,questions,questionCount:questions.length,recommendedQuestionCount:trackId==='c-programming'?10:15,status:'draft',isPublished:false,createdBy:adminUser.uid,generatedBy:'AI',generatedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
     poolWrites.push({day,questions});
     created.push({day,questionCount:questions.length,recommendedQuestionCount:COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent});
   }
