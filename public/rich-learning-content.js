@@ -165,7 +165,7 @@ function genericRichLessons(track,module,index){
   const body=
     '<h3>'+esc(topic)+'</h3>'+
     domainTeaching(track,topic,module,i)+
-    card('WHY THIS MATTERS','<p><strong>'+esc(m.title)+'</strong> develops '+esc(focus)+'</p><p>Use this idea as part of a traceable engineering workflow: identify what is known, make the reasoning explicit, verify it and communicate the result.</p>')+
+    card('WHY THIS MATTERS','<p><strong>'+esc(module.title)+'</strong> develops '+esc(focus)+'</p><p>Use this idea as part of a traceable engineering workflow: identify what is known, make the reasoning explicit, verify it and communicate the result.</p>')+
     card('WORKED ENGINEERING EXAMPLE',domainWorkedExample(track,module,topic,i))+
     card('METHOD / CHECKPOINTS','<ol class="learn-steps"><li>Define the task in observable terms.</li><li>Identify the relevant variables, evidence or constraints.</li><li>Apply the method and record intermediate reasoning.</li><li>Run an independent check: unit, boundary, comparison, test case or counterexample.</li><li>State the result together with its meaning and limitation.</li></ol>')+
     card('COMMON ERROR','<p>'+esc(errorFor(track,topic))+'</p>')+
