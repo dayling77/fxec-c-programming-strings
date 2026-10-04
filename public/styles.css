@@ -787,3 +787,24 @@ body{margin:0;background:var(--fx-bg);color:var(--fx-ink);font-family:Inter,ui-s
 .caVideoInputs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .caVideoInputs input{width:100%;padding:10px 12px;border:1px solid #ccd6e2;border-radius:9px}
 @media(max-width:760px){.moduleVideoGrid,.studyRichGrid,.studyActionStrip,.caVideoInputs{grid-template-columns:1fr}}
+
+
+/* Rich HTML self-learning materials — content presentation only */
+.richHtmlMaterial{padding:18px 0 4px;color:#172334;line-height:1.7}
+.richHtmlMaterial h3{margin:0 0 10px;font-size:1.25rem;color:#163f6b}
+.richHtmlMaterial p{margin:8px 0}
+.richHtmlMaterial .learn-card{margin:16px 0;padding:16px;border:1px solid #dce5ef;border-radius:15px;background:#fbfcfe}
+.richHtmlMaterial .learn-card-label,.richHtmlMaterial .learn-visual-title{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#2b5f94;margin-bottom:8px}
+.richHtmlMaterial .learn-formula{margin:12px 0;padding:15px;text-align:center;border-radius:12px;background:#eef5fc;border:1px solid #d7e5f4;font-size:1.12rem;overflow:auto}
+.richHtmlMaterial math{font-size:1.18em}
+.richHtmlMaterial .learn-table{width:100%;border-collapse:collapse;margin:10px 0;background:#fff}
+.richHtmlMaterial .learn-table th,.richHtmlMaterial .learn-table td{border:1px solid #dbe3ec;padding:9px 10px;text-align:left;vertical-align:top}
+.richHtmlMaterial .learn-table th{background:#edf3f9;color:#173f68}
+.richHtmlMaterial .learn-steps{padding-left:24px}
+.richHtmlMaterial .learn-steps li{margin:7px 0}
+.richHtmlMaterial .learn-bullets{padding-left:22px}
+.richHtmlMaterial .learn-visual{margin:14px 0;padding:12px;border:1px solid #dce5ef;border-radius:14px;background:#fff}
+.richHtmlMaterial .learn-visual svg{display:block;width:100%;height:auto}
+.richHtmlMaterial .codeBlock{margin:12px 0}
+.richHtmlMaterial strong{color:#173f68}
+@media(max-width:720px){.richHtmlMaterial{font-size:.98rem}.richHtmlMaterial .learn-card{padding:13px}.richHtmlMaterial .learn-table{font-size:.9rem}.richHtmlMaterial .learn-formula{font-size:1rem}}
