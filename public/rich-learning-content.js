@@ -1,66 +1,134 @@
 // FXEC Rich HTML Self-Learning Content
-// CONTENT ONLY. Does not alter assessment, drill, ladder, scoring or Firebase architecture.
-// HTML is intentionally stored as content so formulas, symbols, tables and visuals render accurately.
+// CONTENT ONLY. Preserves the existing Topic -> Materials -> Drills -> Practice -> Challenge -> Assessment architecture.
+// The curriculum is designed around explicit outcomes, active learning, worked examples, verification and transfer.
+// Communication is informed by CEFR-style can-do performance; engineering tracks by ABET/CDIO principles;
+// aptitude by contextual mathematical literacy; C programming by CS2023/ABET computing fundamentals.
 
-const svgBar = (label, width) => '<div class="learn-visual"><div class="learn-visual-title">'+label+'</div><svg viewBox="0 0 520 90" role="img" aria-label="'+label+'"><rect x="20" y="25" width="480" height="30" rx="8" fill="#e8eef7"></rect><rect x="20" y="25" width="'+width+'" height="30" rx="8" fill="#1f5fae"></rect></svg></div>';
+import { FIRST_YEAR_MODULE_CONTENT } from './first-year-module-content.js';
+import { COMMUNICATION_LEARNING_CONTENT } from './communication-learning-content.js';
 
+const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const card = (label, html) => '<section class="learn-card"><div class="learn-card-label">'+label+'</div>'+html+'</section>';
+const rich = (title, html, example, check, level='Foundation') => ({title,level,html,example,check});
 
-const rich = (title, html, example, check) => ({title, level:'Foundation', html, example, check});
+const C_MODULES = [
+ {title:'C Fundamentals',topics:['Problem definition and IPO','C program structure','Variables, types and conversion','Operators and expressions','Input, output and debugging']},
+ {title:'Control Flow',topics:['Boolean conditions','if/else and switch','for/while/do-while loops','Loop boundaries and tracing','Nested control flow and debugging']},
+ {title:'Arrays',topics:['Array representation and indexing','Traversal and statistics','Searching','Sorting and frequency counting','Two-dimensional arrays']},
+ {title:'Functions & Modular Programming',topics:['Function purpose and design','Parameters and arguments','Return values','Scope and prototypes','Call flow and modular decomposition']},
+ {title:'Pointers',topics:['Addresses and pointer variables','Dereferencing and indirection','Pointers and functions','Pointers with arrays','Pointer safety and tracing']},
+ {title:'Structures, Unions & User-Defined Types',topics:['Structure records','Member access','Arrays of structures','typedef and functions','Union selection and data representation']},
+ {title:'Dynamic Memory & Memory Management',topics:['Stack and heap concepts','malloc and calloc','realloc and dynamic arrays','free and ownership','Leaks, dangling pointers and safe cleanup']},
+ {title:'File Handling',topics:['FILE pointers and file lifecycle','Opening modes and errors','Text input/output','Formatted and line-based processing','Binary I/O and safe closing']},
+ {title:'Strings',topics:['Character arrays and null terminator','String input and bounds','strlen/strcpy/strcat/strcmp','Manual traversal and searching','String algorithms and common bugs']},
+ {title:'Advanced C',topics:['Preprocessor and macros','const, scope and command-line arguments','Function pointers','Bitwise operations','Defensive programming and unfamiliar-code debugging']}
+];
 
-export const RICH_HTML_MODULES = Object.freeze({
-  communication: {
-    1: [
-      rich('What is a sentence?', '<h3>Start with one complete idea</h3><p>A sentence tells the reader or listener <strong>who or what</strong> we are talking about and <strong>what is happening</strong>. In technical communication, a clear sentence helps another person understand the work without guessing.</p>'+card('THE BASIC MAP','<div class="learn-formula"><strong>SUBJECT</strong> → <strong>VERB</strong> → <strong>OBJECT</strong></div><p><b>Subject:</b> who or what performs the action. <b>Verb:</b> the action or state. <b>Object:</b> what receives the action, when an object is present.</p>')+svgBar('Clear information flow: who → does what → to what',420), 'The technician tested the circuit.', 'Can you point to the subject, verb and object?'),
-      rich('Find the subject', '<h3>Ask: “Who or what is doing this?”</h3><p>Do not choose the nearest noun automatically. Find the person, thing or system that controls the action.</p>'+card('WORKED EXAMPLE','<p><strong>The laboratory assistant recorded the temperature.</strong></p><table class="learn-table"><tr><th>Part</th><th>Answer</th><th>Question</th></tr><tr><td>Subject</td><td>laboratory assistant</td><td>Who recorded?</td></tr><tr><td>Verb</td><td>recorded</td><td>What did the assistant do?</td></tr><tr><td>Object</td><td>temperature</td><td>What was recorded?</td></tr></table>'), card('BEGINNER TIP','<p>Cover the beginning of the sentence and ask yourself: <em>Who performed the action?</em> That answer is usually the subject.</p>'), 'The engineer inspected the machine.', 'Underline the subject in one technical sentence of your own.'),
-      rich('Put words in a clear order', '<h3>English normally becomes easier to understand when the action follows the actor.</h3>'+card('PATTERN','<div class="learn-formula">SUBJECT <span>+</span> VERB <span>+</span> OBJECT</div><p>Engineer <strong>inspected</strong> machine.</p>')+card('COMPARE','<p>❌ <em>After the test the technician the voltage recorded.</em></p><p>✅ <strong>The technician recorded the voltage after the test.</strong></p><p>The second sentence lets the reader identify the actor and action immediately.</p>'), 'The student completed the experiment.', 'Rewrite one unclear sentence using Subject → Verb → Object.'),
-      rich('Subject–verb agreement', '<h3>The verb must match the real subject</h3><p>Singular subjects normally take singular present-tense verbs; plural subjects take plural forms.</p>'+card('WATCH THE HEAD NOUN','<p><strong>The list of measurements is complete.</strong></p><p>The word <em>measurements</em> is plural, but <strong>list</strong> is the head noun. Therefore the verb is <strong>is</strong>.</p>')+card('QUICK TEST','<p>Remove the distracting phrase:</p><p><strong>The list is complete.</strong></p><p>Now the agreement becomes obvious.</p>'), 'The results show a clear trend. / The result shows a clear trend.', 'Which noun controls the verb in “The set of readings is reliable”?'),
-      rich('Edit before you submit', '<h3>Use a repeatable editing routine</h3><ol class="learn-steps"><li>Find the subject.</li><li>Check the verb.</li><li>Check word order.</li><li>Check modifiers and punctuation.</li><li>Read the sentence once as a reader, not as the writer.</li></ol>'+card('COMMON MISTAKE','<p>❌ The students <strong>was</strong> ready.</p><p>✅ The students <strong>were</strong> ready.</p><p><strong>Why?</strong> “Students” is plural, so the verb must be “were”.</p>')+card('FINAL SELF-CHECK','<p>Before moving to the drill, explain <strong>why</strong> your correction is necessary. If you cannot explain it, return to the rule.</p>'), 'The students were ready for the experiment.', 'Can you explain the correction without looking at the notes?')
-    ]
-  },
-  aptitude: {
-    1: [
-      rich('Numbers are quantities, not just digits', '<h3>Build numerical sense before calculating</h3><p>Number sense means understanding the size, relationship and meaning of a quantity. A calculator can produce a number; <strong>you</strong> must decide whether that number makes sense.</p>'+card('THREE QUESTIONS','<ol class="learn-steps"><li><strong>What quantity am I measuring?</strong></li><li><strong>What unit is it in?</strong></li><li><strong>What size should I roughly expect?</strong></li></ol>')+svgBar('Example magnitude: 1.5 kW × 20 min is measured in energy',300), 'A motor rated 1.5 kW runs for 20 minutes. Before calculating, expect an energy value much smaller than 1.5 kW × 20 hours.', 'What unit should the final energy have?'),
-      rich('Fractions, decimals and percentages', '<h3>These are different ways to describe the same proportion</h3>'+card('THE CONNECTION','<div class="learn-formula"><math display="block"><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>=</mo><mn>0.25</mn><mo>=</mo><mn>25</mn><mo>%</mo></math></div><p>A fraction tells us “part of a whole”. A decimal is another numerical representation. A percentage expresses the same relationship out of 100.</p>')+card('STEP BY STEP','<p>To convert 0.25 to a percentage:</p><p><math><mn>0.25</mn><mo>×</mo><mn>100</mn><mo>=</mo><mn>25</mn><mo>%</mo></math></p><p>To convert 25% to a decimal:</p><p><math><mn>25</mn><mo>÷</mo><mn>100</mn><mo>=</mo><mn>0.25</mn></math></p>'), '25% of 200 = 0.25 × 200 = 50.', 'Can you convert 3/5 into a decimal and a percentage?'),
-      rich('Estimate before exact calculation', '<h3>Estimation is an error detector</h3><p>Round numbers to friendly values first. The estimate gives you a mental target. If the exact answer is far away, investigate.</p>'+card('WORKED EXAMPLE','<p>Suppose a machine uses <strong>1.5 kW</strong> for <strong>20 minutes</strong>.</p><p>20 minutes = <math><mfrac><mn>1</mn><mn>3</mn></mfrac></math> hour.</p><p>Energy:</p><p><math><mi>E</mi><mo>=</mo><mi>P</mi><mo>×</mo><mi>t</mi><mo>=</mo><mn>1.5</mn><mo>×</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>=</mo><mn>0.5</mn><mi>kWh</mi></math></p>')+card('REASONABLENESS','<p>Twenty minutes is only one-third of an hour, so the energy should be about one-third of 1.5 kWh. <strong>0.5 kWh is sensible.</strong></p>'), 'The exact result is 0.5 kWh.', 'Why would 30 kWh immediately look suspicious?'),
-      rich('Units protect your calculation', '<h3>A number without its unit may be incomplete</h3><p>Engineering quantities carry meaning through units. Convert before combining quantities when the formula requires compatible units.</p>'+card('TIME CONVERSION','<div class="learn-formula"><math><mn>60</mn><mi>min</mi><mo>=</mo><mn>1</mn><mi>h</mi></math></div><p>Therefore:</p><p><math><mn>20</mn><mi>min</mi><mo>=</mo><mfrac><mn>20</mn><mn>60</mn></mfrac><mi>h</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mi>h</mi></math></p>')+card('COMMON MISTAKE','<p>Do not multiply 1.5 kW by 20 minutes and label the answer kWh. The time must first be expressed in hours.</p>'), '1.5 kW × 1/3 h = 0.5 kWh.', 'What conversion is required before using minutes in this energy formula?'),
-      rich('Check whether the answer is believable', '<h3>Good quantitative reasoning ends with a check</h3>'+card('THE 4-CHECK','<ol class="learn-steps"><li><strong>Unit:</strong> Is the final unit correct?</li><li><strong>Magnitude:</strong> Is the number roughly expected?</li><li><strong>Boundary:</strong> Is it within a sensible range?</li><li><strong>Meaning:</strong> Does it answer the original question?</li></ol>')+card('TRANSFER','<p>If a calculation produces <strong>500 kWh</strong> for a small motor running for 20 minutes, do not simply accept it because the calculator displayed it. Recheck the time conversion and formula.</p>'), 'A result is trustworthy when calculation and context agree.', 'State one independent check you would use before accepting an engineering calculation.')
-    ]
-  },
-  'core-engineering': {
-    1: [
-      rich('What does measurement actually mean?', '<h3>Measurement is a comparison with a defined unit</h3><p>When you measure a length, you are comparing the object with a standard unit such as the metre or millimetre. A measurement should therefore communicate <strong>quantity + numerical value + unit</strong>.</p>'+card('MEASUREMENT STATEMENT','<div class="learn-formula"><strong>Measurement = value + unit</strong></div><p>Example: <strong>24.6 mm</strong>. “24.6” alone does not tell the reader what physical quantity or scale is being reported.</p>'), 'A component length is recorded as 24.6 mm.', 'What information is missing if someone writes only “24.6”?'),
-      rich('Choose the right SI unit', '<h3>Unit choice should match the scale of the quantity</h3>'+card('COMMON ENGINEERING UNITS','<table class="learn-table"><tr><th>Quantity</th><th>Common unit</th></tr><tr><td>Length</td><td>m, mm</td></tr><tr><td>Mass</td><td>kg, g</td></tr><tr><td>Time</td><td>s, min</td></tr><tr><td>Temperature</td><td>°C, K</td></tr><tr><td>Electrical current</td><td>A</td></tr></table>')+card('CONVERSION IDEA','<p><math><mn>1</mn><mi>m</mi><mo>=</mo><mn>1000</mn><mi>mm</mi></math></p><p>Therefore 0.025 m = 25 mm.</p>'), '0.025 m and 25 mm represent the same length.', 'Convert 3.5 m into millimetres.'),
-      rich('Resolution is not accuracy', '<h3>These words describe different properties</h3>'+card('RESOLUTION','<p>The smallest change an instrument can display or distinguish.</p><p><strong>Example:</strong> an instrument displaying 0.01 mm has finer resolution than one displaying 0.1 mm.</p>')+card('ACCURACY','<p>How close a measurement is to the accepted or true value.</p>')+card('PRECISION','<p>How consistently repeated measurements agree with one another.</p>'), 'Three readings: 24.61, 24.60, 24.61 mm show good repeatability. That alone does not prove they are accurate.', 'Can repeated identical readings still be inaccurate? Explain why.'),
-      rich('Read an instrument and report responsibly', '<h3>Do not invent digits</h3><p>The displayed scale limits what you can legitimately report. Record the reading at the instrument’s appropriate resolution.</p>'+card('WORKED EXAMPLE','<p>Suppose a caliper gives a reading of <strong>24.62 mm</strong>. Report the value as 24.62 mm, not 24.620000 mm. Extra invented digits suggest a precision the instrument did not provide.</p>')+card('REPEAT','<p>Measure the same component several times. If readings vary slightly, record them and examine the spread rather than silently choosing the value you like.</p>'), 'Repeated measurements: 24.62, 24.61, 24.63 mm.', 'Why should you avoid adding unsupported decimal places?'),
-      rich('Uncertainty belongs in engineering measurement', '<h3>Every real measurement has limits</h3><p>Uncertainty describes the range of values that could reasonably surround a reported measurement. Repeated measurements help you understand repeatability.</p>'+card('BEGINNER MODEL','<div class="learn-formula"><math><mi>x</mi><mo>≈</mo><mover><mi>x</mi><mo>¯</mo></mover><mo>±</mo><mi>u</mi></math></div><p>The symbol <math><mi>u</mi></math> can represent an uncertainty estimate. The exact method depends on the instrument and measurement procedure.</p>')+card('GOOD PRACTICE','<ol class="learn-steps"><li>Use the correct instrument.</li><li>Use the correct unit.</li><li>Read at the appropriate resolution.</li><li>Repeat when appropriate.</li><li>Report what the evidence supports.</li></ol>'), 'A measurement should communicate both its value and its limitations.', 'What would you record in addition to a single numerical reading?')
-    ]
-  },
-  'problem-solving': {
-    1: [
-      rich('What is a problem?', '<h3>A problem is a gap between the current state and the desired state</h3><p>Problem solving begins before choosing a solution. First make the situation precise: <strong>What is happening now? What should happen? What constraints exist?</strong></p>'+card('PROBLEM MAP','<div class="learn-formula">CURRENT STATE → GAP → DESIRED STATE</div><p>Example: A cooling fan is running but the enclosure temperature remains above the required limit.</p>'), 'Current: enclosure temperature is 48°C. Desired: ≤ 40°C. Constraint: existing fan and power supply.', 'What is the gap between the current and desired states?'),
-      rich('Separate facts from assumptions', '<h3>Good problem solving starts with evidence</h3>'+card('SORT THE INFORMATION','<table class="learn-table"><tr><th>Fact</th><th>Assumption</th></tr><tr><td>Measured temperature = 48°C</td><td>Fan is powerful enough</td></tr><tr><td>Target ≤ 40°C</td><td>Airflow is unobstructed</td></tr></table>')+card('WHY IT MATTERS','<p>If an assumption is treated as a fact, the solution may solve the wrong problem.</p>'), 'The measured temperature is evidence; “the fan is sufficient” is a hypothesis until tested.', 'Identify one fact and one assumption in a problem you know.'),
-      rich('Break a large problem into smaller parts', '<h3>Decomposition reduces cognitive load</h3><p>Instead of asking “How do I fix everything?”, divide the problem into manageable questions.</p>'+card('DECOMPOSITION','<ol class="learn-steps"><li>Measure the current condition.</li><li>Identify possible causes.</li><li>Test the highest-value cause.</li><li>Choose an intervention.</li><li>Verify the result.</li></ol>')+svgBar('Large problem → smaller testable questions',390), 'For overheating: measure temperature → inspect airflow → check load → test cooling change → remeasure.', 'Which smaller question should you answer first?'),
-      rich('Find the root cause, not only the symptom', '<h3>A visible symptom may have several causes</h3>'+card('CAUSE CHAIN','<div class="learn-formula">SYMPTOM → POSSIBLE CAUSE → EVIDENCE → ROOT CAUSE</div><p>Example: High temperature → restricted airflow? → inspect filter → filter blocked.</p>')+card('COMMON MISTAKE','<p>Replacing a component immediately may remove the symptom temporarily without proving why the failure occurred.</p>'), 'Evidence should connect the proposed cause to the observed failure.', 'What evidence would distinguish a blocked filter from an undersized fan?'),
-      rich('Verify the solution', '<h3>A solution is not successful merely because it was implemented</h3>'+card('SUCCESS CRITERION','<p>Define the measurable condition before judging the solution.</p><p><strong>Target:</strong> enclosure temperature ≤ 40°C under the specified operating load.</p>')+card('VERIFY','<ol class="learn-steps"><li>Apply the intervention.</li><li>Repeat the relevant measurement.</li><li>Compare with the success criterion.</li><li>Check for unwanted side effects.</li></ol>'), 'If temperature falls from 48°C to 39°C under the same test condition, the target has been met.', 'What must remain controlled when comparing before and after?')
-    ]
-  },
-  analytical: {
-    1: [
-      rich('Observation is the starting point', '<h3>Separate what you see from what you think it means</h3><p>An observation should be describable and evidence-based. An interpretation is an explanation proposed from the observation.</p>'+card('EXAMPLE','<table class="learn-table"><tr><th>Observation</th><th>Interpretation</th></tr><tr><td>Temperature rose from 30°C to 42°C.</td><td>The system may be overheating.</td></tr></table><p>The second statement is a hypothesis, not the raw observation.</p>'), 'Record the measured temperature before explaining why it changed.', 'Which part is evidence and which part is interpretation?'),
-      rich('Evidence needs context', '<h3>A number becomes useful when we know what, when and how it was measured</h3>'+card('EVIDENCE CHECK','<ol class="learn-steps"><li>What was measured?</li><li>What unit was used?</li><li>When was it measured?</li><li>Under what conditions?</li><li>How reliable is the measurement?</li></ol>')+card('COMMON MISTAKE','<p>“The temperature is 42” is incomplete. A stronger statement is “The enclosure temperature was 42°C after 30 minutes at the specified load.”</p>'), 'Context changes how evidence should be interpreted.', 'What extra information would make a measurement more useful?'),
-      rich('Compare before drawing a trend', '<h3>A trend needs more than one convenient observation</h3>'+card('SMALL DATA SET','<table class="learn-table"><tr><th>Time</th><th>Temperature</th></tr><tr><td>0 min</td><td>30°C</td></tr><tr><td>10 min</td><td>34°C</td></tr><tr><td>20 min</td><td>38°C</td></tr><tr><td>30 min</td><td>42°C</td></tr></table>')+card('INTERPRETATION','<p>The measurements show an increasing pattern during this interval. We should not automatically conclude that the increase will continue indefinitely without further evidence.</p>'), 'The data support an increasing trend over the observed interval.', 'What additional measurement would strengthen the conclusion?'),
-      rich('Ask whether the evidence supports the claim', '<h3>Strong analysis links claim → evidence → reasoning</h3>'+card('ANALYTICAL CHAIN','<div class="learn-formula"><strong>CLAIM</strong> ← <strong>EVIDENCE</strong> ← <strong>OBSERVATION</strong></div><p>Claim: temperature is increasing during the test. Evidence: 30, 34, 38, 42°C at successive intervals. Reasoning: each recorded value is higher than the previous one.</p>'), 'Do not replace evidence with confidence.', 'What exact observations support the claim?'),
-      rich('Check alternative explanations', '<h3>Good analytical reasoning tests competing explanations</h3>'+card('ALTERNATIVES','<p>If temperature rises, possible explanations might include increased load, reduced airflow, ambient temperature change or sensor error.</p><p>A stronger conclusion identifies what evidence would distinguish these possibilities.</p>')+card('TRANSFER','<p>Before accepting a conclusion, ask: <strong>What else could explain the same observation?</strong></p>'), 'The best explanation is the one supported by the strongest available evidence, not merely the first plausible explanation.', 'Name one alternative explanation and one test for it.')
-    ]
-  },
-  'c-programming': {
-    1: [
-      rich('From a problem to a program', '<h3>Programming is structured problem solving</h3><p>Before typing C syntax, translate the problem into three parts:</p>'+card('IPO MODEL','<div class="learn-formula"><strong>INPUT</strong> → <strong>PROCESS</strong> → <strong>OUTPUT</strong></div><ul class="learn-bullets"><li><strong>Input:</strong> information the program receives.</li><li><strong>Process:</strong> calculation or decision performed.</li><li><strong>Output:</strong> information the program produces.</li></ul>')+card('EXAMPLE','<p><strong>Problem:</strong> Find the total of two marks.</p><p>Input → mark1, mark2</p><p>Process → mark1 + mark2</p><p>Output → total</p>'), 'For inputs 10 and 20, the process is 10 + 20 and the output is 30.', 'Can you identify input, process and output before writing code?'),
-      rich('Anatomy of a C program', '<h3>Read the program from the outside in</h3><pre class="codeBlock"><code>#include &lt;stdio.h&gt;\n\nint main(void) {\n    int total = 30;\n    printf("%d", total);\n    return 0;\n}</code></pre>'+card('WHAT EACH PART DOES','<table class="learn-table"><tr><th>Part</th><th>Purpose</th></tr><tr><td>#include</td><td>Provides declarations from a header.</td></tr><tr><td>main()</td><td>Program entry point.</td></tr><tr><td>int total</td><td>Declares an integer variable.</td></tr><tr><td>printf()</td><td>Displays formatted output.</td></tr><tr><td>return 0</td><td>Ends main successfully.</td></tr></table>'), 'The statements inside main execute in sequence.', 'Where does a normal hosted C program begin execution?'),
-      rich('Variables and data types', '<h3>A variable gives a value a name and a type</h3>'+card('BASIC TYPES','<table class="learn-table"><tr><th>Type</th><th>Typical use</th><th>Example</th></tr><tr><td>int</td><td>whole numbers</td><td>42</td></tr><tr><td>float</td><td>fractional values</td><td>3.5f</td></tr><tr><td>double</td><td>more precise fractional values</td><td>3.14159</td></tr><tr><td>char</td><td>one character</td><td>\'A\'</td></tr></table>')+card('NAMING RULE','<p>Identifiers may contain letters, digits and underscore, but cannot begin with a digit or be a C keyword.</p><p>Prefer <strong>totalMarks</strong> to <strong>x</strong> when the meaning matters.</p>'), 'int totalMarks = 85;', 'Which is a valid identifier: total_1, 2total, float, studentName?'),
-      rich('Expressions and integer division', '<h3>The type of the operands affects the result</h3>'+card('EXAMPLE','<pre class="codeBlock"><code>int a = 5;\nint b = 2;\nprintf("%d", a / b);</code></pre><p>The result is <strong>2</strong>, not 2.5, because both operands are integers.</p>')+card('FOR DECIMAL DIVISION','<pre class="codeBlock"><code>printf("%.1f", (double)a / b);</code></pre><p>Casting <strong>a</strong> to double makes the division floating point.</p>'), '<math><mn>5</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mn>2</mn></math> for integer division.', 'Why does 5/2 differ from (double)5/2?'),
-      rich('Input, output and debugging', '<h3>Make the program interact with data</h3><pre class="codeBlock"><code>int n;\nscanf("%d", &n);\nprintf("You entered %d", n);</code></pre>'+card('WHY &n?','<p><strong>scanf</strong> needs the address of <strong>n</strong> so it knows where to store the entered integer.</p>')+card('DEBUGGING CYCLE','<div class="learn-formula">WRITE → COMPILE → READ ERROR → FIX → RECOMPILE → TEST</div><p>A program can compile successfully and still contain a logic error. Therefore test both normal and boundary values.</p>'), 'Read 40 and print “You entered 40”.', 'Can you explain why scanf uses &n for an integer?')
-    ]
-  }
+function cCode(day,index){
+ const samples=[
+  '#include <stdio.h>\\nint main(void){\\n    int a=12,b=8;\\n    printf("%d",a+b);\\n    return 0;\\n}',
+  'int mark=72;\\nif(mark>=40) printf("PASS");\\nelse printf("FAIL");',
+  'int a[5]={4,7,2,9,5};\\nfor(int i=0;i<5;i++) printf("%d ",a[i]);',
+  'int add(int a,int b){ return a+b; }\\nprintf("%d",add(4,6));',
+  'int x=10;\\nint *p=&x;\\n*p=25;\\nprintf("%d",x);',
+  'struct Student{int id; double mark;};\\nstruct Student s={101,82.5};',
+  'int *p=malloc(5*sizeof *p);\\nif(p){ /* use p */ free(p); }',
+  'FILE *fp=fopen("data.txt","r");\\nif(fp){ /* read */ fclose(fp); }',
+  'char s[]="engineering";\\nprintf("%zu",strlen(s));',
+  'unsigned int x=5u;\\nprintf("%u",x<<1);'
+ ];
+ return samples[index%10];
+}
+
+function formulaFor(track,title){
+ const t=title.toLowerCase();
+ if(track==='aptitude'){
+  if(t.includes('number')) return '<div class="learn-formula"><math><mi>percentage</mi><mo>=</mo><mfrac><mi>part</mi><mi>whole</mi></mfrac><mo>×</mo><mn>100</mn></math></div>';
+  if(t.includes('algebra')) return '<div class="learn-formula"><math><mi>y</mi><mo>=</mo><mi>mx</mi><mo>+</mo><mi>c</mi></math></div>';
+  if(t.includes('sequence')) return '<div class="learn-formula"><math><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mi>a</mi><mo>+</mo><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><mi>d</mi></math></div>';
+  if(t.includes('ratio')) return '<div class="learn-formula"><math><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>=</mo><mfrac><mi>c</mi><mi>d</mi></mfrac></math></div>';
+  if(t.includes('data')) return '<div class="learn-formula"><math><mi>mean</mi><mo>=</mo><mfrac><mrow><mo>Σ</mo><mi>x</mi></mrow><mi>n</mi></mfrac></math></div>';
+  if(t.includes('probability')) return '<div class="learn-formula"><math><mi>P</mi><mo>(</mo><mi>A</mi><mo>′</mo><mo>)</mo><mo>=</mo><mn>1</mn><mo>−</mo><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo></math></div>';
+  if(t.includes('geometry')) return '<div class="learn-formula"><math><mi>A</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup><mo>;</mo><mi>V</mi><mo>=</mo><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup><mi>h</mi></math></div>';
+  return '<div class="learn-formula"><strong>QUANTITY → RELATIONSHIP → CALCULATION → INTERPRETATION</strong></div>';
+ }
+ if(track==='core-engineering'){
+  if(t.includes('measurement')) return '<div class="learn-formula"><math><mi>x</mi><mo>≈</mo><mover><mi>x</mi><mo>¯</mo></mover><mo>±</mo><mi>u</mi></math></div>';
+  if(t.includes('electrical')) return '<div class="learn-formula"><math><mi>V</mi><mo>=</mo><mi>I</mi><mi>R</mi><mo>;</mo><mi>P</mi><mo>=</mo><mi>V</mi><mi>I</mi></math></div>';
+  if(t.includes('mechanical')) return '<div class="learn-formula"><math><mi>τ</mi><mo>=</mo><mi>r</mi><mi>F</mi><mo>sin</mo><mi>θ</mi><mo>;</mo><mi>P</mi><mo>=</mo><mfrac><mi>W</mi><mi>t</mi></mfrac></math></div>';
+  if(t.includes('thermal')) return '<div class="learn-formula"><math><mi>Q</mi><mo>=</mo><mi>m</mi><mi>c</mi><mi>ΔT</mi></math></div>';
+  if(t.includes('digital')) return '<div class="learn-formula"><strong>AND:</strong> 1 only when both inputs are 1 &nbsp; <strong>OR:</strong> 1 when at least one input is 1</div>';
+  if(t.includes('sustainability')) return '<div class="learn-formula"><strong>Impact → life cycle → alternatives → trade-off → decision</strong></div>';
+  if(t.includes('safety')) return '<div class="learn-formula"><strong>Risk = likelihood × consequence</strong></div>';
+  return '<div class="learn-formula"><strong>REQUIREMENT → EVIDENCE → ENGINEERING JUDGEMENT → VERIFIED RESULT</strong></div>';
+ }
+ if(track==='problem-solving') return '<div class="learn-formula"><strong>PROBLEM → DECOMPOSE → MODEL → TEST → SOLVE → VERIFY → TRANSFER</strong></div>';
+ if(track==='analytical') return '<div class="learn-formula"><strong>OBSERVATION → EVIDENCE → INFERENCE → TEST → CONCLUSION</strong></div>';
+ if(track==='c-programming') return '<div class="learn-formula"><strong>REQUIREMENT → ALGORITHM → CODE → TEST → DEBUG → VERIFY</strong></div>';
+ return '';
+}
+
+function genericRichLessons(track,module,index){
+ const topics=module.topics||[];
+ const focus=module.focus||'Build the skill through understanding, guided application, analysis, diagnosis and transfer.';
+ const example=module.example||'Apply '+module.title+' to a realistic first-year engineering situation and verify the result.';
+ return topics.slice(0,5).map((topic,i)=>{
+  const level=['Foundation','Foundation','Application','Diagnosis','Transfer'][i];
+  const safeTopic=esc(topic), safeTitle=esc(module.title);
+  let learn='';
+  if(i===0) learn='<h3>Build the concept before attempting the task</h3><p><strong>'+safeTopic+'</strong> is one of the core ideas in <strong>'+safeTitle+'</strong>. '+esc(focus)+' Start by defining the quantity, relationship, rule or decision involved. Do not jump directly to the answer.</p>';
+  else if(i===1) learn='<h3>Connect the rule to a worked situation</h3><p>Use <strong>'+safeTopic+'</strong> as a decision tool, not as a memorised definition. Identify the known information, the unknown, the governing relationship and the evidence required to justify the result.</p>';
+  else if(i===2) learn='<h3>Analyse conditions and verify the result</h3><p>Ask what assumptions make <strong>'+safeTopic+'</strong> valid. Test units, boundaries, alternative explanations or counterexamples. A correct-looking answer is not enough without a reason it is defensible.</p>';
+  else if(i===3) learn='<h3>Diagnose the failure, not just the symptom</h3><p>When a result is wrong, reproduce the case, isolate the step where reasoning changed, identify the violated condition and change one assumption or operation at a time.</p>';
+  else learn='<h3>Transfer the skill to a new context</h3><p>Apply <strong>'+safeTopic+'</strong> to a new engineering, laboratory or professional situation. Explain why the method remains appropriate and what evidence would cause you to revise the conclusion.</p>';
+  const worked=card('WORKED ENGINEERING EXAMPLE','<p>'+esc(example)+'</p>'+formulaFor(track,module.title));
+  const method=card('HOW TO THINK','<ol class="learn-steps"><li>State the requirement.</li><li>Identify the relevant evidence and variables.</li><li>Apply the appropriate method step by step.</li><li>Check units, assumptions, constraints or boundary cases.</li><li>Explain the result in the context of the original problem.</li></ol>');
+  const error=card('COMMON ERROR','<p>Using a familiar rule without checking its conditions. Ask: <strong>What evidence supports this step?</strong> If the evidence is missing, stop and gather it before proceeding.</p>');
+  const check='Explain '+topic+' without the notes, apply it to one new case and state one independent check you would use before accepting the result.';
+  return rich(topic,learn+worked+method+error,example,check,level);
+ });
+}
+
+function communicationRich(){
+ return COMMUNICATION_LEARNING_CONTENT.map((module,no)=>module.lessons.map((lesson,i)=>{
+  const body='<h3>'+esc(lesson.title)+'</h3><p>'+esc(lesson.teach||'Build this communication skill through a clear can-do task.')+'</p>'+
+    card('WORKED EXAMPLE','<p>'+esc(lesson.example||'Apply the language skill to a professional engineering context.')+'</p>')+
+    card('LANGUAGE / PERFORMANCE CHECK','<p>Use the CEFR-style question: <strong>Can I perform this task clearly for the intended audience?</strong> Check accuracy, range, fluency, coherence and appropriateness where relevant.</p>')+
+    card('MICRO-CHECK','<p>'+esc(lesson.check||'Explain the choice and produce a new example.')+'</p>');
+  return rich(lesson.title,body,lesson.example||'',lesson.check||'',i<2?'Foundation':i<4?'Application':'Transfer');
+ }));
+}
+
+function cRich(){
+ return C_MODULES.map((module,no)=>module.topics.map((topic,i)=>{
+  const code=cCode(no+1,i);
+  const learn='<h3>'+esc(topic)+'</h3><p>In <strong>'+esc(module.title)+'</strong>, this skill must be understood before code is written. Read the requirement, identify the program state, predict the behaviour and only then implement it.</p>'+
+    card('C PROGRAMMING RULE','<p>Prefer defined, testable behaviour. Make types explicit, keep control flow traceable, avoid undefined behaviour and use compiler feedback as evidence rather than guessing.</p>')+
+    card('WORKED CODE','<pre class="codeBlock"><code>'+esc(code)+'</code></pre>')+
+    card('TRACE IT','<ol class="learn-steps"><li>Identify each variable or data object.</li><li>Record its value/state before the key statement.</li><li>Execute one operation at a time.</li><li>Predict the output.</li><li>Test a normal and a boundary input.</li></ol>')+
+    card('COMMON BUG','<p>Changing code before reproducing the defect. First create the smallest failing case, then identify the exact statement or assumption responsible.</p>');
+  const check='Trace the example, predict the result, explain the rule and state one boundary case that could expose an error.';
+  return rich(topic,learn,'Trace the supplied C example and explain why it behaves as it does.',check,i<2?'Foundation':i<4?'Application':'Transfer');
+ }));
+}
+
+const nonCommunication={};
+for(const [track,modules] of Object.entries(FIRST_YEAR_MODULE_CONTENT)){
+ nonCommunication[track]={};
+ modules.forEach((m,i)=>{ nonCommunication[track][i+1]=genericRichLessons(track,m,i); });
+}
+
+const communication={};
+communicationRich().forEach((lessons,i)=>{communication[i+1]=lessons;});
+
+const cProgramming={};
+cRich().forEach((lessons,i)=>{cProgramming[i+1]=lessons;});
+
+export const RICH_HTML_MODULES=Object.freeze({
+ communication,
+ aptitude:nonCommunication.aptitude,
+ 'core-engineering':nonCommunication['core-engineering'],
+ 'problem-solving':nonCommunication['problem-solving'],
+ analytical:nonCommunication.analytical,
+ 'c-programming':cProgramming
 });
