@@ -308,18 +308,23 @@ function programmeChooser(){
 }
 
 function moduleGrid(track,programme){
- const assessmentCount=15;
+ const assessmentCount=track.id==='c-programming'?10:15;
  return '<div class="moduleProgrammeBanner">'+(programme?'<span>PROGRAMME</span><strong>'+esc(programme.title)+'</strong>':'<span>COMPETENCY PATHWAY</span><strong>'+esc(track.title)+'</strong>')+'</div>'+
   '<div class="moduleSectionHeading"><div><span class="sectionEyebrow">MODULE LEARNING PATH</span><h4>Every module keeps its own learning flow</h4><p>Topic → materials → guided drills → practice → challenge → final assessment. Drill Stars belong only to Guided Drills.</p></div><span class="practiceBadge">'+track.modules.length+' MODULE ASSESSMENTS</span></div>'+
   '<div class="moduleGrid">'+track.modules.map((m,i)=>'<article class="learningModuleCard"><div class="moduleTop"><span>MODULE '+String(i+1).padStart(2,'0')+'</span><b>FINAL ASSESSMENT · '+assessmentCount+'</b></div><h5>'+esc(m)+'</h5><div class="moduleFlow"><span>Topic</span><i>→</i><span>Materials</span><i>→</i><span>Drills</span><i>→</i><span>Practice</span><i>→</i><span>Challenge</span><i>→</i><span>Assessment</span></div><div class="moduleAssessmentMeta"><span><b>'+assessmentCount+'</b> questions / student</span><span><b>50</b> master questions</span>'+(track.id==='c-programming'?'<span class="codingMeta">⌨ coding practice</span>':'')+'</div><div class="moduleBottom"><small>Master question bank belongs to Module '+(i+1)+'</small><button class="moduleOpen" data-track="'+esc(track.id)+'" data-module="'+(i+1)+'">Open Module '+(i+1)+' →</button></div></article>').join('')+'</div>';
 }
 
-function openModule(root,trackId,moduleNo,programme){
+async function openModule(root,trackId,moduleNo,programme){
  const track=TRACKS.find(x=>x.id===trackId); if(!track)return;
  const title=track.modules[moduleNo-1]||'Module';
  const data=trackId==='c-programming'?C_MODULES[moduleNo-1]:genericModule(title,track.title,moduleNo);
+ let videoLinks=[];
+ try{
+   const r=await call('getCompetencyModuleLearningResources')({trackId,day:moduleNo});
+   videoLinks=Array.isArray(r.data?.videoLinks)?r.data.videoLinks:[];
+ }catch(e){ console.warn('Module video resources unavailable',e); }
  const ws=root.querySelector('#competencyWorkspace');
- ws.innerHTML=moduleView(track,data,moduleNo,programme);
+ ws.innerHTML=moduleView(track,data,moduleNo,programme,videoLinks);
  ws.querySelector('#backToModules').onclick=()=>openTrack(root,trackId);
  ws.querySelector('#startAssessment').onclick=()=>launchModuleAssessment(trackId,moduleNo,ws);
  ws.querySelectorAll('.drillReveal').forEach(b=>b.onclick=()=>showDrill(b));
@@ -739,13 +744,30 @@ function openCodingLab(ws,{title,prompt,starter,metaId=''}){
  wireCodingLab(ws);mount.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-function moduleView(track,data,no,programme){
+function renderModuleVideoResources(videoLinks){
+ const links=(Array.isArray(videoLinks)?videoLinks:[]).filter(v=>/^https?:\\/\\//i.test(String(v||''))).slice(0,2);
+ if(!links.length)return '';
+ const cards=links.map((url,i)=>{
+   let embed='';
+   try{
+     const u=new URL(url);
+     let id='';
+     if(u.hostname.includes('youtube.com')) id=u.searchParams.get('v')||u.pathname.split('/').filter(Boolean).pop()||'';
+     if(u.hostname==='youtu.be') id=u.pathname.split('/').filter(Boolean)[0]||'';
+     if(id) embed='<div class="moduleVideoFrame"><iframe src="https://www.youtube.com/embed/'+encodeURIComponent(id)+'" title="Module learning video '+(i+1)+'" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>';
+   }catch(e){}
+   return '<article class="moduleVideoCard"><div class="moduleVideoBadge">VIDEO '+String(i+1).padStart(2,'0')+'</div>'+(embed||'<div class="moduleVideoExternal"><span>Learning video</span><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">▶ Watch Video</a></div>')+'</article>';
+ }).join('');
+ return '<section class="learningSection moduleVideoSection"><span class="sectionEyebrow">SELF-LEARNING · VIDEO</span><h4>Watch Before You Practise</h4><p class="moduleVideoIntro">Use these faculty-selected videos to reinforce the module concepts before attempting the Guided Drills and Practice Ladder.</p><div class="moduleVideoGrid">'+cards+'</div></section>';
+}
+
+function moduleView(track,data,no,programme,videoLinks=[]){
  const assessmentCount=15;
  const communicationAudio=track.id==='communication'&&data.audio?renderCommunicationAudioLab(data.speechTasks||[],data.title+' — Speaking Practice'):'';
  const topicHtml=(data.topics||[]).map(x=>'<li>'+esc(x)+'</li>').join('');
  let materialHtml='';
  if(Array.isArray(data.lessons)&&data.lessons.length){
-   materialHtml=data.lessons.map((lesson,i)=>'<article class="studyLesson materialSlide" data-slide="'+i+'"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p>'+(track.id==='communication'?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(lesson.example||lesson.teach)+'">🔊 Listen to Example</button>':'')+'<pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join('');
+   materialHtml=data.lessons.map((lesson,i)=>'<article class="studyLesson materialSlide" data-slide="'+i+'"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level||'Application')+'</span><strong>'+esc(lesson.title||'Learning Lesson')+'</strong></div><div class="studyRichGrid"><div class="studyRichPanel"><span class="studyPanelLabel">LEARN</span><p class="studyTeach">'+esc(lesson.teach||'Study the concept carefully and connect it to the module outcome.')+'</p></div><div class="studyRichPanel"><span class="studyPanelLabel">WORKED EXAMPLE</span><p>'+esc(lesson.example||data.example||'Apply the concept to the worked example and explain each step.')+'</p>'+(track.id==='communication'?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(lesson.example||lesson.teach||'')+'">🔊 Listen to Example</button>':'')+'</div></div><div class="studyActionStrip"><div><b>CHECK YOUR UNDERSTANDING</b><span>'+esc(lesson.check||'Explain the concept, apply it to a new example and state how you would verify the result.')+'</span></div><div><b>BEFORE YOU MOVE ON</b><span>Close the notes, explain the idea in your own words, solve the example independently and identify one common mistake.</span></div></div>'+((lesson.code||'').trim()?'<details class="studyCodeDetails"><summary>View worked code / technical example</summary><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></details>':'')+'</article>').join('');
  }else{
    materialHtml=(data.materials||[]).map((x,i)=>{
      const title=typeof x==='string'?x:(x.title||'Learning material '+(i+1));
@@ -766,6 +788,7 @@ function moduleView(track,data,no,programme){
  '<div class="codingProgrammeGrid">'+competitiveCoding.map((x,i)=>'<article class="codingProgrammeCard competitiveCard"><div><span>ALGORITHM CHALLENGE '+String(i+1).padStart(2,'0')+' · '+esc(String(x.difficulty||x.domain||'Mixed').toUpperCase())+'</span><h5>'+esc(x.title)+'</h5><small class="codingDomainText">'+esc(x.domain)+'</small></div><p>'+esc(x.prompt)+'</p><div class="codingMetaRow"><span>2 sample tests</span><span>🔒 '+Number(x.hiddenTestCount||0)+' hidden</span></div><button class="openCompetitiveCoding" data-challenge-id="'+esc(x.id)+'">Open Challenge →</button></article>').join('')+'</div><div id="moduleCodingLabMount" class="moduleCodingLabMount" hidden></div></div>':'';
 
  return '<section class="moduleLearningWorkspace">'+
+ renderModuleVideoResources(videoLinks)+
  '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
  '<div class="moduleFlowBanner"><strong>MODULE LEARNING FLOW</strong><span>01 Topic</span><i>→</i><span>02 Materials</span><i>→</i><span>03 Drills</span><i>→</i><span>04 Practice</span><i>→</i><span>05 Challenge</span><i>→</i><span>06 Final Assessment · '+assessmentCount+' Questions</span></div>'+
  '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · MODULE TOPIC</span><h4>What you will learn</h4><p class="moduleScopeText">'+esc(data.scope)+'</p><ul class="scopeList">'+topicHtml+'</ul><div class="learningOutcomes"><b>By the end of this module, you should be able to:</b><ol>'+(data.learningOutcomes||[]).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div></section>'+
