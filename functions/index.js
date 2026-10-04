@@ -1933,6 +1933,75 @@ ${JSON.stringify(questions)}`;
   return generateJson(auditPrompt);
 }
 
+function buildCommunicationModule1Bank(){
+  const items=[];
+  const add=(activity,topic,prompt,options,answer,difficulty,lo,mat,drill,ladder,time)=>{
+    items.push({
+      id:'D1-Q'+String(items.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty,topic,
+      learningOutcomeId:'communication-D1-LO'+lo,materialId:'communication-D1-MAT'+mat,guidedDrillId:'communication-D1-DR'+drill,
+      ladderLevel:ladder,remediationMaterialId:'communication-D1-MAT'+mat,prompt,options,answer,
+      explanation:'The correct choice follows the taught '+topic.toLowerCase()+' principle and can be justified directly from the sentence structure and meaning.',
+      remediationNote:'Revisit the '+topic.toLowerCase()+' material, then redo Guided Drill '+drill+' and explain why the selected option is correct.',
+      timeLimitSeconds:time
+    });
+  };
+  const easy=[
+    ['Sentence roles','In “The technician calibrated the sensor”, which phrase is the subject?',['The technician','calibrated','the sensor','calibrated the sensor'],0,1,1,1,1,30],
+    ['Sentence roles','In “The technician calibrated the sensor”, which word is the main verb?',['technician','calibrated','sensor','the'],1,1,1,1,1,30],
+    ['Sentence roles','In “The technician calibrated the sensor”, which phrase is the object?',['The technician','calibrated','the sensor','technician calibrated'],2,1,1,1,1,30],
+    ['Basic word order','Which sentence uses a clear Subject → Verb → Object order?',['The engineer inspected the pump.','Inspected the engineer the pump.','The pump the engineer inspected.','The engineer the pump inspected.'],0,1,2,2,1,30],
+    ['Basic word order','Which sentence clearly tells the reader who performed the action?',['The report the student submitted.','Submitted the report the student.','The student submitted the report.','The report submitted student.'],2,1,2,2,2,30],
+    ['Subject–verb agreement','Choose the correct sentence.',['The measurements shows variation.','The measurements show variation.','The measurements is showing variation.','The measurements has show variation.'],1,1,3,3,2,30],
+    ['Subject–verb agreement','Choose the correct sentence.',['The result show a change.','The result are showing a change.','The result shows a change.','The result have a change.'],2,1,3,3,2,30],
+    ['Subject–verb agreement','In “The list of readings is complete”, which noun controls the verb?',['readings','list','complete','of'],1,1,3,4,2,30],
+    ['Editing for accuracy','Choose the corrected form: “The students was ready.”',['The students were ready.','The students is ready.','The students be ready.','The students has ready.'],0,1,5,5,2,30],
+    ['Editing for accuracy','Choose the clearest sentence.',['The engineer the result recorded.','The result recorded the engineer.','The engineer recorded the result.','Recorded the result engineer.'],2,1,4,5,5,30]
+  ];
+  easy.forEach(x=>add(...x));
+  const moderate=[
+    ['Sentence roles','In “After the inspection, the maintenance team replaced the damaged cable”, which phrase is the subject?',['After the inspection','the maintenance team','the damaged cable','replaced'],1,2,1,1,2,45],
+    ['Sentence roles','In “The design team reviewed the drawing carefully”, what is the object of reviewed?',['The design team','reviewed','the drawing','carefully'],2,2,1,1,2,45],
+    ['Basic word order','Which revision makes the actor and action immediately clear?',['After the test the voltage the technician recorded.','The technician recorded the voltage after the test.','The voltage after the test recorded technician.','Recorded after the test the technician voltage.'],1,2,2,2,2,45],
+    ['Basic word order','Which sentence avoids ambiguity about who inspected the equipment?',['The equipment was inspected after the student.','After the student, the equipment inspected the lab.','The student inspected the equipment after the experiment.','Inspected the equipment after the experiment student.'],2,2,2,2,3,45],
+    ['Subject–verb agreement','Choose the correct sentence: “The set of readings ___ reliable.”',['are','were','is','have'],2,2,3,4,3,45],
+    ['Subject–verb agreement','Choose the correct sentence: “The results from the second trial ___ consistent.”',['is','was','has','are'],3,2,3,3,3,45],
+    ['Subject–verb agreement','Which sentence correctly handles an intervening phrase?',['The quality of the samples are improving.','The quality of the samples is improving.','The quality of the samples have improving.','The quality of the samples were improving.'],1,2,3,3,3,45],
+    ['Subject–verb agreement','Which sentence is grammatically correct?',['Each of the sensors require calibration.','Each of the sensors requires calibration.','Each of the sensors require calibrations.','Each of the sensors are requiring calibration.'],1,2,3,3,4,45],
+    ['Editing for accuracy','What is the best correction? “The group of students were preparing the report.”',['Change group to groups.','Change were to was.','Change students to student.','Change report to reports.'],1,2,5,4,4,45],
+    ['Editing for accuracy','Which sentence is best for a technical report?',['The readings was not reliable.','The readings were not reliable.','The readings is not reliable.','The readings be not reliable.'],1,2,5,5,4,45],
+    ['Sentence roles','In “The laboratory assistant recorded the temperature after calibration”, what is “after calibration”?',['The subject','The main verb','An object','A modifying phrase'],3,2,1,4,3,45],
+    ['Basic word order','Which revision preserves the intended meaning most clearly?',['The technician after the test recorded the pressure.','After the test, the technician recorded the pressure.','Recorded the pressure after the test technician.','The pressure recorded after the test the technician.'],1,2,2,2,3,45],
+    ['Editing for accuracy','Which sentence has correct agreement and clear order?',['The results of the experiment shows a pattern.','A pattern shows the results of the experiment.','The results of the experiment show a pattern.','The results of experiment showing a pattern.'],2,2,5,5,4,45],
+    ['Subject–verb agreement','Choose the correct sentence.',['Neither the sensor nor the cables is available.','Neither the sensor nor the cables are available.','Neither the sensor nor the cables be available.','Neither the sensor nor the cables has available.'],1,2,3,3,5,60],
+    ['Editing for accuracy','Which revision is most accurate? “The data from the first test indicate a problem.”',['The data from the first test indicates a problem.','The data from the first test indicate a problem.','The data from the first test indicating a problem.','The data from the first test indication a problem.'],1,2,5,5,5,60],
+    ['Sentence roles','In “The design team evaluated the prototype before submission”, which phrase receives the action?',['The design team','evaluated','the prototype','before submission'],2,2,1,5,3,45],
+    ['Basic word order','Which sentence is easiest to process in a laboratory report?',['The final reading after adjustment the technician recorded.','The technician recorded the final reading after adjustment.','Recorded after adjustment the final reading technician.','The final reading recorded technician after adjustment.'],1,2,2,2,4,45],
+    ['Subject–verb agreement','Which sentence correctly identifies the head noun?',['The collection of samples are ready.','The collection of samples is ready.','The collection of samples have ready.','The collection of samples were ready.'],1,2,3,4,4,45],
+    ['Editing for accuracy','Choose the best edited sentence.',['The instruments in the laboratory needs cleaning.','The instruments in the laboratory need cleaning.','The instruments in laboratory needs cleaning.','The instruments in the laboratory needing cleaning.'],1,2,5,5,4,45],
+    ['Integrated editing','Which sentence is both grammatically accurate and clearly ordered?',['The report the student after the experiment submitted.','After the experiment, the student submitted the report.','Submitted after the experiment the report student.','The report submitted student after experiment.'],1,2,4,5,5,60]
+  ];
+  moderate.forEach(x=>add(...x));
+  const tough=[
+    ['Subject–verb agreement','A report sentence reads: “The series of calibration tests ___ a consistent reduction in error.” Choose the correct verb.',['show','shows','have shown','are showing'],1,3,3,4,5,60],
+    ['Subject–verb agreement','A sentence reads: “The effect of the revised procedure on the measurements ___ significant.” Which verb is correct?',['are','were','is','have'],2,3,3,3,5,60],
+    ['Subject–verb agreement','Which sentence is correct despite the plural noun inside the subject phrase?',['The cause of the failures were identified.','The cause of the failures was identified.','The cause of the failures have identified.','The cause of the failures are identified.'],1,3,3,4,5,60],
+    ['Editing for accuracy','Which revision best corrects both agreement and clarity? “The group of readings from the sensors are difficult to compare.”',['The group of readings from the sensors is difficult to compare.','The readings from the sensors is difficult to compare.','The group of readings from the sensors are difficult comparing.','The group of readings from the sensor be difficult to compare.'],0,3,5,4,5,75],
+    ['Basic word order','Which sentence makes the timing phrase least likely to be misunderstood?',['The technician recorded the pressure after the valve was adjusted.','After the valve was adjusted the pressure recorded the technician.','The pressure after the valve was adjusted recorded technician.','Recorded the technician pressure after the valve adjustment.'],0,3,2,2,5,60],
+    ['Sentence roles','In “Before the final inspection, the engineer carefully reviewed the safety checklist”, which phrase is the grammatical subject?',['Before the final inspection','the engineer','carefully','the safety checklist'],1,3,1,1,4,60],
+    ['Integrated editing','Which sentence would be strongest in a formal engineering report?',['The measurements was checked and the engineer changed the setup.','The measurements were checked, and the engineer changed the setup.','The measurements were checked and the setup changed engineer.','The measurements is checked, and the engineer changed setup.'],1,3,5,5,5,75],
+    ['Subject–verb agreement','Choose the sentence with correct agreement and no distracting noun error.',['One of the proposed solutions require further testing.','One of the proposed solutions requires further testing.','One of the proposed solutions are requiring further testing.','One of the proposed solution require further tests.'],1,3,3,3,5,60],
+    ['Editing for accuracy','Which revision best preserves meaning while improving sentence structure?',['The technician after checking the readings identified the fault.','After checking the readings, the technician identified the fault.','Identified the fault the technician after checking readings.','The fault after checking the readings identified technician.'],1,3,4,4,5,75],
+    ['Integrated editing','Which sentence contains a correct subject, verb and object relationship?',['The updated procedure improves the reliability of measurements.','The updated procedure improve the reliability of measurements.','The reliability of measurements improve the updated procedure.','The updated procedure the reliability improves measurements.'],0,3,1,3,5,60],
+    ['Subject–verb agreement','Which sentence is correct?',['What the technicians need are a clearer procedure.','What the technicians need is a clearer procedure.','What the technicians needs is clearer procedures.','What technicians need be a clearer procedure.'],1,3,3,5,5,75],
+    ['Basic word order','Which sentence gives the clearest relationship between cause and action?',['Because the sensor failed, the technician replaced it.','The technician because failed the sensor replaced it.','The sensor replaced because failed the technician.','Replaced it because the sensor technician failed.'],0,3,2,2,5,60],
+    ['Editing for accuracy','A student writes “The results from three trials was compared with the reference value.” Which correction is best?',['Change results to result.','Change was to were and compared remains unchanged.','Change reference to references.','No correction is required.'],1,3,5,3,5,60],
+    ['Subject–verb agreement','Which sentence correctly handles a compound subject?',['The engineer and the technician checks the circuit.','The engineer and the technician check the circuit.','The engineer and the technician checking the circuit.','The engineer and the technician has checked the circuit.'],1,3,3,3,5,60],
+    ['Integrated editing','Which final sentence is clearest and grammatically accurate?',['After the inspection, the team documented the fault and proposed a corrective action.','After the inspection the fault documented the team and proposed action.','The team after inspection the fault documented proposed corrective action.','Documented the fault after inspection the team corrective action.'],0,3,5,5,5,75]
+  ];
+  tough.forEach(x=>add(...x));
+  return items;
+}
+
 async function generateHighStandardCompetencyDay(trackId, day) {
   let lastIssues=[];
   // Two attempts are sufficient because each successful attempt still receives
@@ -1980,7 +2049,7 @@ export const processCompetencyGenerationJob = onDocumentCreated(
     const runRef=runId?db.collection('competencyGenerationRuns').doc(runId):null;
     const runKey=trackId+'_D'+day;
     try{
-      const questions=await generateHighStandardCompetencyDay(trackId,day);
+      const questions=trackId==='communication'&&day===1?buildCommunicationModule1Bank():await generateHighStandardCompetencyDay(trackId,day);
       if(!Array.isArray(questions)||questions.length!==50) throw new Error('Generated module did not contain exactly 50 questions.');
       const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
       const adminUid=String(job.adminUid||'system');
