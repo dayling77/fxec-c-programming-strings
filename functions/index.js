@@ -2597,8 +2597,9 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   const questions=validateCompetencyQuestions(request.data?.questions,trackId);
   const rawVideoLinks=Array.isArray(request.data?.videoLinks)?request.data.videoLinks:[];
   const videoLinks=rawVideoLinks.map(v=>String(v||'').trim()).filter(v=>/^https?:\\/\\//i.test(v)).slice(0,2);
+  const allowStudentScriptDownload=Boolean(request.data?.allowStudentScriptDownload);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
-  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),videoLinks,poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
+  await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(trackId==='c-programming'?10:15,questions.length),videoLinks,allowStudentScriptDownload,poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
   await poolRef.set({trackId,day,questionCount:questions.length,recommendedQuestionCount:Math.min(COMPETENCY_ASSESSMENT_BLUEPRINT.recommendedPerStudent,questions.length),status:'draft',updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   const poolBatch=db.batch();
@@ -2640,6 +2641,27 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
   await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'published',approvedBy:adminUser.uid,approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
   await db.collection('adminActions').add({action:'approveCompetencyAssessmentDay',trackId,day,adminUid:adminUser.uid,createdAt:FieldValue.serverTimestamp()});
   return {success:true,trackId,day,status:'published'};
+});
+
+export const getCompetencyAssessmentResult = onCall({cors:CALLABLE_CORS},async request=>{
+  const user=requireAuth(request);
+  const attemptId=cleanText(request.data?.attemptId,120);
+  if(!attemptId) throw new HttpsError('invalid-argument','Attempt ID is required.');
+  const snap=await db.collection('competencyAssessmentResults').doc(attemptId).get();
+  if(!snap.exists) throw new HttpsError('not-found','Assessment result not found.');
+  const result=snap.data();
+  const admin=isAdminAuth(user);
+  if(!admin && result.studentId!==user.uid) throw new HttpsError('permission-denied','Result ownership mismatch.');
+  const taskSnap=await db.collection('competencyAssessmentTasks').doc(result.taskId).get();
+  if(!taskSnap.exists) throw new HttpsError('not-found','Assessment module not found.');
+  const task=taskSnap.data();
+  if(!admin){
+    const close=asJsDate(task.closeAt);
+    if(!task.allowStudentScriptDownload || !close || new Date()<close){
+      throw new HttpsError('failed-precondition','The answer script is not yet available. The assessment window must close and the administrator must activate student script downloads.');
+    }
+  }
+  return result;
 });
 
 export const getCompetencyModuleLearningResources = onCall({cors:CALLABLE_CORS},async request=>{
