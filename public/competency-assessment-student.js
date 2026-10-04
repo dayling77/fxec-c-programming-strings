@@ -232,7 +232,7 @@ function downloadCompetencyAnswerScript(result){
  const escHtml=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
  const body=rows.map((q,i)=>{
    const a=submitted.get(q.id);
-   const correct=answersEqual(q.answer,a);
+   const correct=Array.isArray(q.answer)?Array.isArray(a)&&q.answer.length===a.length&&q.answer.every(x=>a.includes(x)):Number(q.answer)===Number(a);
    return '<article><h3>Q'+(i+1)+'. '+escHtml(q.prompt||'')+'</h3><p><b>Student Answer:</b> '+escHtml(Array.isArray(a)?a.join(', '):(a===undefined?'Not answered':String(a)))+'</p><p><b>Correct Answer:</b> '+escHtml(Array.isArray(q.answer)?q.answer.join(', '):String(q.answer??''))+'</p><p><b>Result:</b> '+(correct?'Correct':'Incorrect')+'</p><p><b>Explanation:</b> '+escHtml(q.explanation||'')+'</p></article>';
  }).join('');
  const html='<!doctype html><html><head><meta charset="utf-8"><title>FXEC Assessment Answer Script</title><style>body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;line-height:1.55;color:#172033}header{border-bottom:2px solid #174f8a;margin-bottom:24px}article{padding:18px 0;border-bottom:1px solid #dfe5ec}h1{color:#174f8a}h3{margin-bottom:8px}p{margin:6px 0}</style></head><body><header><h1>FXEC Assessment Answer Script</h1><p>'+escHtml(result.trackId)+' — Module '+escHtml(result.day)+' · Score '+escHtml(result.scorePercent)+'%</p></header>'+body+'</body></html>';
