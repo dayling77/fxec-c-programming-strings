@@ -1904,10 +1904,38 @@ const COMPETENCY_MODULE_SCOPES = Object.freeze({
  'problem-solving':['stakeholders, goals, inputs, outputs, constraints, assumptions and measurable success criteria','decomposition, subtasks, dependencies, interfaces and bottom-up validation','abstraction levels, essential variables, models, interfaces and information hiding','algorithm properties, sequencing, conditions, loops, termination, pseudocode and trace tables','sequences, categories, invariants, analogies, repeated structures and pattern validation','symptoms, evidence, hypotheses, root causes, controlled tests and corrective actions','requirements, constraints, trade-offs, feasible solution spaces and prioritisation','reproduction, isolation, debugging hypotheses, minimal fixes, regression tests and iteration','correctness, efficiency, usability, maintainability, risk, trade-offs and solution comparison','end-to-end challenge strategy, planning, edge cases, validation, revision and solution explanation'],
  analytical:['fact identification, key terms, data extraction, relevance and structured evidence notes','data sources, completeness, accuracy, consistency, sampling, missing data and measurement quality','trend, comparison, rate of change, correlation, outliers and distinguishing observation from explanation','claims, evidence, hypotheses, inference, alternative explanations and confidence','technical claims, evidence chains, assumptions, contradictions, source quality and critical reading','tables, charts, axes, scales, misleading displays, distributions and visual comparison','criteria, alternatives, evidence weighting, uncertainty, risk and transparent decision rationale','ethical constraints, bias, fairness, professional responsibility, stakeholder impact and engineering judgement','components, interactions, feedback, dependencies, boundaries, unintended consequences and systems behaviour','multi-source synthesis, conflicting evidence, uncertainty, conclusion and defensible recommendation']
 });
+async function attachCompetencyAssessmentAudio(trackId, day, questions){
+  if(trackId!=='communication') return questions;
+  const audioCount=Number(day)===4?8:5;
+  const targets=questions.map((q,i)=>({q,i})).filter(x=>x.q.activityType==='listening'||Number(x.i)%10===2).slice(0,audioCount);
+  for(const {q,i} of targets){
+    q.activityType='listening';
+    q.audioText=String(q.audioText||q.prompt||'').slice(0,3000);
+    const path='audio/competency/'+trackId+'/D'+day+'/'+String(q.id)+'.mp3';
+    const [response]=await tts.synthesizeSpeech({
+      input:{text:q.audioText},
+      voice:{languageCode:CONFIG.voice.languageCode,name:CONFIG.voice.name},
+      audioConfig:{audioEncoding:'MP3'}
+    });
+    await bucket.file(path).save(response.audioContent,{contentType:'audio/mpeg'});
+    q.audioPath=path;
+    try{
+      const [signedUrl]=await bucket.file(path).getSignedUrl({
+        action:'read',
+        expires:Date.now()+1000*60*60*24*365
+      });
+      q.audioUrl=signedUrl;
+    }catch(e){
+      logger.warn('Could not sign competency audio URL',{trackId,day,questionId:q.id,error:String(e)});
+    }
+  }
+  return questions;
+}
+
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
   const prefix=trackId+'-D'+day+'-';
-  const trace='Use ONLY these traceability IDs: learningOutcomeId '+prefix+'LO1..'+prefix+'LO5; materialId '+prefix+'MAT1..'+prefix+'MAT5; guidedDrillId '+prefix+'DR1..'+prefix+'DR5. Set remediationMaterialId to one of the five '+prefix+'MAT IDs. ladderLevel must be 1 (recognise/understand), 2 (apply), 3 (analyse/verify), 4 (diagnose), or 5 (solve/transfer). Every question must identify the exact outcome, material, drill and ladder level it builds on.';
+  const trace='Use ONLY these traceability IDs: learningOutcomeId '+prefix+'LO1..'+prefix+'LO5; materialId '+prefix+'MAT1..'+prefix+'MAT5; guidedDrillId '+prefix+'DR1..'+prefix+'DR5. Set remediationMaterialId to one of the five '+prefix+'MAT IDs. ladderLevel must be 1 (recognise/understand), 2 (apply), 3 (analyse/verify), 4 (diagnose), or 5 (solve/transfer). Every question must identify the exact outcome, material, drill and ladder level it builds on.'+(trackId==='communication'?' For communication, write at least five questions that can be delivered as listening items: each must have a clear spoken prompt suitable for audioText and four answer options. Module 4 should contain a stronger listening emphasis.':'');
   if(trackId==='c-programming'){
     const scopes={
       1:'problem statements, C program structure, main, statements and blocks, identifiers, variables, constants, data types, type conversion, operators, expressions, printf/scanf, compilation and debugging basics',
@@ -2062,6 +2090,7 @@ export const processCompetencyGenerationJob = onDocumentCreated(
     const runKey=trackId+'_D'+day;
     try{
       const questions=trackId==='communication'&&day===1?buildCommunicationModule1Bank():await generateHighStandardCompetencyDay(trackId,day);
+      await attachCompetencyAssessmentAudio(trackId,day,questions);
       if(!Array.isArray(questions)||questions.length!==50) throw new Error('Generated module did not contain exactly 50 questions.');
       const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
       const adminUid=String(job.adminUid||'system');
@@ -2263,6 +2292,7 @@ export const generatePreparedCompetencyModule = onCall(
         if(questions.length!==50){
           throw new Error('Communication Module 1 bank contains '+questions.length+' questions after completion; exactly 50 are required.');
         }
+        await attachCompetencyAssessmentAudio(trackId,1,questions);
         const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
         const taskRef=db.collection('competencyAssessmentTasks').doc('communication_D1');
         const poolRef=db.collection('competencyQuestionPools').doc('communication_D1');
