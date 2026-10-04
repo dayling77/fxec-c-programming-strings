@@ -2690,7 +2690,18 @@ export const getCompetencyModuleLearningResources = onCall({cors:CALLABLE_CORS},
   const snap=await db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day).get();
   if(!snap.exists) return {trackId,day,videoLinks:[]};
   const d=snap.data();
-  return {trackId,day,videoLinks:Array.isArray(d.videoLinks)?d.videoLinks.slice(0,2):[]};
+  return {
+    trackId,day,
+    videoLinks:Array.isArray(d.videoLinks)?d.videoLinks.slice(0,2):[],
+    // Preserve any curriculum metadata already stored with the module.
+    scope:String(d.scope||''),
+    learningOutcomes:Array.isArray(d.learningOutcomes)?d.learningOutcomes.slice(0,10):[],
+    materials:Array.isArray(d.materials)?d.materials.slice(0,20):[],
+    drills:Array.isArray(d.drills)?d.drills.slice(0,20):[],
+    practiceLadder:Array.isArray(d.practiceLadder)?d.practiceLadder.slice(0,10):[],
+    challenge:String(d.challenge||''),
+    assessment:String(d.assessment||'')
+  };
 });
 
 export const getStudentCompetencyAssessments = onCall({cors:CALLABLE_CORS},async request=>{
