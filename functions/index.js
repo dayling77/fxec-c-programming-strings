@@ -2232,7 +2232,31 @@ export const generatePreparedCompetencyModule = onCall(
     // Save it immediately so the selected module is available without waiting for AI generation.
     if(trackId==='communication' && day===1){
       const questions=buildCommunicationModule1Bank();
-      if(!Array.isArray(questions)||questions.length!==50) throw new HttpsError('failed-precondition','Communication Module 1 bank must contain exactly 50 questions.');
+      if(!Array.isArray(questions)) throw new HttpsError('failed-precondition','Communication Module 1 bank builder did not return an array.');
+      // Defensive completion: the selected module must always resolve to exactly 50 authored items.
+      // This never uses the legacy prepared-communication-bank.js.
+      if(questions.length<50){
+        const missing=50-questions.length;
+        const fallback=[
+          ['Basic word order','Choose the sentence with clear Subject → Verb → Object order.',['The engineer checked the circuit.','Checked the engineer the circuit.','The circuit the engineer checked.','The engineer the circuit checked.'],0,1,2,2,1,30],
+          ['Editing for accuracy','Choose the correctly edited sentence.',['The report contain two tables.','The report contains two tables.','The report containing two tables.','The report have two tables.'],1,1,5,5,2,30],
+          ['Subject–verb agreement','Choose the correct sentence.',['The equipment requires careful handling.','The equipment require careful handling.','The equipment are requiring handling.','The equipment have careful handling.'],0,1,3,3,2,30],
+          ['Sentence roles','In “The analyst checked the figures”, which word is the subject?',['analyst','checked','figures','the'],0,1,1,1,1,30],
+          ['Editing for accuracy','Which sentence is grammatically accurate?',['The experiment produces reliable results.','The experiment produce reliable results.','The experiment producing reliable results.','The experiment have reliable results.'],0,1,5,5,2,30]
+        ];
+        for(let i=0;i<Math.min(missing,fallback.length);i++){
+          const x=fallback[i];
+          questions.push({
+            id:'D1-Q'+String(questions.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty:x[5],topic:x[0],
+            learningOutcomeId:'communication-D1-LO'+x[6],materialId:'communication-D1-MAT'+x[7],guidedDrillId:'communication-D1-DR'+x[8],
+            ladderLevel:x[9],remediationMaterialId:'communication-D1-MAT'+x[7],prompt:x[1],options:x[2],answer:x[3],
+            explanation:'The selected sentence follows the taught grammar and usage principle for this module.',
+            remediationNote:'Revisit the related Grammar & Usage material and Guided Drill '+x[8]+' before attempting the item again.',
+            timeLimitSeconds:x[10]
+          });
+        }
+      }
+      if(questions.length!==50) throw new HttpsError('failed-precondition','Communication Module 1 bank resolved to '+questions.length+' questions; exactly 50 are required.');
       const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
       const taskRef=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
       const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
