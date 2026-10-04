@@ -73,7 +73,7 @@ function render(){
   const t=task(selectedTrack,selectedDay);
   let h='<div class="competencyAdminToolbar"><label>Competency <select id="caTrack">';
   h+=TRACKS.map(x=>'<option value="'+x[0]+'" '+(x[0]===selectedTrack?'selected':'')+'>'+x[1]+'</option>').join('');
-  h+='</select></label>'+(viewerRole==='admin'?'<span class="practiceBadge">VALIDATED MASTER BANKS</span>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+(viewerRole==='admin'?'<button id="caGenerateMaster" class="primaryButton">🧠 Create 3,000-Question Master Bank</button>':'')+'<button id="caLoadQuestions" class="secondary">Load / Replace Module</button><button id="caRefresh" class="secondary">Refresh Module</button></div>';
+  h+='</select></label>'+(viewerRole==='admin'?'<span class="practiceBadge">VALIDATED MASTER BANKS</span>':'<span class="practiceBadge">FACULTY VERIFICATION MODE</span>')+'<button id="caLoadQuestions" class="secondary">Load / Replace Module</button><button id="caRefresh" class="secondary">Refresh Module</button></div>';
   h+='<div class="caDayTabs">'+Array.from({length:10},(_,i)=>i+1).map(d=>'<button class="'+(d===selectedDay?'active':'')+'" data-day="'+d+'">Module '+d+'</button>').join('')+'</div>';
   h+='<div id="caStatus" class="scheduleSaveStatus"></div>';
   h+=t?renderEditor(t):'<div class="caEmpty"><strong>Module '+selectedDay+' is not prepared yet.</strong><p>Select another module or prepare this module in the controlled bank-preparation process. Only the selected module is loaded from Firestore.</p></div>';
