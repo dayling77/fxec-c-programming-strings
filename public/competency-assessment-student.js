@@ -162,7 +162,7 @@ function renderAssessment(){
    '<div class="studentProgress"><span style="width:'+progress+'%"></span></div>'+
    '<div class="studentTimingBar"><div><small>QUESTION TIME</small><strong id="caQuestionTimer">--:--</strong></div><div><small>TOTAL TIME</small><strong id="caTotalTimer">--:--</strong></div><div><small>TIME ALLOTTED</small><strong>'+formatClock(limit)+'</strong></div></div>'+
    (q.code?assessmentCodeViewer(q.code):'')+
-   '<div class="studentPrompt audioAssessmentPrompt '+(audioMode?'audioOnlyPrompt':'')+'"><div><span class="promptKicker">QUESTION</span>'+(audioMode?'<p class="audioPromptPlaceholder">🔊 Question available by audio</p>':'<p>'+esc(q.prompt||'')+'</p>')+'</div><button id="playAssessmentAudio" class="audioQuestionButton">🔊 Listen to Question</button></div>'+
+   '<div class="studentPrompt audioAssessmentPrompt '+(audioMode?'audioOnlyPrompt':'')+'"><div><span class="promptKicker">QUESTION</span>'+(audioMode?'<p class="audioPromptPlaceholder">🔊 Question available by audio</p>':'<p>'+esc(q.prompt||'')+'</p>')+'</div>'+(audioMode&&q.audioUrl?'<audio id="assessmentQuestionAudio" controls preload="none" src="'+esc(q.audioUrl)+'"></audio>':'')+'<button id="playAssessmentAudio" class="audioQuestionButton">🔊 '+(q.audioUrl?'Play Audio':'Listen to Question')+'</button></div>'+
    (audioMode?'<div class="audioAssessmentStage" id="audioAssessmentStage"><strong>READY</strong><span>Press Listen to Question to hear the options one at a time.</span></div>':'')+
    (codingMode?'<div class="codingAssessmentBox"><div class="codingAssessmentMeta"><span>⌨ WRITE C CODE</span><span>Sample input: '+esc(q.sampleInput||'')+'</span><span>Expected: '+esc(q.sampleOutput||'')+'</span></div><textarea class="caCodeAnswer" spellcheck="false">'+esc(q.starter||'')+'</textarea><div class="codingAssessmentRun"><button type="button" id="runAssessmentCode" class="secondary">▶ Run Sample</button><span id="assessmentCodeOutput">Run your code against the sample before submitting.</span></div></div>':'')+
    '<div class="caInstruction">'+(codingMode?'Write and test a complete C program. Your code is graded against hidden server-side test cases.':isMulti?'Select all correct answers.':'Select the one best answer.')+'</div>'+
@@ -171,11 +171,23 @@ function renderAssessment(){
   '</article></div>';
  restoreAnswer(q,root);
  const play=root.querySelector('#playAssessmentAudio');
+ const audioEl=root.querySelector('#assessmentQuestionAudio');
  if(play)play.onclick=()=>{
-   speak(q.audioText||q.prompt||'');
-   if(audioMode){
-    const stage=root.querySelector('#audioAssessmentStage');
-    setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
+   if(audioEl){
+     audioEl.currentTime=0;
+     const p=audioEl.play();
+     if(p?.catch)p.catch(()=>{});
+     const stage=root.querySelector('#audioAssessmentStage');
+     if(stage){
+       stage.innerHTML='<strong>LISTENING</strong><span>Listen to the question, then select your answer.</span>';
+     }
+     audioEl.onended=()=>{ if(stage) playOptionSequence(q.options||[],stage); };
+   }else{
+     speak(q.audioText||q.prompt||'');
+     if(audioMode){
+       const stage=root.querySelector('#audioAssessmentStage');
+       setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
+     }
    }
  };
  root.querySelectorAll('input[name="caAnswer"]').forEach(x=>x.addEventListener('change',()=>saveAnswer(q,root)));
