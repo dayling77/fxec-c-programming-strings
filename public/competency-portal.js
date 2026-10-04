@@ -326,6 +326,7 @@ function openModule(root,trackId,moduleNo,programme){
  ws.querySelectorAll('.addDrillsButton').forEach(b=>b.onclick=()=>addTenDrills(b.closest('.drillRewardBar')?.parentElement?.querySelector('.drillCard')?.dataset.module||'C Fundamentals',b.closest('.drillRewardBar')));
  ws.querySelectorAll('.checkAnswer').forEach(b=>b.onclick=()=>checkPracticeAnswer(b));
  ws.querySelectorAll('.materialToggle').forEach(b=>b.onclick=()=>toggleMaterial(b));
+ wireMaterialSlider(ws);
  wirePracticeTasks(ws);
  wireCommunicationAudioLab(ws);
  loadCompetencyLeaderboard(ws,trackId);
@@ -744,7 +745,7 @@ function moduleView(track,data,no,programme){
  const topicHtml=(data.topics||[]).map(x=>'<li>'+esc(x)+'</li>').join('');
  let materialHtml='';
  if(Array.isArray(data.lessons)&&data.lessons.length){
-   materialHtml=data.lessons.map((lesson,i)=>'<article class="studyLesson"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p><pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join('');
+   materialHtml=data.lessons.map((lesson,i)=>'<article class="studyLesson materialSlide" data-slide="'+i+'"><div class="studyLessonHead"><span>LESSON '+String(i+1).padStart(2,'0')+' · '+esc(lesson.level)+'</span><strong>'+esc(lesson.title)+'</strong></div><p class="studyTeach">'+esc(lesson.teach)+'</p><div class="studyExample"><b>Worked example</b><p>'+esc(lesson.example)+'</p>'+(track.id==='communication'?'<button type="button" class="practicePlayQuestion moduleAudioButton" data-speech="'+esc(lesson.example||lesson.teach)+'">🔊 Listen to Example</button>':'')+'<pre class="codeBlock"><code>'+esc(decodeCode(lesson.code))+'</code></pre></div><div class="microCheck"><b>Micro-check</b><span>'+esc(lesson.check)+'</span></div></article>').join('');
  }else{
    materialHtml=(data.materials||[]).map((x,i)=>{
      const title=typeof x==='string'?x:(x.title||'Learning material '+(i+1));
@@ -768,12 +769,30 @@ function moduleView(track,data,no,programme){
  '<div class="moduleLearningHero"><div><span class="sectionEyebrow">'+esc(track.title.toUpperCase())+' · MODULE '+String(no).padStart(2,'0')+'</span><h3>'+esc(data.title)+'</h3><p>'+esc(data.scope)+'</p>'+(programme?'<small>Programme: '+esc(programme.title)+'</small>':'')+'</div><button class="secondary" id="backToModules">← Back to Modules</button></div>'+
  '<div class="moduleFlowBanner"><strong>MODULE LEARNING FLOW</strong><span>01 Topic</span><i>→</i><span>02 Materials</span><i>→</i><span>03 Drills</span><i>→</i><span>04 Practice</span><i>→</i><span>05 Challenge</span><i>→</i><span>06 Final Assessment · '+assessmentCount+' Questions</span></div>'+
  '<section class="learningSection scopeSection"><span class="sectionEyebrow">01 · MODULE TOPIC</span><h4>What you will learn</h4><p class="moduleScopeText">'+esc(data.scope)+'</p><ul class="scopeList">'+topicHtml+'</ul><div class="learningOutcomes"><b>By the end of this module, you should be able to:</b><ol>'+(data.learningOutcomes||[]).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div></section>'+
- '<section class="learningSection"><span class="sectionEyebrow">02 · MATERIALS</span><h4>Study Materials</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it → complete the micro-check.</p>'+materialHtml+'</section>'+communicationAudio+
+ '<section class="learningSection"><span class="sectionEyebrow">02 · MATERIALS</span><h4>Study Materials</h4><p class="slowLearnerNote">Learn the concept → inspect the example → trace it → complete the micro-check.</p>'+(Array.isArray(data.lessons)&&data.lessons.length?'<div class="materialSlider" data-material-slider><div class="materialSliderViewport">'+materialHtml+'</div><div class="materialSliderControls"><button type="button" class="secondary" data-material-prev>← Previous</button><span data-material-position>1 / '+data.lessons.length+'</span><button type="button" class="secondary" data-material-next>Next →</button></div></div>':materialHtml)+'</section>'+communicationAudio+
  '<section class="learningSection"><span class="sectionEyebrow">03 · GUIDED DRILLS</span><h4>Practise like a game</h4><p>Complete the guided missions here. ⭐ Stars belong to drills only.</p><div class="drillGrid">'+drillHtml+'</div></section>'+
  '<section class="learningSection"><span class="sectionEyebrow">04 · PRACTICE</span><h4>Practice Ladder · Levels 1–5</h4><p>Build independence step by step. Practice progress is separate from Drill Stars.</p><div class="practiceLadder">'+practiceHtml+'</div>'+codingHtml+'</section>'+
  '<section class="learningSection challengeSection"><span class="sectionEyebrow">05 · CHALLENGE</span><h4>Apply what you have learned</h4><div class="challengeBox"><p>'+esc(data.challenge)+'</p><ul>'+(track.id==='communication'?'<li>Complete the communication task using the situation and audience described.</li><li>Explain the language, organisation or delivery choices you make.</li><li>Check accuracy, clarity, coherence and professional appropriateness.</li><li>Review the final response before moving to the final assessment.</li>':'<li>Write the solution in the editor.</li><li>Run normal, boundary and unusual inputs.</li><li>Fix compiler and logic errors.</li><li>Review before moving to the final assessment.</li>')+'</ul></div></section>'+
  '<section class="learningSection assessmentSection"><span class="sectionEyebrow">06 · FINAL ASSESSMENT</span><h4>Final Module Assessment · '+assessmentCount+' Questions</h4><p>'+esc(data.assessment)+'</p><div class="assessmentReadiness"><span>✓ Exactly '+assessmentCount+' questions</span><span>✓ Module-specific pool</span><span>✓ C modules include coding</span><span>✓ Admin/faculty approval required</span></div><button id="startAssessment">Start Final Assessment · '+assessmentCount+' Questions →</button><div id="moduleAssessmentMount" class="assessmentInlineMount"></div><p class="assessmentNote">This is the formal assessment for '+esc(data.title)+'. Drill Stars and practice rewards do not replace the final assessment score.</p></section></section>';
 }
+function wireMaterialSlider(ws){
+ const slider=ws?.querySelector('[data-material-slider]');
+ if(!slider)return;
+ const slides=Array.from(slider.querySelectorAll('.materialSlide'));
+ const position=slider.querySelector('[data-material-position]');
+ let index=0;
+ const render=()=>{
+   slides.forEach((el,i)=>{el.hidden=i!==index;el.classList.toggle('isActive',i===index);});
+   if(position)position.textContent=(index+1)+' / '+slides.length;
+   const prev=slider.querySelector('[data-material-prev]'),next=slider.querySelector('[data-material-next]');
+   if(prev)prev.disabled=index===0;
+   if(next)next.disabled=index===slides.length-1;
+ };
+ slider.querySelector('[data-material-prev]')?.addEventListener('click',()=>{if(index>0){index--;render();}});
+ slider.querySelector('[data-material-next]')?.addEventListener('click',()=>{if(index<slides.length-1){index++;render();}});
+ render();
+}
+
 function materialGuide(resource,title){return 'Study this topic in three passes. First understand the idea. Second trace the worked example line by line. Third close the notes and reproduce the idea yourself. Then complete a related drill and explain the reasoning aloud. Resource: '+resource+'.';}
 function checkPracticeAnswer(button){const box=document.createElement('div');box.className='practicePrompt';box.innerHTML='<strong>Self-check</strong><p>'+esc(button.dataset.question)+'</p><p><b>Model approach:</b> '+esc(button.dataset.answer)+'</p>';button.parentElement.appendChild(box);button.textContent='Review Prompt';}
 
