@@ -1,8 +1,10 @@
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-functions.js';
 import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js';
+import { getStorage, ref, getDownloadURL } from 'https://www.gstatic.com/firebasejs/12.19.0/firebase-storage.js';
 
 const fxecApp = getApps().length ? getApp() : initializeApp(window.FXEC_FIREBASE_CONFIG);
 const functions = getFunctions(fxecApp, 'us-central1');
+const storage = getStorage(fxecApp);
 const call = name => httpsCallable(functions, name);
 const esc = v => String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 function speak(textValue){if(!('speechSynthesis' in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(textValue||''));u.rate=.9;window.speechSynthesis.speak(u);}
@@ -172,22 +174,30 @@ function renderAssessment(){
  restoreAnswer(q,root);
  const play=root.querySelector('#playAssessmentAudio');
  const audioEl=root.querySelector('#assessmentQuestionAudio');
- if(play)play.onclick=()=>{
+ if(play)play.onclick=async()=>{
+   const stage=root.querySelector('#audioAssessmentStage');
    if(audioEl){
      audioEl.currentTime=0;
      const p=audioEl.play();
      if(p?.catch)p.catch(()=>{});
-     const stage=root.querySelector('#audioAssessmentStage');
-     if(stage){
-       stage.innerHTML='<strong>LISTENING</strong><span>Listen to the question, then select your answer.</span>';
-     }
+     if(stage)stage.innerHTML='<strong>LISTENING</strong><span>Listen to the question, then select your answer.</span>';
      audioEl.onended=()=>{ if(stage) playOptionSequence(q.options||[],stage); };
+   }else if(q.audioPath){
+     try{
+       if(stage)stage.innerHTML='<strong>LOADING AUDIO</strong><span>Preparing the stored question audio…</span>';
+       const url=q.audioUrl||await getDownloadURL(ref(storage,q.audioPath));
+       const player=new Audio(url);
+       if(stage)stage.innerHTML='<strong>LISTENING</strong><span>Listen to the question, then select your answer.</span>';
+       player.onended=()=>{ if(stage) playOptionSequence(q.options||[],stage); };
+       await player.play();
+     }catch(err){
+       if(stage)stage.innerHTML='<strong>AUDIO UNAVAILABLE</strong><span>Using browser speech playback instead.</span>';
+       speak(q.audioText||q.prompt||'');
+       if(stage)setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
+     }
    }else{
      speak(q.audioText||q.prompt||'');
-     if(audioMode){
-       const stage=root.querySelector('#audioAssessmentStage');
-       setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
-     }
+     if(audioMode&&stage)setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
    }
  };
  root.querySelectorAll('input[name="caAnswer"]').forEach(x=>x.addEventListener('change',()=>saveAnswer(q,root)));
