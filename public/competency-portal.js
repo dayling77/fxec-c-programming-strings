@@ -308,7 +308,7 @@ function programmeChooser(){
 }
 
 function moduleGrid(track,programme){
- const assessmentCount=track.id==='c-programming'?15:10;
+ const assessmentCount=15;
  return '<div class="moduleProgrammeBanner">'+(programme?'<span>PROGRAMME</span><strong>'+esc(programme.title)+'</strong>':'<span>COMPETENCY PATHWAY</span><strong>'+esc(track.title)+'</strong>')+'</div>'+
   '<div class="moduleSectionHeading"><div><span class="sectionEyebrow">MODULE LEARNING PATH</span><h4>Every module keeps its own learning flow</h4><p>Topic → materials → guided drills → practice → challenge → final assessment. Drill Stars belong only to Guided Drills.</p></div><span class="practiceBadge">'+track.modules.length+' MODULE ASSESSMENTS</span></div>'+
   '<div class="moduleGrid">'+track.modules.map((m,i)=>'<article class="learningModuleCard"><div class="moduleTop"><span>MODULE '+String(i+1).padStart(2,'0')+'</span><b>FINAL ASSESSMENT · '+assessmentCount+'</b></div><h5>'+esc(m)+'</h5><div class="moduleFlow"><span>Topic</span><i>→</i><span>Materials</span><i>→</i><span>Drills</span><i>→</i><span>Practice</span><i>→</i><span>Challenge</span><i>→</i><span>Assessment</span></div><div class="moduleAssessmentMeta"><span><b>'+assessmentCount+'</b> questions / student</span><span><b>50</b> master questions</span>'+(track.id==='c-programming'?'<span class="codingMeta">⌨ coding practice</span>':'')+'</div><div class="moduleBottom"><small>Master question bank belongs to Module '+(i+1)+'</small><button class="moduleOpen" data-track="'+esc(track.id)+'" data-module="'+(i+1)+'">Open Module '+(i+1)+' →</button></div></article>').join('')+'</div>';
@@ -740,7 +740,7 @@ function openCodingLab(ws,{title,prompt,starter,metaId=''}){
 }
 
 function moduleView(track,data,no,programme){
- const assessmentCount=track.id==='c-programming'?15:10;
+ const assessmentCount=15;
  const communicationAudio=track.id==='communication'&&data.audio?renderCommunicationAudioLab(data.speechTasks||[],data.title+' — Speaking Practice'):'';
  const topicHtml=(data.topics||[]).map(x=>'<li>'+esc(x)+'</li>').join('');
  let materialHtml='';
