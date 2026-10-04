@@ -206,6 +206,7 @@ function renderEditor(t){
  const verified=t.status==='verified';
  const published=t.isPublished===true;
  let workflowButtons='<button id="caSave">Save Draft</button>';
+ if(viewerRole==='admin') workflowButtons+='<button id="caExportScores" class="secondary">Download Module Scores CSV</button>';
  if(viewerRole==='admin'){
    workflowButtons+='<button id="caVerify" class="secondary" '+(published?'disabled':'')+'>'+(verified?'✓ Verified':'Verify Module '+t.day)+'</button>';
    workflowButtons+='<button id="caApprove" class="primaryButton" '+(!verified||published?'disabled':'')+'>'+(published?'✓ Published':verified?'Approve & Publish Module '+t.day:'Waiting for Faculty Verification')+'</button>';
@@ -267,6 +268,16 @@ function wireEditor(){
  const approveButton=host().querySelector('#caApprove');
  const verifyButton=host().querySelector('#caVerify');
  if(saveButton)saveButton.addEventListener('click',()=>save(false));
+ const exportScores=host().querySelector('#caExportScores');
+ if(exportScores)exportScores.addEventListener('click',async()=>{
+   try{
+     exportScores.disabled=true;exportScores.textContent='Preparing CSV…';
+     const r=await call('exportCompetencyAssessmentScores')({trackId:selectedTrack,day:selectedDay});
+     const blob=new Blob([r.data.csv||''],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+     a.href=url;a.download='FXEC-'+selectedTrack+'-Module-'+selectedDay+'-Scores.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+     exportScores.textContent='Download Module Scores CSV';
+   }catch(e){exportScores.disabled=false;exportScores.textContent='Download Module Scores CSV';setStatus(e.message||String(e));}
+ });
  if(approveButton)approveButton.addEventListener('click',()=>save(true));
  if(verifyButton)verifyButton.addEventListener('click',()=>verify());
  const assign=host().querySelector('#caAssignFaculty');
