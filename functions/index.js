@@ -2247,9 +2247,9 @@ export const generatePreparedCompetencyModule = onCall(
         for(let i=0;i<Math.min(missing,fallback.length);i++){
           const x=fallback[i];
           questions.push({
-            id:'D1-Q'+String(questions.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty:x[5],topic:x[0],
-            learningOutcomeId:'communication-D1-LO'+x[6],materialId:'communication-D1-MAT'+x[7],guidedDrillId:'communication-D1-DR'+x[8],
-            ladderLevel:x[9],remediationMaterialId:'communication-D1-MAT'+x[7],prompt:x[1],options:x[2],answer:x[3],
+            id:'D1-Q'+String(questions.length+1).padStart(2,'0'),type:'mcq',activityType:'mcq',difficulty:x[4],topic:x[0],
+            learningOutcomeId:'communication-D1-LO'+x[5],materialId:'communication-D1-MAT'+x[6],guidedDrillId:'communication-D1-DR'+x[7],
+            ladderLevel:x[8],remediationMaterialId:'communication-D1-MAT'+x[6],prompt:x[1],options:x[2],answer:x[3],
             explanation:'The selected sentence follows the taught grammar and usage principle for this module.',
             remediationNote:'Revisit the related Grammar & Usage material and Guided Drill '+x[8]+' before attempting the item again.',
             timeLimitSeconds:x[10]
