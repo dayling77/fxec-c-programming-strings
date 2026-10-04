@@ -125,7 +125,7 @@ function render(){
         await load(activeHostId,selectedTrack,selectedDay);
       }else{
         setStatus('Starting background preparation for '+selectedTrack+' Module '+selectedDay+'. Only this selected module is being generated; the browser will not wait for the long AI operation.','success');
-        const started=await call('startCompetencyModuleGeneration')({trackId:selectedTrack,day:selectedDay});
+        const started=await call('generatePreparedCompetencyModule')({trackId:selectedTrack,day:selectedDay});
         const runId=started.data?.runId;
         if(!runId) throw new Error('Module generation did not return a run ID.');
         let finished=false;
