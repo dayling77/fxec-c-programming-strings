@@ -1958,6 +1958,13 @@ function buildCommunicationModule1Bank(){
     ['Editing for accuracy','Choose the clearest sentence.',['The engineer the result recorded.','The result recorded the engineer.','The engineer recorded the result.','Recorded the result engineer.'],2,1,4,5,5,30]
   ];
   easy.forEach(x=>add(...x));
+  easy.push(
+    ['Basic word order','Which sentence has the clearest subject, verb and object order?',['The student completed the assignment.','Completed the student the assignment.','The assignment the student completed.','The student the assignment completed.'],0,1,2,2,1,30],
+    ['Editing for accuracy','Choose the correctly edited sentence.',['The report contain three sections.','The report contains three sections.','The report containing three sections.','The report have three sections.'],1,1,5,5,2,30],
+    ['Subject–verb agreement','Choose the correct sentence.',['The equipment in the laboratory require care.','The equipment in the laboratory requires care.','The equipment in the laboratory requiring care.','The equipment in the laboratory are care.'],1,1,3,3,2,30],
+    ['Sentence roles','In “The researcher analysed the results”, which word is the subject?',['researcher','analysed','results','the'],0,1,1,1,1,30],
+    ['Editing for accuracy','Which sentence is grammatically accurate?',['The experiment produce reliable results.','The experiment produces reliable results.','The experiment producing reliable results.','The experiment have reliable results.'],1,1,5,5,2,30]
+  );
   const moderate=[
     ['Sentence roles','In “After the inspection, the maintenance team replaced the damaged cable”, which phrase is the subject?',['After the inspection','the maintenance team','the damaged cable','replaced'],1,2,1,1,2,45],
     ['Sentence roles','In “The design team reviewed the drawing carefully”, what is the object of reviewed?',['The design team','reviewed','the drawing','carefully'],2,2,1,1,2,45],
@@ -2059,14 +2066,14 @@ export const processCompetencyGenerationJob = onDocumentCreated(
         title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
         topic:competencyModuleTitle(trackId,day),
         date:null,openAt:null,closeAt:null,
-        questions,questionCount:50,recommendedQuestionCount:trackId==='c-programming'?15:10,
+        questions,questionCount:50,recommendedQuestionCount:15,
         status:'draft',isPublished:false,source:'ai-validated-mixed-format',
         generatedBy:'Gemini + 2 audit passes',loadedBy:adminUid,
         loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
       },{merge:true});
       const poolRef=db.collection('competencyQuestionPools').doc(trackId+'_D'+day);
       await poolRef.set({
-        trackId,day,questionCount:50,recommendedQuestionCount:trackId==='c-programming'?15:10,
+        trackId,day,questionCount:50,recommendedQuestionCount:15,
         status:'draft',source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()
       },{merge:true});
       const questionsBatch=db.batch();
@@ -2122,6 +2129,26 @@ export const processCompetencyGenerationJob = onDocumentCreated(
         }).catch(()=>{});
       }
     }
+  }
+);
+
+export const startCompetencyModuleGeneration = onCall(
+  {cors:CALLABLE_CORS},
+  async request=>{
+    const adminUser=requireAdmin(request);
+    const trackId=competencyTrackOrThrow(request.data?.trackId);
+    const day=Number(request.data?.day);
+    if(!Number.isInteger(day)||day<1||day>10) throw new HttpsError('invalid-argument','Module must be between 1 and 10.');
+    const runId='MODULE_'+trackId+'_D'+day+'_'+Date.now()+'_'+randomUUID().slice(0,8);
+    await db.collection('competencyGenerationRuns').doc(runId).set({
+      runId,trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,
+      status:'running',totalModules:1,completed:0,finished:0,
+      modules:{[day]:'queued'},errors:{},
+      startedAt:FieldValue.serverTimestamp(),startedBy:adminUser.uid
+    });
+    const jobRef=db.collection('competencyGenerationJobs').doc(runId+'_D'+day);
+    await jobRef.set({runId,trackId,day,adminUid:adminUser.uid,status:'queued',createdAt:FieldValue.serverTimestamp()});
+    return {success:true,runId,trackId,day,message:'Module '+day+' generation started. Only the selected module is being prepared.'};
   }
 );
 
@@ -2203,7 +2230,7 @@ export const generatePreparedCompetencyModule = onCall({cors:CALLABLE_CORS, time
       title:meta.title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),
       topic:competencyModuleTitle(trackId,day),
       date:null,openAt:null,closeAt:null,
-      questions,questionCount:50,recommendedQuestionCount:trackId==='c-programming'?15:10,
+      questions,questionCount:50,recommendedQuestionCount:15,
       status:'draft',isPublished:false,source:'ai-validated-mixed-format',
       generatedBy:'Gemini + 2 audit passes',loadedBy:adminUser.uid,
       loadedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()
