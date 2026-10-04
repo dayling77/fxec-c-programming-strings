@@ -2249,7 +2249,7 @@ export const getCompetencyAssessmentGenerationRun = onCall(
 );
 
 export const generatePreparedCompetencyModule = onCall(
-  {cors:CALLABLE_CORS},
+  {cors:CALLABLE_CORS, timeoutSeconds:300, memory:'1GiB'},
   async request=>{
     const adminUser=requireAdmin(request);
     const trackId=competencyTrackOrThrow(request.data?.trackId);
