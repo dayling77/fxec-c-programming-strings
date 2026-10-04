@@ -2596,7 +2596,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
   const questions=validateCompetencyQuestions(request.data?.questions,trackId);
   const rawVideoLinks=Array.isArray(request.data?.videoLinks)?request.data.videoLinks:[];
-  const videoLinks=rawVideoLinks.map(v=>String(v||'').trim()).filter(v=>/^https?:\\/\\//i.test(v)).slice(0,2);
+  const videoLinks=rawVideoLinks.map(v=>String(v||'').trim()).filter(v=>/^https?:\/\//i.test(v)).slice(0,2);
   const allowStudentScriptDownload=Boolean(request.data?.allowStudentScriptDownload);
   const ref=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
   await ref.set({trackId,trackTitle:COMPETENCY_ASSESSMENT_TRACKS[trackId].title,day,date,openAt:open,closeAt:close,topic:topic||competencyModuleTitle(trackId,day),title:title||COMPETENCY_ASSESSMENT_TRACKS[trackId].title+' — Module '+day+' · '+competencyModuleTitle(trackId,day),questions,questionCount:questions.length,recommendedQuestionCount:Math.min(trackId==='c-programming'?10:15,questions.length),videoLinks,allowStudentScriptDownload,poolVersion:(Date.now()),status:'draft',isPublished:false,updatedBy:adminUser.uid,updatedAt:FieldValue.serverTimestamp()},{merge:true});
