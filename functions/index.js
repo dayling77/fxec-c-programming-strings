@@ -1957,7 +1957,7 @@ function buildCommunicationModule1Bank(){
     ['Editing for accuracy','Choose the corrected form: “The students was ready.”',['The students were ready.','The students is ready.','The students be ready.','The students has ready.'],0,1,5,5,2,30],
     ['Editing for accuracy','Choose the clearest sentence.',['The engineer the result recorded.','The result recorded the engineer.','The engineer recorded the result.','Recorded the result engineer.'],2,1,4,5,5,30]
   ];
-  easy.forEach(x=>add(...x));
+  // The authored easy items contain topic, prompt, options, answer, difficulty, LO, material, drill and time. Add the required easy ladder level explicitly.\n  easy.forEach(x=>add(x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],1,x[8]));
   easy.push(
     ['Basic word order','Which sentence has the clearest subject, verb and object order?',['The student completed the assignment.','Completed the student the assignment.','The assignment the student completed.','The student the assignment completed.'],0,1,2,2,1,30],
     ['Editing for accuracy','Choose the correctly edited sentence.',['The report contain three sections.','The report contains three sections.','The report containing three sections.','The report have three sections.'],1,1,5,5,2,30],
