@@ -1727,6 +1727,16 @@ function competencyTrackOrThrow(trackId){
 function validateCompetencyQuestions(questions, trackId='', day=0){
   const basic=competencyQuestionValidation(questions, trackId, day);
   if(!basic.ok) throw new HttpsError('invalid-argument','Question validation failed: '+basic.errors.slice(0,8).join(' '));
+  if(trackId==='communication' && Number(day)===4){
+    const audioErrors=[];
+    if(!Array.isArray(questions) || questions.length!==50) audioErrors.push('Listening Skills requires exactly 50 questions.');
+    (Array.isArray(questions)?questions:[]).forEach((q,i)=>{
+      if(q.activityType!=='listening') audioErrors.push('Q'+(i+1)+': every Module 4 question must be an audio/listening question.');
+      if(!cleanText(q.audioText,20)) audioErrors.push('Q'+(i+1)+': spoken question script is missing.');
+      if(!cleanText(q.audioPath,10) && !cleanText(q.audioUrl,20)) audioErrors.push('Q'+(i+1)+': generated audio asset is missing.');
+    });
+    if(audioErrors.length) throw new HttpsError('failed-precondition','Listening Skills audio validation failed: '+audioErrors.slice(0,10).join(' '));
+  }
   return questions.map(q=>({...q,id:String(q.id)}));
 }
 
@@ -1906,10 +1916,12 @@ const COMPETENCY_MODULE_SCOPES = Object.freeze({
 });
 async function attachCompetencyAssessmentAudio(trackId, day, questions){
   if(trackId!=='communication') return questions;
-  const audioCount=Number(day)===4?8:5;
+  const listeningModule4=Number(day)===4;
+  // Listening Skills is an audio-only assessment: generate a stored audio asset for every master question.
+  const audioCount=listeningModule4?questions.length:5;
   const preferred=questions.map((q,i)=>({q,i})).filter(x=>x.q.activityType==='listening'||Number(x.i)%10===2);
   const fallback=questions.map((q,i)=>({q,i})).filter(x=>!preferred.some(p=>p.q===x.q));
-  const targets=[...preferred,...fallback].slice(0,audioCount);
+  const targets=listeningModule4?questions.map((q,i)=>({q,i})):[...preferred,...fallback].slice(0,audioCount);
   let created=0;
   for(const {q} of targets){
     q.activityType='listening';
@@ -1958,6 +1970,11 @@ async function attachCompetencyAssessmentAudio(trackId, day, questions){
     logger.warn('Communication module has fewer stored audio items than required',{
       trackId,day,required:audioCount,created
     });
+    if(listeningModule4) throw new Error('Listening Skills audio generation incomplete: '+created+' of '+audioCount+' questions have playable audio. The module was not saved.');
+  }
+  if(listeningModule4){
+    const missing=questions.map((q,i)=>({q,i})).filter(({q})=>q.activityType!=='listening'||!cleanText(q.audioText,20)||(!cleanText(q.audioPath,10)&&!cleanText(q.audioUrl,20)));
+    if(missing.length) throw new Error('Listening Skills requires audio for every question. Missing question numbers: '+missing.map(x=>x.i+1).join(', '));
   }
   return questions;
 }
@@ -1965,7 +1982,7 @@ async function attachCompetencyAssessmentAudio(trackId, day, questions){
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
   const prefix=trackId+'-D'+day+'-';
-  const trace='Use ONLY these traceability IDs: learningOutcomeId '+prefix+'LO1..'+prefix+'LO5; materialId '+prefix+'MAT1..'+prefix+'MAT5; guidedDrillId '+prefix+'DR1..'+prefix+'DR5. Set remediationMaterialId to one of the five '+prefix+'MAT IDs. ladderLevel must be 1 (recognise/understand), 2 (apply), 3 (analyse/verify), 4 (diagnose), or 5 (solve/transfer). Every question must identify the exact outcome, material, drill and ladder level it builds on.'+(trackId==='communication'?' For communication, write at least five questions that can be delivered as listening items: each must have a clear spoken prompt suitable for audioText and four answer options. Module 4 should contain a stronger listening emphasis.':'');
+  const trace='Use ONLY these traceability IDs: learningOutcomeId '+prefix+'LO1..'+prefix+'LO5; materialId '+prefix+'MAT1..'+prefix+'MAT5; guidedDrillId '+prefix+'DR1..'+prefix+'DR5. Set remediationMaterialId to one of the five '+prefix+'MAT IDs. ladderLevel must be 1 (recognise/understand), 2 (apply), 3 (analyse/verify), 4 (diagnose), or 5 (solve/transfer). Every question must identify the exact outcome, material, drill and ladder level it builds on.'+(trackId==='communication'&&Number(day)===4?' CRITICAL: Communication Module 4 — Listening Skills is audio-only. ALL 50 questions must use activityType "listening" and each must include a complete, natural spoken question in audioText plus four distinct answer options. Assess gist, details/numbers, sequence/instructions, note-taking, speaker purpose, attitude and implied meaning. Do not create non-audio questions.':trackId==='communication'?' For communication modules other than Module 4, write at least five questions that can be delivered as listening items, each with a clear spoken prompt and four answer options.':'');
   if(trackId==='c-programming'){
     const scopes={
       1:'problem statements, C program structure, main, statements and blocks, identifiers, variables, constants, data types, type conversion, operators, expressions, printf/scanf, compilation and debugging basics',
@@ -1981,7 +1998,7 @@ function competencyGenerationPrompt(trackId, day) {
     }[day];
     return 'You are a senior C programming assessment designer for Francis Xavier Engineering College.\\nCreate Module '+day+': '+topic+' for first-year engineering students.\\n\\nMODULE SCOPE:\\n'+scopes+'\\n\\n'+trace+'\\n\\nGenerate EXACTLY 50 master questions using this activity distribution:\\n15 mcq/concept\\n8 output-prediction\\n6 bug-identification/debugging\\n5 missing-code/code-completion\\n5 code-observation/tracing\\n3 listening/audio-based\\n3 coding-challenge\\n5 scenario-analysis\\nTOTAL 50.\\n\\nScoring types: use type "mcq" for the first six activity groups and type "scenario" for scenario-analysis and coding-challenge. Thus the exact scoring distribution is 42 mcq and 8 scenario.\\n\\nQuality:\\n- Every question must test the module scope; do not drift into another module.\\n- Output-prediction, bug-identification, missing-code and code-observation MUST include a short valid standard-C code snippet in code.\\n- Missing-code must visibly contain a placeholder such as /* MISSING */.\\n- Bug-identification must contain a real defect and ask the student to identify the defect/correction.\\n- Output-prediction must have one deterministically correct output.\\n- Code-observation must require tracing state, not merely recalling syntax.\\n- Listening questions must contain audioText with the complete spoken question and four answer options.\\n- Coding challenges must be genuine C programming tasks, with starter code, sampleInput, sampleOutput and at least 5 hidden codingTests. Do not copy external provider questions.\\n- Use realistic engineering, laboratory or student contexts.\\n- Standard C only; no undefined behaviour or compiler-specific assumptions.\\n- No all/none of the above, duplicate options or trick wording.\\n- Exactly 15 easy, 20 moderate and 15 tough.\\n- Every non-coding question has four distinct plausible options and one correct answer.\\n- Every question has a concise explanation and a remediationNote that tells the learner exactly what to revisit after an incorrect answer.\\n- The question must assess a taught skill, not introduce a new concept for the first time.\\n- Time limits: easy 30-45s, moderate 45-75s, tough 60-120s.\\n- Return JSON only.\\n\\nJSON shape:\\n{"questions":[{"id":"D'+day+'-Q01","type":"mcq|scenario","activityType":"mcq|output-prediction|bug-identification|missing-code|code-observation|listening|coding-challenge|scenario-analysis","difficulty":"easy|moderate|tough","topic":"specific subtopic","learningOutcomeId":"'+prefix+'LO1","materialId":"'+prefix+'MAT1","guidedDrillId":"'+prefix+'DR1","ladderLevel":1,"remediationMaterialId":"'+prefix+'MAT1","prompt":"...","code":"...","options":["A","B","C","D"],"answer":0,"audioText":"...","starter":"...","sampleInput":"...","sampleOutput":"...","codingTests":[["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"],["input","expected output"]],"explanation":"...","remediationNote":"Revisit ... then redo Guided Drill ...","timeLimitSeconds":45}]}';
   }
-  return 'You are a senior university assessment designer for Francis Xavier Engineering College.\\nCreate Module '+day+' of a ten-module assessment programme for '+meta.title+', intended for first-year engineering students.\\n\\nMODULE TOPIC: '+topic+'\\nMODULE-SPECIFIC LEARNING SCOPE:\\n'+(((COMPETENCY_MODULE_SOURCE_MAPS[trackId]||[])[Number(day)-1])||((COMPETENCY_MODULE_SCOPES[trackId]||[])[Number(day)-1])||topic)+'\\n\\n'+trace+'\\n\\nGenerate EXACTLY 50 MCQ questions. Every question must use type "mcq". For communication, at least 35 questions must use activityType "listening" with a complete audioText field; students should hear the question first. Difficulty exactly 15 easy, 20 moderate, 15 tough.\\n\\nQuestions must measure the stated module scope in new contexts. Do not repeat worked examples or Guided Drills. Do not use generic filler such as "which approach is most appropriate" without a concrete situation, evidence, data or decision. For Communication, use these exact taught lesson anchors for the selected module: '+((trackId==='communication'?(COMMUNICATION_TEACHING_MATERIALS[Number(day)]||[]).join('; '):''))+' . Every Communication question must test one of those taught skills in a concrete academic, laboratory, workplace or professional-communication context. Do not use unrelated numerical, aptitude, generic reasoning or evidence-assumption distractors. Do not write template stems such as "During a task, a student must choose an approach".\\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application, analysis and transfer. No trivia, trick wording, culturally dependent assumptions or obscure facts. Moderate/tough questions must require reasoning, calculation, interpretation, evidence evaluation, error diagnosis or decision-making. Every question must be traceable to the module\'s five outcomes, five materials, five guided drills and one practice-ladder level. The question must assess a skill already taught in the student material. Every explanation must justify the key and every remediationNote must identify what the learner should revisit.\\nEvery question must have exactly four distinct, plausible options. Answer must be a 0-based option index. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid ambiguity. Code must use standard C and avoid undefined behaviour.\\nTime limits: easy 30-45s, moderate 45-75s, tough 60-120s.\\nReturn JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq","activityType":"mcq|listening","difficulty":"easy|moderate|tough","topic":"...","learningOutcomeId":"'+prefix+'LO1","materialId":"'+prefix+'MAT1","guidedDrillId":"'+prefix+'DR1","ladderLevel":1,"remediationMaterialId":"'+prefix+'MAT1","prompt":"...","options":["A","B","C","D"],"answer":0,"audioText":"...","explanation":"...","remediationNote":"Revisit ... then redo Guided Drill ...","timeLimitSeconds":45}]}';
+  return 'You are a senior university assessment designer for Francis Xavier Engineering College.\\nCreate Module '+day+' of a ten-module assessment programme for '+meta.title+', intended for first-year engineering students.\\n\\nMODULE TOPIC: '+topic+'\\nMODULE-SPECIFIC LEARNING SCOPE:\\n'+(((COMPETENCY_MODULE_SOURCE_MAPS[trackId]||[])[Number(day)-1])||((COMPETENCY_MODULE_SCOPES[trackId]||[])[Number(day)-1])||topic)+'\\n\\n'+trace+'\\n\\nGenerate EXACTLY 50 MCQ questions. Every question must use type "mcq". '+(trackId==='communication'&&Number(day)===4?'For Listening Skills Module 4, ALL 50 questions must use activityType "listening" and include a complete audioText script; students must hear every question before answering.':'For communication modules other than Module 4, at least 35 questions must use activityType "listening" with a complete audioText field; students should hear the question first.')+' Difficulty exactly 15 easy, 20 moderate, 15 tough.\\n\\nQuestions must measure the stated module scope in new contexts. Do not repeat worked examples or Guided Drills. Do not use generic filler such as "which approach is most appropriate" without a concrete situation, evidence, data or decision. For Communication, use these exact taught lesson anchors for the selected module: '+((trackId==='communication'?(COMMUNICATION_TEACHING_MATERIALS[Number(day)]||[]).join('; '):''))+' . Every Communication question must test one of those taught skills in a concrete academic, laboratory, workplace or professional-communication context. Do not use unrelated numerical, aptitude, generic reasoning or evidence-assumption distractors. Do not write template stems such as "During a task, a student must choose an approach".\\nQUALITY STANDARD: University-level first-year engineering standard; test understanding, application, analysis and transfer. No trivia, trick wording, culturally dependent assumptions or obscure facts. Moderate/tough questions must require reasoning, calculation, interpretation, evidence evaluation, error diagnosis or decision-making. Every question must be traceable to the module\'s five outcomes, five materials, five guided drills and one practice-ladder level. The question must assess a skill already taught in the student material. Every explanation must justify the key and every remediationNote must identify what the learner should revisit.\\nEvery question must have exactly four distinct, plausible options. Answer must be a 0-based option index. The answer MUST point to an option that literally exists. Never use all/none of the above. Avoid ambiguity. Code must use standard C and avoid undefined behaviour.\\nTime limits: easy 30-45s, moderate 45-75s, tough 60-120s.\\nReturn JSON only as {"questions":[{"id":"D'+day+'-Q01","type":"mcq","activityType":"mcq|listening","difficulty":"easy|moderate|tough","topic":"...","learningOutcomeId":"'+prefix+'LO1","materialId":"'+prefix+'MAT1","guidedDrillId":"'+prefix+'DR1","ladderLevel":1,"remediationMaterialId":"'+prefix+'MAT1","prompt":"...","options":["A","B","C","D"],"answer":0,"audioText":"...","explanation":"...","remediationNote":"Revisit ... then redo Guided Drill ...","timeLimitSeconds":45}]}';
 }
 async function auditCompetencyQuestions(trackId, day, questions, auditNumber) {
   const auditPrompt = `You are an independent senior university assessment auditor. Audit these 50 questions for ${COMPETENCY_ASSESSMENT_TRACKS[trackId].title}, Module ${day}. This is audit pass ${auditNumber}; do not assume the generator is correct. For EVERY question: recalculate numerical answers; trace code; verify answer indexes point to existing options; verify all four options are distinct; verify exactly one defensible answer for mcq/scenario; verify multipleCorrect has exactly intended 2-3 correct options and no hidden extra correct option; verify explanation matches the key; verify curriculum scope; verify clarity for first-year engineering; verify every item has valid outcome/material/drill/ladder/remediation traceability and that the trace points to a taught skill; reject ambiguity, broken logic, unsupported facts, or missing answer choices. Return JSON only: {"valid":true,"issues":[]} or {"valid":false,"issues":["Q07: ..."]}. CURRICULUM:
@@ -2122,6 +2139,8 @@ export const processCompetencyGenerationJob = onDocumentCreated(
       const questions=trackId==='communication'&&day===1?buildCommunicationModule1Bank():await generateHighStandardCompetencyDay(trackId,day);
       await attachCompetencyAssessmentAudio(trackId,day,questions);
       if(!Array.isArray(questions)||questions.length!==50) throw new Error('Generated module did not contain exactly 50 questions.');
+      // Revalidate after audio synthesis so Module 4 cannot be saved with a missing audio asset.
+      validateCompetencyQuestions(questions,trackId,day);
       const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
       const adminUid=String(job.adminUid||'system');
       const taskRef=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
@@ -2141,6 +2160,11 @@ export const processCompetencyGenerationJob = onDocumentCreated(
         status:'draft',source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()
       },{merge:true});
       const questionsBatch=db.batch();
+      if(trackId==='communication' && day===4){
+        // Replace the Module 4 pool atomically so legacy/non-audio questions cannot survive a regeneration.
+        const existingPoolQuestions=await poolRef.collection('questions').get();
+        for(const oldQuestion of existingPoolQuestions.docs) questionsBatch.delete(oldQuestion.ref);
+      }
       for(const q of questions){
         questionsBatch.set(poolRef.collection('questions').doc(String(q.id)),{
           ...q,trackId,day,poolId:poolRef.id,source:'ai-validated-mixed-format',
@@ -2596,7 +2620,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new HttpsError('invalid-argument','Use YYYY-MM-DD for the assessment date.');
   const open=new Date(openAt),close=new Date(closeAt);
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
-  const questions=validateCompetencyQuestions(request.data?.questions,trackId);
+  const questions=validateCompetencyQuestions(request.data?.questions,trackId,day);
   const rawVideoLinks=Array.isArray(request.data?.videoLinks)?request.data.videoLinks:[];
   const videoLinks=rawVideoLinks.map(v=>String(v||'').trim()).filter(v=>/^https?:\/\//i.test(v)).slice(0,2);
   const allowStudentScriptDownload=Boolean(request.data?.allowStudentScriptDownload);
@@ -2620,7 +2644,7 @@ export const verifyCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async r
   const snap=await ref.get();
   if(!snap.exists) throw new HttpsError('not-found','Assessment module has not been created.');
   const d=snap.data();
-  validateCompetencyQuestions(d.questions,trackId);
+  validateCompetencyQuestions(d.questions,trackId,day);
   if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before verification.');
   await ref.update({status:'verified',isPublished:false,verifiedBy:verifier.uid,verifiedByEmail:verifier.token.email||'',verifiedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
   await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'verified',verifiedBy:verifier.uid,verifiedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
@@ -2636,7 +2660,7 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
   const snap=await ref.get();
   if(!snap.exists) throw new HttpsError('not-found','Assessment day has not been created.');
   const d=snap.data();
-  validateCompetencyQuestions(d.questions,trackId);
+  validateCompetencyQuestions(d.questions,trackId,day);
   if(d.status!=='verified') throw new HttpsError('failed-precondition','Faculty verification is required before admin approval and publishing.');
   if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before approval/publishing.');
   await ref.update({status:'published',isPublished:true,approvedBy:adminUser.uid,approvedByEmail:adminUser.token.email||'',approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
@@ -2768,6 +2792,10 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const poolSnap=await db.collection('competencyQuestionPools').doc(taskId).collection('questions').get();
     const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
     if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
+    if(task.trackId==='communication' && Number(task.day)===4){
+      const missingAudio=sourceQuestions.filter(q=>q.activityType!=='listening'||!cleanText(q.audioText,20)||(!cleanText(q.audioPath,10)&&!cleanText(q.audioUrl,20)));
+      if(sourceQuestions.length!==50||missingAudio.length) throw new HttpsError('failed-precondition','Listening Skills cannot start: every master question must have a verified audio asset. Regenerate Module 4 audio and re-approve it.');
+    }
     const codingPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='coding-challenge'):[];
     const audioPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='listening'):[];
     // C retains its TCS-style 10-question assessment structure; all other competencies use 15.
