@@ -2160,6 +2160,11 @@ export const processCompetencyGenerationJob = onDocumentCreated(
         status:'draft',source:'ai-validated-mixed-format',updatedAt:FieldValue.serverTimestamp()
       },{merge:true});
       const questionsBatch=db.batch();
+      if(trackId==='communication' && day===4){
+        // Replace the Module 4 pool atomically so legacy/non-audio questions cannot survive a regeneration.
+        const existingPoolQuestions=await poolRef.collection('questions').get();
+        for(const oldQuestion of existingPoolQuestions.docs) questionsBatch.delete(oldQuestion.ref);
+      }
       for(const q of questions){
         questionsBatch.set(poolRef.collection('questions').doc(String(q.id)),{
           ...q,trackId,day,poolId:poolRef.id,source:'ai-validated-mixed-format',
