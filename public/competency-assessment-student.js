@@ -176,29 +176,34 @@ function renderAssessment(){
  const audioEl=root.querySelector('#assessmentQuestionAudio');
  if(play)play.onclick=async()=>{
    const stage=root.querySelector('#audioAssessmentStage');
+   const playOptions=()=>{if(stage)playOptionSequence(q.options||[],stage);};
    if(audioEl){
      audioEl.currentTime=0;
-     const p=audioEl.play();
-     if(p?.catch)p.catch(()=>{});
      if(stage)stage.innerHTML='<strong>LISTENING</strong><span>Listen to the question, then select your answer.</span>';
-     audioEl.onended=()=>{ if(stage) playOptionSequence(q.options||[],stage); };
-   }else if(q.audioPath){
+     audioEl.onended=playOptions;
+     try{
+       await audioEl.play();
+       return;
+     }catch(err){
+       if(stage)stage.innerHTML='<strong>RETRYING AUDIO</strong><span>Trying the stored audio file…</span>';
+     }
+   }
+   if(q.audioPath){
      try{
        if(stage)stage.innerHTML='<strong>LOADING AUDIO</strong><span>Preparing the stored question audio…</span>';
-       const url=q.audioUrl||await getDownloadURL(ref(storage,q.audioPath));
+       // Refresh the download URL from Storage if the embedded URL fails or is expired.
+       const url=await getDownloadURL(ref(storage,q.audioPath));
        const player=new Audio(url);
        if(stage)stage.innerHTML='<strong>LISTENING</strong><span>Listen to the question, then select your answer.</span>';
-       player.onended=()=>{ if(stage) playOptionSequence(q.options||[],stage); };
+       player.onended=playOptions;
        await player.play();
+       return;
      }catch(err){
-       if(stage)stage.innerHTML='<strong>AUDIO UNAVAILABLE</strong><span>Using browser speech playback instead.</span>';
-       speak(q.audioText||q.prompt||'');
-       if(stage)setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
+       if(stage)stage.innerHTML='<strong>AUDIO UNAVAILABLE</strong><span>Using speech playback as a fallback.</span>';
      }
-   }else{
-     speak(q.audioText||q.prompt||'');
-     if(audioMode&&stage)setTimeout(()=>playOptionSequence(q.options||[],stage),1100);
    }
+   speak(q.audioText||q.prompt||'');
+   if(audioMode&&stage)setTimeout(playOptions,1100);
  };
  root.querySelectorAll('input[name="caAnswer"]').forEach(x=>x.addEventListener('change',()=>saveAnswer(q,root)));
  const runAssessmentCode=root.querySelector('#runAssessmentCode');
