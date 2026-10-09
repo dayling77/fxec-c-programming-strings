@@ -1727,6 +1727,16 @@ function competencyTrackOrThrow(trackId){
 function validateCompetencyQuestions(questions, trackId='', day=0){
   const basic=competencyQuestionValidation(questions, trackId, day);
   if(!basic.ok) throw new HttpsError('invalid-argument','Question validation failed: '+basic.errors.slice(0,8).join(' '));
+  if(trackId==='communication' && Number(day)===4){
+    const audioErrors=[];
+    if(!Array.isArray(questions) || questions.length!==50) audioErrors.push('Listening Skills requires exactly 50 questions.');
+    (Array.isArray(questions)?questions:[]).forEach((q,i)=>{
+      if(q.activityType!=='listening') audioErrors.push('Q'+(i+1)+': every Module 4 question must be an audio/listening question.');
+      if(!cleanText(q.audioText,20)) audioErrors.push('Q'+(i+1)+': spoken question script is missing.');
+      if(!cleanText(q.audioPath,10) && !cleanText(q.audioUrl,20)) audioErrors.push('Q'+(i+1)+': generated audio asset is missing.');
+    });
+    if(audioErrors.length) throw new HttpsError('failed-precondition','Listening Skills audio validation failed: '+audioErrors.slice(0,10).join(' '));
+  }
   return questions.map(q=>({...q,id:String(q.id)}));
 }
 
@@ -1906,10 +1916,12 @@ const COMPETENCY_MODULE_SCOPES = Object.freeze({
 });
 async function attachCompetencyAssessmentAudio(trackId, day, questions){
   if(trackId!=='communication') return questions;
-  const audioCount=Number(day)===4?8:5;
+  const listeningModule4=Number(day)===4;
+  // Listening Skills is an audio-only assessment: generate a stored audio asset for every master question.
+  const audioCount=listeningModule4?questions.length:5;
   const preferred=questions.map((q,i)=>({q,i})).filter(x=>x.q.activityType==='listening'||Number(x.i)%10===2);
   const fallback=questions.map((q,i)=>({q,i})).filter(x=>!preferred.some(p=>p.q===x.q));
-  const targets=[...preferred,...fallback].slice(0,audioCount);
+  const targets=listeningModule4?questions.map((q,i)=>({q,i})):[...preferred,...fallback].slice(0,audioCount);
   let created=0;
   for(const {q} of targets){
     q.activityType='listening';
@@ -1958,6 +1970,11 @@ async function attachCompetencyAssessmentAudio(trackId, day, questions){
     logger.warn('Communication module has fewer stored audio items than required',{
       trackId,day,required:audioCount,created
     });
+    if(listeningModule4) throw new Error('Listening Skills audio generation incomplete: '+created+' of '+audioCount+' questions have playable audio. The module was not saved.');
+  }
+  if(listeningModule4){
+    const missing=questions.map((q,i)=>({q,i})).filter(({q})=>q.activityType!=='listening'||!cleanText(q.audioText,20)||(!cleanText(q.audioPath,10)&&!cleanText(q.audioUrl,20)));
+    if(missing.length) throw new Error('Listening Skills requires audio for every question. Missing question numbers: '+missing.map(x=>x.i+1).join(', '));
   }
   return questions;
 }
@@ -1965,7 +1982,7 @@ async function attachCompetencyAssessmentAudio(trackId, day, questions){
 function competencyGenerationPrompt(trackId, day) {
   const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId], topic=competencyModuleTitle(trackId,day);
   const prefix=trackId+'-D'+day+'-';
-  const trace='Use ONLY these traceability IDs: learningOutcomeId '+prefix+'LO1..'+prefix+'LO5; materialId '+prefix+'MAT1..'+prefix+'MAT5; guidedDrillId '+prefix+'DR1..'+prefix+'DR5. Set remediationMaterialId to one of the five '+prefix+'MAT IDs. ladderLevel must be 1 (recognise/understand), 2 (apply), 3 (analyse/verify), 4 (diagnose), or 5 (solve/transfer). Every question must identify the exact outcome, material, drill and ladder level it builds on.'+(trackId==='communication'?' For communication, write at least five questions that can be delivered as listening items: each must have a clear spoken prompt suitable for audioText and four answer options. Module 4 should contain a stronger listening emphasis.':'');
+  const trace='Use ONLY these traceability IDs: learningOutcomeId '+prefix+'LO1..'+prefix+'LO5; materialId '+prefix+'MAT1..'+prefix+'MAT5; guidedDrillId '+prefix+'DR1..'+prefix+'DR5. Set remediationMaterialId to one of the five '+prefix+'MAT IDs. ladderLevel must be 1 (recognise/understand), 2 (apply), 3 (analyse/verify), 4 (diagnose), or 5 (solve/transfer). Every question must identify the exact outcome, material, drill and ladder level it builds on.'+(trackId==='communication'&&Number(day)===4?' CRITICAL: Communication Module 4 — Listening Skills is audio-only. ALL 50 questions must use activityType "listening" and each must include a complete, natural spoken question in audioText plus four distinct answer options. Assess gist, details/numbers, sequence/instructions, note-taking, speaker purpose, attitude and implied meaning. Do not create non-audio questions.':trackId==='communication'?' For communication modules other than Module 4, write at least five questions that can be delivered as listening items, each with a clear spoken prompt and four answer options.':'');
   if(trackId==='c-programming'){
     const scopes={
       1:'problem statements, C program structure, main, statements and blocks, identifiers, variables, constants, data types, type conversion, operators, expressions, printf/scanf, compilation and debugging basics',
@@ -2122,6 +2139,8 @@ export const processCompetencyGenerationJob = onDocumentCreated(
       const questions=trackId==='communication'&&day===1?buildCommunicationModule1Bank():await generateHighStandardCompetencyDay(trackId,day);
       await attachCompetencyAssessmentAudio(trackId,day,questions);
       if(!Array.isArray(questions)||questions.length!==50) throw new Error('Generated module did not contain exactly 50 questions.');
+      // Revalidate after audio synthesis so Module 4 cannot be saved with a missing audio asset.
+      validateCompetencyQuestions(questions,trackId,day);
       const meta=COMPETENCY_ASSESSMENT_TRACKS[trackId];
       const adminUid=String(job.adminUid||'system');
       const taskRef=db.collection('competencyAssessmentTasks').doc(trackId+'_D'+day);
@@ -2596,7 +2615,7 @@ export const saveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async req
   if(!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new HttpsError('invalid-argument','Use YYYY-MM-DD for the assessment date.');
   const open=new Date(openAt),close=new Date(closeAt);
   if(Number.isNaN(open.getTime())||Number.isNaN(close.getTime())||close<=open) throw new HttpsError('invalid-argument','Assessment opening/closing times are invalid.');
-  const questions=validateCompetencyQuestions(request.data?.questions,trackId);
+  const questions=validateCompetencyQuestions(request.data?.questions,trackId,day);
   const rawVideoLinks=Array.isArray(request.data?.videoLinks)?request.data.videoLinks:[];
   const videoLinks=rawVideoLinks.map(v=>String(v||'').trim()).filter(v=>/^https?:\/\//i.test(v)).slice(0,2);
   const allowStudentScriptDownload=Boolean(request.data?.allowStudentScriptDownload);
@@ -2620,7 +2639,7 @@ export const verifyCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async r
   const snap=await ref.get();
   if(!snap.exists) throw new HttpsError('not-found','Assessment module has not been created.');
   const d=snap.data();
-  validateCompetencyQuestions(d.questions,trackId);
+  validateCompetencyQuestions(d.questions,trackId,day);
   if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before verification.');
   await ref.update({status:'verified',isPublished:false,verifiedBy:verifier.uid,verifiedByEmail:verifier.token.email||'',verifiedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
   await db.collection('competencyQuestionPools').doc(trackId+'_D'+day).set({status:'verified',verifiedBy:verifier.uid,verifiedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()},{merge:true});
@@ -2636,7 +2655,7 @@ export const approveCompetencyAssessmentDay = onCall({cors:CALLABLE_CORS},async 
   const snap=await ref.get();
   if(!snap.exists) throw new HttpsError('not-found','Assessment day has not been created.');
   const d=snap.data();
-  validateCompetencyQuestions(d.questions,trackId);
+  validateCompetencyQuestions(d.questions,trackId,day);
   if(d.status!=='verified') throw new HttpsError('failed-precondition','Faculty verification is required before admin approval and publishing.');
   if(!d.date||!d.openAt||!d.closeAt) throw new HttpsError('failed-precondition','Set the date, opening time and closing time before approval/publishing.');
   await ref.update({status:'published',isPublished:true,approvedBy:adminUser.uid,approvedByEmail:adminUser.token.email||'',approvedAt:FieldValue.serverTimestamp(),updatedAt:FieldValue.serverTimestamp()});
@@ -2768,6 +2787,10 @@ export const startCompetencyAssessment = onCall({cors:CALLABLE_CORS},async reque
     const poolSnap=await db.collection('competencyQuestionPools').doc(taskId).collection('questions').get();
     const sourceQuestions=poolSnap.empty?(task.questions||[]):poolSnap.docs.map(d=>d.data());
     if(!sourceQuestions.length) throw new HttpsError('failed-precondition','No approved question pool is available.');
+    if(task.trackId==='communication' && Number(task.day)===4){
+      const missingAudio=sourceQuestions.filter(q=>q.activityType!=='listening'||!cleanText(q.audioText,20)||(!cleanText(q.audioPath,10)&&!cleanText(q.audioUrl,20)));
+      if(sourceQuestions.length!==50||missingAudio.length) throw new HttpsError('failed-precondition','Listening Skills cannot start: every master question must have a verified audio asset. Regenerate Module 4 audio and re-approve it.');
+    }
     const codingPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='coding-challenge'):[];
     const audioPool=task.trackId==='c-programming'?sourceQuestions.filter(q=>q.activityType==='listening'):[];
     // C retains its TCS-style 10-question assessment structure; all other competencies use 15.
